@@ -1,17 +1,20 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import { Component, ComponentInterface, h } from '@stencil/core';
 
 @Component({
   tag: 'group-b',
   styleUrl: 'group-b.css',
-  shadow: true,
+  shadow: false,
+  scoped: true
 })
 export class GroupB implements ComponentInterface {
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <div class="container" >
+        <div class="row">
+          <s-cnt-market-header></s-cnt-market-header>
+        </div>
+      </div>
     );
   }
 

@@ -10,7 +10,7 @@ export class SCntMarketHeader implements ComponentInterface {
 
   render() {
     return (
-      <div>header</div>
+      <div class="col-12" >Тут будет шапка</div>
     );
   }
 
