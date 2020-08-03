@@ -312,7 +312,8 @@ export const forSelection = [
   {
     id: 37,
     image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'СберМаркет'
+    title: 'СберМаркет',
+    text: 'СберМаркет'
   },
   {
     id: 38,
@@ -340,4 +341,5 @@ export const forSelection = [
     title: 'Дочки-Сыночки'
   },
 ];
+
 
