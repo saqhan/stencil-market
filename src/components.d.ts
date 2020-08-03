@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
     }
@@ -15,6 +16,18 @@ export namespace Components {
     interface SCntMarketHeader {
     }
     interface SCntMarketPromoSlider {
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards": MarketPromoSliderInterface[];
+    }
+    interface SCntMarketPromoSliderCard {
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards": MarketPromoSliderInterface;
+    }
+    interface SCntMarketShop {
     }
 }
 declare global {
@@ -48,12 +61,26 @@ declare global {
         prototype: HTMLSCntMarketPromoSliderElement;
         new (): HTMLSCntMarketPromoSliderElement;
     };
+    interface HTMLSCntMarketPromoSliderCardElement extends Components.SCntMarketPromoSliderCard, HTMLStencilElement {
+    }
+    var HTMLSCntMarketPromoSliderCardElement: {
+        prototype: HTMLSCntMarketPromoSliderCardElement;
+        new (): HTMLSCntMarketPromoSliderCardElement;
+    };
+    interface HTMLSCntMarketShopElement extends Components.SCntMarketShop, HTMLStencilElement {
+    }
+    var HTMLSCntMarketShopElement: {
+        prototype: HTMLSCntMarketShopElement;
+        new (): HTMLSCntMarketShopElement;
+    };
     interface HTMLElementTagNameMap {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-promo-slider": HTMLSCntMarketPromoSliderElement;
+        "s-cnt-market-promo-slider-card": HTMLSCntMarketPromoSliderCardElement;
+        "s-cnt-market-shop": HTMLSCntMarketShopElement;
     }
 }
 declare namespace LocalJSX {
@@ -66,6 +93,18 @@ declare namespace LocalJSX {
     interface SCntMarketHeader {
     }
     interface SCntMarketPromoSlider {
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards"?: MarketPromoSliderInterface[];
+    }
+    interface SCntMarketPromoSliderCard {
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards"?: MarketPromoSliderInterface;
+    }
+    interface SCntMarketShop {
     }
     interface IntrinsicElements {
         "group-a": GroupA;
@@ -73,6 +112,8 @@ declare namespace LocalJSX {
         "my-component": MyComponent;
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-promo-slider": SCntMarketPromoSlider;
+        "s-cnt-market-promo-slider-card": SCntMarketPromoSliderCard;
+        "s-cnt-market-shop": SCntMarketShop;
     }
 }
 export { LocalJSX as JSX };
@@ -84,6 +125,8 @@ declare module "@stencil/core" {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-promo-slider": LocalJSX.SCntMarketPromoSlider & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderElement>;
+            "s-cnt-market-promo-slider-card": LocalJSX.SCntMarketPromoSliderCard & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderCardElement>;
+            "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;
         }
     }
 }
