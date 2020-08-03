@@ -9,7 +9,7 @@ export class GroupA implements ComponentInterface {
 
   render() {
     return (
-      <div>GroupA</div>
+      <s-cnt-market-first-page/>
     );
   }
 
