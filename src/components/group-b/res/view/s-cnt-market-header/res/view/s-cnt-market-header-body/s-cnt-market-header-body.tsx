@@ -10,7 +10,20 @@ export class SCntMarketHeaderBody implements ComponentInterface {
 
   render() {
     return (
-      <div>s-cnt-market-header-body</div>
+      <div class="header-body-wrapper" >
+        <div class="logo-wrapper">
+          <div class="logo"></div>
+        </div>
+        <div class="header-navbar-list">
+          <ul>
+            <li class='main-item'>👩‍💻 Для Бизнеса</li>
+            <li>Как мы работаем</li>
+            <li>Контакты</li>
+            <li>Помощь</li>
+            <li>Доставка и оплата</li>
+          </ul>
+        </div>
+      </div>
     );
   }
 
