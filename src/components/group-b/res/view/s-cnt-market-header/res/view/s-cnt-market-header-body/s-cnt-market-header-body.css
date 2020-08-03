@@ -1,3 +1,42 @@
-:host {
-  display: block;
+
+.header-body-wrapper {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrapper {
+  min-width: 280px;
+}
+
+.logo {
+  width: 200px;
+  height: 33px;
+  background-image: url("https://via.placeholder.com/200x33?text=LOGO");
+  background-position: center;
+  background-size: cover;
+}
+
+.header-navbar-list ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0px 15px;
+  color: #96959b;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.header-navbar-list ul li:hover {
+  color: #21a038;
+  cursor: pointer;
+}
+
+.header-navbar-list ul .main-item {
+  color: #393939;
+}
+
+@media (max-width: 992px) {
+  .logo-wrapper {
+    min-width: auto
+  }
 }
