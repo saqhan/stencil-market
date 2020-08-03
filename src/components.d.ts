@@ -6,56 +6,71 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GroupA {
+    }
+    interface GroupB {
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    }
+    interface SCntMarketHeader {
     }
 }
 declare global {
+    interface HTMLGroupAElement extends Components.GroupA, HTMLStencilElement {
+    }
+    var HTMLGroupAElement: {
+        prototype: HTMLGroupAElement;
+        new (): HTMLGroupAElement;
+    };
+    interface HTMLGroupBElement extends Components.GroupB, HTMLStencilElement {
+    }
+    var HTMLGroupBElement: {
+        prototype: HTMLGroupBElement;
+        new (): HTMLGroupBElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSCntMarketHeaderElement extends Components.SCntMarketHeader, HTMLStencilElement {
+    }
+    var HTMLSCntMarketHeaderElement: {
+        prototype: HTMLSCntMarketHeaderElement;
+        new (): HTMLSCntMarketHeaderElement;
+    };
     interface HTMLElementTagNameMap {
+        "group-a": HTMLGroupAElement;
+        "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
+        "s-cnt-market-header": HTMLSCntMarketHeaderElement;
     }
 }
 declare namespace LocalJSX {
+    interface GroupA {
+    }
+    interface GroupB {
+    }
     interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    }
+    interface SCntMarketHeader {
     }
     interface IntrinsicElements {
+        "group-a": GroupA;
+        "group-b": GroupB;
         "my-component": MyComponent;
+        "s-cnt-market-header": SCntMarketHeader;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "group-a": LocalJSX.GroupA & JSXBase.HTMLAttributes<HTMLGroupAElement>;
+            "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
         }
     }
 }
