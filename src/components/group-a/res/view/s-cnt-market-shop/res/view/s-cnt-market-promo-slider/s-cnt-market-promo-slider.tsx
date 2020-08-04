@@ -1,14 +1,13 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import {MarketPromoSliderInterface} from "./res/interface/common.interface";
+import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { MarketPromoSliderInterface } from "./res/interface/common.interface";
 
 @Component({
-  tag: 's-cnt-market-promo-slider',
-  styleUrl: 's-cnt-market-promo-slider.css',
+  tag: "s-cnt-market-promo-slider",
+  styleUrl: "s-cnt-market-promo-slider.css",
   shadow: false,
-  scoped: true
+  scoped: true,
 })
 export class SCntMarketPromoSlider implements ComponentInterface {
-
   /**
    * Получаем данные карточек промо-слайдера
    */
@@ -21,15 +20,16 @@ export class SCntMarketPromoSlider implements ComponentInterface {
       </div>
     );
   }
-
 }
 
 const PromoSliderCard = (props) => {
-  return props.array.map(item => {
+  return props.array.map((item) => {
     return (
       <div class="col-md-4">
-        <s-cnt-market-promo-slider-card promoSliderCards={item}></s-cnt-market-promo-slider-card>
+        <s-cnt-market-promo-slider-card
+          promoSliderCards={item}
+        ></s-cnt-market-promo-slider-card>
       </div>
     );
   });
-}
+};

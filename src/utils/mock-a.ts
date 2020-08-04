@@ -5,6 +5,8 @@ export const promoSliderCards = [
     description: "Узнай как подсластить жизнь своим близким и сделать приятный подарок",
     link: "Выбрать подарок!",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 2,
@@ -12,6 +14,8 @@ export const promoSliderCards = [
     description: "Новые сорта Ламбера!",
     link: "Купить!",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 3,
@@ -19,6 +23,8 @@ export const promoSliderCards = [
     description: "Скидка -20% на любимые бренды!",
     link: "Присоединиться!",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 4,
@@ -26,6 +32,8 @@ export const promoSliderCards = [
     description: "Средства по уходу за собой",
     link: "Получить",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 5,
@@ -33,6 +41,8 @@ export const promoSliderCards = [
     description: "Новые дизайны классических вкусов",
     link: "Попробовать!",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 6,
@@ -40,6 +50,8 @@ export const promoSliderCards = [
     description: "Порадуйте малыша полезными фруктовыми батончиками и мини-хлебцами!",
     link: "Перекусить",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 7,
@@ -47,6 +59,8 @@ export const promoSliderCards = [
     description: "Скидки до 50% с 30 июля по 2 августа!",
     link: "В каталог",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 8,
@@ -54,6 +68,8 @@ export const promoSliderCards = [
     description: "Витамины для вас!",
     link: "Купить в один клик",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 9,
@@ -61,6 +77,8 @@ export const promoSliderCards = [
     description: "Вода, соки и напитки в больших упаковках",
     link: "Посмотреть",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 10,
@@ -68,6 +86,8 @@ export const promoSliderCards = [
     description: "Готовьте ваши любимые блюда вместе с нами!",
     link: "Посмотреть",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 11,
@@ -75,6 +95,8 @@ export const promoSliderCards = [
     description: "100% вкуса и 0% алкоголя",
     link: "Купить!",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 12,
@@ -82,6 +104,8 @@ export const promoSliderCards = [
     description: "В пределах московского малого кольца",
     link: "К покупкам",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 13,
@@ -89,6 +113,8 @@ export const promoSliderCards = [
     description: "Видеоролик расскажет о том, как мы работаем.",
     link: "Смотреть",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 14,
@@ -96,6 +122,8 @@ export const promoSliderCards = [
     description: "Витамины для вас!",
     link: "Купить в один клик",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 15,
@@ -103,6 +131,8 @@ export const promoSliderCards = [
     description: "Покупайте все необходимые товары к школе",
     link: "Посмотреть",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 16,
@@ -110,6 +140,8 @@ export const promoSliderCards = [
     description: "Оформите заказ, и мы соберем корзину так же, как это сделали бы вы сами!",
     link: " ",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 17,
@@ -117,6 +149,8 @@ export const promoSliderCards = [
     description: "Подарите сертификат на покупку в Сбермаркете своим близким!",
     link: "Подарить",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
   {
     id: 18,
@@ -124,6 +158,8 @@ export const promoSliderCards = [
     description: "Мы выбрали для тебя только самое полезное!",
     link: "Посмотреть!",
     img: "https://via.placeholder.com/100x100?img=img",
+    bgImage: "https://via.placeholder.com/450x160?img=img",
+    bgColor: "160, 128, 194",
   },
 ];
 

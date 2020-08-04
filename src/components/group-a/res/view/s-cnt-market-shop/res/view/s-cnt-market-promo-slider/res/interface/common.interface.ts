@@ -4,4 +4,6 @@ export interface MarketPromoSliderInterface {
   description: string,
   img: string,
   link: string,
+  bgImage: string,
+  bgColor: string,
 }
