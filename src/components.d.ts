@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
     }
@@ -18,7 +19,22 @@ export namespace Components {
     interface SCntMarketModalWindow {
 =======
     interface SCntMarketPromoSlider {
+<<<<<<< HEAD
 >>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
+=======
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards": MarketPromoSliderInterface[];
+    }
+    interface SCntMarketPromoSliderCard {
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards": MarketPromoSliderInterface;
+    }
+    interface SCntMarketShop {
+>>>>>>> 4746a9135ab98020cb49ef89c285f56b907f0388
     }
 }
 declare global {
@@ -60,6 +76,18 @@ declare global {
         new (): HTMLSCntMarketPromoSliderElement;
 >>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
     };
+    interface HTMLSCntMarketPromoSliderCardElement extends Components.SCntMarketPromoSliderCard, HTMLStencilElement {
+    }
+    var HTMLSCntMarketPromoSliderCardElement: {
+        prototype: HTMLSCntMarketPromoSliderCardElement;
+        new (): HTMLSCntMarketPromoSliderCardElement;
+    };
+    interface HTMLSCntMarketShopElement extends Components.SCntMarketShop, HTMLStencilElement {
+    }
+    var HTMLSCntMarketShopElement: {
+        prototype: HTMLSCntMarketShopElement;
+        new (): HTMLSCntMarketShopElement;
+    };
     interface HTMLElementTagNameMap {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
@@ -69,7 +97,12 @@ declare global {
         "s-cnt-market-modal-window": HTMLSCntMarketModalWindowElement;
 =======
         "s-cnt-market-promo-slider": HTMLSCntMarketPromoSliderElement;
+<<<<<<< HEAD
 >>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
+=======
+        "s-cnt-market-promo-slider-card": HTMLSCntMarketPromoSliderCardElement;
+        "s-cnt-market-shop": HTMLSCntMarketShopElement;
+>>>>>>> 4746a9135ab98020cb49ef89c285f56b907f0388
     }
 }
 declare namespace LocalJSX {
@@ -85,7 +118,22 @@ declare namespace LocalJSX {
     interface SCntMarketModalWindow {
 =======
     interface SCntMarketPromoSlider {
+<<<<<<< HEAD
 >>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
+=======
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards"?: MarketPromoSliderInterface[];
+    }
+    interface SCntMarketPromoSliderCard {
+        /**
+          * Получаем данные карточек промо-слайдера
+         */
+        "promoSliderCards"?: MarketPromoSliderInterface;
+    }
+    interface SCntMarketShop {
+>>>>>>> 4746a9135ab98020cb49ef89c285f56b907f0388
     }
     interface IntrinsicElements {
         "group-a": GroupA;
@@ -96,7 +144,12 @@ declare namespace LocalJSX {
         "s-cnt-market-modal-window": SCntMarketModalWindow;
 =======
         "s-cnt-market-promo-slider": SCntMarketPromoSlider;
+<<<<<<< HEAD
 >>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
+=======
+        "s-cnt-market-promo-slider-card": SCntMarketPromoSliderCard;
+        "s-cnt-market-shop": SCntMarketShop;
+>>>>>>> 4746a9135ab98020cb49ef89c285f56b907f0388
     }
 }
 export { LocalJSX as JSX };
@@ -111,7 +164,12 @@ declare module "@stencil/core" {
             "s-cnt-market-modal-window": LocalJSX.SCntMarketModalWindow & JSXBase.HTMLAttributes<HTMLSCntMarketModalWindowElement>;
 =======
             "s-cnt-market-promo-slider": LocalJSX.SCntMarketPromoSlider & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderElement>;
+<<<<<<< HEAD
 >>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
+=======
+            "s-cnt-market-promo-slider-card": LocalJSX.SCntMarketPromoSliderCard & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderCardElement>;
+            "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;
+>>>>>>> 4746a9135ab98020cb49ef89c285f56b907f0388
         }
     }
 }
