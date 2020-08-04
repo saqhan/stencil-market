@@ -92,3 +92,7 @@ button {
   border-radius: 7px;
   padding: 7px 16px;
 }
+
+.yandex-map-wrapper{
+  position: relative;
+}
