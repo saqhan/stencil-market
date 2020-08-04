@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { SProduct, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/interface/common.interface";
+import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
@@ -28,13 +28,13 @@ export namespace Components {
     }
     interface SCntMarketProduct {
         /**
-          * Интерфейс для SProduct
+          * Интерфейс для Product
          */
-        "SProduct": SProduct[];
+        "MarketProductInterface": MarketProductInterface[];
         /**
           * Данные для Product
          */
-        "payload": any;
+        "getProduct": any;
     }
     interface SCntMarketPromoSlider {
         /**
@@ -179,13 +179,13 @@ declare namespace LocalJSX {
     }
     interface SCntMarketProduct {
         /**
-          * Интерфейс для SProduct
+          * Интерфейс для Product
          */
-        "SProduct"?: SProduct[];
+        "MarketProductInterface"?: MarketProductInterface[];
         /**
           * Данные для Product
          */
-        "payload"?: any;
+        "getProduct"?: any;
     }
     interface SCntMarketPromoSlider {
         /**
