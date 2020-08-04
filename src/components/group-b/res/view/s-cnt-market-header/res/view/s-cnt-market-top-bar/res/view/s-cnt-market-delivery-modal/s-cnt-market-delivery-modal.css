@@ -3,29 +3,40 @@ button {
 }
 
 .delivery-modal-main-block-wrapper {
-  position: relative;
-  z-index: 5000;
-}
-
-.delivery-modal-other-opacity, .delivery-modal-main-block {
   position: fixed;
   top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  z-index: 9999;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.delivery-modal-other-opacity{
+  z-index: 5002;
+}
+
+.delivery-modal-other-opacity{
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 4;
+  position: fixed;
   background-color: rgba(0, 0, 0, .4);
 }
 
 .delivery-modal-main-block {
+  max-width: 746px;
+  width: 100%;
   will-change: opacity;
   transition: opacity .3s 35ms;
   display: flex;
+  z-index: 5002;
 }
 
 .delivery-modal-block-position {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-height: 100%;
   width: 100%;
   overflow-x: hidden;

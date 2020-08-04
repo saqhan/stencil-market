@@ -111,6 +111,10 @@ declare namespace LocalJSX {
     interface SCntMarketDeliveryInModal {
     }
     interface SCntMarketDeliveryModal {
+        /**
+          * Закрытие модального окна формы
+         */
+        "onCloseForm"?: (event: CustomEvent<any>) => void;
     }
     interface SCntMarketHeader {
     }
