@@ -25,29 +25,30 @@ export class SCntMarketTopBar implements ComponentInterface {
               <div class="option-adress-text-block">
                 <span>
                   Выберите адрес доставки
+                  <button class="delivery-adress-btn">
+                    <i class="fas fa-pencil-alt"></i>
+                  </button>
                 </span>
               </div>
-              <button class="delivery-adress-btn">
-                <i class="fas fa-pencil-alt"></i>
-              </button>
+
               <p class="shortest-delivery-time">
                 🚛 Ближайшая доставка
                 <span>
                   сегодня, 19:00-21:00
                 </span>
               </p>
-            </div>
-            <div class="top-bar-number-wrapper">
-              <a href="tel:+78002221100" class="phone-number-link">
-                <span class="phone_number">
-                  +7 800 222-11-00
-                </span>
-                <span class="phone-work">
-                  <span>
-                    Круглосуточно
+              <div class="top-bar-number-wrapper">
+                <a href="tel:+78002221100" class="phone-number-link">
+                  <span class="phone_number">
+                    +7 800 222-11-00
                   </span>
-                </span>
-              </a>
+                  <span class="phone-work">
+                    <span>
+                      Круглосуточно
+                    </span>
+                  </span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
