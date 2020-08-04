@@ -119,7 +119,7 @@
 
 .my-button:hover {
   background-color: green;
-  transition: .4s;
+  transition: .3s;
 }
 
 .heart {

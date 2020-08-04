@@ -25,9 +25,9 @@ export class SCntMarketProduct implements ComponentInterface {
           <div class="row">
             <div class="col-8">
               <div class="info">
-                <div class="brand">{this.getProduct[0].brand}</div>
-                <div class="products">{this.getProduct[0].products}</div>
-                <div class="category">{this.getProduct[0].category}</div>
+                <div class="brand">{this.getProduct.brand}</div>
+                <div class="products">{this.getProduct.products}</div>
+                <div class="category">{this.getProduct.category}</div>
               </div>
             </div>
           </div>
@@ -35,7 +35,7 @@ export class SCntMarketProduct implements ComponentInterface {
             <div class="col-6">
               <div class="image">
                 <div class="category">
-                  <img src={this.getProduct[0].image} alt="" />
+                  <img src={this.getProduct.image} alt="" />
                 </div>
               </div>
             </div>
@@ -44,9 +44,9 @@ export class SCntMarketProduct implements ComponentInterface {
                 <div class="close">
                   <i class="fa fa-times" aria-hidden="true" />
                 </div>
-                <div class="name">{this.getProduct[0].name}</div>
-                <div class="weight">{this.getProduct[0].weight}</div>
-                <div class="price">{this.getProduct[0].price}</div>
+                <div class="name">{this.getProduct.name}</div>
+                <div class="weight">{this.getProduct.weight}</div>
+                <div class="price">{this.getProduct.price}</div>
                 <div class="info-presence">
                   <div class="circle">
                     <i class="fa fa-circle cir" aria-hidden="true" />
@@ -54,13 +54,11 @@ export class SCntMarketProduct implements ComponentInterface {
                     <i class="fa fa-circle cir" aria-hidden="true" />
                     <i class="fa fa-circle cir" aria-hidden="true" />
                   </div>
-                  <div class="presence">{this.getProduct[0].presence}</div>
+                  <div class="presence">{this.getProduct.presence}</div>
                 </div>
                 <div class="my-item">
                   <div class="button">
-                    <button class="my-button">
-                      {this.getProduct[0].button}
-                    </button>
+                    <button class="my-button">{this.getProduct.button}</button>
                   </div>
                   <div class="heart">
                     <i class="fas fa-heart my-heart" aria-hidden="true" />

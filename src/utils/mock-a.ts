@@ -125,7 +125,7 @@ export const promoSliderCards = [
     title: "Персональный шопер",
     description:
       "Оформите заказ, и мы соберем корзину так же, как это сделали бы вы сами!",
-      img: "https://via.placeholder.com/100x100?img=img",
+    img: "https://via.placeholder.com/100x100?img=img",
     bgImage: "https://sbermarket.ru/static/promo_cards/background.png",
     bgColor: "160, 128, 194",
     color: "255, 255, 255",
@@ -396,19 +396,17 @@ export const forSelection = [
 
 export const homePageImage = "https://via.placeholder.com/1245x518?text=Text";
 
-export const getProduct = [
-  {
-    brand: "Бренды ЛЕНТЫ",
-    products: "Продукты питания",
-    category: "Сладости",
-    image: "https://via.placeholder.com/300x200?text=Text",
-    name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
-    weight: "200 г",
-    price: "252,69 ₽",
-    presence: "Товара много",
-    button: "Купить",
-  },
-];
+export const getProduct = {
+  brand: "Бренды ЛЕНТЫ",
+  products: "Продукты питания",
+  category: "Сладости",
+  image: "https://via.placeholder.com/300x200?text=Text",
+  name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
+  weight: "200 г",
+  price: "252,69 ₽",
+  presence: "Товара много",
+  button: "Купить",
+};
 
 export const getRecommended = [
   {
