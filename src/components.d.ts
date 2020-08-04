@@ -12,6 +12,8 @@ export namespace Components {
     }
     interface MyComponent {
     }
+    interface SCntMarketDeliveryModal {
+    }
     interface SCntMarketHeader {
     }
     interface SCntMarketHeaderBody {
@@ -39,6 +41,12 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLSCntMarketDeliveryModalElement extends Components.SCntMarketDeliveryModal, HTMLStencilElement {
+    }
+    var HTMLSCntMarketDeliveryModalElement: {
+        prototype: HTMLSCntMarketDeliveryModalElement;
+        new (): HTMLSCntMarketDeliveryModalElement;
     };
     interface HTMLSCntMarketHeaderElement extends Components.SCntMarketHeader, HTMLStencilElement {
     }
@@ -68,6 +76,7 @@ declare global {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
+        "s-cnt-market-delivery-modal": HTMLSCntMarketDeliveryModalElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-header-body": HTMLSCntMarketHeaderBodyElement;
         "s-cnt-market-header-nav": HTMLSCntMarketHeaderNavElement;
@@ -81,6 +90,8 @@ declare namespace LocalJSX {
     }
     interface MyComponent {
     }
+    interface SCntMarketDeliveryModal {
+    }
     interface SCntMarketHeader {
     }
     interface SCntMarketHeaderBody {
@@ -93,6 +104,7 @@ declare namespace LocalJSX {
         "group-a": GroupA;
         "group-b": GroupB;
         "my-component": MyComponent;
+        "s-cnt-market-delivery-modal": SCntMarketDeliveryModal;
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-header-body": SCntMarketHeaderBody;
         "s-cnt-market-header-nav": SCntMarketHeaderNav;
@@ -106,6 +118,7 @@ declare module "@stencil/core" {
             "group-a": LocalJSX.GroupA & JSXBase.HTMLAttributes<HTMLGroupAElement>;
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "s-cnt-market-delivery-modal": LocalJSX.SCntMarketDeliveryModal & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryModalElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-header-body": LocalJSX.SCntMarketHeaderBody & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBodyElement>;
             "s-cnt-market-header-nav": LocalJSX.SCntMarketHeaderNav & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderNavElement>;
