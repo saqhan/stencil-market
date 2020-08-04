@@ -24,7 +24,8 @@ export class SCntMarketPromoSliderCard implements ComponentInterface {
       >
         <div class="promo-slider-card-content">
           <div class="promo-slider-card-body">
-            <div class="promo-slider-card-message">
+            <div class="promo-slider-card-message" style={{color: `rgb(${this.promoSliderCards.color})`,
+            }} >
                 <div class="promo-slider-card-message-header">
                   {this.promoSliderCards.title}
                 </div>

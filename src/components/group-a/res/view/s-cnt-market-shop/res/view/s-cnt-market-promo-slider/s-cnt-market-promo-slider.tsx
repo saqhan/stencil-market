@@ -13,11 +13,23 @@ export class SCntMarketPromoSlider implements ComponentInterface {
    */
   @Prop() promoSliderCards: MarketPromoSliderInterface[] = [];
 
+  componentDidLoad() {
+    const elem = document.querySelector('.main-carousel');
+    // @ts-ignore
+    const flkty = new Flickity( elem, {
+      // options
+      contain: true,
+      pageDots: false
+    });
+  }
+
+
   render() {
     return (
-      <div class="row">
-        <PromoSliderCard array={this.promoSliderCards}></PromoSliderCard>
+      <div class="main-carousel">
+          <PromoSliderCard array={this.promoSliderCards}></PromoSliderCard>
       </div>
+
     );
   }
 }
@@ -25,7 +37,7 @@ export class SCntMarketPromoSlider implements ComponentInterface {
 const PromoSliderCard = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="col-md-4">
+      <div class="carousel-cell">
         <s-cnt-market-promo-slider-card
           promoSliderCards={item}
         ></s-cnt-market-promo-slider-card>

@@ -11,8 +11,8 @@ export class GroupA implements ComponentInterface {
   render() {
     return (
      <div>
-       <s-cnt-market-first-page/>
-       {/*<s-cnt-market-shop/>*/}
+       {/*<s-cnt-market-first-page/>*/}
+       <s-cnt-market-shop/>
      </div>
     );
   }
