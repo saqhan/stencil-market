@@ -31,13 +31,13 @@ export class SCntMarketTopBar implements ComponentInterface {
               <div class="top-bar-delivery-option-block">
                 <button class="selection-by-delivery" onClick={() => {
                   this.openModal();
-                  this.openDelivery()
+                  this.openDelivery();
                 }}>
                   Доставка
                 </button>
                 <button class="selection-by-pickUp" onClick={() => {
                   this.openModal();
-                  this.openpickUp()
+                  this.openpickUp();
                 }}>
                   Самовывоз
                 </button>
@@ -73,9 +73,11 @@ export class SCntMarketTopBar implements ComponentInterface {
         </div>
         {
           this.modalComplited ?
-            <s-cnt-market-delivery-modal onCloseForm={() => {
-              this.closeModal();
-            }}/> :
+            <s-cnt-market-delivery-modal delivery={this.deliveryComplited} pickUp={this.pickUpComplited}
+                                         onCloseForm={() => this.closeModal()}
+                                         onOpenDelivery={() => this.openDelivery()}
+                                         onOpenpickUp={() => this.openpickUp()}
+            /> :
             ''
         }
       </div>

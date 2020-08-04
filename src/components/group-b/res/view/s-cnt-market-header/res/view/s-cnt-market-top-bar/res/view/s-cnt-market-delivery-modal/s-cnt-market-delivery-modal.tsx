@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, EventEmitter, h, State, Event} from '@stencil/core';
+import {Component, ComponentInterface, EventEmitter, h, Event, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-delivery-modal',
@@ -7,20 +7,31 @@ import {Component, ComponentInterface, EventEmitter, h, State, Event} from '@ste
   scoped: true
 })
 export class SCntMarketDeliveryModal implements ComponentInterface {
+
+  /**
+   * boolean значение для вывода
+   */
+  @Prop()delivery: boolean;
+
   /**
    * Закрытие модального окна формы
    */
   @Event() closeForm: EventEmitter;
 
   /**
-   * boolean значение для вывода
+   * Закрытие модального окна формы
    */
-  @State()delivery: boolean;
+  @Event() openDelivery: EventEmitter;
+
+  /**
+   * Закрытие модального окна формы
+   */
+  @Event() openpickUp: EventEmitter;
 
   /**
    * boolean значение для вывода
    */
-  @State()pickUp: boolean;
+  @Prop()pickUp: boolean;
 
   /**
    * ref для закрытия модального окна
@@ -57,24 +68,24 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                 </div>
                 <div class="option-pickUp-or-delivery-block-wrapper">
                   <div class="option-pickUp-or-delivery-block">
-                    <button class="option-delivery">
+                    <button class="option-delivery" id={this.delivery? 'option-delivery-selected': ''} onClick={() => this.openDelivery.emit()}>
                       Доставка
                     </button>
-                    <button class="option-pickUp option-delivery-selected">
+                    <button class="option-pickUp" id={this.pickUp? 'option-delivery-selected': ''} onClick={() => this.openpickUp.emit()}>
                       Самовывоз
                     </button>
                   </div>
                 </div>
-                {/*{*/}
-                {/*  this.delivery ?*/}
-                {/*    <s-cnt-market-delivery-in-modal/>:*/}
-                {/*    ''*/}
-                {/*}*/}
-                {/*{*/}
-                {/*  this.pickUp ?*/}
-                {/*    <s-cnt-market-pickup-in-modal/>:*/}
-                {/*    ''*/}
-                {/*}*/}
+                {
+                  this.delivery ?
+                    <s-cnt-market-delivery-in-modal/>:
+                    ''
+                }
+                {
+                  this.pickUp ?
+                    <s-cnt-market-pickup-in-modal/>:
+                    ''
+                }
               </div>
             </div>
           </div>
@@ -83,7 +94,9 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
     );
   }
 
-
+  componentDidLoad(){
+    console.log(this.delivery)
+  }
   /**
    * Вызов функции вывода меню при условии совпадения таргета клика с нужным узлом
    */

@@ -170,7 +170,7 @@ button {
   border-bottom-right-radius: 8px;
 }
 
-.option-pickUp-or-delivery-block .option-delivery-selected {
+.option-pickUp-or-delivery-block #option-delivery-selected {
   pointer-events: none;
   cursor: default;
   border: 1px solid #21a038;
