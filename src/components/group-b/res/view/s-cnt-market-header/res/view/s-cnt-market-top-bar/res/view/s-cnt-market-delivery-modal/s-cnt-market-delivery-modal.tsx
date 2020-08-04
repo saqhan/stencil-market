@@ -47,7 +47,8 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                     </button>
                   </div>
                 </div>
-                <s-cnt-market-delivery-in-modal/>
+                {/*<s-cnt-market-delivery-in-modal/>*/}
+                {/*<s-cnt-market-pickup-in-modal/>*/}
               </div>
             </div>
           </div>
