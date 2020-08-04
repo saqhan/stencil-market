@@ -11,7 +11,6 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   render() {
     return (
       <div class="delivery-modal-main-block-wrapper">
-
         <div class="delivery-modal-other-opacity">
           {/*opacity background модального окна*/}
         </div>
@@ -47,7 +46,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                     </button>
                   </div>
                 </div>
-                {/*<s-cnt-market-delivery-in-modal/>*/}
+                <s-cnt-market-delivery-in-modal/>
                 {/*<s-cnt-market-pickup-in-modal/>*/}
               </div>
             </div>

@@ -31,7 +31,7 @@ export class SCntMarketTopBar implements ComponentInterface {
                 <i class="fas fa-pencil-alt"></i>
               </button>
               <p class="shortest-delivery-time">
-                <i class="fas fa-truck-moving"></i> Ближайшая доставка
+                🚛 Ближайшая доставка
                 <span>
                   сегодня, 19:00-21:00
                 </span>
