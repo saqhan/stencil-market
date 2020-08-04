@@ -11,7 +11,7 @@ export class SCntMarketTopBar implements ComponentInterface {
   render() {
     return (
       <div class="container-fluid parent-block-top-bar">
-        <div class="top-bar-content-outer-block">
+        <div class="container top-bar-content-outer-block">
           <div class="top-bar-content-inner-block">
             <div class="top-bar-delivery-and-adress">
               <div class="top-bar-delivery-option-block">
