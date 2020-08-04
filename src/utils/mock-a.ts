@@ -2,7 +2,8 @@ export const promoSliderCards = [
   {
     id: 1,
     title: "Набор Радости от Mars",
-    description: "Узнай как подсластить жизнь своим близким и сделать приятный подарок",
+    description:
+      "Узнай как подсластить жизнь своим близким и сделать приятный подарок",
     link: "Выбрать подарок!",
     img: "https://via.placeholder.com/100x100?img=img",
     bgImage: "https://sbermarket.ru/static/promo_cards/background.png",
@@ -52,7 +53,8 @@ export const promoSliderCards = [
   {
     id: 6,
     title: "Новинки от Агуши!",
-    description: "Порадуйте малыша полезными фруктовыми батончиками и мини-хлебцами!",
+    description:
+      "Порадуйте малыша полезными фруктовыми батончиками и мини-хлебцами!",
     link: "Перекусить",
     img: "https://via.placeholder.com/100x100?img=img",
     bgImage: "https://sbermarket.ru/static/promo_cards/background.png",
@@ -152,12 +154,13 @@ export const promoSliderCards = [
   {
     id: 16,
     title: "Персональный шопер",
-    description: "Оформите заказ, и мы соберем корзину так же, как это сделали бы вы сами!",
+    description:
+      "Оформите заказ, и мы соберем корзину так же, как это сделали бы вы сами!",
     link: "",
     img: "https://via.placeholder.com/100x100?img=img",
     bgImage: "https://sbermarket.ru/static/promo_cards/background.png",
     bgColor: "160, 128, 194",
-    color: "255, 255, 255"
+    color: "255, 255, 255",
   },
   {
     id: 17,
@@ -184,214 +187,310 @@ export const promoSliderCards = [
 export const forSelection = [
   {
     id: 1,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'METRO'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "METRO",
   },
   {
     id: 2,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'SELGROS'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "SELGROS",
   },
   {
     id: 3,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Лента'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Лента",
   },
   {
     id: 4,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ВкусВилл',
-    text: 'Доступно за 30 минут в Москве'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ВкусВилл",
+    text: "Доступно за 30 минут в Москве",
   },
   {
     id: 5,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Ашан'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Ашан",
   },
   {
     id: 6,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Азбука Вкуса',
-    text: 'Доступно за 30 минут в Москве'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Азбука Вкуса",
+    text: "Доступно за 30 минут в Москве",
   },
   {
     id: 7,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'МЕГАМАРТ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "МЕГАМАРТ",
   },
   {
     id: 8,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Бахетле'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Бахетле",
   },
   {
     id: 9,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ВИКТОРИЯ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ВИКТОРИЯ",
   },
   {
     id: 10,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ЗЕЛЕНОЕ ЯБЛОКО'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ЗЕЛЕНОЕ ЯБЛОКО",
   },
   {
     id: 11,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Аллея'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Аллея",
   },
   {
     id: 12,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Командор'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Командор",
   },
   {
     id: 13,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'BILLA'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "BILLA",
   },
   {
     id: 14,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'REAL'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "REAL",
   },
   {
     id: 15,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ДЕЯ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ДЕЯ",
   },
   {
     id: 16,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Хороший'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Хороший",
   },
   {
     id: 17,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ТИТАН'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ТИТАН",
   },
   {
     id: 18,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'СЕДЬМАЯ СТОЛИЦА'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "СЕДЬМАЯ СТОЛИЦА",
   },
   {
     id: 29,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Забакальский Привозъ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Забакальский Привозъ",
   },
   {
     id: 20,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'КИТ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "КИТ",
   },
   {
     id: 21,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ПАРУС'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ПАРУС",
   },
   {
     id: 22,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'КАРАВАН'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "КАРАВАН",
   },
   {
     id: 23,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'МАГНОЛИЯ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "МАГНОЛИЯ",
   },
   {
     id: 24,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ВЕГА'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ВЕГА",
   },
   {
     id: 25,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Шан'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Шан",
   },
   {
     id: 26,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'АУТЛЕТ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "АУТЛЕТ",
   },
   {
     id: 27,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Осень'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Осень",
   },
   {
     id: 28,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ТЦ "Новомаринский"'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: 'ТЦ "Новомаринский"',
   },
   {
     id: 29,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'УДАЧНАЯ ПОКУПКА'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "УДАЧНАЯ ПОКУПКА",
   },
   {
     id: 30,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ТД ХОРОШИЙ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ТД ХОРОШИЙ",
   },
   {
     id: 31,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ФРЕШ25'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ФРЕШ25",
   },
   {
     id: 32,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ТЦ SТОЛИЦА'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ТЦ SТОЛИЦА",
   },
   {
     id: 33,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'СИГМА'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "СИГМА",
   },
   {
     id: 34,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'ИДЕЯ'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "ИДЕЯ",
   },
   {
     id: 35,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Столичный'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Столичный",
   },
   {
     id: 36,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'СберМаркет',
-    text: 'СберМаркет'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "СберМаркет",
+    text: "СберМаркет",
   },
   {
     id: 37,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Быстроном'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Быстроном",
   },
   {
     id: 38,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'АГРОКОМПЛЕКС'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "АГРОКОМПЛЕКС",
   },
   {
     id: 39,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'YVES ROCHER'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "YVES ROCHER",
   },
   {
     id: 40,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Юг Опт'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Юг Опт",
   },
   {
     id: 41,
-    image: 'https://via.placeholder.com/70x70?text=Text',
-    title: 'Дочки-Сыночки'
+    image: "https://via.placeholder.com/70x70?text=Text",
+    title: "Дочки-Сыночки",
   },
 ];
 
-export const homePageImage = 'https://via.placeholder.com/1245x518?text=Text';
+export const homePageImage = "https://via.placeholder.com/1245x518?text=Text";
 
+export const getProduct = [
+  {
+    brand: "Бренды ЛЕНТЫ",
+    products: "Продукты питания",
+    category: "Сладости",
+    image: "https://via.placeholder.com/300x200?text=Text",
+    name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
+    weight: "200 г",
+    price: "252,69 ₽",
+    presence: "Товара много",
+    button: "Купить",
+  },
+];
 
+export const getRecommended = [
+  {
+    image: "https://via.placeholder.com/70x70?text=Text",
+    price: "269.59 ₽",
+    productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+    weight: "190 г",
+  },
+  {
+    image: "https://via.placeholder.com/70x70?text=Text",
+    price: "252.69 ₽",
+    productName: "Конфеты Dolce Albero Ассорти",
+    weight: "200 г",
+  },
+  {
+    image: "https://via.placeholder.com/70x70?text=Text",
+    price: "115.79 ₽",
+    productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+    weight: "200 г",
+  },
+  {
+    image: "https://via.placeholder.com/70x70?text=Text",
+    price: "105.29 ₽",
+    productName: "Миска Mallony 1,1л",
+    weight: "1 шт",
+  },
+  {
+    image: "https://via.placeholder.com/70x70?text=Text",
+    price: "168.49 ₽",
+    productName: "Миска Mallony 3,3л",
+    weight: "1 шт",
+  },
+  {
+    image: "https://via.placeholder.com/70x70?text=Text",
+    price: "105.29 ₽",
+    productName: "Грибы вешенки свежие",
+    weight: "300 гр",
+  },
+];
+
+export const getSpecification = {
+  op: "Описание",
+  spec: "Шоколадные конфеты Dolce Albero на каждый день к чаю.",
+  value: "Пищевая ценность",
+  weight: "на 100 г",
+  protein: "Белки",
+  weightProtein: "6,8 г",
+  fat: "Жиры",
+  weightFat: "37,9 г",
+  carbohydrates: "Углеводы",
+  weightCarbohydrates: "46,5 г",
+  calories: "Калорийность",
+  weightCalories: "549 ккал",
+  item_1: "Состав",
+  composition:
+    'Сахар, какао тертое, жир специального назначения (пальмовое масло, пальмоядрогвое масло, эмульгатор лецитин соевый), ядра ореха фундука (лесного ореха) обжаренные, масло какао, какао-порошок, ядра ореха фундука (лесного ореха) обжаренные тертые, молоко сухое цельное, молоко сухое обезжиренное, эмульгатор лецитин соевый, ароматизаторы: "Ванилин", "Фундук", антиокислитель аскорбановая кислота.',
+  info: "Общая информация",
+  brand: "Бренд",
+  dolce: "Dolce Albero",
+  manufacturer: "Производитель",
+  lenta: "Лента",
+  country: "Страна",
+  russia: "Россия",
+  storageСonditions: "Условия хранения",
+  terms:
+    "При температуре от +15°C до +21°C и относительной влажности воздуха не более 75%",
+  term: "Срок хранения",
+  month: "9 мес",
+  kindOfCandy: "Вид конфет",
+  chocolate: "Шоколад",
+  typeOfChocolate: "Вид шоколада",
+  bitter: "Горький",
+  flavor: "Вкус",
+  walnut: "Ореховый",
+  supplements: "Добавки",
+  hazelnut: "Фундук",
+  feature: "Особенность",
+  glazed: "Глазированные",
+  packaging: "Упаковка",
+  box: "Картонная коробка",
+  hideInformation: "Скрыть подробную информацию",
+};
+
+export const info = "С этим смотрят";
