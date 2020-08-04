@@ -233,3 +233,9 @@ textarea[placeholder] {
 }
 
 
+@media (max-width: 1200px) {
+  .user-cart span, .user-orders span, .catalog button span {
+    display: none;
+  }
+}
+
