@@ -1,0 +1,39 @@
+.common {
+  cursor: pointer;
+  display: flex;
+  margin: 15px 1%;
+  position: relative;
+  bottom: 60px;
+  right: 10px;
+  box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 20px 19px;
+  width: 360px;
+}
+.common:hover {
+  box-shadow: 0 4px 12px 0 #d0d2d4;
+  transition: box-shadow,.15s
+}
+
+.img {
+  border-radius: 50%;
+}
+
+.title {
+  padding: 20px 0 5px 15px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.common:hover .title {
+  opacity: .7;
+  transition: .15s
+}
+
+.text {
+  padding-left: 15px;
+  line-height: 1.14;
+  color: #7c7e80;
+  font-size: 14px
+}
