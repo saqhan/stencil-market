@@ -7,7 +7,6 @@ import {Component, ComponentInterface, h} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketTopBar implements ComponentInterface {
-
   render() {
     return (
       <div class="container-fluid parent-block-top-bar">
@@ -30,7 +29,6 @@ export class SCntMarketTopBar implements ComponentInterface {
                   </button>
                 </span>
               </div>
-
               <p class="shortest-delivery-time">
                 🚛 Ближайшая доставка
                 <span>

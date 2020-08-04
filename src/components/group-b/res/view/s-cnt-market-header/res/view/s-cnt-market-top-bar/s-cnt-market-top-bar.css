@@ -119,8 +119,7 @@ button {
 }
 
 .top-bar-number-wrapper {
-  display: flex;
-  justify-content: flex-end;
+
 }
 
 .phone-number-link {
@@ -156,10 +155,35 @@ button {
 /*}*/
 
 @media (max-width: 1200px) {
+  .shortest-delivery-time {
+    display: none;
+  }
 
+  .top-bar-number-wrapper {
+    position: absolute;
+    right: 0px;
+  }
 }
 
 @media (max-width: 992px) {
+  .top-bar-delivery-option-block {
+    display: none;
+  }
+
+  .option-adress-text-block{
+    width: 100%;
+  }
+
+  .option-adress-text-block span{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  .top-bar-number-wrapper {
+    display: none;
+  }
 
 }
 
