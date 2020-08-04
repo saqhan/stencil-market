@@ -1,6 +1,6 @@
 
 .header-body-wrapper {
-  padding: 10px 0px;
+  padding-top: 10px;
   display: flex;
   align-items: center;
 }
@@ -25,6 +25,10 @@
   color: #96959b;
   font-size: 14px;
   transition: 0.3s ease;
+}
+
+.header-navbar-list ul{
+ padding:0px;
 }
 
 .header-navbar-list ul li:hover {
