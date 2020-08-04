@@ -157,6 +157,7 @@ export const promoSliderCards = [
     img: "https://via.placeholder.com/100x100?img=img",
     bgImage: "https://sbermarket.ru/static/promo_cards/background.png",
     bgColor: "160, 128, 194",
+    color: "255, 255, 255"
   },
   {
     id: 17,
