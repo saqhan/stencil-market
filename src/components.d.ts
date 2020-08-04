@@ -18,6 +18,9 @@ export namespace Components {
     interface SCntMarketHeader {
     }
     interface SCntMarketItemSelection {
+        /**
+          * Данные для карточек магазинов
+         */
         "payload": any;
     }
     interface SCntMarketPromoSlider {
@@ -33,6 +36,13 @@ export namespace Components {
         "promoSliderCards": MarketPromoSliderInterface;
     }
     interface SCntMarketSelection {
+        /**
+          * Данные для главной картинки
+         */
+        "homePageImage": any;
+        /**
+          * Данные для карточек магазинов
+         */
         "payload": any;
     }
     interface SCntMarketShop {
@@ -124,6 +134,9 @@ declare namespace LocalJSX {
     interface SCntMarketHeader {
     }
     interface SCntMarketItemSelection {
+        /**
+          * Данные для карточек магазинов
+         */
         "payload"?: any;
     }
     interface SCntMarketPromoSlider {
@@ -139,6 +152,13 @@ declare namespace LocalJSX {
         "promoSliderCards"?: MarketPromoSliderInterface;
     }
     interface SCntMarketSelection {
+        /**
+          * Данные для главной картинки
+         */
+        "homePageImage"?: any;
+        /**
+          * Данные для карточек магазинов
+         */
         "payload"?: any;
     }
     interface SCntMarketShop {

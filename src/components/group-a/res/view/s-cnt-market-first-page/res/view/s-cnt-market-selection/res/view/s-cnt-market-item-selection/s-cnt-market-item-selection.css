@@ -2,6 +2,9 @@
   cursor: pointer;
   display: flex;
   margin: 15px 1%;
+  position: relative;
+  bottom: 60px;
+  right: 10px;
   box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
   border-radius: 12px;
   background-color: #fff;
@@ -9,7 +12,7 @@
   width: 360px;
 }
 .common:hover {
-  box-shadow: 0 10px 10px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
+  box-shadow: 0 4px 12px 0 #d0d2d4;
   transition: box-shadow,.15s
 }
 
@@ -20,7 +23,7 @@
 .title {
   padding: 20px 0 5px 15px;
   font-size: 20px;
-  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
 }
 
 .common:hover .title {

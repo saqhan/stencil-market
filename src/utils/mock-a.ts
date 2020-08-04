@@ -130,216 +130,214 @@ export const promoSliderCards = [
 export const forSelection = [
   {
     id: 1,
-    imageHome: 'https://via.placeholder.com/1245x518?text=Text'
-  },
-  {
-    id: 2,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'METRO'
   },
   {
-    id: 3,
+    id: 2,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'SELGROS'
   },
   {
-    id: 4,
+    id: 3,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Лента'
   },
   {
-    id: 5,
+    id: 4,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ВкусВилл',
     text: 'Доступно за 30 минут в Москве'
   },
   {
-    id: 6,
+    id: 5,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Ашан'
   },
   {
-    id: 7,
+    id: 6,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Азбука Вкуса',
     text: 'Доступно за 30 минут в Москве'
   },
   {
-    id: 8,
+    id: 7,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'МЕГАМАРТ'
   },
   {
-    id: 9,
+    id: 8,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Бахетле'
   },
   {
-    id: 10,
+    id: 9,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ВИКТОРИЯ'
   },
   {
-    id: 11,
+    id: 10,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ЗЕЛЕНОЕ ЯБЛОКО'
   },
   {
-    id: 12,
+    id: 11,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Аллея'
   },
   {
-    id: 13,
+    id: 12,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Командор'
   },
   {
-    id: 14,
+    id: 13,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'BILLA'
   },
   {
-    id: 15,
+    id: 14,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'REAL'
   },
   {
-    id: 16,
+    id: 15,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ДЕЯ'
   },
   {
-    id: 17,
+    id: 16,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Хороший'
   },
   {
-    id: 18,
+    id: 17,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ТИТАН'
   },
   {
-    id: 19,
+    id: 18,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'СЕДЬМАЯ СТОЛИЦА'
   },
   {
-    id: 20,
+    id: 29,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Забакальский Привозъ'
   },
   {
-    id: 21,
+    id: 20,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'КИТ'
   },
   {
-    id: 22,
+    id: 21,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ПАРУС'
   },
   {
-    id: 23,
+    id: 22,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'КАРАВАН'
   },
   {
-    id: 24,
+    id: 23,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'МАГНОЛИЯ'
   },
   {
-    id: 25,
+    id: 24,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ВЕГА'
   },
   {
-    id: 26,
+    id: 25,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Шан'
   },
   {
-    id: 27,
+    id: 26,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'АУТЛЕТ'
   },
   {
-    id: 28,
+    id: 27,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Осень'
   },
   {
-    id: 29,
+    id: 28,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ТЦ "Новомаринский"'
   },
   {
-    id: 30,
+    id: 29,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'УДАЧНАЯ ПОКУПКА'
   },
   {
-    id: 31,
+    id: 30,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ТД ХОРОШИЙ'
   },
   {
-    id: 32,
+    id: 31,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ФРЕШ25'
   },
   {
-    id: 33,
+    id: 32,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ТЦ SТОЛИЦА'
   },
   {
-    id: 34,
+    id: 33,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'СИГМА'
   },
   {
-    id: 35,
+    id: 34,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'ИДЕЯ'
   },
   {
-    id: 36,
+    id: 35,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Столичный'
   },
   {
-    id: 37,
+    id: 36,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'СберМаркет',
     text: 'СберМаркет'
   },
   {
-    id: 38,
+    id: 37,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Быстроном'
   },
   {
-    id: 39,
+    id: 38,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'АГРОКОМПЛЕКС'
   },
   {
-    id: 40,
+    id: 39,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'YVES ROCHER'
   },
   {
-    id: 41,
+    id: 40,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Юг Опт'
   },
   {
-    id: 42,
+    id: 41,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'Дочки-Сыночки'
   },
 ];
+
+export const homePageImage = 'https://via.placeholder.com/1245x518?text=Text';
 
 

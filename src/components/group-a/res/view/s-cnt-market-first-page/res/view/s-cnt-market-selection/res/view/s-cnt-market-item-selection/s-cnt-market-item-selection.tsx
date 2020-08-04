@@ -7,26 +7,18 @@ import { Component, ComponentInterface, h, Prop } from "@stencil/core";
   scoped: true,
 })
 export class SCntMarketItemSelection implements ComponentInterface {
+  /**
+   * Данные для карточек магазинов
+   */
   @Prop() payload: any;
 
   render() {
-    const getSelection = this.payload.map((item) => {
-      return (
-        <div class="col-md-4">
-          <div class="common">
-            <img src={item.image} class="img"/>
-            <div class="commonText">
-              <div class="title">{item.title}</div>
-              <div class="text">{item.text}</div>
-            </div>
-          </div>
-        </div>
-      );
-    });
     return (
-      <div class="selection">
-        <div class="container">
-          <div class="row">{getSelection}</div>
+      <div class="common">
+        <img src={this.payload.image} class="img"/>
+        <div class="commonText">
+          <div class="title">{this.payload.title}</div>
+          <div class="text">{this.payload.text}</div>
         </div>
       </div>
     );

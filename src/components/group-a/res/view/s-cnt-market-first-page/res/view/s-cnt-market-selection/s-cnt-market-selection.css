@@ -1,3 +1,8 @@
-:host {
-  display: block;
+.imageHome {
+  text-align: center;
+}
+
+.image {
+  margin-top: 50px;
+  border-radius: 10px;
 }
