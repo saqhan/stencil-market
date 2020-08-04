@@ -10,7 +10,10 @@ export class GroupA implements ComponentInterface {
 
   render() {
     return (
-      <s-cnt-market-shop></s-cnt-market-shop>
+     <div>
+       <s-cnt-market-first-page/>
+       {/*<s-cnt-market-shop/>*/}
+     </div>
     );
   }
 
