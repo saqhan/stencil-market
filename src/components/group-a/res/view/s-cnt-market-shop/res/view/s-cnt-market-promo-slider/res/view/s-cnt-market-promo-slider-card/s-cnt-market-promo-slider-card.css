@@ -45,6 +45,7 @@
   font-weight: 700;
   padding: 6px 14px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .promo-slider-card-logo {
@@ -71,3 +72,7 @@
   background-position: center;
 }
 
+.promo-slider-card-action:hover {
+  background: #f6fff4;
+  color: #666;
+}

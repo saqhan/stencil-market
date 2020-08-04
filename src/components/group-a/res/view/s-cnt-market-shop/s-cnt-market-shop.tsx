@@ -12,9 +12,7 @@ export class SCntMarketShop implements ComponentInterface {
   render() {
     return (
       <main>
-        <div class="container-fluid">
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}></s-cnt-market-promo-slider>
-        </div>
       </main>
     );
   }

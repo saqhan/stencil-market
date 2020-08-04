@@ -26,10 +26,11 @@ export class SCntMarketPromoSlider implements ComponentInterface {
 
   render() {
     return (
-      <div class="main-carousel">
+      <div class="main-carousel-wrapper">
+        <div class="main-carousel">
           <PromoSliderCard array={this.promoSliderCards}></PromoSliderCard>
+        </div>
       </div>
-
     );
   }
 }
