@@ -14,7 +14,11 @@ export namespace Components {
     }
     interface SCntMarketHeader {
     }
+<<<<<<< HEAD
     interface SCntMarketModalWindow {
+=======
+    interface SCntMarketPromoSlider {
+>>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
     }
 }
 declare global {
@@ -42,18 +46,30 @@ declare global {
         prototype: HTMLSCntMarketHeaderElement;
         new (): HTMLSCntMarketHeaderElement;
     };
+<<<<<<< HEAD
     interface HTMLSCntMarketModalWindowElement extends Components.SCntMarketModalWindow, HTMLStencilElement {
     }
     var HTMLSCntMarketModalWindowElement: {
         prototype: HTMLSCntMarketModalWindowElement;
         new (): HTMLSCntMarketModalWindowElement;
+=======
+    interface HTMLSCntMarketPromoSliderElement extends Components.SCntMarketPromoSlider, HTMLStencilElement {
+    }
+    var HTMLSCntMarketPromoSliderElement: {
+        prototype: HTMLSCntMarketPromoSliderElement;
+        new (): HTMLSCntMarketPromoSliderElement;
+>>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
     };
     interface HTMLElementTagNameMap {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
+<<<<<<< HEAD
         "s-cnt-market-modal-window": HTMLSCntMarketModalWindowElement;
+=======
+        "s-cnt-market-promo-slider": HTMLSCntMarketPromoSliderElement;
+>>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
     }
 }
 declare namespace LocalJSX {
@@ -65,14 +81,22 @@ declare namespace LocalJSX {
     }
     interface SCntMarketHeader {
     }
+<<<<<<< HEAD
     interface SCntMarketModalWindow {
+=======
+    interface SCntMarketPromoSlider {
+>>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
     }
     interface IntrinsicElements {
         "group-a": GroupA;
         "group-b": GroupB;
         "my-component": MyComponent;
         "s-cnt-market-header": SCntMarketHeader;
+<<<<<<< HEAD
         "s-cnt-market-modal-window": SCntMarketModalWindow;
+=======
+        "s-cnt-market-promo-slider": SCntMarketPromoSlider;
+>>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
     }
 }
 export { LocalJSX as JSX };
@@ -83,7 +107,11 @@ declare module "@stencil/core" {
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
+<<<<<<< HEAD
             "s-cnt-market-modal-window": LocalJSX.SCntMarketModalWindow & JSXBase.HTMLAttributes<HTMLSCntMarketModalWindowElement>;
+=======
+            "s-cnt-market-promo-slider": LocalJSX.SCntMarketPromoSlider & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderElement>;
+>>>>>>> 2d8ac872d093f79ec0ad370c9a96bfcba24a26ec
         }
     }
 }
