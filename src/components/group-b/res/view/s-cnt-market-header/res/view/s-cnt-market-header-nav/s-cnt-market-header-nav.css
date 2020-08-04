@@ -258,3 +258,18 @@ textarea[placeholder] {
   }
 }
 
+@media (max-width: 414px) {
+  .user-orders, .user-wish-list {
+    display: none;
+  }
+  .catalog {
+    margin-right: 10px;
+  }
+  .user-cart {
+    margin: 0px;
+  }
+  .user-profile-btn {
+    margin-left: 6px;
+  }
+}
+
