@@ -3,6 +3,11 @@
   display: flex;
   align-items: center;
   color: #333536;
+  height: 72px;
+}
+
+.catalog {
+  margin-right: 15px;
 }
 
 .catalog button {
@@ -45,16 +50,32 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 8px 0 16px;
+  padding: 8px 8px 8px 16px;
   border: 1px solid rgba(0,0,0,.15);
   box-sizing: border-box;
   cursor: pointer;
-
 }
+
+.button-menu i {
+  color: rgb(255, 228, 1);
+  padding: 0px 3px;
+}
+
 
 .button-menu img {
   max-width: 75px;
   max-height: 30px;
   width: auto;
   height: auto;
+}
+
+.search-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.search-wrapper form {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
 }

@@ -10,6 +10,9 @@ export class SCntMarketHeaderNav implements ComponentInterface {
 
   render() {
     return (
+      <div class="container" >
+        <div class="row">
+          <div class="col">
       <div class="nav-wrapper">
         <div class="catalog">
           <button>
@@ -22,8 +25,15 @@ export class SCntMarketHeaderNav implements ComponentInterface {
             <img src="https://sbermarket.ru/spree/retailer_logos/97198/default/metro_logo.png?1524229580" alt=""/>
             <i class="fas fa-angle-down"></i>
           </div>
+          <div class="search-wrapper">
+            <form >
+              <input type="text" placeholder="Найти в магазине METRO"/>
+            </form>
+          </div>
         </div>
-
+      </div>
+          </div>
+        </div>
       </div>
     );
   }
