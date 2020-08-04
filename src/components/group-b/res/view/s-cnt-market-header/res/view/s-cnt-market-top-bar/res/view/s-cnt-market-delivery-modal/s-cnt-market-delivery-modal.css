@@ -1,3 +1,7 @@
+button {
+  outline: none;
+}
+
 .delivery-modal-main-block-wrapper {
   position: relative;
   z-index: 5000;
@@ -32,6 +36,7 @@
 
 .delivery-modal-block-wrapper {
   max-width: 746px;
+  width: 100%;
   margin: 30px auto;
   position: relative;
   will-change: transform;
@@ -115,6 +120,8 @@
 .option-pickUp-or-delivery-block-wrapper {
   padding: 0 30px;
   max-width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .option-pickUp-or-delivery-block {
@@ -142,7 +149,7 @@
   line-height: 20px;
 }
 
-.option-delivery{
+.option-delivery {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
@@ -160,38 +167,3 @@
   color: #fff;
 }
 
-.adress-in-city-blocks {
-  padding: 40px 50px 25px;
-  width: 100%;
-  background-color: #f7f7f7;
-  border-bottom-left-radius: 16px;
-  border-bottom-right-radius: 16px;
-  font-weight: 500;
-}
-
-.option-city-modal-intop-bar {
-  text-align: center;
-  margin-bottom: 24px;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.option-city-modal-intop-bar span{
-  margin-left: 5px;
-}
-
-.city-option-for-selected {
-  display: inline-block;
-  height: auto;
-  cursor: pointer;
-  font-size: 18px;
-  line-height: normal;
-  color: #21a038;
-  user-select: none;
-}
-
-.city-option-for-selected i {
-  font-weight: 400;
-}

@@ -1,0 +1,94 @@
+button {
+  outline: none;
+}
+
+.block-entering-delivery-address{
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 35px 0 0;
+  overflow: hidden;
+  outline: none;
+}
+
+.text-before-input{
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+
+.map-block-wrapper{
+  position: relative;
+}
+
+.map-input-wrap{
+  display: flex;
+  padding: 0 20px;
+  margin: 15px 30px 20px 30px;
+}
+
+.map-input-wrap-inner{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid #d0d2d4;
+  background-color: #fff;
+}
+
+.map-input-wrap-inner span{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.map-input-wrap-inner span i{
+  display: inline-block;
+  margin-right: 5px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.map-input-wrap-inner span input{
+  font-size: 16px;
+  width: 100%;
+  height: 46px;
+  color: #333536;
+  flex-grow: 2;
+  border: none;
+  background-color: #fff;
+  box-shadow: none;
+  font-weight: 500;
+  border-radius: 3px;
+  line-height: 20px;
+}
+
+.map-addres-save-btn{
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  transition-property: color,background-color,border-color,box-shadow,opacity;
+  white-space: nowrap;
+  background-color: #21a038;
+  margin-left: 10px;
+  color: #fff;
+  border: 1px solid transparent;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 7px;
+  padding: 7px 16px;
+}

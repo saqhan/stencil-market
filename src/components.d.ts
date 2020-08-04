@@ -12,6 +12,8 @@ export namespace Components {
     }
     interface MyComponent {
     }
+    interface SCntMarketDeliveryInModal {
+    }
     interface SCntMarketDeliveryModal {
     }
     interface SCntMarketHeader {
@@ -19,6 +21,8 @@ export namespace Components {
     interface SCntMarketHeaderBody {
     }
     interface SCntMarketHeaderNav {
+    }
+    interface SCntMarketPickupInModal {
     }
     interface SCntMarketTopBar {
     }
@@ -41,6 +45,12 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    interface HTMLSCntMarketDeliveryInModalElement extends Components.SCntMarketDeliveryInModal, HTMLStencilElement {
+    }
+    var HTMLSCntMarketDeliveryInModalElement: {
+        prototype: HTMLSCntMarketDeliveryInModalElement;
+        new (): HTMLSCntMarketDeliveryInModalElement;
     };
     interface HTMLSCntMarketDeliveryModalElement extends Components.SCntMarketDeliveryModal, HTMLStencilElement {
     }
@@ -66,6 +76,12 @@ declare global {
         prototype: HTMLSCntMarketHeaderNavElement;
         new (): HTMLSCntMarketHeaderNavElement;
     };
+    interface HTMLSCntMarketPickupInModalElement extends Components.SCntMarketPickupInModal, HTMLStencilElement {
+    }
+    var HTMLSCntMarketPickupInModalElement: {
+        prototype: HTMLSCntMarketPickupInModalElement;
+        new (): HTMLSCntMarketPickupInModalElement;
+    };
     interface HTMLSCntMarketTopBarElement extends Components.SCntMarketTopBar, HTMLStencilElement {
     }
     var HTMLSCntMarketTopBarElement: {
@@ -76,10 +92,12 @@ declare global {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
+        "s-cnt-market-delivery-in-modal": HTMLSCntMarketDeliveryInModalElement;
         "s-cnt-market-delivery-modal": HTMLSCntMarketDeliveryModalElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-header-body": HTMLSCntMarketHeaderBodyElement;
         "s-cnt-market-header-nav": HTMLSCntMarketHeaderNavElement;
+        "s-cnt-market-pickup-in-modal": HTMLSCntMarketPickupInModalElement;
         "s-cnt-market-top-bar": HTMLSCntMarketTopBarElement;
     }
 }
@@ -90,6 +108,8 @@ declare namespace LocalJSX {
     }
     interface MyComponent {
     }
+    interface SCntMarketDeliveryInModal {
+    }
     interface SCntMarketDeliveryModal {
     }
     interface SCntMarketHeader {
@@ -98,16 +118,20 @@ declare namespace LocalJSX {
     }
     interface SCntMarketHeaderNav {
     }
+    interface SCntMarketPickupInModal {
+    }
     interface SCntMarketTopBar {
     }
     interface IntrinsicElements {
         "group-a": GroupA;
         "group-b": GroupB;
         "my-component": MyComponent;
+        "s-cnt-market-delivery-in-modal": SCntMarketDeliveryInModal;
         "s-cnt-market-delivery-modal": SCntMarketDeliveryModal;
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-header-body": SCntMarketHeaderBody;
         "s-cnt-market-header-nav": SCntMarketHeaderNav;
+        "s-cnt-market-pickup-in-modal": SCntMarketPickupInModal;
         "s-cnt-market-top-bar": SCntMarketTopBar;
     }
 }
@@ -118,10 +142,12 @@ declare module "@stencil/core" {
             "group-a": LocalJSX.GroupA & JSXBase.HTMLAttributes<HTMLGroupAElement>;
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "s-cnt-market-delivery-in-modal": LocalJSX.SCntMarketDeliveryInModal & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryInModalElement>;
             "s-cnt-market-delivery-modal": LocalJSX.SCntMarketDeliveryModal & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryModalElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-header-body": LocalJSX.SCntMarketHeaderBody & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBodyElement>;
             "s-cnt-market-header-nav": LocalJSX.SCntMarketHeaderNav & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderNavElement>;
+            "s-cnt-market-pickup-in-modal": LocalJSX.SCntMarketPickupInModal & JSXBase.HTMLAttributes<HTMLSCntMarketPickupInModalElement>;
             "s-cnt-market-top-bar": LocalJSX.SCntMarketTopBar & JSXBase.HTMLAttributes<HTMLSCntMarketTopBarElement>;
         }
     }

@@ -1,0 +1,128 @@
+button {
+  outline: none;
+}
+
+.adress-in-city-blocks {
+  padding: 40px 50px 25px;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  font-weight: 500;
+}
+
+.option-city-modal-intop-bar {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-city-modal-intop-bar i{
+  color: #21a038;
+}
+
+.option-city-modal-intop-bar span {
+  margin-left: 5px;
+}
+
+.city-option-for-selected {
+  display: inline-block;
+  height: auto;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: normal;
+  color: #21a038;
+  user-select: none;
+  margin-left: 5px;
+}
+
+.city-option-for-selected i {
+  font-weight: 400;
+}
+
+.expandable-store-list {
+  width: 100%;
+  border: 1px solid #e7e9eb;
+  background-color: #fff;
+  transition: all .2s;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.store-list-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.store-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.store-list-block-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store-list-logo-img {
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 45, 114);
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  margin-right: 16px;
+  justify-content: center;
+}
+
+.store-list-logo-img div{
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  max-width: 26px;
+  max-height: 26px;
+}
+
+.store-list-name{
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 45, 114);
+}
+
+.number-of-stores{
+  border: 1px solid #e7e9eb;
+  border-radius: 8px;
+  color: #96959b;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 16px;
+}
+
+.list-stores-open-icon{
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e7e9eb;
+}
+
+.list-stores-open-icon i{
+  color: #a6a8a9;;
+}
