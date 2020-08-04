@@ -61,6 +61,15 @@
   cursor: pointer;
 }
 
+.full-menu-nav-btn {
+  width: 75px;
+  height: 100%;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(https://sbermarket.ru/spree/retailer_logos/97198/default/metro_logo.png?1524229580);
+}
+
 .button-menu i {
   color: rgb(255, 228, 1);
   padding: 0px 3px;
@@ -236,6 +245,16 @@ textarea[placeholder] {
 @media (max-width: 1200px) {
   .user-cart span, .user-orders span, .catalog button span {
     display: none;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .full-menu-nav-btn {
+    display: none;
+  }
+  .search-wrapper input {
+    font-size: 12px;
   }
 }
 

@@ -21,10 +21,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
               </div>
               <div class="nav-search">
                 <div class="button-menu">
-                  <img
-                    src="https://sbermarket.ru/spree/retailer_logos/97198/default/metro_logo.png?1524229580"
-                    alt=""
-                  />
+                  <div class="full-menu-nav-btn"></div>
                   <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="search-wrapper">

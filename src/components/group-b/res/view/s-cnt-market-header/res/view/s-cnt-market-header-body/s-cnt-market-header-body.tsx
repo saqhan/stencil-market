@@ -18,6 +18,11 @@ export class SCntMarketHeaderBody implements ComponentInterface {
                 <div class="logo"></div>
               </div>
               <div class="header-navbar-list">
+                <div class="mobile-menu">
+                  <button>
+                    <i class="fas fa-bars"></i>
+                  </button>
+                </div>
                 <ul>
                   <li class='main-item'>👩‍💻 Для Бизнеса</li>
                   <li>Как мы работаем</li>

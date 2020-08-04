@@ -15,6 +15,7 @@
   background-image: url("https://via.placeholder.com/200x33?text=LOGO");
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 }
 
 .header-navbar-list ul li {
@@ -35,8 +36,41 @@
   color: #393939;
 }
 
+
+.mobile-menu button {
+  padding: 5px 10px;
+  border: none;
+  color: #1ea038;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   .logo-wrapper {
     min-width: auto
   }
 }
+
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+  .header-navbar-list ul{
+    display: block;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    display: block;
+  }
+  .header-navbar-list ul {
+    display: none;
+  }
+  .header-body-wrapper {
+    justify-content: space-between;
+  }
+}
+
