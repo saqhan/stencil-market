@@ -3,13 +3,17 @@ import { Component, ComponentInterface, h } from '@stencil/core';
 @Component({
   tag: 'group-a',
   styleUrl: 'group-a.css',
-  shadow: true,
+  shadow: false,
+  scoped: true
 })
 export class GroupA implements ComponentInterface {
 
   render() {
     return (
-      <s-cnt-market-first-page/>
+     <div>
+       <s-cnt-market-first-page/>
+       {/*<s-cnt-market-shop/>*/}
+     </div>
     );
   }
 

@@ -1,17 +1,18 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-selection',
   styleUrl: 's-cnt-market-selection.css',
-  shadow: true,
+  shadow: false,
+  scoped: true,
 })
 export class SCntMarketSelection implements ComponentInterface {
 
+  @Prop() payload: any;
+
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <s-cnt-market-item-selection payload={this.payload}/>
     );
   }
 

@@ -130,7 +130,7 @@ export const promoSliderCards = [
 export const forSelection = [
   {
     id: 1,
-    image: 'https://via.placeholder.com/1245x518?text=Text'
+    imageHome: 'https://via.placeholder.com/1245x518?text=Text'
   },
   {
     id: 2,
@@ -313,6 +313,7 @@ export const forSelection = [
     id: 37,
     image: 'https://via.placeholder.com/70x70?text=Text',
     title: 'СберМаркет',
+    text: 'СберМаркет'
   },
   {
     id: 38,
@@ -340,4 +341,5 @@ export const forSelection = [
     title: 'Дочки-Сыночки'
   },
 ];
+
 
