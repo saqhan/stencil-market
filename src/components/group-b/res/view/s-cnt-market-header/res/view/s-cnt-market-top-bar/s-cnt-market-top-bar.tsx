@@ -51,7 +51,7 @@ export class SCntMarketTopBar implements ComponentInterface {
             </div>
           </div>
         </div>
-        <s-cnt-market-delivery-modal/>
+        {/*<s-cnt-market-delivery-modal/>*/}
       </div>
     );
   }
