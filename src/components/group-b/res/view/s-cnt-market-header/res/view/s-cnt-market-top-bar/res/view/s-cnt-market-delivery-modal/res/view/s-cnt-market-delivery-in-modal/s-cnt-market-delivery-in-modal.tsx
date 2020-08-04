@@ -7,7 +7,6 @@ import {Component, ComponentInterface, h} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketDeliveryModal implements ComponentInterface {
-
   render() {
     return (
       <div class="block-entering-delivery-address">
