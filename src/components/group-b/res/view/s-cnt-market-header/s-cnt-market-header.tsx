@@ -13,8 +13,8 @@ export class SCntMarketHeader implements ComponentInterface {
         <div class="container-fluid">
           <div class="row">
             <div class="col-12">
-              {/*<s-cnt-market-top-bar></s-cnt-market-top-bar>*/}
-              <s-cnt-market-header-body></s-cnt-market-header-body>
+              <s-cnt-market-top-bar></s-cnt-market-top-bar>
+              <s-cnt-market-header-bodнy></s-cnt-market-header-bodнy>
               <s-cnt-market-header-nav></s-cnt-market-header-nav>
             </div>
           </div>

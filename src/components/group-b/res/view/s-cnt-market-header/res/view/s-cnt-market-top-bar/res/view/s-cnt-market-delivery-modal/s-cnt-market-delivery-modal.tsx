@@ -11,8 +11,9 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   render() {
     return (
       <div class="delivery-modal-main-block-wrapper">
-        <div class="delivery-modal-other-opacity">
 
+        <div class="delivery-modal-other-opacity">
+          {/*opacity background модального окна*/}
         </div>
         <div class="delivery-modal-main-block">
           <div class="delivery-modal-block-position">
@@ -46,20 +47,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                     </button>
                   </div>
                 </div>
-                <div class="adress-in-city-blocks">
-                  <div class="option-city-modal-intop-bar">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>
-                      Город:
-                    </span>
-                    <div class="city-option-for-selected">
-                      Москва
-                      <i class="fas fa-angle-down"></i>
-
-                    </div>
-                  </div>
-
-                </div>
+                <s-cnt-market-delivery-in-modal/>
               </div>
             </div>
           </div>
