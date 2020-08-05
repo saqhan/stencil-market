@@ -184,6 +184,10 @@ textarea[placeholder] {
   /*font-size: 18px;*/
 }
 
+.nav-user-profile {
+  position: relative;
+}
+
 .nav-user-profile i:hover {
   color:  #21b056;;
 }
@@ -248,6 +252,19 @@ textarea[placeholder] {
 .user-cart a span {
   font-size: 14px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media (max-width: 1200px) {

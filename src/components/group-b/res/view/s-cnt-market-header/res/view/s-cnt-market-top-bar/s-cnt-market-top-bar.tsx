@@ -55,7 +55,6 @@ export class SCntMarketTopBar implements ComponentInterface {
                 <span>
                   {this.topBar.choiceAddress}
                   <button class="delivery-adress-btn" innerHTML={this.topBar.choiceAddressIcon}>
-
                   </button>
                 </span>
               </div>

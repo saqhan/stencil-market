@@ -15,6 +15,8 @@ export namespace Components {
     }
     interface MyComponent {
     }
+    interface SCntMarketAccountMenu {
+    }
     interface SCntMarketDeliveryInModal {
         /**
           * boolean значение для вывода
@@ -76,6 +78,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSCntMarketAccountMenuElement extends Components.SCntMarketAccountMenu, HTMLStencilElement {
+    }
+    var HTMLSCntMarketAccountMenuElement: {
+        prototype: HTMLSCntMarketAccountMenuElement;
+        new (): HTMLSCntMarketAccountMenuElement;
+    };
     interface HTMLSCntMarketDeliveryInModalElement extends Components.SCntMarketDeliveryInModal, HTMLStencilElement {
     }
     var HTMLSCntMarketDeliveryInModalElement: {
@@ -122,6 +130,7 @@ declare global {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
+        "s-cnt-market-account-menu": HTMLSCntMarketAccountMenuElement;
         "s-cnt-market-delivery-in-modal": HTMLSCntMarketDeliveryInModalElement;
         "s-cnt-market-delivery-modal": HTMLSCntMarketDeliveryModalElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
@@ -137,6 +146,8 @@ declare namespace LocalJSX {
     interface GroupB {
     }
     interface MyComponent {
+    }
+    interface SCntMarketAccountMenu {
     }
     interface SCntMarketDeliveryInModal {
         /**
@@ -195,6 +206,7 @@ declare namespace LocalJSX {
         "group-a": GroupA;
         "group-b": GroupB;
         "my-component": MyComponent;
+        "s-cnt-market-account-menu": SCntMarketAccountMenu;
         "s-cnt-market-delivery-in-modal": SCntMarketDeliveryInModal;
         "s-cnt-market-delivery-modal": SCntMarketDeliveryModal;
         "s-cnt-market-header": SCntMarketHeader;
@@ -211,6 +223,7 @@ declare module "@stencil/core" {
             "group-a": LocalJSX.GroupA & JSXBase.HTMLAttributes<HTMLGroupAElement>;
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "s-cnt-market-account-menu": LocalJSX.SCntMarketAccountMenu & JSXBase.HTMLAttributes<HTMLSCntMarketAccountMenuElement>;
             "s-cnt-market-delivery-in-modal": LocalJSX.SCntMarketDeliveryInModal & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryInModalElement>;
             "s-cnt-market-delivery-modal": LocalJSX.SCntMarketDeliveryModal & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryModalElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
