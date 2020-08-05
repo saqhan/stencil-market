@@ -7,6 +7,9 @@ import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketTopBar implements ComponentInterface {
+  /**
+   *
+   */
   @Prop()topBar: any;
 
   /**
@@ -44,7 +47,10 @@ export class SCntMarketTopBar implements ComponentInterface {
                   {this.topBar.choicePickUp}
                 </button>
               </div>
-              <div class="option-adress-text-block">
+              <div class="option-adress-text-block" onClick={() => {
+                this.openModal();
+                this.openDelivery();
+              }}>
                 <span>
                   {this.topBar.choiceAddress}
                   <button class="delivery-adress-btn" innerHTML={this.topBar.choiceAddressIcon}>
