@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { NavMenuItemInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-header-body/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
     }
@@ -36,6 +37,7 @@ export namespace Components {
         "categories": any;
     }
     interface SCntMarketHeaderBody {
+        "body": NavMenuItemInterface;
     }
     interface SCntMarketHeaderNav {
     }
@@ -166,6 +168,7 @@ declare namespace LocalJSX {
         "categories"?: any;
     }
     interface SCntMarketHeaderBody {
+        "body"?: NavMenuItemInterface;
     }
     interface SCntMarketHeaderNav {
     }

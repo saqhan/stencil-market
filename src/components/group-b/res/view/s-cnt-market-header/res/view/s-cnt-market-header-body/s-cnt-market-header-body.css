@@ -11,7 +11,7 @@
 .logo {
   width: 200px;
   height: 33px;
-  background-image: url("https://via.placeholder.com/200x33?text=LOGO");
+  /*background-image: url("https://via.placeholder.com/200x33?text=LOGO");*/
   background-position: center;
   background-size: cover;
   cursor: pointer;
@@ -36,7 +36,7 @@
   cursor: pointer;
 }
 
-.menu-ul .main-item {
+.menu-ul li:first-child {
   color: #393939;
 }
 

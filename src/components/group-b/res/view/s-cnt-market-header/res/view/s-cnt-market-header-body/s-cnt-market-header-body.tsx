@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, h } from "@stencil/core";
+import {Component, ComponentInterface, h, Prop} from "@stencil/core";
+import {NavMenuItemInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-header-body",
@@ -7,6 +8,9 @@ import { Component, ComponentInterface, h } from "@stencil/core";
   scoped: true,
 })
 export class SCntMarketHeaderBody implements ComponentInterface {
+
+  @Prop() body:NavMenuItemInterface;
+
   /**
    *
    */
@@ -23,7 +27,9 @@ export class SCntMarketHeaderBody implements ComponentInterface {
           <div class="col">
             <div class="header-body-wrapper">
               <div class="logo-wrapper">
-                <div class="logo"></div>
+                <div class="logo"
+                  style={{backgroundImage: `url(${this.body.logo})`}}
+                ></div>
               </div>
               <div class="header-navbar-list">
                 <div class="mobile-menu-btn ">
@@ -62,11 +68,7 @@ export class SCntMarketHeaderBody implements ComponentInterface {
                   </div>
                 </div>
                 <ul class='menu-ul' >
-                  <li class="main-item">👩‍💻 Для Бизнеса</li>
-                  <li>Как мы работаем</li>
-                  <li>Контакты</li>
-                  <li>Помощь</li>
-                  <li>Доставка и оплата</li>
+                  {this.getItemsMenu(this.body.navMenuItem)}
                 </ul>
               </div>
             </div>
@@ -83,5 +85,13 @@ export class SCntMarketHeaderBody implements ComponentInterface {
     this.mobileMenuTag.classList.toggle("active");
     this.isShowBar = true;
     console.log(this.isShowBar);
+  }
+  /*
+  * получаем список меню
+  * */
+  public getItemsMenu(array){
+    return array.map(item => {
+      return <li>{item.name}</li>
+    })
   }
 }
