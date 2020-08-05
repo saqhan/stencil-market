@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, State} from '@stencil/core';
+import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-top-bar',
@@ -7,6 +7,8 @@ import {Component, ComponentInterface, h, State} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketTopBar implements ComponentInterface {
+  @Prop()topBar: any;
+
   /**
    * boolean значение для вывода
    */
@@ -33,37 +35,37 @@ export class SCntMarketTopBar implements ComponentInterface {
                   this.openModal();
                   this.openDelivery();
                 }}>
-                  Доставка
+                  {this.topBar.choiceDelivery}
                 </button>
                 <button class="selection-by-pickUp" onClick={() => {
                   this.openModal();
                   this.openpickUp();
                 }}>
-                  Самовывоз
+                  {this.topBar.choicePickUp}
                 </button>
               </div>
               <div class="option-adress-text-block">
                 <span>
-                  Выберите адрес доставки
-                  <button class="delivery-adress-btn">
-                    <i class="fas fa-pencil-alt"></i>
+                  {this.topBar.choiceAddress}
+                  <button class="delivery-adress-btn" innerHTML={this.topBar.choiceAddressIcon}>
+
                   </button>
                 </span>
               </div>
               <p class="shortest-delivery-time">
-                🚛 Ближайшая доставка
+                {this.topBar.timeOfDeliveryText}
                 <span>
-                  сегодня, 19:00-21:00
+                  {this.topBar.timeOfDelivery}
                 </span>
               </p>
               <div class="top-bar-number-wrapper">
                 <a href="tel:+78002221100" class="phone-number-link">
                   <span class="phone_number">
-                    +7 800 222-11-00
+                    {this.topBar.phoneNumber}
                   </span>
                   <span class="phone-work">
                     <span>
-                      Круглосуточно
+                      {this.topBar.workingHours}
                     </span>
                   </span>
                 </a>
@@ -73,7 +75,9 @@ export class SCntMarketTopBar implements ComponentInterface {
         </div>
         {
           this.modalComplited ?
-            <s-cnt-market-delivery-modal delivery={this.deliveryComplited} pickUp={this.pickUpComplited}
+            <s-cnt-market-delivery-modal delivery={this.deliveryComplited}
+                                         pickUp={this.pickUpComplited}
+                                         modalData={this.topBar.modalWindow}
                                          onCloseForm={() => this.closeModal()}
                                          onOpenDelivery={() => this.openDelivery()}
                                          onOpenpickUp={() => this.openpickUp()}

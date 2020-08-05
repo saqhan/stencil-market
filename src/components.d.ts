@@ -9,30 +9,42 @@ export namespace Components {
     interface GroupA {
     }
     interface GroupB {
+        "payload": any;
     }
     interface MyComponent {
     }
     interface SCntMarketDeliveryInModal {
+        /**
+          * boolean значение для вывода
+         */
+        "deliveryData": any;
     }
     interface SCntMarketDeliveryModal {
         /**
           * boolean значение для вывода
          */
         "delivery": boolean;
+        "modalData": any;
         /**
           * boolean значение для вывода
          */
         "pickUp": boolean;
     }
     interface SCntMarketHeader {
+        "topBar": any;
     }
     interface SCntMarketHeaderBody {
     }
     interface SCntMarketHeaderNav {
     }
     interface SCntMarketPickupInModal {
+        /**
+          * boolean значение для вывода
+         */
+        "pickUpData": any;
     }
     interface SCntMarketTopBar {
+        "topBar": any;
     }
 }
 declare global {
@@ -113,16 +125,22 @@ declare namespace LocalJSX {
     interface GroupA {
     }
     interface GroupB {
+        "payload"?: any;
     }
     interface MyComponent {
     }
     interface SCntMarketDeliveryInModal {
+        /**
+          * boolean значение для вывода
+         */
+        "deliveryData"?: any;
     }
     interface SCntMarketDeliveryModal {
         /**
           * boolean значение для вывода
          */
         "delivery"?: boolean;
+        "modalData"?: any;
         /**
           * Закрытие модального окна формы
          */
@@ -141,14 +159,20 @@ declare namespace LocalJSX {
         "pickUp"?: boolean;
     }
     interface SCntMarketHeader {
+        "topBar"?: any;
     }
     interface SCntMarketHeaderBody {
     }
     interface SCntMarketHeaderNav {
     }
     interface SCntMarketPickupInModal {
+        /**
+          * boolean значение для вывода
+         */
+        "pickUpData"?: any;
     }
     interface SCntMarketTopBar {
+        "topBar"?: any;
     }
     interface IntrinsicElements {
         "group-a": GroupA;
