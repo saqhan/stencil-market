@@ -16,18 +16,31 @@
   transition: box-shadow,.15s
 }
 
-.img {
+.image {
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
+  border: 1px solid #d8d8d8;
+  justify-content: center;
 }
 
+.img {
+  width: 68px;
+  height: 20px;
+  margin: 25px 0 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+
 .title {
-  padding: 20px 0 5px 15px;
+  padding: 17px 0 5px 15px;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
 }
 
 .common:hover .title {
-  opacity: .7;
+  color: #666;
   transition: .15s
 }
 

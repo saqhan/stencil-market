@@ -1,4 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { MarketSelectionInterface } from "../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-item-selection",
@@ -10,15 +11,23 @@ export class SCntMarketItemSelection implements ComponentInterface {
   /**
    * Данные для карточек магазинов
    */
-  @Prop() payload: any;
+  @Prop() forSelection: any;
+
+  /**
+   * Приём данных из массива для вывода
+   */
+  @Prop() MarketSelectionInterface: MarketSelectionInterface[] = [];
 
   render() {
     return (
       <div class="common">
-        <img src={this.payload.image} class="img"/>
+        <div class="image">
+          <div class="img" style={{ backgroundImage: "url(" + this.forSelection.image + ")" }}>
+          </div>
+        </div>
         <div class="commonText">
-          <div class="title">{this.payload.title}</div>
-          <div class="text">{this.payload.text}</div>
+          <div class="title">{this.forSelection.title}</div>
+          <div class="text">{this.forSelection.text}</div>
         </div>
       </div>
     );

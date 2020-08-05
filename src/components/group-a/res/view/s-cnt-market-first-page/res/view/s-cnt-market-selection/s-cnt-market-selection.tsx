@@ -1,4 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { MarketSelectionInterface } from "./res/interface/common.interface";
+import { markdown} from "markdown"
 
 @Component({
   tag: "s-cnt-market-selection",
@@ -10,22 +12,43 @@ export class SCntMarketSelection implements ComponentInterface {
   /**
    * Данные для карточек магазинов
    */
-  @Prop() payload: any;
+  @Prop() forSelection: any;
 
   /**
    * Данные для главной картинки
    */
   @Prop() homePageImage: any;
 
+  /**
+   * Данные для заголовка на картинке
+   */
+  @Prop() homeText: any;
+
+  /**
+   * Данные для подзаголовка на картинке
+   */
+  @Prop() homeSubText: any;
+
+  /**
+   * Приём данных из массива для вывода
+   */
+  @Prop() MarketSelectionInterface: MarketSelectionInterface[] = [];
+
   render() {
     return (
       <div class="selection">
-        <div class="imageHome">
-          <img src={this.homePageImage} class="image" />
+        <div
+          class="imageHome"
+          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}>
+          <div class="text" innerHTML={markdown.toHTML(this.homeText)}>
+          </div>
+          <div class="subtext" innerHTML={markdown.toHTML(this.homeSubText)}>
+          </div>
         </div>
         <div class="container">
           <div class="row">
-            <GetSelection array={this.payload}></GetSelection>
+            <GetSelection array={this.forSelection}>
+            </GetSelection>
           </div>
         </div>
       </div>
@@ -38,7 +61,7 @@ const GetSelection = (props) => {
     return (
       <div class="col-md-4">
         <s-cnt-market-item-selection
-          payload={item}
+          forSelection={item}
         ></s-cnt-market-item-selection>
       </div>
     );

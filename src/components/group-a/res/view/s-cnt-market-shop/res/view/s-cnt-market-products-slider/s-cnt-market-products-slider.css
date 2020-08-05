@@ -1,0 +1,28 @@
+.products {
+  margin-top: 40px;
+  padding: 0 35px;
+}
+
+.products-carousel-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #343434;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  flex: 1;
+  min-width: 235px;
+  max-width: 235px;
+  padding-right: 10px;
+}
+
+

@@ -4,10 +4,9 @@
   margin-right: 10px;
 }
 
-.main-carousel-wrapper {
+.main-carousel {
   margin: 24px auto;
   position: relative;
   width: calc(100% - 140px);
 }
-
 

@@ -1,8 +1,25 @@
 .imageHome {
-  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  width: 1245px;
+  height: 518px;
+  background-size: cover;
+  background-position: center;
 }
 
-.image {
-  margin-top: 50px;
-  border-radius: 10px;
+.text {
+  padding: 145px 0 0 100px;
+  line-height: .4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 37px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subtext {
+  margin: 55px 0 0 100px;
+  line-height: .5;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
 }

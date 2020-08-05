@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h } from "@stencil/core";
-import { forSelection, homePageImage } from "../../../../../utils/mock-a";
+import {forSelection, homePageImage, homeSubText, homeText} from "../../../../../utils/mock-a";
 
 @Component({
   tag: "s-cnt-market-first-page",
@@ -11,9 +11,11 @@ export class SCntMarketFirstPage implements ComponentInterface {
   render() {
     return (
       <s-cnt-market-selection
-        payload={forSelection}
+        forSelection={forSelection}
         homePageImage={homePageImage}
-      />
+        homeText={homeText}
+        homeSubText={homeSubText}>
+      </s-cnt-market-selection>
     );
   }
 }
