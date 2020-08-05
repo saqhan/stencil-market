@@ -23,12 +23,15 @@ export namespace Components {
     }
     interface SCntMarketDeliveryModal {
         /**
-          * boolean значение для вывода
+          * boolean значение для вывода блока доставки и присвоения класса
          */
         "delivery": boolean;
+        /**
+          * объект из mock для вывода данных
+         */
         "modalData": any;
         /**
-          * boolean значение для вывода
+          * boolean значение для вывода блока самовывоза и присвоения класса
          */
         "pickUp": boolean;
     }
@@ -143,24 +146,27 @@ declare namespace LocalJSX {
     }
     interface SCntMarketDeliveryModal {
         /**
-          * boolean значение для вывода
+          * boolean значение для вывода блока доставки и присвоения класса
          */
         "delivery"?: boolean;
+        /**
+          * объект из mock для вывода данных
+         */
         "modalData"?: any;
         /**
-          * Закрытие модального окна формы
+          * Закрытие модального модального окна
          */
         "onCloseForm"?: (event: CustomEvent<any>) => void;
         /**
-          * Закрытие модального окна формы
+          * функция для смены значения boolean пропса delivery
          */
         "onOpenDelivery"?: (event: CustomEvent<any>) => void;
         /**
-          * Закрытие модального окна формы
+          * функция для смены значения boolean пропса pickUp
          */
         "onOpenpickUp"?: (event: CustomEvent<any>) => void;
         /**
-          * boolean значение для вывода
+          * boolean значение для вывода блока самовывоза и присвоения класса
          */
         "pickUp"?: boolean;
     }

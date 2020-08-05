@@ -13,9 +13,14 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   @Prop() pickUpData: any;
 
   /**
-   *
+   * значение number для присвоения id выбранного города
    */
   @State() idCity: number;
+
+  /**
+   * значение number для присвоения id выбранного города
+   */
+  @State() idAddress: number;
 
   /**
    * boolean значение для вывода списка городов
@@ -27,8 +32,12 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    */
   @State() StoreAddress: boolean;
 
+  /**
+   * присвоение id города для вывода по умолчанию
+   */
   componentDidLoad() {
     this.idCity = this.pickUpData.defaultCity;
+    this.StoreAddress = true;
   }
 
   render() {
@@ -46,6 +55,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
             </span>
             {
               this.CitySelect ?
+                //выводящийся и закрывающийся блок списка городов по клику меняющеегося State
                 <div class="selection-city-block">
                   <CityForSelected arr={this.pickUpData.cityForSelected} idSelected={(x) => this.idSelected(x)}/>
                 </div> :
@@ -53,7 +63,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
             }
           </div>
         </div>
-        <div class="expandable-store-list">
+        <div class="expandable-store-list" onClick={() => this.opClStoreAddress()}>
           <div class="store-list-wrapper">
             <div class="store-list">
               <div class="store-list-block-wrap">
@@ -71,9 +81,9 @@ export class SCntMarketPickupInModal implements ComponentInterface {
                 {/*количество магазинов из длины массива и текст из объекта*/}
                 {this.pickUpData.storeAddress.length + ' ' + this.pickUpData.numberOfStores}
               </div>
-              <div class="list-stores-open-icon" innerHTML={this.pickUpData.selectedStoreIcon} onClick={() => {
-                this.opClStoreAddress();
-              }}>
+              <div class="list-stores-open-icon"
+                   innerHTML={this.StoreAddress ? this.pickUpData.selectedStoreIcon : this.pickUpData.storeWithdrawalIcon}
+              >
                 {/*иконка выбора магазина*/}
               </div>
             </div>
@@ -81,10 +91,9 @@ export class SCntMarketPickupInModal implements ComponentInterface {
           {
             this.StoreAddress ?
               //выводящийся и закрывающийся блок с адресами магазинов по клику меняющему State
-              <StoreAddress arr={this.pickUpData.storeAddress}/> :
+              <StoreAddress arr={this.pickUpData.storeAddress} idSelectedAddress={(x) => this.idSelectedAddress(x)}/> :
               ''
           }
-
         </div>
       </div>
     );
@@ -106,10 +115,17 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   }
 
   /**
-   * функция для присвоения id выбранной страны
+   * функция для присвоения id выбранного города
    * */
   public idSelected(x) {
     this.idCity = x;
+  }
+
+  /**
+   * функция для присвоения id выбранного address
+   * */
+  public idSelectedAddress(x) {
+    this.idAddress = x;
   }
 
   /**
@@ -155,7 +171,7 @@ const StoreAddress = (props) => {
                   {item.storeWorkTime}
                 </span>
             </div>
-            <button class="store-secet-btn">
+            <button class="store-secet-btn" onClick={() => props.idSelectedAddress(item.id)}>
               {item.btnText}
             </button>
           </div>

@@ -7,32 +7,35 @@ import {Component, ComponentInterface, EventEmitter, h, Event, Prop} from '@sten
   scoped: true
 })
 export class SCntMarketDeliveryModal implements ComponentInterface {
-  @Prop()modalData: any;
-
   /**
-   * boolean значение для вывода
+   * объект из mock для вывода данных
    */
-  @Prop()delivery: boolean;
+  @Prop() modalData: any;
 
   /**
-   * Закрытие модального окна формы
+   * boolean значение для вывода блока доставки и присвоения класса
+   */
+  @Prop() delivery: boolean;
+
+  /**
+   * boolean значение для вывода блока самовывоза и присвоения класса
+   */
+  @Prop() pickUp: boolean;
+
+  /**
+   * Закрытие модального модального окна
    */
   @Event() closeForm: EventEmitter;
 
   /**
-   * Закрытие модального окна формы
+   * функция для смены значения boolean пропса delivery
    */
   @Event() openDelivery: EventEmitter;
 
   /**
-   * Закрытие модального окна формы
+   * функция для смены значения boolean пропса pickUp
    */
   @Event() openpickUp: EventEmitter;
-
-  /**
-   * boolean значение для вывода
-   */
-  @Prop()pickUp: boolean;
 
   /**
    * ref для закрытия модального окна
@@ -42,7 +45,8 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   render() {
     return (
       <div class="delivery-modal-main-block-wrapper">
-        <div class="delivery-modal-other-opacity" onClick={ (event) => this.clickPopUp(event)}  ref={(el) => this.ourModal = el}>
+        <div class="delivery-modal-other-opacity" onClick={(event) => this.clickPopUp(event)}
+             ref={(el) => this.ourModal = el}>
           {/*opacity background модального окна*/}
         </div>
         <div class="delivery-modal-main-block">
@@ -69,22 +73,24 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                 </div>
                 <div class="option-pickUp-or-delivery-block-wrapper">
                   <div class="option-pickUp-or-delivery-block">
-                    <button class="option-delivery" id={this.delivery? 'option-delivery-selected': ''} onClick={() => this.openDelivery.emit()}>
+                    <button class="option-delivery" id={this.delivery ? 'option-delivery-selected' : ''}
+                            onClick={() => this.openDelivery.emit()}>
                       {this.modalData.choiceDelivery}
                     </button>
-                    <button class="option-pickUp" id={this.pickUp? 'option-delivery-selected': ''} onClick={() => this.openpickUp.emit()}>
+                    <button class="option-pickUp" id={this.pickUp ? 'option-delivery-selected' : ''}
+                            onClick={() => this.openpickUp.emit()}>
                       {this.modalData.choicePickUp}
                     </button>
                   </div>
                 </div>
                 {
                   this.delivery ?
-                    <s-cnt-market-delivery-in-modal deliveryData={this.modalData.Delivery}/>:
+                    <s-cnt-market-delivery-in-modal deliveryData={this.modalData.Delivery}/> :
                     ''
                 }
                 {
                   this.pickUp ?
-                    <s-cnt-market-pickup-in-modal pickUpData={this.modalData.PickUp}/>:
+                    <s-cnt-market-pickup-in-modal pickUpData={this.modalData.PickUp}/> :
                     ''
                 }
               </div>
@@ -95,14 +101,11 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
     );
   }
 
-  componentDidLoad(){
-    console.log(this.delivery)
-  }
   /**
-   * Вызов функции вывода меню при условии совпадения таргета клика с нужным узлом
+   * Вызов функции закрытия модального окна при условиии что нажал не на блок модальки
    */
-  public clickPopUp (event) {
-    if (event.target === this.ourModal){
+  public clickPopUp(event) {
+    if (event.target === this.ourModal) {
       this.closeForm.emit()
     }
   };

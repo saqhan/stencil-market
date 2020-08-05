@@ -191,7 +191,8 @@ export const header = {
         logoImg: "https://sbermarket.ru/spree/retailer/icons/234559/original/1.png?1580316602",
         storeName: "Metro",
         numberOfStores: "магазинов",
-        selectedStoreIcon: `<i class="fas fa-angle-down"></i>`,
+        selectedStoreIcon: `<i class="fas fa-angle-up"></i>`,
+        storeWithdrawalIcon: `<i class="fas fa-angle-down"></i>`,
         storeAddress: [
           {
             id: 1,
