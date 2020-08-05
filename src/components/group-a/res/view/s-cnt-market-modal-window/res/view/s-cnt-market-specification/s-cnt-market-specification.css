@@ -1,0 +1,221 @@
+.container {
+  background-color: #f7f7f7;
+  margin: 0 0 0 -15px;
+  width: 760px;
+}
+
+.op {
+  margin: 20px 0 0 10px;
+}
+
+.spec {
+  margin: 10px 0 0 10px;
+}
+
+.my-spec {
+  margin: 23px 10px 0 0;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.block-value {
+  border-bottom: 1px solid lightgray;
+}
+
+.line-item {
+  width: 300px;
+  margin: auto;
+  border-bottom: 1px solid lightgray;
+}
+
+.value {
+  font-size: 1.1em;
+  display: inline-block;
+  padding: 10px 8px 10px 15px;
+  font-weight: 600;
+}
+
+.protein,
+.fat,
+.carbohydrates {
+  display: inline-block;
+  padding: 0 8px 10px 0;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.weight {
+  display: inline-block;
+  padding: 10px 0 10px 0;
+  font-size: 1.1em;
+}
+
+.weightProtein,
+.weightFat {
+  display: inline-block;
+  padding: 10px 0 10px 80px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.weightCarbohydrates {
+  display: inline-block;
+  padding: 10px 0 10px 53px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.calories {
+  display: inline-block;
+  padding: 0 8px 20px 20px;
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.weightCalories {
+  display: inline-block;
+  padding: 10px 0 10px 18px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.block-composition {
+  width: 280px;
+}
+
+.item_1 {
+  font-weight: 600;
+  padding: 15px 0 8px 15px;
+}
+
+.info {
+  font-weight: 600;
+  padding: 10px 0 8px 15px;
+}
+
+.composition {
+  width: 325px;
+  font-size: 0.9em;
+  opacity: 0.7;
+  line-height: 23px;
+  padding: 0 0 8px 15px;
+}
+
+.line-composition {
+  width: 280px;
+  margin: auto;
+  padding: 0 0 8px 0;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+}
+
+.brand,
+.manufacturer,
+.country,
+.storageСonditions,
+.term,
+.kindOfCandy,
+.typeOfChocolate,
+.flavor,
+.supplements,
+.feature,
+.packaging {
+  font-size: 0.9em;
+  display: inline-block;
+  padding: 10px 8px 5px 15px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.dolce {
+  display: inline-block;
+  padding: 10px 0 10px 95px;
+  opacity: 0.7;
+  font-size: 0.9em;
+  color: #21a038;
+}
+
+.lenta {
+  display: inline-block;
+  padding: 10px 0 10px 30px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.russia {
+  display: inline-block;
+  padding: 10px 0 10px 85px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.terms {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 0 10px 10px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.month {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 0 10px 33px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.chocolate {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 0 10px 54px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.bitter {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 0 10px 35px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.walnut {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 0 10px 100px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.hazelnut {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 0 10px 72px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.glazed {
+  width: 130px;
+  display: inline-block;
+  padding: 10px 0 10px 42px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.box {
+  display: inline-block;
+  padding: 10px 0 10px 61px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+.hideInformation {
+  cursor: pointer;
+  margin: 40px 0 0 0;
+  text-align: center;
+  color: #21a038;
+}

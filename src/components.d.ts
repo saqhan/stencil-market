@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
+import { MarketSpecificationInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-specification/interface/common.interface";
 export namespace Components {
     interface GroupA {
     }
@@ -49,6 +50,10 @@ export namespace Components {
         "promoSliderCards": MarketPromoSliderInterface;
     }
     interface SCntMarketRecommended {
+        /**
+          * Данные для Recommended
+         */
+        "getRecommended": any;
     }
     interface SCntMarketSelection {
         /**
@@ -61,6 +66,16 @@ export namespace Components {
         "payload": any;
     }
     interface SCntMarketShop {
+    }
+    interface SCntMarketSpecification {
+        /**
+          * Интерфейс для Specification
+         */
+        "MarketSpecificationInterface": MarketSpecificationInterface[];
+        /**
+          * Данные для Specification
+         */
+        "getSpecification": any;
     }
 }
 declare global {
@@ -142,6 +157,12 @@ declare global {
         prototype: HTMLSCntMarketShopElement;
         new (): HTMLSCntMarketShopElement;
     };
+    interface HTMLSCntMarketSpecificationElement extends Components.SCntMarketSpecification, HTMLStencilElement {
+    }
+    var HTMLSCntMarketSpecificationElement: {
+        prototype: HTMLSCntMarketSpecificationElement;
+        new (): HTMLSCntMarketSpecificationElement;
+    };
     interface HTMLElementTagNameMap {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
@@ -156,6 +177,7 @@ declare global {
         "s-cnt-market-recommended": HTMLSCntMarketRecommendedElement;
         "s-cnt-market-selection": HTMLSCntMarketSelectionElement;
         "s-cnt-market-shop": HTMLSCntMarketShopElement;
+        "s-cnt-market-specification": HTMLSCntMarketSpecificationElement;
     }
 }
 declare namespace LocalJSX {
@@ -200,6 +222,10 @@ declare namespace LocalJSX {
         "promoSliderCards"?: MarketPromoSliderInterface;
     }
     interface SCntMarketRecommended {
+        /**
+          * Данные для Recommended
+         */
+        "getRecommended"?: any;
     }
     interface SCntMarketSelection {
         /**
@@ -212,6 +238,16 @@ declare namespace LocalJSX {
         "payload"?: any;
     }
     interface SCntMarketShop {
+    }
+    interface SCntMarketSpecification {
+        /**
+          * Интерфейс для Specification
+         */
+        "MarketSpecificationInterface"?: MarketSpecificationInterface[];
+        /**
+          * Данные для Specification
+         */
+        "getSpecification"?: any;
     }
     interface IntrinsicElements {
         "group-a": GroupA;
@@ -227,6 +263,7 @@ declare namespace LocalJSX {
         "s-cnt-market-recommended": SCntMarketRecommended;
         "s-cnt-market-selection": SCntMarketSelection;
         "s-cnt-market-shop": SCntMarketShop;
+        "s-cnt-market-specification": SCntMarketSpecification;
     }
 }
 export { LocalJSX as JSX };
@@ -246,6 +283,7 @@ declare module "@stencil/core" {
             "s-cnt-market-recommended": LocalJSX.SCntMarketRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketRecommendedElement>;
             "s-cnt-market-selection": LocalJSX.SCntMarketSelection & JSXBase.HTMLAttributes<HTMLSCntMarketSelectionElement>;
             "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;
+            "s-cnt-market-specification": LocalJSX.SCntMarketSpecification & JSXBase.HTMLAttributes<HTMLSCntMarketSpecificationElement>;
         }
     }
 }

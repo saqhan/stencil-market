@@ -32,14 +32,12 @@ export class SCntMarketProduct implements ComponentInterface {
             </div>
           </div>
           <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
               <div class="image">
-                <div class="category">
-                  <img src={this.getProduct.image} alt="" />
-                </div>
+                <img src={this.getProduct.image} alt="" />
               </div>
             </div>
-            <div class="col-5">
+            <div class="col-md-5">
               <div class="info-product">
                 <div class="close">
                   <i class="fa fa-times" aria-hidden="true" />

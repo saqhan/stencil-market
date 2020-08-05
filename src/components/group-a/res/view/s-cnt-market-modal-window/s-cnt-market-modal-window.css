@@ -1,0 +1,10 @@
+.window {
+  background-color: lightgray;
+  padding-top: 30px;
+}
+
+.container {
+  width: 760px;
+  border-radius: 15px;
+  background-color: white;
+}
