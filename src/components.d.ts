@@ -15,6 +15,14 @@ export namespace Components {
     interface SCntMarketDeliveryInModal {
     }
     interface SCntMarketDeliveryModal {
+        /**
+          * boolean значение для вывода
+         */
+        "delivery": boolean;
+        /**
+          * boolean значение для вывода
+         */
+        "pickUp": boolean;
     }
     interface SCntMarketHeader {
     }
@@ -111,6 +119,26 @@ declare namespace LocalJSX {
     interface SCntMarketDeliveryInModal {
     }
     interface SCntMarketDeliveryModal {
+        /**
+          * boolean значение для вывода
+         */
+        "delivery"?: boolean;
+        /**
+          * Закрытие модального окна формы
+         */
+        "onCloseForm"?: (event: CustomEvent<any>) => void;
+        /**
+          * Закрытие модального окна формы
+         */
+        "onOpenDelivery"?: (event: CustomEvent<any>) => void;
+        /**
+          * Закрытие модального окна формы
+         */
+        "onOpenpickUp"?: (event: CustomEvent<any>) => void;
+        /**
+          * boolean значение для вывода
+         */
+        "pickUp"?: boolean;
     }
     interface SCntMarketHeader {
     }

@@ -1,30 +1,68 @@
-import { Component, ComponentInterface, h } from '@stencil/core';
+import { Component, ComponentInterface, h } from "@stencil/core";
 
 @Component({
-  tag: 's-cnt-market-header-body',
-  styleUrl: 's-cnt-market-header-body.css',
+  tag: "s-cnt-market-header-body",
+  styleUrl: "s-cnt-market-header-body.css",
   shadow: false,
-  scoped: true
+  scoped: true,
 })
 export class SCntMarketHeaderBody implements ComponentInterface {
+  /**
+   *
+   */
+  public mobileMenuTag: HTMLElement;
+  /**
+   * show hide bars
+   * */
 
+  public isShowBar: boolean;
   render() {
     return (
-      <div class="container" >
+      <div class="container">
         <div class="row">
           <div class="col">
-            <div class="header-body-wrapper" >
+            <div class="header-body-wrapper">
               <div class="logo-wrapper">
                 <div class="logo"></div>
               </div>
               <div class="header-navbar-list">
-                <div class="mobile-menu">
-                  <button>
-                    <i class="fas fa-bars"></i>
-                  </button>
+                <div class="mobile-menu-btn ">
+                  {!this.isShowBar ? (
+                    <button
+                      onClick={() => this.showMobileMenuHandler()}
+                    >
+                      <i class="fas fa-bars"></i>
+                    </button>
+                  ) : (
+                    ""
+                  )}
+                  <div
+                    class="mobile-menu d-lg-none"
+                    ref={(el) => (this.mobileMenuTag = el)}
+                  >
+                    <div class="container">
+                      <div
+                        class="mobile-menu-close"
+                        onClick={() => this.showMobileMenuHandler()}
+                      >
+              <span>
+                <i class="fas fa-times"></i>
+              </span>
+                      </div>
+                      <nav class="mobile-menu-wrapper">
+                        <ul class='mobile-menu-ul' >
+                          <li class="main-item">👩‍💻 Для Бизнеса</li>
+                          <li>Как мы работаем</li>
+                          <li>Контакты</li>
+                          <li>Помощь</li>
+                          <li>Доставка и оплата</li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
                 </div>
-                <ul>
-                  <li class='main-item'>👩‍💻 Для Бизнеса</li>
+                <ul class='menu-ul' >
+                  <li class="main-item">👩‍💻 Для Бизнеса</li>
                   <li>Как мы работаем</li>
                   <li>Контакты</li>
                   <li>Помощь</li>
@@ -38,4 +76,12 @@ export class SCntMarketHeaderBody implements ComponentInterface {
     );
   }
 
+  /**
+   * Открытие и закрытие мобильного меню при нажатии на иконки
+   */
+  public showMobileMenuHandler() {
+    this.mobileMenuTag.classList.toggle("active");
+    this.isShowBar = true;
+    console.log(this.isShowBar);
+  }
 }

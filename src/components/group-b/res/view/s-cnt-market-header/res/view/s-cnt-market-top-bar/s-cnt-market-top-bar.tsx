@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h} from '@stencil/core';
+import {Component, ComponentInterface, h, State} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-top-bar',
@@ -7,6 +7,21 @@ import {Component, ComponentInterface, h} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketTopBar implements ComponentInterface {
+  /**
+   * boolean значение для вывода
+   */
+  @State() modalComplited: boolean;
+
+  /**
+   * boolean значение для вывода
+   */
+  @State() deliveryComplited: boolean;
+
+  /**
+   * boolean значение для вывода
+   */
+  @State() pickUpComplited: boolean;
+
   render() {
     return (
       <div class="container-fluid parent-block-top-bar">
@@ -14,10 +29,16 @@ export class SCntMarketTopBar implements ComponentInterface {
           <div class="top-bar-content-inner-block">
             <div class="top-bar-delivery-and-adress">
               <div class="top-bar-delivery-option-block">
-                <button class="selection-by-delivery">
+                <button class="selection-by-delivery" onClick={() => {
+                  this.openModal();
+                  this.openDelivery();
+                }}>
                   Доставка
                 </button>
-                <button class="selection-by-pickUp">
+                <button class="selection-by-pickUp" onClick={() => {
+                  this.openModal();
+                  this.openpickUp();
+                }}>
                   Самовывоз
                 </button>
               </div>
@@ -50,9 +71,47 @@ export class SCntMarketTopBar implements ComponentInterface {
             </div>
           </div>
         </div>
-        {/*<s-cnt-market-delivery-modal/>*/}
+        {
+          this.modalComplited ?
+            <s-cnt-market-delivery-modal delivery={this.deliveryComplited} pickUp={this.pickUpComplited}
+                                         onCloseForm={() => this.closeModal()}
+                                         onOpenDelivery={() => this.openDelivery()}
+                                         onOpenpickUp={() => this.openpickUp()}
+            /> :
+            ''
+        }
       </div>
     );
+  }
+
+  /**
+   * Вызов модального окна формы
+   */
+  public openModal() {
+    this.modalComplited = true;
+  }
+
+  /**
+   * Вызов модального окна формы
+   */
+  public openDelivery() {
+    this.deliveryComplited = true;
+    this.pickUpComplited = false;
+  }
+
+  /**
+   * Вызов модального окна формы
+   */
+  public openpickUp() {
+    this.pickUpComplited = true;
+    this.deliveryComplited = false;
+  }
+
+  /**
+   * Закрытие модального окна формы
+   */
+  public closeModal() {
+    this.modalComplited = false;
   }
 
 }
