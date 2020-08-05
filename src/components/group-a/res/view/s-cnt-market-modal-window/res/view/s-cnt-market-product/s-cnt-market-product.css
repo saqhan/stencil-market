@@ -1,51 +1,144 @@
+.product {
+  width: 760px;
+  margin: auto;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+
+.info {
+  display: flex;
+  margin-top: 10px;
+  font-size: .9em;
+}
+
 .brand {
-
+  opacity: .5;
+  margin-right: 15px;
 }
 
-.products {
-
-}
-
-.category {
-
-}
-
-.image {
-
-}
-
-.info-product {
-
-}
-
-.close {
-
-}
-
-.name {
-
-}
-
-.weight {
-
-}
-
-.price {
-
-}
-
-.info-presence {
+.brand::after {
+  content: '❯';
+  padding-left: 15px;
   color: green;
 }
 
-.circle {
+.products {
+  opacity: .5;
+  margin-right: 15px;
+}
 
+.products::after {
+  content: '❯';
+  padding-left: 15px;
+  color: green;
+}
+
+.category {
+  opacity: .5;
+  margin-top: 2px;
+}
+
+.image {
+  width: 335px;
+  height: 250px;
+  margin: 30px 0 0 15px;
+}
+
+.info-product {
+  position: relative;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  position: fixed;
+  top: 20px;
+  right: 285px;
+}
+
+.name {
+  margin: 30px 0 5px 0;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.weight {
+  opacity: .5;
+}
+
+.price {
+  margin: 35px 0 5px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.info-presence {
+  display: flex;
+  color: #3db21b;
+}
+
+.circle {
+  font-size: .55em;
+  color: #3db21b;
+}
+
+.cir {
+  margin-right: 3px;
 }
 
 .presence {
+  margin: 0 0 0 8px;
+  font-size: .8em;
+  font-weight: 600;
+  line-height: 12px;
+}
 
+.my-item {
+  display: flex;
 }
 
 .button {
+  margin: 30px 0 0 0;
+}
 
+.my-button {
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  background-color: #11980a;
+}
+
+.my-button:hover {
+  background-color: green;
+  transition: .3s;
+}
+
+.heart {
+  width: 40px;
+  height: 40px;
+  margin: 30px 0 0 10px;
+  line-height: 36px;
+  padding: 5px 20px 5px 8px;
+  border: 1px solid lightgray;
+  border-radius: 7px;
+
+}
+
+.my-heart {
+  font-size: 1.5em;
+  color: #d3ecd7;
+}
+
+.my-heart:hover {
+  color: green;
+  transition: .4s;
 }

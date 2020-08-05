@@ -11,9 +11,9 @@ export class SCntMarketFirstPage implements ComponentInterface {
   render() {
     return (
       <s-cnt-market-selection
-        payload={forSelection}
+        forSelection={forSelection}
         homePageImage={homePageImage}
-      />
+      ></s-cnt-market-selection>
     );
   }
 }

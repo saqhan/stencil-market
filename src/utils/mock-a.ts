@@ -125,7 +125,7 @@ export const promoSliderCards = [
     title: "Персональный шопер",
     description:
       "Оформите заказ, и мы соберем корзину так же, как это сделали бы вы сами!",
-      img: "https://via.placeholder.com/100x100?img=img",
+    img: "https://via.placeholder.com/100x100?img=img",
     bgImage: "https://sbermarket.ru/static/promo_cards/background.png",
     bgColor: "160, 128, 194",
     color: "255, 255, 255",
@@ -187,6 +187,8 @@ export const forSelection = [
   {
     id: 1,
     image: "https://via.placeholder.com/70x70?text=Text",
+    text: 'Продукты из магазинов на дом и в офис',
+    subtext: 'Выберите магазин и начинайте делать покупки',
     title: "METRO",
   },
   {
@@ -396,19 +398,42 @@ export const forSelection = [
 
 export const homePageImage = "https://via.placeholder.com/1245x518?text=Text";
 
-export const getProduct = [
+export const forOffer = [
   {
-    brand: "Бренды ЛЕНТЫ",
-    products: "Продукты питания",
-    category: "Сладости",
-    image: "https://via.placeholder.com/300x200?text=Text",
-    name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
-    weight: "200 г",
-    price: "252,69 ₽",
-    presence: "Товара много",
-    button: "Купить",
+    id: 1,
+    icon: 'fas fa-truck',
+    text: 'Доставим день в день, в удобное для вас время'
   },
+  {
+    id: 2,
+    icon: 'fas fa-dolly',
+    text: 'Привезём тяжелые сумки прямо до вашей двери'
+  },
+  {
+    id: 3,
+    icon: 'fas fa-gifts',
+    text: 'Выберем лучшее с полок магазинов, как для себя'
+  },
+  {
+    id: 4,
+    icon: 'fas fa-tags',
+    text: 'Скидки и акции наших партнёров на 2 000 товаров'
+  }
 ];
+
+export const offerTitleText = 'Сохраняйте время, энергию и деньги для того, что важно именно вам';
+
+export const getProduct = {
+  brand: "Бренды ЛЕНТЫ",
+  products: "Продукты питания",
+  category: "Сладости",
+  image: "https://via.placeholder.com/300x200?text=Text",
+  name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
+  weight: "200 г",
+  price: "252,69 ₽",
+  presence: "Товара много",
+  button: "Купить",
+};
 
 export const getRecommended = [
   {
@@ -493,3 +518,4 @@ export const getSpecification = {
 };
 
 export const info = "С этим смотрят";
+
