@@ -1,4 +1,4 @@
-# my-component
+# group-b
 
 
 
@@ -7,14 +7,17 @@
 
 ## Dependencies
 
+### Used by
+
+ - [my-component](../my-component)
+
 ### Depends on
 
-- [group-b](../group-b)
+- [s-cnt-market-header](./res/view/s-cnt-market-header)
 
 ### Graph
 ```mermaid
 graph TD;
-  my-component --> group-b
   group-b --> s-cnt-market-header
   s-cnt-market-header --> s-cnt-market-top-bar
   s-cnt-market-header --> s-cnt-market-header-body
@@ -22,7 +25,8 @@ graph TD;
   s-cnt-market-top-bar --> s-cnt-market-delivery-modal
   s-cnt-market-delivery-modal --> s-cnt-market-delivery-in-modal
   s-cnt-market-delivery-modal --> s-cnt-market-pickup-in-modal
-  style my-component fill:#f9f,stroke:#333,stroke-width:4px
+  my-component --> group-b
+  style group-b fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -1,6 +1,6 @@
 
 /*
-* Интерфейс для
+* Интерфейс для раскрития объекта topBar
 * */
 export interface TopBarInterface {
   id: number;
