@@ -7,3 +7,19 @@
   background-position: center;
 }
 
+.text {
+  padding: 145px 0 0 100px;
+  line-height: .4;
+  color: #fff;
+  font-weight: 700;
+  font-size: 37px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.subtext {
+  margin: 55px 0 0 100px;
+  line-height: .5;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
