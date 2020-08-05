@@ -1,0 +1,98 @@
+
+/* профиль юзера*/
+
+.account-menu {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 6px;
+  border: none;
+  z-index: 1100;
+  min-width: 250px;
+  padding: 10px 0;
+  color: #6c6c6c;
+  background-color: #fff;
+  cursor: default;
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.account-menu-header {
+  overflow: hidden;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: 300;
+  padding: 10px 20px;
+  text-transform: capitalize;
+  max-width: 250px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.account-menu-separator {
+  border-bottom: 1px solid #e5e5e5;
+  margin: 9px 1px;
+}
+
+.account-menu-i {
+  padding: 0 20px;
+}
+
+.account-menu-link {
+  align-items: center;
+  background-color: inherit;
+  color: #757575;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  height: 36px;
+  line-height: 1;
+  outline: none;
+  width: 100%;
+}
+
+.account-menu-link-ico {
+  margin-right: 8px;
+  width: 15px;
+}
+
+.account-menu-link-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.account-menu-i button {
+  margin-left: -5px;
+}
+
+.account-menu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 0;
+}
+
+.account-menu-footer-link {
+  font-size: 12px;
+  line-height: 1;
+  border: none;
+  outline: none;
+  color: #6c6c6c;
+  background: none;
+  cursor: pointer;
+}
+
+.account-menu-i:hover {
+  background-color: #f2f2f2;
+}
+
+.account-menu-footer-link:hover {
+  text-decoration: underline;
+}
+
+/**/

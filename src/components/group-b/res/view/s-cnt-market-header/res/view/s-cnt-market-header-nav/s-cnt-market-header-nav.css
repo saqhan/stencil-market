@@ -184,6 +184,10 @@ textarea[placeholder] {
   /*font-size: 18px;*/
 }
 
+.nav-user-profile {
+  position: relative;
+}
+
 .nav-user-profile i:hover {
   color:  #21b056;;
 }
@@ -248,26 +252,6 @@ textarea[placeholder] {
 .user-cart a span {
   font-size: 14px;
 }
-
-
-.account-menu {
-  position: absolute;
-  top: 130%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 6px;
-  border: none;
-  z-index: 1100;
-  min-width: 250px;
-  padding: 10px 0;
-  color: #6c6c6c;
-  background-color: #fff;
-  cursor: default;
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
-}
-
-
-
 
 
 

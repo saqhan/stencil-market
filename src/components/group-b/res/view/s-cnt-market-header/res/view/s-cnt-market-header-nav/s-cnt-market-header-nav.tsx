@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, h, Prop, State} from "@stencil/core";
 import { navBarInterface } from "./res/interface/common.interface";
 
 @Component({
@@ -8,7 +8,15 @@ import { navBarInterface } from "./res/interface/common.interface";
   scoped: true,
 })
 export class SCntMarketHeaderNav implements ComponentInterface {
+  /*
+  * массив данных для навигации
+  **/
   @Prop() navBar: navBarInterface;
+
+  /*
+  * Показывать/скрывать аккаунт юзера
+  * */
+  @State() isShowUserAccount: boolean;
 
   render() {
     return (
@@ -42,11 +50,16 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 </div>
               </div>
               <div class="nav-user-profile">
-                <div class="user-profile-btn">
+                <div class="user-profile-btn"
+                  onClick={() => this.onClickAccountHandler()}
+                >
                   <a><i class={this.navBar.iconUser}></i></a>
                 </div>
                 <div>
-                  <div class="account-menu"></div>
+                  { this.isShowUserAccount
+                    ? <s-cnt-market-account-menu></s-cnt-market-account-menu>
+                    : ''
+                  }
                 </div>
               </div>
               <div class="user-wish-list">
@@ -72,4 +85,12 @@ export class SCntMarketHeaderNav implements ComponentInterface {
       </div>
     );
   }
+
+  /**
+   * Переключаем состояние аккаунта юзера
+   * */
+  public onClickAccountHandler() {
+    this.isShowUserAccount = !this.isShowUserAccount;
+  }
+
 }
