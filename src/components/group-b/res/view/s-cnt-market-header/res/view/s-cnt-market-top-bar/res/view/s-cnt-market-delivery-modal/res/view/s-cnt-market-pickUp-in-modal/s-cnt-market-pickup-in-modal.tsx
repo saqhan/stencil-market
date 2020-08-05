@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h} from '@stencil/core';
+import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-pickup-in-modal',
@@ -7,19 +7,23 @@ import {Component, ComponentInterface, h} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketPickupInModal implements ComponentInterface {
+  /**
+   * boolean значение для вывода
+   */
+  @Prop() pickUpData: any;
 
   render() {
     return (
       <div class="adress-in-city-blocks">
-        <div class="option-city-modal-intop-bar">
-          <i class="fas fa-map-marker-alt"></i>
+        <div class="option-city-modal-intop-bar" innerHTML={this.pickUpData.locationIcon}>
+          {/*location Icon*/}
           <span>
-            Город:
+            {this.pickUpData.city}
           </span>
           <div class="city-option-for-selected">
-            Москва
-            <span>
-              <i class="fas fa-angle-down"></i>
+            {this.pickUpData.selectedCity}
+            <span innerHTML={this.pickUpData.selectIcon}>
+
             </span>
           </div>
         </div>
@@ -29,19 +33,19 @@ export class SCntMarketPickupInModal implements ComponentInterface {
               <div class="store-list-block-wrap">
                 <div class="store-list-logo-img">
                   <div
-                    style={{backgroundImage: "url(https://sbermarket.ru/spree/retailer/icons/234559/original/1.png?1580316602)"}}>
+                    style={{backgroundImage: "url(" + this.pickUpData.logoImg + ")"}}>
                     {/*картинка лого*/}
                   </div>
                 </div>
                 <div class="store-list-name">
-                  Metro
+                  {this.pickUpData.storeName}
                 </div>
               </div>
               <div class="number-of-stores">
-                8 магазинов
+                {this.pickUpData.numberOfStores}
               </div>
-              <div class="list-stores-open-icon">
-                <i class="fas fa-angle-down"></i>
+              <div class="list-stores-open-icon" innerHTML={this.pickUpData.selectedStoreIcon}>
+                {/*иконка выбора магазина*/}
               </div>
             </div>
           </div>

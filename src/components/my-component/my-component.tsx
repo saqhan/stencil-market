@@ -1,4 +1,5 @@
 import { Component, h } from '@stencil/core';
+import {topBar} from "../../utils/mock-b";
 
 @Component({
   tag: 'my-component',
@@ -10,6 +11,6 @@ export class MyComponent {
 
   render() {
     // return <group-a></group-a>
-    return <group-b></group-b>
+    return <group-b payload={topBar}></group-b>
   }
 }

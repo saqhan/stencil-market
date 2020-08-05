@@ -7,6 +7,7 @@ import {Component, ComponentInterface, EventEmitter, h, Event, Prop} from '@sten
   scoped: true
 })
 export class SCntMarketDeliveryModal implements ComponentInterface {
+  @Prop()modalData: any;
 
   /**
    * boolean значение для вывода
@@ -56,12 +57,12 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                 <div class="choose-way-to-get-block">
                   <div class="method-of-obtaining-title-block">
                     <div class="method-of-obtaining-title">
-                      Выберите способ получения
+                      {this.modalData.modalWindowTitle}
                     </div>
                     <div class="suggestions-signIn-in-modal-top-bar">
-                      Уже зарегистрированы?
+                      {this.modalData.offerToEnter}
                       <span>
-                        Войти
+                        {this.modalData.offerToEnterLink}
                       </span>
                     </div>
                   </div>
@@ -69,21 +70,21 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                 <div class="option-pickUp-or-delivery-block-wrapper">
                   <div class="option-pickUp-or-delivery-block">
                     <button class="option-delivery" id={this.delivery? 'option-delivery-selected': ''} onClick={() => this.openDelivery.emit()}>
-                      Доставка
+                      {this.modalData.choiceDelivery}
                     </button>
                     <button class="option-pickUp" id={this.pickUp? 'option-delivery-selected': ''} onClick={() => this.openpickUp.emit()}>
-                      Самовывоз
+                      {this.modalData.choicePickUp}
                     </button>
                   </div>
                 </div>
                 {
                   this.delivery ?
-                    <s-cnt-market-delivery-in-modal/>:
+                    <s-cnt-market-delivery-in-modal deliveryData={this.modalData.Delivery}/>:
                     ''
                 }
                 {
                   this.pickUp ?
-                    <s-cnt-market-pickup-in-modal/>:
+                    <s-cnt-market-pickup-in-modal pickUpData={this.modalData.PickUp}/>:
                     ''
                 }
               </div>
