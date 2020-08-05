@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, h } from "@stencil/core";
+import {Component, ComponentInterface, h, Prop} from "@stencil/core";
+import {navBarInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-header-nav",
@@ -7,6 +8,9 @@ import { Component, ComponentInterface, h } from "@stencil/core";
   scoped: true,
 })
 export class SCntMarketHeaderNav implements ComponentInterface {
+
+  @Prop() navBar:navBarInterface;
+
   render() {
     return (
       <div class="container">
@@ -16,17 +20,19 @@ export class SCntMarketHeaderNav implements ComponentInterface {
               <div class="catalog">
                 <button>
                   <i class="fas fa-bars"></i>
-                  <span>Каталог</span>
+                  <span>{this.navBar.catalogBtn}</span>
                 </button>
               </div>
               <div class="nav-search">
                 <div class="button-menu">
-                  <div class="full-menu-nav-btn"></div>
+                  <div class="full-menu-nav-btn"
+                    style={{backgroundImage: `url(${this.navBar.backgroundImageFullMenu})`}}
+                  ></div>
                   <i class="fas fa-angle-down"></i>
                 </div>
                 <div class="search-wrapper">
                   <form>
-                    <input type="text" placeholder="Найти в магазине METRO" />
+                    <input type="text" placeholder={this.navBar.placeholder} />
                     <button>
                       <i class="fas fa-search"></i>
                     </button>
@@ -35,22 +41,22 @@ export class SCntMarketHeaderNav implements ComponentInterface {
               </div>
               <div class="nav-user-profile">
                 <div class="user-profile-btn">
-                  <a ><i class="far fa-user"></i></a>
+                  <a ><i class={this.navBar.iconUser}></i></a>
                 </div>
               </div>
               <div class="user-wish-list">
-                <a ><i class="far fa-heart"></i></a>
+                <a ><i class={this.navBar.iconWishList}></i></a>
               </div>
               <div class="user-orders">
                 <a >
-                  <i class="fas fa-history"></i>
-                  <span>Заказы</span>
+                  <i class={this.navBar.iconOrders}></i>
+                  <span>{this.navBar.titleOrders}</span>
                 </a>
               </div>
               <div class="user-cart">
                 <a>
                   <i class="fas fa-shopping-cart"></i>
-                  <span>Корзина</span>
+                  <span>{this.navBar.titleCart}</span>
                 </a>
               </div>
             </div>

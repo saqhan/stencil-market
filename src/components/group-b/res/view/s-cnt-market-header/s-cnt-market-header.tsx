@@ -20,7 +20,7 @@ export class SCntMarketHeader implements ComponentInterface {
             <div class="col-12">
               <s-cnt-market-top-bar topBar={this.categories.topBar}></s-cnt-market-top-bar>
               <s-cnt-market-header-body body={this.categories.body} ></s-cnt-market-header-body>
-              <s-cnt-market-header-nav ></s-cnt-market-header-nav>
+              <s-cnt-market-header-nav navBar={this.categories.navBar}></s-cnt-market-header-nav>
             </div>
           </div>
         </div>

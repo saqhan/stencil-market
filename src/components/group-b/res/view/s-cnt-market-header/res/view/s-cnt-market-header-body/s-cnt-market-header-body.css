@@ -40,6 +40,10 @@
   color: #393939;
 }
 
+.menu-ul li:first-child:hover {
+  color: #21a038;
+}
+
 .mobile-menu-btn button {
   padding: 5px 10px;
   border: none;

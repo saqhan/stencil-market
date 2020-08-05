@@ -281,6 +281,5 @@ export const header = {
     iconCart: 'fas fa-shopping-cart',
     titleOrders: 'Заказы',
     titleCart: 'Корзина'
-
   }
 }
