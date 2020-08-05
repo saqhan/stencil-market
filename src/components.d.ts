@@ -72,6 +72,14 @@ export namespace Components {
           * Данные для главной картинки
          */
         "homePageImage": any;
+        /**
+          * Данные для подзаголовка на картинке
+         */
+        "homeSubText": any;
+        /**
+          * Данные для заголовка на картинке
+         */
+        "homeText": any;
     }
     interface SCntMarketShop {
     }
@@ -249,6 +257,14 @@ declare namespace LocalJSX {
           * Данные для главной картинки
          */
         "homePageImage"?: any;
+        /**
+          * Данные для подзаголовка на картинке
+         */
+        "homeSubText"?: any;
+        /**
+          * Данные для заголовка на картинке
+         */
+        "homeText"?: any;
     }
     interface SCntMarketShop {
     }

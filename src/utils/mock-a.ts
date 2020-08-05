@@ -187,8 +187,6 @@ export const forSelection = [
   {
     id: 1,
     image: "https://via.placeholder.com/70x70?text=Text",
-    text: 'Продукты из магазинов на дом и в офис',
-    subtext: 'Выберите магазин и начинайте делать покупки',
     title: "METRO",
   },
   {
@@ -398,30 +396,37 @@ export const forSelection = [
 
 export const homePageImage = "https://via.placeholder.com/1245x518?text=Text";
 
+export const homeText =
+  "Продукты \n" + "\n" + "из магазинов\n" + "\n" + " на дом и в офис";
+
+export const homeSubText =
+  "Выберите магазин\n" + "\n" + " и начинайте делать покупки!";
+
 export const forOffer = [
   {
     id: 1,
-    icon: 'fas fa-truck',
-    text: 'Доставим день в день, в удобное для вас время'
+    icon: "fas fa-truck",
+    text: "Доставим день в день, в удобное для вас время",
   },
   {
     id: 2,
-    icon: 'fas fa-dolly',
-    text: 'Привезём тяжелые сумки прямо до вашей двери'
+    icon: "fas fa-dolly",
+    text: "Привезём тяжелые сумки прямо до вашей двери",
   },
   {
     id: 3,
-    icon: 'fas fa-gifts',
-    text: 'Выберем лучшее с полок магазинов, как для себя'
+    icon: "fas fa-gifts",
+    text: "Выберем лучшее с полок магазинов, как для себя",
   },
   {
     id: 4,
-    icon: 'fas fa-tags',
-    text: 'Скидки и акции наших партнёров на 2 000 товаров'
-  }
+    icon: "fas fa-tags",
+    text: "Скидки и акции наших партнёров на 2 000 товаров",
+  },
 ];
 
-export const offerTitleText = 'Сохраняйте время, энергию и деньги для того, что важно именно вам';
+export const offerTitleText =
+  "Сохраняйте время, энергию и деньги для того, что важно именно вам";
 
 export const getProduct = {
   brand: "Бренды ЛЕНТЫ",
@@ -518,4 +523,3 @@ export const getSpecification = {
 };
 
 export const info = "С этим смотрят";
-
