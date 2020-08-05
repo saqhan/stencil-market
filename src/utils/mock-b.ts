@@ -27,8 +27,8 @@ export const header = {
         id: 1,
         locationIcon: `<i class="fas fa-map-marker-alt"></i>`,
         city: "Город:",
-        selectedCity: "Москва",
         selectIcon: `<i class="fas fa-angle-down"></i>`,
+        defaultCity: 1,
         cityForSelected: [
           {
             id: 1,
@@ -188,10 +188,9 @@ export const header = {
             city: 'Брянск'
           },
         ],
-        logoImg:
-          "https://sbermarket.ru/spree/retailer/icons/234559/original/1.png?1580316602",
+        logoImg: "https://sbermarket.ru/spree/retailer/icons/234559/original/1.png?1580316602",
         storeName: "Metro",
-        numberOfStores: "8 магазинов",
+        numberOfStores: "магазинов",
         selectedStoreIcon: `<i class="fas fa-angle-down"></i>`,
         storeAddress: [
           {
@@ -246,7 +245,7 @@ export const header = {
       },
     },
   },
-  body : {
+  body: {
     logo: 'https://via.placeholder.com/200x33?text=LOGO',
     navMenuItem: [
       {
@@ -276,7 +275,7 @@ export const header = {
     backgroundImageFullMenu: 'https://sbermarket.ru/spree/retailer_logos/97198/default/metro_logo.png?1524229580',
     placeholder: 'Найти в магазине METRO',
     iconUser: 'far fa-user',
-    iconWishList:'far fa-heart',
+    iconWishList: 'far fa-heart',
     iconOrders: 'fas fa-history',
     iconCart: 'fas fa-shopping-cart',
     titleOrders: 'Заказы',

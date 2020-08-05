@@ -46,7 +46,7 @@ export namespace Components {
     }
     interface SCntMarketPickupInModal {
         /**
-          * boolean значение для вывода
+          * Данные из объекта данных мок
          */
         "pickUpData": any;
     }
@@ -178,7 +178,7 @@ declare namespace LocalJSX {
     }
     interface SCntMarketPickupInModal {
         /**
-          * boolean значение для вывода
+          * Данные из объекта данных мок
          */
         "pickUpData"?: any;
     }

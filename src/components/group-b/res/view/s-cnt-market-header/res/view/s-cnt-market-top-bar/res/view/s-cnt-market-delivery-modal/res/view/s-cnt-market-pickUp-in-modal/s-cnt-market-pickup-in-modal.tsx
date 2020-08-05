@@ -8,14 +8,28 @@ import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
 })
 export class SCntMarketPickupInModal implements ComponentInterface {
   /**
-   * boolean значение для вывода
+   * Данные из объекта данных мок
    */
   @Prop() pickUpData: any;
 
   /**
-   * boolean значение для вывода компонента form-communication
+   *
    */
-  @State() SroreAddress: boolean;
+  @State() idCity: number;
+
+  /**
+   * boolean значение для вывода списка городов
+   */
+  @State() CitySelect: boolean;
+
+  /**
+   * boolean значение для вывода блоков магазинов
+   */
+  @State() StoreAddress: boolean;
+
+  componentDidLoad() {
+    this.idCity = this.pickUpData.defaultCity;
+  }
 
   render() {
     return (
@@ -25,14 +39,18 @@ export class SCntMarketPickupInModal implements ComponentInterface {
           <span>
             {this.pickUpData.city}
           </span>
-          <div class="city-option-for-selected">
-            {this.pickUpData.selectedCity}
+          <div class="city-option-for-selected" onClick={() => this.openCityList()}>
+            {this.selectedCity(this.pickUpData.cityForSelected)}
             <span innerHTML={this.pickUpData.selectIcon}>
-            {/*вывод списка магазинов*/}
+            {/*icon вывода списка магазинов*/}
             </span>
-            <div class="selection-city-block">
-              <CityForSelected arr={this.pickUpData.cityForSelected}/>
-            </div>
+            {
+              this.CitySelect ?
+                <div class="selection-city-block">
+                  <CityForSelected arr={this.pickUpData.cityForSelected} idSelected={(x) => this.idSelected(x)}/>
+                </div> :
+                ''
+            }
           </div>
         </div>
         <div class="expandable-store-list">
@@ -50,19 +68,20 @@ export class SCntMarketPickupInModal implements ComponentInterface {
                 </div>
               </div>
               <div class="number-of-stores">
-                {this.pickUpData.numberOfStores}
+                {/*количество магазинов из длины массива и текст из объекта*/}
+                {this.pickUpData.storeAddress.length + ' ' + this.pickUpData.numberOfStores}
               </div>
               <div class="list-stores-open-icon" innerHTML={this.pickUpData.selectedStoreIcon} onClick={() => {
                 this.opClStoreAddress();
-                // this.closeStoreAddress();
               }}>
                 {/*иконка выбора магазина*/}
               </div>
             </div>
           </div>
           {
-            this.SroreAddress ?
-              <SroreAddress arr={this.pickUpData.storeAddress}/> :
+            this.StoreAddress ?
+              //выводящийся и закрывающийся блок с адресами магазинов по клику меняющему State
+              <StoreAddress arr={this.pickUpData.storeAddress}/> :
               ''
           }
 
@@ -72,31 +91,56 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   }
 
   /**
-   *  функция присвоения true или false для htmlAtribut (переменной) SroreAddress
+   * Вывод выбранного города
    */
-  public opClStoreAddress() {
-    if (this.SroreAddress !== true) {
-      this.SroreAddress = true;
-    } else {
-      this.SroreAddress = false;
-    }
+  public selectedCity(array) {
+    return array.map(item => {
+      if (this.idCity === item.id) {
+        return (
+          <span>
+            {item.city}
+          </span>
+        );
+      }
+    })
   }
 
   /**
-   * Вызов модального окна формы
+   * функция для присвоения id выбранной страны
+   * */
+  public idSelected(x) {
+    this.idCity = x;
+  }
+
+  /**
+   * Вызов и закрытие окна для выбора города
+   */
+  public openCityList() {
+    this.CitySelect = !this.CitySelect;
+  }
+
+  /**
+   *  функция открытия и закрытия блока списка магазинов
+   */
+  public opClStoreAddress() {
+    this.StoreAddress = !this.StoreAddress;
+  }
+
+  /**
+   * функция закрытия блока списка магазинов
    */
   public closeStoreAddress() {
-    if (this.SroreAddress === true) {
-      this.SroreAddress = false;
+    if (this.StoreAddress === true) {
+      this.StoreAddress = false;
     }
   }
 
 }
 
 /*
-* компонентная функция для вывода блоков
+* компонентная функция для вывода блоков списка магазинов
  */
-const SroreAddress = (props) => {
+const StoreAddress = (props) => {
   return props.arr.map((item) => {
     return (
       <div>
@@ -122,12 +166,12 @@ const SroreAddress = (props) => {
 }
 
 /**
- * компонентная функция для вывода флага и кода выбранной страны
+ * компонентная функция для вывода городов при выборе города
  **/
 const CityForSelected = (props) => {
   return props.arr.map((item) => {
     return (
-      <div class="city-for-selected">
+      <div class="city-for-selected" onClick={() => props.idSelected(item.id)}>
         {item.city}
       </div>
     );
