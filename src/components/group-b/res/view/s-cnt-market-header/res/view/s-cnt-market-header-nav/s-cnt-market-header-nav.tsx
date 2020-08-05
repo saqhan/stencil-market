@@ -1,5 +1,5 @@
-import {Component, ComponentInterface, h, Prop} from "@stencil/core";
-import {navBarInterface} from "./res/interface/common.interface";
+import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { navBarInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-header-nav",
@@ -8,8 +8,7 @@ import {navBarInterface} from "./res/interface/common.interface";
   scoped: true,
 })
 export class SCntMarketHeaderNav implements ComponentInterface {
-
-  @Prop() navBar:navBarInterface;
+  @Prop() navBar: navBarInterface;
 
   render() {
     return (
@@ -25,8 +24,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
               </div>
               <div class="nav-search">
                 <div class="button-menu">
-                  <div class="full-menu-nav-btn"
-                    style={{backgroundImage: `url(${this.navBar.backgroundImageFullMenu})`}}
+                  <div
+                    class="full-menu-nav-btn"
+                    style={{
+                      backgroundImage: `url(${this.navBar.backgroundImageFullMenu})`,
+                    }}
                   ></div>
                   <i class="fas fa-angle-down"></i>
                 </div>
@@ -41,14 +43,19 @@ export class SCntMarketHeaderNav implements ComponentInterface {
               </div>
               <div class="nav-user-profile">
                 <div class="user-profile-btn">
-                  <a ><i class={this.navBar.iconUser}></i></a>
+                  <a><i class={this.navBar.iconUser}></i></a>
+                </div>
+                <div>
+                  <div class="account-menu"></div>
                 </div>
               </div>
               <div class="user-wish-list">
-                <a ><i class={this.navBar.iconWishList}></i></a>
+                <a>
+                  <i class={this.navBar.iconWishList}></i>
+                </a>
               </div>
               <div class="user-orders">
-                <a >
+                <a>
                   <i class={this.navBar.iconOrders}></i>
                   <span>{this.navBar.titleOrders}</span>
                 </a>
