@@ -9,7 +9,6 @@ export namespace Components {
     interface GroupA {
     }
     interface GroupB {
-        "payload": any;
     }
     interface MyComponent {
     }
@@ -31,7 +30,10 @@ export namespace Components {
         "pickUp": boolean;
     }
     interface SCntMarketHeader {
-        "topBar": any;
+        /**
+          * Массив данных для хедера
+         */
+        "categories": any;
     }
     interface SCntMarketHeaderBody {
     }
@@ -125,7 +127,6 @@ declare namespace LocalJSX {
     interface GroupA {
     }
     interface GroupB {
-        "payload"?: any;
     }
     interface MyComponent {
     }
@@ -159,7 +160,10 @@ declare namespace LocalJSX {
         "pickUp"?: boolean;
     }
     interface SCntMarketHeader {
-        "topBar"?: any;
+        /**
+          * Массив данных для хедера
+         */
+        "categories"?: any;
     }
     interface SCntMarketHeaderBody {
     }

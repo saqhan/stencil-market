@@ -1,4 +1,5 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, h} from '@stencil/core';
+import {header} from "../../utils/mock-b";
 
 @Component({
   tag: 'group-b',
@@ -7,11 +8,10 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
   scoped: true
 })
 export class GroupB implements ComponentInterface {
-  @Prop()payload: any;
 
   render() {
     return (
-          <s-cnt-market-header topBar={this.payload}></s-cnt-market-header>
+          <s-cnt-market-header categories={header}></s-cnt-market-header>
     );
   }
 
