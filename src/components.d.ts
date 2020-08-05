@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { NavMenuItemInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-header-body/res/interface/common.interface";
+import { TopBarInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
     }
@@ -48,7 +49,7 @@ export namespace Components {
         "pickUpData": any;
     }
     interface SCntMarketTopBar {
-        "topBar": any;
+        "topBar": TopBarInterface;
     }
 }
 declare global {
@@ -179,7 +180,7 @@ declare namespace LocalJSX {
         "pickUpData"?: any;
     }
     interface SCntMarketTopBar {
-        "topBar"?: any;
+        "topBar"?: TopBarInterface;
     }
     interface IntrinsicElements {
         "group-a": GroupA;

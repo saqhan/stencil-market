@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
+import {TopBarInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-top-bar',
@@ -10,7 +11,7 @@ export class SCntMarketTopBar implements ComponentInterface {
   /**
    *
    */
-  @Prop()topBar: any;
+  @Prop()topBar: TopBarInterface;
 
   /**
    * boolean значение для вывода
