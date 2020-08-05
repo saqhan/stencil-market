@@ -6,6 +6,7 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
+import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
@@ -30,7 +31,19 @@ export namespace Components {
          */
         "forSelection": any;
     }
+    interface SCntMarketModalWindow {
+    }
     interface SCntMarketOffer {
+    }
+    interface SCntMarketProduct {
+        /**
+          * Интерфейс для Product
+         */
+        "MarketProductInterface": MarketProductInterface[];
+        /**
+          * Данные для Product
+         */
+        "getProduct": any;
     }
     interface SCntMarketPromoSlider {
         /**
@@ -43,6 +56,8 @@ export namespace Components {
           * Получаем данные карточек промо-слайдера
          */
         "promoSliderCards": MarketPromoSliderInterface;
+    }
+    interface SCntMarketRecommended {
     }
     interface SCntMarketSelection {
         /**
@@ -104,11 +119,23 @@ declare global {
         prototype: HTMLSCntMarketItemSelectionElement;
         new (): HTMLSCntMarketItemSelectionElement;
     };
+    interface HTMLSCntMarketModalWindowElement extends Components.SCntMarketModalWindow, HTMLStencilElement {
+    }
+    var HTMLSCntMarketModalWindowElement: {
+        prototype: HTMLSCntMarketModalWindowElement;
+        new (): HTMLSCntMarketModalWindowElement;
+    };
     interface HTMLSCntMarketOfferElement extends Components.SCntMarketOffer, HTMLStencilElement {
     }
     var HTMLSCntMarketOfferElement: {
         prototype: HTMLSCntMarketOfferElement;
         new (): HTMLSCntMarketOfferElement;
+    };
+    interface HTMLSCntMarketProductElement extends Components.SCntMarketProduct, HTMLStencilElement {
+    }
+    var HTMLSCntMarketProductElement: {
+        prototype: HTMLSCntMarketProductElement;
+        new (): HTMLSCntMarketProductElement;
     };
     interface HTMLSCntMarketPromoSliderElement extends Components.SCntMarketPromoSlider, HTMLStencilElement {
     }
@@ -121,6 +148,12 @@ declare global {
     var HTMLSCntMarketPromoSliderCardElement: {
         prototype: HTMLSCntMarketPromoSliderCardElement;
         new (): HTMLSCntMarketPromoSliderCardElement;
+    };
+    interface HTMLSCntMarketRecommendedElement extends Components.SCntMarketRecommended, HTMLStencilElement {
+    }
+    var HTMLSCntMarketRecommendedElement: {
+        prototype: HTMLSCntMarketRecommendedElement;
+        new (): HTMLSCntMarketRecommendedElement;
     };
     interface HTMLSCntMarketSelectionElement extends Components.SCntMarketSelection, HTMLStencilElement {
     }
@@ -142,9 +175,12 @@ declare global {
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-item-offer": HTMLSCntMarketItemOfferElement;
         "s-cnt-market-item-selection": HTMLSCntMarketItemSelectionElement;
+        "s-cnt-market-modal-window": HTMLSCntMarketModalWindowElement;
         "s-cnt-market-offer": HTMLSCntMarketOfferElement;
+        "s-cnt-market-product": HTMLSCntMarketProductElement;
         "s-cnt-market-promo-slider": HTMLSCntMarketPromoSliderElement;
         "s-cnt-market-promo-slider-card": HTMLSCntMarketPromoSliderCardElement;
+        "s-cnt-market-recommended": HTMLSCntMarketRecommendedElement;
         "s-cnt-market-selection": HTMLSCntMarketSelectionElement;
         "s-cnt-market-shop": HTMLSCntMarketShopElement;
     }
@@ -172,7 +208,19 @@ declare namespace LocalJSX {
          */
         "forSelection"?: any;
     }
+    interface SCntMarketModalWindow {
+    }
     interface SCntMarketOffer {
+    }
+    interface SCntMarketProduct {
+        /**
+          * Интерфейс для Product
+         */
+        "MarketProductInterface"?: MarketProductInterface[];
+        /**
+          * Данные для Product
+         */
+        "getProduct"?: any;
     }
     interface SCntMarketPromoSlider {
         /**
@@ -185,6 +233,8 @@ declare namespace LocalJSX {
           * Получаем данные карточек промо-слайдера
          */
         "promoSliderCards"?: MarketPromoSliderInterface;
+    }
+    interface SCntMarketRecommended {
     }
     interface SCntMarketSelection {
         /**
@@ -210,9 +260,12 @@ declare namespace LocalJSX {
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-item-offer": SCntMarketItemOffer;
         "s-cnt-market-item-selection": SCntMarketItemSelection;
+        "s-cnt-market-modal-window": SCntMarketModalWindow;
         "s-cnt-market-offer": SCntMarketOffer;
+        "s-cnt-market-product": SCntMarketProduct;
         "s-cnt-market-promo-slider": SCntMarketPromoSlider;
         "s-cnt-market-promo-slider-card": SCntMarketPromoSliderCard;
+        "s-cnt-market-recommended": SCntMarketRecommended;
         "s-cnt-market-selection": SCntMarketSelection;
         "s-cnt-market-shop": SCntMarketShop;
     }
@@ -228,9 +281,12 @@ declare module "@stencil/core" {
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-item-offer": LocalJSX.SCntMarketItemOffer & JSXBase.HTMLAttributes<HTMLSCntMarketItemOfferElement>;
             "s-cnt-market-item-selection": LocalJSX.SCntMarketItemSelection & JSXBase.HTMLAttributes<HTMLSCntMarketItemSelectionElement>;
+            "s-cnt-market-modal-window": LocalJSX.SCntMarketModalWindow & JSXBase.HTMLAttributes<HTMLSCntMarketModalWindowElement>;
             "s-cnt-market-offer": LocalJSX.SCntMarketOffer & JSXBase.HTMLAttributes<HTMLSCntMarketOfferElement>;
+            "s-cnt-market-product": LocalJSX.SCntMarketProduct & JSXBase.HTMLAttributes<HTMLSCntMarketProductElement>;
             "s-cnt-market-promo-slider": LocalJSX.SCntMarketPromoSlider & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderElement>;
             "s-cnt-market-promo-slider-card": LocalJSX.SCntMarketPromoSliderCard & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderCardElement>;
+            "s-cnt-market-recommended": LocalJSX.SCntMarketRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketRecommendedElement>;
             "s-cnt-market-selection": LocalJSX.SCntMarketSelection & JSXBase.HTMLAttributes<HTMLSCntMarketSelectionElement>;
             "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;
         }

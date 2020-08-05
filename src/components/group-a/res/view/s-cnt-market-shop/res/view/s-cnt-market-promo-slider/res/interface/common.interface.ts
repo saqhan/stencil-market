@@ -3,5 +3,8 @@ export interface MarketPromoSliderInterface {
   title: string,
   description: string,
   img: string,
-  link: string,
+  link?: string,
+  bgImage: string,
+  bgColor: string,
+  color: string,
 }
