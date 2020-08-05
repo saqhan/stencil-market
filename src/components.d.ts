@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
 import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/interface/common.interface";
+import { MarketProductsSliderCardsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider/res/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
@@ -49,9 +50,17 @@ export namespace Components {
         /**
           * Получаем данные карточек слайдера популярных продуктов
          */
-        "productsSliderCards": any;
+        "productsSliderCards": MarketProductsSliderCardsInterface[];
+        /**
+          * Заголовк слайдера
+         */
+        "productsSliderTitle": string;
     }
     interface SCntMarketProductsSliderCard {
+        /**
+          * Получаем данные карточек слайдера популярных продуктов
+         */
+        "productsSliderCards": MarketProductsSliderCardsInterface;
     }
     interface SCntMarketPromoSlider {
         /**
@@ -256,9 +265,17 @@ declare namespace LocalJSX {
         /**
           * Получаем данные карточек слайдера популярных продуктов
          */
-        "productsSliderCards"?: any;
+        "productsSliderCards"?: MarketProductsSliderCardsInterface[];
+        /**
+          * Заголовк слайдера
+         */
+        "productsSliderTitle"?: string;
     }
     interface SCntMarketProductsSliderCard {
+        /**
+          * Получаем данные карточек слайдера популярных продуктов
+         */
+        "productsSliderCards"?: MarketProductsSliderCardsInterface;
     }
     interface SCntMarketPromoSlider {
         /**

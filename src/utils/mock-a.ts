@@ -523,3 +523,93 @@ export const getSpecification = {
 };
 
 export const info = "С этим смотрят";
+
+export const productsSliderCards = [
+  {
+    id: 1,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "599.01",
+    oldPrice: "889.00",
+    currency: "₽",
+    desc: "Сыр полутвердый Ламбер 50% ~ 1 кг бзмж",
+    weight: "1 кг"
+  },
+  {
+    id: 2,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "63.40",
+    currency: "₽",
+    desc: "Пиво безалкогольное Heineken пастеризованное",
+    weight: "467.7 г"
+  },
+  {
+    id: 3,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "34.99",
+    currency: "₽",
+    desc: "Сахар-песок Aro 1 кг",
+    weight: "1 кг"
+  },
+  {
+    id: 4,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "125.00",
+    oldPrice: "166.00",
+    currency: "₽",
+    desc: "Сыр Сиртаки Classic для греческого салата 35% 330 ...",
+    weight: "330 г"
+  },
+  {
+    id: 5,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "49.90",
+    currency: "₽",
+    desc: "Кабачки грунтовые",
+    weight: "1 кг"
+  },
+  {
+    id: 6,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "125.00",
+    oldPrice: "184.00",
+    currency: "₽",
+    desc: "Сыр полутвердый Arla Natura Сливочный 45% 200 г бз ...",
+    weight: "1 кг"
+  },
+  {
+    id: 7,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "21.90",
+    currency: "₽",
+    desc: "Капуста белокочанная ранняя",
+    weight: "1 кг"
+  },
+  {
+    id: 8,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "54.90",
+    oldPrice: "74.89 ",
+    currency: "₽",
+    desc: "Молоко Белый Город ультрапастеризованное 3,2% 1 л ...",
+    weight: "1 л"
+  },
+  {
+    id: 9,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "24.90",
+    currency: "₽",
+    desc: "Лук репчатый",
+    weight: "1 кг"
+  },
+  {
+    id: 10,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "99.99",
+    oldPrice: "129.90",
+    currency: "₽",
+    desc: "Помидоры сливовидные",
+    weight: "1 кг"
+  },
+];
+
+export const productsSliderTitle = "Популярные товары";

@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, h } from '@stencil/core';
+import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {MarketProductsSliderCardsInterface} from "../../interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-products-slider-card',
@@ -8,27 +9,35 @@ import { Component, ComponentInterface, h } from '@stencil/core';
 })
 export class SCntMarketProductsSliderCard implements ComponentInterface {
 
+  /**
+   * Получаем данные карточек слайдера популярных продуктов
+   */
+  @Prop() productsSliderCards: MarketProductsSliderCardsInterface;
+
   render() {
     return (
-      <a class="products-card">
+      <div class="products-card">
         <div class="products-card-item">
-          <div class="products-card-img">
-
+          <div class="products-card-img-wrapper">
+            <div class="products-card-img" style={{backgroundImage: `url(${this.productsSliderCards.img})`}}>
+            </div>
           </div>
           <div class="products-card-desc">
             <div class="products-price">
               <span class="prise-dis">
-                <span></span>
+                {this.productsSliderCards.price}
+                <span>{this.productsSliderCards.currency}</span>
               </span>
               <span class="price-old">
-                <span></span>
+                {this.productsSliderCards.oldPrice}
+                <span>{this.productsSliderCards.currency}</span>
               </span>
             </div>
-            <p class="products-name"></p>
-            <div class="products-bottom-info"></div>
+            <p class="products-name">{this.productsSliderCards.desc}</p>
+            <div class="products-bottom-info">{this.productsSliderCards.weight}</div>
           </div>
         </div>
-      </a>
+      </div>
     );
   }
 
