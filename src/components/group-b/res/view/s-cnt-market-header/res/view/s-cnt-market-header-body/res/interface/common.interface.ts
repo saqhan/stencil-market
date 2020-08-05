@@ -1,11 +1,15 @@
-
 /*
-* Интерфейс для массива меню и лого
-* */
+ * Интерфейс для массива меню и лого
+ * */
+
+export interface navMenuItemInterface {
+  id: string;
+  name: string;
+}
+
 export interface NavMenuItemInterface {
   logo: string;
-  navMenuItem: {
-    id: string;
-    name: string;
-  }[];
+  navMenuItem: navMenuItemInterface[];
 }
+
+

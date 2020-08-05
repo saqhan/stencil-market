@@ -3,7 +3,7 @@
 * Интерфейс для раскрития объекта topBar
 * */
 export interface TopBarInterface {
-  id: number;
+  id: string;
   choiceDelivery: string;
   choicePickUp: string;
   choiceAddress: string;
