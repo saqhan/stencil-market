@@ -442,36 +442,42 @@ export const getProduct = {
 
 export const getRecommended = [
   {
+    id: 1,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "269.59 ₽",
     productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
     weight: "190 г",
   },
   {
+    id: 2,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "252.69 ₽",
     productName: "Конфеты Dolce Albero Ассорти",
     weight: "200 г",
   },
   {
+    id: 3,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "115.79 ₽",
     productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
     weight: "200 г",
   },
   {
+    id: 4,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "105.29 ₽",
     productName: "Миска Mallony 1,1л",
     weight: "1 шт",
   },
   {
+    id: 5,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "168.49 ₽",
     productName: "Миска Mallony 3,3л",
     weight: "1 шт",
   },
   {
+    id: 6,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "105.29 ₽",
     productName: "Грибы вешенки свежие",
@@ -502,13 +508,13 @@ export const getSpecification = {
   lenta: "Лента",
   country: "Страна",
   russia: "Россия",
-  storageСonditions: "Условия хранения",
+  storageConditions: "Условия хранения",
   terms:
     "При температуре от +15°C до +21°C и относительной влажности воздуха не более 75%",
   term: "Срок хранения",
   month: "9 мес",
   kindOfCandy: "Вид конфет",
-  chocolate: "Шоколад",
+  chocolate: "Шоколадные",
   typeOfChocolate: "Вид шоколада",
   bitter: "Горький",
   flavor: "Вкус",
