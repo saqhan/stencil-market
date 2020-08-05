@@ -255,7 +255,11 @@ export const header = {
       },
       {
         id: 'how-we-work',
-        name: 'contacts'
+        name: 'Как мы работаем'
+      },
+      {
+        id: 'contacts',
+        name: 'Контакты'
       },
       {
         id: 'help',
