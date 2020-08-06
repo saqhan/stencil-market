@@ -10,6 +10,11 @@
 .products-card-item {
   height: 100%;
   display: flex;
+  cursor: pointer;
+}
+
+.products-card:hover .products-cart {
+  display: block;
 }
 
 .products-card-img-wrapper {
@@ -55,6 +60,7 @@
   overflow: hidden;
   font-size: 12px;
   color: #343434;
+  word-break: break-word;
 }
 
 .products-bottom-info {
@@ -69,6 +75,7 @@
   bottom: 6px;
   padding: 8px 0 0 8px;
   z-index: 2;
+  display: none;
 }
 
 .products-cart-add {
@@ -80,4 +87,10 @@
   justify-content: center;
   align-items: center;
   font-size: 14px;
+  color: #fff;
+}
+
+.fa-plus {
+  font-size: 10px;
+  margin-right: 3px;
 }

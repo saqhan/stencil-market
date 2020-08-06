@@ -53,6 +53,10 @@ export namespace Components {
          */
         "getProduct": any;
     }
+    interface SCntMarketProductsList {
+    }
+    interface SCntMarketProductsListCard {
+    }
     interface SCntMarketProductsSlider {
         /**
           * Получаем данные карточек слайдера популярных продуктов
@@ -190,6 +194,18 @@ declare global {
         prototype: HTMLSCntMarketProductElement;
         new (): HTMLSCntMarketProductElement;
     };
+    interface HTMLSCntMarketProductsListElement extends Components.SCntMarketProductsList, HTMLStencilElement {
+    }
+    var HTMLSCntMarketProductsListElement: {
+        prototype: HTMLSCntMarketProductsListElement;
+        new (): HTMLSCntMarketProductsListElement;
+    };
+    interface HTMLSCntMarketProductsListCardElement extends Components.SCntMarketProductsListCard, HTMLStencilElement {
+    }
+    var HTMLSCntMarketProductsListCardElement: {
+        prototype: HTMLSCntMarketProductsListCardElement;
+        new (): HTMLSCntMarketProductsListCardElement;
+    };
     interface HTMLSCntMarketProductsSliderElement extends Components.SCntMarketProductsSlider, HTMLStencilElement {
     }
     var HTMLSCntMarketProductsSliderElement: {
@@ -250,6 +266,8 @@ declare global {
         "s-cnt-market-modal-window": HTMLSCntMarketModalWindowElement;
         "s-cnt-market-offer": HTMLSCntMarketOfferElement;
         "s-cnt-market-product": HTMLSCntMarketProductElement;
+        "s-cnt-market-products-list": HTMLSCntMarketProductsListElement;
+        "s-cnt-market-products-list-card": HTMLSCntMarketProductsListCardElement;
         "s-cnt-market-products-slider": HTMLSCntMarketProductsSliderElement;
         "s-cnt-market-products-slider-card": HTMLSCntMarketProductsSliderCardElement;
         "s-cnt-market-promo-slider": HTMLSCntMarketPromoSliderElement;
@@ -302,6 +320,10 @@ declare namespace LocalJSX {
           * Данные для Product
          */
         "getProduct"?: any;
+    }
+    interface SCntMarketProductsList {
+    }
+    interface SCntMarketProductsListCard {
     }
     interface SCntMarketProductsSlider {
         /**
@@ -384,6 +406,8 @@ declare namespace LocalJSX {
         "s-cnt-market-modal-window": SCntMarketModalWindow;
         "s-cnt-market-offer": SCntMarketOffer;
         "s-cnt-market-product": SCntMarketProduct;
+        "s-cnt-market-products-list": SCntMarketProductsList;
+        "s-cnt-market-products-list-card": SCntMarketProductsListCard;
         "s-cnt-market-products-slider": SCntMarketProductsSlider;
         "s-cnt-market-products-slider-card": SCntMarketProductsSliderCard;
         "s-cnt-market-promo-slider": SCntMarketPromoSlider;
@@ -409,6 +433,8 @@ declare module "@stencil/core" {
             "s-cnt-market-modal-window": LocalJSX.SCntMarketModalWindow & JSXBase.HTMLAttributes<HTMLSCntMarketModalWindowElement>;
             "s-cnt-market-offer": LocalJSX.SCntMarketOffer & JSXBase.HTMLAttributes<HTMLSCntMarketOfferElement>;
             "s-cnt-market-product": LocalJSX.SCntMarketProduct & JSXBase.HTMLAttributes<HTMLSCntMarketProductElement>;
+            "s-cnt-market-products-list": LocalJSX.SCntMarketProductsList & JSXBase.HTMLAttributes<HTMLSCntMarketProductsListElement>;
+            "s-cnt-market-products-list-card": LocalJSX.SCntMarketProductsListCard & JSXBase.HTMLAttributes<HTMLSCntMarketProductsListCardElement>;
             "s-cnt-market-products-slider": LocalJSX.SCntMarketProductsSlider & JSXBase.HTMLAttributes<HTMLSCntMarketProductsSliderElement>;
             "s-cnt-market-products-slider-card": LocalJSX.SCntMarketProductsSliderCard & JSXBase.HTMLAttributes<HTMLSCntMarketProductsSliderCardElement>;
             "s-cnt-market-promo-slider": LocalJSX.SCntMarketPromoSlider & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderElement>;

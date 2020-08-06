@@ -1,11 +1,11 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import {MarketProductsSliderCardsInterface} from "./res/interface/common.interface";
+import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { MarketProductsSliderCardsInterface } from "./res/interface/common.interface";
 
 @Component({
-  tag: 's-cnt-market-products-slider',
-  styleUrl: 's-cnt-market-products-slider.css',
+  tag: "s-cnt-market-products-slider",
+  styleUrl: "s-cnt-market-products-slider.css",
   shadow: false,
-  scoped: true
+  scoped: true,
 })
 export class SCntMarketProductsSlider implements ComponentInterface {
   /**
@@ -18,31 +18,34 @@ export class SCntMarketProductsSlider implements ComponentInterface {
    */
   @Prop() productsSliderTitle: string;
 
+  /**
+   *
+   */
   public carouselTag: HTMLElement;
 
   componentDidLoad() {
-    const elem = document.querySelector(".products-carousel");
+    const elem = this.carouselTag;
     // @ts-ignore
     const flkty = new Flickity(elem, {
       // options
       contain: true,
       pageDots: false,
+      draggable: false,
     });
   }
 
   render() {
     return (
       <div class="products">
-        <div class="products-carousel-title">
-          {this.productsSliderTitle}
+        <div class="products-carousel-title">{this.productsSliderTitle}</div>
+        <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
+          <ProductsSliderCard
+            array={this.productsSliderCards}
+          ></ProductsSliderCard>
         </div>
-          <div class="products-carousel" ref={(el) => this.carouselTag = el}>
-            <ProductsSliderCard array={this.productsSliderCards}></ProductsSliderCard>
-          </div>
       </div>
     );
   }
-
 }
 
 const ProductsSliderCard = (props) => {
