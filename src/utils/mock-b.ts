@@ -193,6 +193,7 @@ export const header = {
         numberOfStores: "магазинов",
         selectedStoreIcon: `<i class="fas fa-angle-up"></i>`,
         storeWithdrawalIcon: `<i class="fas fa-angle-down"></i>`,
+        updateSelectedAddress: 'Изменить',
         storeAddress: [
           {
             id: 1,

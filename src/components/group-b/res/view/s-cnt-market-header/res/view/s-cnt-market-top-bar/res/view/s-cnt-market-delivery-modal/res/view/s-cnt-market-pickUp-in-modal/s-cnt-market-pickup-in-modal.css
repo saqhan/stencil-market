@@ -2,6 +2,18 @@
   outline: none;
 }
 
+#d-none {
+  display: none !important;
+}
+
+#d-block {
+  display: block !important;
+}
+
+#d-flex {
+  display: flex !important;
+}
+
 .adress-in-city-blocks {
   padding: 40px 50px 25px;
   width: 100%;
@@ -90,8 +102,8 @@
   display: flex;
   align-items: center;
   background-color: rgb(0, 45, 114);
-  width: 48px;
-  height: 48px;
+  width: 68px;
+  height: 68px;
   border-radius: 6px;
   margin-right: 16px;
   justify-content: center;
@@ -101,17 +113,31 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 26px;
-  height: 26px;
+  width: 33px;
+  height: 33px;
   object-fit: contain;
-  max-width: 26px;
-  max-height: 26px;
+  max-width: 36px;
+  max-height: 36px;
 }
 
 .store-list-name {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.store-name {
   font-size: 18px;
   font-weight: 700;
   color: rgb(0, 45, 114);
+  margin-bottom: 4px;
+}
+
+.store-selected-address {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 13.5px;
 }
 
 .number-of-stores {
@@ -136,6 +162,10 @@
 
 .list-stores-open-icon i {
   color: #a6a8a9;;
+}
+
+.update-selected-address{
+
 }
 
 .store-address-and-work-time {
@@ -177,9 +207,14 @@
   white-space: nowrap;
 }
 
-#selectedAddress{
+#selectedAddress, #updateSelectedAddress {
   border: 1px solid #21a038;
   color: #21a038;
+  padding: 7px 10px;
+}
+
+#updateSelectedAddress {
+  padding: 7px 16px;
 }
 
 .selection-city-block {
