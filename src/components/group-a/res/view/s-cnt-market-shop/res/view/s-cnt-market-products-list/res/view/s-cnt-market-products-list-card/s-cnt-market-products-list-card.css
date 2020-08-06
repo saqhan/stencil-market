@@ -1,3 +1,15 @@
-:host {
-  display: block;
+.products-list-header {
+  margin: 40px 0 25px;
+}
+
+.products-list-title {
+  color: #393939;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.products-list-title:hover {
+  color: #21a038;
 }

@@ -638,3 +638,142 @@ export const productsSliderCards = [
 ];
 
 export const productsSliderTitle = "Популярные товары";
+
+export const productsList = [
+  {
+    title: "L'Oreal Paris с заботой о красоте",
+    card: [
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+    ]
+  },
+  {
+    title: "L'Oreal Paris с заботой о красоте",
+    card: [
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+      {
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L’Oreal Paris Men Expert против раздражений 200 мл",
+        weight: "200 мл"
+      },
+    ]
+  },
+];
