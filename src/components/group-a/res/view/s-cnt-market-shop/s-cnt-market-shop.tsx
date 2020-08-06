@@ -1,5 +1,6 @@
 import { Component, ComponentInterface, h } from "@stencil/core";
 import {
+  productsList,
   productsSliderCards, productsSliderTitle,
   promoSliderCards,
 } from "../../../../../utils/mock-a";
@@ -21,6 +22,7 @@ export class SCntMarketShop implements ComponentInterface {
           productsSliderCards={productsSliderCards}
           productsSliderTitle={productsSliderTitle}
         ></s-cnt-market-products-slider>
+        <s-cnt-market-products-list productsList={productsList}></s-cnt-market-products-list>
       </main>
     );
   }
