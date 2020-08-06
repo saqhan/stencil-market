@@ -5,6 +5,8 @@ export interface MarketSelectionInterface{
   id: number;
   imageHome: any;
   image: any;
+  homeText: string;
+  homeSubText: string;
   title: string;
   text: string;
 }

@@ -1,3 +1,30 @@
-:host {
-  display: block;
+.offer {
+  margin: auto;
+  width: 1245px;
+  background-color: #f7f8fa;
+  border-radius: 10px;
+  padding-bottom: 60px;
+}
+
+.title {
+  margin-top: 70px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 34px;
+  margin-bottom: 30px;
+  line-height: .2;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+  .offer {
+    max-width: 370px;
+    height: 900px;
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: .8;
+  }
 }
