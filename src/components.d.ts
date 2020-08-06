@@ -40,6 +40,8 @@ export namespace Components {
          */
         "forSelection": any;
     }
+    interface SCntMarketItemStatistics {
+    }
     interface SCntMarketModalWindow {
     }
     interface SCntMarketOffer {
@@ -104,6 +106,8 @@ export namespace Components {
     }
     interface SCntMarketShop {
     }
+    interface SCntMarketStatistics {
+    }
 }
 declare global {
     interface HTMLGroupAElement extends Components.GroupA, HTMLStencilElement {
@@ -147,6 +151,12 @@ declare global {
     var HTMLSCntMarketItemSelectionElement: {
         prototype: HTMLSCntMarketItemSelectionElement;
         new (): HTMLSCntMarketItemSelectionElement;
+    };
+    interface HTMLSCntMarketItemStatisticsElement extends Components.SCntMarketItemStatistics, HTMLStencilElement {
+    }
+    var HTMLSCntMarketItemStatisticsElement: {
+        prototype: HTMLSCntMarketItemStatisticsElement;
+        new (): HTMLSCntMarketItemStatisticsElement;
     };
     interface HTMLSCntMarketModalWindowElement extends Components.SCntMarketModalWindow, HTMLStencilElement {
     }
@@ -196,6 +206,12 @@ declare global {
         prototype: HTMLSCntMarketShopElement;
         new (): HTMLSCntMarketShopElement;
     };
+    interface HTMLSCntMarketStatisticsElement extends Components.SCntMarketStatistics, HTMLStencilElement {
+    }
+    var HTMLSCntMarketStatisticsElement: {
+        prototype: HTMLSCntMarketStatisticsElement;
+        new (): HTMLSCntMarketStatisticsElement;
+    };
     interface HTMLElementTagNameMap {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
@@ -204,6 +220,7 @@ declare global {
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-item-offer": HTMLSCntMarketItemOfferElement;
         "s-cnt-market-item-selection": HTMLSCntMarketItemSelectionElement;
+        "s-cnt-market-item-statistics": HTMLSCntMarketItemStatisticsElement;
         "s-cnt-market-modal-window": HTMLSCntMarketModalWindowElement;
         "s-cnt-market-offer": HTMLSCntMarketOfferElement;
         "s-cnt-market-product": HTMLSCntMarketProductElement;
@@ -212,6 +229,7 @@ declare global {
         "s-cnt-market-recommended": HTMLSCntMarketRecommendedElement;
         "s-cnt-market-selection": HTMLSCntMarketSelectionElement;
         "s-cnt-market-shop": HTMLSCntMarketShopElement;
+        "s-cnt-market-statistics": HTMLSCntMarketStatisticsElement;
     }
 }
 declare namespace LocalJSX {
@@ -244,6 +262,8 @@ declare namespace LocalJSX {
           * Данные для карточек магазинов
          */
         "forSelection"?: any;
+    }
+    interface SCntMarketItemStatistics {
     }
     interface SCntMarketModalWindow {
     }
@@ -309,6 +329,8 @@ declare namespace LocalJSX {
     }
     interface SCntMarketShop {
     }
+    interface SCntMarketStatistics {
+    }
     interface IntrinsicElements {
         "group-a": GroupA;
         "group-b": GroupB;
@@ -317,6 +339,7 @@ declare namespace LocalJSX {
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-item-offer": SCntMarketItemOffer;
         "s-cnt-market-item-selection": SCntMarketItemSelection;
+        "s-cnt-market-item-statistics": SCntMarketItemStatistics;
         "s-cnt-market-modal-window": SCntMarketModalWindow;
         "s-cnt-market-offer": SCntMarketOffer;
         "s-cnt-market-product": SCntMarketProduct;
@@ -325,6 +348,7 @@ declare namespace LocalJSX {
         "s-cnt-market-recommended": SCntMarketRecommended;
         "s-cnt-market-selection": SCntMarketSelection;
         "s-cnt-market-shop": SCntMarketShop;
+        "s-cnt-market-statistics": SCntMarketStatistics;
     }
 }
 export { LocalJSX as JSX };
@@ -338,6 +362,7 @@ declare module "@stencil/core" {
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-item-offer": LocalJSX.SCntMarketItemOffer & JSXBase.HTMLAttributes<HTMLSCntMarketItemOfferElement>;
             "s-cnt-market-item-selection": LocalJSX.SCntMarketItemSelection & JSXBase.HTMLAttributes<HTMLSCntMarketItemSelectionElement>;
+            "s-cnt-market-item-statistics": LocalJSX.SCntMarketItemStatistics & JSXBase.HTMLAttributes<HTMLSCntMarketItemStatisticsElement>;
             "s-cnt-market-modal-window": LocalJSX.SCntMarketModalWindow & JSXBase.HTMLAttributes<HTMLSCntMarketModalWindowElement>;
             "s-cnt-market-offer": LocalJSX.SCntMarketOffer & JSXBase.HTMLAttributes<HTMLSCntMarketOfferElement>;
             "s-cnt-market-product": LocalJSX.SCntMarketProduct & JSXBase.HTMLAttributes<HTMLSCntMarketProductElement>;
@@ -346,6 +371,7 @@ declare module "@stencil/core" {
             "s-cnt-market-recommended": LocalJSX.SCntMarketRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketRecommendedElement>;
             "s-cnt-market-selection": LocalJSX.SCntMarketSelection & JSXBase.HTMLAttributes<HTMLSCntMarketSelectionElement>;
             "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;
+            "s-cnt-market-statistics": LocalJSX.SCntMarketStatistics & JSXBase.HTMLAttributes<HTMLSCntMarketStatisticsElement>;
         }
     }
 }
