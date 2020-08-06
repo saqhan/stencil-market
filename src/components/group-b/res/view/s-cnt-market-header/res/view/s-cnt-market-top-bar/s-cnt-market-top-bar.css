@@ -23,7 +23,7 @@ button {
 .top-bar-content-inner-block, .top-bar-delivery-and-adress {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
   height: 100%;
 }
@@ -118,7 +118,8 @@ button {
 }
 
 .top-bar-number-wrapper {
-
+  position: absolute;
+  right: 0;
 }
 
 .phone-number-link {
@@ -157,11 +158,6 @@ button {
   .shortest-delivery-time {
     display: none;
   }
-
-  .top-bar-number-wrapper {
-    position: relative;
-    right: 0px;
-  }
 }
 
 @media (max-width: 992px) {
@@ -169,11 +165,11 @@ button {
     display: none;
   }
 
-  .option-adress-text-block{
+  .option-adress-text-block {
     width: 100%;
   }
 
-  .option-adress-text-block span{
+  .option-adress-text-block span {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;

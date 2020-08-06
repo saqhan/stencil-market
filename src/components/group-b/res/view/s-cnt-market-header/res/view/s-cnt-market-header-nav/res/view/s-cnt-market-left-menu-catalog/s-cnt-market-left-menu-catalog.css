@@ -21,10 +21,16 @@
 .drawer-backdrop.opened {
   opacity: 1;
   pointer-events: auto;
+  /*visibility: visible;*/
+}
+
+.drawer-left.opened, .drawer-right.opened {
+  transform: translateX(0);
 }
 
 .drawer-left {
   position: fixed;
+  /*visibility: hidden;*/
   left: 0px;
   right: auto;
   bottom: 0px;
@@ -105,6 +111,7 @@
 .category-menu-list {
   padding-left: 0;
   cursor: pointer;
+  margin:15px 0px;
 }
 
 .category-menu-item-link {
@@ -117,6 +124,7 @@
   color: #393939;
   font-size: 13px;
   font-weight: 700;
+  transition: .3s ease;
 }
 .category-menu-header button i {
   width: 11px;
@@ -153,13 +161,15 @@ category-menu-item-title {
   transition: 0.3s ease;
 }
 
-.category-menu-item:hover>.category-menu-item-link {
+.category-menu-item:hover .category-menu-item-link {
   background: #f5f5f5;
   color: #21a038;
 }
 
+.category-menu-item:hover .category-menu-item-link-pointer-container {
+  visibility: visible;
+}
 
-.category-menu-item:hover>.category-menu-item__link .category-menu-item__link__pointer-container{visibility:visible}
 
 .category-menu-item-link-pointer-container {
   visibility: hidden;
@@ -169,4 +179,10 @@ category-menu-item-title {
   width: 36px;
   height: 36px;
   margin-right: 10px;
+}
+
+.border-gray {
+  border-top: 1px solid #ece9e9;
+  margin-top: -15px;
+  padding-top: 8px;
 }

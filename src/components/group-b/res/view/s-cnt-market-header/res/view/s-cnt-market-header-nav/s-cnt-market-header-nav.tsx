@@ -36,10 +36,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class="fas fa-bars"></i>
                   <span>{this.navBar.catalogBtn}</span>
                 </button>
-                {!this.isShowLeftMenuCatalog
-                  ? <s-cnt-market-left-menu-catalog></s-cnt-market-left-menu-catalog>
-                  : ''
-                }
+                {this.isShowLeftMenuCatalog ? (
+                  <s-cnt-market-left-menu-catalog onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>
+                ) : (
+                  ""
+                )}
               </div>
               <div class="nav-search">
                 <div class="button-menu">
@@ -124,9 +125,10 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * Show/hide left menu
    * */
   public onClickCatalogHandler() {
-    console.log("onClickCatalogHandler");
-    this.isShowLeftMenuCatalog = !this.isShowLeftMenuCatalog;
-    console.log("onClickCatalogHandler", this.isShowLeftMenuCatalog);
+    this.isShowLeftMenuCatalog = true;
+  }
 
+  public closeLeftMenu() {
+    this.isShowLeftMenuCatalog = false;
   }
 }

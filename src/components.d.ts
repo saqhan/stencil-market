@@ -203,6 +203,7 @@ declare namespace LocalJSX {
         "navBar"?: navBarInterface;
     }
     interface SCntMarketLeftMenuCatalog {
+        "onCloseLeftMenu"?: (event: CustomEvent<any>) => void;
     }
     interface SCntMarketPickupInModal {
         /**
