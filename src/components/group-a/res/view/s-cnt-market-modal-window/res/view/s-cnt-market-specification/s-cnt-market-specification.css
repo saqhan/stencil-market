@@ -219,3 +219,10 @@
   text-align: center;
   color: #21a038;
 }
+
+.space {
+  width: 759px;
+  height: 40px;
+  margin: 22px 0 40px -14px;
+  background-color: white;
+}

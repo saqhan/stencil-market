@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketSpecificationInterface } from "./interface/common.interface";
+import { MarketSpecificationInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-specification",
@@ -183,6 +183,11 @@ export class SCntMarketSpecification implements ComponentInterface {
                 <u>
                   {this.getSpecification.hideInformation}
                 </u>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="space">
+
               </div>
             </div>
           </div>

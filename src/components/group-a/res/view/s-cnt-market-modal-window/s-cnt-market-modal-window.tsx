@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h } from "@stencil/core";
-import {getProduct, getRecommended, getSpecification} from "../../../../../utils/mock-a";
+import {getProduct, getRecommended, getSpecification, info} from "../../../../../utils/mock-a";
 
 @Component({
   tag: "s-cnt-market-modal-window",
@@ -16,7 +16,8 @@ export class SCntMarketModalWindow implements ComponentInterface {
             getProduct={getProduct}>
           </s-cnt-market-product>
           <s-cnt-market-recommended
-            getRecommended={getRecommended}>
+            getRecommended={getRecommended}
+            info={info}>
           </s-cnt-market-recommended>
           <s-cnt-market-specification
             getSpecification={getSpecification}>

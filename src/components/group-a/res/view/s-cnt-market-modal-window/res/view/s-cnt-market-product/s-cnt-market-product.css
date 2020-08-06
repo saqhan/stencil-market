@@ -63,9 +63,9 @@
   text-align: center;
   border-radius: 50%;
   border: 1px solid lightgray;
-  position: fixed;
-  top: 50px;
-  right: 280px;
+  position: absolute;
+  top: -40px;
+  right: -72px;
   cursor: pointer;
 }
 
