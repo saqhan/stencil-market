@@ -1,3 +1,51 @@
-:host {
-  display: block;
+.product-list-card {
+  padding: 12px;
+  border: 1px solid #e1dede;
+  font-size: 14px;
+  margin: 0 -1px -1px 0;
+  width: 207px;
+}
+
+.product-link {
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.product-img {
+  height: 170px;
+  width: 100%;
+  margin-bottom: 13px;
+  background-size: cover;
+  background-position: center;
+}
+
+.product-price {
+  font-weight: 700;
+}
+
+.price-discount-sale {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.price-default {
+  margin-right: 8px;
+  color: #e80e49;
+  font-size: 21px;
+}
+
+.price-original {
+  color: #8f8e94;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.price-discount-info {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+  line-height: 15px;
 }

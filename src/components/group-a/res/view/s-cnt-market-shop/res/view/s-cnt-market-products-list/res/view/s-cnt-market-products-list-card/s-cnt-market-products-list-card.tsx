@@ -1,10 +1,10 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 
 @Component({
-  tag: 's-cnt-market-products-list-card',
-  styleUrl: 's-cnt-market-products-list-card.css',
+  tag: "s-cnt-market-products-list-card",
+  styleUrl: "s-cnt-market-products-list-card.css",
   shadow: false,
-  scoped: true
+  scoped: true,
 })
 export class SCntMarketProductsListCard implements ComponentInterface {
   /**
@@ -12,15 +12,20 @@ export class SCntMarketProductsListCard implements ComponentInterface {
    */
   @Prop() productsList: any;
 
-  render() {console.log(this.productsList)
+  render() {
+    console.log(this.productsList);
     return (
       <div class="products-list-wrapper">
         <div class="products-list-header">
-          <div class="products-list-title">
-            {this.productsList.title}
+          <div class="products-list-title">{this.productsList.title}</div>
+          <div class="show-all">
+            <span>показать 88 товаров</span>
+            <i class="fas fa-angle-right"></i>
           </div>
         </div>
-        <ProductsListItem array={this.productsList.card}></ProductsListItem>
+        <div class="products-list-body">
+          <ProductsListItem array={this.productsList.card}></ProductsListItem>
+        </div>
       </div>
     );
   }
@@ -35,6 +40,3 @@ const ProductsListItem = (props) => {
     );
   });
 };
-
-
-
