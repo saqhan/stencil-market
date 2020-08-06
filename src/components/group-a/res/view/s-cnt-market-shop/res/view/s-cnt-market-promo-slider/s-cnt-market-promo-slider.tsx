@@ -20,6 +20,7 @@ export class SCntMarketPromoSlider implements ComponentInterface {
       // options
       contain: true,
       pageDots: false,
+      draggable: false,
     });
   }
 

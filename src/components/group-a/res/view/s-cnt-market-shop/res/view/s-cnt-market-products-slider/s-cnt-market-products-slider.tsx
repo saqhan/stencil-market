@@ -18,15 +18,27 @@ export class SCntMarketProductsSlider implements ComponentInterface {
    */
   @Prop() productsSliderTitle: string;
 
+  public carouselTag: HTMLElement;
+
+  componentDidLoad() {
+    const elem = document.querySelector(".products-carousel");
+    // @ts-ignore
+    const flkty = new Flickity(elem, {
+      // options
+      contain: true,
+      pageDots: false,
+    });
+  }
+
   render() {
     return (
       <div class="products">
         <div class="products-carousel-title">
           {this.productsSliderTitle}
         </div>
-          <ul class="products-carousel">
+          <div class="products-carousel" ref={(el) => this.carouselTag = el}>
             <ProductsSliderCard array={this.productsSliderCards}></ProductsSliderCard>
-          </ul>
+          </div>
       </div>
     );
   }
@@ -36,11 +48,11 @@ export class SCntMarketProductsSlider implements ComponentInterface {
 const ProductsSliderCard = (props) => {
   return props.array.map((item) => {
     return (
-      <li class="carousel-cell">
+      <div class="carousel-cell">
         <s-cnt-market-products-slider-card
           productsSliderCards={item}
         ></s-cnt-market-products-slider-card>
-      </li>
+      </div>
     );
   });
 };
