@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { MarketRecommendedInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-recommended/res/view/s-cnt-market-item-recommended/res/interface/common.interface";
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
 import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/res/interface/common.interface";
 import { MarketProductsSliderCardsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider/res/interface/common.interface";
@@ -24,6 +25,7 @@ export namespace Components {
     interface SCntMarketItemOffer {
     }
     interface SCntMarketItemRecommended {
+        "MarketRecommendedInterface": MarketRecommendedInterface[];
         /**
           * Данные для Item-Recommended
          */
@@ -45,13 +47,9 @@ export namespace Components {
     }
     interface SCntMarketProduct {
         /**
-          * Интерфейс для Product
-         */
-        "MarketProductInterface": MarketProductInterface[];
-        /**
           * Данные для Product
          */
-        "getProduct": any;
+        "getProduct": MarketProductInterface;
     }
     interface SCntMarketProductsSlider {
         /**
@@ -85,8 +83,8 @@ export namespace Components {
         /**
           * Данные для Recommended
          */
-        "getRecommended": any;
-        "info": any;
+        "getRecommended": MarketRecommendedInterface[];
+        "info": string;
     }
     interface SCntMarketSelection {
         /**
@@ -274,6 +272,7 @@ declare namespace LocalJSX {
     interface SCntMarketItemOffer {
     }
     interface SCntMarketItemRecommended {
+        "MarketRecommendedInterface"?: MarketRecommendedInterface[];
         /**
           * Данные для Item-Recommended
          */
@@ -295,13 +294,9 @@ declare namespace LocalJSX {
     }
     interface SCntMarketProduct {
         /**
-          * Интерфейс для Product
-         */
-        "MarketProductInterface"?: MarketProductInterface[];
-        /**
           * Данные для Product
          */
-        "getProduct"?: any;
+        "getProduct"?: MarketProductInterface;
     }
     interface SCntMarketProductsSlider {
         /**
@@ -335,8 +330,8 @@ declare namespace LocalJSX {
         /**
           * Данные для Recommended
          */
-        "getRecommended"?: any;
-        "info"?: any;
+        "getRecommended"?: MarketRecommendedInterface[];
+        "info"?: string;
     }
     interface SCntMarketSelection {
         /**

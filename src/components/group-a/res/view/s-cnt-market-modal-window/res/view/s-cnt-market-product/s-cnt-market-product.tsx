@@ -11,12 +11,7 @@ export class SCntMarketProduct implements ComponentInterface {
   /**
    * Данные для Product
    */
-  @Prop() getProduct: any;
-
-  /**
-   * Интерфейс для Product
-   */
-  @Prop() MarketProductInterface: MarketProductInterface[] = [];
+  @Prop() getProduct: MarketProductInterface;
 
   render() {
     return (
