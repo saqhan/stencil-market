@@ -75,8 +75,9 @@
 }
 
 .name {
+  width: 310px;
   margin: 30px 0 5px 0;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -116,11 +117,11 @@
 }
 
 .button {
-  margin: 30px 0 0 0;
+  margin: 25px 0 0 0;
 }
 
 .my-button {
-  width: 300px;
+  width: 288px;
   height: 40px;
   border-radius: 7px;
   border: none;
@@ -140,7 +141,7 @@
 .heart {
   width: 40px;
   height: 40px;
-  margin: 30px 0 0 10px;
+  margin: 25px 0 0 10px;
   line-height: 36px;
   padding: 5px 20px 5px 7px;
   border: 1px solid lightgray;
@@ -164,9 +165,8 @@
   }
 
   .close {
-    position: fixed;
-    top: 15px;
-    right: 15px;
+    top: -340px;
+    right: -10px;
   }
 
   .info-product {
@@ -179,6 +179,6 @@
   }
 
   .heart {
-    margin: 30px 0 0 20px;
+    margin: 25px 0 0 20px;
   }
 }

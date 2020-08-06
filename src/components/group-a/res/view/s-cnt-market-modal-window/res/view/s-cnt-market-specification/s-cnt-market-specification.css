@@ -2,6 +2,8 @@
   background-color: #f7f7f7;
   margin: 0 0 0 -15px;
   width: 760px;
+  border-radius: 15px;
+  position: relative;
 }
 
 .op {
@@ -10,6 +12,7 @@
 
 .spec {
   margin: 10px 0 0 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .my-spec {
@@ -91,7 +94,7 @@
 
 .info {
   font-weight: 600;
-  padding: 10px 0 8px 15px;
+  padding: 10px 0 13px 15px;
 }
 
 .composition {
@@ -100,13 +103,13 @@
   opacity: 0.7;
   line-height: 23px;
   padding: 0 0 8px 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .line-composition {
   width: 280px;
   margin: auto;
   padding: 0 0 8px 0;
-  border-bottom: 1px solid lightgray;
   display: flex;
 }
 
@@ -225,4 +228,58 @@
   height: 40px;
   margin: 22px 0 40px -14px;
   background-color: white;
+}
+
+.space-row {
+  width: 760px;
+  height: 30px;
+  margin: 0 0 0 -15px;
+  background-color: #f7f7f7;
+  position: absolute;
+}
+
+.line {
+  width: 308px;
+  height: 1.5px;
+  margin: -5px 0 0 15px;
+  background-color: lightgray;
+}
+
+
+@media only screen and (max-width: 400px) {
+  .container {
+    width: 400px;
+  }
+
+  .op {
+    margin: 20px 0 0 0;
+  }
+
+  .spec {
+    width: 350px;
+    font-size: .9em;
+    margin: 10px 0 0 0;
+    line-height: 21px;
+  }
+
+  .my-spec {
+    width: 370px;
+  }
+
+  .hideInformation {
+    width: 370px;
+    text-align: center;
+  }
+
+  .line {
+    width: 340px;
+  }
+
+  .space {
+    width: 400px;
+  }
+
+  .space-row {
+    width: 400px;
+  }
 }

@@ -24,13 +24,15 @@ export class SCntMarketRecommended implements ComponentInterface {
                 {this.info}
               </div>
             </div>
-            <div class="col-2">
-              <div class="icons">
-                <div class="arrow-left">
-                  <i class="fa fa-arrow-left arrow" aria-hidden="true"/>
-                </div>
-                <div class="arrow-right">
-                  <i class="fa fa-arrow-right" aria-hidden="true"/>
+            <div class="col-3">
+              <div class="block-ser">
+                <div class="icons">
+                  <div class="arrow-left">
+                    <i class="fa fa-arrow-left" aria-hidden="true"/>
+                  </div>
+                  <div class="arrow-right">
+                    <i class="fa fa-arrow-right" aria-hidden="true"/>
+                  </div>
                 </div>
               </div>
             </div>

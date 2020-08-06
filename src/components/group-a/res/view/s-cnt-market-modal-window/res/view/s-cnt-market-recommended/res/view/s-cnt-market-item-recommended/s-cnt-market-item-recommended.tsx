@@ -16,6 +16,16 @@ export class SCntMarketItemRecommended implements ComponentInterface {
     return (
       <div>
         <div class="recomm">
+          <div class="check-hidden">
+            <div class="check">
+              <div class="plus">
+                <i class="fas fa-plus"/>
+              </div>
+              <div class="checkout">
+                <i class="fas fa-shopping-cart"/>
+              </div>
+            </div>
+          </div>
           <div class="block-image">
             <div class="image"
                  style={{ backgroundImage: "url(" + this.getRecommended.image + ")" }}>

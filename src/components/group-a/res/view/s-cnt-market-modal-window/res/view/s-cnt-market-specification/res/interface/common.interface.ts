@@ -23,7 +23,7 @@ export interface MarketSpecificationInterface {
   lenta: string;
   country: string;
   russia: string;
-  storageСonditions: string;
+  storageConditions: string;
   terms: string;
   term: string;
   month: string;
