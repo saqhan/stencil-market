@@ -38,6 +38,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   componentDidLoad() {
     this.idCity = this.pickUpData.defaultCity;
     this.StoreAddress = true;
+    this.idAddressNull()
   }
 
   render() {
@@ -77,18 +78,13 @@ export class SCntMarketPickupInModal implements ComponentInterface {
                   <span class="store-name">
                     {this.pickUpData.storeName}
                   </span>
-                  {this.selectedAddress(this.pickUpData.storeAddress)}
+                  {this.selectedAddress(this.pickUpData.cityForSelected)}
                 </div>
               </div>
               <div>
                 {/*количество магазинов из длины массива и текст из объекта вызванная из функции*/}
                 {this.storeQuantity()}
               </div>
-              {/*<div class="list-stores-open-icon"*/}
-              {/*     innerHTML={this.StoreAddress ? this.pickUpData.selectedStoreIcon : this.pickUpData.storeWithdrawalIcon}*/}
-              {/*>*/}
-              {/*  /!*иконка выбора магазина*!/*/}
-              {/*</div>*/}
               <div>
                 {this.iconOrButton()}
               </div>
@@ -97,7 +93,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
           {
             this.StoreAddress ?
               //выводящийся и закрывающийся блок с адресами магазинов по клику меняющему State
-              this.StoreAddressComp(this.pickUpData.storeAddress) :
+              this.StoreAddressComp(this.pickUpData.cityForSelected) :
               ''
           }
         </div>
@@ -109,30 +105,35 @@ export class SCntMarketPickupInModal implements ComponentInterface {
 * компонентная функция для вывода блоков списка магазинов
  */
   public StoreAddressComp(props) {
-    return props.map((item) => {
-      return (
-        <div>
-          <hr/>
-          <div class="store-list-wrapper">
-            <div class="store-list">
-              <div class="store-address-and-work-time">
+    return props.map(item => {
+      if (this.idCity === item.id) {
+        return item.storeAddress.map((item) => {
+          return (
+            <div>
+              <hr/>
+              <div class="store-list-wrapper">
+                <div class="store-list">
+                  <div class="store-address-and-work-time">
               <span class="store-address">
                 {item.storeAddress}
               </span>
-                <span class="store-work-time">
+                    <span class="store-work-time">
                 {item.storeWorkTime}
               </span>
+                  </div>
+                  <button class="store-secet-btn" id={this.idSelectedAddress(item.id, 'selectedAddress')}
+                          onClick={() => this.idSelectionAddress(item.id)}>
+                    <i class={this.idSelectedAddress(item.id, 'fas fa-check mr-1')}></i>
+                    {item.btnText}
+                  </button>
+                </div>
               </div>
-              <button class="store-secet-btn" id={this.idSelectedAddress(item.id, 'selectedAddress')}
-                      onClick={() => this.idSelectionAddress(item.id)}>
-                <i class={this.idSelectedAddress(item.id, 'fas fa-check mr-1')}></i>
-                {item.btnText}
-              </button>
             </div>
-          </div>
-        </div>
-      );
+          );
+        })
+      }
     })
+
   }
 
   /**
@@ -151,38 +152,50 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   }
 
   /**
-   * Вывод выбранного города
+   * Вывод выбранного адресов магазинов выбранного города
    */
   public selectedAddress(array) {
     return array.map(item => {
-      if (this.idAddress === item.id) {
-        return (
-          <span class="store-selected-address">
-            {item.storeAddress}
-          </span>
-        );
+      if (this.idCity === item.id) {
+        return item.storeAddress.map(i => {
+          if (this.idAddress === i.id) {
+            return (
+              <span class="store-selected-address">
+              {i.storeAddress}
+            </span>
+            );
+          }
+        })
       }
     })
   }
 
   /**
-   * Вывод выбранного города
+   * Вывод количества магазинов
    */
   public storeQuantity() {
-    if (typeof this.idAddress != 'number' ) {
-        return (
-          <div  class="number-of-stores">
-            {this.pickUpData.storeAddress.length + ' ' + this.pickUpData.numberOfStores}
-          </div>
-        );
-      }
+    if (typeof this.idAddress != 'number') {
+      return (
+        <div class="number-of-stores">
+          {
+            this.pickUpData.cityForSelected.map(item => {
+              if (this.idCity === item.id) {
+                return (
+                  item.storeAddress.length + ' ' + this.pickUpData.numberOfStores
+                )
+              }
+            })
+          }
+        </div>
+      );
+    }
   }
 
   /**
    * Изменение Иконок на button при выборе магазина
    */
   public iconOrButton() {
-    if (typeof this.idAddress != 'number' ) {
+    if (typeof this.idAddress != 'number') {
       return (
         <div class="list-stores-open-icon"
              innerHTML={this.StoreAddress ? this.pickUpData.selectedStoreIcon : this.pickUpData.storeWithdrawalIcon}
@@ -190,11 +203,11 @@ export class SCntMarketPickupInModal implements ComponentInterface {
           {/*иконка выбора магазина*/}
         </div>
       );
-    }else {
-      return(
-      <button class="store-secet-btn" id='updateSelectedAddress'>
-        {this.pickUpData.updateSelectedAddress}
-      </button>
+    } else {
+      return (
+        <button class="store-secet-btn" id='updateSelectedAddress'>
+          {this.pickUpData.updateSelectedAddress}
+        </button>
       );
     }
   }
@@ -211,6 +224,15 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    * */
   public idSelectionAddress(x) {
     this.idAddress = x;
+  }
+
+  /**
+   * Вывод количества магазинов
+   */
+  public idAddressNull() {
+    if (typeof this.idCity === 'number') {
+      this.idAddress = null;
+    }
   }
 
   /**
