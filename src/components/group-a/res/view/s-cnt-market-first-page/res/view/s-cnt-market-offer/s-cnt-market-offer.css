@@ -1,19 +1,18 @@
 .offer {
   margin: auto;
   width: 1245px;
-  height: 410px;
   background-color: #f7f8fa;
   border-radius: 10px;
+  padding-bottom: 60px;
 }
 
 .title {
   margin-top: 70px;
   text-align: center;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
   font-size: 34px;
-  line-height: .12;
-  margin-bottom: 40px
+  margin-bottom: 30px;
+  line-height: .2;
 }
 
 
@@ -25,6 +24,7 @@
   }
 
   .title {
-    text-align: center;
+    font-size: 24px;
+    line-height: .8;
   }
 }

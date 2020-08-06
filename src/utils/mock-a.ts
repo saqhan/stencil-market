@@ -428,6 +428,25 @@ export const forOffer = [
 export const offerTitleText =
   "Сохраняйте время, энергию и деньги\n" + "\n" + "для того, что важно именно вам";
 
+export const forStatistics = [
+  {
+    id: 1,
+    text: "**Более 20000 заказов** ежедневно\n"+ "\n"+ "доставляют наши курьеры",
+  },
+  {
+    id: 2,
+    text: "**400 тонн товаров** мы поднимаем\n"+ "\n" + "в дома клиентов каждый день",
+  },
+  {
+    id: 3,
+    text: "Мы стали незаменимым помощником\n"+ "\n"+ "для** 500 тысяч семей** по всей России за 7 лет",
+  },
+  {
+    id: 4,
+    text: "**Более 10000 компаний** доверяют нам\n"+ "\n"+ "закупку продуктов и товаров для офиса",
+  }
+];
+
 export const getProduct = {
   brand: "Бренды ЛЕНТЫ",
   products: "Продукты питания",
@@ -442,36 +461,42 @@ export const getProduct = {
 
 export const getRecommended = [
   {
+    id: 1,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "269.59 ₽",
     productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
     weight: "190 г",
   },
   {
+    id: 2,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "252.69 ₽",
     productName: "Конфеты Dolce Albero Ассорти",
     weight: "200 г",
   },
   {
+    id: 3,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "115.79 ₽",
     productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
     weight: "200 г",
   },
   {
+    id: 4,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "105.29 ₽",
     productName: "Миска Mallony 1,1л",
     weight: "1 шт",
   },
   {
+    id: 5,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "168.49 ₽",
     productName: "Миска Mallony 3,3л",
     weight: "1 шт",
   },
   {
+    id: 6,
     image: "https://via.placeholder.com/70x70?text=Text",
     price: "105.29 ₽",
     productName: "Грибы вешенки свежие",
@@ -502,13 +527,13 @@ export const getSpecification = {
   lenta: "Лента",
   country: "Страна",
   russia: "Россия",
-  storageСonditions: "Условия хранения",
+  storageConditions: "Условия хранения",
   terms:
     "При температуре от +15°C до +21°C и относительной влажности воздуха не более 75%",
   term: "Срок хранения",
   month: "9 мес",
   kindOfCandy: "Вид конфет",
-  chocolate: "Шоколад",
+  chocolate: "Шоколадные",
   typeOfChocolate: "Вид шоколада",
   bitter: "Горький",
   flavor: "Вкус",
@@ -523,3 +548,93 @@ export const getSpecification = {
 };
 
 export const info = "С этим смотрят";
+
+export const productsSliderCards = [
+  {
+    id: 1,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    disPrice: "599.01",
+    oldPrice: "889.00",
+    currency: "₽",
+    desc: "Сыр полутвердый Ламбер 50% ~ 1 кг бзмж",
+    weight: "1 кг"
+  },
+  {
+    id: 2,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "63.40",
+    currency: "₽",
+    desc: "Пиво безалкогольное Heineken пастеризованное",
+    weight: "467.7 г"
+  },
+  {
+    id: 3,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "34.99",
+    currency: "₽",
+    desc: "Сахар-песок Aro 1 кг",
+    weight: "1 кг"
+  },
+  {
+    id: 4,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "125.00",
+    oldPrice: "166.00",
+    currency: "₽",
+    desc: "Сыр Сиртаки Classic для греческого салата 35% 330 ...",
+    weight: "330 г"
+  },
+  {
+    id: 5,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "49.90",
+    currency: "₽",
+    desc: "Кабачки грунтовые",
+    weight: "1 кг"
+  },
+  {
+    id: 6,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    disPrice: "125.00",
+    oldPrice: "184.00",
+    currency: "₽",
+    desc: "Сыр полутвердый Arla Natura Сливочный 45% 200 г бз ...",
+    weight: "1 кг"
+  },
+  {
+    id: 7,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "21.90",
+    currency: "₽",
+    desc: "Капуста белокочанная ранняя",
+    weight: "1 кг"
+  },
+  {
+    id: 8,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    disPrice: "54.90",
+    oldPrice: "74.89 ",
+    currency: "₽",
+    desc: "Молоко Белый Город ультрапастеризованное 3,2% 1 л ...",
+    weight: "1 л"
+  },
+  {
+    id: 9,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    price: "24.90",
+    currency: "₽",
+    desc: "Лук репчатый",
+    weight: "1 кг"
+  },
+  {
+    id: 10,
+    img: "https://via.placeholder.com/70x70?img=Img",
+    disPrice: "99.99",
+    oldPrice: "129.90",
+    currency: "₽",
+    desc: "Помидоры сливовидные",
+    weight: "1 кг"
+  },
+];
+
+export const productsSliderTitle = "Популярные товары";

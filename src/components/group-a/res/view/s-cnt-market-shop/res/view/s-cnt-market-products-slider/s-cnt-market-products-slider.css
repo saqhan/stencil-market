@@ -1,0 +1,28 @@
+.products {
+  margin-top: 40px;
+  padding: 0 35px;
+}
+
+.products-carousel-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #343434;
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.carousel-cell {
+  flex: 1;
+  min-width: 235px;
+  max-width: 235px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .products-carousel-title {
+    font-size: 20px;
+  }
+  .products {
+    padding: 0 10px;
+  }
+}

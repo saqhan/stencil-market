@@ -1,0 +1,38 @@
+.recomm {
+  display: flex;
+  margin: 10px 10px 0 0;
+  padding: 0 5px 0 0;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.block-image {
+  width: 100px;
+  height: 100px;
+}
+
+.image {
+  width: 70px;
+  height: 80px;
+  background-color: black;
+  margin: 10px 0 0 10px;
+}
+
+.price {
+  margin: 5px 0 6px 10px;
+  font-size: 0.8em;
+  font-weight: 600;
+}
+
+.productName {
+  font-size: 0.7em;
+  margin: 0 0 10px 10px;
+}
+
+.weight {
+  font-size: 0.8em;
+  font-weight: 600;
+  opacity: .5;
+  margin: 0 0 0 10px;
+}

@@ -1,17 +1,24 @@
-import { Component, ComponentInterface, Host, h } from '@stencil/core';
+import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import { markdown } from "markdown";
 
 @Component({
   tag: 's-cnt-market-item-statistics',
   styleUrl: 's-cnt-market-item-statistics.css',
-  shadow: true,
+  shadow: false,
+  scoped: true,
 })
 export class SCntMarketItemStatistics implements ComponentInterface {
+  /**
+   * Данные для компонента Statistics
+   */
+  @Prop() forStatistics: any;
 
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <div class="common">
+        <div class="text" innerHTML={markdown.toHTML(this.forStatistics.text)}>
+        </div>
+      </div>
     );
   }
 

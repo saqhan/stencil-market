@@ -2,6 +2,7 @@ import { Component, ComponentInterface, h } from "@stencil/core";
 import {
   forOffer,
   forSelection,
+  forStatistics,
   homePageImage,
   homeSubText,
   homeText,
@@ -28,6 +29,9 @@ export class SCntMarketFirstPage implements ComponentInterface {
           forOffer={forOffer}
           offerTitleText={offerTitleText}
         ></s-cnt-market-offer>
+        <s-cnt-market-statistics
+          forStatistics={forStatistics}
+        ></s-cnt-market-statistics>
       </div>
     );
   }
