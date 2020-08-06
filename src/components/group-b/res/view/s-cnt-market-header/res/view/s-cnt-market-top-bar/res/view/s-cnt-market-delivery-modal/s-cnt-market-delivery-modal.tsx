@@ -23,6 +23,11 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   @Prop() pickUp: boolean;
 
   /**
+   * boolean значение для вывода блока самовывоза и присвоения класса
+   */
+  @Prop() idAddress: number;
+
+  /**
    * Закрытие модального модального окна
    */
   @Event() closeForm: EventEmitter;
@@ -36,6 +41,11 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
    * функция для смены значения boolean пропса pickUp
    */
   @Event() openpickUp: EventEmitter;
+
+  /**
+   * функция для смены значения boolean пропса pickUp
+   */
+  @Event()idSelectionAddress: EventEmitter;
 
   /**
    * ref для закрытия модального окна
@@ -90,7 +100,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                 }
                 {
                   this.pickUp ?
-                    <s-cnt-market-pickup-in-modal pickUpData={this.modalData.PickUp}/> :
+                    <s-cnt-market-pickup-in-modal pickUpData={this.modalData.PickUp} idAddress={this.idAddress}/> :
                     ''
                 }
               </div>

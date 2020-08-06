@@ -16,11 +16,11 @@ button {
   /*overflow: scroll;*/
 }
 
-.delivery-modal-other-opacity{
+.delivery-modal-other-opacity {
   z-index: 5002;
 }
 
-.delivery-modal-other-opacity{
+.delivery-modal-other-opacity {
   width: 100%;
   height: 100%;
   top: 0;
@@ -178,3 +178,26 @@ button {
   color: #fff;
 }
 
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .delivery-modal-block-wrapper {
+    margin: 0;
+    height: 100%;
+  }
+
+  .delivery-modal-block {
+    border-radius: 0;
+    height: 100%;
+  }
+}

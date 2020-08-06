@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
+import {Component, ComponentInterface, EventEmitter, h, Prop, State, Event} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-pickup-in-modal',
@@ -17,10 +17,10 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    */
   @State() idCity: number;
 
-  /**
-   * значение number для присвоения id выбранного города
-   */
-  @State() idAddress: number;
+  // /**
+  //  * значение number для присвоения id выбранного города
+  //  */
+  // @State() idAddress: number;
 
   /**
    * boolean значение для вывода списка городов
@@ -33,19 +33,30 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   @State() StoreAddress: boolean;
 
   /**
+   * boolean значение для вывода блока самовывоза и присвоения класса
+   */
+  @Prop() idAddress: number;
+
+    /**
+   * функция для смены значения boolean пропса pickUp
+   */
+  @Event() idSelectionAddress: EventEmitter;
+
+  /**
    * присвоение id города для вывода по умолчанию
    */
   componentDidLoad() {
     this.idCity = this.pickUpData.defaultCity;
     this.StoreAddress = true;
-    this.idAddressNull()
+
   }
 
   render() {
     return (
       <div class="adress-in-city-blocks">
-        <div class="option-city-modal-intop-bar" innerHTML={this.pickUpData.locationIcon}>
+        <div class="option-city-modal-intop-bar">
           {/*location Icon*/}
+          <i class={this.pickUpData.locationIcon}></i>
           <span>
             {this.pickUpData.city}
           </span>
@@ -122,7 +133,10 @@ export class SCntMarketPickupInModal implements ComponentInterface {
               </span>
                   </div>
                   <button class="store-secet-btn" id={this.idSelectedAddress(item.id, 'selectedAddress')}
-                          onClick={() => this.idSelectionAddress(item.id)}>
+                          onClick={() => {
+                            this.idSelectionAddress.emit(item.storeAddress);
+                            this.idSelectionAddressInside(item.id)
+                          }}>
                     <i class={this.idSelectedAddress(item.id, 'fas fa-check mr-1')}></i>
                     {item.btnText}
                   </button>
@@ -217,12 +231,13 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    * */
   public idSelected(x) {
     this.idCity = x;
+    this.idAddressNull();
   }
 
   /**
    * функция для присвоения id выбранного address
    * */
-  public idSelectionAddress(x) {
+  public idSelectionAddressInside(x) {
     this.idAddress = x;
   }
 
@@ -230,7 +245,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    * Вывод количества магазинов
    */
   public idAddressNull() {
-    if (typeof this.idCity === 'number') {
+    if (typeof this.idCity != 'undefined' || 1) {
       this.idAddress = null;
     }
   }

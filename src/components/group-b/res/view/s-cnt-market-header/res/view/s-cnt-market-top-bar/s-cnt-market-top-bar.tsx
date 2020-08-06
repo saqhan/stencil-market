@@ -28,6 +28,13 @@ export class SCntMarketTopBar implements ComponentInterface {
    */
   @State() pickUpComplited: boolean;
 
+  /**
+   * значение number для присвоения id выбранного города
+   */
+  @State() idAddress: number;
+
+
+
   render() {
     return (
       <div class="container-fluid parent-block-top-bar">
@@ -55,7 +62,7 @@ export class SCntMarketTopBar implements ComponentInterface {
                 <span>
                   {this.topBar.choiceAddress}
                   <button class="delivery-adress-btn" innerHTML={this.topBar.choiceAddressIcon}>
-
+                    {this.idAddress}
                   </button>
                 </span>
               </div>
@@ -85,9 +92,11 @@ export class SCntMarketTopBar implements ComponentInterface {
             <s-cnt-market-delivery-modal delivery={this.deliveryComplited}
                                          pickUp={this.pickUpComplited}
                                          modalData={this.topBar.modalWindow}
+                                         idAddress={this.idAddress}
                                          onCloseForm={() => this.closeModal()}
                                          onOpenDelivery={() => this.openDelivery()}
                                          onOpenpickUp={() => this.openpickUp()}
+                                         onIdSelectionAddress={(x) => this.idSelectionAddress(x)}
             /> :
             ''
         }
@@ -124,5 +133,23 @@ export class SCntMarketTopBar implements ComponentInterface {
   public closeModal() {
     this.modalComplited = false;
   }
+
+  /**
+   * функция для присвоения id выбранного address
+   * */
+  public idSelectionAddress(x) {
+    return this.idAddress = x.detail
+  }
+
+  // /**
+  //  * функция для присвоения id выбранного address
+  //  * */
+  // public returnAddress() {
+  //   if (if){
+  //     return(
+  //       this.topBar.choiceAddress
+  //     );
+  //   }
+  // }
 
 }
