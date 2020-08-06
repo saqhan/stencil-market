@@ -55,7 +55,9 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 >
                   <a><i class={this.navBar.iconUser}></i></a>
                 </div>
-                <div>
+                <div class='menu-account-wrapper'
+                  
+                >
                   { this.isShowUserAccount
                     ? <s-cnt-market-account-menu></s-cnt-market-account-menu>
                     : ''

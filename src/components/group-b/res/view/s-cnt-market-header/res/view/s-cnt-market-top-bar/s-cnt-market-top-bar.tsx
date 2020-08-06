@@ -65,7 +65,7 @@ export class SCntMarketTopBar implements ComponentInterface {
                 </span>
               </p>
               <div class="top-bar-number-wrapper">
-                <a href="tel:+78002221100" class="phone-number-link">
+                <a href={"tel:" + this.topBar.phoneNumber} class="phone-number-link">
                   <span class="phone_number">
                     {this.topBar.phoneNumber}
                   </span>
