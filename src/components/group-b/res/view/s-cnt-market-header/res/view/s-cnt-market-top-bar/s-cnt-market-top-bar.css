@@ -75,11 +75,21 @@ button {
   text-overflow: ellipsis;
 }
 
-.option-adress-text-block span {
+.option-adress-text-block span span {
+  display: inline-block;
   font-weight: 700;
   color: #21a038;
   cursor: pointer;
   font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.option-adress-text-block span .selected-address{
+  color:#333536;
+  font-weight: 500;
 }
 
 .delivery-adress-btn {

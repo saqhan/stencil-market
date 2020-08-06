@@ -29,10 +29,6 @@ export namespace Components {
          */
         "delivery": boolean;
         /**
-          * boolean значение для вывода блока самовывоза и присвоения класса
-         */
-        "idAddress": number;
-        /**
           * объект из mock для вывода данных
          */
         "modalData": any;
@@ -56,10 +52,6 @@ export namespace Components {
     interface SCntMarketLeftMenuCatalog {
     }
     interface SCntMarketPickupInModal {
-        /**
-          * boolean значение для вывода блока самовывоза и присвоения класса
-         */
-        "idAddress": number;
         /**
           * Данные из объекта данных мок
          */
@@ -178,10 +170,6 @@ declare namespace LocalJSX {
          */
         "delivery"?: boolean;
         /**
-          * boolean значение для вывода блока самовывоза и присвоения класса
-         */
-        "idAddress"?: number;
-        /**
           * объект из mock для вывода данных
          */
         "modalData"?: any;
@@ -222,10 +210,6 @@ declare namespace LocalJSX {
         "onCloseLeftMenu"?: (event: CustomEvent<any>) => void;
     }
     interface SCntMarketPickupInModal {
-        /**
-          * boolean значение для вывода блока самовывоза и присвоения класса
-         */
-        "idAddress"?: number;
         /**
           * функция для смены значения boolean пропса pickUp
          */
