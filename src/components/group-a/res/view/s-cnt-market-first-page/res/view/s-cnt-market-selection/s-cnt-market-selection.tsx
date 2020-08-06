@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 import { MarketSelectionInterface } from "./res/interface/common.interface";
-import { markdown} from "markdown"
+import { markdown } from "markdown";
 
 @Component({
   tag: "s-cnt-market-selection",
@@ -39,10 +39,16 @@ export class SCntMarketSelection implements ComponentInterface {
       <div class="selection">
         <div
           class="imageHome"
-          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}>
-          <div class="text" innerHTML={markdown.toHTML(this.homeText)}>
-          </div>
-          <div class="subtext" innerHTML={markdown.toHTML(this.homeSubText)}>
+          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}
+        >
+          <div class="commonText">
+            <div class="text" innerHTML={markdown.toHTML(this.homeText)}>
+            </div>
+            <div
+              class="subtext"
+              innerHTML={markdown.toHTML(this.homeSubText)}
+            >
+              </div>
           </div>
         </div>
         <div class="container">
@@ -62,7 +68,8 @@ const GetSelection = (props) => {
       <div class="col-md-4">
         <s-cnt-market-item-selection
           forSelection={item}
-        ></s-cnt-market-item-selection>
+        >
+        </s-cnt-market-item-selection>
       </div>
     );
   });

@@ -5,6 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { MarketOfferInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-offer/res/interface/common.interface";
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
 import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
@@ -20,6 +21,14 @@ export namespace Components {
     interface SCntMarketHeader {
     }
     interface SCntMarketItemOffer {
+        /**
+          * Приём данных из массива для вывода
+         */
+        "MarketOfferInterface": MarketOfferInterface[];
+        /**
+          * Данные для компонента Item Offer
+         */
+        "forOffer": any;
     }
     interface SCntMarketItemSelection {
         /**
@@ -34,6 +43,18 @@ export namespace Components {
     interface SCntMarketModalWindow {
     }
     interface SCntMarketOffer {
+        /**
+          * Приём данных из массива для вывода
+         */
+        "MarketOfferInterface": MarketOfferInterface[];
+        /**
+          * Данные для компонента Offer
+         */
+        "forOffer": any;
+        /**
+          * Данные для заголовка
+         */
+        "offerTitleText": string;
     }
     interface SCntMarketProduct {
         /**
@@ -205,6 +226,14 @@ declare namespace LocalJSX {
     interface SCntMarketHeader {
     }
     interface SCntMarketItemOffer {
+        /**
+          * Приём данных из массива для вывода
+         */
+        "MarketOfferInterface"?: MarketOfferInterface[];
+        /**
+          * Данные для компонента Item Offer
+         */
+        "forOffer"?: any;
     }
     interface SCntMarketItemSelection {
         /**
@@ -219,6 +248,18 @@ declare namespace LocalJSX {
     interface SCntMarketModalWindow {
     }
     interface SCntMarketOffer {
+        /**
+          * Приём данных из массива для вывода
+         */
+        "MarketOfferInterface"?: MarketOfferInterface[];
+        /**
+          * Данные для компонента Offer
+         */
+        "forOffer"?: any;
+        /**
+          * Данные для заголовка
+         */
+        "offerTitleText"?: string;
     }
     interface SCntMarketProduct {
         /**

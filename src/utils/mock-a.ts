@@ -279,7 +279,7 @@ export const forSelection = [
   {
     id: 29,
     image: "https://via.placeholder.com/70x70?text=Text",
-    title: "Забакальский Привозъ",
+    title: "Забайкальский Привозъ",
   },
   {
     id: 20,
@@ -324,7 +324,7 @@ export const forSelection = [
   {
     id: 28,
     image: "https://via.placeholder.com/70x70?text=Text",
-    title: 'ТЦ "Новомаринский"',
+    title: 'ТЦ "Новомариинский"',
   },
   {
     id: 29,
@@ -385,7 +385,7 @@ export const forSelection = [
   {
     id: 40,
     image: "https://via.placeholder.com/70x70?text=Text",
-    title: "Юг Опт",
+    title: "ЮгОпт",
   },
   {
     id: 41,
@@ -406,27 +406,27 @@ export const forOffer = [
   {
     id: 1,
     icon: "fas fa-truck",
-    text: "Доставим день в день, в удобное для вас время",
+    text: "Доставим день в день,\n" + "\n" + "в удобное для вас\n" + "\n" + " время",
   },
   {
     id: 2,
     icon: "fas fa-dolly",
-    text: "Привезём тяжелые сумки прямо до вашей двери",
+    text: "Привезём тяжелые\n" + "\n" + " сумки прямо до вашей\n" + "\n" + " двери",
   },
   {
     id: 3,
     icon: "fas fa-gifts",
-    text: "Выберем лучшее с полок магазинов, как для себя",
+    text: "Выберем лучшее\n" + "\n" + " с полок магазинов,\n" + "\n" + " как для себя",
   },
   {
     id: 4,
     icon: "fas fa-tags",
-    text: "Скидки и акции наших партнёров на 2 000 товаров",
+    text: "Скидки и акции наших\n" + "\n" + " партнёров на 2 000\n" + "\n" + " товаров",
   },
 ];
 
 export const offerTitleText =
-  "Сохраняйте время, энергию и деньги для того, что важно именно вам";
+  "Сохраняйте время, энергию и деньги\n" + "\n" + "для того, что важно именно вам";
 
 export const getProduct = {
   brand: "Бренды ЛЕНТЫ",
