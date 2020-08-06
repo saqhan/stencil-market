@@ -49,6 +49,8 @@ export namespace Components {
     interface SCntMarketHeaderNav {
         "navBar": navBarInterface;
     }
+    interface SCntMarketLeftMenuCatalog {
+    }
     interface SCntMarketPickupInModal {
         /**
           * Данные из объекта данных мок
@@ -114,6 +116,12 @@ declare global {
         prototype: HTMLSCntMarketHeaderNavElement;
         new (): HTMLSCntMarketHeaderNavElement;
     };
+    interface HTMLSCntMarketLeftMenuCatalogElement extends Components.SCntMarketLeftMenuCatalog, HTMLStencilElement {
+    }
+    var HTMLSCntMarketLeftMenuCatalogElement: {
+        prototype: HTMLSCntMarketLeftMenuCatalogElement;
+        new (): HTMLSCntMarketLeftMenuCatalogElement;
+    };
     interface HTMLSCntMarketPickupInModalElement extends Components.SCntMarketPickupInModal, HTMLStencilElement {
     }
     var HTMLSCntMarketPickupInModalElement: {
@@ -136,6 +144,7 @@ declare global {
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-header-body": HTMLSCntMarketHeaderBodyElement;
         "s-cnt-market-header-nav": HTMLSCntMarketHeaderNavElement;
+        "s-cnt-market-left-menu-catalog": HTMLSCntMarketLeftMenuCatalogElement;
         "s-cnt-market-pickup-in-modal": HTMLSCntMarketPickupInModalElement;
         "s-cnt-market-top-bar": HTMLSCntMarketTopBarElement;
     }
@@ -193,6 +202,8 @@ declare namespace LocalJSX {
     interface SCntMarketHeaderNav {
         "navBar"?: navBarInterface;
     }
+    interface SCntMarketLeftMenuCatalog {
+    }
     interface SCntMarketPickupInModal {
         /**
           * Данные из объекта данных мок
@@ -212,6 +223,7 @@ declare namespace LocalJSX {
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-header-body": SCntMarketHeaderBody;
         "s-cnt-market-header-nav": SCntMarketHeaderNav;
+        "s-cnt-market-left-menu-catalog": SCntMarketLeftMenuCatalog;
         "s-cnt-market-pickup-in-modal": SCntMarketPickupInModal;
         "s-cnt-market-top-bar": SCntMarketTopBar;
     }
@@ -229,6 +241,7 @@ declare module "@stencil/core" {
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-header-body": LocalJSX.SCntMarketHeaderBody & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBodyElement>;
             "s-cnt-market-header-nav": LocalJSX.SCntMarketHeaderNav & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderNavElement>;
+            "s-cnt-market-left-menu-catalog": LocalJSX.SCntMarketLeftMenuCatalog & JSXBase.HTMLAttributes<HTMLSCntMarketLeftMenuCatalogElement>;
             "s-cnt-market-pickup-in-modal": LocalJSX.SCntMarketPickupInModal & JSXBase.HTMLAttributes<HTMLSCntMarketPickupInModalElement>;
             "s-cnt-market-top-bar": LocalJSX.SCntMarketTopBar & JSXBase.HTMLAttributes<HTMLSCntMarketTopBarElement>;
         }

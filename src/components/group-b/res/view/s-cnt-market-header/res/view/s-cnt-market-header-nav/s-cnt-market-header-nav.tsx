@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop, State} from "@stencil/core";
+import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
 import { navBarInterface } from "./res/interface/common.interface";
 
 @Component({
@@ -9,14 +9,21 @@ import { navBarInterface } from "./res/interface/common.interface";
 })
 export class SCntMarketHeaderNav implements ComponentInterface {
   /*
-  * массив данных для навигации
-  **/
+   * массив данных для навигации
+   **/
   @Prop() navBar: navBarInterface;
 
   /*
-  * Показывать/скрывать аккаунт юзера
-  * */
+   * Показывать/скрывать аккаунт юзера
+   * */
   @State() isShowUserAccount: boolean;
+
+  /*
+   * Показывать/скрывать левое меню-каталог
+   * */
+  @State() isShowLeftMenuCatalog: boolean;
+
+  private modalTag: any;
 
   render() {
     return (
@@ -25,10 +32,14 @@ export class SCntMarketHeaderNav implements ComponentInterface {
           <div class="col">
             <div class="nav-wrapper">
               <div class="catalog">
-                <button>
+                <button onClick={() => this.onClickCatalogHandler()}>
                   <i class="fas fa-bars"></i>
                   <span>{this.navBar.catalogBtn}</span>
                 </button>
+                {!this.isShowLeftMenuCatalog
+                  ? <s-cnt-market-left-menu-catalog></s-cnt-market-left-menu-catalog>
+                  : ''
+                }
               </div>
               <div class="nav-search">
                 <div class="button-menu">
@@ -50,18 +61,23 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 </div>
               </div>
               <div class="nav-user-profile">
-                <div class="user-profile-btn"
+                <div
+                  class="user-profile-btn"
                   onClick={() => this.onClickAccountHandler()}
                 >
-                  <a><i class={this.navBar.iconUser}></i></a>
+                  <a>
+                    <i class={this.navBar.iconUser}></i>
+                  </a>
                 </div>
-                <div class='menu-account-wrapper'
-                  
+                <div
+                  class="menu-account-wrapper"
+                  ref={(el) => (this.modalTag = el)}
                 >
-                  { this.isShowUserAccount
-                    ? <s-cnt-market-account-menu></s-cnt-market-account-menu>
-                    : ''
-                  }
+                  {this.isShowUserAccount ? (
+                    <s-cnt-market-account-menu></s-cnt-market-account-menu>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
               <div class="user-wish-list">
@@ -95,4 +111,22 @@ export class SCntMarketHeaderNav implements ComponentInterface {
     this.isShowUserAccount = !this.isShowUserAccount;
   }
 
+  /**
+   * Переключаем состояние аккаунта юзера
+   * */
+  public clickOnModal(event) {
+    if (event.target !== this.modalTag) {
+      this.onClickAccountHandler();
+    }
+  }
+
+  /**
+   * Show/hide left menu
+   * */
+  public onClickCatalogHandler() {
+    console.log("onClickCatalogHandler");
+    this.isShowLeftMenuCatalog = !this.isShowLeftMenuCatalog;
+    console.log("onClickCatalogHandler", this.isShowLeftMenuCatalog);
+
+  }
 }

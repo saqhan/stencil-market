@@ -1,0 +1,172 @@
+.drawer-backdrop {
+  position: fixed;
+  left: 0px;
+  right: auto;
+  bottom: 0px;
+  z-index: 2100;
+  top: 0px;
+  transition: opacity .3s;
+
+  background: rgba(0,0,0,.5);
+  height: 100%;
+  /*left: 0;*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  width: 100%;
+  opacity: 0;
+  /*z-index: 1;*/
+  pointer-events: none;
+}
+
+.drawer-backdrop.opened {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer-left {
+  position: fixed;
+  left: 0px;
+  right: auto;
+  bottom: 0px;
+  z-index: 2100;
+  top: 0px;
+  display: flex;
+}
+
+.drawer-left.opened, .drawer-right.opened {
+  transform: translateX(0);
+}
+
+.drawer-transition {
+  transition: transform .3s;
+  opacity: 1;
+}
+
+.drawer-content {
+  position: relative;
+}
+
+.category-menu {
+  height: 100%;
+}
+
+.category-menu-container {
+  background: #fff;
+  height: 100%;
+  width: 300px;
+  z-index: 2;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-menu-header {
+  display: flex;
+  align-items: center;
+  height: 86px;
+  padding: 10px 24px 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+
+.category-menu-logo {
+  margin-left: 22px;
+  line-height: 0;
+  width: 190px;
+  height: 33px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://via.placeholder.com/200x30?text=LOGO");
+}
+
+.category-menu-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background-color: #fff;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .2s;
+  border:none;
+  cursor: pointer;
+}
+
+.category-menu-list li {
+  list-style: none;
+}
+
+.category-menu-list {
+  padding-left: 0;
+  cursor: pointer;
+}
+
+.category-menu-item-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 60px;
+  padding-left: 24px;
+  color: #393939;
+  font-size: 13px;
+  font-weight: 700;
+}
+.category-menu-header button i {
+  width: 11px;
+  height: 11px;
+  color: #21a038;
+}
+.category-menu-item-placeholder {
+  height: 8px;
+}
+
+.category-menu-item-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  justify-content: center;
+  background-position: center;
+  background-size: contain;
+  background-image: url("https://sbermarket.ru/spree/taxons/6246/normal/900000.png?1587988226");
+}
+
+category-menu-item-title {
+  width: 164px;
+  padding: 10px 0;
+  word-wrap: break-word;
+}
+
+.category-menu-item-content, .category-menu-item-icon {
+  display: flex;
+  align-items: center;
+}
+
+.category-menu-item {
+  min-height: 60px;
+  transition: 0.3s ease;
+}
+
+.category-menu-item:hover>.category-menu-item-link {
+  background: #f5f5f5;
+  color: #21a038;
+}
+
+
+.category-menu-item:hover>.category-menu-item__link .category-menu-item__link__pointer-container{visibility:visible}
+
+.category-menu-item-link-pointer-container {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
