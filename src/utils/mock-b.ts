@@ -25,7 +25,7 @@ export const header = {
       },
       PickUp: {
         id: 1,
-        locationIcon: `<i class="fas fa-map-marker-alt"></i>`,
+        locationIcon: 'fas fa-map-marker-alt',
         city: "Город:",
         selectIcon: `<i class="fas fa-angle-down"></i>`,
         defaultCity: 1,

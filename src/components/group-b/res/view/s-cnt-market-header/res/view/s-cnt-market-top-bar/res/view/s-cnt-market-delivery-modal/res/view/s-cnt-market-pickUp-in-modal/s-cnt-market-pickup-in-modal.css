@@ -250,3 +250,52 @@
 .city-for-selected:hover {
   background-color: #f6f7f8;
 }
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .adress-in-city-blocks{
+    padding: 40px 20px 25px;
+  }
+
+  .store-list-logo-img{
+    width: 48px;
+    height: 48px;
+  }
+
+  .store-list-logo-img div{
+    width: 26px;
+    height: 26px;
+  }
+
+  .store-name{
+    font-size: 14px;
+  }
+
+  .store-selected-address, .store-work-time{
+    font-size: 11px;
+  }
+
+  .store-secet-btn{
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+
+  #selectedAddress, #updateSelectedAddress {
+    padding: 5px 10px;
+  }
+
+  .store-address{
+    font-size: 14px;
+  }
+}
