@@ -17,11 +17,6 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    */
   @State() idCity: number;
 
-  // /**
-  //  * значение number для присвоения id выбранного города
-  //  */
-  // @State() idAddress: number;
-
   /**
    * boolean значение для вывода списка городов
    */
@@ -35,7 +30,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   /**
    * boolean значение для вывода блока самовывоза и присвоения класса
    */
-  @Prop() idAddress: number;
+  @State() idAddress: number;
 
     /**
    * функция для смены значения boolean пропса pickUp
@@ -48,7 +43,6 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   componentDidLoad() {
     this.idCity = this.pickUpData.defaultCity;
     this.StoreAddress = true;
-
   }
 
   render() {
@@ -172,6 +166,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
     return array.map(item => {
       if (this.idCity === item.id) {
         return item.storeAddress.map(i => {
+          console.log(this.idAddress)
           if (this.idAddress === i.id) {
             return (
               <span class="store-selected-address">
