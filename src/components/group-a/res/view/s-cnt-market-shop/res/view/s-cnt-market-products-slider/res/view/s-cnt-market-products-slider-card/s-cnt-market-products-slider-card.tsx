@@ -27,22 +27,36 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
           </div>
           <div class="products-card-desc">
             <div class="products-price">
-              <span class="price-dis">
-                {this.productsSliderCards.price}
-                <span>{this.productsSliderCards.currency}</span>
-              </span>
-              {this.productsSliderCards.oldPrice ? (
-                <span class="price-old">
-                  {this.productsSliderCards.oldPrice}
+              {this.productsSliderCards.price
+                ?
+                <span class="price">
+                  {this.productsSliderCards.price}
                   <span>{this.productsSliderCards.currency}</span>
                 </span>
-              ) : (
-                ""
-              )}
+                :
+                <div>
+                  <span class="price-dis">
+                    {this.productsSliderCards.disPrice}
+                    <span>{this.productsSliderCards.currency}</span>
+                  </span>
+                  <span class="price-old">
+                    {this.productsSliderCards.oldPrice}
+                    <span>{this.productsSliderCards.currency}</span>
+                  </span>
+                </div>
+              }
             </div>
             <p class="products-name">{this.productsSliderCards.desc}</p>
             <div class="products-bottom-info">
               {this.productsSliderCards.weight}
+            </div>
+          </div>
+        </div>
+        <div class="products-cart">
+          <div class="products-cart-box">
+            <div class="products-cart-add">
+              <i class="fas fa-plus"></i>
+              <i class="fas fa-shopping-cart"></i>
             </div>
           </div>
         </div>

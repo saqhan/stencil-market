@@ -4,6 +4,7 @@
   border: solid 1px #e7e4e4;
   border-radius: 4px;
   height: 100%;
+  position: relative;
 }
 
 .products-card-item {
@@ -62,3 +63,21 @@
   color: #8f8e94;
 }
 
+.products-cart {
+  position: absolute;
+  right: 10px;
+  bottom: 6px;
+  padding: 8px 0 0 8px;
+  z-index: 2;
+}
+
+.products-cart-add {
+  background: #21a038;
+  border-radius: 4px;
+  width: 46px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}

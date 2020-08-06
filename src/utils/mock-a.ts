@@ -534,7 +534,7 @@ export const productsSliderCards = [
   {
     id: 1,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "599.01",
+    disPrice: "599.01",
     oldPrice: "889.00",
     currency: "₽",
     desc: "Сыр полутвердый Ламбер 50% ~ 1 кг бзмж",
@@ -576,7 +576,7 @@ export const productsSliderCards = [
   {
     id: 6,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "125.00",
+    disPrice: "125.00",
     oldPrice: "184.00",
     currency: "₽",
     desc: "Сыр полутвердый Arla Natura Сливочный 45% 200 г бз ...",
@@ -593,7 +593,7 @@ export const productsSliderCards = [
   {
     id: 8,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "54.90",
+    disPrice: "54.90",
     oldPrice: "74.89 ",
     currency: "₽",
     desc: "Молоко Белый Город ультрапастеризованное 3,2% 1 л ...",
@@ -610,7 +610,7 @@ export const productsSliderCards = [
   {
     id: 10,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "99.99",
+    disPrice: "99.99",
     oldPrice: "129.90",
     currency: "₽",
     desc: "Помидоры сливовидные",
