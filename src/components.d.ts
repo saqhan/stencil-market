@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MarketOfferInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-offer/res/interface/common.interface";
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
+import { MarketStatisticsInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-statistics/res/interface/common.interface";
 import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/res/interface/common.interface";
 import { MarketProductsSliderCardsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider/res/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
@@ -18,9 +19,13 @@ export namespace Components {
     }
     interface MyComponent {
     }
+    interface SCntMarketDelivery {
+    }
     interface SCntMarketFirstPage {
     }
     interface SCntMarketHeader {
+    }
+    interface SCntMarketItemDelivery {
     }
     interface SCntMarketItemOffer {
         /**
@@ -49,6 +54,10 @@ export namespace Components {
         "forSelection": any;
     }
     interface SCntMarketItemStatistics {
+        /**
+          * Приём данных из массива для вывода
+         */
+        "MarketStatisticsInterface": MarketStatisticsInterface[];
         /**
           * Данные для компонента Statistics
          */
@@ -169,6 +178,10 @@ export namespace Components {
     }
     interface SCntMarketStatistics {
         /**
+          * Приём данных из массива для вывода
+         */
+        "MarketStatisticsInterface": MarketStatisticsInterface[];
+        /**
           * Данные для компонента Statistics
          */
         "forStatistics": any;
@@ -193,6 +206,12 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSCntMarketDeliveryElement extends Components.SCntMarketDelivery, HTMLStencilElement {
+    }
+    var HTMLSCntMarketDeliveryElement: {
+        prototype: HTMLSCntMarketDeliveryElement;
+        new (): HTMLSCntMarketDeliveryElement;
+    };
     interface HTMLSCntMarketFirstPageElement extends Components.SCntMarketFirstPage, HTMLStencilElement {
     }
     var HTMLSCntMarketFirstPageElement: {
@@ -204,6 +223,12 @@ declare global {
     var HTMLSCntMarketHeaderElement: {
         prototype: HTMLSCntMarketHeaderElement;
         new (): HTMLSCntMarketHeaderElement;
+    };
+    interface HTMLSCntMarketItemDeliveryElement extends Components.SCntMarketItemDelivery, HTMLStencilElement {
+    }
+    var HTMLSCntMarketItemDeliveryElement: {
+        prototype: HTMLSCntMarketItemDeliveryElement;
+        new (): HTMLSCntMarketItemDeliveryElement;
     };
     interface HTMLSCntMarketItemOfferElement extends Components.SCntMarketItemOffer, HTMLStencilElement {
     }
@@ -323,8 +348,10 @@ declare global {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
+        "s-cnt-market-delivery": HTMLSCntMarketDeliveryElement;
         "s-cnt-market-first-page": HTMLSCntMarketFirstPageElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
+        "s-cnt-market-item-delivery": HTMLSCntMarketItemDeliveryElement;
         "s-cnt-market-item-offer": HTMLSCntMarketItemOfferElement;
         "s-cnt-market-item-recommended": HTMLSCntMarketItemRecommendedElement;
         "s-cnt-market-item-selection": HTMLSCntMarketItemSelectionElement;
@@ -353,9 +380,13 @@ declare namespace LocalJSX {
     }
     interface MyComponent {
     }
+    interface SCntMarketDelivery {
+    }
     interface SCntMarketFirstPage {
     }
     interface SCntMarketHeader {
+    }
+    interface SCntMarketItemDelivery {
     }
     interface SCntMarketItemOffer {
         /**
@@ -384,6 +415,10 @@ declare namespace LocalJSX {
         "forSelection"?: any;
     }
     interface SCntMarketItemStatistics {
+        /**
+          * Приём данных из массива для вывода
+         */
+        "MarketStatisticsInterface"?: MarketStatisticsInterface[];
         /**
           * Данные для компонента Statistics
          */
@@ -504,6 +539,10 @@ declare namespace LocalJSX {
     }
     interface SCntMarketStatistics {
         /**
+          * Приём данных из массива для вывода
+         */
+        "MarketStatisticsInterface"?: MarketStatisticsInterface[];
+        /**
           * Данные для компонента Statistics
          */
         "forStatistics"?: any;
@@ -512,8 +551,10 @@ declare namespace LocalJSX {
         "group-a": GroupA;
         "group-b": GroupB;
         "my-component": MyComponent;
+        "s-cnt-market-delivery": SCntMarketDelivery;
         "s-cnt-market-first-page": SCntMarketFirstPage;
         "s-cnt-market-header": SCntMarketHeader;
+        "s-cnt-market-item-delivery": SCntMarketItemDelivery;
         "s-cnt-market-item-offer": SCntMarketItemOffer;
         "s-cnt-market-item-recommended": SCntMarketItemRecommended;
         "s-cnt-market-item-selection": SCntMarketItemSelection;
@@ -542,8 +583,10 @@ declare module "@stencil/core" {
             "group-a": LocalJSX.GroupA & JSXBase.HTMLAttributes<HTMLGroupAElement>;
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "s-cnt-market-delivery": LocalJSX.SCntMarketDelivery & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryElement>;
             "s-cnt-market-first-page": LocalJSX.SCntMarketFirstPage & JSXBase.HTMLAttributes<HTMLSCntMarketFirstPageElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
+            "s-cnt-market-item-delivery": LocalJSX.SCntMarketItemDelivery & JSXBase.HTMLAttributes<HTMLSCntMarketItemDeliveryElement>;
             "s-cnt-market-item-offer": LocalJSX.SCntMarketItemOffer & JSXBase.HTMLAttributes<HTMLSCntMarketItemOfferElement>;
             "s-cnt-market-item-recommended": LocalJSX.SCntMarketItemRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketItemRecommendedElement>;
             "s-cnt-market-item-selection": LocalJSX.SCntMarketItemSelection & JSXBase.HTMLAttributes<HTMLSCntMarketItemSelectionElement>;

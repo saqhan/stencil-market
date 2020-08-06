@@ -1,5 +1,6 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 import { markdown } from "markdown";
+import {MarketStatisticsInterface} from "../../interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-item-statistics',
@@ -12,6 +13,11 @@ export class SCntMarketItemStatistics implements ComponentInterface {
    * Данные для компонента Statistics
    */
   @Prop() forStatistics: any;
+
+  /**
+   * Приём данных из массива для вывода
+   */
+  @Prop() MarketStatisticsInterface: MarketStatisticsInterface[] = [];
 
   render() {
     return (

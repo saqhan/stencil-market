@@ -447,6 +447,26 @@ export const forStatistics = [
   }
 ];
 
+export const forDelivery = [
+  {
+    image: "https://via.placeholder.com/1245x505?text=Text",
+    title: "Доставляем\n" + "\n" + "в 115 городах России",
+    nameCityMoscow: "Москва",
+    nameCityAbakan: "Абакан",
+    nameCityAnadyr: "Анадырь",
+    nameCityAstrahan: "Астрахань",
+    nameCityBarnaul: "Барнаул",
+    nameCityBerdsk: "Бердск",
+    nameCitySaintPetersburg: "Санкт-Петербург",
+    nameCityAlmetyevsk: "Альметьевск",
+    nameCityArkhangelsk: "Архангельск",
+    nameCityBalashikha: "Балашиха",
+    nameCityBelgorod: "Белгород",
+    nameCityBiysk: "Бийск",
+    button: "Показать все",
+  },
+];
+
 export const getProduct = {
   brand: "Бренды ЛЕНТЫ",
   products: "Продукты питания",
