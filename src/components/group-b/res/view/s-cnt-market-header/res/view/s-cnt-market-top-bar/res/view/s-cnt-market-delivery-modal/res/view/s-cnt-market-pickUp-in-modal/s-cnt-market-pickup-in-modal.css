@@ -177,6 +177,11 @@
   white-space: nowrap;
 }
 
+#selectedAddress{
+  border: 1px solid #21a038;
+  color: #21a038;
+}
+
 .selection-city-block {
   position: absolute;
   top: 30px;

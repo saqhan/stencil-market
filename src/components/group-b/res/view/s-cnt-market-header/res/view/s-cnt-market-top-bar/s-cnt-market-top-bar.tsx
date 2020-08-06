@@ -11,7 +11,7 @@ export class SCntMarketTopBar implements ComponentInterface {
   /**
    *
    */
-  @Prop()topBar: TopBarInterface;
+  @Prop() topBar: TopBarInterface;
 
   /**
    * boolean значение для вывода
@@ -55,6 +55,7 @@ export class SCntMarketTopBar implements ComponentInterface {
                 <span>
                   {this.topBar.choiceAddress}
                   <button class="delivery-adress-btn" innerHTML={this.topBar.choiceAddressIcon}>
+
                   </button>
                 </span>
               </div>

@@ -63,7 +63,8 @@ export class SCntMarketPickupInModal implements ComponentInterface {
             }
           </div>
         </div>
-        <div class="expandable-store-list" onClick={() => this.opClStoreAddress()}>
+        <div class="expandable-store-list">
+          {/*onClick={() => this.opClStoreAddress()}*/}
           <div class="store-list-wrapper">
             <div class="store-list">
               <div class="store-list-block-wrap">
@@ -91,12 +92,42 @@ export class SCntMarketPickupInModal implements ComponentInterface {
           {
             this.StoreAddress ?
               //выводящийся и закрывающийся блок с адресами магазинов по клику меняющему State
-              <StoreAddress arr={this.pickUpData.storeAddress} idSelectedAddress={(x) => this.idSelectedAddress(x)}/> :
+              this.StoreAddressComp(this.pickUpData.storeAddress) :
               ''
           }
         </div>
       </div>
     );
+  }
+
+  /*
+* компонентная функция для вывода блоков списка магазинов
+ */
+  public StoreAddressComp(props) {
+    return props.map((item) => {
+      return (
+        <div>
+          <hr/>
+          <div class="store-list-wrapper">
+            <div class="store-list">
+              <div class="store-address-and-work-time">
+              <span class="store-address">
+                {item.storeAddress}
+              </span>
+                <span class="store-work-time">
+                {item.storeWorkTime}
+              </span>
+              </div>
+              <button class="store-secet-btn" id={this.idSelectedAddress(item.id, 'selectedAddress')}
+                      onClick={() => this.idSelectionAddress(item.id)}>
+                <i class={this.idSelectedAddress(item.id, 'fas fa-check mr-1')}></i>
+                {item.btnText}
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    })
   }
 
   /**
@@ -124,8 +155,17 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   /**
    * функция для присвоения id выбранного address
    * */
-  public idSelectedAddress(x) {
+  public idSelectionAddress(x) {
     this.idAddress = x;
+  }
+
+  /**
+   * функция для присвоения id выбранного address
+   * */
+  public idSelectedAddress(x, y) {
+    if (x === this.idAddress) {
+      return y;
+    }
   }
 
   /**
@@ -151,34 +191,6 @@ export class SCntMarketPickupInModal implements ComponentInterface {
     }
   }
 
-}
-
-/*
-* компонентная функция для вывода блоков списка магазинов
- */
-const StoreAddress = (props) => {
-  return props.arr.map((item) => {
-    return (
-      <div>
-        <hr/>
-        <div class="store-list-wrapper">
-          <div class="store-list">
-            <div class="store-address-and-work-time">
-                <span class="store-address">
-                  {item.storeAddress}
-                </span>
-              <span class="store-work-time">
-                  {item.storeWorkTime}
-                </span>
-            </div>
-            <button class="store-secet-btn" onClick={() => props.idSelectedAddress(item.id)}>
-              {item.btnText}
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  })
 }
 
 /**
