@@ -13,6 +13,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    **/
   @Prop() navBar: navBarInterface;
 
+  /**
+   * Данные для магазинов из каталога
+   * */
+  @Prop() leftMenuCatalogArr: any;
+
   /*
    * Показывать/скрывать аккаунт юзера
    * */
@@ -21,7 +26,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /*
    * Показывать/скрывать левое меню-каталог
    * */
-  @State() isShowLeftMenuCatalog: boolean;
+  @State() openedLeftMenu: boolean;
 
   private modalTag: any;
 
@@ -36,11 +41,12 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class="fas fa-bars"></i>
                   <span>{this.navBar.catalogBtn}</span>
                 </button>
-                {this.isShowLeftMenuCatalog ? (
-                  <s-cnt-market-left-menu-catalog onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>
-                ) : (
-                  ""
-                )}
+                {/*{this.isShowLeftMenuCatalog ? (*/}
+                {/*  <s-cnt-market-left-menu-catalog onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>*/}
+                {/*) : (*/}
+                {/*  ""*/}
+                {/*)}*/}
+                {<s-cnt-market-left-menu-catalog leftMenuCatalogArr={this.leftMenuCatalogArr} openedLeftMenu={this.openedLeftMenu} onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>}
               </div>
               <div class="nav-search">
                 <div class="button-menu">
@@ -125,10 +131,12 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * Show/hide left menu
    * */
   public onClickCatalogHandler() {
-    this.isShowLeftMenuCatalog = true;
+    // this.isShowLeftMenuCatalog = true;
+    this.openedLeftMenu = true;
+  }
+  //
+  public closeLeftMenu() {
+    this.openedLeftMenu = false;
   }
 
-  public closeLeftMenu() {
-    this.isShowLeftMenuCatalog = false;
-  }
 }

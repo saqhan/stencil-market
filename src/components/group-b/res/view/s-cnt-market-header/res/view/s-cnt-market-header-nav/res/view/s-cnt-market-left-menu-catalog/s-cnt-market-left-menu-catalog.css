@@ -5,47 +5,48 @@
   bottom: 0px;
   z-index: 2100;
   top: 0px;
-  transition: opacity .3s;
-
-  background: rgba(0,0,0,.5);
+  background: rgba(0, 0, 0, 0.5);
   height: 100%;
-  /*left: 0;*/
-  /*position: absolute;*/
-  /*top: 0;*/
   width: 100%;
   opacity: 0;
-  /*z-index: 1;*/
+  transition: opacity 0.3s;
   pointer-events: none;
 }
 
 .drawer-backdrop.opened {
   opacity: 1;
   pointer-events: auto;
-  /*visibility: visible;*/
+  visibility: visible;
 }
 
-.drawer-left.opened, .drawer-right.opened {
+.drawer-left.opened {
   transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
 }
 
 .drawer-left {
+  display: flex;
   position: fixed;
-  /*visibility: hidden;*/
+  visibility: hidden;
   left: 0px;
   right: auto;
   bottom: 0px;
   z-index: 2100;
   top: 0px;
   display: flex;
-}
-
-.drawer-left.opened, .drawer-right.opened {
-  transform: translateX(0);
+  transition: opacity 0.3s;
 }
 
 .drawer-transition {
-  transition: transform .3s;
+  transition: transform 0.3s;
   opacity: 1;
+}
+
+.drawer-transition.drawer-transition_faded {
+  -webkit-animation: fadeOutLeft 0s 0.3s forwards;
+  animation: fadeOutLeft 0s 0.3s forwards;
 }
 
 .drawer-content {
@@ -76,7 +77,6 @@
   background-color: #fff;
 }
 
-
 .category-menu-logo {
   margin-left: 22px;
   line-height: 0;
@@ -99,8 +99,8 @@
   background-color: #fff;
   outline: none;
   -webkit-tap-highlight-color: transparent;
-  transition: background-color .2s;
-  border:none;
+  transition: background-color 0.2s;
+  border: none;
   cursor: pointer;
 }
 
@@ -111,7 +111,7 @@
 .category-menu-list {
   padding-left: 0;
   cursor: pointer;
-  margin:15px 0px;
+  margin: 15px 0px;
 }
 
 .category-menu-item-link {
@@ -124,7 +124,7 @@
   color: #393939;
   font-size: 13px;
   font-weight: 700;
-  transition: .3s ease;
+  /*transition: 0.3s ease;*/
 }
 .category-menu-header button i {
   width: 11px;
@@ -142,7 +142,8 @@
   justify-content: center;
   background-position: center;
   background-size: contain;
-  background-image: url("https://sbermarket.ru/spree/taxons/6246/normal/900000.png?1587988226");
+  background-repeat: no-repeat;
+  /*background-image: url("https://sbermarket.ru/spree/taxons/6246/normal/900000.png?1587988226");*/
 }
 
 category-menu-item-title {
@@ -151,14 +152,15 @@ category-menu-item-title {
   word-wrap: break-word;
 }
 
-.category-menu-item-content, .category-menu-item-icon {
+.category-menu-item-content,
+.category-menu-item-icon {
   display: flex;
   align-items: center;
 }
 
 .category-menu-item {
   min-height: 60px;
-  transition: 0.3s ease;
+  /*transition: 0.3s ease;*/
 }
 
 .category-menu-item:hover .category-menu-item-link {
@@ -169,7 +171,6 @@ category-menu-item-title {
 .category-menu-item:hover .category-menu-item-link-pointer-container {
   visibility: visible;
 }
-
 
 .category-menu-item-link-pointer-container {
   visibility: hidden;
@@ -185,4 +186,72 @@ category-menu-item-title {
   border-top: 1px solid #ece9e9;
   margin-top: -15px;
   padding-top: 8px;
+}
+
+/*@-webkit-keyframes swing {*/
+/*  15% {*/
+/*    -webkit-transform: translateX(9px);*/
+/*    transform: translateX(9px);*/
+/*  }*/
+/*  30% {*/
+/*    -webkit-transform: translateX(-9px);*/
+/*    transform: translateX(-9px);*/
+/*  }*/
+/*  40% {*/
+/*    -webkit-transform: translateX(6px);*/
+/*    transform: translateX(6px);*/
+/*  }*/
+/*  50% {*/
+/*    -webkit-transform: translateX(-6px);*/
+/*    transform: translateX(-6px);*/
+/*  }*/
+/*  65% {*/
+/*    -webkit-transform: translateX(3px);*/
+/*    transform: translateX(3px);*/
+/*  }*/
+/*  100% {*/
+/*    -webkit-transform: translateX(0);*/
+/*    transform: translateX(0);*/
+/*  }*/
+/*}*/
+
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(6px);
+  }
+  30% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  40% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  50% {
+    -webkit-transform: translateX(-3px);
+    transform: translateX(-3px);
+  }
+  65% {
+    -webkit-transform: translateX(2px);
+    transform: translateX(2px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+/*.swing:hover {*/
+/*  -webkit-animation: swing 0.6s ease;*/
+/*  animation: swing 0.6s ease;*/
+/*  -webkit-animation-iteration-count: 1;*/
+/*  animation-iteration-count: 1;*/
+/*}*/
+
+.category-menu-item:hover .swing {
+  -webkit-animation: swing 1s ease;
+  animation: swing 1s ease;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }

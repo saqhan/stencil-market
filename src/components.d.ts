@@ -47,9 +47,18 @@ export namespace Components {
         "body": NavMenuItemInterface;
     }
     interface SCntMarketHeaderNav {
+        /**
+          * Данные для магазинов из каталога
+         */
+        "leftMenuCatalogArr": any;
         "navBar": navBarInterface;
     }
     interface SCntMarketLeftMenuCatalog {
+        /**
+          * массив магазинов для вывода
+         */
+        "leftMenuCatalogArr": any;
+        "openedLeftMenu": boolean;
     }
     interface SCntMarketPickupInModal {
         /**
@@ -204,10 +213,19 @@ declare namespace LocalJSX {
         "body"?: NavMenuItemInterface;
     }
     interface SCntMarketHeaderNav {
+        /**
+          * Данные для магазинов из каталога
+         */
+        "leftMenuCatalogArr"?: any;
         "navBar"?: navBarInterface;
     }
     interface SCntMarketLeftMenuCatalog {
+        /**
+          * массив магазинов для вывода
+         */
+        "leftMenuCatalogArr"?: any;
         "onCloseLeftMenu"?: (event: CustomEvent<any>) => void;
+        "openedLeftMenu"?: boolean;
     }
     interface SCntMarketPickupInModal {
         /**

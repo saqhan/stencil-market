@@ -556,7 +556,7 @@ export const header = {
     navMenuItem: [
       {
         id: 'bisness',
-        name: 'Для Бизнеса'
+        name: '👩‍💻 Для бизнеса'
       },
       {
         id: 'how-we-work',
@@ -586,5 +586,46 @@ export const header = {
     iconCart: 'fas fa-shopping-cart',
     titleOrders: 'Заказы',
     titleCart: 'Корзина'
-  }
+  },
+  leftMenuCatalog: [
+    {
+      id:1,
+      title: 'Дачный сезон',
+      img: 'https://sbermarket.ru/spree/taxons/10412/normal/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.jpg',
+      sales: true,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Все для пикника',
+          img: 'https://sbermarket.ru/spree/taxons/10413/normal/%D0%92%D1%81%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BF%D0%B8%D0%BA%D0%BD%D0%B8%D0%BA%D0%B0.jpg'
+        }
+      ]
+    },
+    {
+      id:2,
+      title: "Бренды METRO",
+      img: "https://sbermarket.ru/spree/taxons/7783/normal/61000000.png",
+      sales: false,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Средства для бритья и депиляции',
+          img: 'https://sbermarket.ru/spree/taxons/12360/normal/%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D1%83%D1%85%D0%BE%D0%B4.jpeg'
+        }
+      ]
+    },
+    {
+      id:3,
+      title: "Бренды Procter & Gamble",
+      img: "https://sbermarket.ru/static/taxons/default.png",
+      sales: true,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Бритье',
+          img: 'https://sbermarket.ru/static/taxons/default.png'
+        }
+      ]
+    },
+  ]
 }

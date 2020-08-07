@@ -68,6 +68,18 @@
   opacity: 1;
 }
 
+.mobile-menu-ul li {
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+  padding: 10px 0px;
+}
+
+.mobile-menu-ul li:hover {
+  color: #1ea038;
+  background-color: #fff;
+}
+
 .mobile-menu.active {
   height: 100%;
   width: 100%;
