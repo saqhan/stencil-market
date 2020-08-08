@@ -17,9 +17,9 @@ export class SCntMarketProductsListCard implements ComponentInterface {
     return (
       <div class="products-list-wrapper">
         <div class="products-list-header">
-          <div class="products-list-title">{this.productsList.title}</div>
+          <div class="products-list-title">{this.productsList.header.title}</div>
           <div class="show-all">
-            <span>показать 88 товаров</span>
+            <span>{this.productsList.header.allProducts}</span>
             <i class="fas fa-angle-right"></i>
           </div>
         </div>

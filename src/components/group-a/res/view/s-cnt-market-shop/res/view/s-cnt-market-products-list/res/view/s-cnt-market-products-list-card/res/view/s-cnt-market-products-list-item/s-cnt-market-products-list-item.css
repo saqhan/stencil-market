@@ -35,10 +35,14 @@
   flex-wrap: wrap;
 }
 
+.price {
+  font-size: 21px;
+  color: #393939;
+}
+
 .price-default {
   margin-right: 8px;
   color: #e80e49;
-  font-size: 21px;
 }
 
 .price-original {
@@ -79,6 +83,7 @@
   margin: 7px 0;
   max-height: 54px;
   overflow: hidden;
+  line-height: 18px;
 }
 
 .product-weight {
@@ -144,4 +149,35 @@
 .fa-plus {
   font-size: 8px;
   margin-right: 2px;
+}
+
+.product-multipack {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fecb00;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 1;
+  padding: 9px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.product-multipack-count {
+  font-size: 18px;
+  margin-right: 2px;
+  text-transform: uppercase;
+}
+
+.product-multipack-text {
+  font-size: 13px;
+  margin-top: -1px;
+}
+
+.disabled .product-cart-add {
+  background-color: #bfbfbf;
+  cursor: default;
 }
