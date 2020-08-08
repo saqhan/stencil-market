@@ -1,11 +1,15 @@
-
-
 .d-none {
   display: none;
 }
 
 .visible {
-  visibility: visible;
+  display: block;
+}
+.sales-icon {
+  background-image: url("https://sbermarket.ru/spree/taxons/6246/normal/900000.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 .drawer-backdrop {
@@ -136,6 +140,19 @@
   font-weight: 700;
   /*transition: 0.3s ease;*/
 }
+
+.category-menu-item-link-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 60px;
+  padding-left: 24px;
+  color: #393939;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .category-menu-header button i {
   width: 11px;
   height: 11px;
@@ -178,6 +195,11 @@ category-menu-item-title {
   color: #21a038;
 }
 
+.category-menu-item-link-dropdown:hover .category-menu-item-link {
+  background: #f5f5f5;
+  color: #21a038;
+}
+
 .category-menu-item:hover .category-menu-item-link-pointer-container {
   visibility: visible;
 }
@@ -197,6 +219,87 @@ category-menu-item-title {
   margin-top: -15px;
   padding-top: 8px;
 }
+
+/*dropdown catalog*/
+
+/*.category-menu-item-dropdown.category-menu-item-dropdown-opened{display:block}*/
+
+.category-menu-item:hover .category-menu-item-dropdown  {
+  display: block;
+}
+
+.category-menu-item:hover .category-menu-item-link {
+  background: #f5f5f5;
+  color: #21a038;
+}
+
+.category-menu-item-dropdown {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 300px;
+  width: 300px;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-left: 1px solid #ece9e9;
+  box-shadow: 6px 2px 11px -6px rgba(0, 0, 0, 0.1);
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.category-menu-item-link-dropdown:hover {
+  background: #f5f5f5;
+  color: #21a038;
+}
+
+.category-menu-item-dropdown-list {
+  width: 100%;
+  padding-left: 0px;
+}
+
+.category-menu-item_content {
+  display: flex;
+  align-items: center;
+}
+
+/*.category-menu-item > .category-menu-item-link {*/
+/*  background: #f5f5f5;*/
+/*  color: #21a038;*/
+/*}*/
+
+/*.category-menu-item*/
+/*  > .category-menu-item-link*/
+/*  .category-menu-item-link-pointer-container {*/
+/*  visibility: visible;*/
+/*}*/
+/*@-webkit-keyframes link-pointer-move {*/
+/*  0% {*/
+/*    transform: translateX(0);*/
+/*  }*/
+/*  50% {*/
+/*    transform: translateX(5px);*/
+/*  }*/
+/*  to {*/
+/*    transform: translateX(0);*/
+/*  }*/
+/*}*/
+/*@keyframes link-pointer-move {*/
+/*  0% {*/
+/*    transform: translateX(0);*/
+/*  }*/
+/*  50% {*/
+/*    transform: translateX(5px);*/
+/*  }*/
+/*  to {*/
+/*    transform: translateX(0);*/
+/*  }*/
+/*}*/
+
+/*dropdown catalog*/
 
 /*@-webkit-keyframes swing {*/
 /*  15% {*/

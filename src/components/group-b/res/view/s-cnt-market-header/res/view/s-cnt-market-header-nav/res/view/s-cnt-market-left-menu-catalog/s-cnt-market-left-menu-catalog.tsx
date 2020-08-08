@@ -30,8 +30,16 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * показывать/скрывать блок скидок
    * */
-  @State() isShowSalesBlock: string;
+  // @State() isShowSalesBlock: boolean;
 
+  /**
+   * тег обертки скидок
+   * */
+  @State() wrapperSales: HTMLElement;
+
+  componentDidLoad() {
+    this.checkSales(this.leftMenuCatalogArr);
+  }
   render() {
     return (
       <div>
@@ -67,20 +75,36 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                 </div>
                 <div class="category-menu-content">
                   <ul
-                    // class="category-menu-list"
-                    class={this.checkSales()}
+                    class="category-menu-list d-none "
+                    ref={(el) => (this.wrapperSales = el)}
                   >
-                    {/*<li class="category-menu-item-placeholder"></li>*/}
+                    <li class="category-menu-item-placeholder"></li>
                     <li class="category-menu-item category-menu-item-promoted">
                       <a class="category-menu-item-link">
                         <div class="category-menu-item-content">
-                          <div class="category-menu-item-icon"></div>
+                          <div class="category-menu-item-icon sales-icon"></div>
                           <div class="category-menu-item-title">Скидки</div>
                         </div>
                         <div class="category-menu-item-link-pointer-container swing">
                           <i class="fas fa-angle-right"></i>
                         </div>
                       </a>
+                      <div class="category-menu-item-dropdown category-menu-item-dropdown-opened ">
+                        <ul class="category-menu-item-dropdown-list">
+                          <li class="category-menu-item">
+                            <a class="category-menu-item-link-dropdown">
+                              <div class="category-menu-item-content">
+                                <div class="category-menu-item-icon"
+                                  style={{backgroundImage: `url(https://sbermarket.ru/spree/taxons/4279/normal/2050000.jpg)`}}
+                                ></div>
+                                <div class="category-menu-item-title">
+                                  Электроника и бытовая техника
+                                </div>
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </li>
                     <li class="category-menu-item-placeholder"></li>
                   </ul>
@@ -138,13 +162,11 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * Получение магазинов
    **/
-  public checkSales() {
-    console.log("ddd");
-    return this.leftMenuCatalogArr.map((item) => {
+  public checkSales(array) {
+    array.map((item) => {
       if (item.sales) {
-        return " category-menu-list";
-      } else {
-        return "d-none";
+        this.wrapperSales.classList.add("visible");
+        this.wrapperSales.classList.remove("d-none");
       }
     });
   }
