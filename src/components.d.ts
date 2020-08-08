@@ -65,11 +65,15 @@ export namespace Components {
     }
     interface SCntMarketLoginAndRegistrationForm {
     }
+    interface SCntMarketLoginForm {
+    }
     interface SCntMarketPickupInModal {
         /**
           * Данные из объекта данных мок
          */
         "pickUpData": TopBarModalPickUpInterface;
+    }
+    interface SCntMarketRegistrationForm {
     }
     interface SCntMarketTopBar {
         /**
@@ -145,11 +149,23 @@ declare global {
         prototype: HTMLSCntMarketLoginAndRegistrationFormElement;
         new (): HTMLSCntMarketLoginAndRegistrationFormElement;
     };
+    interface HTMLSCntMarketLoginFormElement extends Components.SCntMarketLoginForm, HTMLStencilElement {
+    }
+    var HTMLSCntMarketLoginFormElement: {
+        prototype: HTMLSCntMarketLoginFormElement;
+        new (): HTMLSCntMarketLoginFormElement;
+    };
     interface HTMLSCntMarketPickupInModalElement extends Components.SCntMarketPickupInModal, HTMLStencilElement {
     }
     var HTMLSCntMarketPickupInModalElement: {
         prototype: HTMLSCntMarketPickupInModalElement;
         new (): HTMLSCntMarketPickupInModalElement;
+    };
+    interface HTMLSCntMarketRegistrationFormElement extends Components.SCntMarketRegistrationForm, HTMLStencilElement {
+    }
+    var HTMLSCntMarketRegistrationFormElement: {
+        prototype: HTMLSCntMarketRegistrationFormElement;
+        new (): HTMLSCntMarketRegistrationFormElement;
     };
     interface HTMLSCntMarketTopBarElement extends Components.SCntMarketTopBar, HTMLStencilElement {
     }
@@ -169,7 +185,9 @@ declare global {
         "s-cnt-market-header-nav": HTMLSCntMarketHeaderNavElement;
         "s-cnt-market-left-menu-catalog": HTMLSCntMarketLeftMenuCatalogElement;
         "s-cnt-market-login-and-registration-form": HTMLSCntMarketLoginAndRegistrationFormElement;
+        "s-cnt-market-login-form": HTMLSCntMarketLoginFormElement;
         "s-cnt-market-pickup-in-modal": HTMLSCntMarketPickupInModalElement;
+        "s-cnt-market-registration-form": HTMLSCntMarketRegistrationFormElement;
         "s-cnt-market-top-bar": HTMLSCntMarketTopBarElement;
     }
 }
@@ -244,6 +262,8 @@ declare namespace LocalJSX {
     }
     interface SCntMarketLoginAndRegistrationForm {
     }
+    interface SCntMarketLoginForm {
+    }
     interface SCntMarketPickupInModal {
         /**
           * функция для смены значения boolean пропса pickUp
@@ -253,6 +273,8 @@ declare namespace LocalJSX {
           * Данные из объекта данных мок
          */
         "pickUpData"?: TopBarModalPickUpInterface;
+    }
+    interface SCntMarketRegistrationForm {
     }
     interface SCntMarketTopBar {
         /**
@@ -272,7 +294,9 @@ declare namespace LocalJSX {
         "s-cnt-market-header-nav": SCntMarketHeaderNav;
         "s-cnt-market-left-menu-catalog": SCntMarketLeftMenuCatalog;
         "s-cnt-market-login-and-registration-form": SCntMarketLoginAndRegistrationForm;
+        "s-cnt-market-login-form": SCntMarketLoginForm;
         "s-cnt-market-pickup-in-modal": SCntMarketPickupInModal;
+        "s-cnt-market-registration-form": SCntMarketRegistrationForm;
         "s-cnt-market-top-bar": SCntMarketTopBar;
     }
 }
@@ -291,7 +315,9 @@ declare module "@stencil/core" {
             "s-cnt-market-header-nav": LocalJSX.SCntMarketHeaderNav & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderNavElement>;
             "s-cnt-market-left-menu-catalog": LocalJSX.SCntMarketLeftMenuCatalog & JSXBase.HTMLAttributes<HTMLSCntMarketLeftMenuCatalogElement>;
             "s-cnt-market-login-and-registration-form": LocalJSX.SCntMarketLoginAndRegistrationForm & JSXBase.HTMLAttributes<HTMLSCntMarketLoginAndRegistrationFormElement>;
+            "s-cnt-market-login-form": LocalJSX.SCntMarketLoginForm & JSXBase.HTMLAttributes<HTMLSCntMarketLoginFormElement>;
             "s-cnt-market-pickup-in-modal": LocalJSX.SCntMarketPickupInModal & JSXBase.HTMLAttributes<HTMLSCntMarketPickupInModalElement>;
+            "s-cnt-market-registration-form": LocalJSX.SCntMarketRegistrationForm & JSXBase.HTMLAttributes<HTMLSCntMarketRegistrationFormElement>;
             "s-cnt-market-top-bar": LocalJSX.SCntMarketTopBar & JSXBase.HTMLAttributes<HTMLSCntMarketTopBarElement>;
         }
     }
