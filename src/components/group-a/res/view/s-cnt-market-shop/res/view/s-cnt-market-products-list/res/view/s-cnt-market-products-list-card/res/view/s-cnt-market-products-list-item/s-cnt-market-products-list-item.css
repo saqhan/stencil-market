@@ -16,13 +16,17 @@
 .product-link:hover .product-cart {
   display: flex;
 }
+
+.product-img-wrapper {
+  position: relative;
+}
+
 .product-img {
   height: 170px;
   width: 100%;
   margin-bottom: 10px;
   background-size: cover;
   background-position: center;
-  position: relative;
 }
 
 .product-price {
@@ -181,3 +185,12 @@
   background-color: #bfbfbf;
   cursor: default;
 }
+
+.disabled .product-img {
+  filter: grayscale(100%)
+}
+
+.disabled .product-price {
+  display: none;
+}
+

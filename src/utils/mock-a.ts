@@ -1244,7 +1244,7 @@ export const productsList = [
       },
       {
         id: 32,
-        img: "https://via.placeholder.com/100x100?img=Img",
+        img: "https://sbermarket.ru/spree/products/60230/small/65988.jpg?1587399619",
         desc: "Кабачки грунтовые",
         weight: "Нет в наличии",
         currency: "₽",
