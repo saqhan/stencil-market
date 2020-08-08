@@ -11,7 +11,7 @@ export class SCntMarketStatistics implements ComponentInterface {
   /**
    * Данные для компонента Statistics
    */
-  @Prop() forStatistics: MarketStatisticsInterface[] = [];
+  @Prop() forStatistics: MarketStatisticsInterface;
 
   render() {
     return (

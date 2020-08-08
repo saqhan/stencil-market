@@ -12,7 +12,7 @@ export class SCntMarketSelection implements ComponentInterface {
   /**
    * Данные для карточек магазинов
    */
-  @Prop() forSelection: MarketSelectionInterface[] = [];
+  @Prop() forSelection: MarketSelectionInterface;
 
   /**
    * Данные для главной картинки

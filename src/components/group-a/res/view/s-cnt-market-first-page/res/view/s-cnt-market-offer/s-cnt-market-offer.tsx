@@ -12,7 +12,7 @@ export class SCntMarketOffer implements ComponentInterface {
   /**
    * Данные для компонента Offer
    */
-  @Prop() forOffer: MarketOfferInterface[] = [];
+  @Prop() forOffer: MarketOfferInterface;
 
   /**
    * Данные для заголовка
