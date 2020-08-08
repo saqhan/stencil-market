@@ -70,7 +70,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                     // class="category-menu-list"
                     class={this.checkSales()}
                   >
-                    <li class="category-menu-item-placeholder"></li>
+                    {/*<li class="category-menu-item-placeholder"></li>*/}
                     <li class="category-menu-item category-menu-item-promoted">
                       <a class="category-menu-item-link">
                         <div class="category-menu-item-content">
@@ -139,10 +139,10 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * Получение магазинов
    **/
   public checkSales() {
-    console.log('ddd')
+    console.log("ddd");
     return this.leftMenuCatalogArr.map((item) => {
       if (item.sales) {
-       return " category-menu-list";
+        return " category-menu-list";
       } else {
         return "d-none";
       }
