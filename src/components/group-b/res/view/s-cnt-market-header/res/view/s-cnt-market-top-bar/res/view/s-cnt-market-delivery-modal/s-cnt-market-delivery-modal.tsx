@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, EventEmitter, h, Event, Prop} from '@stencil/core';
+import {TopBarModalInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-delivery-modal',
@@ -8,17 +9,17 @@ import {Component, ComponentInterface, EventEmitter, h, Event, Prop} from '@sten
 })
 export class SCntMarketDeliveryModal implements ComponentInterface {
   /**
-   * объект из mock для вывода данных
+   * объект из mock для вывода данных в компоненте модального окна
    */
-  @Prop() modalData: any;
+  @Prop() modalData: TopBarModalInterface;
 
   /**
-   * boolean значение для вывода блока доставки и присвоения класса
+   * boolean значение для вывода/закрытия блока доставки и присвоения класса
    */
   @Prop() delivery: boolean;
 
   /**
-   * boolean значение для вывода блока самовывоза и присвоения класса
+   * boolean значение для вывода/закрытия блока самовывоза и присвоения класса
    */
   @Prop() pickUp: boolean;
 
@@ -107,7 +108,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   }
 
   /**
-   * Вызов функции закрытия модального окна при условиии что нажал не на блок модальки
+   * Вызов функции закрытия модального окна при условиии что нажал не на блок модалки
    */
   public clickPopUp(event) {
     if (event.target === this.ourModal) {

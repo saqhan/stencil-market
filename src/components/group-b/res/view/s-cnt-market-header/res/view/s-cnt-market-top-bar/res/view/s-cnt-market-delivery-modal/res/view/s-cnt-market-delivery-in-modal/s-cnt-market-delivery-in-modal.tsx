@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {TopBarModalDeliveryInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-delivery-in-modal',
@@ -8,9 +9,9 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 })
 export class SCntMarketDeliveryModal implements ComponentInterface {
   /**
-   * boolean значение для вывода
+   * Props значение для принятия и вывода данных
    */
-  @Prop() deliveryData: any;
+  @Prop() deliveryData: TopBarModalDeliveryInterface;
 
   render() {
     return (
@@ -21,8 +22,8 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
         <div class="map-block-wrapper">
           <div class="map-input-wrap">
             <div class="map-input-wrap-inner">
-              <span innerHTML={this.deliveryData.searchIcon}>
-                {/*иконка поиска*/}
+              <span>
+                <i class={this.deliveryData.searchIcon}></i>
                 <input type="text" placeholder="Введите текст"/>
               </span>
             </div>

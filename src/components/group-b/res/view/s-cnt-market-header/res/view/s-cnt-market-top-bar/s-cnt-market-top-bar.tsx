@@ -9,30 +9,30 @@ import {TopBarInterface} from "./res/interface/common.interface";
 })
 export class SCntMarketTopBar implements ComponentInterface {
   /**
-   *
+   * объект данных для компонента top-bar и его подкомпонентов
    */
   @Prop() topBar: TopBarInterface;
 
   /**
-   * boolean значение для вывода
+   * boolean значение для вывода/закрытия модального окна
    */
   @State() modalComplited: boolean;
 
   /**
-   * boolean значение для вывода
+   * boolean значение для вывода блока доставка при открытии модального окна
    */
   @State() deliveryComplited: boolean;
 
   /**
-   * boolean значение для вывода
+   * boolean значение для вывода блока доставка при открытии модального окна
+   * и выделении кнопки самовывоза при его выборе посредством присвоения id родительскому блоку
    */
   @State() pickUpComplited: boolean;
 
   /**
-   * значение number для присвоения id выбранного города
+   * значение для того чтобы читать значение улицы посредством {detail} блока выбранного магазина
    */
   @State() idAddress: string;
-
 
 
   render() {
@@ -41,7 +41,7 @@ export class SCntMarketTopBar implements ComponentInterface {
         <div class="container top-bar-content-outer-block">
           <div class="top-bar-content-inner-block">
             <div class="top-bar-delivery-and-adress">
-              <div class="top-bar-delivery-option-block">
+              <div class="top-bar-delivery-option-block" id={this.pickUpComplited ? 'selected-dilivery' : ''}>
                 <button class="selection-by-delivery" onClick={() => {
                   this.openModal();
                   this.openDelivery();
@@ -59,12 +59,12 @@ export class SCntMarketTopBar implements ComponentInterface {
                 this.openModal();
                 this.openDelivery();
               }}>
-                <span >
-                  <span class={this.idAddress? 'selected-address': ''}>
-                    {this.idAddress? this.idAddress: this.topBar.choiceAddress}
+                <span>
+                  <span class={this.idAddress ? 'selected-address' : ''}>
+                    {this.idAddress ? this.idAddress : this.topBar.choiceAddress}
                   </span>
-                  <button class="delivery-adress-btn" innerHTML={this.topBar.choiceAddressIcon}>
-
+                  <button class="delivery-adress-btn">
+                    <i class={this.topBar.choiceAddressIcon}></i>
                   </button>
                 </span>
               </div>
@@ -106,14 +106,14 @@ export class SCntMarketTopBar implements ComponentInterface {
   }
 
   /**
-   * Вызов модального окна формы
+   * Вызов модального окна
    */
   public openModal() {
     this.modalComplited = true;
   }
 
   /**
-   * Вызов модального окна формы
+   * открытие блока/компонента Доставки при открытии модального окна
    */
   public openDelivery() {
     this.deliveryComplited = true;
@@ -121,7 +121,7 @@ export class SCntMarketTopBar implements ComponentInterface {
   }
 
   /**
-   * Вызов модального окна формы
+   * открытие блока/компонента самовывоз при открытии модального окна
    */
   public openpickUp() {
     this.pickUpComplited = true;
@@ -129,33 +129,22 @@ export class SCntMarketTopBar implements ComponentInterface {
   }
 
   /**
-   * Закрытие модального окна формы
+   * Закрытие модального окна
    */
   public closeModal() {
     this.modalComplited = false;
   }
 
   /**
-   * функция для присвоения id выбранного address
+   * функция для прослушивания значения {detail}(улицы) у блока выбранного магазина
    * */
   public idSelectionAddress({detail}) {
     this.idAddress = detail;
-    if (detail !== null ) {
-      if (detail.length > 30) {
-         this.idAddress = detail.slice(0,30) + '...';
+    if (detail !== null) {
+      if (detail.lenght > 30) {
+        this.idAddress = detail.slice(0, 30) + '...';
       }
     }
   }
-
-  // /**
-  //  * функция для присвоения id выбранного address
-  //  * */
-  // public returnAddress() {
-  //   if (if){
-  //     return(
-  //       this.topBar.choiceAddress
-  //     );
-  //   }
-  // }
 
 }
