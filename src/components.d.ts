@@ -5,8 +5,11 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { TopBarModalDeliveryInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-delivery-in-modal/res/interface/common.interface";
+import { TopBarModalInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/interface/common.interface";
 import { NavMenuItemInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-header-body/res/interface/common.interface";
 import { navBarInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-header-nav/res/interface/common.interface";
+import { TopBarModalPickUpInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-pickUp-in-modal/res/interface/common.interface";
 import { TopBarInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
@@ -19,21 +22,21 @@ export namespace Components {
     }
     interface SCntMarketDeliveryInModal {
         /**
-          * boolean значение для вывода
+          * Props значение для принятия и вывода данных
          */
-        "deliveryData": any;
+        "deliveryData": TopBarModalDeliveryInterface;
     }
     interface SCntMarketDeliveryModal {
         /**
-          * boolean значение для вывода блока доставки и присвоения класса
+          * boolean значение для вывода/закрытия блока доставки и присвоения класса
          */
         "delivery": boolean;
         /**
-          * объект из mock для вывода данных
+          * объект из mock для вывода данных в компоненте модального окна
          */
-        "modalData": any;
+        "modalData": TopBarModalInterface;
         /**
-          * boolean значение для вывода блока самовывоза и присвоения класса
+          * boolean значение для вывода/закрытия блока самовывоза и присвоения класса
          */
         "pickUp": boolean;
     }
@@ -60,13 +63,22 @@ export namespace Components {
         "leftMenuCatalogArr": any;
         "openedLeftMenu": boolean;
     }
+    interface SCntMarketLoginAndRegistrationForm {
+    }
+    interface SCntMarketLoginForm {
+    }
     interface SCntMarketPickupInModal {
         /**
           * Данные из объекта данных мок
          */
-        "pickUpData": any;
+        "pickUpData": TopBarModalPickUpInterface;
+    }
+    interface SCntMarketRegistrationForm {
     }
     interface SCntMarketTopBar {
+        /**
+          * объект данных для компонента top-bar и его подкомпонентов
+         */
         "topBar": TopBarInterface;
     }
 }
@@ -131,11 +143,29 @@ declare global {
         prototype: HTMLSCntMarketLeftMenuCatalogElement;
         new (): HTMLSCntMarketLeftMenuCatalogElement;
     };
+    interface HTMLSCntMarketLoginAndRegistrationFormElement extends Components.SCntMarketLoginAndRegistrationForm, HTMLStencilElement {
+    }
+    var HTMLSCntMarketLoginAndRegistrationFormElement: {
+        prototype: HTMLSCntMarketLoginAndRegistrationFormElement;
+        new (): HTMLSCntMarketLoginAndRegistrationFormElement;
+    };
+    interface HTMLSCntMarketLoginFormElement extends Components.SCntMarketLoginForm, HTMLStencilElement {
+    }
+    var HTMLSCntMarketLoginFormElement: {
+        prototype: HTMLSCntMarketLoginFormElement;
+        new (): HTMLSCntMarketLoginFormElement;
+    };
     interface HTMLSCntMarketPickupInModalElement extends Components.SCntMarketPickupInModal, HTMLStencilElement {
     }
     var HTMLSCntMarketPickupInModalElement: {
         prototype: HTMLSCntMarketPickupInModalElement;
         new (): HTMLSCntMarketPickupInModalElement;
+    };
+    interface HTMLSCntMarketRegistrationFormElement extends Components.SCntMarketRegistrationForm, HTMLStencilElement {
+    }
+    var HTMLSCntMarketRegistrationFormElement: {
+        prototype: HTMLSCntMarketRegistrationFormElement;
+        new (): HTMLSCntMarketRegistrationFormElement;
     };
     interface HTMLSCntMarketTopBarElement extends Components.SCntMarketTopBar, HTMLStencilElement {
     }
@@ -154,7 +184,10 @@ declare global {
         "s-cnt-market-header-body": HTMLSCntMarketHeaderBodyElement;
         "s-cnt-market-header-nav": HTMLSCntMarketHeaderNavElement;
         "s-cnt-market-left-menu-catalog": HTMLSCntMarketLeftMenuCatalogElement;
+        "s-cnt-market-login-and-registration-form": HTMLSCntMarketLoginAndRegistrationFormElement;
+        "s-cnt-market-login-form": HTMLSCntMarketLoginFormElement;
         "s-cnt-market-pickup-in-modal": HTMLSCntMarketPickupInModalElement;
+        "s-cnt-market-registration-form": HTMLSCntMarketRegistrationFormElement;
         "s-cnt-market-top-bar": HTMLSCntMarketTopBarElement;
     }
 }
@@ -169,19 +202,19 @@ declare namespace LocalJSX {
     }
     interface SCntMarketDeliveryInModal {
         /**
-          * boolean значение для вывода
+          * Props значение для принятия и вывода данных
          */
-        "deliveryData"?: any;
+        "deliveryData"?: TopBarModalDeliveryInterface;
     }
     interface SCntMarketDeliveryModal {
         /**
-          * boolean значение для вывода блока доставки и присвоения класса
+          * boolean значение для вывода/закрытия блока доставки и присвоения класса
          */
         "delivery"?: boolean;
         /**
-          * объект из mock для вывода данных
+          * объект из mock для вывода данных в компоненте модального окна
          */
-        "modalData"?: any;
+        "modalData"?: TopBarModalInterface;
         /**
           * Закрытие модального модального окна
          */
@@ -199,7 +232,7 @@ declare namespace LocalJSX {
          */
         "onOpenpickUp"?: (event: CustomEvent<any>) => void;
         /**
-          * boolean значение для вывода блока самовывоза и присвоения класса
+          * boolean значение для вывода/закрытия блока самовывоза и присвоения класса
          */
         "pickUp"?: boolean;
     }
@@ -227,6 +260,10 @@ declare namespace LocalJSX {
         "onCloseLeftMenu"?: (event: CustomEvent<any>) => void;
         "openedLeftMenu"?: boolean;
     }
+    interface SCntMarketLoginAndRegistrationForm {
+    }
+    interface SCntMarketLoginForm {
+    }
     interface SCntMarketPickupInModal {
         /**
           * функция для смены значения boolean пропса pickUp
@@ -235,9 +272,14 @@ declare namespace LocalJSX {
         /**
           * Данные из объекта данных мок
          */
-        "pickUpData"?: any;
+        "pickUpData"?: TopBarModalPickUpInterface;
+    }
+    interface SCntMarketRegistrationForm {
     }
     interface SCntMarketTopBar {
+        /**
+          * объект данных для компонента top-bar и его подкомпонентов
+         */
         "topBar"?: TopBarInterface;
     }
     interface IntrinsicElements {
@@ -251,7 +293,10 @@ declare namespace LocalJSX {
         "s-cnt-market-header-body": SCntMarketHeaderBody;
         "s-cnt-market-header-nav": SCntMarketHeaderNav;
         "s-cnt-market-left-menu-catalog": SCntMarketLeftMenuCatalog;
+        "s-cnt-market-login-and-registration-form": SCntMarketLoginAndRegistrationForm;
+        "s-cnt-market-login-form": SCntMarketLoginForm;
         "s-cnt-market-pickup-in-modal": SCntMarketPickupInModal;
+        "s-cnt-market-registration-form": SCntMarketRegistrationForm;
         "s-cnt-market-top-bar": SCntMarketTopBar;
     }
 }
@@ -269,7 +314,10 @@ declare module "@stencil/core" {
             "s-cnt-market-header-body": LocalJSX.SCntMarketHeaderBody & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBodyElement>;
             "s-cnt-market-header-nav": LocalJSX.SCntMarketHeaderNav & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderNavElement>;
             "s-cnt-market-left-menu-catalog": LocalJSX.SCntMarketLeftMenuCatalog & JSXBase.HTMLAttributes<HTMLSCntMarketLeftMenuCatalogElement>;
+            "s-cnt-market-login-and-registration-form": LocalJSX.SCntMarketLoginAndRegistrationForm & JSXBase.HTMLAttributes<HTMLSCntMarketLoginAndRegistrationFormElement>;
+            "s-cnt-market-login-form": LocalJSX.SCntMarketLoginForm & JSXBase.HTMLAttributes<HTMLSCntMarketLoginFormElement>;
             "s-cnt-market-pickup-in-modal": LocalJSX.SCntMarketPickupInModal & JSXBase.HTMLAttributes<HTMLSCntMarketPickupInModalElement>;
+            "s-cnt-market-registration-form": LocalJSX.SCntMarketRegistrationForm & JSXBase.HTMLAttributes<HTMLSCntMarketRegistrationFormElement>;
             "s-cnt-market-top-bar": LocalJSX.SCntMarketTopBar & JSXBase.HTMLAttributes<HTMLSCntMarketTopBarElement>;
         }
     }

@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, EventEmitter, h, Prop, State, Event} from '@stencil/core';
+import {TopBarModalPickUpInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-pickup-in-modal',
@@ -10,7 +11,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   /**
    * Данные из объекта данных мок
    */
-  @Prop() pickUpData: any;
+  @Prop() pickUpData: TopBarModalPickUpInterface;
 
   /**
    * значение number для присвоения id выбранного города
@@ -32,7 +33,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    */
   @State() idAddress: number;
 
-    /**
+  /**
    * функция для смены значения boolean пропса pickUp
    */
   @Event() idSelectionAddress: EventEmitter;
@@ -56,8 +57,8 @@ export class SCntMarketPickupInModal implements ComponentInterface {
           </span>
           <div class="city-option-for-selected" onClick={() => this.openCityList()}>
             {this.selectedCity(this.pickUpData.cityForSelected)}
-            <span innerHTML={this.pickUpData.selectIcon}>
-            {/*icon вывода списка магазинов*/}
+            <span>
+              <i class={this.pickUpData.selectIcon}></i>
             </span>
             {
               this.CitySelect ?
@@ -166,7 +167,6 @@ export class SCntMarketPickupInModal implements ComponentInterface {
     return array.map(item => {
       if (this.idCity === item.id) {
         return item.storeAddress.map(i => {
-          console.log(this.idAddress)
           if (this.idAddress === i.id) {
             return (
               <span class="store-selected-address">
@@ -206,10 +206,8 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   public iconOrButton() {
     if (typeof this.idAddress != 'number') {
       return (
-        <div class="list-stores-open-icon"
-             innerHTML={this.StoreAddress ? this.pickUpData.selectedStoreIcon : this.pickUpData.storeWithdrawalIcon}
-        >
-          {/*иконка выбора магазина*/}
+        <div class="list-stores-open-icon">
+          <i class={this.StoreAddress ? this.pickUpData.selectedStoreIcon : this.pickUpData.storeWithdrawalIcon}></i>
         </div>
       );
     } else {

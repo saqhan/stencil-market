@@ -2,6 +2,8 @@
 /*
 * Интерфейс для раскрития объекта topBar
 * */
+import {TopBarModalInterface} from "../view/s-cnt-market-delivery-modal/res/interface/common.interface";
+
 export interface TopBarInterface {
   id: string;
   choiceDelivery: string;
@@ -12,5 +14,5 @@ export interface TopBarInterface {
   timeOfDelivery: string;
   phoneNumber: string;
   workingHours: string;
-  modalWindow: object;
+  modalWindow: TopBarModalInterface;
 }

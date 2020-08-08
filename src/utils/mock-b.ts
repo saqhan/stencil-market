@@ -4,7 +4,7 @@ export const header = {
     choiceDelivery: "Доставка",
     choicePickUp: "Самовывоз",
     choiceAddress: " Выберите адрес доставки",
-    choiceAddressIcon: `<i class="fas fa-pencil-alt"></i>`,
+    choiceAddressIcon: 'fas fa-pencil-alt',
     timeOfDeliveryText: "🚛 Ближайшая доставка",
     timeOfDelivery: "сегодня, 19:00-21:00",
     phoneNumber: "+7 800 222-11-00",
@@ -18,16 +18,15 @@ export const header = {
       choicePickUp: "Самовывоз",
       Delivery: {
         id: 1,
-        enterAddressText:
-          "Введите адрес доставки, чтобы увидеть доступные магазины",
-        searchIcon: `<i class="fas fa-search"></i>`,
+        enterAddressText: "Введите адрес доставки, чтобы увидеть доступные магазины",
+        searchIcon: 'fas fa-search',
         btnText: "Сохранить",
       },
       PickUp: {
         id: 1,
         locationIcon: 'fas fa-map-marker-alt',
-        city: "Город:",
-        selectIcon: `<i class="fas fa-angle-down"></i>`,
+        city: 'Город:',
+        selectIcon: 'fas fa-caret-down',
         defaultCity: 1,
         cityForSelected: [
           {
@@ -545,8 +544,8 @@ export const header = {
         logoImg: "https://sbermarket.ru/spree/retailer/icons/234559/original/1.png?1580316602",
         storeName: "Metro",
         numberOfStores: "магазинов",
-        selectedStoreIcon: `<i class="fas fa-angle-up"></i>`,
-        storeWithdrawalIcon: `<i class="fas fa-angle-down"></i>`,
+        selectedStoreIcon: 'fas fa-angle-up',
+        storeWithdrawalIcon: 'fas fa-angle-down',
         updateSelectedAddress: 'Изменить',
       },
     },
