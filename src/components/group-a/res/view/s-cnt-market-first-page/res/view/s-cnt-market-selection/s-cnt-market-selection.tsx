@@ -12,27 +12,22 @@ export class SCntMarketSelection implements ComponentInterface {
   /**
    * Данные для карточек магазинов
    */
-  @Prop() forSelection: any;
+  @Prop() forSelection: MarketSelectionInterface[] = [];
 
   /**
    * Данные для главной картинки
    */
-  @Prop() homePageImage: any;
+  @Prop() homePageImage: string;
 
   /**
    * Данные для заголовка на картинке
    */
-  @Prop() homeText: any;
+  @Prop() homeText: string;
 
   /**
    * Данные для подзаголовка на картинке
    */
-  @Prop() homeSubText: any;
-
-  /**
-   * Приём данных из массива для вывода
-   */
-  @Prop() MarketSelectionInterface: MarketSelectionInterface[] = [];
+  @Prop() homeSubText: string;
 
   render() {
     return (
@@ -42,19 +37,16 @@ export class SCntMarketSelection implements ComponentInterface {
           style={{ backgroundImage: "url(" + this.homePageImage + ")" }}
         >
           <div class="commonText">
-            <div class="text" innerHTML={markdown.toHTML(this.homeText)}>
-            </div>
+            <div class="text" innerHTML={markdown.toHTML(this.homeText)}></div>
             <div
               class="subtext"
               innerHTML={markdown.toHTML(this.homeSubText)}
-            >
-              </div>
+            ></div>
           </div>
         </div>
         <div class="container">
           <div class="row">
-            <GetSelection array={this.forSelection}>
-            </GetSelection>
+            <GetSelection array={this.forSelection}></GetSelection>
           </div>
         </div>
       </div>
@@ -68,8 +60,7 @@ const GetSelection = (props) => {
       <div class="col-md-4">
         <s-cnt-market-item-selection
           forSelection={item}
-        >
-        </s-cnt-market-item-selection>
+        ></s-cnt-market-item-selection>
       </div>
     );
   });

@@ -1,5 +1,8 @@
 import { Component, ComponentInterface, h } from "@stencil/core";
 import {
+  deliveryImage,
+  deliveryTitleText,
+  forDelivery,
   forOffer,
   forSelection,
   forStatistics,
@@ -32,6 +35,11 @@ export class SCntMarketFirstPage implements ComponentInterface {
         <s-cnt-market-statistics
           forStatistics={forStatistics}
         ></s-cnt-market-statistics>
+        <s-cnt-market-delivery
+          forDelivery={forDelivery}
+          deliveryTitleText={deliveryTitleText}
+          deliveryImage={deliveryImage}
+        ></s-cnt-market-delivery>
       </div>
     );
   }
