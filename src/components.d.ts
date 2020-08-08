@@ -25,8 +25,6 @@ export namespace Components {
     }
     interface SCntMarketHeader {
     }
-    interface SCntMarketItemDelivery {
-    }
     interface SCntMarketItemOffer {
         /**
           * Приём данных из массива для вывода
@@ -224,12 +222,6 @@ declare global {
         prototype: HTMLSCntMarketHeaderElement;
         new (): HTMLSCntMarketHeaderElement;
     };
-    interface HTMLSCntMarketItemDeliveryElement extends Components.SCntMarketItemDelivery, HTMLStencilElement {
-    }
-    var HTMLSCntMarketItemDeliveryElement: {
-        prototype: HTMLSCntMarketItemDeliveryElement;
-        new (): HTMLSCntMarketItemDeliveryElement;
-    };
     interface HTMLSCntMarketItemOfferElement extends Components.SCntMarketItemOffer, HTMLStencilElement {
     }
     var HTMLSCntMarketItemOfferElement: {
@@ -351,7 +343,6 @@ declare global {
         "s-cnt-market-delivery": HTMLSCntMarketDeliveryElement;
         "s-cnt-market-first-page": HTMLSCntMarketFirstPageElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
-        "s-cnt-market-item-delivery": HTMLSCntMarketItemDeliveryElement;
         "s-cnt-market-item-offer": HTMLSCntMarketItemOfferElement;
         "s-cnt-market-item-recommended": HTMLSCntMarketItemRecommendedElement;
         "s-cnt-market-item-selection": HTMLSCntMarketItemSelectionElement;
@@ -385,8 +376,6 @@ declare namespace LocalJSX {
     interface SCntMarketFirstPage {
     }
     interface SCntMarketHeader {
-    }
-    interface SCntMarketItemDelivery {
     }
     interface SCntMarketItemOffer {
         /**
@@ -554,7 +543,6 @@ declare namespace LocalJSX {
         "s-cnt-market-delivery": SCntMarketDelivery;
         "s-cnt-market-first-page": SCntMarketFirstPage;
         "s-cnt-market-header": SCntMarketHeader;
-        "s-cnt-market-item-delivery": SCntMarketItemDelivery;
         "s-cnt-market-item-offer": SCntMarketItemOffer;
         "s-cnt-market-item-recommended": SCntMarketItemRecommended;
         "s-cnt-market-item-selection": SCntMarketItemSelection;
@@ -586,7 +574,6 @@ declare module "@stencil/core" {
             "s-cnt-market-delivery": LocalJSX.SCntMarketDelivery & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryElement>;
             "s-cnt-market-first-page": LocalJSX.SCntMarketFirstPage & JSXBase.HTMLAttributes<HTMLSCntMarketFirstPageElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
-            "s-cnt-market-item-delivery": LocalJSX.SCntMarketItemDelivery & JSXBase.HTMLAttributes<HTMLSCntMarketItemDeliveryElement>;
             "s-cnt-market-item-offer": LocalJSX.SCntMarketItemOffer & JSXBase.HTMLAttributes<HTMLSCntMarketItemOfferElement>;
             "s-cnt-market-item-recommended": LocalJSX.SCntMarketItemRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketItemRecommendedElement>;
             "s-cnt-market-item-selection": LocalJSX.SCntMarketItemSelection & JSXBase.HTMLAttributes<HTMLSCntMarketItemSelectionElement>;
