@@ -592,7 +592,7 @@ export const header = {
       id:1,
       title: 'Дачный сезон',
       img: 'https://sbermarket.ru/spree/taxons/10412/normal/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.jpg',
-      sales: true,
+      sales: false,
       subcategories: [
         {
           id: 1,
@@ -618,7 +618,7 @@ export const header = {
       id:3,
       title: "Бренды Procter & Gamble",
       img: "https://sbermarket.ru/static/taxons/default.png",
-      sales: true,
+      sales: false,
       subcategories: [
         {
           id: 1,
@@ -627,5 +627,5 @@ export const header = {
         }
       ]
     },
-  ]
+  ],
 }
