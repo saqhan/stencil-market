@@ -28,6 +28,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   @State() openedLeftMenu: boolean;
 
+  /**
+   * Показывать/скрывать корзину
+   * */
+  @State() openedBasket: boolean;
+
   private modalTag: any;
 
   render() {
@@ -41,11 +46,6 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class="fas fa-bars"></i>
                   <span>{this.navBar.catalogBtn}</span>
                 </button>
-                {/*{this.isShowLeftMenuCatalog ? (*/}
-                {/*  <s-cnt-market-left-menu-catalog onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>*/}
-                {/*) : (*/}
-                {/*  ""*/}
-                {/*)}*/}
                 {<s-cnt-market-left-menu-catalog leftMenuCatalogArr={this.leftMenuCatalogArr} openedLeftMenu={this.openedLeftMenu} onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>}
               </div>
               <div class="nav-search">
@@ -99,10 +99,13 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 </a>
               </div>
               <div class="user-cart">
-                <a>
+                <a
+                  onClick={()=> this.onClickBasketHandler()}
+                >
                   <i class="fas fa-shopping-cart"></i>
                   <span>{this.navBar.titleCart}</span>
                 </a>
+                <s-cnt-market-basket openedBasket={this.openedBasket} onCloseBasket={()=> this.closeBasket()}></s-cnt-market-basket>
               </div>
             </div>
           </div>
@@ -131,12 +134,24 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * Show/hide left menu
    * */
   public onClickCatalogHandler() {
-    // this.isShowLeftMenuCatalog = true;
     this.openedLeftMenu = true;
+  }
+  /**
+   * Показываь корзину
+   * */
+  public onClickBasketHandler() {
+    this.openedBasket = true;
   }
   //
   public closeLeftMenu() {
     this.openedLeftMenu = false;
+  }
+
+  /**
+   * Закрыть корзину
+   * */
+  public closeBasket(){
+    this.openedBasket = false;
   }
 
 }

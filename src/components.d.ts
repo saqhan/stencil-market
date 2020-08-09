@@ -20,6 +20,12 @@ export namespace Components {
     }
     interface SCntMarketAccountMenu {
     }
+    interface SCntMarketBasket {
+        /**
+          * Стейт на состояние корзины открыто/закрыто
+         */
+        "openedBasket": boolean;
+    }
     interface SCntMarketDeliveryInModal {
         /**
           * Props значение для принятия и вывода данных
@@ -107,6 +113,12 @@ declare global {
         prototype: HTMLSCntMarketAccountMenuElement;
         new (): HTMLSCntMarketAccountMenuElement;
     };
+    interface HTMLSCntMarketBasketElement extends Components.SCntMarketBasket, HTMLStencilElement {
+    }
+    var HTMLSCntMarketBasketElement: {
+        prototype: HTMLSCntMarketBasketElement;
+        new (): HTMLSCntMarketBasketElement;
+    };
     interface HTMLSCntMarketDeliveryInModalElement extends Components.SCntMarketDeliveryInModal, HTMLStencilElement {
     }
     var HTMLSCntMarketDeliveryInModalElement: {
@@ -178,6 +190,7 @@ declare global {
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
         "s-cnt-market-account-menu": HTMLSCntMarketAccountMenuElement;
+        "s-cnt-market-basket": HTMLSCntMarketBasketElement;
         "s-cnt-market-delivery-in-modal": HTMLSCntMarketDeliveryInModalElement;
         "s-cnt-market-delivery-modal": HTMLSCntMarketDeliveryModalElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
@@ -199,6 +212,16 @@ declare namespace LocalJSX {
     interface MyComponent {
     }
     interface SCntMarketAccountMenu {
+    }
+    interface SCntMarketBasket {
+        /**
+          * /Закрыть корзину
+         */
+        "onCloseBasket"?: (event: CustomEvent<any>) => void;
+        /**
+          * Стейт на состояние корзины открыто/закрыто
+         */
+        "openedBasket"?: boolean;
     }
     interface SCntMarketDeliveryInModal {
         /**
@@ -257,6 +280,9 @@ declare namespace LocalJSX {
           * массив магазинов для вывода
          */
         "leftMenuCatalogArr"?: leftMenuCatalogInterface[];
+        /**
+          * закрывать меню
+         */
         "onCloseLeftMenu"?: (event: CustomEvent<any>) => void;
         "openedLeftMenu"?: boolean;
     }
@@ -287,6 +313,7 @@ declare namespace LocalJSX {
         "group-b": GroupB;
         "my-component": MyComponent;
         "s-cnt-market-account-menu": SCntMarketAccountMenu;
+        "s-cnt-market-basket": SCntMarketBasket;
         "s-cnt-market-delivery-in-modal": SCntMarketDeliveryInModal;
         "s-cnt-market-delivery-modal": SCntMarketDeliveryModal;
         "s-cnt-market-header": SCntMarketHeader;
@@ -308,6 +335,7 @@ declare module "@stencil/core" {
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "s-cnt-market-account-menu": LocalJSX.SCntMarketAccountMenu & JSXBase.HTMLAttributes<HTMLSCntMarketAccountMenuElement>;
+            "s-cnt-market-basket": LocalJSX.SCntMarketBasket & JSXBase.HTMLAttributes<HTMLSCntMarketBasketElement>;
             "s-cnt-market-delivery-in-modal": LocalJSX.SCntMarketDeliveryInModal & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryInModalElement>;
             "s-cnt-market-delivery-modal": LocalJSX.SCntMarketDeliveryModal & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryModalElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;

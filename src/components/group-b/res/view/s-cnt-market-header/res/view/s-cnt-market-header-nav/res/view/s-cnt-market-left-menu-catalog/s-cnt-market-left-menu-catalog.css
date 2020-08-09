@@ -37,13 +37,15 @@
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
-  visibility: visible;
+}
+
+.drawer-left {
+  transform: translateX(-105%);
 }
 
 .drawer-left {
   display: flex;
   position: fixed;
-  visibility: hidden;
   left: 0px;
   right: auto;
   bottom: 0px;
@@ -225,7 +227,7 @@ category-menu-item-title {
 
 /*.category-menu-item-dropdown.category-menu-item-dropdown-opened{display:block}*/
 
-.category-menu-item:hover .category-menu-item-dropdown  {
+.category-menu-item:hover .category-menu-item-dropdown {
   display: block;
 }
 

@@ -7,7 +7,10 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import {leftMenuCatalogInterface, subcategoriesInterface} from "../../interface/common.interface";
+import {
+  leftMenuCatalogInterface,
+  subcategoriesInterface,
+} from "../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-left-menu-catalog",
@@ -31,6 +34,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * */
   @State() leftMenuCatalogArrState = this.leftMenuCatalogArr;
 
+  /**
+   * закрывать меню
+   * */
   @Event() closeLeftMenu: EventEmitter;
 
   /**
@@ -50,9 +56,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   render() {
     return (
       <div>
-        <div
-          // class="drawer-backdrop"
-          class={
+        <div class={
             this.openedLeftMenu
               ? "drawer-backdrop  opened "
               : "drawer-backdrop "
@@ -66,7 +70,6 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
               ? "drawer-left drawer-transition opened "
               : "drawer-left drawer-transition "
           }
-          // ref={(el) => (this.leftMenuContentTag = el)}
         >
           <div class="drawer-content">
             <div class="category-menu">
@@ -98,21 +101,25 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                       </a>
                       <div class="category-menu-item-dropdown ">
                         <ul class="category-menu-item-dropdown-list">
-                          {this.leftMenuCatalogArrState.map(item => {
-                            return <li class="category-menu-item">
-                              <a class="category-menu-item-link-dropdown">
-                                <div class="category-menu-item-content">
-                                  <div class="category-menu-item-icon"
-                                       style={{backgroundImage: `url(${item.img})`}}
-                                  ></div>
-                                  <div class="category-menu-item-title">
-                                    {item.title}
+                          {this.leftMenuCatalogArrState.map((item) => {
+                            return (
+                              <li class="category-menu-item">
+                                <a class="category-menu-item-link-dropdown">
+                                  <div class="category-menu-item-content">
+                                    <div
+                                      class="category-menu-item-icon"
+                                      style={{
+                                        backgroundImage: `url(${item.img})`,
+                                      }}
+                                    ></div>
+                                    <div class="category-menu-item-title">
+                                      {item.title}
+                                    </div>
                                   </div>
-                                </div>
-                              </a>
-                            </li>
+                                </a>
+                              </li>
+                            );
                           })}
-
                         </ul>
                       </div>
                     </li>
@@ -149,14 +156,15 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * Получение магазинов со скидками
    * */
   public getShopsWithSales() {
-    this.leftMenuCatalogArrState =  this.leftMenuCatalogArr.filter(item => item.sales )
+    this.leftMenuCatalogArrState = this.leftMenuCatalogArr.filter(
+      (item) => item.sales
+    );
   }
-
 
   /**
    * Получение магазинов
    **/
-  public getShopsItems(array):leftMenuCatalogInterface[] {
+  public getShopsItems(array): leftMenuCatalogInterface[] {
     return array.map((item) => {
       return (
         <li class="category-menu-item" id={item.id}>
@@ -181,32 +189,32 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * Получения подкатегорий TODO исправить вывод подкатегорий, где больше 1
    * */
-  public getSubcategories(array):subcategoriesInterface {
-    return array.map(item => {
-      return <div class="category-menu-item-dropdown ">
-        <ul class="category-menu-item-dropdown-list">
-          <li class="category-menu-item">
-            <a class="category-menu-item-link-dropdown">
-              <div class="category-menu-item-content">
-                <div class="category-menu-item-icon"
-                     style={{backgroundImage: `url(${item.img})`}}
-                ></div>
-                <div class="category-menu-item-title">
-                  {item.title}
+  public getSubcategories(array: subcategoriesInterface[]):subcategoriesInterface[] {
+    return array.map((item) => {
+      return (
+        <div class="category-menu-item-dropdown ">
+          <ul class="category-menu-item-dropdown-list">
+            <li class="category-menu-item">
+              <a class="category-menu-item-link-dropdown">
+                <div class="category-menu-item-content">
+                  <div
+                    class="category-menu-item-icon"
+                    style={{ backgroundImage: `url(${item.img})` }}
+                  ></div>
+                  <div class="category-menu-item-title">{item.title}</div>
                 </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    })
+              </a>
+            </li>
+          </ul>
+        </div>
+      );
+    });
   }
-
 
   /**
    * Получение блока "скидки" если у магазинов ест скидки
    **/
-  public checkSales(array) {
+  public checkSales(array): void {
     array.map((item) => {
       if (item.sales) {
         this.wrapperSales.classList.add("visible");
