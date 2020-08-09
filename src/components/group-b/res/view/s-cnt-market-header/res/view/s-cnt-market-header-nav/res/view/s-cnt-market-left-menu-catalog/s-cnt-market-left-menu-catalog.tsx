@@ -25,6 +25,11 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * */
   @Prop() leftMenuCatalogArr: any;
 
+  /**
+   * Стейт для фильтраций скидов
+   * */
+  @State() leftMenuCatalogArrState = this.leftMenuCatalogArr;
+
   @Event() closeLeftMenu: EventEmitter;
 
   /**
@@ -39,6 +44,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
 
   componentDidLoad() {
     this.checkSales(this.leftMenuCatalogArr);
+    this.getShopsWithSales();
   }
   render() {
     return (
@@ -78,7 +84,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                     class="category-menu-list d-none "
                     ref={(el) => (this.wrapperSales = el)}
                   >
-                    <li class="category-menu-item-placeholder"></li>
+                    {/*<li class="category-menu-item-placeholder"></li>*/}
                     <li class="category-menu-item category-menu-item-promoted">
                       <a class="category-menu-item-link">
                         <div class="category-menu-item-content">
@@ -91,22 +97,25 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                       </a>
                       <div class="category-menu-item-dropdown ">
                         <ul class="category-menu-item-dropdown-list">
-                          <li class="category-menu-item">
-                            <a class="category-menu-item-link-dropdown">
-                              <div class="category-menu-item-content">
-                                <div class="category-menu-item-icon"
-                                  style={{backgroundImage: `url(https://sbermarket.ru/spree/taxons/4279/normal/2050000.jpg)`}}
-                                ></div>
-                                <div class="category-menu-item-title">
-                                  Электроника и бытовая техника
+                          {this.leftMenuCatalogArrState.map(item => {
+                            return <li class="category-menu-item">
+                              <a class="category-menu-item-link-dropdown">
+                                <div class="category-menu-item-content">
+                                  <div class="category-menu-item-icon"
+                                       style={{backgroundImage: `url(${item.img})`}}
+                                  ></div>
+                                  <div class="category-menu-item-title">
+                                    {item.title}
+                                  </div>
                                 </div>
-                              </div>
-                            </a>
-                          </li>
+                              </a>
+                            </li>
+                          })}
+
                         </ul>
                       </div>
                     </li>
-                    <li class="category-menu-item-placeholder"></li>
+                    {/*<li class="category-menu-item-placeholder"></li>*/}
                   </ul>
                   <ul class="category-menu-list border-gray">
                     {this.getShopsItems(this.leftMenuCatalogArr)}
@@ -136,6 +145,14 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   }
 
   /**
+   * Получение магазинов со скидками
+   * */
+  public getShopsWithSales() {
+    this.leftMenuCatalogArrState =  this.leftMenuCatalogArr.filter(item => item.sales )
+  }
+
+
+  /**
    * Получение магазинов
    **/
   public getShopsItems(array) {
@@ -160,6 +177,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
     });
   }
 
+  /**
+   * Получения подкатегорий
+   * */
   public getSubcategories(array){
     return array.map(item => {
       return <div class="category-menu-item-dropdown ">
@@ -180,6 +200,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
       </div>
     })
   }
+
 
   /**
    * Получение магазинов

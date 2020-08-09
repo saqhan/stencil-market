@@ -679,7 +679,7 @@ export const header = {
       id:7,
       title: "Сладости",
       img: "https://sbermarket.ru/spree/taxons/4768/normal/10000000.png",
-      sales: false,
+      sales: true,
       subcategories: [
         {
           id: 1,
@@ -718,7 +718,7 @@ export const header = {
       id:10,
       title: 'Яйца',
       img: 'https://sbermarket.ru/spree/taxons/4574/normal/6000000.png?1587987444',
-      sales: false,
+      sales: true,
       subcategories: [
         {
           id: 1,
@@ -731,7 +731,7 @@ export const header = {
       id:11,
       title: 'Хлеб и выпечка',
       img: 'https://sbermarket.ru/spree/taxons/4697/normal/9000000.png?1587987444',
-      sales: false,
+      sales: true,
       subcategories: [
         {
           id: 1,
