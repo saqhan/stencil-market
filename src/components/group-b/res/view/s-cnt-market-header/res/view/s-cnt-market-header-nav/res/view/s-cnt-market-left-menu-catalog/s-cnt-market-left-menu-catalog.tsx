@@ -7,6 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
+import {leftMenuCatalogInterface, subcategoriesInterface} from "../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-left-menu-catalog",
@@ -23,7 +24,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * массив магазинов для вывода
    * */
-  @Prop() leftMenuCatalogArr: any;
+  @Prop() leftMenuCatalogArr: leftMenuCatalogInterface[] = [];
 
   /**
    * Стейт для фильтраций скидов
@@ -155,7 +156,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * Получение магазинов
    **/
-  public getShopsItems(array) {
+  public getShopsItems(array):leftMenuCatalogInterface[] {
     return array.map((item) => {
       return (
         <li class="category-menu-item" id={item.id}>
@@ -178,9 +179,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   }
 
   /**
-   * Получения подкатегорий
+   * Получения подкатегорий TODO исправить вывод подкатегорий, где больше 1
    * */
-  public getSubcategories(array){
+  public getSubcategories(array):subcategoriesInterface {
     return array.map(item => {
       return <div class="category-menu-item-dropdown ">
         <ul class="category-menu-item-dropdown-list">
@@ -203,7 +204,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
 
 
   /**
-   * Получение магазинов
+   * Получение блока "скидки" если у магазинов ест скидки
    **/
   public checkSales(array) {
     array.map((item) => {

@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
-import { navBarInterface } from "./res/interface/common.interface";
+import {leftMenuCatalogInterface, navBarInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-header-nav",
@@ -16,7 +16,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * Данные для магазинов из каталога
    * */
-  @Prop() leftMenuCatalogArr: any;
+  @Prop() leftMenuCatalogArr: leftMenuCatalogInterface[] = [];
 
   /*
    * Показывать/скрывать аккаунт юзера

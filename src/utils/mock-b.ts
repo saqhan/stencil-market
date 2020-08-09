@@ -588,7 +588,7 @@ export const header = {
   },
   leftMenuCatalog: [
     {
-      id:1,
+      id:'2',
       title: 'Дачный сезон',
       img: 'https://sbermarket.ru/spree/taxons/10412/normal/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.jpg',
       sales: false,

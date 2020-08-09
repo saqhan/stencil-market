@@ -13,3 +13,23 @@ export interface navBarInterface {
   titleOrders: string;
   titleCart: string;
 }
+
+/**
+ * данные для подкатегорий из левого каталога
+ * */
+export interface subcategoriesInterface {
+  id: number;
+  title: string;
+  img: string;
+}
+
+/**
+ * данные для магазинов из левого каталога
+ * */
+export interface leftMenuCatalogInterface {
+  id: number;
+  title: string;
+  img: string;
+  sales: string;
+  subcategories : subcategoriesInterface;
+}

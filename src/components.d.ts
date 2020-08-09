@@ -8,7 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { TopBarModalDeliveryInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-delivery-in-modal/res/interface/common.interface";
 import { TopBarModalInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/interface/common.interface";
 import { NavMenuItemInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-header-body/res/interface/common.interface";
-import { navBarInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-header-nav/res/interface/common.interface";
+import { leftMenuCatalogInterface, navBarInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-header-nav/res/interface/common.interface";
 import { TopBarModalPickUpInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-pickUp-in-modal/res/interface/common.interface";
 import { TopBarInterface, } from "./components/group-b/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/interface/common.interface";
 export namespace Components {
@@ -53,14 +53,14 @@ export namespace Components {
         /**
           * Данные для магазинов из каталога
          */
-        "leftMenuCatalogArr": any;
+        "leftMenuCatalogArr": leftMenuCatalogInterface[];
         "navBar": navBarInterface;
     }
     interface SCntMarketLeftMenuCatalog {
         /**
           * массив магазинов для вывода
          */
-        "leftMenuCatalogArr": any;
+        "leftMenuCatalogArr": leftMenuCatalogInterface[];
         "openedLeftMenu": boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
@@ -249,14 +249,14 @@ declare namespace LocalJSX {
         /**
           * Данные для магазинов из каталога
          */
-        "leftMenuCatalogArr"?: any;
+        "leftMenuCatalogArr"?: leftMenuCatalogInterface[];
         "navBar"?: navBarInterface;
     }
     interface SCntMarketLeftMenuCatalog {
         /**
           * массив магазинов для вывода
          */
-        "leftMenuCatalogArr"?: any;
+        "leftMenuCatalogArr"?: leftMenuCatalogInterface[];
         "onCloseLeftMenu"?: (event: CustomEvent<any>) => void;
         "openedLeftMenu"?: boolean;
     }
