@@ -89,7 +89,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                           <i class="fas fa-angle-right"></i>
                         </div>
                       </a>
-                      <div class="category-menu-item-dropdown category-menu-item-dropdown-opened ">
+                      <div class="category-menu-item-dropdown ">
                         <ul class="category-menu-item-dropdown-list">
                           <li class="category-menu-item">
                             <a class="category-menu-item-link-dropdown">
@@ -154,9 +154,31 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
               <i class="fas fa-angle-right"></i>
             </div>
           </a>
+          {this.getSubcategories(item.subcategories)}
         </li>
       );
     });
+  }
+
+  public getSubcategories(array){
+    return array.map(item => {
+      return <div class="category-menu-item-dropdown ">
+        <ul class="category-menu-item-dropdown-list">
+          <li class="category-menu-item">
+            <a class="category-menu-item-link-dropdown">
+              <div class="category-menu-item-content">
+                <div class="category-menu-item-icon"
+                     style={{backgroundImage: `url(${item.img})`}}
+                ></div>
+                <div class="category-menu-item-title">
+                  {item.title}
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    })
   }
 
   /**
