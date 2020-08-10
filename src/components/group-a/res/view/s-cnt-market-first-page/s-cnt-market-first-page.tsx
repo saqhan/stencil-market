@@ -1,15 +1,19 @@
 import { Component, ComponentInterface, h } from "@stencil/core";
 import {
+  choiceTitleText,
   deliveryImage,
   deliveryTitleText,
   forDelivery,
   forOffer,
   forSelection,
   forStatistics,
+  forChoice,
   homePageImage,
   homeSubText,
   homeText,
   offerTitleText,
+  forSpecialist,
+  forCourier,
 } from "../../../../../utils/mock-a";
 
 @Component({
@@ -40,6 +44,14 @@ export class SCntMarketFirstPage implements ComponentInterface {
           deliveryTitleText={deliveryTitleText}
           deliveryImage={deliveryImage}
         ></s-cnt-market-delivery>
+        <s-cnt-market-choice
+          forChoice={forChoice}
+          choiceTitleText={choiceTitleText}
+        ></s-cnt-market-choice>
+        <s-cnt-market-specialist
+          forSpecialist={forSpecialist}
+        ></s-cnt-market-specialist>
+        <s-cnt-market-courier forCourier={forCourier}></s-cnt-market-courier>
       </div>
     );
   }

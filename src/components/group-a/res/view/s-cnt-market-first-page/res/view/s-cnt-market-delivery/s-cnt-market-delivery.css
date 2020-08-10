@@ -1,4 +1,5 @@
 .container {
+  margin-top: 100px;
   padding-top: 60px;
 }
 
@@ -12,6 +13,7 @@
 }
 
 .title {
+  font-weight: 600;
   margin-left: 25px;
   line-height: .17;
   font-size: 35px;
@@ -48,14 +50,38 @@
 }
 
 .btn:hover {
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   background-color: #f3f4f7;
-  color: #333536
+  color: #333536;
 }
 
-
-
 @media only screen and (max-width: 400px) {
+  .deliveryImage {
+    width: 365px;
+    height: 650px;
+  }
 
+  .title {
+    margin-top: -30px;
+    margin-bottom: 110px;
+    text-align: center;
+    line-height: 0.7;
+    font-size: 24px;
+  }
+
+  .list {
+    width: 170px;
+    margin-top: 145px;
+  }
+
+  .city {
+    font-size: 14px;
+  }
+
+  .btn {
+    margin: 0 0 0 5px;
+    width: 326px;
+    height: 48px;
+  }
 }

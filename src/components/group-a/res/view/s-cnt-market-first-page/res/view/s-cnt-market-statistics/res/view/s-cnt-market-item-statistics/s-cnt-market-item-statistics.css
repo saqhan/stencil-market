@@ -8,3 +8,16 @@
 .common {
   margin-left: 63px;
 }
+
+
+@media only screen and (max-width: 400px) {
+  .common {
+    max-width: 300px;
+    margin-left: 35px;
+  }
+  .text {
+    margin-left: 0;
+    text-align: center;
+    line-height: 1.2;
+  }
+}

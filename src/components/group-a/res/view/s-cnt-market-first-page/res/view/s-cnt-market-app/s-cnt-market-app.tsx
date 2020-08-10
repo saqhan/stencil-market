@@ -1,11 +1,11 @@
 import { Component, ComponentInterface, Host, h } from '@stencil/core';
 
 @Component({
-  tag: 's-cnt-market-choice',
-  styleUrl: 's-cnt-market-choice.css',
+  tag: 's-cnt-market-app',
+  styleUrl: 's-cnt-market-app.css',
   shadow: true,
 })
-export class SCntMarketChoice implements ComponentInterface {
+export class SCntMarketApp implements ComponentInterface {
 
   render() {
     return (

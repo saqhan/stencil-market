@@ -12,7 +12,7 @@ export class SCntMarketOffer implements ComponentInterface {
   /**
    * Данные для компонента Offer
    */
-  @Prop() forOffer: MarketOfferInterface;
+  @Prop() forOffer: MarketOfferInterface[] = [];
 
   /**
    * Данные для заголовка
@@ -25,16 +25,18 @@ export class SCntMarketOffer implements ComponentInterface {
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <div
-                class="title"
-                innerHTML={markdown.toHTML(this.offerTitleText)}
-              ></div>
-            </div>
-            <div class="container">
-              <div class="row">
-                <GetOffer arrayOffer={this.forOffer}></GetOffer>
+              <div class="offerTitle">
+                <div
+                  class="title"
+                  innerHTML={markdown.toHTML(this.offerTitleText)}
+                ></div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <GetOffer arrayOffer={this.forOffer}></GetOffer>
           </div>
         </div>
       </div>

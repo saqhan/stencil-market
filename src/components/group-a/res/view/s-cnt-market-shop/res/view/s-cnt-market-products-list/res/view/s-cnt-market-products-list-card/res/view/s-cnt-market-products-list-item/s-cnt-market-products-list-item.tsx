@@ -42,9 +42,9 @@ export class SCntMarketProductsListItem implements ComponentInterface {
 
 
           <div
-            class="product-img"
-            style={{ backgroundImage: `url(${this.productsListCard.img})` }}
+            class="product-img-wrapper"
           >
+            <div class="product-img" style={{ backgroundImage: `url(${this.productsListCard.img})` }}></div>
             <div class="product-cart">
               <div class="product-favorite">
                 <i class="fas fa-heart"></i>

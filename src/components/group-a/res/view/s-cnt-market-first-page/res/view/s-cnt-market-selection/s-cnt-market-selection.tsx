@@ -12,7 +12,7 @@ export class SCntMarketSelection implements ComponentInterface {
   /**
    * Данные для карточек магазинов
    */
-  @Prop() forSelection: MarketSelectionInterface;
+  @Prop() forSelection: MarketSelectionInterface[] = [];
 
   /**
    * Данные для главной картинки
@@ -34,14 +34,15 @@ export class SCntMarketSelection implements ComponentInterface {
       <div class="selection">
         <div
           class="imageHome"
-          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}
-        >
+          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}>
           <div class="commonText">
-            <div class="text" innerHTML={markdown.toHTML(this.homeText)}></div>
+            <div class="homeText" innerHTML={markdown.toHTML(this.homeText)}>
+            </div>
             <div
-              class="subtext"
+              class="homeSubtext"
               innerHTML={markdown.toHTML(this.homeSubText)}
-            ></div>
+            >
+            </div>
           </div>
         </div>
         <div class="container">
