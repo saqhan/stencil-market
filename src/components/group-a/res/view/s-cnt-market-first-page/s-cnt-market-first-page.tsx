@@ -13,7 +13,7 @@ import {
   homeText,
   offerTitleText,
   forSpecialist,
-  forCourier,
+  forCourier, forApp,
 } from "../../../../../utils/mock-a";
 
 @Component({
@@ -31,27 +31,36 @@ export class SCntMarketFirstPage implements ComponentInterface {
           homePageImage={homePageImage}
           homeText={homeText}
           homeSubText={homeSubText}
-        ></s-cnt-market-selection>
+        >
+        </s-cnt-market-selection>
         <s-cnt-market-offer
           forOffer={forOffer}
           offerTitleText={offerTitleText}
-        ></s-cnt-market-offer>
+        >
+        </s-cnt-market-offer>
         <s-cnt-market-statistics
           forStatistics={forStatistics}
-        ></s-cnt-market-statistics>
+        >
+        </s-cnt-market-statistics>
         <s-cnt-market-delivery
           forDelivery={forDelivery}
           deliveryTitleText={deliveryTitleText}
           deliveryImage={deliveryImage}
-        ></s-cnt-market-delivery>
+        >
+        </s-cnt-market-delivery>
         <s-cnt-market-choice
           forChoice={forChoice}
           choiceTitleText={choiceTitleText}
-        ></s-cnt-market-choice>
+        >
+        </s-cnt-market-choice>
         <s-cnt-market-specialist
           forSpecialist={forSpecialist}
-        ></s-cnt-market-specialist>
-        <s-cnt-market-courier forCourier={forCourier}></s-cnt-market-courier>
+        >
+        </s-cnt-market-specialist>
+        <s-cnt-market-courier forCourier={forCourier}>
+        </s-cnt-market-courier>
+        <s-cnt-market-app forApp={forApp}>
+        </s-cnt-market-app>
       </div>
     );
   }
