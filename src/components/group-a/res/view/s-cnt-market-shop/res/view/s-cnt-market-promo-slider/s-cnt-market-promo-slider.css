@@ -6,12 +6,10 @@
 
 .main-carousel {
   margin: 24px 70px;
-  /*position: relative;*/
-  /*width: calc(100% - 140px);*/
 }
 
-@media screen and (max-width: 990px) {
-  .carousel-cell {
-    width: 300px;
+@media screen and (max-width: 992px) {
+  .main-carousel {
+    display: none;
   }
 }

@@ -45,6 +45,17 @@ i {
 }
 
 .products-list-body {
-  height: 350px;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+@media (max-width: 768px) {
+  .show-all {
+    display: none;
+  }
+  .products-list-title {
+    font-size: 20px;
+  }
+}
+

@@ -1,4 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {MarketCardInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-products-list-item",
@@ -10,7 +11,7 @@ export class SCntMarketProductsListItem implements ComponentInterface {
   /**
    * Данные для карточки товара
    */
-  @Prop() productsListCard: any;
+  @Prop() productsListCard: MarketCardInterface;
 
   /**
    *
@@ -22,6 +23,7 @@ export class SCntMarketProductsListItem implements ComponentInterface {
   }
 
   render() {
+    console.log('мультипак', this.productsListCard)
     return (
       <div class="product-list-card">
         <div class="product-link" ref={(el) => this.productLinkTag = el}>
@@ -95,6 +97,9 @@ export class SCntMarketProductsListItem implements ComponentInterface {
     );
   }
 
+  /**
+   * Смена стилей карточки если товара нет в наличии
+   */
   public disabledProductCard() {
     if (this.productsListCard.weight === "Нет в наличии") {
       this.productLinkTag.classList.add("disabled")

@@ -1,4 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {MarketProductListInterface} from "../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-products-list-card",
@@ -10,10 +11,9 @@ export class SCntMarketProductsListCard implements ComponentInterface {
   /**
    * Данные для списка товаров
    */
-  @Prop() productsList: any;
+  @Prop() productsList: MarketProductListInterface;
 
   render() {
-    console.log(this.productsList);
     return (
       <div class="products-list-wrapper">
         <div class="products-list-header">

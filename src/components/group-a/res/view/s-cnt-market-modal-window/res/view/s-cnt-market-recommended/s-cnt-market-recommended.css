@@ -1,16 +1,25 @@
 .container {
   width: 768px;
   margin: 15px 0 30px 0;
-  padding: 0 25px 0 0;
+  padding: 0 50px 0 0;
 }
 
 .info {
   font-weight: 600;
 }
 
+.block-ser {
+  position: relative;
+}
+
 .icons {
-  margin: 0 0 0 0;
+  position: absolute;
+  top: -2px;
+  right: -10px;
+  margin: 0 0 0 90px;
   display: flex;
+  text-align: right;
+  justify-content: right;
 }
 
 .arrow-left, .arrow-right {
@@ -34,4 +43,20 @@
 .arrow-right:hover {
   background-color: #117b0a;
   transition: .3s;
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    width: 380px;
+    margin: 3px 0 30px 0;
+  }
+
+  .arrow-left, .arrow-right {
+    width: 32px;
+    height: 32px;
+  }
+
+  .icons {
+    margin: 0 -40px 0 0;
+  }
 }
