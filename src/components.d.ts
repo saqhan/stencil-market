@@ -20,6 +20,8 @@ export namespace Components {
     }
     interface SCntMarketFirstPage {
     }
+    interface SCntMarketFooter {
+    }
     interface SCntMarketHeader {
     }
     interface SCntMarketItemOffer {
@@ -120,6 +122,8 @@ export namespace Components {
          */
         "getSpecification": any;
     }
+    interface SCntMarketUpFooter {
+    }
 }
 declare global {
     interface HTMLGroupAElement extends Components.GroupA, HTMLStencilElement {
@@ -145,6 +149,12 @@ declare global {
     var HTMLSCntMarketFirstPageElement: {
         prototype: HTMLSCntMarketFirstPageElement;
         new (): HTMLSCntMarketFirstPageElement;
+    };
+    interface HTMLSCntMarketFooterElement extends Components.SCntMarketFooter, HTMLStencilElement {
+    }
+    var HTMLSCntMarketFooterElement: {
+        prototype: HTMLSCntMarketFooterElement;
+        new (): HTMLSCntMarketFooterElement;
     };
     interface HTMLSCntMarketHeaderElement extends Components.SCntMarketHeader, HTMLStencilElement {
     }
@@ -236,11 +246,18 @@ declare global {
         prototype: HTMLSCntMarketSpecificationElement;
         new (): HTMLSCntMarketSpecificationElement;
     };
+    interface HTMLSCntMarketUpFooterElement extends Components.SCntMarketUpFooter, HTMLStencilElement {
+    }
+    var HTMLSCntMarketUpFooterElement: {
+        prototype: HTMLSCntMarketUpFooterElement;
+        new (): HTMLSCntMarketUpFooterElement;
+    };
     interface HTMLElementTagNameMap {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
         "s-cnt-market-first-page": HTMLSCntMarketFirstPageElement;
+        "s-cnt-market-footer": HTMLSCntMarketFooterElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-item-offer": HTMLSCntMarketItemOfferElement;
         "s-cnt-market-item-recommended": HTMLSCntMarketItemRecommendedElement;
@@ -256,6 +273,7 @@ declare global {
         "s-cnt-market-selection": HTMLSCntMarketSelectionElement;
         "s-cnt-market-shop": HTMLSCntMarketShopElement;
         "s-cnt-market-specification": HTMLSCntMarketSpecificationElement;
+        "s-cnt-market-up-footer": HTMLSCntMarketUpFooterElement;
     }
 }
 declare namespace LocalJSX {
@@ -266,6 +284,8 @@ declare namespace LocalJSX {
     interface MyComponent {
     }
     interface SCntMarketFirstPage {
+    }
+    interface SCntMarketFooter {
     }
     interface SCntMarketHeader {
     }
@@ -367,11 +387,14 @@ declare namespace LocalJSX {
          */
         "getSpecification"?: any;
     }
+    interface SCntMarketUpFooter {
+    }
     interface IntrinsicElements {
         "group-a": GroupA;
         "group-b": GroupB;
         "my-component": MyComponent;
         "s-cnt-market-first-page": SCntMarketFirstPage;
+        "s-cnt-market-footer": SCntMarketFooter;
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-item-offer": SCntMarketItemOffer;
         "s-cnt-market-item-recommended": SCntMarketItemRecommended;
@@ -387,6 +410,7 @@ declare namespace LocalJSX {
         "s-cnt-market-selection": SCntMarketSelection;
         "s-cnt-market-shop": SCntMarketShop;
         "s-cnt-market-specification": SCntMarketSpecification;
+        "s-cnt-market-up-footer": SCntMarketUpFooter;
     }
 }
 export { LocalJSX as JSX };
@@ -397,6 +421,7 @@ declare module "@stencil/core" {
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "s-cnt-market-first-page": LocalJSX.SCntMarketFirstPage & JSXBase.HTMLAttributes<HTMLSCntMarketFirstPageElement>;
+            "s-cnt-market-footer": LocalJSX.SCntMarketFooter & JSXBase.HTMLAttributes<HTMLSCntMarketFooterElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-item-offer": LocalJSX.SCntMarketItemOffer & JSXBase.HTMLAttributes<HTMLSCntMarketItemOfferElement>;
             "s-cnt-market-item-recommended": LocalJSX.SCntMarketItemRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketItemRecommendedElement>;
@@ -412,6 +437,7 @@ declare module "@stencil/core" {
             "s-cnt-market-selection": LocalJSX.SCntMarketSelection & JSXBase.HTMLAttributes<HTMLSCntMarketSelectionElement>;
             "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;
             "s-cnt-market-specification": LocalJSX.SCntMarketSpecification & JSXBase.HTMLAttributes<HTMLSCntMarketSpecificationElement>;
+            "s-cnt-market-up-footer": LocalJSX.SCntMarketUpFooter & JSXBase.HTMLAttributes<HTMLSCntMarketUpFooterElement>;
         }
     }
 }

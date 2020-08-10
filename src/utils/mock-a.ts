@@ -619,3 +619,36 @@ export const productsSliderCards = [
 ];
 
 export const productsSliderTitle = "Популярные товары";
+
+export const forFooter = {
+  logo: 'https://via.placeholder.com/150x60?img=logo',
+  forUpFooter: [
+    'СберМаркет',
+    'О Компании',
+    'Контакты',
+    'Вакансии',
+    'Документы',
+    'Стать партнером',
+    'Помощь покупателю',
+    'Как мы работаем',
+    'Зоны доставки',
+    'Доставка и оплата',
+    'Помощь'
+  ],
+  forUpFooterForm: {
+    number: '+7 800 222-11-00',
+    time: 'Круглосуточно',
+    input: 'Форма обратной связи',
+    text: 'Пишите нам свои вопросы, комментарии и предложения'
+  },
+  forDownFooter: {
+    copyright: 'Copyright 2013 —2020',
+    company: 'ООО "Инстамарт Сервис"',
+    download: 'Скачайте наше удобное приложение в Google Play и App Store'
+  },
+  forFooterInfo: [
+    'Политика возврата',
+    'Обработка персональных данных',
+    'Официальное уведомление'
+  ],
+};

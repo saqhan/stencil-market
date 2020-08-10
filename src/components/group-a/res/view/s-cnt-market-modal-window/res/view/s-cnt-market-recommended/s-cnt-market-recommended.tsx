@@ -1,5 +1,5 @@
-import {Component, ComponentInterface, h, Prop} from "@stencil/core";
-import {MarketRecommendedInterface} from "./res/view/s-cnt-market-item-recommended/res/interface/common.interface";
+import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { MarketRecommendedInterface } from "./res/view/s-cnt-market-item-recommended/res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-recommended",
@@ -21,27 +21,23 @@ export class SCntMarketRecommended implements ComponentInterface {
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-6">
-              <div class="info">
-                {this.info}
-              </div>
+              <div class="info">{this.info}</div>
             </div>
             <div class="col-3">
               <div class="block-ser">
                 <div class="icons">
                   <div class="arrow-left">
-                    <i class="fa fa-arrow-left" aria-hidden="true"/>
+                    <i class="fa fa-arrow-left" aria-hidden="true" />
                   </div>
                   <div class="arrow-right">
-                    <i class="fa fa-arrow-right" aria-hidden="true"/>
+                    <i class="fa fa-arrow-right" aria-hidden="true" />
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="row no-gutters">
-            <GetRecommended
-            array={this.getRecommended}>
-            </GetRecommended>
+            <GetRecommended array={this.getRecommended}></GetRecommended>
           </div>
         </div>
       </div>
@@ -54,9 +50,9 @@ const GetRecommended = (props) => {
     return (
       <div class="col-md-4">
         <s-cnt-market-item-recommended
-          getRecommended={item}>
-        </s-cnt-market-item-recommended>
+          getRecommended={item}
+        ></s-cnt-market-item-recommended>
       </div>
-    )
-  })
-}
+    );
+  });
+};
