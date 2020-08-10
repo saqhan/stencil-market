@@ -56,7 +56,8 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   render() {
     return (
       <div>
-        <div class={
+        <div
+          class={
             this.openedLeftMenu
               ? "drawer-backdrop  opened "
               : "drawer-backdrop "
@@ -123,7 +124,6 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                         </ul>
                       </div>
                     </li>
-                    {/*<li class="category-menu-item-placeholder"></li>*/}
                   </ul>
                   <ul class="category-menu-list border-gray">
                     {this.getShopsItems(this.leftMenuCatalogArr)}
@@ -189,7 +189,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * Получения подкатегорий TODO исправить вывод подкатегорий, где больше 1
    * */
-  public getSubcategories(array: subcategoriesInterface[]):subcategoriesInterface[] {
+  public getSubcategories(
+    array: subcategoriesInterface[]
+  ): subcategoriesInterface[] {
     return array.map((item) => {
       return (
         <div class="category-menu-item-dropdown ">
