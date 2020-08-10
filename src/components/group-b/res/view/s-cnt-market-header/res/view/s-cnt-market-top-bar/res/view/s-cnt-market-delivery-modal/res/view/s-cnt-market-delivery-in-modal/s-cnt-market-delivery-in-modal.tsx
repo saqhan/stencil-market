@@ -21,11 +21,9 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
         </div>
         <div class="map-block-wrapper">
           <div class="map-input-wrap">
-            <div class="map-input-wrap-inner">
-              <span>
-                <i class={this.deliveryData.searchIcon}></i>
-                <input type="text" placeholder="Введите текст"/>
-              </span>
+            <input class="map-input-wrap-inner" type="text" placeholder="Введите текст"/>
+            <div class="map-input-icon">
+              <i class={this.deliveryData.searchIcon}></i>
             </div>
             <button class="map-addres-save-btn">
               {this.deliveryData.btnText}

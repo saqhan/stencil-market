@@ -39,6 +39,11 @@
   line-height: 20px;
 }
 
+.view-input:focus {
+  border-color: #1ea038;
+  background-color: white;
+}
+
 .error-input {
   margin-top: 5px;
   letter-spacing: .3px;
@@ -66,8 +71,8 @@
   display: inline-block;
   cursor: pointer;
   position: relative;
-  will-change: opacity,background-color,box-shadow;
-  transition: opacity .2s,background-color .2s,box-shadow .2s;
+  will-change: opacity, background-color, box-shadow;
+  transition: opacity .2s, background-color .2s, box-shadow .2s;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -81,9 +86,9 @@
 .checkbox-for-consent::before {
   display: block;
   position: absolute;
-  will-change: background-color,transform;
-  transition: background-color .2s,transform .2s;
-  box-shadow: 0 2px 10px rgba(0,0,0,.06), 0 0 1px rgba(0,0,0,.18);
+  will-change: background-color, transform;
+  transition: background-color .2s, transform .2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .06), 0 0 1px rgba(0, 0, 0, .18);
   border-radius: 100%;
   background-color: #fff;
   width: 20px;
@@ -101,10 +106,10 @@
 
 .checkbox-for-consent:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(33,160,56,.3);
+  box-shadow: 0 0 0 3px rgba(33, 160, 56, .3);
 }
 
-.text-consent{
+.text-consent {
   margin-left: 12px;
   line-height: 24px;
   font-size: 16px;
@@ -128,7 +133,7 @@
   transition: all 0.2s;
 }
 
-.form-footer-custom-conditions{
+.form-footer-custom-conditions {
   margin: 20px 20px 0;
   color: #96959b;
   font-size: 14px;
@@ -147,6 +152,27 @@
   line-height: inherit;
 }
 
-.custom-conditions-link-btn:hover{
+.custom-conditions-link-btn:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .view-input {
+    font-size: 12px;
+  }
+
+  .remember-me-check {
+    font-size: 12px;
+    padding-bottom: 1px;
+  }
+
+  .text-consent, .registration-btn {
+    font-size: 12px;
+  }
+
+  .form-footer-custom-conditions{
+    font-size: 10px;
+    padding-bottom: 5px;
+  }
+
 }

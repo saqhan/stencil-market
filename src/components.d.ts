@@ -75,11 +75,16 @@ export namespace Components {
          */
         "login": boolean;
         /**
+          * boolean значение для вывода/закрытия блока входа и присвоения класса
+         */
+        "loginAndRegistration": any;
+        /**
           * boolean значение для вывода/закрытия блока регистрации и присвоения класса
          */
         "registration": boolean;
     }
     interface SCntMarketLoginForm {
+        "login": any;
     }
     interface SCntMarketPickupInModal {
         /**
@@ -88,6 +93,7 @@ export namespace Components {
         "pickUpData": TopBarModalPickUpInterface;
     }
     interface SCntMarketRegistrationForm {
+        "reg": any;
     }
     interface SCntMarketStoreSelectTop {
         "openedStoreSelect": boolean;
@@ -314,6 +320,10 @@ declare namespace LocalJSX {
          */
         "login"?: boolean;
         /**
+          * boolean значение для вывода/закрытия блока входа и присвоения класса
+         */
+        "loginAndRegistration"?: any;
+        /**
           * Закрытие модального модального окна формы входа/регистрации
          */
         "onCloseLogin"?: (event: CustomEvent<any>) => void;
@@ -331,6 +341,7 @@ declare namespace LocalJSX {
         "registration"?: boolean;
     }
     interface SCntMarketLoginForm {
+        "login"?: any;
     }
     interface SCntMarketPickupInModal {
         /**
@@ -343,6 +354,7 @@ declare namespace LocalJSX {
         "pickUpData"?: TopBarModalPickUpInterface;
     }
     interface SCntMarketRegistrationForm {
+        "reg"?: any;
     }
     interface SCntMarketStoreSelectTop {
         /**

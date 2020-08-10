@@ -76,9 +76,9 @@ button {
   text-align: center;
   background-color: transparent;
   font-weight: 500;
-  transition-duration: .2s;
+  transition-duration: .25s;
   transition-timing-function: ease-in-out;
-  transition-property: color, background-color, border-color, box-shadow, opacity;
+  transition-property: color, background-color, border;
   white-space: nowrap;
   margin-left: auto;
   border: 1px solid #d0d2d4;
@@ -88,6 +88,12 @@ button {
   line-height: 24px;
   border-radius: 20px;
   padding: 6px 10px;
+}
+
+.close-btn:hover{
+  background-color: #f3f4f7;
+  border: 1px solid #d0d2d4;
+  color: #333536;
 }
 
 .choose-way-to-get-block {
@@ -191,6 +197,14 @@ button {
 }
 
 @media (max-width: 576px) {
+  .method-of-obtaining-title{
+    font-size: 24px;
+  }
+
+  .suggestions-signIn-in-modal-top-bar, .suggestions-signIn-in-modal-top-bar span{
+    font-size: 12px;
+  }
+
   .delivery-modal-block-wrapper {
     margin: 0;
     height: 100%;
@@ -200,4 +214,10 @@ button {
     border-radius: 0;
     height: 100%;
   }
+
+  .option-delivery, .option-pickUp {
+    font-size: 12px;
+  }
+
+
 }

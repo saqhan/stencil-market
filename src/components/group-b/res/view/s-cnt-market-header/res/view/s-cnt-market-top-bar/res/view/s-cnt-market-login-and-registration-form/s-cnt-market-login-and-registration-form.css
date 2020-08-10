@@ -18,7 +18,7 @@
   height: 100%;
 }
 
-.login-or-registration-opaciry-background {
+.login-or-registration-opacity-background {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -30,18 +30,18 @@
   background-color: rgba(0, 0, 0, .4);
 }
 
-.login-or-registration-form-parent{
+.login-or-registration-form-parent {
   z-index: 5;
   max-width: 746px;
   width: 100%;
   position: relative;
   margin: 30px auto;
-  box-shadow: 0 8px 30px rgba(0,0,0,.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .1);
   border-radius: 16px;
   background-color: #fff;
 }
 
-.login-or-registration-form-child{
+.login-or-registration-form-child {
   width: 100%;
 }
 
@@ -70,18 +70,24 @@
   padding: 6px 10px;
 }
 
-.login-or-registration-form-container{
+.close-btn:hover {
+  background-color: #f3f4f7;
+  border: 1px solid #d0d2d4;
+  color: #333536;
+}
+
+.login-or-registration-form-container {
   padding: 0 32px 34px;
 }
 
-.login-or-registration-buttons-wrapper{
+.login-or-registration-buttons-wrapper {
   border-radius: 8px;
   margin-bottom: 20px;
   display: flex;
   width: 100%;
 }
 
-.login-selection-btn, .registration-selection-btn{
+.login-selection-btn, .registration-selection-btn {
   border: 1px solid #e7e9eb;
   background-color: #fff;
   padding: 0 10px;
@@ -96,20 +102,51 @@
   width: 100%;
 }
 
-.login-selection-btn{
+.login-selection-btn {
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-.registration-selection-btn{
+.registration-selection-btn {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-#selected-login-or-registration-btn{
+#selected-login-or-registration-btn {
   pointer-events: none;
   cursor: default;
   border: 1px solid #21a038;
   background-color: #21a038;
   color: #fff;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+  .login-or-registration-form-parent {
+    border-radius: 0;
+    height: 100%;
+    margin: 0;
+  }
+
+  .login-or-registration-form-container{
+    padding: 0 20px 5px 20px;
+    background-color: white;
+  }
+}
+
+@media (max-width: 450px) {
+  .close-btn {
+    font-size: 12px;
+  }
+
+  .login-selection-btn, .registration-selection-btn {
+    font-size: 12px;
+  }
 }

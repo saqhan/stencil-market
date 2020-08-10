@@ -10,6 +10,11 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
    * boolean значение для вывода/закрытия блока входа и присвоения класса
    */
+  @Prop() loginAndRegistration: any;
+
+  /**
+   * boolean значение для вывода/закрытия блока входа и присвоения класса
+   */
   @Prop() login: boolean;
 
   /**
@@ -40,38 +45,38 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   render() {
     return (
       <section class="login-or-registration-form-wrapper">
-        <div class="login-or-registration-opaciry-background" ref={(el) => this.ourModal = el}
+        <div class="login-or-registration-opacity-background" ref={(el) => this.ourModal = el}
              onClick={(event) => this.clickPopUp(event)}>
           {/*полупрозрачный бэкграунд*/}
         </div>
         <div class="login-or-registration-form-parent">
           <div class="login-or-registration-form-child">
             <div class="close-btn-wrapper">
-              <button class="close-btn" onClick={()=> this.closeLogin.emit()}>
-                <i class="fas fa-times"></i>
+              <button class="close-btn" onClick={() => this.closeLogin.emit()}>
+                <i class={this.loginAndRegistration.closeIcon}></i>
               </button>
             </div>
             <div class="login-or-registration-form-container">
               <div class="login-or-registration-buttons-wrapper">
                 <button class="login-selection-btn" id={this.login ? 'selected-login-or-registration-btn' : ''}
                         onClick={() => this.openLogin.emit()}>
-                  Вход
+                  {this.loginAndRegistration.loginBtnText}
                 </button>
                 <button class="registration-selection-btn"
                         id={this.registration ? 'selected-login-or-registration-btn' : ''}
                         onClick={() => this.openRegistration.emit()}>
-                  Регистрация
+                  {this.loginAndRegistration.regBtnText}
                 </button>
               </div>
               <div>
                 {
                   this.login ?
-                    <s-cnt-market-login-form/> :
+                    <s-cnt-market-login-form login={this.loginAndRegistration.login}/> :
                     ''
                 }
                 {
                   this.registration ?
-                    <s-cnt-market-registration-form/> :
+                    <s-cnt-market-registration-form reg={this.loginAndRegistration.reg}/> :
                     ''
                 }
               </div>

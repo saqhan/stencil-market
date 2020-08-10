@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h} from '@stencil/core';
+import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-registration-form',
@@ -7,6 +7,7 @@ import {Component, ComponentInterface, h} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
+  @Prop() reg: any;
 
   render() {
     return (
@@ -58,22 +59,25 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         <label class="label-checkbox-wrapper">
           <input type="checkbox" class="checkbox-for-consent"/>
           <span class="text-consent">
-            Хочу заказывать для бизнеса
+            {this.reg.checkForBis}
           </span>
         </label>
         <label class="label-checkbox-wrapper">
           <input type="checkbox" class="checkbox-for-consent"/>
           <span class="text-consent">
-            Хочу заказывать для бизнеса
+            {this.reg.checkForAdvertisingText}
+            <button class="custom-conditions-link-btn">
+              {this.reg.checkForAdvertisingLink}
+          </button>
           </span>
         </label>
         <button class="registration-btn">
-          Зарегистрироваться
+          {this.reg.regBtn}
         </button>
         <footer class="form-footer-custom-conditions">
-          Продолжая, я соглашаюсь на обработку персональных данных на
+          {this.reg.agreementText}
           <button class="custom-conditions-link-btn">
-            следующих условиях
+            {this.reg.agreementLink}
           </button>
         </footer>
       </form>

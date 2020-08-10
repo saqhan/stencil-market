@@ -9,6 +9,27 @@ export const header = {
     timeOfDelivery: "сегодня, 19:00-21:00",
     phoneNumber: "+7 800 222-11-00",
     workingHours: "Круглосуточно",
+    loginAndRegistration: {
+      id: 1,
+      closeIcon: 'fas fa-times',
+      loginBtnText: 'Вход',
+      regBtnText: 'Регистрация',
+      login: {
+        rememberMe: 'Запомнить меня',
+        logIn: 'Войти',
+        remindPass: 'Напомнить пароль',
+        logInToBank: 'Вход через Сбербанк ID',
+        orLogInSocial: 'или авторизуйтесь через'
+      },
+      reg: {
+        checkForBis: 'Хочу заказывать для бизнеса',
+        checkForAdvertisingText: 'Согласен',
+        checkForAdvertisingLink:  'на рекламную рассылку',
+        regBtn: 'Зарегистрироваться',
+        agreementText: 'Продолжая, я соглашаюсь на обработку персональных данных на',
+        agreementLink: 'следующих условиях'
+      },
+    },
     modalWindow: {
       id: 1,
       modalWindowTitle: "Выберите способ получения",

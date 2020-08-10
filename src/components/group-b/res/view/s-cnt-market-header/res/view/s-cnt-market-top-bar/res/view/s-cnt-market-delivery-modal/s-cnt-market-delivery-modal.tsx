@@ -76,7 +76,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                     </div>
                     <div class="suggestions-signIn-in-modal-top-bar">
                       {this.modalData.offerToEnter}
-                      <span onClick={() => this.openLogin.emit()}>
+                      <span onClick={() => this.openLoginHandler()}>
                         {this.modalData.offerToEnterLink}
                       </span>
                     </div>
@@ -119,6 +119,14 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
     if (event.target === this.ourModal) {
       this.closeForm.emit()
     }
+  };
+
+  /**
+   * Вызов функции открытия модального компонента входа/регистрации
+   */
+  public openLoginHandler() {
+    this.openLogin.emit();
+    this.closeForm.emit();
   };
 
 }
