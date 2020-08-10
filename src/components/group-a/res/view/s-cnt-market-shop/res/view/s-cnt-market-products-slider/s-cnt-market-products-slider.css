@@ -26,3 +26,12 @@
     padding: 0 10px;
   }
 }
+
+@media screen and (max-width: 320px) {
+  .products {
+    padding: 0 5px;
+  }
+}
+
+
+

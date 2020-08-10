@@ -9,6 +9,8 @@ import { MarketOfferInterface, } from "./components/group-a/res/view/s-cnt-marke
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
 import { MarketStatisticsInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-statistics/res/interface/common.interface";
 import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/res/interface/common.interface";
+import { MarketProductListInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/interface/common.interface";
+import { MarketCardInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/view/s-cnt-market-products-list-card/res/view/s-cnt-market-products-list-item/res/interface/common.interface";
 import { MarketProductsSliderCardsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider/res/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 import { MarketSpecificationInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-specification/res/interface/common.interface";
@@ -91,23 +93,23 @@ export namespace Components {
         /**
           * Данные для списка товаров
          */
-        "productsList": any;
+        "productsList": MarketProductListInterface[];
     }
     interface SCntMarketProductsListCard {
         /**
           * Данные для списка товаров
          */
-        "productsList": any;
+        "productsList": MarketProductListInterface;
     }
     interface SCntMarketProductsListItem {
         /**
           * Данные для карточки товара
          */
-        "productsListCard": any;
+        "productsListCard": MarketCardInterface;
     }
     interface SCntMarketProductsSlider {
         /**
-          * Получаем данные карточек слайдера популярных продуктов
+          * Данные карточек слайдера популярных продуктов
          */
         "productsSliderCards": MarketProductsSliderCardsInterface[];
         /**
@@ -132,6 +134,22 @@ export namespace Components {
           * Получаем данные карточек промо-слайдера
          */
         "promoSliderCards": MarketPromoSliderInterface;
+    }
+    interface SCntMarketRecentlyWatched {
+        /**
+          * Данные карточек слайдера просмотренных товаров
+         */
+        "recentlyWatchedProducts": any;
+        /**
+          * Заголовк раздела
+         */
+        "recentlyWatchedTitle": string;
+    }
+    interface SCntMarketRecentlyWatchedCard {
+        /**
+          * Данные карточек слайдера просмотренных товаров
+         */
+        "recentlyWatchedProducts": any;
     }
     interface SCntMarketRecommended {
         /**
@@ -306,6 +324,18 @@ declare global {
         prototype: HTMLSCntMarketPromoSliderCardElement;
         new (): HTMLSCntMarketPromoSliderCardElement;
     };
+    interface HTMLSCntMarketRecentlyWatchedElement extends Components.SCntMarketRecentlyWatched, HTMLStencilElement {
+    }
+    var HTMLSCntMarketRecentlyWatchedElement: {
+        prototype: HTMLSCntMarketRecentlyWatchedElement;
+        new (): HTMLSCntMarketRecentlyWatchedElement;
+    };
+    interface HTMLSCntMarketRecentlyWatchedCardElement extends Components.SCntMarketRecentlyWatchedCard, HTMLStencilElement {
+    }
+    var HTMLSCntMarketRecentlyWatchedCardElement: {
+        prototype: HTMLSCntMarketRecentlyWatchedCardElement;
+        new (): HTMLSCntMarketRecentlyWatchedCardElement;
+    };
     interface HTMLSCntMarketRecommendedElement extends Components.SCntMarketRecommended, HTMLStencilElement {
     }
     var HTMLSCntMarketRecommendedElement: {
@@ -357,6 +387,8 @@ declare global {
         "s-cnt-market-products-slider-card": HTMLSCntMarketProductsSliderCardElement;
         "s-cnt-market-promo-slider": HTMLSCntMarketPromoSliderElement;
         "s-cnt-market-promo-slider-card": HTMLSCntMarketPromoSliderCardElement;
+        "s-cnt-market-recently-watched": HTMLSCntMarketRecentlyWatchedElement;
+        "s-cnt-market-recently-watched-card": HTMLSCntMarketRecentlyWatchedCardElement;
         "s-cnt-market-recommended": HTMLSCntMarketRecommendedElement;
         "s-cnt-market-selection": HTMLSCntMarketSelectionElement;
         "s-cnt-market-shop": HTMLSCntMarketShopElement;
@@ -443,23 +475,23 @@ declare namespace LocalJSX {
         /**
           * Данные для списка товаров
          */
-        "productsList"?: any;
+        "productsList"?: MarketProductListInterface[];
     }
     interface SCntMarketProductsListCard {
         /**
           * Данные для списка товаров
          */
-        "productsList"?: any;
+        "productsList"?: MarketProductListInterface;
     }
     interface SCntMarketProductsListItem {
         /**
           * Данные для карточки товара
          */
-        "productsListCard"?: any;
+        "productsListCard"?: MarketCardInterface;
     }
     interface SCntMarketProductsSlider {
         /**
-          * Получаем данные карточек слайдера популярных продуктов
+          * Данные карточек слайдера популярных продуктов
          */
         "productsSliderCards"?: MarketProductsSliderCardsInterface[];
         /**
@@ -484,6 +516,22 @@ declare namespace LocalJSX {
           * Получаем данные карточек промо-слайдера
          */
         "promoSliderCards"?: MarketPromoSliderInterface;
+    }
+    interface SCntMarketRecentlyWatched {
+        /**
+          * Данные карточек слайдера просмотренных товаров
+         */
+        "recentlyWatchedProducts"?: any;
+        /**
+          * Заголовк раздела
+         */
+        "recentlyWatchedTitle"?: string;
+    }
+    interface SCntMarketRecentlyWatchedCard {
+        /**
+          * Данные карточек слайдера просмотренных товаров
+         */
+        "recentlyWatchedProducts"?: any;
     }
     interface SCntMarketRecommended {
         /**
@@ -557,6 +605,8 @@ declare namespace LocalJSX {
         "s-cnt-market-products-slider-card": SCntMarketProductsSliderCard;
         "s-cnt-market-promo-slider": SCntMarketPromoSlider;
         "s-cnt-market-promo-slider-card": SCntMarketPromoSliderCard;
+        "s-cnt-market-recently-watched": SCntMarketRecentlyWatched;
+        "s-cnt-market-recently-watched-card": SCntMarketRecentlyWatchedCard;
         "s-cnt-market-recommended": SCntMarketRecommended;
         "s-cnt-market-selection": SCntMarketSelection;
         "s-cnt-market-shop": SCntMarketShop;
@@ -588,6 +638,8 @@ declare module "@stencil/core" {
             "s-cnt-market-products-slider-card": LocalJSX.SCntMarketProductsSliderCard & JSXBase.HTMLAttributes<HTMLSCntMarketProductsSliderCardElement>;
             "s-cnt-market-promo-slider": LocalJSX.SCntMarketPromoSlider & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderElement>;
             "s-cnt-market-promo-slider-card": LocalJSX.SCntMarketPromoSliderCard & JSXBase.HTMLAttributes<HTMLSCntMarketPromoSliderCardElement>;
+            "s-cnt-market-recently-watched": LocalJSX.SCntMarketRecentlyWatched & JSXBase.HTMLAttributes<HTMLSCntMarketRecentlyWatchedElement>;
+            "s-cnt-market-recently-watched-card": LocalJSX.SCntMarketRecentlyWatchedCard & JSXBase.HTMLAttributes<HTMLSCntMarketRecentlyWatchedCardElement>;
             "s-cnt-market-recommended": LocalJSX.SCntMarketRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketRecommendedElement>;
             "s-cnt-market-selection": LocalJSX.SCntMarketSelection & JSXBase.HTMLAttributes<HTMLSCntMarketSelectionElement>;
             "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;

@@ -9,7 +9,7 @@ import { MarketProductsSliderCardsInterface } from "./res/interface/common.inter
 })
 export class SCntMarketProductsSlider implements ComponentInterface {
   /**
-   * Получаем данные карточек слайдера популярных продуктов
+   * Данные карточек слайдера популярных продуктов
    */
   @Prop() productsSliderCards: MarketProductsSliderCardsInterface[] = [];
 
@@ -28,6 +28,7 @@ export class SCntMarketProductsSlider implements ComponentInterface {
     // @ts-ignore
     const flkty = new Flickity(elem, {
       // options
+      freeScroll: true,
       contain: true,
       pageDots: false,
       draggable: false,
