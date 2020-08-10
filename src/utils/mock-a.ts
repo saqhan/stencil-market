@@ -279,7 +279,7 @@ export const forSelection = [
   {
     id: 29,
     image: "https://via.placeholder.com/70x70?text=Text",
-    title: "Забакальский Привозъ",
+    title: "Забайкальский Привозъ",
   },
   {
     id: 20,
@@ -324,7 +324,7 @@ export const forSelection = [
   {
     id: 28,
     image: "https://via.placeholder.com/70x70?text=Text",
-    title: 'ТЦ "Новомаринский"',
+    title: 'ТЦ "Новомариинский"',
   },
   {
     id: 29,
@@ -385,7 +385,7 @@ export const forSelection = [
   {
     id: 40,
     image: "https://via.placeholder.com/70x70?text=Text",
-    title: "Юг Опт",
+    title: "ЮгОпт",
   },
   {
     id: 41,
@@ -406,27 +406,66 @@ export const forOffer = [
   {
     id: 1,
     icon: "fas fa-truck",
-    text: "Доставим день в день, в удобное для вас время",
+    text: "Доставим день в день,\n" + "\n" + "в удобное для вас\n" + "\n" + " время",
   },
   {
     id: 2,
     icon: "fas fa-dolly",
-    text: "Привезём тяжелые сумки прямо до вашей двери",
+    text: "Привезём тяжелые\n" + "\n" + " сумки прямо до вашей\n" + "\n" + " двери",
   },
   {
     id: 3,
     icon: "fas fa-gifts",
-    text: "Выберем лучшее с полок магазинов, как для себя",
+    text: "Выберем лучшее\n" + "\n" + " с полок магазинов,\n" + "\n" + " как для себя",
   },
   {
     id: 4,
     icon: "fas fa-tags",
-    text: "Скидки и акции наших партнёров на 2 000 товаров",
+    text: "Скидки и акции наших\n" + "\n" + " партнёров на 2 000\n" + "\n" + " товаров",
   },
 ];
 
 export const offerTitleText =
-  "Сохраняйте время, энергию и деньги для того, что важно именно вам";
+  "Сохраняйте время, энергию и деньги\n" + "\n" + "для того, что важно именно вам";
+
+export const forStatistics = [
+  {
+    id: 1,
+    text: "**Более 20000 заказов** ежедневно\n"+ "\n"+ "доставляют наши курьеры",
+  },
+  {
+    id: 2,
+    text: "**400 тонн товаров** мы поднимаем\n"+ "\n" + "в дома клиентов каждый день",
+  },
+  {
+    id: 3,
+    text: "Мы стали незаменимым помощником\n"+ "\n"+ "для** 500 тысяч семей** по всей России за 7 лет",
+  },
+  {
+    id: 4,
+    text: "**Более 10000 компаний** доверяют нам\n"+ "\n"+ "закупку продуктов и товаров для офиса",
+  }
+];
+
+export const forDelivery = [
+  {
+    image: "https://via.placeholder.com/1245x505?text=Text",
+    title: "Доставляем\n" + "\n" + "в 115 городах России",
+    nameCityMoscow: "Москва",
+    nameCityAbakan: "Абакан",
+    nameCityAnadyr: "Анадырь",
+    nameCityAstrahan: "Астрахань",
+    nameCityBarnaul: "Барнаул",
+    nameCityBerdsk: "Бердск",
+    nameCitySaintPetersburg: "Санкт-Петербург",
+    nameCityAlmetyevsk: "Альметьевск",
+    nameCityArkhangelsk: "Архангельск",
+    nameCityBalashikha: "Балашиха",
+    nameCityBelgorod: "Белгород",
+    nameCityBiysk: "Бийск",
+    button: "Показать все",
+  },
+];
 
 export const getProduct = {
   brand: "Бренды ЛЕНТЫ",
@@ -534,7 +573,7 @@ export const productsSliderCards = [
   {
     id: 1,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "599.01",
+    disPrice: "599.01",
     oldPrice: "889.00",
     currency: "₽",
     desc: "Сыр полутвердый Ламбер 50% ~ 1 кг бзмж",
@@ -576,7 +615,7 @@ export const productsSliderCards = [
   {
     id: 6,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "125.00",
+    disPrice: "125.00",
     oldPrice: "184.00",
     currency: "₽",
     desc: "Сыр полутвердый Arla Natura Сливочный 45% 200 г бз ...",
@@ -593,7 +632,7 @@ export const productsSliderCards = [
   {
     id: 8,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "54.90",
+    disPrice: "54.90",
     oldPrice: "74.89 ",
     currency: "₽",
     desc: "Молоко Белый Город ультрапастеризованное 3,2% 1 л ...",
@@ -610,7 +649,7 @@ export const productsSliderCards = [
   {
     id: 10,
     img: "https://via.placeholder.com/70x70?img=Img",
-    price: "99.99",
+    disPrice: "99.99",
     oldPrice: "129.90",
     currency: "₽",
     desc: "Помидоры сливовидные",
@@ -620,6 +659,7 @@ export const productsSliderCards = [
 
 export const productsSliderTitle = "Популярные товары";
 
+<<<<<<< HEAD
 export const forFooter = {
   logo: 'https://via.placeholder.com/150x60?img=logo',
   forUpFooter: [
@@ -652,3 +692,862 @@ export const forFooter = {
     'Официальное уведомление'
   ],
 };
+=======
+export const recentlyWatchedTitle = "Вы недавно смотрели"
+
+export const productsList = [
+  {
+    header: {
+      title: "L'Oreal Paris с заботой о красоте",
+      allProducts: "Показать 97 товаров ",
+    },
+    card: [
+      {
+        id: 1,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "299,00",
+        oldPrice: "347,56",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи",
+        weight: "200 мл",
+        currency: "₽",
+      },
+      {
+        id: 2,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "279,00",
+        desc: "Бальзам L’Oreal Paris Elseve Длина мечты для длинных поврежденных волос",
+        weight: "1 шт",
+        currency: "₽",
+      },
+      {
+        id: 3,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "361,00",
+        desc: "Экспресс-Кондиционер L’Oreal Paris Elseve Полное Восстановление 5 двухфазный",
+        weight: "200 мл",
+        currency: "₽",
+      },
+      {
+        id: 4,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "315,00",
+        desc: "Стойкая крем-краска для волос L'Oreal Excellence светло-русый пепельный оттенок 8.1",
+        weight: "1 шт",
+        currency: "₽",
+      },
+      {
+        id: 5,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "265,00",
+        desc: "Шампунь L’Oreal Paris Elseve Роскошь 6 масел питательный для всех типов волос 400 мл",
+        weight: "400 мл",
+        currency: "₽",
+      },
+      {
+        id: 6,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "261,02",
+        desc: "Очищающий тоник для лица L'Oreal Paris Бесконечная Свежесть для нормальной и смешанной кожи с экстрактами Розы и Лотоса 200 мл",
+        weight: "200 мл",
+        currency: "₽",
+      },
+      {
+        id: 7,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "289,00",
+        oldPrice: "334,96",
+        discount: "-14%",
+        disDate: "до 19.08",
+        desc: "Гель для бритья L'Oreal Paris Men Expert Sensitive для чувствительной кожи 200 мл",
+        weight: "200 мл",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Дачный сезон",
+      allProducts: "Показать 2345 товаров ",
+    },
+    card: [
+      {
+        id: 8,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "65,29",
+        desc: "Газированный напиток Pepsi Wild Cherry 0,5 л",
+        weight: "0,5 л x 12",
+        multipack: {
+          amount: "12",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+      {
+        id: 9,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "505,00",
+        desc: "Шашлык из перепелов Qegg Классический охлажденный ~1 кг",
+        weight: "1 кг",
+        currency: "₽",
+      },
+      {
+        id: 10,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "1 469,30",
+        oldPrice: "2 099,00",
+        discount: "-30%",
+        disDate: "до 9.08",
+        desc: "Стейк говяжий Мираторг рибай охлажденный",
+        weight: "1 кг",
+        currency: "₽",
+      },
+      {
+        id: 11,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "216,00",
+        desc: "Крыло куриное с кожей Петелинка Целое охлажденное ~900 г",
+        weight: "900 г",
+        currency: "₽",
+      },
+      {
+        id: 12,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "149,75",
+        desc: "Форель Радужная Ла Маре потрошеная с головой охлажденная",
+        weight: "250 г",
+        currency: "₽",
+      },
+      {
+        id: 13,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "129,00",
+        oldPrice: "237,00",
+        discount: "-46%",
+        disDate: "до 19.08",
+        desc: "Сосиски Велком Докторские",
+        weight: "440 г",
+        currency: "₽",
+      },
+      {
+        id: 14,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "239,90",
+        desc: "Перец красный сладкий",
+        weight: "1 кг",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Дешевле, чем на полке",
+      allProducts: "Показать 71 товар",
+    },
+    card: [
+      {
+        id: 15,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "38,33",
+        desc: "Вода питьевая Святой Источник природная негазированная 1,5 л",
+        weight: "1,5 кг x 6",
+        multipack: {
+          amount: "6",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+      {
+        id: 16,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "78,28",
+        desc: "Вода минеральная Borjomi газированная лечебно-столовая 0,5 л",
+        weight: "500 г x 12",
+        multipack: {
+          amount: "6",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+      {
+        id: 17,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "68,23",
+        desc: "Сметана Простоквашино 15 % 315 г бзмж",
+        weight: "315 г",
+        currency: "₽",
+      },
+      {
+        id: 18,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "76,68",
+        desc: "Сметана Простоквашино 20 % 315 г бзмж",
+        weight: "315 г",
+        currency: "₽",
+      },
+      {
+        id: 19,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "138,58",
+        oldPrice: "149,01",
+        discount: "-7%",
+        disDate: "до 31.08",
+        desc: "Колбаски Metro Chef Особые Охотничьи",
+        weight: "500 г",
+        currency: "₽",
+      },
+      {
+        id: 20,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "84,83",
+        desc: "Соус Heinz Сырный 230 г",
+        weight: "230 г",
+        currency: "₽",
+      },
+      {
+        id: 21,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "81,52 ₽",
+        desc: "Вода питьевая Aqua Minerale негазированная 5 л",
+        weight: "5 л",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Бренды METRO",
+      allProducts: "Показать 1986 товар",
+    },
+    card: [
+      {
+        id: 16,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "227,00",
+        desc: "Чайный напиток Rioba Ройбуш земляничный в пакетиках 2 г 20 шт",
+        weight: "40 г",
+        currency: "₽",
+      },
+      {
+        id: 17,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "81,91",
+        desc: "Сок Fine Life апельсин",
+        weight: "1 л",
+        currency: "₽",
+      },
+      {
+        id: 18,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "75,49",
+        desc: "Молоко Rioba ультрапастеризованное 3,5% 1 л бзмж",
+        weight: "1 л",
+        currency: "₽",
+      },
+      {
+        id: 19,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "138,58",
+        oldPrice: "149,01",
+        discount: "-7%",
+        disDate: "до 31.08",
+        desc: "Колбаски Metro Chef Особые Охотничьи",
+        weight: "500 г",
+        currency: "₽",
+      },
+      {
+        id: 20,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "59,90",
+        oldPrice: "75,30",
+        discount: "-20%",
+        disDate: "до 19.08",
+        desc: "Мука Fine Life пшеничная высший сорт",
+        weight: "2 кг",
+        currency: "₽",
+      },
+      {
+        id: 21,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "312,00",
+        desc: "Перец Horeca Select черный молотый",
+        weight: "500 г",
+        currency: "₽",
+      },
+      {
+        id: 22,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "52,90",
+        oldPrice: "58,79",
+        discount: "-10%",
+        disDate: "до 19.08",
+        desc: "Печенье Fine Life Купелька с малиной 225 г",
+        weight: "225 г",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Сыры",
+      allProducts: "Показать 624 товаров",
+    },
+    card: [
+      {
+        id: 23,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "928,00",
+        desc: "Сыр полутвердый Emmi Tete de Moine нарезка 51% 100 г бзмж",
+        weight: "100 г",
+        currency: "₽",
+      },
+      {
+        id: 24,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "197,00",
+        desc: "Сыр Milkana Гранд Блю голубой с плесенью сливочный бзмж",
+        weight: "100 г",
+        currency: "₽",
+      },
+      {
+        id: 25,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "275,00",
+        desc: "Сыр мягкий Satonoyuki соевый тофу Shiki-Organic 300 г",
+        weight: "300 г",
+        currency: "₽",
+      },
+      {
+        id: 26,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "205,00",
+        desc: "Сыр мягкий Bonfesto Рикотта 40% 500 г бзмж",
+        weight: "500 г",
+        currency: "₽",
+      },
+      {
+        id: 27,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "214,02",
+        desc: "Сыр мягкий Fine Life Маскарпоне 80% 250 г бзмж",
+        weight: "250 г",
+        currency: "₽",
+      },
+      {
+        id: 28,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "191,00",
+        desc: "Сыр мягкий Milkana GrandBlu сливочный с голубой плесенью 56% 100 г бзмж",
+        weight: "100 г",
+        currency: "₽",
+      },
+      {
+        id: 29,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "206,00",
+        desc: "Сыр мягкий Vitalat Камамбер с белой плесенью 45% 125 г бзмж",
+        weight: "125 г",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Овощи и фрукты",
+      allProducts: "Показать 393 товаров",
+    },
+    card: [
+      {
+        id: 30,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "299,00",
+        desc: "Авокадо",
+        weight: "1 кг",
+        currency: "₽",
+      },
+      {
+        id: 31,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "199,90",
+        desc: "Фенхель в лотке ~1 кг",
+        weight: "1 кг",
+        currency: "₽",
+      },
+      {
+        id: 32,
+        img: "https://sbermarket.ru/spree/products/60230/small/65988.jpg?1587399619",
+        desc: "Кабачки грунтовые",
+        weight: "Нет в наличии",
+        currency: "₽",
+      },
+      {
+        id: 26,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "199,76",
+        desc: "Картофель для варки ~2,5 кг",
+        weight: "2,5 кг",
+        currency: "₽",
+      },
+      {
+        id: 27,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        desc: "Редис красный 500 г",
+        weight: "Нет в наличии",
+        currency: "₽",
+      },
+      {
+        id: 28,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "799,90",
+        desc: "Спаржа зеленая крупная",
+        weight: "450 г",
+        currency: "₽",
+      },
+      {
+        id: 29,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "19,90",
+        desc: "Капуста белокочанная ранняя",
+        weight: "1 кг",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Вода, соки, напитки",
+      allProducts: "Показать 1417 товаров ",
+    },
+    card: [
+      {
+        id: 30,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "65,29",
+        desc: "Газированный напиток Pepsi Wild Cherry 0,5 л",
+        weight: "0,5 л x 12",
+        multipack: {
+          amount: "12",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+      {
+        id: 31,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "19,89",
+        desc: "Вода питьевая Святой Источник газированная 1 л",
+        weight: "1 кг x 6",
+        multipack: {
+          amount: "6",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+      {
+        id: 32,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "52,39",
+        desc: "Сок Swell апельсин",
+        weight: "0,25 л x 8",
+        multipack: {
+          amount: "8",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+      {
+        id: 33,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "57,59",
+        desc: "Чай Lipton холодный лимон 0,25 л",
+        weight: "1 шт x 12",
+        multipack: {
+          amount: "12",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+      {
+        id: 34,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "229,00",
+        oldPrice: "279,00",
+        discount: "-18%",
+        disDate: "до 19.08",
+        desc: "Шампанское детское Abrau Junior безалкогольное золотое",
+        weight: "0,75 л",
+        currency: "₽",
+      },
+      {
+        id: 35,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "36,90",
+        oldPrice: "66,90",
+        discount: "-45%",
+        disDate: "до 19.08",
+        desc: "Вода Ессентуки Старый Источник №4",
+        weight: "1,5 л",
+        currency: "₽",
+      },
+      {
+        id: 36,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "19,89",
+        desc: "Вода питьевая Святой Источник негазированная 1 л",
+        weight: "1 кг x 6",
+        multipack: {
+          amount: "6",
+          weight: "шт."
+        },
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Молочные продукты",
+      allProducts: "Показать 1667 товаров",
+    },
+    card: [
+      {
+        id: 37,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "189,00",
+        oldPrice: "226,00",
+        discount: "-16%",
+        disDate: "до 19.08",
+        desc: "Молоко соевое Joya Natural Calcium 2,3% 1л",
+        weight: "1 л",
+        currency: "₽",
+      },
+      {
+        id: 38,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "275,00",
+        desc: "Сыр мягкий Satonoyuki соевый тофу Shiki-Organic 300 г",
+        weight: "300 г",
+        currency: "₽",
+      },
+      {
+        id: 39,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "75,49",
+        desc: "Молоко Rioba ультрапастеризованное 3,5% 1 л бзмж",
+        weight: "1 л",
+        currency: "₽",
+      },
+      {
+        id: 40,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "139,00",
+        desc: "Молоко Село Зеленое отборное ультрапастеризованное 2,8 - 5,5% 500 мл бзмж",
+        weight: "0,5 л",
+        currency: "₽",
+      },
+      {
+        id: 41,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "184,00",
+        desc: "Молоко кокосовое Aroy - D 60% 18,5% 400 мл",
+        weight: "0,4 л",
+        currency: "₽",
+      },
+      {
+        id: 42,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "189,00",
+        oldPrice: "226,00",
+        discount: "-16%",
+        disDate: "до 19.08",
+        desc: "Молоко соевое Joya Natural Calcium 2,3% 1л",
+        weight: "1 л",
+        currency: "₽",
+      },
+      {
+        id: 43,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "119,00",
+        desc: "Напиток гречневый Nemoloko классический Лайт 1 л",
+        weight: "1 шт",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Бакалея",
+      allProducts: "Показать 1227 товаров",
+    },
+    card: [
+      {
+        id: 44,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "130,00",
+        desc: "Булгур Bravolli",
+        weight: "500 г",
+        currency: "₽",
+      },
+      {
+        id: 45,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "75,49",
+        desc: "Крупа Увелка гречневая в пакетиках для варки",
+        weight: "5 пак",
+        currency: "₽",
+      },
+      {
+        id: 46,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "229,00",
+        desc: "Киноа Националь",
+        weight: "450 г",
+        currency: "₽",
+      },
+      {
+        id: 47,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "52,49",
+        oldPrice: "74,99",
+        discount: "-30%",
+        disDate: "до 19.08",
+        desc: "Крупа кукурузная Увелка в пакетиках для варки",
+        weight: "400 г",
+        currency: "₽",
+      },
+      {
+        id: 48,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "179,00",
+        desc: "Кускус Bravolli",
+        weight: "1 л",
+        currency: "₽",
+      },
+      {
+        id: 49,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "50,00",
+        desc: "Крупа манная Fine Life",
+        weight: "800 г",
+        currency: "₽",
+      },
+      {
+        id: 50,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "56,99",
+        desc: "Крупа перловая Увелка в пакетиках для варки",
+        weight: "400 г",
+        currency: "₽",
+      },
+    ]
+  },
+  {
+    header: {
+      title: "Сладости",
+      allProducts: "Показать 1956 товаров",
+    },
+    card: [
+      {
+        id: 51,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "1 699,00",
+        desc: "Подарочный набор Тайгета 700 г",
+        weight: "1 шт",
+        currency: "₽",
+      },
+      {
+        id: 52,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        disPrice: "209,00",
+        oldPrice: "397,00",
+        discount: "-47%",
+        disDate: "до 02.09",
+        desc: "Набор конфет А.Коркунов Ассорти темный и молочный шоколад 192 г",
+        weight: "192 г",
+        currency: "₽",
+      },
+      {
+        id: 53,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "76,99",
+        desc: "Мармелад Fruittella звери микс",
+        weight: "150 г",
+        currency: "₽",
+      },
+      {
+        id: 54,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "86,99",
+        desc: "Конфеты Eco botanica с экстрактом имбиря",
+        weight: "200 г",
+        currency: "₽",
+      },
+      {
+        id: 55,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "117,00",
+        desc: "Конфеты КДВ Нильс карамельная жевательная с фруктово-ягодной начинкой",
+        weight: "500 г",
+        currency: "₽",
+      },
+      {
+        id: 56,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "479,00",
+        desc: "Конфеты РотФронт Грильяж в шоколаде",
+        weight: "500 г",
+        currency: "₽",
+      },
+      {
+        id: 57,
+        img: "https://via.placeholder.com/100x100?img=Img",
+        price: "263,00 ₽",
+        desc: "Драже M&M's с молочным шоколадом и арахисом",
+        weight: "360 г",
+        currency: "₽",
+      },
+    ]
+  },
+];
+
+export const forСhoice = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/360x360?text=Text",
+    number: "1",
+    text:
+      "Выберите магазин и положите\n" +
+      "\n" +
+      "в корзину нужные товары,\n" +
+      "\n" +
+      "выберите удобное время\n" +
+      "\n" +
+      "доставки заказа",
+  },
+];
+
+export const forSpecialist = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/360x360?text=Text",
+    number: "2",
+    text:
+      "Специалист по закупкам\n" +
+      "\n" +
+      "соберет самые свежие продукты\n" +
+      "\n" +
+      "прямо с полок магазина",
+  },
+];
+
+export const forCourier = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/360x360?text=Text",
+    number: "3",
+    text:
+      "Курьер привезет продукты\n" +
+      "\n" +
+      "через несколько часов, а вы\n" +
+      "\n" +
+      "можете заняться своими делами",
+  },
+];
+
+export const choiceTitleText = "СберМаркет сходит в магазин вместо вас";
+
+export const recentlyWatchedProducts = [
+  {
+    id: 1,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "206.00",
+    currency: "₽",
+    weight: "125 г",
+  },
+  {
+    id: 2,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "191.00",
+    currency: "₽",
+    weight: "100 г",
+  },
+  {
+    id: 3,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "205.00",
+    currency: "₽",
+    weight: "500 г",
+  },
+  {
+    id: 4,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "275.00",
+    currency: "₽",
+    weight: "300 г",
+  },
+  {
+    id: 5,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "928.00",
+    currency: "₽",
+    weight: "100 г",
+  },
+  {
+    id: 6,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "263.00",
+    currency: "₽",
+    weight: "360 г",
+  },
+  {
+    id: 7,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "479.00",
+    currency: "₽",
+    weight: "500 г",
+  },
+  {
+    id: 8,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "117.00",
+    currency: "₽",
+    weight: "500 г",
+  },
+  {
+    id: 9,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "86.99",
+    currency: "₽",
+    weight: "200 г",
+  },
+  {
+    id: 10,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "76.99",
+    currency: "₽",
+    weight: "150 г",
+  },
+  {
+    id: 11,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "56.99",
+    currency: "₽",
+    weight: "400 г",
+  },
+  {
+    id: 12,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    price: "179.00",
+    currency: "₽",
+    weight: "450 г",
+  },
+  {
+    id: 13,
+    img: "https://via.placeholder.com/100x100?img=Img",
+    disPrice: "52.49",
+    oldPrice: "74.99",
+    currency: "₽",
+    weight: "125 г",
+  },
+  ]
+>>>>>>> 1d42890fbec272d513ae2ef3799134bbaf2fdfbc

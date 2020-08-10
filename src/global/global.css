@@ -29,6 +29,7 @@ body {
 .flickity-prev-next-button .flickity-button-icon {
   width: 20px;
   height: 20px;
+  position: static;
 }
 
 .flickity-prev-next-button.next {
@@ -40,10 +41,42 @@ body {
   border: 1px solid #e5edec;
 }
 
-.flickity-prev-next-button .flickity-button-icon {
-  position: static;
-}
-
 .flickity-button:active {
   opacity: 1;
 }
+
+.products .flickity-prev-next-button.previous {
+  left: auto;
+  right: 37px;
+}
+
+.products .flickity-prev-next-button.next {
+  right: 0;
+}
+
+.products .flickity-prev-next-button {
+  width: 32px;
+  height: 32px;
+  background-color: #21a038;
+  border-color: #21a038;
+  border-radius: 6px;
+  transition: all .3s;
+  top: -35px;
+}
+
+.products .flickity-button {
+  color: #fff;
+}
+
+.products .flickity-button:disabled {
+  opacity: 1;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  color: #e6e6e6;
+  }
+
+.products .flickity-button-icon {
+  width: 10px;
+  height: 10px;
+}
+

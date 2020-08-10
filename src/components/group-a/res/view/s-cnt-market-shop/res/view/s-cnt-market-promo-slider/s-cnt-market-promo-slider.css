@@ -1,12 +1,15 @@
 .carousel-cell {
-  width: 30%; /* full width */
+  width: 435px;
   height: 160px; /* height of carousel */
   margin-right: 10px;
 }
 
 .main-carousel {
-  margin: 24px auto;
-  position: relative;
-  width: calc(100% - 140px);
+  margin: 24px 70px;
 }
 
+@media screen and (max-width: 992px) {
+  .main-carousel {
+    display: none;
+  }
+}
