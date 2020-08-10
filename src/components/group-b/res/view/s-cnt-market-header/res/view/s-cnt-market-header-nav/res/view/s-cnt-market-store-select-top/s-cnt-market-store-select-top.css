@@ -149,22 +149,29 @@ drawer-backdrop-transition {
 
 .store-card-name {
   margin-bottom: 15px;
-  text-transform: uppercase;
-  font-size: 22px;
+  /*text-transform: uppercase;*/
+  font-size: 20px;
   color: #343434;
   font-weight: 700;
 }
 
 .store-card-detail {
-  padding-right: 50px;
+  padding-right: 45px;
+  font-size: 14px;
 }
 
 .store-card-img {
   width: 72px;
   height: 72px;
-  background-color: #ccc;
+  /*background-color: #ccc;*/
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 16px;
-}
+  display: flex;
+  flex: 0 0 72px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 24px;
+  box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
+  border-radius: 12px;
+  overflow: hidden;}

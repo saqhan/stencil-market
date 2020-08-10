@@ -17,6 +17,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   @Prop() navBar: navBarInterface;
 
   /**
+   * магазины для вашего города
+   * */
+  @Prop() selectShops: any;
+
+  /**
    * Данные для магазинов из каталога
    * */
   @Prop() leftMenuCatalogArr: leftMenuCatalogInterface[] = [];
@@ -74,6 +79,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class="fas fa-angle-down"></i>
                 </div>
                 <s-cnt-market-store-select-top
+                  selectShops={this.selectShops}
                   openedStoreSelect={this.openedStoreSelect}
                   onCloseStoreSelect={()=> this.closeStoreSelect()}
                 ></s-cnt-market-store-select-top>

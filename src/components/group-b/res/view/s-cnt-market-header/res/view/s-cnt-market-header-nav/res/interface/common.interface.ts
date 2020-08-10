@@ -33,3 +33,13 @@ export interface leftMenuCatalogInterface {
   sales: string;
   subcategories: subcategoriesInterface;
 }
+
+export interface selectShopsInterface {
+  id: number,
+  title: string,
+  description: string,
+  time: string,
+  img: string,
+  backgroundColor: string,
+  city: string,
+}
