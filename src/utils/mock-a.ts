@@ -659,7 +659,6 @@ export const productsSliderCards = [
 
 export const productsSliderTitle = "Популярные товары";
 
-<<<<<<< HEAD
 export const forFooter = {
   logo: 'https://via.placeholder.com/150x60?img=logo',
   forUpFooter: [
@@ -692,7 +691,7 @@ export const forFooter = {
     'Официальное уведомление'
   ],
 };
-=======
+
 export const recentlyWatchedTitle = "Вы недавно смотрели"
 
 export const productsList = [
@@ -1550,4 +1549,3 @@ export const recentlyWatchedProducts = [
     weight: "125 г",
   },
   ]
->>>>>>> 1d42890fbec272d513ae2ef3799134bbaf2fdfbc
