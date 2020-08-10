@@ -594,7 +594,7 @@ export const header = {
       sales: false,
       subcategories: [
         {
-          id: 1,
+          id: 2,
           title: 'Все для пикника',
           img: 'https://sbermarket.ru/spree/taxons/10413/normal/%D0%92%D1%81%D0%B5_%D0%B4%D0%BB%D1%8F_%D0%BF%D0%B8%D0%BA%D0%BD%D0%B8%D0%BA%D0%B0.jpg'
         }
@@ -604,19 +604,68 @@ export const header = {
       id:2,
       title: "Бренды METRO",
       img: "https://sbermarket.ru/spree/taxons/7783/normal/61000000.png",
-      sales: false,
+      sales: true,
       subcategories: [
         {
           id: 1,
           title: 'Средства для бритья и депиляции',
           img: 'https://sbermarket.ru/spree/taxons/12360/normal/%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D1%83%D1%85%D0%BE%D0%B4.jpeg'
-        }
+        },
+        {
+          id: 2,
+          title: 'Средства для бритья и депиляции',
+          img: 'https://sbermarket.ru/spree/taxons/12360/normal/%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D1%83%D1%85%D0%BE%D0%B4.jpeg'
+        },
       ]
     },
     {
       id:3,
-      title: "Бренды Procter & Gamble",
-      img: "https://sbermarket.ru/static/taxons/default.png",
+      title: "Вода, соки, напитки",
+      img: "https://sbermarket.ru/spree/taxons/5020/normal/%D0%92%D0%BE%D0%B4%D0%B0__%D1%81%D0%BE%D0%BA%D0%B8__%D0%BD%D0%B0%D0%BF%D0%B8%D1%82%D0%BA%D0%B8.png",
+      sales: false,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Большая упаковка',
+          img: 'https://sbermarket.ru/spree/taxons/9850/normal/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F_%D1%83%D0%BF%D0%B0%D0%BA%D0%BE%D0%B2%D0%BA%D0%B0.jpg'
+        }
+      ]
+    },
+    {
+      id:4,
+      title: "Овощи и фрукты",
+      img: "https://sbermarket.ru/spree/taxons/4232/normal/2000000.png",
+      sales: false,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Овощи',
+          img: 'https://sbermarket.ru/spree/taxons/4233/normal/2010000.jpg'
+        },
+        {
+          id: 2,
+          title: 'Зелень, салаты, смеси',
+          img: 'https://sbermarket.ru/spree/taxons/4279/normal/2050000.jpg'
+        }
+      ]
+    },
+    {
+      id:5,
+      title: "Молочные продукты",
+      img: 'https://sbermarket.ru/spree/taxons/4502/normal/%D0%A1%D0%BC%D0%B5%D1%82%D0%B0%D0%BD%D0%B0.png',
+      sales: false,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Молочные продукты',
+          img: 'https://sbermarket.ru/spree/taxons/4502/normal/%D0%A1%D0%BC%D0%B5%D1%82%D0%B0%D0%BD%D0%B0.png'
+        }
+      ]
+    },
+    {
+      id:6,
+      title: "Бакалея",
+      img: "https://sbermarket.ru/spree/taxons/4329/normal/3000000.png",
       sales: false,
       subcategories: [
         {
@@ -626,5 +675,71 @@ export const header = {
         }
       ]
     },
+    {
+      id:7,
+      title: "Сладости",
+      img: "https://sbermarket.ru/spree/taxons/4768/normal/10000000.png",
+      sales: true,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Бритье',
+          img: 'https://sbermarket.ru/static/taxons/default.png'
+        }
+      ]
+    },
+    {
+      id:8,
+      title: "Сыры",
+      img: "https://sbermarket.ru/spree/taxons/4582/normal/7000000.png",
+      sales: false,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Бритье',
+          img: 'https://sbermarket.ru/static/taxons/default.png'
+        }
+      ]
+    },
+    {
+      id:9,
+      title: "Колбасы, сосиски, деликатесы",
+      img: "https://sbermarket.ru/spree/taxons/4672/normal/8000000.png?1587987444",
+      sales: false,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Бритье',
+          img: 'https://sbermarket.ru/static/taxons/default.png'
+        }
+      ]
+    },
+    {
+      id:10,
+      title: 'Яйца',
+      img: 'https://sbermarket.ru/spree/taxons/4574/normal/6000000.png?1587987444',
+      sales: true,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Бритье',
+          img: 'https://sbermarket.ru/static/taxons/default.png'
+        }
+      ]
+    },
+    {
+      id:11,
+      title: 'Хлеб и выпечка',
+      img: 'https://sbermarket.ru/spree/taxons/4697/normal/9000000.png?1587987444',
+      sales: true,
+      subcategories: [
+        {
+          id: 1,
+          title: 'Бритье',
+          img: 'https://sbermarket.ru/static/taxons/default.png'
+        }
+      ]
+    },
+
   ],
 }

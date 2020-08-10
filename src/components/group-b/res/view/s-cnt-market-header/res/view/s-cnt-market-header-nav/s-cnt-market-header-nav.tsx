@@ -1,5 +1,8 @@
 import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
-import { navBarInterface } from "./res/interface/common.interface";
+import {
+  leftMenuCatalogInterface,
+  navBarInterface,
+} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-header-nav",
@@ -16,7 +19,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * Данные для магазинов из каталога
    * */
-  @Prop() leftMenuCatalogArr: any;
+  @Prop() leftMenuCatalogArr: leftMenuCatalogInterface[] = [];
 
   /*
    * Показывать/скрывать аккаунт юзера
@@ -27,6 +30,16 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * Показывать/скрывать левое меню-каталог
    * */
   @State() openedLeftMenu: boolean;
+
+  /**
+   * Показывать/скрывать корзину
+   * */
+  @State() openedBasket: boolean;
+
+  /**
+   * Показывать/скрывать  выбор магазина
+   * */
+  @State() openedStoreSelect: boolean
 
   private modalTag: any;
 
@@ -41,16 +54,18 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class="fas fa-bars"></i>
                   <span>{this.navBar.catalogBtn}</span>
                 </button>
-                {/*{this.isShowLeftMenuCatalog ? (*/}
-                {/*  <s-cnt-market-left-menu-catalog onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>*/}
-                {/*) : (*/}
-                {/*  ""*/}
-                {/*)}*/}
-                {<s-cnt-market-left-menu-catalog leftMenuCatalogArr={this.leftMenuCatalogArr} openedLeftMenu={this.openedLeftMenu} onCloseLeftMenu={()=> this.closeLeftMenu()} ></s-cnt-market-left-menu-catalog>}
+                {
+                  <s-cnt-market-left-menu-catalog
+                    leftMenuCatalogArr={this.leftMenuCatalogArr}
+                    openedLeftMenu={this.openedLeftMenu}
+                    onCloseLeftMenu={() => this.closeLeftMenu()}
+                  ></s-cnt-market-left-menu-catalog>
+                }
               </div>
               <div class="nav-search">
                 <div class="button-menu">
                   <div
+                    onClick={() => this.onClickSelectStoreHandler()}
                     class="full-menu-nav-btn"
                     style={{
                       backgroundImage: `url(${this.navBar.backgroundImageFullMenu})`,
@@ -58,6 +73,10 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   ></div>
                   <i class="fas fa-angle-down"></i>
                 </div>
+                <s-cnt-market-store-select-top
+                  openedStoreSelect={this.openedStoreSelect}
+                  onCloseStoreSelect={()=> this.closeStoreSelect()}
+                ></s-cnt-market-store-select-top>
                 <div class="search-wrapper">
                   <form>
                     <input type="text" placeholder={this.navBar.placeholder} />
@@ -99,16 +118,27 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 </a>
               </div>
               <div class="user-cart">
-                <a>
+                <a onClick={() => this.onClickBasketHandler()}>
                   <i class="fas fa-shopping-cart"></i>
                   <span>{this.navBar.titleCart}</span>
                 </a>
+                <s-cnt-market-basket
+                  openedBasket={this.openedBasket}
+                  onCloseBasket={() => this.closeBasket()}
+                ></s-cnt-market-basket>
               </div>
             </div>
           </div>
         </div>
       </div>
     );
+  }
+
+  /**
+   * клик на выбор магазина в шапке
+   * */
+  public onClickSelectStoreHandler(){
+    this.openedStoreSelect = true;
   }
 
   /**
@@ -131,12 +161,30 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * Show/hide left menu
    * */
   public onClickCatalogHandler() {
-    // this.isShowLeftMenuCatalog = true;
     this.openedLeftMenu = true;
+  }
+  /**
+   * Показываь корзину
+   * */
+  public onClickBasketHandler() {
+    this.openedBasket = true;
   }
   //
   public closeLeftMenu() {
     this.openedLeftMenu = false;
   }
 
+  /**
+   * Закрыть корзину
+   * */
+  public closeBasket() {
+    this.openedBasket = false;
+  }
+
+  /**
+   * close select store
+   * */
+  public closeStoreSelect(){
+    this.openedStoreSelect = false;
+  }
 }

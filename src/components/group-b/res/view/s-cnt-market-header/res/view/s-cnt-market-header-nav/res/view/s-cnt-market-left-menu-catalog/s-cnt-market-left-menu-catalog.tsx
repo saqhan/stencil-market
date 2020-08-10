@@ -7,6 +7,10 @@ import {
   Prop,
   State,
 } from "@stencil/core";
+import {
+  leftMenuCatalogInterface,
+  subcategoriesInterface,
+} from "../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-left-menu-catalog",
@@ -23,20 +27,36 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * массив магазинов для вывода
    * */
-  @Prop() leftMenuCatalogArr: any;
+  @Prop() leftMenuCatalogArr: leftMenuCatalogInterface[] = [];
 
+  /**
+   * Стейт для фильтраций скидов
+   * */
+  @State() leftMenuCatalogArrState = this.leftMenuCatalogArr;
+
+  /**
+   * закрывать меню
+   * */
   @Event() closeLeftMenu: EventEmitter;
 
   /**
    * показывать/скрывать блок скидок
    * */
-  @State() isShowSalesBlock: string;
+  // @State() isShowSalesBlock: boolean;
 
+  /**
+   * тег обертки скидок
+   * */
+  @State() wrapperSales: HTMLElement;
+
+  componentDidLoad() {
+    this.checkSales(this.leftMenuCatalogArr);
+    this.getShopsWithSales();
+  }
   render() {
     return (
       <div>
         <div
-          // class="drawer-backdrop"
           class={
             this.openedLeftMenu
               ? "drawer-backdrop  opened "
@@ -51,7 +71,6 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
               ? "drawer-left drawer-transition opened "
               : "drawer-left drawer-transition "
           }
-          // ref={(el) => (this.leftMenuContentTag = el)}
         >
           <div class="drawer-content">
             <div class="category-menu">
@@ -67,22 +86,44 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                 </div>
                 <div class="category-menu-content">
                   <ul
-                    // class="category-menu-list"
-                    class={this.checkSales()}
+                    class="category-menu-list d-none "
+                    ref={(el) => (this.wrapperSales = el)}
                   >
                     {/*<li class="category-menu-item-placeholder"></li>*/}
                     <li class="category-menu-item category-menu-item-promoted">
                       <a class="category-menu-item-link">
                         <div class="category-menu-item-content">
-                          <div class="category-menu-item-icon"></div>
+                          <div class="category-menu-item-icon sales-icon"></div>
                           <div class="category-menu-item-title">Скидки</div>
                         </div>
                         <div class="category-menu-item-link-pointer-container swing">
                           <i class="fas fa-angle-right"></i>
                         </div>
                       </a>
+                      <div class="category-menu-item-dropdown ">
+                        <ul class="category-menu-item-dropdown-list">
+                          {this.leftMenuCatalogArrState.map((item) => {
+                            return (
+                              <li class="category-menu-item">
+                                <a class="category-menu-item-link-dropdown">
+                                  <div class="category-menu-item-content">
+                                    <div
+                                      class="category-menu-item-icon"
+                                      style={{
+                                        backgroundImage: `url(${item.img})`,
+                                      }}
+                                    ></div>
+                                    <div class="category-menu-item-title">
+                                      {item.title}
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
                     </li>
-                    <li class="category-menu-item-placeholder"></li>
                   </ul>
                   <ul class="category-menu-list border-gray">
                     {this.getShopsItems(this.leftMenuCatalogArr)}
@@ -112,9 +153,18 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   }
 
   /**
+   * Получение магазинов со скидками
+   * */
+  public getShopsWithSales() {
+    this.leftMenuCatalogArrState = this.leftMenuCatalogArr.filter(
+      (item) => item.sales
+    );
+  }
+
+  /**
    * Получение магазинов
    **/
-  public getShopsItems(array) {
+  public getShopsItems(array): leftMenuCatalogInterface[] {
     return array.map((item) => {
       return (
         <li class="category-menu-item" id={item.id}>
@@ -130,21 +180,47 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
               <i class="fas fa-angle-right"></i>
             </div>
           </a>
+          {this.getSubcategories(item.subcategories)}
         </li>
       );
     });
   }
 
   /**
-   * Получение магазинов
+   * Получения подкатегорий TODO исправить вывод подкатегорий, где больше 1
+   * */
+  public getSubcategories(
+    array: subcategoriesInterface[]
+  ): subcategoriesInterface[] {
+    return array.map((item) => {
+      return (
+        <div class="category-menu-item-dropdown ">
+          <ul class="category-menu-item-dropdown-list">
+            <li class="category-menu-item">
+              <a class="category-menu-item-link-dropdown">
+                <div class="category-menu-item-content">
+                  <div
+                    class="category-menu-item-icon"
+                    style={{ backgroundImage: `url(${item.img})` }}
+                  ></div>
+                  <div class="category-menu-item-title">{item.title}</div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      );
+    });
+  }
+
+  /**
+   * Получение блока "скидки" если у магазинов ест скидки
    **/
-  public checkSales() {
-    console.log("ddd");
-    return this.leftMenuCatalogArr.map((item) => {
+  public checkSales(array): void {
+    array.map((item) => {
       if (item.sales) {
-        return " category-menu-list";
-      } else {
-        return "d-none";
+        this.wrapperSales.classList.add("visible");
+        this.wrapperSales.classList.remove("d-none");
       }
     });
   }
