@@ -81,6 +81,9 @@ export namespace Components {
     }
     interface SCntMarketRegistrationForm {
     }
+    interface SCntMarketStoreSelectTop {
+        "openedStoreSelect": boolean;
+    }
     interface SCntMarketTopBar {
         /**
           * объект данных для компонента top-bar и его подкомпонентов
@@ -179,6 +182,12 @@ declare global {
         prototype: HTMLSCntMarketRegistrationFormElement;
         new (): HTMLSCntMarketRegistrationFormElement;
     };
+    interface HTMLSCntMarketStoreSelectTopElement extends Components.SCntMarketStoreSelectTop, HTMLStencilElement {
+    }
+    var HTMLSCntMarketStoreSelectTopElement: {
+        prototype: HTMLSCntMarketStoreSelectTopElement;
+        new (): HTMLSCntMarketStoreSelectTopElement;
+    };
     interface HTMLSCntMarketTopBarElement extends Components.SCntMarketTopBar, HTMLStencilElement {
     }
     var HTMLSCntMarketTopBarElement: {
@@ -201,6 +210,7 @@ declare global {
         "s-cnt-market-login-form": HTMLSCntMarketLoginFormElement;
         "s-cnt-market-pickup-in-modal": HTMLSCntMarketPickupInModalElement;
         "s-cnt-market-registration-form": HTMLSCntMarketRegistrationFormElement;
+        "s-cnt-market-store-select-top": HTMLSCntMarketStoreSelectTopElement;
         "s-cnt-market-top-bar": HTMLSCntMarketTopBarElement;
     }
 }
@@ -302,6 +312,13 @@ declare namespace LocalJSX {
     }
     interface SCntMarketRegistrationForm {
     }
+    interface SCntMarketStoreSelectTop {
+        /**
+          * /Закрыть корзину
+         */
+        "onCloseStoreSelect"?: (event: CustomEvent<any>) => void;
+        "openedStoreSelect"?: boolean;
+    }
     interface SCntMarketTopBar {
         /**
           * объект данных для компонента top-bar и его подкомпонентов
@@ -324,6 +341,7 @@ declare namespace LocalJSX {
         "s-cnt-market-login-form": SCntMarketLoginForm;
         "s-cnt-market-pickup-in-modal": SCntMarketPickupInModal;
         "s-cnt-market-registration-form": SCntMarketRegistrationForm;
+        "s-cnt-market-store-select-top": SCntMarketStoreSelectTop;
         "s-cnt-market-top-bar": SCntMarketTopBar;
     }
 }
@@ -346,6 +364,7 @@ declare module "@stencil/core" {
             "s-cnt-market-login-form": LocalJSX.SCntMarketLoginForm & JSXBase.HTMLAttributes<HTMLSCntMarketLoginFormElement>;
             "s-cnt-market-pickup-in-modal": LocalJSX.SCntMarketPickupInModal & JSXBase.HTMLAttributes<HTMLSCntMarketPickupInModalElement>;
             "s-cnt-market-registration-form": LocalJSX.SCntMarketRegistrationForm & JSXBase.HTMLAttributes<HTMLSCntMarketRegistrationFormElement>;
+            "s-cnt-market-store-select-top": LocalJSX.SCntMarketStoreSelectTop & JSXBase.HTMLAttributes<HTMLSCntMarketStoreSelectTopElement>;
             "s-cnt-market-top-bar": LocalJSX.SCntMarketTopBar & JSXBase.HTMLAttributes<HTMLSCntMarketTopBarElement>;
         }
     }

@@ -1,0 +1,46 @@
+
+.drawer-backdrop {
+  position: fixed;
+  left: 0px;
+  right: auto;
+  bottom: 0px;
+  z-index: 2100;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.drawer-transition {
+  transition: transform .3s;
+  opacity: 1;
+}
+
+.drawer-backdrop.opened {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.drawer-top.opened {
+  transform: translateY(0);
+}
+
+.drawer-top {
+  position: fixed;
+  display: flex;
+  left: 0px;
+  right: 0px;
+  bottom: auto;
+  top: 40px;
+  max-height: calc(100vh - 40px);
+  transform: translateY(-105%);
+}
+
+.store-selector {
+  display: flex;
+  background-color: #ffffff;
+}
