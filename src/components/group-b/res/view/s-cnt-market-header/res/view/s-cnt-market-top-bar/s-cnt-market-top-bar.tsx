@@ -14,50 +14,76 @@ export class SCntMarketTopBar implements ComponentInterface {
   @Prop() topBar: TopBarInterface;
 
   /**
-   * boolean значение для вывода/закрытия модального окна
+   * boolean значение для вывода/закрытия модального окна входа/регистрация
    */
-  @State() modalComplited: boolean;
+  @State() loginRegistrationCompleted: boolean;
+
+  /**
+   * boolean значение для вывода/закрытия модального окна ввода адреса
+   */
+  @State() addressCompleted: boolean;
+
 
   /**
    * boolean значение для вывода блока доставка при открытии модального окна
    */
-  @State() deliveryComplited: boolean;
+  @State() deliveryCompleted: boolean;
 
   /**
    * boolean значение для вывода блока доставка при открытии модального окна
    * и выделении кнопки самовывоза при его выборе посредством присвоения id родительскому блоку
    */
-  @State() pickUpComplited: boolean;
+  @State() pickUpCompleted: boolean;
+
+  /**
+   * boolean значение для вывода блока доставка при открытии модального окна
+   */
+  @State() loginCompleted: boolean;
+
+  /**
+   * boolean значение для вывода блока доставка при открытии модального окна
+   * и выделении кнопки самовывоза при его выборе посредством присвоения id родительскому блоку
+   */
+  @State() registrationCompleted: boolean;
 
   /**
    * значение для того чтобы читать значение улицы посредством {detail} блока выбранного магазина
    */
   @State() idAddress: string;
 
-
   render() {
     return (
       <div class="container-fluid parent-block-top-bar">
+        {
+          this.loginRegistrationCompleted ?
+            <s-cnt-market-login-and-registration-form login={this.loginCompleted}
+                                                      registration={this.registrationCompleted}
+                                                      onCloseLogin={() => this.closeModal('login')}
+                                                      onOpenLogin={() => this.openBlock('login')}
+                                                      onOpenRegistration={() => this.openBlock('registration')}
+            ></s-cnt-market-login-and-registration-form> :
+            ''
+        }
         <div class="container top-bar-content-outer-block">
           <div class="top-bar-content-inner-block">
             <div class="top-bar-delivery-and-adress">
-              <div class="top-bar-delivery-option-block" id={this.pickUpComplited ? 'selected-dilivery' : ''}>
+              <div class="top-bar-delivery-option-block" id={this.pickUpCompleted ? 'selected-dilivery' : ''}>
                 <button class="selection-by-delivery" onClick={() => {
-                  this.openModal();
-                  this.openDelivery();
+                  this.openModal('address');
+                  this.openBlock('delivery');
                 }}>
                   {this.topBar.choiceDelivery}
                 </button>
                 <button class="selection-by-pickUp" onClick={() => {
-                  this.openModal();
-                  this.openpickUp();
+                  this.openModal('address');
+                  this.openBlock('pickUp');
                 }}>
                   {this.topBar.choicePickUp}
                 </button>
               </div>
               <div class="option-adress-text-block" onClick={() => {
-                this.openModal();
-                this.openDelivery();
+                this.openModal('address');
+                this.openBlock('delivery');
               }}>
                 <span>
                   <span class={this.idAddress ? 'selected-address' : ''}>
@@ -90,14 +116,16 @@ export class SCntMarketTopBar implements ComponentInterface {
           </div>
         </div>
         {
-          this.modalComplited ?
-            <s-cnt-market-delivery-modal delivery={this.deliveryComplited}
-                                         pickUp={this.pickUpComplited}
+          this.addressCompleted ?
+            <s-cnt-market-delivery-modal delivery={this.deliveryCompleted}
+                                         pickUp={this.pickUpCompleted}
                                          modalData={this.topBar.modalWindow}
-                                         onCloseForm={() => this.closeModal()}
-                                         onOpenDelivery={() => this.openDelivery()}
-                                         onOpenpickUp={() => this.openpickUp()}
-                                         onIdSelectionAddress={(x) => this.idSelectionAddress(x)}
+                                         onCloseForm={() => this.closeModal('address')}
+                                         onOpenDelivery={() => this.openBlock('delivery')}
+                                         onOpenPickUp={() => this.openBlock('pickUp')}
+                                         onIdSelectionAddress={(detail) => this.idSelectionAddress(detail)}
+              // event-ы для формы входа/регистрации
+                                         onOpenLogin={() => this.openModal('login')}
             /> :
             ''
         }
@@ -108,31 +136,55 @@ export class SCntMarketTopBar implements ComponentInterface {
   /**
    * Вызов модального окна
    */
-  public openModal() {
-    this.modalComplited = true;
+  public openModal(value) {
+    if (value === 'address') {
+      this.addressCompleted = true;
+    } else if (value === 'login') {
+      this.loginRegistrationCompleted = true;
+      this.loginCompleted = true;
+      this.addressCompleted = false;
+    }
   }
+  // Handler
 
   /**
-   * открытие блока/компонента Доставки при открытии модального окна
+   * открытие блока/компонента при открытии модального окна
    */
-  public openDelivery() {
-    this.deliveryComplited = true;
-    this.pickUpComplited = false;
+  public openBlock(value) {
+    if (value === 'delivery') {
+      this.deliveryCompleted = true;
+      this.pickUpCompleted = false;
+    } else if (value === 'pickUp') {
+      this.pickUpCompleted = true;
+      this.deliveryCompleted = false;
+    }else if (value === 'login') {
+      this.loginCompleted = true;
+      this.registrationCompleted = false;
+    } else if (value === 'registration') {
+      this.registrationCompleted = true;
+      this.loginCompleted = false;
+    }
   }
 
-  /**
-   * открытие блока/компонента самовывоз при открытии модального окна
-   */
-  public openpickUp() {
-    this.pickUpComplited = true;
-    this.deliveryComplited = false;
-  }
+  // /**
+  //  * открытие блока/компонента самовывоз при открытии модального окна
+  //  */
+  // public openPickUp(value) {
+  //   if (value === 'address') {
+  //     this.pickUpCompleted = true;
+  //     this.deliveryCompleted = false;
+  //   }
+  // }
 
   /**
    * Закрытие модального окна
    */
-  public closeModal() {
-    this.modalComplited = false;
+  public closeModal(value) {
+    if (value === 'address') {
+      this.addressCompleted = false;
+    } else if (value === 'login') {
+      this.loginRegistrationCompleted = false;
+    }
   }
 
   /**
