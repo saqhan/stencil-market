@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, EventEmitter, h, Prop, Event} from "@stencil/core";
 import { MarketProductInterface } from "./res/interface/common.interface";
 
 @Component({
@@ -11,12 +11,12 @@ export class SCntMarketProduct implements ComponentInterface {
   /**
    * Данные для Product
    */
-  @Prop() getProduct: any;
+  @Prop() getProduct: MarketProductInterface;
 
   /**
-   * Интерфейс для Product
+   * Клик по кнопке закрытия модального окна
    */
-  @Prop() MarketProductInterface: MarketProductInterface[] = [];
+  @Event() clickOnModal: EventEmitter<void>;
 
   render() {
     return (
@@ -39,7 +39,7 @@ export class SCntMarketProduct implements ComponentInterface {
             </div>
             <div class="col-md-5">
               <div class="info-product">
-                <div class="close">
+                <div class="close" onClick={() => this.closeModalHandler() }>
                   <i class="fa fa-times" aria-hidden="true" />
                 </div>
                 <div class="name">{this.getProduct.name}</div>
@@ -68,5 +68,12 @@ export class SCntMarketProduct implements ComponentInterface {
         </div>
       </div>
     );
+  }
+
+  /**
+   * Закрытие модального окна
+   */
+  public closeModalHandler() {
+    this.clickOnModal.emit()
   }
 }

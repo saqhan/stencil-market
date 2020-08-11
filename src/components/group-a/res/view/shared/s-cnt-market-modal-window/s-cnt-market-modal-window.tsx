@@ -1,5 +1,5 @@
-import { Component, ComponentInterface, h } from "@stencil/core";
-import {getProduct, getRecommended, getSpecification, info} from "../../../../../utils/mock-a";
+import {Component, ComponentInterface, Event, EventEmitter, h} from "@stencil/core";
+import {getProduct, getRecommended, getSpecification, info} from "../../../../../../utils/mock-a";
 
 @Component({
   tag: "s-cnt-market-modal-window",
@@ -8,9 +8,20 @@ import {getProduct, getRecommended, getSpecification, info} from "../../../../..
   scoped: true,
 })
 export class SCntMarketModalWindow implements ComponentInterface {
+  /**
+   * Клик по кнопке закрытия модального окна
+   */
+  @Event() clickOnModal: EventEmitter<void>;
+
+  /**
+   *
+   * @private
+   */
+  public modalTag: HTMLElement;
+
   render() {
     return (
-      <div class="window">
+      <div class="window" ref={(el) => this.modalTag = el} onClick={(event) => this.closeModal(event)}>
         <div class="container">
           <s-cnt-market-product
             getProduct={getProduct}>
@@ -25,5 +36,14 @@ export class SCntMarketModalWindow implements ComponentInterface {
         </div>
       </div>
     );
+  }
+
+  /**
+   * Закрытие модального окна
+   */
+  public closeModal (event) {
+    if (event.target === this.modalTag) {
+      this.clickOnModal.emit()
+    }
   }
 }

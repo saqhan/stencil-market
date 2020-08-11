@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
 import {MarketProductListInterface} from "./res/interface/common.interface";
 
 @Component({
@@ -13,11 +13,18 @@ export class SCntMarketProductsList implements ComponentInterface {
    */
   @Prop() productsList: MarketProductListInterface[] = [];
 
+  /**
+   * Клик по карточке для показа модального окна
+   */
+  @Event() showModal: EventEmitter<void>;
+
   render() {
     return (
       <div class="products-list">
-        <div class="products-list-row">
-          <ProductsList array={this.productsList}></ProductsList>
+        <div class="container">
+          <div class="products-list-row">
+            <ProductsList array={this.productsList}></ProductsList>
+          </div>
         </div>
       </div>
     );

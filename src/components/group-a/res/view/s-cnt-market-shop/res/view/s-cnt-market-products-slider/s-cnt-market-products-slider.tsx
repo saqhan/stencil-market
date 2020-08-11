@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
 import { MarketProductsSliderCardsInterface } from "./res/interface/common.interface";
 
 @Component({
@@ -19,30 +19,37 @@ export class SCntMarketProductsSlider implements ComponentInterface {
   @Prop() productsSliderTitle: string;
 
   /**
+   * Клик по карточке для показа модального окна
+   */
+  @Event() showModal: EventEmitter<void>;
+
+  /**
    *
    */
   public carouselTag: HTMLElement;
 
+
+
   componentDidLoad() {
-    const elem = this.carouselTag;
+    let elem = this.carouselTag;
     // @ts-ignore
-    const flkty = new Flickity(elem, {
+    let flkty = new Flickity(elem, {
       // options
-      freeScroll: true,
-      contain: true,
       pageDots: false,
-      draggable: false,
+      cellAlign: "left",
     });
   }
 
   render() {
     return (
       <div class="products">
-        <div class="products-carousel-title">{this.productsSliderTitle}</div>
-        <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
-          <ProductsSliderCard
-            array={this.productsSliderCards}
-          ></ProductsSliderCard>
+        <div class="container">
+          <div class="products-carousel-title">{this.productsSliderTitle}</div>
+          <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
+            <ProductsSliderCard
+              array={this.productsSliderCards}
+            ></ProductsSliderCard>
+          </div>
         </div>
       </div>
     );
