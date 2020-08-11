@@ -7,7 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import {selectShopsInterface} from "../../interface/common.interface";
+import { selectShopsInterface } from "../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-store-select-top",
@@ -58,8 +58,9 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
                 <div class="store-select-title">
                   По вашему адресу доступно {this.selectShops.length} магазинов
                 </div>
-                <button class="store-select-close"
-                   onClick={() => this.clickOnCloseSelectStoreHandler()}
+                <button
+                  class="store-select-close"
+                  onClick={() => this.clickOnCloseSelectStoreHandler()}
                 >
                   <i class="fas fa-times"></i>
                 </button>
@@ -94,7 +95,7 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
               class="store-card-img"
               style={{
                 backgroundColor: `${item.backgroundColor}`,
-                backgroundImage: `url(${item.img})`
+                backgroundImage: `url(${item.img})`,
               }}
             ></div>
           </a>
@@ -116,6 +117,6 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
    * клик на закрытие меню
    * */
   public clickOnCloseSelectStoreHandler() {
-    this.closeStoreSelect.emit()
+    this.closeStoreSelect.emit();
   }
 }
