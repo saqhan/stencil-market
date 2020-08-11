@@ -1,3 +1,87 @@
-:host {
-  display: block;
+.container {
+  margin-top: 100px;
+  padding-top: 60px;
+}
+
+.deliveryImage {
+  width: 1245px;
+  height: 530px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.title {
+  font-weight: 600;
+  margin-left: 25px;
+  line-height: .17;
+  font-size: 35px;
+}
+
+.listOfCities {
+  display: flex;
+}
+
+.list {
+  width: 230px;
+  list-style: none;
+}
+
+.city {
+  line-height: 2;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.city:hover {
+  color: #666;
+}
+
+.btn {
+  margin-top: 30px;
+  border: 1px solid #d0d2d4;
+  width: 460px;
+  height: 48px;
+  cursor: pointer;
+  outline: none;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.btn:hover {
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+  background-color: #f3f4f7;
+  color: #333536;
+}
+
+@media only screen and (max-width: 400px) {
+  .deliveryImage {
+    width: 365px;
+    height: 650px;
+  }
+
+  .title {
+    margin-top: -30px;
+    margin-bottom: 110px;
+    text-align: center;
+    line-height: 0.7;
+    font-size: 24px;
+  }
+
+  .list {
+    width: 170px;
+    margin-top: 145px;
+  }
+
+  .city {
+    font-size: 14px;
+  }
+
+  .btn {
+    margin: 0 0 0 5px;
+    width: 326px;
+    height: 48px;
+  }
 }

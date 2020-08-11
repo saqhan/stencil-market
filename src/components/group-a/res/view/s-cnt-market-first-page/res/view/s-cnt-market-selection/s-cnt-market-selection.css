@@ -7,7 +7,7 @@
   background-position: center;
 }
 
-.text {
+.homeText {
   padding: 125px 0 0 100px;
   line-height: .2;
   color: #fff;
@@ -16,7 +16,7 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.subtext {
+.homeSubtext {
   margin: 65px 0 0 100px;
   line-height: .5;
   font-size: 18px;
@@ -27,11 +27,11 @@
 
 @media only screen and (max-width: 400px) {
   .container {
-    margin-top: 250px;
+    margin-top: 300px;
   }
 
   .imageHome {
-    border-radius: 20px;
+    border-radius: 25px;
     max-width: 345px;
     height: 240px;
     margin-bottom: 150px;
@@ -40,16 +40,20 @@
   .commonText {
     z-index: 99;
     position: absolute;
-    top: 13%;
-    right: 50%;
+    top: 25%;
+    transform: translate(-25%, -25%);
   }
 
-  .text {
+  .homeText {
     color: #333;
     font-size: 35px;
+    line-height: .2;
   }
 
-  .subtext {
+  .homeSubtext {
+    font-size: 18px;
+    margin-top: 0;
+    line-height: .5;
     color: #333;
   }
 }

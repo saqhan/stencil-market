@@ -14,7 +14,6 @@ export class GroupA implements ComponentInterface {
         {/*<s-cnt-market-first-page/>*/}
         {/*<s-cnt-market-shop/>*/}
         <s-cnt-market-footer />
-        {/*<s-cnt-market-shop/>*/}
       </div>
     );
   }
