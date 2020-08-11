@@ -58,7 +58,9 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
                 <div class="store-select-title">
                   По вашему адресу доступно {this.selectShops.length} магазинов
                 </div>
-                <button class="store-select-close">
+                <button class="store-select-close"
+                   onClick={() => this.clickOnCloseSelectStoreHandler()}
+                >
                   <i class="fas fa-times"></i>
                 </button>
               </div>
@@ -108,5 +110,12 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
     if (event.target === this.selectStoreTag) {
       this.closeStoreSelect.emit();
     }
+  }
+
+  /**
+   * клик на закрытие меню
+   * */
+  public clickOnCloseSelectStoreHandler() {
+    this.closeStoreSelect.emit()
   }
 }
