@@ -37,9 +37,11 @@
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
+  visibility: visible;
 }
 
 .drawer-right {
+  visibility: hidden;
   display: flex;
   position: fixed;
   left: auto;
