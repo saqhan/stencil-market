@@ -9,20 +9,29 @@
   overflow: auto;
   background-color: rgba(0,0,0,.4);
   z-index: 1000;
-  animation-name: fadeIn;
-  animation-duration: .5s;
-  animation-delay: 35ms;
-  animation-timing-function: ease;
+  opacity: 0;
+  pointer-events: none;
+  /*transition: opacity 1s;*/
+  /*animation: fadeIn .5s 35ms ease-in;*/
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.window:target {
+  opacity: 1;
+  pointer-events: auto;
 }
+
+/*.fadeIn {*/
+/*  opacity: 1;*/
+/*}*/
+
+/*@keyframes fadeIn {*/
+/*  0% {*/
+/*    opacity: 0;*/
+/*  }*/
+/*  100% {*/
+/*    opacity: 1;*/
+/*  }*/
+/*}*/
 
 
 .container {
