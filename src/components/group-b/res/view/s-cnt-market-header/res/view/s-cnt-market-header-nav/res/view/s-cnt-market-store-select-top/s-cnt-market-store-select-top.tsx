@@ -83,7 +83,7 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   public getSelectShops(array): selectShopsInterface {
     return array.map((item) => {
       return (
-        <div class="col-4">
+        <div class="col-12 col-md-6 col-lg-4  ">
           <a class="store-card">
             <div class="store-card-description">
               <div class="store-card-name">{item.title}</div>

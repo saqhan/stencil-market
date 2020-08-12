@@ -14,5 +14,6 @@ export interface TopBarInterface {
   timeOfDelivery: string;
   phoneNumber: string;
   workingHours: string;
+  loginAndRegistration: any;
   modalWindow: TopBarModalInterface;
 }

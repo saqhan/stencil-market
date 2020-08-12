@@ -1,5 +1,5 @@
-import {Component, ComponentInterface, h, Prop} from "@stencil/core";
-import {NavMenuItemInterface} from "./res/interface/common.interface";
+import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import { NavMenuItemInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-header-body",
@@ -8,8 +8,7 @@ import {NavMenuItemInterface} from "./res/interface/common.interface";
   scoped: true,
 })
 export class SCntMarketHeaderBody implements ComponentInterface {
-
-  @Prop() body:NavMenuItemInterface;
+  @Prop() body: NavMenuItemInterface;
 
   /**
    *
@@ -27,16 +26,15 @@ export class SCntMarketHeaderBody implements ComponentInterface {
           <div class="col">
             <div class="header-body-wrapper">
               <div class="logo-wrapper">
-                <div class="logo"
-                  style={{backgroundImage: `url(${this.body.logo})`}}
+                <div
+                  class="logo"
+                  style={{ backgroundImage: `url(${this.body.logo})` }}
                 ></div>
               </div>
               <div class="header-navbar-list">
                 <div class="mobile-menu-btn ">
                   {!this.isShowBar ? (
-                    <button
-                      onClick={() => this.showMobileMenuHandler()}
-                    >
+                    <button onClick={() => this.showMobileMenuHandler()}>
                       <i class="fas fa-bars"></i>
                     </button>
                   ) : (
@@ -51,12 +49,12 @@ export class SCntMarketHeaderBody implements ComponentInterface {
                         class="mobile-menu-close"
                         onClick={() => this.showMobileMenuHandler()}
                       >
-              <span>
-                <i class="fas fa-times"></i>
-              </span>
+                        <span>
+                          <i class="fas fa-times"></i>
+                        </span>
                       </div>
                       <nav class="mobile-menu-wrapper">
-                        <ul class='mobile-menu-ul' >
+                        <ul class="mobile-menu-list-wrapper">
                           <li class="main-item">👩‍💻 Для Бизнеса</li>
                           <li>Как мы работаем</li>
                           <li>Контакты</li>
@@ -67,7 +65,7 @@ export class SCntMarketHeaderBody implements ComponentInterface {
                     </div>
                   </div>
                 </div>
-                <ul class='menu-ul' >
+                <ul class="menu-ul">
                   {this.getItemsMenu(this.body.navMenuItem)}
                 </ul>
               </div>
@@ -87,11 +85,11 @@ export class SCntMarketHeaderBody implements ComponentInterface {
     console.log(this.isShowBar);
   }
   /*
-  * получаем список меню
-  * */
-  public getItemsMenu(array){
-    return array.map(item => {
-      return <li>{item.name}</li>
-    })
+   * получаем список меню
+   * */
+  public getItemsMenu(array) {
+    return array.map((item) => {
+      return <li>{item.name}</li>;
+    });
   }
 }

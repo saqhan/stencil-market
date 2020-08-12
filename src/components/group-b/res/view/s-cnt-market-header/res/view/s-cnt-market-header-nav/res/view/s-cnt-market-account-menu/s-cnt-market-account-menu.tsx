@@ -10,7 +10,9 @@ export class SCntMarketAccountMenu implements ComponentInterface {
 
   render() {
     return (
-      <div class="account-menu">
+      <div class="account-menu"
+           // ref={(el) =>}
+      >
         <div class="account-menu-header">Saqhan</div>
         <div class="account-menu-separator"></div>
         <div class="account-menu-i">

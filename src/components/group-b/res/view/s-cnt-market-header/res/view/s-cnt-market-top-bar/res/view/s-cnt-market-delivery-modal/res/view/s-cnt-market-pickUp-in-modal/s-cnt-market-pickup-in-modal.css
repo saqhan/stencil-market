@@ -164,7 +164,7 @@
   color: #a6a8a9;;
 }
 
-.update-selected-address{
+.update-selected-address {
 
 }
 
@@ -265,28 +265,41 @@
 
 @media (max-width: 576px) {
   .adress-in-city-blocks{
-    padding: 40px 20px 25px;
+    height: 100%;
   }
 
-  .store-list-logo-img{
+  .option-city-modal-intop-bar, .city-option-for-selected {
+    font-size: 15px;
+  }
+
+  .store-list-logo-img {
     width: 48px;
     height: 48px;
   }
 
-  .store-list-logo-img div{
+  .store-list-logo-img div {
     width: 26px;
     height: 26px;
   }
 
-  .store-name{
+  .store-name {
     font-size: 14px;
   }
 
-  .store-selected-address, .store-work-time{
-    font-size: 11px;
+  .number-of-stores {
+    font-size: 12px;
+    padding: 5px 10px;
   }
 
-  .store-secet-btn{
+  .store-selected-address, .store-work-time {
+    font-size: 10px;
+  }
+
+  .adress-in-city-blocks {
+    padding: 40px 5px 25px;
+  }
+
+  .store-secet-btn {
     font-size: 12px;
     padding: 5px 11px;
   }
@@ -295,7 +308,60 @@
     padding: 5px 10px;
   }
 
-  .store-address{
+  .store-address {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .method-of-obtaining-title {
+    font-size: 18px;
+  }
+
+  .option-city-modal-intop-bar i {
     font-size: 14px;
   }
+
+  .store-list-logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .store-list-logo-img div {
+    width: 20px;
+    height: 20px;
+  }
+
+  .number-of-stores {
+    font-size: 10px;
+  }
+
+  .list-stores-open-icon{
+    width: 32px;
+    height: 32px;
+  }
+
+  .list-stores-open-icon i{
+    font-size: 14px;
+  }
+
+  .store-list-wrapper{
+    padding: 15px;
+  }
+
+  .store-address {
+    font-size: 10px;
+  }
+
+  .store-selected-address, .store-work-time {
+    font-size: 8px;
+  }
+
+  .store-secet-btn {
+    font-size: 10px;
+    padding: 3px 9px;
+  }
+
+
 }

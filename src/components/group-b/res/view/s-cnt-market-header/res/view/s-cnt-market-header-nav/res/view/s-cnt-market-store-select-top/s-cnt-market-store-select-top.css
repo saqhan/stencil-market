@@ -175,3 +175,13 @@ drawer-backdrop-transition {
   box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
   border-radius: 12px;
   overflow: hidden;}
+
+
+@media (max-width: 414px) {
+  .store-select-title {
+    font-size: 20px;
+  }
+  .store-card {
+    margin: 5px auto;
+  }
+}

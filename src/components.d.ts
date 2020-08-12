@@ -74,8 +74,21 @@ export namespace Components {
         "openedLeftMenu": boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
+        /**
+          * boolean значение для вывода/закрытия блока входа и присвоения класса
+         */
+        "login": boolean;
+        /**
+          * boolean значение для вывода/закрытия блока входа и присвоения класса
+         */
+        "loginAndRegistration": any;
+        /**
+          * boolean значение для вывода/закрытия блока регистрации и присвоения класса
+         */
+        "registration": boolean;
     }
     interface SCntMarketLoginForm {
+        "login": any;
     }
     interface SCntMarketPickupInModal {
         /**
@@ -84,6 +97,7 @@ export namespace Components {
         "pickUpData": TopBarModalPickUpInterface;
     }
     interface SCntMarketRegistrationForm {
+        "reg": any;
     }
     interface SCntMarketStoreSelectTop {
         "openedStoreSelect": boolean;
@@ -257,7 +271,7 @@ declare namespace LocalJSX {
          */
         "modalData"?: TopBarModalInterface;
         /**
-          * Закрытие модального модального окна
+          * Закрытие модального модального окна выбора адреса
          */
         "onCloseForm"?: (event: CustomEvent<any>) => void;
         /**
@@ -269,9 +283,13 @@ declare namespace LocalJSX {
          */
         "onOpenDelivery"?: (event: CustomEvent<any>) => void;
         /**
+          * Закрытие модального модального окна
+         */
+        "onOpenLogin"?: (event: CustomEvent<any>) => void;
+        /**
           * функция для смены значения boolean пропса pickUp
          */
-        "onOpenpickUp"?: (event: CustomEvent<any>) => void;
+        "onOpenPickUp"?: (event: CustomEvent<any>) => void;
         /**
           * boolean значение для вывода/закрытия блока самовывоза и присвоения класса
          */
@@ -309,8 +327,33 @@ declare namespace LocalJSX {
         "openedLeftMenu"?: boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
+        /**
+          * boolean значение для вывода/закрытия блока входа и присвоения класса
+         */
+        "login"?: boolean;
+        /**
+          * boolean значение для вывода/закрытия блока входа и присвоения класса
+         */
+        "loginAndRegistration"?: any;
+        /**
+          * Закрытие модального модального окна формы входа/регистрации
+         */
+        "onCloseLogin"?: (event: CustomEvent<any>) => void;
+        /**
+          * функция для смены значения boolean пропса login
+         */
+        "onOpenLogin"?: (event: CustomEvent<any>) => void;
+        /**
+          * функция для смены значения boolean пропса registration
+         */
+        "onOpenRegistration"?: (event: CustomEvent<any>) => void;
+        /**
+          * boolean значение для вывода/закрытия блока регистрации и присвоения класса
+         */
+        "registration"?: boolean;
     }
     interface SCntMarketLoginForm {
+        "login"?: any;
     }
     interface SCntMarketPickupInModal {
         /**
@@ -323,6 +366,7 @@ declare namespace LocalJSX {
         "pickUpData"?: TopBarModalPickUpInterface;
     }
     interface SCntMarketRegistrationForm {
+        "reg"?: any;
     }
     interface SCntMarketStoreSelectTop {
         /**

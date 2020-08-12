@@ -371,3 +371,13 @@ category-menu-item-title {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
 }
+
+
+@media (max-width: 414px) {
+  .category-menu-container {
+    width: 210px;
+  }
+  .category-menu-item-dropdown {
+    left: 210px;
+  }
+}

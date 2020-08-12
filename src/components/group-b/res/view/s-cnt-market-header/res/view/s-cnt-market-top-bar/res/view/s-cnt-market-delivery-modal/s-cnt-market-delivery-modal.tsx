@@ -24,9 +24,14 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   @Prop() pickUp: boolean;
 
   /**
-   * Закрытие модального модального окна
+   * Закрытие модального модального окна выбора адреса
    */
   @Event() closeForm: EventEmitter;
+
+  /**
+   * Закрытие модального модального окна
+   */
+  @Event() openLogin: EventEmitter;
 
   /**
    * функция для смены значения boolean пропса delivery
@@ -36,12 +41,12 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   /**
    * функция для смены значения boolean пропса pickUp
    */
-  @Event() openpickUp: EventEmitter;
+  @Event() openPickUp: EventEmitter;
 
   /**
    * функция для смены значения boolean пропса pickUp
    */
-  @Event()idSelectionAddress: EventEmitter;
+  @Event() idSelectionAddress: EventEmitter;
 
   /**
    * ref для закрытия модального окна
@@ -61,7 +66,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
               <div class="delivery-modal-block">
                 <div class="close-btn-wrapper">
                   <button class="close-btn" onClick={() => this.closeForm.emit()}>
-                    X
+                    <i class="fas fa-times"></i>
                   </button>
                 </div>
                 <div class="choose-way-to-get-block">
@@ -71,7 +76,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                     </div>
                     <div class="suggestions-signIn-in-modal-top-bar">
                       {this.modalData.offerToEnter}
-                      <span>
+                      <span onClick={() => this.openLoginHandler()}>
                         {this.modalData.offerToEnterLink}
                       </span>
                     </div>
@@ -84,7 +89,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                       {this.modalData.choiceDelivery}
                     </button>
                     <button class="option-pickUp" id={this.pickUp ? 'option-delivery-selected' : ''}
-                            onClick={() => this.openpickUp.emit()}>
+                            onClick={() => this.openPickUp.emit()}>
                       {this.modalData.choicePickUp}
                     </button>
                   </div>
@@ -114,6 +119,14 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
     if (event.target === this.ourModal) {
       this.closeForm.emit()
     }
+  };
+
+  /**
+   * Вызов функции открытия модального компонента входа/регистрации
+   */
+  public openLoginHandler() {
+    this.openLogin.emit();
+    this.closeForm.emit();
   };
 
 }

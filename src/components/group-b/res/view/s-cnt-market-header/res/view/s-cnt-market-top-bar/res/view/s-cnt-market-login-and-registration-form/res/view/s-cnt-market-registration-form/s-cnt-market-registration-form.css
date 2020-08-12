@@ -1,0 +1,178 @@
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.registration-form {
+  transition: all .25s ease-out;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+  width: 100%;
+  line-height: normal;
+  font-weight: 400;
+}
+
+.input-container {
+  position: relative;
+  color: #8f8e94;
+  font-size: 14px;
+  transition: color .25s ease-out;
+}
+
+.view-input {
+  box-shadow: none;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+  background-color: #f7f7f7;
+  padding-right: 40px;
+  padding-left: 15px;
+  width: 100%;
+  height: 42px;
+  color: #393939;
+  font-size: 14px;
+  font-weight: inherit;
+  transition: all .25s ease-out;
+  line-height: 20px;
+}
+
+.view-input:focus {
+  border-color: #1ea038;
+  background-color: white;
+}
+
+.error-input {
+  margin-top: 5px;
+  letter-spacing: .3px;
+  color: #f36;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.label-checkbox-wrapper {
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  padding: 19px;
+  margin: 20px 0;
+  border: 1px solid #e7e9eb;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.checkbox-for-consent {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  will-change: opacity, background-color, box-shadow;
+  transition: opacity .2s, background-color .2s, box-shadow .2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 48px;
+  width: 48px;
+  height: 28px;
+  padding: 4px;
+  background-color: #e7e9eb;
+}
+
+.checkbox-for-consent::before {
+  display: block;
+  position: absolute;
+  will-change: background-color, transform;
+  transition: background-color .2s, transform .2s;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .06), 0 0 1px rgba(0, 0, 0, .18);
+  border-radius: 100%;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  content: "";
+}
+
+.checkbox-for-consent:checked:before {
+  transform: translateX(100%);
+}
+
+.checkbox-for-consent:checked:not(:disabled) {
+  background-color: #21a038;
+}
+
+.checkbox-for-consent:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(33, 160, 56, .3);
+}
+
+.text-consent {
+  margin-left: 12px;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+.registration-btn {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  min-width: 100%;
+  margin-top: 12px;
+  background-color: #21a038;
+  box-shadow: 0 10px 30px rgba(33, 160, 56, .4);
+  color: #fff;
+  border: 1px solid transparent;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 8px;
+  padding: 11px 16px;
+  transition: all 0.2s;
+}
+
+.form-footer-custom-conditions {
+  margin: 20px 20px 0;
+  color: #96959b;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.custom-conditions-link-btn {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #21a038;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+.custom-conditions-link-btn:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 576px) {
+  .view-input {
+    font-size: 12px;
+  }
+
+  .remember-me-check {
+    font-size: 12px;
+    padding-bottom: 1px;
+  }
+
+  .text-consent, .registration-btn {
+    font-size: 12px;
+  }
+
+  .form-footer-custom-conditions{
+    font-size: 10px;
+    padding-bottom: 5px;
+  }
+
+}

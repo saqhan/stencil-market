@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h} from '@stencil/core';
+import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 's-cnt-market-login-form',
@@ -7,13 +7,24 @@ import {Component, ComponentInterface, h} from '@stencil/core';
   scoped: true
 })
 export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
+  @Prop()login: any;
+
+   /**
+   * ref для закрытия модального окна
+   */
+   mail: HTMLElement;
+
+  /**
+   * ref для закрытия модального окна
+   */
+  password: HTMLElement;
 
   render() {
     return (
       <form class="login-form">
         <div class="input-wrapper">
           <div class="input-container">
-            <input class="view-input" type="email" placeholder="Электрон почта"/>
+            <input class="view-input" type="email" ref={(el) => this.mail = el}  placeholder="Электрон почта"/>
             <div class="discharge-login">
               {/*должен быть "х" для сброса логина*/}
             </div>
@@ -24,7 +35,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         </div>
         <div class="input-wrapper">
           <div class="input-container">
-            <input class="view-input" type="password" placeholder="Ваш пароль"/>
+            <input class="view-input" id="" ref={(el) => this.password = el} type="password" placeholder="Ваш пароль"/>
             <div class="discharge-login">
               {/*должен быть "х" для сброса логина*/}
             </div>
@@ -35,20 +46,20 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         </div>
         <div class="checkbox-wrapper">
           <label class="">
-            {/*<input class="custom-checkbox" type="checkbox"/>*/}
-            <span class="checkbox-span">
-            {/*дожна быть галочка*/}
-            </span>
+            <input class="checkbox-input" type="checkbox"/>
+            {/*<span class="checkbox-span">*/}
+            {/*/!*дожна быть галочка*!/*/}
+            {/*</span>*/}
             <span class="remember-me-check">
-              Запомнить меня
+              {this.login.rememberMe}
             </span>
           </label>
         </div>
         <button class="login-btn">
-          Войти
+          {this.login.logIn}
         </button>
         <button class="remind-password">
-          Напомнить пароль
+          {this.login.remindPass}
         </button>
         <div class="login-through-wrapper">
           <button class="login-through-bankId">
@@ -61,11 +72,11 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
               </g>
               </svg>
             </span>
-            Вход через Сбербанк ID
+            {this.login.logInToBank}
           </button>
           <div class="login-through-social">
             <p>
-              или авторизуйтесь через
+              {this.login.orLogInSocial}
             </p>
             <div>
               <button class="login-social-btn">
@@ -135,5 +146,22 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     );
   }
 
-
+// componentDidLoad() {
+//  this.input.addEventListener("focus", () => this.mousedown())
+//   this.input.addEventListener("focusout", () => this.mouseout())
+// }
+//
+//   /**
+//    * Вызов функции закрытия модального окна при условиии что нажал не на блок модалки
+//    */
+//   public mousedown() {
+//     getElement(this.password).id='view-input-focus'
+//   };
+//
+//   /**
+//    * Вызов функции закрытия модального окна при условиии что нажал не на блок модалки
+//    */
+//   public mouseout() {
+//     this.input.id=''
+//   };
 }

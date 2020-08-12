@@ -180,3 +180,23 @@
   border: none;
   border-radius: 6px;
 }
+
+
+@media (max-width: 414px) {
+  .new-cart {
+    width: 414px;
+}
+}
+
+@media (max-width: 375px) {
+  .new-cart {
+    width: 375px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .new-cart {
+    width: 320px;
+  }
+}

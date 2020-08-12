@@ -298,3 +298,15 @@ textarea[placeholder] {
   }
 }
 
+@media (max-width: 375px) {
+  .search-wrapper form {
+    width: 150px;
+  }
+}
+
+@media (max-width: 320px) {
+  .search-wrapper form {
+    width: 100px;
+  }
+}
+

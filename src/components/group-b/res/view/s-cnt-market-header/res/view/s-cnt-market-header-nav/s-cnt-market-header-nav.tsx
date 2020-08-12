@@ -44,7 +44,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * Показывать/скрывать  выбор магазина
    * */
-  @State() openedStoreSelect: boolean
+  @State() openedStoreSelect: boolean;
 
   private modalTag: any;
 
@@ -68,9 +68,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 }
               </div>
               <div class="nav-search">
-                <div class="button-menu">
+                <div class="button-menu"
+                     onClick={() => this.onClickSelectStoreHandler()}
+                >
                   <div
-                    onClick={() => this.onClickSelectStoreHandler()}
+
                     class="full-menu-nav-btn"
                     style={{
                       backgroundImage: `url(${this.navBar.backgroundImageFullMenu})`,
@@ -81,7 +83,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 <s-cnt-market-store-select-top
                   selectShops={this.selectShops}
                   openedStoreSelect={this.openedStoreSelect}
-                  onCloseStoreSelect={()=> this.closeStoreSelect()}
+                  onCloseStoreSelect={() => this.closeStoreSelect()}
                 ></s-cnt-market-store-select-top>
                 <div class="search-wrapper">
                   <form>
@@ -143,13 +145,13 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * клик на выбор магазина в шапке
    * */
-  public onClickSelectStoreHandler(){
+  public onClickSelectStoreHandler() {
     this.openedStoreSelect = true;
   }
 
   /**
    * Переключаем состояние аккаунта юзера
-   * */
+   **/
   public onClickAccountHandler() {
     this.isShowUserAccount = !this.isShowUserAccount;
   }
@@ -169,13 +171,17 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   public onClickCatalogHandler() {
     this.openedLeftMenu = true;
   }
+
   /**
    * Показываь корзину
    * */
   public onClickBasketHandler() {
     this.openedBasket = true;
   }
-  //
+
+  /**
+   *
+   * */
   public closeLeftMenu() {
     this.openedLeftMenu = false;
   }
@@ -190,7 +196,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * close select store
    * */
-  public closeStoreSelect(){
+  public closeStoreSelect() {
     this.openedStoreSelect = false;
   }
 }

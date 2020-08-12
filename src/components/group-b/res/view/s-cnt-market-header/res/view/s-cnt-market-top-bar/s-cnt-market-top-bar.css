@@ -108,6 +108,7 @@ button {
 
 .delivery-adress-btn {
   display: inline-flex;
+  align-items: center;
   border: none;
   outline: none;
   background-color: transparent;
@@ -211,5 +212,6 @@ button {
 }
 
 @media (max-width: 576px) {
+
 
 }
