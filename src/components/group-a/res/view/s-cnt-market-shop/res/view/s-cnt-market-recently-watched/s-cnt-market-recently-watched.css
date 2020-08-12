@@ -1,0 +1,38 @@
+.recently-watched {
+  background-color: #f7f7f7;
+  margin-top: 40px;
+  padding: 20px 0px 25px;
+}
+
+.container {
+  max-width: 1476px;
+}
+
+.carousel-cell {
+  flex: 1;
+  width: 150px;
+  padding-right: 10px;
+}
+
+.products-carousel-title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  color: #343434;
+}
+
+@media screen and (max-width: 768px) {
+  .products-carousel-title {
+    font-size: 20px;
+    padding: 20px 10px 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .recently-watched {
+    padding: 20px 5px 25px;
+  }
+}
+

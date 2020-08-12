@@ -5,6 +5,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'my-component.css',
   shadow: false,
   scoped: true
+
 })
 export class MyComponent {
 

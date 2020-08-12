@@ -1,0 +1,184 @@
+.info {
+  display: flex;
+  margin-top: 10px;
+  font-size: .9em;
+}
+
+.brand {
+  opacity: .5;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.brand:hover {
+  opacity: .7;
+}
+
+.brand::after {
+  content: '❯';
+  padding-left: 15px;
+  color: green;
+}
+
+.products {
+  opacity: .5;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.products:hover {
+  opacity: .7;
+}
+
+.products::after {
+  content: '❯';
+  padding-left: 15px;
+  color: green;
+}
+
+.category {
+  opacity: .5;
+  margin-top: 2px;
+  cursor: pointer;
+}
+
+.category:hover {
+  opacity: .7;
+}
+
+.image {
+  width: 335px;
+  height: 250px;
+  margin: 30px 0 0 15px;
+}
+
+.info-product {
+  position: relative;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  position: absolute;
+  top: -40px;
+  right: -72px;
+  cursor: pointer;
+}
+
+.close:hover {
+  background-color: #eaecef;
+  transition: .3s;
+}
+
+.name {
+  margin: 30px 0 5px 0;
+  font-size: 1.2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.weight {
+  opacity: .5;
+}
+
+.price {
+  margin: 35px 0 5px 0;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.info-presence {
+  display: flex;
+  color: #3db21b;
+}
+
+.circle {
+  font-size: .55em;
+  color: #3db21b;
+}
+
+.cir {
+  margin-right: 3px;
+}
+
+.presence {
+  margin: 0 0 0 8px;
+  font-size: .8em;
+  font-weight: 600;
+  line-height: 12px;
+}
+
+.my-item {
+  display: flex;
+}
+
+.button {
+  margin: 30px 0 0 0;
+}
+
+.my-button {
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: white;
+  background-color: #11980a;
+  cursor: pointer;
+}
+
+.my-button:hover {
+  background-color: green;
+  transition: .3s;
+}
+
+.heart {
+  width: 40px;
+  height: 40px;
+  margin: 30px 0 0 10px;
+  line-height: 36px;
+  padding: 5px 20px 5px 7px;
+  border: 1px solid lightgray;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.my-heart {
+  font-size: 1.5em;
+  color: #d3ecd7;
+}
+
+.heart:hover .my-heart{
+  color: green;
+  transition: .4s;
+}
+
+@media only screen and (max-width: 400px) {
+  .product {
+    max-width: 400px;
+  }
+
+  .close {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+  }
+
+  .info-product {
+    max-width: 400px;
+    margin-bottom: 30px;
+  }
+
+  .price {
+    margin: 0 0 15px 0;
+  }
+
+  .heart {
+    margin: 30px 0 0 20px;
+  }
+}

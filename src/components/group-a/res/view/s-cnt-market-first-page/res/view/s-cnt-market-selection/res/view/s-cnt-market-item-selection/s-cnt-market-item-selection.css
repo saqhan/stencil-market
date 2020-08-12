@@ -1,0 +1,60 @@
+.common {
+  cursor: pointer;
+  display: flex;
+  margin: 15px 1%;
+  position: relative;
+  bottom: 55px;
+  right: 10px;
+  box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
+  border-radius: 12px;
+  background-color: #fff;
+  padding: 20px 19px;
+  width: 360px;
+}
+.common:hover {
+  box-shadow: 0 4px 12px 0 #d0d2d4;
+  transition: box-shadow,.15s
+}
+
+.image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #d8d8d8;
+  justify-content: center;
+}
+
+.img {
+  width: 68px;
+  height: 20px;
+  margin: 25px 0 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.title {
+  padding: 17px 0 5px 15px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.common:hover .title {
+  color: #666;
+  transition: .15s
+}
+
+.text {
+  padding-left: 15px;
+  line-height: 1.14;
+  color: #7c7e80;
+  font-size: 14px
+}
+
+
+@media only screen and (max-width: 400px) {
+  .common {
+    margin-left: 20px;
+    width: 350px;
+  }
+}

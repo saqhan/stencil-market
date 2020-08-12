@@ -1,0 +1,10 @@
+.text {
+  line-height: .4;
+  margin-top: 60px;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.common {
+  margin-left: 63px;
+}
