@@ -68,11 +68,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 }
               </div>
               <div class="nav-search">
-                <div class="button-menu"
-                     onClick={() => this.onClickSelectStoreHandler()}
+                <div
+                  class="button-menu"
+                  onClick={() => this.onClickSelectStoreHandler()}
                 >
                   <div
-
                     class="full-menu-nav-btn"
                     style={{
                       backgroundImage: `url(${this.navBar.backgroundImageFullMenu})`,
@@ -87,7 +87,12 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 ></s-cnt-market-store-select-top>
                 <div class="search-wrapper">
                   <form>
-                    <input type="text" placeholder={this.navBar.placeholder} />
+                    <input
+                      type="text"
+                      placeholder={this.navBar.placeholder}
+                      onFocus={() => this.focusInputSearhHandler()}
+                      onBlur={() => this.blurInputSearchHandler()}
+                    />
                     <button>
                       <i class="fas fa-search"></i>
                     </button>
@@ -198,5 +203,21 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public closeStoreSelect() {
     this.openedStoreSelect = false;
+  }
+
+  /**
+   * click to input
+   * */
+  public focusInputSearhHandler() {
+    const overlay = document.querySelector(".overlayBackDrop");
+    overlay.classList.add("overlay");
+  }
+
+  /**
+   * blur on input
+   * */
+  public blurInputSearchHandler() {
+    const overlay = document.querySelector(".overlayBackDrop");
+    overlay.classList.remove("overlay");
   }
 }
