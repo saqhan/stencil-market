@@ -1,4 +1,27 @@
 
+
+.drawer-backdrop {
+  position: fixed;
+  left: 0px;
+  right: auto;
+  bottom: 0px;
+  /*z-index: 2100;*/
+  top: 0px;
+  /*background: rgba(0, 0, 0, 0.5);*/
+  height: 100%;
+  width: 100%;
+}
+
+
+.drawer-backdrop.opened {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+  /*z-index: 2000;*/
+  top: 45px;
+}
+
+
 /* профиль юзера*/
 
 .account-menu {

@@ -2,6 +2,7 @@ import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
 import {
   leftMenuCatalogInterface,
   navBarInterface,
+  selectShopsInterface,
 } from "./res/interface/common.interface";
 
 @Component({
@@ -19,7 +20,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * магазины для вашего города
    * */
-  @Prop() selectShops: any;
+  @Prop() selectShops: selectShopsInterface[] = [];
 
   /**
    * Данные для магазинов из каталога
@@ -113,7 +114,9 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   ref={(el) => (this.modalTag = el)}
                 >
                   {this.isShowUserAccount ? (
-                    <s-cnt-market-account-menu></s-cnt-market-account-menu>
+                    <s-cnt-market-account-menu
+                      onCloseAccountMenu={() => this.closeAccountMenuHandler()}
+                    ></s-cnt-market-account-menu>
                   ) : (
                     ""
                   )}
@@ -159,6 +162,14 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    **/
   public onClickAccountHandler() {
     this.isShowUserAccount = !this.isShowUserAccount;
+  }
+
+  /**
+   * close account menu
+   * */
+
+  public closeAccountMenuHandler() {
+    this.isShowUserAccount = false;
   }
 
   /**

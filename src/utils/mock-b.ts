@@ -634,7 +634,7 @@ export const header = {
         },
         {
           id: 2,
-          title: 'Средства для бритья и депиляции',
+          title: 'Уход за кожей',
           img: 'https://sbermarket.ru/spree/taxons/12360/normal/%D0%9C%D1%83%D0%B6%D1%81%D0%BA%D0%BE%D0%B9_%D1%83%D1%85%D0%BE%D0%B4.jpeg'
         },
       ]

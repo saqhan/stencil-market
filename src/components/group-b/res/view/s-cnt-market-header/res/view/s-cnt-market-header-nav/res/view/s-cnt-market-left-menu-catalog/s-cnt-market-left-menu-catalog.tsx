@@ -142,10 +142,11 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * */
   public closeLeftMenuHandler() {
     this.closeLeftMenu.emit();
-    // this.leftMenuContentTag.classList.remove("opened");
-    // this.leftMenuTag.classList.remove("opened");
   }
 
+  /**
+   * Клик на фон меню
+   * */
   public clickOnLeftMenuOverlayHandler(event) {
     if (event.target === this.leftMenuTag) {
       this.closeLeftMenuHandler();
@@ -189,10 +190,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * Получения подкатегорий TODO исправить вывод подкатегорий, где больше 1
    * */
-  public getSubcategories(
-    array: subcategoriesInterface[]
-  ): subcategoriesInterface[] {
+  public getSubcategories(array: subcategoriesInterface[]) {
     return array.map((item) => {
+      // console.log("item titile", item.title);
       return (
         <div class="category-menu-item-dropdown ">
           <ul class="category-menu-item-dropdown-list">

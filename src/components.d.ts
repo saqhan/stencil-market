@@ -81,7 +81,7 @@ export namespace Components {
         /**
           * магазины для вашего города
          */
-        "selectShops": any;
+        "selectShops": selectShopsInterface[];
     }
     interface SCntMarketItemOffer {
         /**
@@ -600,6 +600,10 @@ declare namespace LocalJSX {
     interface MyComponent {
     }
     interface SCntMarketAccountMenu {
+        /**
+          * close account menu modal
+         */
+        "onCloseAccountMenu"?: (event: CustomEvent<any>) => void;
     }
     interface SCntMarketBackToTop {
     }
@@ -675,7 +679,7 @@ declare namespace LocalJSX {
         /**
           * магазины для вашего города
          */
-        "selectShops"?: any;
+        "selectShops"?: selectShopsInterface[];
     }
     interface SCntMarketItemOffer {
         /**
