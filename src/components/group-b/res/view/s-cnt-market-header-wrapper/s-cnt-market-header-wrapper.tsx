@@ -12,11 +12,21 @@ export class SCntMarketHeaderWrapper implements ComponentInterface {
    * */
   @Prop() categories: any;
 
+  /**
+   * log in user
+   * */
+  @Prop() login: boolean;
+
   render() {
     return (
       <div>
-        <s-cnt-market-header categories={this.categories} ></s-cnt-market-header>
-        {/*<s-cnt-market-header-unlogged></s-cnt-market-header-unlogged>*/}
+        {
+          this.login
+          ? <s-cnt-market-header categories={this.categories} ></s-cnt-market-header>
+          : <s-cnt-market-header-unlogged logo={this.categories.body.logo} number={this.categories.numberHeader} ></s-cnt-market-header-unlogged>
+        }
+
+
       </div>
     );
   }

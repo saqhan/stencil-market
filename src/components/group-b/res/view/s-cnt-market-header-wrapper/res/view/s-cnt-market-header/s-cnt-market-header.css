@@ -1,6 +1,6 @@
 .header-wrapper {
   box-shadow: 0 6px 11px -6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 210px;
+  margin-bottom: 205px;
 }
 
 .header-wrapper .container-fluid {
@@ -10,23 +10,17 @@
 
 .header-wrapper-child {
   position: fixed;
-  /*height: 162px;*/
   transition: 0.2s;
-  /*transform: translateY(-0px);*/
   right: 0;
   left: 0;
   z-index: 2000;
   background-color: #fff;
   box-shadow: 0 6px 11px -6px rgba(0,0,0,.1);
-  /*will-change: position,transform,transition;*/
 }
 
 .sticky {
-  /*transform: translateY(-90px);*/
   margin-top: -90px;
   transition: .3s ease;
-  /*position: fixed;*/
-  /*z-index: 200;*/
 }
 
 
