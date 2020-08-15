@@ -63,9 +63,15 @@ export class SCntMarketPickupInModal implements ComponentInterface {
             {
               this.CitySelect ?
                 //выводящийся и закрывающийся блок списка городов по клику меняющеегося State
-                <div class="selection-city-block">
-                  <CityForSelected arr={this.pickUpData.cityForSelected} idSelected={(x) => this.idSelected(x)}/>
-                </div> :
+                <div>
+                  <div class="selection-city-block-backg">
+
+                  </div>
+                  <div class="selection-city-block">
+                    <CityForSelected arr={this.pickUpData.cityForSelected} idSelected={(x) => this.idSelected(x)}/>
+                  </div>
+                </div>
+                 :
                 ''
             }
           </div>

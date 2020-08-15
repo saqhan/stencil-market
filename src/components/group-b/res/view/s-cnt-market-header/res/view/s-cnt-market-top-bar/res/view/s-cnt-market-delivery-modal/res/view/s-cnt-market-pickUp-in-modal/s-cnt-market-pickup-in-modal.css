@@ -217,6 +217,16 @@
   padding: 7px 16px;
 }
 
+.selection-city-block-backg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .selection-city-block {
   position: absolute;
   top: 30px;
