@@ -1,4 +1,5 @@
 export const header = {
+  numberHeader: '+7 800 222-11-00',
   topBar: {
     id: 1,
     choiceDelivery: "Доставка",

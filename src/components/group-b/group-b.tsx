@@ -21,10 +21,15 @@ export class GroupB implements ComponentInterface {
    */
   @State() showModalState = false;
 
+  /**
+   * выводими в зависимости от авторизации начальную шапку
+   * */
+  @State() login: boolean = true;
+
   render() {
     return (
       <div>
-        <s-cnt-market-header-wrapper categories={header}></s-cnt-market-header-wrapper>
+        <s-cnt-market-header-wrapper categories={header} login={this.login} ></s-cnt-market-header-wrapper>
         <div >
           <div class='overlayBackDrop'></div>
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}></s-cnt-market-promo-slider>

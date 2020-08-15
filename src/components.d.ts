@@ -84,12 +84,18 @@ export namespace Components {
         "selectShops": selectShopsInterface[];
     }
     interface SCntMarketHeaderUnlogged {
+        "logo": string;
+        "number": string;
     }
     interface SCntMarketHeaderWrapper {
         /**
           * Массив данных для хедера
          */
         "categories": any;
+        /**
+          * log in user
+         */
+        "login": boolean;
     }
     interface SCntMarketItemOffer {
         /**
@@ -711,12 +717,18 @@ declare namespace LocalJSX {
         "selectShops"?: selectShopsInterface[];
     }
     interface SCntMarketHeaderUnlogged {
+        "logo"?: string;
+        "number"?: string;
     }
     interface SCntMarketHeaderWrapper {
         /**
           * Массив данных для хедера
          */
         "categories"?: any;
+        /**
+          * log in user
+         */
+        "login"?: boolean;
     }
     interface SCntMarketItemOffer {
         /**
