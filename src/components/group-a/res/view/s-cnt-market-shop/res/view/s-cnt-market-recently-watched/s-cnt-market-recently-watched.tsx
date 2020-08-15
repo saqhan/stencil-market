@@ -1,21 +1,29 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
+import { MarketRecentlyWatchedProductsInterface } from "./res/interface/common.interface";
 
 @Component({
-  tag: 's-cnt-market-recently-watched',
-  styleUrl: 's-cnt-market-recently-watched.css',
+  tag: "s-cnt-market-recently-watched",
+  styleUrl: "s-cnt-market-recently-watched.css",
   shadow: false,
-  scoped: true
+  scoped: true,
 })
 export class SCntMarketRecentlyWatched implements ComponentInterface {
   /**
    * Данные карточек слайдера просмотренных товаров
    */
-  @Prop() recentlyWatchedProducts: any;
+  @Prop()
+  recentlyWatchedProducts: MarketRecentlyWatchedProductsInterface[] = [];
 
   /**
    * Заголовк раздела
    */
   @Prop() recentlyWatchedTitle: string;
+
+
+  /**
+   * Клик по карточке для показа модального окна
+   */
+  @Event() showModal: EventEmitter<void>;
 
   /**
    *
@@ -27,26 +35,27 @@ export class SCntMarketRecentlyWatched implements ComponentInterface {
     // @ts-ignore
     const flkty = new Flickity(elem, {
       // options
-      freeScroll: true,
-      contain: true,
+      cellAlign: "left",
       pageDots: false,
       draggable: false,
+      percentPosition: false,
     });
   }
 
   render() {
     return (
       <div class="recently-watched products">
-        <div class="products-carousel-title">{this.recentlyWatchedTitle}</div>
-        <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
-          <RecentlyWatchedSlider
-            array={this.recentlyWatchedProducts}
-          ></RecentlyWatchedSlider>
+        <div class="container">
+          <div class="products-carousel-title">{this.recentlyWatchedTitle}</div>
+          <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
+            <RecentlyWatchedSlider
+              array={this.recentlyWatchedProducts}
+            ></RecentlyWatchedSlider>
+          </div>
         </div>
       </div>
     );
   }
-
 }
 
 const RecentlyWatchedSlider = (props) => {

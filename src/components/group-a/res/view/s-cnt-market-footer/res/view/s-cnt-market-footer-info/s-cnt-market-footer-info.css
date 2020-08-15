@@ -3,18 +3,3 @@
   background-color: #eaebef;
 }
 
-.text {
-  color: #a7afaa;
-  font-size: .9em;
-}
-
-.text:hover {
-  color: grey;
-  transition: .3s;
-}
-
-@media only screen and (max-width: 320px) {
-  .text {
-    margin-bottom: 10px;
-  }
-}

@@ -16,7 +16,7 @@
 }
 
 .promo-slider-card-body {
-    flex-basis: 65%;
+  flex-basis: 65%;
   padding-right: 5px;
 }
 
@@ -76,4 +76,3 @@
   background: #f6fff4;
   color: #666;
 }
-

@@ -3,6 +3,10 @@
   background-color: #f3f4f7;
 }
 
+.common {
+  display: flex;
+}
+
 .copy {
   margin: 0 0 0 10px;
 }
@@ -17,8 +21,13 @@
   margin-top: 4px;
 }
 
+.iconsApp {
+  display: flex;
+}
+
 .icons {
   display: flex;
+  margin-left: 120px;
 }
 
 .facebook, .vk, .instagram, .apple, .google {
@@ -50,6 +59,25 @@
 
 .google {
   font-size: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .common {
+    display: block;
+  }
+
+  .icons {
+    margin: 20px 0 0 10px;
+  }
+
+  .iconsApp {
+    margin-top: 20px;
+  }
+
+  .my-block {
+    display: block;
+    margin-left: 90px;
+  }
 }
 
 @media only screen and (max-width: 320px) {

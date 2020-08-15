@@ -1,6 +1,9 @@
 .products {
   margin-top: 40px;
-  padding: 0 35px;
+}
+
+.container {
+  max-width: 1476px;
 }
 
 .products-carousel-title {

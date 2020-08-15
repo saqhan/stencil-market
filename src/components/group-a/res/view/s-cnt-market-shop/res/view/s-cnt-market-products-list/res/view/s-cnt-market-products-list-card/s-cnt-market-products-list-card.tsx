@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop, State} from "@stencil/core";
 import {MarketProductListInterface} from "../../interface/common.interface";
 
 @Component({
@@ -13,6 +13,26 @@ export class SCntMarketProductsListCard implements ComponentInterface {
    */
   @Prop() productsList: MarketProductListInterface;
 
+  /**
+   * Клик по карточке для показа модального окна
+   */
+  @Event() showModal: EventEmitter<void>;
+
+  /**
+   * Передача данных для списка товаров в стейт
+   */
+  @State() productListState = this.productsList.card;
+
+
+  componentDidLoad() {
+    if (window.innerWidth < 992) {
+      return this.productListState.slice(0,3)
+    }
+    else {
+      return this.productListState;
+    }
+  }
+
   render() {
     return (
       <div class="products-list-wrapper">
@@ -24,7 +44,7 @@ export class SCntMarketProductsListCard implements ComponentInterface {
           </div>
         </div>
         <div class="products-list-body">
-          <ProductsListItem array={this.productsList.card}></ProductsListItem>
+          <ProductsListItem array={this.componentDidLoad()}></ProductsListItem>
         </div>
       </div>
     );
@@ -32,11 +52,11 @@ export class SCntMarketProductsListCard implements ComponentInterface {
 }
 
 const ProductsListItem = (props) => {
-  return props.array.map((item) => {
-    return (
-      <s-cnt-market-products-list-item
-        productsListCard={item}
-      ></s-cnt-market-products-list-item>
-    );
-  });
+      return props.array.map((item) => {
+        return (
+          <s-cnt-market-products-list-item
+            productsListCard={item}
+          ></s-cnt-market-products-list-item>
+        );
+      });
 };

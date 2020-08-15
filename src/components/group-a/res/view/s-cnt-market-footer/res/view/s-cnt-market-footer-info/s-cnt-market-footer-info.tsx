@@ -15,25 +15,21 @@ export class SCntMarketFooterInfo implements ComponentInterface {
       <div class="footerInfo">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-auto">
-              <div class="text">
-                {this.forFooterInfo[0]}
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="text">
-                {this.forFooterInfo[1]}
-              </div>
-            </div>
-            <div class="col-auto">
-              <div class="text">
-                {this.forFooterInfo[2]}
-              </div>
-            </div>
+            <FooterInfoItem array={this.forFooterInfo}/>
           </div>
         </div>
       </div>
     );
   }
 
+}
+
+const FooterInfoItem = (props) => {
+  return props.array.map((item) => {
+    return (
+      <div class="col-auto">
+        <s-cnt-market-footer-info-item forFooterInfo={item} />
+      </div>
+    )
+  })
 }

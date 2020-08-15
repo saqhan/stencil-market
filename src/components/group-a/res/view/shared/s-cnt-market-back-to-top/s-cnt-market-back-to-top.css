@@ -1,0 +1,54 @@
+.back-to-top {
+  position: fixed;
+  right: 48px;
+  bottom: 48px;
+}
+
+.back-to-top button {
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(208, 210, 212, 0.4);
+  border: 1px solid #d0d2d4;
+  color: #333536;
+  width: 48px;
+  height: 50px;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.back-to-top button:hover {
+  background-color: #f3f4f7;
+  border: 1px solid #d0d2d4;
+}
+
+.back-to-top button:focus {
+  outline: none;
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeOut {
+  opacity: 0;
+  animation: fadeOut 0.5s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
