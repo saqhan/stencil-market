@@ -9,7 +9,6 @@
 
 .homeText {
   padding: 125px 0 0 100px;
-  line-height: .2;
   color: #fff;
   font-weight: 700;
   font-size: 40px;
@@ -18,10 +17,40 @@
 
 .homeSubtext {
   margin: 65px 0 0 100px;
-  line-height: .5;
   font-size: 18px;
   color: #fff;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-top: 300px;
+  }
+
+  .imageHome {
+    width: 688px;
+    height: 450px;
+  }
+
+  .commonText {
+    z-index: 99;
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+  }
+
+  .homeText {
+    color: #333;
+    font-size: 35px;
+  }
+
+  .homeSubtext {
+    font-size: 18px;
+    margin-top: 30px;
+    color: #333;
+  }
 }
 
 
@@ -41,19 +70,53 @@
     z-index: 99;
     position: absolute;
     top: 25%;
-    transform: translate(-25%, -25%);
+    transform: translate(-62%, -25%);
+    text-align: left;
   }
 
   .homeText {
+    width: 400px;
     color: #333;
     font-size: 35px;
-    line-height: .2;
   }
 
   .homeSubtext {
     font-size: 18px;
     margin-top: 0;
-    line-height: .5;
     color: #333;
   }
 }
+
+
+@media only screen and (max-width: 320px) {
+  .container {
+    margin-top: 280px;
+  }
+
+  .imageHome {
+    border-radius: 25px;
+    max-width: 288px;
+    height: 238px;
+    margin-bottom: 150px;
+  }
+
+  .commonText {
+    z-index: 99;
+    position: absolute;
+    top: 25%;
+    transform: translate(-24%, -25%);
+  }
+
+  .homeText {
+    width: 400px;
+    color: #333;
+    font-size: 30px;
+  }
+
+  .homeSubtext {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+  }
+}
+

@@ -27,7 +27,7 @@ export class SCntMarketChoice implements ComponentInterface {
             <div class="col-md-12">
               <div class="title">{this.choiceTitleText}</div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
               <div class="commonImage">
                 <div
                   class="image"
@@ -39,7 +39,7 @@ export class SCntMarketChoice implements ComponentInterface {
                 </div>
               </div>
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8 col-md-12">
               <div
                 class="text"
                 innerHTML={markdown.toHTML(this.forChoice[0].text)}

@@ -496,7 +496,7 @@ export const forDelivery = [
 
 export const deliveryImage = "https://via.placeholder.com/1245x505?text=Text";
 
-export const deliveryTitleText = "Доставляем\n" + "\n" + "в 115 городах России";
+export const deliveryTitleText = "Доставляем\n" + "\n" + "**в 115 городах** России";
 
 export const forChoice = [
   {
@@ -504,7 +504,7 @@ export const forChoice = [
     image: "https://via.placeholder.com/360x360?text=Text",
     number: "1",
     text:
-      "**Выберите магазин и положит**е\n" +
+      "**Выберите магазин и положите**\n" +
       "\n" +
       "**в корзину нужные товары,**\n" +
       "\n" +

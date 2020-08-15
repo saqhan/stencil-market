@@ -47,7 +47,7 @@ export class SCntMarketOffer implements ComponentInterface {
 const GetOffer = (props) => {
   return props.arrayOffer.map((item) => {
     return (
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-6">
         <s-cnt-market-item-offer forOffer={item}></s-cnt-market-item-offer>
       </div>
     );

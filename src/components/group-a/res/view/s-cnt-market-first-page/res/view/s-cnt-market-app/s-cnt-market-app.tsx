@@ -12,18 +12,18 @@ export class SCntMarketApp implements ComponentInterface {
    * Данные для компонента app
    */
 
-  @Prop() forApp: MarketAppInterface[] = [];
+  @Prop() forApp: MarketAppInterface [] = [];
 
   render() {
     return (
       <div class="app">
         <div class="container">
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-lg-8 col-md-8">
               <div class="common">
                 <div class="title">{this.forApp[0].title}</div>
               </div>
-              <div class="commonButton d-flex">
+              <div class="commonButton">
                 <div class="appStoreButton">
                   <div class="button">
                     <button class="btn">
@@ -42,7 +42,7 @@ export class SCntMarketApp implements ComponentInterface {
                 </div>
               </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-3">
               <div
                 class="image"
                 style={{ backgroundImage: "url(" + this.forApp[0].image + ")" }}
