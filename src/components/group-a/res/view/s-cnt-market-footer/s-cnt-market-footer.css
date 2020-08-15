@@ -1,0 +1,24 @@
+.upFooter {
+  padding: 25px 0 0 0;
+  background-color: #f3f4f7;
+}
+
+.logo {
+  width: 220px;
+  height: 40px;
+  margin: 0 70px 0 0;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #e4ece7;
+  margin-top: 25px;
+}
+
+@media only screen and (max-width: 320px) {
+  .logo {
+    margin: auto;
+  }
+}
+

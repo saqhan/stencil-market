@@ -9,17 +9,19 @@ import { MarketAppInterface, } from "./components/group-a/res/view/s-cnt-market-
 import { MarketChoiceInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-choice/res/interface/common.interface";
 import { MarketCourierInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-courier/res/interface/common.interface";
 import { MarketDeliveryInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-delivery/res/interface/common.interface";
+import { MarketDownFooterInterface, MarketFooterMenuInterface, MarketUpFooterFormInterface, } from "./components/group-a/res/view/s-cnt-market-footer/res/interface/common.interface";
 import { MarketOfferInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-offer/res/interface/common.interface";
-import { MarketRecommendedInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-recommended/res/view/s-cnt-market-item-recommended/res/interface/common.interface";
+import { MarketRecommendedInterface, } from "./components/group-a/res/view/shared/s-cnt-market-modal-window/res/view/s-cnt-market-recommended/res/interface/common.interface";
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
 import { MarketStatisticsInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-statistics/res/interface/common.interface";
-import { MarketProductInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-product/res/interface/common.interface";
+import { MarketProductInterface, } from "./components/group-a/res/view/shared/s-cnt-market-modal-window/res/view/s-cnt-market-product/res/interface/common.interface";
 import { MarketProductListInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/interface/common.interface";
 import { MarketCardInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/view/s-cnt-market-products-list-card/res/view/s-cnt-market-products-list-item/res/interface/common.interface";
 import { MarketProductsSliderCardsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider/res/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
+import { MarketRecentlyWatchedProductsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-recently-watched/res/interface/common.interface";
 import { MarketSpecialistInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-specialist/res/interface/common.interface";
-import { MarketSpecificationInterface, } from "./components/group-a/res/view/s-cnt-market-modal-window/res/view/s-cnt-market-specification/res/interface/common.interface";
+import { MarketSpecificationInterface, } from "./components/group-a/res/view/shared/s-cnt-market-modal-window/res/view/s-cnt-market-specification/res/interface/common.interface";
 export namespace Components {
     interface GroupA {
     }
@@ -32,6 +34,8 @@ export namespace Components {
           * Данные для компонента app
          */
         "forApp": MarketAppInterface[];
+    }
+    interface SCntMarketBackToTop {
     }
     interface SCntMarketChoice {
         /**
@@ -63,9 +67,29 @@ export namespace Components {
          */
         "forDelivery": MarketDeliveryInterface[];
     }
+    interface SCntMarketDownFooter {
+        /**
+          * Данные для DownFooter
+         */
+        "forDownFooter": MarketDownFooterInterface;
+    }
     interface SCntMarketFirstPage {
     }
     interface SCntMarketFooter {
+        "footerMenu": MarketFooterMenuInterface[];
+        "forDownFooter": MarketDownFooterInterface;
+        "forFooterInfo": any;
+        "forUpFooterForm": MarketUpFooterFormInterface;
+        "logoFooter": string;
+    }
+    interface SCntMarketFooterInfo {
+        "forFooterInfo": any;
+    }
+    interface SCntMarketFooterInfoItem {
+        "forFooterInfo": any;
+    }
+    interface SCntMarketFooterItems {
+        "footerItems": any;
     }
     interface SCntMarketHeader {
     }
@@ -76,11 +100,10 @@ export namespace Components {
         "forOffer": MarketOfferInterface;
     }
     interface SCntMarketItemRecommended {
-        "MarketRecommendedInterface": MarketRecommendedInterface[];
         /**
           * Данные для Item-Recommended
          */
-        "getRecommended": any;
+        "getRecommended": MarketRecommendedInterface;
     }
     interface SCntMarketItemSelection {
         /**
@@ -162,7 +185,7 @@ export namespace Components {
         /**
           * Данные карточек слайдера просмотренных товаров
          */
-        "recentlyWatchedProducts": any;
+        "recentlyWatchedProducts": MarketRecentlyWatchedProductsInterface[];
         /**
           * Заголовк раздела
          */
@@ -172,7 +195,7 @@ export namespace Components {
         /**
           * Данные карточек слайдера просмотренных товаров
          */
-        "recentlyWatchedProducts": any;
+        "recentlyWatchedProducts": MarketRecentlyWatchedProductsInterface;
     }
     interface SCntMarketRecommended {
         /**
@@ -224,6 +247,10 @@ export namespace Components {
         "forStatistics": MarketStatisticsInterface[];
     }
     interface SCntMarketUpFooter {
+        "footerMenu": MarketFooterMenuInterface;
+    }
+    interface SCntMarketUpFooterForm {
+        "forUpFooterForm": MarketUpFooterFormInterface;
     }
 }
 declare global {
@@ -251,6 +278,12 @@ declare global {
         prototype: HTMLSCntMarketAppElement;
         new (): HTMLSCntMarketAppElement;
     };
+    interface HTMLSCntMarketBackToTopElement extends Components.SCntMarketBackToTop, HTMLStencilElement {
+    }
+    var HTMLSCntMarketBackToTopElement: {
+        prototype: HTMLSCntMarketBackToTopElement;
+        new (): HTMLSCntMarketBackToTopElement;
+    };
     interface HTMLSCntMarketChoiceElement extends Components.SCntMarketChoice, HTMLStencilElement {
     }
     var HTMLSCntMarketChoiceElement: {
@@ -269,6 +302,12 @@ declare global {
         prototype: HTMLSCntMarketDeliveryElement;
         new (): HTMLSCntMarketDeliveryElement;
     };
+    interface HTMLSCntMarketDownFooterElement extends Components.SCntMarketDownFooter, HTMLStencilElement {
+    }
+    var HTMLSCntMarketDownFooterElement: {
+        prototype: HTMLSCntMarketDownFooterElement;
+        new (): HTMLSCntMarketDownFooterElement;
+    };
     interface HTMLSCntMarketFirstPageElement extends Components.SCntMarketFirstPage, HTMLStencilElement {
     }
     var HTMLSCntMarketFirstPageElement: {
@@ -280,6 +319,24 @@ declare global {
     var HTMLSCntMarketFooterElement: {
         prototype: HTMLSCntMarketFooterElement;
         new (): HTMLSCntMarketFooterElement;
+    };
+    interface HTMLSCntMarketFooterInfoElement extends Components.SCntMarketFooterInfo, HTMLStencilElement {
+    }
+    var HTMLSCntMarketFooterInfoElement: {
+        prototype: HTMLSCntMarketFooterInfoElement;
+        new (): HTMLSCntMarketFooterInfoElement;
+    };
+    interface HTMLSCntMarketFooterInfoItemElement extends Components.SCntMarketFooterInfoItem, HTMLStencilElement {
+    }
+    var HTMLSCntMarketFooterInfoItemElement: {
+        prototype: HTMLSCntMarketFooterInfoItemElement;
+        new (): HTMLSCntMarketFooterInfoItemElement;
+    };
+    interface HTMLSCntMarketFooterItemsElement extends Components.SCntMarketFooterItems, HTMLStencilElement {
+    }
+    var HTMLSCntMarketFooterItemsElement: {
+        prototype: HTMLSCntMarketFooterItemsElement;
+        new (): HTMLSCntMarketFooterItemsElement;
     };
     interface HTMLSCntMarketHeaderElement extends Components.SCntMarketHeader, HTMLStencilElement {
     }
@@ -425,16 +482,27 @@ declare global {
         prototype: HTMLSCntMarketUpFooterElement;
         new (): HTMLSCntMarketUpFooterElement;
     };
+    interface HTMLSCntMarketUpFooterFormElement extends Components.SCntMarketUpFooterForm, HTMLStencilElement {
+    }
+    var HTMLSCntMarketUpFooterFormElement: {
+        prototype: HTMLSCntMarketUpFooterFormElement;
+        new (): HTMLSCntMarketUpFooterFormElement;
+    };
     interface HTMLElementTagNameMap {
         "group-a": HTMLGroupAElement;
         "group-b": HTMLGroupBElement;
         "my-component": HTMLMyComponentElement;
         "s-cnt-market-app": HTMLSCntMarketAppElement;
+        "s-cnt-market-back-to-top": HTMLSCntMarketBackToTopElement;
         "s-cnt-market-choice": HTMLSCntMarketChoiceElement;
         "s-cnt-market-courier": HTMLSCntMarketCourierElement;
         "s-cnt-market-delivery": HTMLSCntMarketDeliveryElement;
+        "s-cnt-market-down-footer": HTMLSCntMarketDownFooterElement;
         "s-cnt-market-first-page": HTMLSCntMarketFirstPageElement;
         "s-cnt-market-footer": HTMLSCntMarketFooterElement;
+        "s-cnt-market-footer-info": HTMLSCntMarketFooterInfoElement;
+        "s-cnt-market-footer-info-item": HTMLSCntMarketFooterInfoItemElement;
+        "s-cnt-market-footer-items": HTMLSCntMarketFooterItemsElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-item-offer": HTMLSCntMarketItemOfferElement;
         "s-cnt-market-item-recommended": HTMLSCntMarketItemRecommendedElement;
@@ -459,6 +527,7 @@ declare global {
         "s-cnt-market-specification": HTMLSCntMarketSpecificationElement;
         "s-cnt-market-statistics": HTMLSCntMarketStatisticsElement;
         "s-cnt-market-up-footer": HTMLSCntMarketUpFooterElement;
+        "s-cnt-market-up-footer-form": HTMLSCntMarketUpFooterFormElement;
     }
 }
 declare namespace LocalJSX {
@@ -473,6 +542,8 @@ declare namespace LocalJSX {
           * Данные для компонента app
          */
         "forApp"?: MarketAppInterface[];
+    }
+    interface SCntMarketBackToTop {
     }
     interface SCntMarketChoice {
         /**
@@ -504,9 +575,29 @@ declare namespace LocalJSX {
          */
         "forDelivery"?: MarketDeliveryInterface[];
     }
+    interface SCntMarketDownFooter {
+        /**
+          * Данные для DownFooter
+         */
+        "forDownFooter"?: MarketDownFooterInterface;
+    }
     interface SCntMarketFirstPage {
     }
     interface SCntMarketFooter {
+        "footerMenu"?: MarketFooterMenuInterface[];
+        "forDownFooter"?: MarketDownFooterInterface;
+        "forFooterInfo"?: any;
+        "forUpFooterForm"?: MarketUpFooterFormInterface;
+        "logoFooter"?: string;
+    }
+    interface SCntMarketFooterInfo {
+        "forFooterInfo"?: any;
+    }
+    interface SCntMarketFooterInfoItem {
+        "forFooterInfo"?: any;
+    }
+    interface SCntMarketFooterItems {
+        "footerItems"?: any;
     }
     interface SCntMarketHeader {
     }
@@ -517,11 +608,10 @@ declare namespace LocalJSX {
         "forOffer"?: MarketOfferInterface;
     }
     interface SCntMarketItemRecommended {
-        "MarketRecommendedInterface"?: MarketRecommendedInterface[];
         /**
           * Данные для Item-Recommended
          */
-        "getRecommended"?: any;
+        "getRecommended"?: MarketRecommendedInterface;
     }
     interface SCntMarketItemSelection {
         /**
@@ -536,6 +626,10 @@ declare namespace LocalJSX {
         "forStatistics"?: MarketStatisticsInterface;
     }
     interface SCntMarketModalWindow {
+        /**
+          * Клик по кнопке закрытия модального окна
+         */
+        "onClickOnModal"?: (event: CustomEvent<void>) => void;
     }
     interface SCntMarketOffer {
         /**
@@ -552,8 +646,16 @@ declare namespace LocalJSX {
           * Данные для Product
          */
         "getProduct"?: MarketProductInterface;
+        /**
+          * Клик по кнопке закрытия модального окна
+         */
+        "onClickOnModal"?: (event: CustomEvent<void>) => void;
     }
     interface SCntMarketProductsList {
+        /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<void>) => void;
         /**
           * Данные для списка товаров
          */
@@ -561,17 +663,29 @@ declare namespace LocalJSX {
     }
     interface SCntMarketProductsListCard {
         /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<void>) => void;
+        /**
           * Данные для списка товаров
          */
         "productsList"?: MarketProductListInterface;
     }
     interface SCntMarketProductsListItem {
         /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<void>) => void;
+        /**
           * Данные для карточки товара
          */
         "productsListCard"?: MarketCardInterface;
     }
     interface SCntMarketProductsSlider {
+        /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<void>) => void;
         /**
           * Данные карточек слайдера популярных продуктов
          */
@@ -582,6 +696,10 @@ declare namespace LocalJSX {
         "productsSliderTitle"?: string;
     }
     interface SCntMarketProductsSliderCard {
+        /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<void>) => void;
         /**
           * Получаем данные карточек слайдера популярных продуктов
          */
@@ -601,9 +719,13 @@ declare namespace LocalJSX {
     }
     interface SCntMarketRecentlyWatched {
         /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<void>) => void;
+        /**
           * Данные карточек слайдера просмотренных товаров
          */
-        "recentlyWatchedProducts"?: any;
+        "recentlyWatchedProducts"?: MarketRecentlyWatchedProductsInterface[];
         /**
           * Заголовк раздела
          */
@@ -611,9 +733,13 @@ declare namespace LocalJSX {
     }
     interface SCntMarketRecentlyWatchedCard {
         /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<void>) => void;
+        /**
           * Данные карточек слайдера просмотренных товаров
          */
-        "recentlyWatchedProducts"?: any;
+        "recentlyWatchedProducts"?: MarketRecentlyWatchedProductsInterface;
     }
     interface SCntMarketRecommended {
         /**
@@ -665,17 +791,26 @@ declare namespace LocalJSX {
         "forStatistics"?: MarketStatisticsInterface[];
     }
     interface SCntMarketUpFooter {
+        "footerMenu"?: MarketFooterMenuInterface;
+    }
+    interface SCntMarketUpFooterForm {
+        "forUpFooterForm"?: MarketUpFooterFormInterface;
     }
     interface IntrinsicElements {
         "group-a": GroupA;
         "group-b": GroupB;
         "my-component": MyComponent;
         "s-cnt-market-app": SCntMarketApp;
+        "s-cnt-market-back-to-top": SCntMarketBackToTop;
         "s-cnt-market-choice": SCntMarketChoice;
         "s-cnt-market-courier": SCntMarketCourier;
         "s-cnt-market-delivery": SCntMarketDelivery;
+        "s-cnt-market-down-footer": SCntMarketDownFooter;
         "s-cnt-market-first-page": SCntMarketFirstPage;
         "s-cnt-market-footer": SCntMarketFooter;
+        "s-cnt-market-footer-info": SCntMarketFooterInfo;
+        "s-cnt-market-footer-info-item": SCntMarketFooterInfoItem;
+        "s-cnt-market-footer-items": SCntMarketFooterItems;
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-item-offer": SCntMarketItemOffer;
         "s-cnt-market-item-recommended": SCntMarketItemRecommended;
@@ -700,6 +835,7 @@ declare namespace LocalJSX {
         "s-cnt-market-specification": SCntMarketSpecification;
         "s-cnt-market-statistics": SCntMarketStatistics;
         "s-cnt-market-up-footer": SCntMarketUpFooter;
+        "s-cnt-market-up-footer-form": SCntMarketUpFooterForm;
     }
 }
 export { LocalJSX as JSX };
@@ -710,11 +846,16 @@ declare module "@stencil/core" {
             "group-b": LocalJSX.GroupB & JSXBase.HTMLAttributes<HTMLGroupBElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "s-cnt-market-app": LocalJSX.SCntMarketApp & JSXBase.HTMLAttributes<HTMLSCntMarketAppElement>;
+            "s-cnt-market-back-to-top": LocalJSX.SCntMarketBackToTop & JSXBase.HTMLAttributes<HTMLSCntMarketBackToTopElement>;
             "s-cnt-market-choice": LocalJSX.SCntMarketChoice & JSXBase.HTMLAttributes<HTMLSCntMarketChoiceElement>;
             "s-cnt-market-courier": LocalJSX.SCntMarketCourier & JSXBase.HTMLAttributes<HTMLSCntMarketCourierElement>;
             "s-cnt-market-delivery": LocalJSX.SCntMarketDelivery & JSXBase.HTMLAttributes<HTMLSCntMarketDeliveryElement>;
+            "s-cnt-market-down-footer": LocalJSX.SCntMarketDownFooter & JSXBase.HTMLAttributes<HTMLSCntMarketDownFooterElement>;
             "s-cnt-market-first-page": LocalJSX.SCntMarketFirstPage & JSXBase.HTMLAttributes<HTMLSCntMarketFirstPageElement>;
             "s-cnt-market-footer": LocalJSX.SCntMarketFooter & JSXBase.HTMLAttributes<HTMLSCntMarketFooterElement>;
+            "s-cnt-market-footer-info": LocalJSX.SCntMarketFooterInfo & JSXBase.HTMLAttributes<HTMLSCntMarketFooterInfoElement>;
+            "s-cnt-market-footer-info-item": LocalJSX.SCntMarketFooterInfoItem & JSXBase.HTMLAttributes<HTMLSCntMarketFooterInfoItemElement>;
+            "s-cnt-market-footer-items": LocalJSX.SCntMarketFooterItems & JSXBase.HTMLAttributes<HTMLSCntMarketFooterItemsElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-item-offer": LocalJSX.SCntMarketItemOffer & JSXBase.HTMLAttributes<HTMLSCntMarketItemOfferElement>;
             "s-cnt-market-item-recommended": LocalJSX.SCntMarketItemRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketItemRecommendedElement>;
@@ -739,6 +880,7 @@ declare module "@stencil/core" {
             "s-cnt-market-specification": LocalJSX.SCntMarketSpecification & JSXBase.HTMLAttributes<HTMLSCntMarketSpecificationElement>;
             "s-cnt-market-statistics": LocalJSX.SCntMarketStatistics & JSXBase.HTMLAttributes<HTMLSCntMarketStatisticsElement>;
             "s-cnt-market-up-footer": LocalJSX.SCntMarketUpFooter & JSXBase.HTMLAttributes<HTMLSCntMarketUpFooterElement>;
+            "s-cnt-market-up-footer-form": LocalJSX.SCntMarketUpFooterForm & JSXBase.HTMLAttributes<HTMLSCntMarketUpFooterFormElement>;
         }
     }
 }

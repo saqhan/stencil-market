@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, h } from '@stencil/core';
+import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {MarketFooterMenuInterface} from "../../interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-up-footer',
@@ -8,18 +9,25 @@ import { Component, ComponentInterface, h } from '@stencil/core';
 })
 export class SCntMarketUpFooter implements ComponentInterface {
 
+  @Prop() footerMenu: MarketFooterMenuInterface;
+
   render() {
     return (
-      <div>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col">
-              sewsgsg4
-            </div>
-          </div>
+      <div class="my-block">
+        <div class="sberMarket">
+          {this.footerMenu.title}
         </div>
+        <FooterItems array={this.footerMenu.items}/>
       </div>
     );
   }
 
+}
+
+const FooterItems = (props) => {
+  return props.array.map((item) => {
+    return (
+        <s-cnt-market-footer-items footerItems={item} />
+    )
+  })
 }

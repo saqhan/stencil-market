@@ -23,9 +23,10 @@ export class SCntMarketPromoSlider implements ComponentInterface {
     // @ts-ignore
     const flkty = new Flickity(elem, {
       // options
-      contain: true,
+      cellAlign: 'left',
       pageDots: false,
       draggable: false,
+      percentPosition: false,
     });
   }
 

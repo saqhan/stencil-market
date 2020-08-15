@@ -1,7 +1,11 @@
 .recently-watched {
   background-color: #f7f7f7;
   margin-top: 40px;
-  padding: 20px 35px 25px;
+  padding: 20px 0px 25px;
+}
+
+.container {
+  max-width: 1476px;
 }
 
 .carousel-cell {

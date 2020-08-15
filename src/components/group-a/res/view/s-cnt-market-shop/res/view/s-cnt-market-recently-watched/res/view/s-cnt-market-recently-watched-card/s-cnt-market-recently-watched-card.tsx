@@ -1,4 +1,5 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
+import {MarketRecentlyWatchedProductsInterface} from "../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-recently-watched-card",
@@ -10,12 +11,16 @@ export class SCntMarketRecentlyWatchedCard implements ComponentInterface {
   /**
    * Данные карточек слайдера просмотренных товаров
    */
-  @Prop() recentlyWatchedProducts: any;
+  @Prop() recentlyWatchedProducts: MarketRecentlyWatchedProductsInterface;
+
+  /**
+   * Клик по карточке для показа модального окна
+   */
+  @Event() showModal: EventEmitter<void>;
 
   render() {
-    console.log("недавние", this.recentlyWatchedProducts);
     return (
-      <div class="product-card">
+      <div class="product-card" onClick={() => this.showModalHandler()}>
         <div class="product-card-item">
           <div class="product-card-img-wrapper">
             <div
@@ -63,5 +68,12 @@ export class SCntMarketRecentlyWatchedCard implements ComponentInterface {
         </div>
       </div>
     );
+  }
+
+  /**
+   *
+   */
+  public showModalHandler() {
+    this.showModal.emit();
   }
 }

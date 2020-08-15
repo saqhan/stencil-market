@@ -1,5 +1,5 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketRecommendedInterface } from "./res/view/s-cnt-market-item-recommended/res/interface/common.interface";
+import {Component, ComponentInterface, h, Prop} from "@stencil/core";
+import {MarketRecommendedInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-recommended",
