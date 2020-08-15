@@ -93,11 +93,13 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                     <li class="category-menu-item category-menu-item-promoted">
                       <a class="category-menu-item-link">
                         <div class="category-menu-item-content">
-                          <div class="category-menu-item-icon sales-icon"></div>
+                          <div class="category-menu-item-icon sales-icon">
+                            {" "}
+                          </div>
                           <div class="category-menu-item-title">Скидки</div>
                         </div>
                         <div class="category-menu-item-link-pointer-container swing">
-                          <i class="fas fa-angle-right"></i>
+                          <i class="fas fa-angle-right"> </i>
                         </div>
                       </a>
                       <div class="category-menu-item-dropdown ">
@@ -174,14 +176,34 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
               <div
                 class="category-menu-item-icon"
                 style={{ backgroundImage: `url(${item.img})` }}
-              ></div>
+              >
+                {" "}
+              </div>
               <div class="category-menu-item-title">{item.title}</div>
             </div>
             <div class="category-menu-item-link-pointer-container swing ">
-              <i class="fas fa-angle-right"></i>
+              <i class="fas fa-angle-right"> </i>
             </div>
           </a>
-          {this.getSubcategories(item.subcategories)}
+          {item.subcategories.map((subcategory) => {
+            return (<div class="category-menu-item-dropdown ">
+              <ul class="category-menu-item-dropdown-list">
+                <li class="category-menu-item">
+                  <a class="category-menu-item-link-dropdown">
+                    <div class="category-menu-item-content">
+                      <div
+                        class="category-menu-item-icon"
+                        style={{ backgroundImage: `url(${subcategory.img})` }}
+                      >
+                        {" "}
+                      </div>
+                      <div class="category-menu-item-title">{subcategory.title} </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>);
+          })}
         </li>
       );
     });
@@ -192,7 +214,6 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * */
   public getSubcategories(array: subcategoriesInterface[]) {
     return array.map((item) => {
-      // console.log("item titile", item.title);
       return (
         <div class="category-menu-item-dropdown ">
           <ul class="category-menu-item-dropdown-list">
@@ -202,7 +223,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                   <div
                     class="category-menu-item-icon"
                     style={{ backgroundImage: `url(${item.img})` }}
-                  ></div>
+                  >
+                    {" "}
+                  </div>
                   <div class="category-menu-item-title">{item.title}</div>
                 </div>
               </a>
@@ -214,7 +237,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   }
 
   /**
-   * Получение блока "скидки" если у магазинов ест скидки
+   * Вывод блока "скидки" если у магазинов ест скидки
    **/
   public checkSales(array): void {
     array.map((item) => {
