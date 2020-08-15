@@ -83,6 +83,10 @@ export namespace Components {
          */
         "selectShops": selectShopsInterface[];
     }
+    interface SCntMarketHeaderUnlogged {
+    }
+    interface SCntMarketHeaderWrapper {
+    }
     interface SCntMarketItemOffer {
         /**
           * Приём данных из массива для вывода
@@ -380,6 +384,18 @@ declare global {
         prototype: HTMLSCntMarketHeaderNavElement;
         new (): HTMLSCntMarketHeaderNavElement;
     };
+    interface HTMLSCntMarketHeaderUnloggedElement extends Components.SCntMarketHeaderUnlogged, HTMLStencilElement {
+    }
+    var HTMLSCntMarketHeaderUnloggedElement: {
+        prototype: HTMLSCntMarketHeaderUnloggedElement;
+        new (): HTMLSCntMarketHeaderUnloggedElement;
+    };
+    interface HTMLSCntMarketHeaderWrapperElement extends Components.SCntMarketHeaderWrapper, HTMLStencilElement {
+    }
+    var HTMLSCntMarketHeaderWrapperElement: {
+        prototype: HTMLSCntMarketHeaderWrapperElement;
+        new (): HTMLSCntMarketHeaderWrapperElement;
+    };
     interface HTMLSCntMarketItemOfferElement extends Components.SCntMarketItemOffer, HTMLStencilElement {
     }
     var HTMLSCntMarketItemOfferElement: {
@@ -562,6 +578,8 @@ declare global {
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-header-body": HTMLSCntMarketHeaderBodyElement;
         "s-cnt-market-header-nav": HTMLSCntMarketHeaderNavElement;
+        "s-cnt-market-header-unlogged": HTMLSCntMarketHeaderUnloggedElement;
+        "s-cnt-market-header-wrapper": HTMLSCntMarketHeaderWrapperElement;
         "s-cnt-market-item-offer": HTMLSCntMarketItemOfferElement;
         "s-cnt-market-item-recommended": HTMLSCntMarketItemRecommendedElement;
         "s-cnt-market-item-selection": HTMLSCntMarketItemSelectionElement;
@@ -680,6 +698,10 @@ declare namespace LocalJSX {
           * магазины для вашего города
          */
         "selectShops"?: selectShopsInterface[];
+    }
+    interface SCntMarketHeaderUnlogged {
+    }
+    interface SCntMarketHeaderWrapper {
     }
     interface SCntMarketItemOffer {
         /**
@@ -972,6 +994,8 @@ declare namespace LocalJSX {
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-header-body": SCntMarketHeaderBody;
         "s-cnt-market-header-nav": SCntMarketHeaderNav;
+        "s-cnt-market-header-unlogged": SCntMarketHeaderUnlogged;
+        "s-cnt-market-header-wrapper": SCntMarketHeaderWrapper;
         "s-cnt-market-item-offer": SCntMarketItemOffer;
         "s-cnt-market-item-recommended": SCntMarketItemRecommended;
         "s-cnt-market-item-selection": SCntMarketItemSelection;
@@ -1019,6 +1043,8 @@ declare module "@stencil/core" {
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-header-body": LocalJSX.SCntMarketHeaderBody & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBodyElement>;
             "s-cnt-market-header-nav": LocalJSX.SCntMarketHeaderNav & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderNavElement>;
+            "s-cnt-market-header-unlogged": LocalJSX.SCntMarketHeaderUnlogged & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderUnloggedElement>;
+            "s-cnt-market-header-wrapper": LocalJSX.SCntMarketHeaderWrapper & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderWrapperElement>;
             "s-cnt-market-item-offer": LocalJSX.SCntMarketItemOffer & JSXBase.HTMLAttributes<HTMLSCntMarketItemOfferElement>;
             "s-cnt-market-item-recommended": LocalJSX.SCntMarketItemRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketItemRecommendedElement>;
             "s-cnt-market-item-selection": LocalJSX.SCntMarketItemSelection & JSXBase.HTMLAttributes<HTMLSCntMarketItemSelectionElement>;
