@@ -98,6 +98,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
                 {this.registration ? (
                   <s-cnt-market-registration-form
                     reg={this.loginAndRegistration.reg}
+                    users={this.loginAndRegistration.users}
                   />
                 ) : (
                   ""
