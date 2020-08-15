@@ -14,6 +14,9 @@ export const header = {
       closeIcon: 'fas fa-times',
       loginBtnText: 'Вход',
       regBtnText: 'Регистрация',
+      users: [
+
+      ],
       login: {
         rememberMe: 'Запомнить меня',
         logIn: 'Войти',

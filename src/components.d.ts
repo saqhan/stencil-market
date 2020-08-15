@@ -249,7 +249,14 @@ export namespace Components {
         "info": any;
     }
     interface SCntMarketRegistrationForm {
+        /**
+          * объект данных для компонента регистрации
+         */
         "reg": any;
+        /**
+          * объект данных для компонента регистрации
+         */
+        "users": any;
     }
     interface SCntMarketSelection {
         /**
@@ -925,7 +932,14 @@ declare namespace LocalJSX {
         "info"?: any;
     }
     interface SCntMarketRegistrationForm {
+        /**
+          * объект данных для компонента регистрации
+         */
         "reg"?: any;
+        /**
+          * объект данных для компонента регистрации
+         */
+        "users"?: any;
     }
     interface SCntMarketSelection {
         /**

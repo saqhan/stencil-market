@@ -233,4 +233,5 @@ export class SCntMarketTopBar implements ComponentInterface {
       }
     }
   }
+
 }
