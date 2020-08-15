@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from "@stencil/core";
+import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 
 @Component({
   tag: "s-cnt-market-header-unlogged",
@@ -7,7 +7,6 @@ import {Component, ComponentInterface, h, Prop} from "@stencil/core";
   scoped: true,
 })
 export class SCntMarketHeaderUnlogged implements ComponentInterface {
-
   /**
    *
    * */
@@ -31,7 +30,7 @@ export class SCntMarketHeaderUnlogged implements ComponentInterface {
                     style={{
                       backgroundImage: `url(${this.logo})`,
                     }}
-                  ></div>
+                  />
                 </div>
               </div>
               <div class="col-6">
