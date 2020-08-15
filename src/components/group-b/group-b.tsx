@@ -24,7 +24,7 @@ export class GroupB implements ComponentInterface {
   render() {
     return (
       <div>
-        <s-cnt-market-header categories={header}></s-cnt-market-header>
+        <s-cnt-market-header-wrapper categories={header}></s-cnt-market-header-wrapper>
         <div >
           <div class='overlayBackDrop'></div>
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}></s-cnt-market-promo-slider>

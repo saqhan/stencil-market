@@ -16,13 +16,13 @@
 
 ### Used by
 
- - [group-b](../../..)
+ - [group-b](../../../../../..)
 
 ### Depends on
 
-- [s-cnt-market-top-bar](./res/view/s-cnt-market-top-bar)
-- [s-cnt-market-header-body](./res/view/s-cnt-market-header-body)
-- [s-cnt-market-header-nav](./res/view/s-cnt-market-header-nav)
+- [s-cnt-market-top-bar](res/view/s-cnt-market-top-bar)
+- [s-cnt-market-header-body](res/view/s-cnt-market-header-body)
+- [s-cnt-market-header-nav](res/view/s-cnt-market-header-nav)
 
 ### Graph
 ```mermaid

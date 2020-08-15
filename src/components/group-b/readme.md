@@ -13,7 +13,7 @@
 
 ### Depends on
 
-- [s-cnt-market-header](./res/view/s-cnt-market-header)
+- [s-cnt-market-header](res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header)
 
 ### Graph
 ```mermaid

@@ -20,7 +20,7 @@
 
 ### Depends on
 
-- [s-cnt-market-delivery-modal](./res/view/s-cnt-market-delivery-modal)
+- [s-cnt-market-delivery-modal](res/view/s-cnt-market-delivery-modal)
 
 ### Graph
 ```mermaid

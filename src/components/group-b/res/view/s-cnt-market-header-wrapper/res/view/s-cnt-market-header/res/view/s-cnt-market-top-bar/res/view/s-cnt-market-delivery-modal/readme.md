@@ -31,8 +31,8 @@
 
 ### Depends on
 
-- [s-cnt-market-delivery-in-modal](./res/view/s-cnt-market-delivery-in-modal)
-- [s-cnt-market-pickup-in-modal](./res/view/s-cnt-market-pickUp-in-modal)
+- [s-cnt-market-delivery-in-modal](res/view/s-cnt-market-delivery-in-modal)
+- [s-cnt-market-pickup-in-modal](res/view/s-cnt-market-pickUp-in-modal)
 
 ### Graph
 ```mermaid
