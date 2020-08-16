@@ -9,33 +9,31 @@
   overflow: auto;
   background-color: rgba(0,0,0,.4);
   z-index: 1000;
-  opacity: 0;
-  pointer-events: none;
-  /*transition: opacity 1s;*/
-  /*animation: fadeIn .5s 35ms ease-in;*/
+  animation: fadeIn .5s 35ms ease-in;
 }
 
-.window:target {
-  opacity: 1;
-  pointer-events: auto;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-/*.fadeIn {*/
-/*  opacity: 1;*/
-/*}*/
-
-/*@keyframes fadeIn {*/
-/*  0% {*/
-/*    opacity: 0;*/
-/*  }*/
-/*  100% {*/
-/*    opacity: 1;*/
-/*  }*/
-/*}*/
 
 
 .container {
-  width: 760px;
+  max-width: 760px;
   border-radius: 15px;
   background-color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .close {
+    top: 16px;
+    right: 16px;
+  }
+  .container {
+    max-width: 100%;
+  }
 }

@@ -15,34 +15,47 @@ export class SCntMarketRecommended implements ComponentInterface {
 
   @Prop() info: any;
 
+  /**
+   *
+   */
+  public carouselTag: HTMLElement;
+
+  componentDidLoad() {
+    let elem = this.carouselTag;
+    // @ts-ignore
+    let flkty = new Flickity(elem, {
+      // options
+      pageDots: false,
+      cellAlign: "left",
+    });
+  }
+
   render() {
     return (
-      <div class="recommended">
-        <div class="container">
+      <div class="recommended products">
           <div class="row justify-content-between">
-            <div class="col-6">
+            <div class="col">
               <div class="info">
                 {this.info}
               </div>
             </div>
-            <div class="col-2">
-              <div class="icons">
-                <div class="arrow-left">
-                  <i class="fa fa-arrow-left arrow" aria-hidden="true"/>
-                </div>
-                <div class="arrow-right">
-                  <i class="fa fa-arrow-right" aria-hidden="true"/>
-                </div>
-              </div>
-            </div>
+            {/*<div class="col-2">*/}
+            {/*  <div class="icons">*/}
+            {/*    <div class="arrow-left">*/}
+            {/*      <i class="fa fa-arrow-left arrow" aria-hidden="true"/>*/}
+            {/*    </div>*/}
+            {/*    <div class="arrow-right">*/}
+            {/*      <i class="fa fa-arrow-right" aria-hidden="true"/>*/}
+            {/*    </div>*/}
+            {/*  </div>*/}
+            {/*</div>*/}
           </div>
-          <div class="row no-gutters">
+          <div class="no-gutters" ref={(el) => (this.carouselTag = el)}>
             <GetRecommended
-            array={this.getRecommended}>
+              array={this.getRecommended}>
             </GetRecommended>
           </div>
         </div>
-      </div>
     );
   }
 }
@@ -50,7 +63,7 @@ export class SCntMarketRecommended implements ComponentInterface {
 const GetRecommended = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="col-md-4">
+      <div class="carousel-cell">
         <s-cnt-market-item-recommended
           getRecommended={item}>
         </s-cnt-market-item-recommended>

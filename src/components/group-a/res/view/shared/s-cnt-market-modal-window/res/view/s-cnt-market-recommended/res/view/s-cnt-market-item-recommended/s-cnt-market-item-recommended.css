@@ -1,13 +1,15 @@
 .recomm {
   display: flex;
-  margin: 10px 10px 0 0;
-  padding: 0 5px 0 0;
   border: 1px solid lightgray;
   border-radius: 5px;
   cursor: pointer;
+  width: 226px;
+  padding: 5px 10px;
 }
 
 .block-image {
+  display: flex;
+  align-items: center;
   width: 100px;
   height: 100px;
 }
@@ -16,7 +18,6 @@
   width: 70px;
   height: 80px;
   background-color: black;
-  margin: 10px 0 0 10px;
 }
 
 .price {

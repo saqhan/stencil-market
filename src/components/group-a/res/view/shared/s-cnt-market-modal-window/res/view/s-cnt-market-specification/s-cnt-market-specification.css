@@ -1,7 +1,18 @@
 .container {
+  max-width: 100%;
+  padding: 0;
+}
+
+.row {
   background-color: #f7f7f7;
-  margin: 0 0 0 -15px;
-  width: 760px;
+}
+
+.row-desc {
+  padding: 0 15px;
+}
+
+.row-radius {
+  border-radius: 0 0 15px 15px;
 }
 
 .op {
@@ -13,7 +24,7 @@
 }
 
 .my-spec {
-  margin: 23px 10px 0 0;
+  margin-top: 23px;
   border: 1px solid lightgray;
   border-radius: 3px;
   background-color: white;
@@ -21,18 +32,20 @@
 
 .block-value {
   border-bottom: 1px solid lightgray;
+  padding: 10px 15px;
+}
+
+.line-item-wrapper {
+  padding: 0 15px;
 }
 
 .line-item {
-  width: 300px;
-  margin: auto;
   border-bottom: 1px solid lightgray;
 }
 
 .value {
   font-size: 1.1em;
   display: inline-block;
-  padding: 10px 8px 10px 15px;
   font-weight: 600;
 }
 
@@ -80,9 +93,9 @@
   font-size: 0.9em;
 }
 
-.block-composition {
-  width: 280px;
-}
+/*.block-composition {*/
+/*  width: 280px;*/
+/*}*/
 
 .item_1 {
   font-weight: 600;
@@ -95,19 +108,22 @@
 }
 
 .composition {
-  width: 325px;
   font-size: 0.9em;
   opacity: 0.7;
   line-height: 23px;
-  padding: 0 0 8px 15px;
+  padding: 0 0 20px 15px;
 }
 
 .line-composition {
-  width: 280px;
+  /*width: 280px;*/
+  padding: 10px 0;
   margin: auto;
-  padding: 0 0 8px 0;
   border-bottom: 1px solid lightgray;
   display: flex;
+}
+
+.line-composition:last-child {
+  border-bottom: 0;
 }
 
 .brand,
@@ -126,89 +142,83 @@
   padding: 10px 8px 5px 15px;
   font-weight: 600;
   opacity: 0.7;
+  flex: 1;
 }
 
 .dolce {
   display: inline-block;
-  padding: 10px 0 10px 95px;
   opacity: 0.7;
   font-size: 0.9em;
   color: #21a038;
+  flex: 1;
 }
 
 .lenta {
   display: inline-block;
-  padding: 10px 0 10px 30px;
   opacity: 0.7;
   font-size: 0.9em;
+  flex: 1;
 }
 
 .russia {
   display: inline-block;
-  padding: 10px 0 10px 85px;
+  flex: 1;
   opacity: 0.7;
   font-size: 0.9em;
 }
 
 .terms {
-  width: 130px;
   display: inline-block;
-  padding: 10px 0 10px 10px;
+  flex: 1;
   opacity: 0.7;
   font-size: 0.9em;
 }
 
 .month {
-  width: 130px;
+  flex: 1;
   display: inline-block;
-  padding: 10px 0 10px 33px;
   opacity: 0.7;
   font-size: 0.9em;
 }
 
 .chocolate {
-  width: 130px;
   display: inline-block;
-  padding: 10px 0 10px 54px;
+  flex: 1;
   opacity: 0.7;
   font-size: 0.9em;
 }
 
 .bitter {
-  width: 130px;
   display: inline-block;
-  padding: 10px 0 10px 35px;
   opacity: 0.7;
+  flex: 1;
   font-size: 0.9em;
 }
 
 .walnut {
-  width: 130px;
+  flex: 1;
   display: inline-block;
-  padding: 10px 0 10px 100px;
   opacity: 0.7;
   font-size: 0.9em;
 }
 
 .hazelnut {
-  width: 130px;
   display: inline-block;
-  padding: 10px 0 10px 72px;
+  flex: 1;
   opacity: 0.7;
   font-size: 0.9em;
 }
 
 .glazed {
-  width: 130px;
   display: inline-block;
-  padding: 10px 0 10px 42px;
+  flex: 1;
   opacity: 0.7;
   font-size: 0.9em;
 }
 
 .box {
   display: inline-block;
-  padding: 10px 0 10px 61px;
+  flex: 1;
   opacity: 0.7;
   font-size: 0.9em;
 }
@@ -221,8 +231,11 @@
 }
 
 .space {
-  width: 759px;
   height: 40px;
-  margin: 22px 0 40px -14px;
+  margin: 22px 0 40px;
   background-color: white;
+}
+
+.recommendations {
+  padding: 0;
 }
