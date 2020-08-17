@@ -7,4 +7,5 @@ export interface TopBarModalDeliveryInterface {
   enterAddressText: string;
   searchIcon: string;
   btnText: string;
+  cityForSelectedDelivery: any;
 }

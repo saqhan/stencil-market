@@ -13,7 +13,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   @Prop() reg: any;
 
   /**
-   * объект данных для компонента регистрации
+   * массив с данными пользователей
    * */
   @Prop() users: any;
 

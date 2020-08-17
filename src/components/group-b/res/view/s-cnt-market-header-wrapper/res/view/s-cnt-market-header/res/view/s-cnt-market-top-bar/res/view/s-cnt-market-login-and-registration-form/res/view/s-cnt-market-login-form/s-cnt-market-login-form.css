@@ -13,6 +13,7 @@
   width: 100%;
   line-height: normal;
   font-weight: 400;
+
 }
 
 .input-container {
@@ -68,10 +69,10 @@
   appearance: none;
 }
 
-.checkbox-input::before{
+.checkbox-input::before {
   content: '\2713';
   display: inline-flex;
-text-align: center;
+  text-align: center;
   color: white;
   font-size: 20px;
   line-height: 20px;
@@ -159,6 +160,20 @@ text-align: center;
   min-width: 100%;
   transition: all 0.2s;
   white-space: nowrap;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  transition-property: color, background-color, border;
+}
+
+.login-through-bankId:hover, .login-social-btn:hover {
+  background-color: #f3f4f7;
+  border: 1px solid #d0d2d4;
+  color: #333536;
+}
+
+.login-through-bankId:focus, .login-social-btn:focus {
+  border-color: #1ea038;
+  background-color: white;
 }
 
 .login-through-bankId span svg {
@@ -201,24 +216,29 @@ text-align: center;
   line-height: 24px;
   border-radius: 7px;
   margin-right: 16px;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  transition-property: color, background-color, border;
 }
 
-.login-social-btn span{
+
+
+.login-social-btn span {
   display: flex;
   justify-content: center;
 }
 
 @media (max-width: 576px) {
-  .view-input{
+  .view-input {
     font-size: 12px;
   }
 
-  .remember-me-check{
+  .remember-me-check {
     font-size: 12px;
     padding-bottom: 1px;
   }
 
-  .login-btn, .remind-password, .login-through-bankId, .login-through-social p{
+  .login-btn, .remind-password, .login-through-bankId, .login-through-social p {
     font-size: 12px;
   }
 

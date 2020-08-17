@@ -16,7 +16,38 @@ export const header = {
       loginBtnText: 'Вход',
       regBtnText: 'Регистрация',
       users: [
-
+        {
+          id: 1,
+          name: 'user',
+          mail: 'user@mail.ru',
+          password: 'Password1',
+          forBusiness: false,
+          mailing: false
+        },
+        {
+          id: 2,
+          name: 'user2',
+          mail: 'user2@mail.ru',
+          password: 'Password2',
+          forBusiness: false,
+          mailing: false
+        },
+        {
+          id: 3,
+          name: 'user3',
+          mail: 'user3@mail.ru',
+          password: 'Password3',
+          forBusiness: false,
+          mailing: false
+        },
+        {
+          id: 4,
+          name: 'user4',
+          mail: 'user4@mail.ru',
+          password: 'Password4',
+          forBusiness: false,
+          mailing: false
+        },
       ],
       login: {
         rememberMe: 'Запомнить меня',
@@ -28,7 +59,7 @@ export const header = {
       reg: {
         checkForBis: 'Хочу заказывать для бизнеса',
         checkForAdvertisingText: 'Согласен',
-        checkForAdvertisingLink:  'на рекламную рассылку',
+        checkForAdvertisingLink: 'на рекламную рассылку',
         regBtn: 'Зарегистрироваться',
         agreementText: 'Продолжая, я соглашаюсь на обработку персональных данных на',
         agreementLink: 'следующих условиях'
@@ -46,6 +77,519 @@ export const header = {
         enterAddressText: "Введите адрес доставки, чтобы увидеть доступные магазины",
         searchIcon: 'fas fa-search',
         btnText: "Сохранить",
+        cityForSelectedDelivery: [
+          {
+            id: 1,
+            city: 'Москва',
+            storeAddress: [
+              {
+                id: 1,
+                storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+              {
+                id: 2,
+                storeAddress: 'Москва, Маршала Прошлякова, 14',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+              {
+                id: 3,
+                storeAddress: 'Москва, р-н северного Измайлово, 104-й км. МКАД, 6',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+              {
+                id: 4,
+                storeAddress: 'Москва, Шоссейная, 2Б',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+              {
+                id: 5,
+                storeAddress: 'Москва, Дмитровское ш, 165Б',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+              {
+                id: 6,
+                storeAddress: 'д. Апаринки, МО, п. Совхоза им. Ленина, 8',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+              {
+                id: 7,
+                storeAddress: 'Москва, Рябиновая, 59',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+              {
+                id: 8,
+                storeAddress: 'Москва, Боровское ш, 10А',
+                storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+                btnText: 'Выбрать',
+              },
+            ]
+          },
+          {
+            id: 2,
+            city: 'Казань',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 3,
+            city: 'Екатеринбург',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 4,
+            city: 'Нижний Новгород',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 5,
+            city: 'Ростов-на-Дону',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 6,
+            city: 'Уфа',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 7,
+            city: 'Краснодар',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 8,
+            city: 'Самара',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 9,
+            city: 'Воронеж',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 10,
+            city: 'Волгоград',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 11,
+            city: 'Омск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 12,
+            city: 'Челябинск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 13,
+            city: 'Красноярск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 14,
+            city: 'Московская Область',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 15,
+            city: 'Пермь',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 16,
+            city: 'Тюмень',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 17,
+            city: 'Одинцово',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 18,
+            city: 'Балашиха',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 19,
+            city: 'Ногинск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 20,
+            city: 'Подольск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 21,
+            city: 'Иркутск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 22,
+            city: 'Калининград',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 23,
+            city: 'Ярославль',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 24,
+            city: 'Владимир',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 25,
+            city: 'Барнаул',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 26,
+            city: 'Тула',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 27,
+            city: 'Курск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 28,
+            city: 'Кемерово',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+
+          {
+            id: 29,
+            city: 'Томск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 30,
+            city: 'Иваново',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 31,
+            city: 'Саратов',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 32,
+            city: 'Новокузнецк',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 33,
+            city: 'Астрахань',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 34,
+            city: 'Ставрополь',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 35,
+            city: 'Ижевск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 36,
+            city: 'Орел',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 37,
+            city: 'Смоленск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 38,
+            city: 'Чебоксары',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+          {
+            id: 39,
+            city: 'Брянск',
+            storeAddress: [
+              // {
+              //   id: 1,
+              //   storeAddress: 'Москва, Ленинградское шоссе, 71Г',
+              //   storeWorkTime: 'Самовывоз ежедневно с 10:00 до 22:00',
+              //   btnText: 'Выбрать',
+              // },
+            ]
+          },
+        ],
       },
       PickUp: {
         id: 1,
@@ -613,7 +1157,7 @@ export const header = {
   },
   leftMenuCatalog: [
     {
-      id:1,
+      id: 1,
       title: 'Дачный сезон',
       img: 'https://sbermarket.ru/spree/taxons/10412/normal/%D0%93%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.jpg',
       sales: false,
@@ -626,7 +1170,7 @@ export const header = {
       ]
     },
     {
-      id:2,
+      id: 2,
       title: "Бренды METRO",
       img: "https://sbermarket.ru/spree/taxons/7783/normal/61000000.png",
       sales: true,
@@ -649,7 +1193,7 @@ export const header = {
       ]
     },
     {
-      id:3,
+      id: 3,
       title: "Вода, соки, напитки",
       img: "https://sbermarket.ru/spree/taxons/5020/normal/%D0%92%D0%BE%D0%B4%D0%B0__%D1%81%D0%BE%D0%BA%D0%B8__%D0%BD%D0%B0%D0%BF%D0%B8%D1%82%D0%BA%D0%B8.png",
       sales: false,
@@ -662,7 +1206,7 @@ export const header = {
       ]
     },
     {
-      id:4,
+      id: 4,
       title: "Овощи и фрукты",
       img: "https://sbermarket.ru/spree/taxons/4232/normal/2000000.png",
       sales: false,
@@ -680,7 +1224,7 @@ export const header = {
       ]
     },
     {
-      id:5,
+      id: 5,
       title: "Молочные продукты",
       img: 'https://sbermarket.ru/spree/taxons/4502/normal/%D0%A1%D0%BC%D0%B5%D1%82%D0%B0%D0%BD%D0%B0.png',
       sales: false,
@@ -693,7 +1237,7 @@ export const header = {
       ]
     },
     {
-      id:6,
+      id: 6,
       title: "Бакалея",
       img: "https://sbermarket.ru/spree/taxons/4329/normal/3000000.png",
       sales: false,
@@ -706,7 +1250,7 @@ export const header = {
       ]
     },
     {
-      id:7,
+      id: 7,
       title: "Сладости",
       img: "https://sbermarket.ru/spree/taxons/4768/normal/10000000.png",
       sales: true,
@@ -719,7 +1263,7 @@ export const header = {
       ]
     },
     {
-      id:8,
+      id: 8,
       title: "Сыры",
       img: "https://sbermarket.ru/spree/taxons/4582/normal/7000000.png",
       sales: false,
@@ -732,7 +1276,7 @@ export const header = {
       ]
     },
     {
-      id:9,
+      id: 9,
       title: "Колбасы, сосиски, деликатесы",
       img: "https://sbermarket.ru/spree/taxons/4672/normal/8000000.png?1587987444",
       sales: false,
@@ -745,7 +1289,7 @@ export const header = {
       ]
     },
     {
-      id:10,
+      id: 10,
       title: 'Яйца',
       img: 'https://sbermarket.ru/spree/taxons/4574/normal/6000000.png?1587987444',
       sales: true,
@@ -758,7 +1302,7 @@ export const header = {
       ]
     },
     {
-      id:11,
+      id: 11,
       title: 'Хлеб и выпечка',
       img: 'https://sbermarket.ru/spree/taxons/4697/normal/9000000.png?1587987444',
       sales: true,

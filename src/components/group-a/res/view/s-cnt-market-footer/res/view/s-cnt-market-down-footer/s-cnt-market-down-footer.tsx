@@ -19,37 +19,45 @@ export class SCntMarketDownFooter implements ComponentInterface {
         <div class="container">
           <div class="row">
             <div class="col-12 col-lg-6">
-              <div class="col-lg-6">
-                <div class="copy ">
-                  <div class="copyright">{this.forDownFooter.copyright}</div>
-                  <div class="company">{this.forDownFooter.company}</div>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="icons">
-                  <div class="facebook">
-                    <i class="fab fa-facebook-f" />
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="copy ">
+                      <div class="copyright">{this.forDownFooter.copyright}</div>
+                      <div class="company">{this.forDownFooter.company}</div>
+                    </div>
                   </div>
-                  <div class="vk">
-                    <i class="fab fa-vk" />
-                  </div>
-                  <div class="instagram">
-                    <i class="fab fa-instagram" />
+                  <div class="col-12 col-md-6">
+                    <div class="icons">
+                      <div class="facebook">
+                        <i class="fab fa-facebook-f" />
+                      </div>
+                      <div class="vk">
+                        <i class="fab fa-vk" />
+                      </div>
+                      <div class="instagram">
+                        <i class="fab fa-instagram" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="col-12 col-lg-6">
-              <div class="col-lg-6">
-                <div class="download">{this.forDownFooter.download}</div>
-              </div>
-              <div class="col-lg-6">
-                <div class="iconsApp">
-                  <div class="apple">
-                    <i class="fab fa-apple" />
+              <div class="container">
+                <div class="row">
+                  <div class="col-12 col-md-6">
+                    <div class="download">{this.forDownFooter.download}</div>
                   </div>
-                  <div class="google">
-                    <i class="fab fa-google-play" />
+                  <div class="col-12 col-md-6">
+                    <div class="iconsApp">
+                      <div class="apple">
+                        <i class="fab fa-apple" />
+                      </div>
+                      <div class="google">
+                        <i class="fab fa-google-play" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
