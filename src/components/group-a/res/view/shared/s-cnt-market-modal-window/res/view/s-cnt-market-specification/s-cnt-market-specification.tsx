@@ -22,173 +22,122 @@ export class SCntMarketSpecification implements ComponentInterface {
     return (
       <div class="specification">
         <div class="container">
-          <div class="row">
-            <div class="col-6">
+          <div class="row row-desc">
+            <div class="col-sm-6">
               <div class="op">
-                <b>
-                  {this.getSpecification.op}
-                </b>
+                <b>{this.getSpecification.op}</b>
               </div>
-              <div class="spec">
-                {this.getSpecification.spec}
-              </div>
+              <div class="spec">{this.getSpecification.spec}</div>
             </div>
-            <div class="col-6">
+            <div class="col-sm-6">
               <div class="my-spec">
                 <div class="block-value">
-                  <div class="value">
-                    {this.getSpecification.value}
+                  <span class="value">{this.getSpecification.value}</span>&nbsp;
+                  {this.getSpecification.weight}
+                </div>
+                <div class="line-item-wrapper">
+                  <div class="line-item">
+                    <div class="protein">{this.getSpecification.protein}</div>
+                    <div class="weightProtein">
+                      {this.getSpecification.weightProtein}
+                    </div>
                   </div>
-                  <div class="weight">
-                    {this.getSpecification.weight}
+                  <div class="line-item">
+                    <div class="fat">{this.getSpecification.fat}</div>
+                    <div class="weightFat">
+                      {this.getSpecification.weightFat}
+                    </div>
+                  </div>
+                  <div class="line-item">
+                    <div class="carbohydrates">
+                      {this.getSpecification.carbohydrates}
+                    </div>
+                    <div class="weightCarbohydrates">
+                      {this.getSpecification.weightCarbohydrates}
+                    </div>
                   </div>
                 </div>
-                <div class="line-item">
-                  <div class="protein">
-                    {this.getSpecification.protein}
-                  </div>
-                  <div class="weightProtein">
-                    {this.getSpecification.weightProtein}
-                  </div>
+
+                <div class="calories">{this.getSpecification.calories}</div>
+                <div class="weightCalories">
+                  {this.getSpecification.weightCalories}
                 </div>
-                <div class="line-item">
-                  <div class="fat">
-                    {this.getSpecification.fat}
-                  </div>
-                  <div class="weightFat">
-                    {this.getSpecification.weightFat}
-                  </div>
-                </div>
-                <div class="line-item">
-                  <div class="carbohydrates">
-                    {this.getSpecification.carbohydrates}
-                  </div>
-                  <div class="weightCarbohydrates">
-                    {this.getSpecification.weightCarbohydrates}
-                  </div>
-                </div>
-                  <div class="calories">
-                    {this.getSpecification.calories}
-                  </div>
-                  <div class="weightCalories">
-                    {this.getSpecification.weightCalories}
-                  </div>
               </div>
               <div class="block-composition">
-                <div class="item_1">
-                  {this.getSpecification.item_1}
-                </div>
+                <div class="item_1">{this.getSpecification.item_1}</div>
                 <div class="composition">
                   {this.getSpecification.composition}
                 </div>
                 <div class="line-composition">
-                  <div class="info">
-                    {this.getSpecification.info}
-                  </div>
+                  <div class="info">{this.getSpecification.info}</div>
                 </div>
                 <div class="line-composition">
-                  <div class="brand">
-                    {this.getSpecification.brand}
-                  </div>
+                  <div class="brand">{this.getSpecification.brand}</div>
                   <div class="dolce">
-                    <u>
-                      {this.getSpecification.dolce}
-                    </u>
+                    <u>{this.getSpecification.dolce}</u>
                   </div>
                 </div>
                 <div class="line-composition">
                   <div class="manufacturer">
                     {this.getSpecification.manufacturer}
                   </div>
-                  <div class="lenta">
-                    {this.getSpecification.lenta}
-                  </div>
+                  <div class="lenta">{this.getSpecification.lenta}</div>
                 </div>
                 <div class="line-composition">
-                  <div class="country">
-                    {this.getSpecification.country}
-                  </div>
-                  <div class="russia">
-                    {this.getSpecification.russia}
-                  </div>
+                  <div class="country">{this.getSpecification.country}</div>
+                  <div class="russia">{this.getSpecification.russia}</div>
                 </div>
                 <div class="line-composition">
                   <div class="storageСonditions">
                     {this.getSpecification.storageConditions}
                   </div>
-                  <div class="terms">
-                    {this.getSpecification.terms}
-                  </div>
+                  <div class="terms">{this.getSpecification.terms}</div>
                 </div>
                 <div class="line-composition">
-                  <div class="term">
-                    {this.getSpecification.term}
-                  </div>
-                  <div class="month">
-                    {this.getSpecification.month}
-                  </div>
+                  <div class="term">{this.getSpecification.term}</div>
+                  <div class="month">{this.getSpecification.month}</div>
                 </div>
                 <div class="line-composition">
                   <div class="kindOfCandy">
                     {this.getSpecification.kindOfCandy}
                   </div>
-                  <div class="chocolate">
-                    {this.getSpecification.chocolate}
-                  </div>
+                  <div class="chocolate">{this.getSpecification.chocolate}</div>
                 </div>
                 <div class="line-composition">
                   <div class="typeOfChocolate">
                     {this.getSpecification.typeOfChocolate}
                   </div>
-                  <div class="bitter">
-                    {this.getSpecification.bitter}
-                  </div>
+                  <div class="bitter">{this.getSpecification.bitter}</div>
                 </div>
                 <div class="line-composition">
-                  <div class="flavor">
-                    {this.getSpecification.flavor}
-                  </div>
-                  <div class="walnut">
-                    {this.getSpecification.walnut}
-                  </div>
+                  <div class="flavor">{this.getSpecification.flavor}</div>
+                  <div class="walnut">{this.getSpecification.walnut}</div>
                 </div>
                 <div class="line-composition">
                   <div class="supplements">
                     {this.getSpecification.supplements}
                   </div>
-                  <div class="hazelnut">
-                    {this.getSpecification.hazelnut}
-                  </div>
+                  <div class="hazelnut">{this.getSpecification.hazelnut}</div>
                 </div>
                 <div class="line-composition">
-                  <div class="feature">
-                    {this.getSpecification.feature}
-                  </div>
-                  <div class="glazed">
-                    {this.getSpecification.glazed}
-                  </div>
+                  <div class="feature">{this.getSpecification.feature}</div>
+                  <div class="glazed">{this.getSpecification.glazed}</div>
                 </div>
-                <div class="packaging">
-                  {this.getSpecification.packaging}
-                </div>
-                <div class="box">
-                  {this.getSpecification.box}
+                <div class="line-composition">
+                  <div class="packaging">{this.getSpecification.packaging}</div>
+                  <div class="box">{this.getSpecification.box}</div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row row-radius">
             <div class="col-12">
               <div class="hideInformation">
-                <u>
-                  {this.getSpecification.hideInformation}
-                </u>
+                <u>{this.getSpecification.hideInformation}</u>
               </div>
             </div>
-            <div class="col-12">
-              <div class="space">
-
-              </div>
+            <div class="col-12 recommendations">
+              <div class="space"></div>
             </div>
           </div>
         </div>

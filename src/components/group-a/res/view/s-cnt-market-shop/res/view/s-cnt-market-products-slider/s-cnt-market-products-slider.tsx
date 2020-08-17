@@ -43,7 +43,7 @@ export class SCntMarketProductsSlider implements ComponentInterface {
   render() {
     return (
       <div class="products">
-        <div class="container">
+        <div class="main-container">
           <div class="products-carousel-title">{this.productsSliderTitle}</div>
           <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
             <ProductsSliderCard

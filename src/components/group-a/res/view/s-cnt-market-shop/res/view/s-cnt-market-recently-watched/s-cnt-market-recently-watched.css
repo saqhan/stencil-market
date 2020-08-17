@@ -1,11 +1,7 @@
 .recently-watched {
   background-color: #f7f7f7;
   margin-top: 40px;
-  padding: 20px 0px 25px;
-}
-
-.container {
-  max-width: 1476px;
+  padding: 20px 10px 25px;
 }
 
 .carousel-cell {
@@ -23,12 +19,58 @@
   color: #343434;
 }
 
-@media screen and (max-width: 768px) {
-  .products-carousel-title {
-    font-size: 20px;
-    padding: 20px 10px 25px;
+.main-container {
+  margin: auto;
+}
+
+@media only screen and (min-width: 641px) {
+  .main-container {
+    width: 621px;
   }
 }
+
+@media only screen and (min-width: 848px) {
+  .main-container {
+    width: 828px;
+  }
+}
+
+@media only screen and (min-width: 1055px) {
+  .main-container {
+    width: 1035px;
+  }
+}
+
+@media only screen and (min-width: 1262px) {
+  .main-container {
+    width: 1242px;
+  }
+}
+
+@media only screen and (min-width: 1469px) {
+  .main-container {
+    width: 1449px;
+  }
+}
+
+@media only screen and (min-width: 1676px) {
+  .main-container {
+    width: 1656px;
+  }
+}
+
+@media only screen and (min-width: 1883px) {
+  .main-container {
+    width: 1863px;
+  }
+}
+
+/*@media screen and (max-width: 768px) {*/
+/*  .products-carousel-title {*/
+/*    font-size: 20px;*/
+/*    padding: 20px 10px 25px;*/
+/*  }*/
+/*}*/
 
 @media screen and (max-width: 320px) {
   .recently-watched {

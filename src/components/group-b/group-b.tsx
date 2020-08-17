@@ -1,6 +1,8 @@
 import {Component, ComponentInterface, h, State} from '@stencil/core';
 import {header} from "../../utils/mock-b";
 import {
+  footerMenu, forDownFooter, forFooterInfo, forUpFooterForm,
+  logoFooter,
   productsList,
   productsSliderCards,
   productsSliderTitle,
@@ -29,17 +31,24 @@ export class GroupB implements ComponentInterface {
   render() {
     return (
       <div>
-        <s-cnt-market-header-wrapper categories={header} login={this.login} ></s-cnt-market-header-wrapper>
+        <s-cnt-market-header-wrapper categories={header} login={this.login} > </s-cnt-market-header-wrapper>
         <div >
-          <div class='overlayBackDrop'></div>
-          <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}></s-cnt-market-promo-slider>
-          <s-cnt-market-products-slider productsSliderCards={productsSliderCards} productsSliderTitle={productsSliderTitle} onShowModal={() => this.showOrCloseModal()}></s-cnt-market-products-slider>
-          <s-cnt-market-products-list onShowModal={() => this.showOrCloseModal()} productsList={productsList}></s-cnt-market-products-list>
+          <div class='overlayBackDrop'> </div>
+          <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}> </s-cnt-market-promo-slider>
+          <s-cnt-market-products-slider productsSliderCards={productsSliderCards} productsSliderTitle={productsSliderTitle} onShowModal={() => this.showOrCloseModal()}> </s-cnt-market-products-slider>
+          <s-cnt-market-products-list onShowModal={() => this.showOrCloseModal()} productsList={productsList}> </s-cnt-market-products-list>
           <s-cnt-market-recently-watched onShowModal={() => this.showOrCloseModal()} recentlyWatchedProducts={recentlyWatchedProducts} recentlyWatchedTitle={recentlyWatchedTitle}
-          ></s-cnt-market-recently-watched>
-          {this.showModalState === true ? (<s-cnt-market-modal-window onClickOnModal={() => this.showOrCloseModal()}></s-cnt-market-modal-window>
+          > </s-cnt-market-recently-watched>
+          {this.showModalState === true ? (<s-cnt-market-modal-window onClickOnModal={() => this.showOrCloseModal()}> </s-cnt-market-modal-window>
           ) : ("")}
-          <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
+          <s-cnt-market-footer
+            logoFooter={logoFooter}
+            footerMenu={footerMenu}
+            forUpFooterForm={forUpFooterForm}
+            forDownFooter={forDownFooter}
+            forFooterInfo={forFooterInfo}
+          />
+          <s-cnt-market-back-to-top> </s-cnt-market-back-to-top>
         </div>
       </div>
     );

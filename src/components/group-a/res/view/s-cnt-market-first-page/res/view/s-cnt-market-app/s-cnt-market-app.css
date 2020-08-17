@@ -1,0 +1,169 @@
+.row {
+  direction: rtl;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  margin: auto;
+  border-radius: 20px;
+  background: linear-gradient(186deg,#31ac2d -27.41%,#9fd81d 85.54%,#e4f413 113.41%);
+  padding: 80px 65px;
+  height: 313px;
+  width: 1245px;
+}
+
+.commonButton {
+  margin: 30px 200px 0 0;
+  padding-right: 185px;
+  display: flex;
+}
+
+.image {
+  position: relative;
+  bottom: 135px;
+  width: 365px;
+  height: 368px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.title {
+  text-align: left;
+  line-height: 1.12;
+  color: #fff;
+  font-size: 37px;
+  font-weight: 600;
+}
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #d0d2d4;
+  width: 154px;
+  height: 51px;
+  font-size: 16px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+  margin-left: 20px;
+}
+
+.btn:hover {
+  background-color: #f3f4f7;
+  color: #333536;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+}
+
+.fa-google-play {
+  font-size: 17px;
+}
+
+.fa-apple {
+  font-size: 21px;
+}
+
+.fab  {
+  color: #21a038;
+  margin: 10px 10px 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .app {
+    max-width: 684px;
+    height: 242px;
+    padding-top: 0;
+  }
+
+  .image {
+    left: 17%;
+    top: 10px;
+    width: 230px;
+    height: 232px;
+  }
+
+  .commonButton {
+    margin: 20px 10px 0 0;
+    padding: 0;
+  }
+
+  .title {
+    margin-top: 50px;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 24px
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 154px;
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+  .app {
+    max-width: 368px;
+    height: 639px;
+    padding-top: 0;
+  }
+
+  .image {
+    left: 17%;
+    top: 45px;
+    width: 280px;
+    height: 282px;
+  }
+
+  .commonButton {
+    display: block;
+    margin: 20px -50px 0 0;
+    padding: 0;
+  }
+
+  .title {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 20px
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 308px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .app {
+    max-width: 288px;
+    height: 580px;
+  }
+
+  .common {
+    margin-right: -60px;
+    width: 250px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .image {
+    left: 35%;
+    width: 220px;
+    height: 200px;
+  }
+
+  .commonButton {
+    margin: 19px -60px 0 0;
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 248px;
+  }
+}
+
+

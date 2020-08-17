@@ -9,10 +9,7 @@
   overflow: auto;
   background-color: rgba(0,0,0,.4);
   z-index: 1000;
-  animation-name: fadeIn;
-  animation-duration: .5s;
-  animation-delay: 35ms;
-  animation-timing-function: ease;
+  animation: fadeIn .5s 35ms ease-in;
 }
 
 @keyframes fadeIn {
@@ -26,7 +23,17 @@
 
 
 .container {
-  width: 760px;
+  max-width: 760px;
   border-radius: 15px;
   background-color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .close {
+    top: 16px;
+    right: 16px;
+  }
+  .container {
+    max-width: 100%;
+  }
 }

@@ -70,4 +70,5 @@ export class SCntMarketShop implements ComponentInterface {
       document.body.style.overflow = "auto";
     }
   }
+
 }

@@ -12,49 +12,42 @@ export class SCntMarketSelection implements ComponentInterface {
   /**
    * Данные для карточек магазинов
    */
-  @Prop() forSelection: any;
+  @Prop() forSelection: MarketSelectionInterface[] = [];
 
   /**
    * Данные для главной картинки
    */
-  @Prop() homePageImage: any;
+  @Prop() homePageImage: string;
 
   /**
    * Данные для заголовка на картинке
    */
-  @Prop() homeText: any;
+  @Prop() homeText: string;
 
   /**
    * Данные для подзаголовка на картинке
    */
-  @Prop() homeSubText: any;
-
-  /**
-   * Приём данных из массива для вывода
-   */
-  @Prop() MarketSelectionInterface: MarketSelectionInterface[] = [];
+  @Prop() homeSubText: string;
 
   render() {
     return (
       <div class="selection">
         <div
           class="imageHome"
-          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}
-        >
+          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}>
           <div class="commonText">
-            <div class="text" innerHTML={markdown.toHTML(this.homeText)}>
+            <div class="homeText" innerHTML={markdown.toHTML(this.homeText)}>
             </div>
             <div
-              class="subtext"
+              class="homeSubtext"
               innerHTML={markdown.toHTML(this.homeSubText)}
             >
-              </div>
+            </div>
           </div>
         </div>
         <div class="container">
           <div class="row">
-            <GetSelection array={this.forSelection}>
-            </GetSelection>
+            <GetSelection array={this.forSelection}></GetSelection>
           </div>
         </div>
       </div>
@@ -65,11 +58,10 @@ export class SCntMarketSelection implements ComponentInterface {
 const GetSelection = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="col-md-4">
+      <div class="col-lg-4 col-md-6">
         <s-cnt-market-item-selection
           forSelection={item}
-        >
-        </s-cnt-market-item-selection>
+        ></s-cnt-market-item-selection>
       </div>
     );
   });

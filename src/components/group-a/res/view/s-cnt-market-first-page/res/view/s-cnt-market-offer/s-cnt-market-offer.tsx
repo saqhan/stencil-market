@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 import { markdown } from "markdown";
-import {MarketOfferInterface} from "./res/interface/common.interface";
+import { MarketOfferInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-offer",
@@ -12,17 +12,12 @@ export class SCntMarketOffer implements ComponentInterface {
   /**
    * Данные для компонента Offer
    */
-  @Prop() forOffer: any;
+  @Prop() forOffer: MarketOfferInterface[] = [];
 
   /**
    * Данные для заголовка
    */
   @Prop() offerTitleText: string;
-
-  /**
-   * Приём данных из массива для вывода
-   */
-  @Prop() MarketOfferInterface: MarketOfferInterface[] = [];
 
   render() {
     return (
@@ -30,14 +25,18 @@ export class SCntMarketOffer implements ComponentInterface {
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <div class="title" innerHTML={markdown.toHTML(this.offerTitleText)}>
+              <div class="offerTitle">
+                <div
+                  class="title"
+                  innerHTML={markdown.toHTML(this.offerTitleText)}
+                ></div>
               </div>
             </div>
-            <div class="container">
-              <div class="row">
-                <GetOffer arrayOffer={this.forOffer}></GetOffer>
-              </div>
-            </div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <GetOffer arrayOffer={this.forOffer}></GetOffer>
           </div>
         </div>
       </div>
@@ -48,7 +47,7 @@ export class SCntMarketOffer implements ComponentInterface {
 const GetOffer = (props) => {
   return props.arrayOffer.map((item) => {
     return (
-      <div class="col-md-3">
+      <div class="col-lg-3 col-md-6">
         <s-cnt-market-item-offer forOffer={item}></s-cnt-market-item-offer>
       </div>
     );

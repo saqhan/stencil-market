@@ -1,0 +1,132 @@
+.downFooter {
+  padding: 20px 0 15px 0;
+  background-color: #f3f4f7;
+}
+
+.common {
+  display: flex;
+}
+
+.copy {
+  margin: 0 0 0 10px;
+}
+
+.copyright {
+  opacity: .6;
+  font-weight: 600;
+}
+
+.company {
+  opacity: .6;
+  margin-top: 4px;
+}
+
+.iconsApp {
+  display: flex;
+}
+
+.icons {
+  display: flex;
+  margin-left: 120px;
+}
+
+.facebook, .vk, .instagram, .apple, .google {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  margin: 0 22px 0 0;
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  color: gray;
+}
+
+.download {
+  width: 250px;
+  color: gray;
+  font-size: .9em;
+}
+
+.my-block {
+  display: flex;
+}
+
+.apple {
+  margin-left: 20px;
+}
+
+.google {
+  font-size: 1em;
+}
+
+@media only screen and (max-width: 768px) {
+  .common {
+    display: block;
+    text-align: center;
+  }
+
+  .icons {
+    justify-content: center;
+    margin: 15px;
+  }
+
+  .iconsApp {
+  margin: 20px auto;
+  }
+
+  .my-block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .download {
+    width: 100%;
+    padding: 10px 30px;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .downFooter {
+    text-align: center;
+  }
+
+  .facebook, .vk, .instagram, .apple, .google {
+    margin: 10px;
+  }
+  .my-block {
+    text-align: center;
+    margin: auto;
+  }
+
+  .iconsApp {
+    margin-top: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .copy {
+    margin: auto;
+    text-align: center;
+    font-size: .9em;
+  }
+
+  .icons {
+    margin: 20px 0 10px 70px;
+  }
+
+  .my-block {
+    display: block;
+  }
+
+  .download {
+    margin: 15px 0 0 20px;
+    text-align: center;
+  }
+}

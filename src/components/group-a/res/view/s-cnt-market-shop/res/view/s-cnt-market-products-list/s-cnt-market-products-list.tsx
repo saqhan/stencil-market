@@ -21,7 +21,7 @@ export class SCntMarketProductsList implements ComponentInterface {
   render() {
     return (
       <div class="products-list">
-        <div class="container">
+        <div class="main-container">
           <div class="products-list-row">
             <ProductsList array={this.productsList}></ProductsList>
           </div>

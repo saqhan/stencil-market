@@ -1,7 +1,7 @@
 .common {
   cursor: pointer;
   display: flex;
-  margin: 15px 1%;
+  margin: 15px 3px;
   position: relative;
   bottom: 55px;
   right: 10px;
@@ -51,10 +51,26 @@
   font-size: 14px
 }
 
+@media only screen and (max-width: 768px) {
+  .common {
+    width: 328px;
+    height: 110px;
+    margin: 15px 12px;
+  }
+}
+
 
 @media only screen and (max-width: 400px) {
   .common {
     margin-left: 20px;
     width: 350px;
+  }
+}
+
+
+@media only screen and (max-width: 320px) {
+  .common {
+    margin: 15px 20px 3px 10px;
+    max-width: 288px;
   }
 }
