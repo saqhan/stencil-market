@@ -2,29 +2,45 @@
   margin: auto;
   width: 1245px;
   background-color: #f7f8fa;
-  border-radius: 10px;
+  border-radius: 24px;
   padding-bottom: 60px;
 }
 
 .title {
-  margin-top: 70px;
+  margin: 70px 0 30px 0;
   text-align: center;
   font-weight: 600;
   font-size: 34px;
-  margin-bottom: 30px;
-  line-height: .2;
+  line-height: 1.12;
 }
 
-
+@media only screen and (max-width: 768px) {
+  .offer {
+    max-width: 684px;
+    height: 517px;
+  }
+}
 
 @media only screen and (max-width: 400px) {
   .offer {
     max-width: 370px;
-    height: 900px;
+    height: 940px;
+  }
+
+  .offerTitle {
+    text-align: left;
+    padding-top: 40px;
   }
 
   .title {
-    font-size: 24px;
-    line-height: .8;
+    margin-top: 0;
+    font-size: 26px;
+    line-height: 1.33;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .offer {
+    max-width: 288px;
   }
 }

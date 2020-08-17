@@ -406,51 +406,78 @@ export const forOffer = [
   {
     id: 1,
     icon: "fas fa-truck",
-    text: "Доставим день в день,\n" + "\n" + "в удобное для вас\n" + "\n" + " время",
+    text:
+      "Доставим день в день,\n" +
+      "\n" +
+      "в удобное для вас\n" +
+      "\n" +
+      " время",
   },
   {
     id: 2,
     icon: "fas fa-dolly",
-    text: "Привезём тяжелые\n" + "\n" + " сумки прямо до вашей\n" + "\n" + " двери",
+    text:
+      "Привезём тяжелые\n" + "\n" + " сумки прямо до вашей\n" + "\n" + " двери",
   },
   {
     id: 3,
     icon: "fas fa-gifts",
-    text: "Выберем лучшее\n" + "\n" + " с полок магазинов,\n" + "\n" + " как для себя",
+    text:
+      "Выберем лучшее\n" +
+      "\n" +
+      " с полок магазинов,\n" +
+      "\n" +
+      " как для себя",
   },
   {
     id: 4,
     icon: "fas fa-tags",
-    text: "Скидки и акции наших\n" + "\n" + " партнёров на 2 000\n" + "\n" + " товаров",
+    text:
+      "Скидки и акции наших\n" +
+      "\n" +
+      " партнёров на 2 000\n" +
+      "\n" +
+      " товаров",
   },
 ];
 
 export const offerTitleText =
-  "Сохраняйте время, энергию и деньги\n" + "\n" + "для того, что важно именно вам";
+  "Сохраняйте время, энергию и деньги\n" +
+  "\n" +
+  "для того, что важно именно вам";
 
 export const forStatistics = [
   {
     id: 1,
-    text: "**Более 20000 заказов** ежедневно\n"+ "\n"+ "доставляют наши курьеры",
+    text:
+      "**Более 20000 заказов** ежедневно\n" + "\n" + "доставляют наши курьеры",
   },
   {
     id: 2,
-    text: "**400 тонн товаров** мы поднимаем\n"+ "\n" + "в дома клиентов каждый день",
+    text:
+      "**400 тонн товаров** мы поднимаем\n" +
+      "\n" +
+      "в дома клиентов каждый день",
   },
   {
     id: 3,
-    text: "Мы стали незаменимым помощником\n"+ "\n"+ "для** 500 тысяч семей** по всей России за 7 лет",
+    text:
+      "Мы стали незаменимым помощником\n" +
+      "\n" +
+      "для** 500 тысяч семей** по всей России за 7 лет",
   },
   {
     id: 4,
-    text: "**Более 10000 компаний** доверяют нам\n"+ "\n"+ "закупку продуктов и товаров для офиса",
-  }
+    text:
+      "**Более 10000 компаний** доверяют нам\n" +
+      "\n" +
+      "закупку продуктов и товаров для офиса",
+  },
 ];
 
 export const forDelivery = [
   {
-    image: "https://via.placeholder.com/1245x505?text=Text",
-    title: "Доставляем\n" + "\n" + "в 115 городах России",
+    id: 1,
     nameCityMoscow: "Москва",
     nameCityAbakan: "Абакан",
     nameCityAnadyr: "Анадырь",
@@ -464,6 +491,69 @@ export const forDelivery = [
     nameCityBelgorod: "Белгород",
     nameCityBiysk: "Бийск",
     button: "Показать все",
+  },
+];
+
+export const deliveryImage = "https://via.placeholder.com/1245x505?text=Text";
+
+export const deliveryTitleText = "Доставляем\n" + "\n" + "**в 115 городах** России";
+
+export const forChoice = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/360x360?text=Text",
+    number: "1",
+    text:
+      "**Выберите магазин и положите**\n" +
+      "\n" +
+      "**в корзину нужные товары,**\n" +
+      "\n" +
+      "выберите удобное время\n" +
+      "\n" +
+      "доставки заказа",
+  },
+];
+
+export const forSpecialist = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/360x360?text=Text",
+    number: "2",
+    text:
+      "**Специалист по закупкам**\n" +
+      "\n" +
+      "**соберет** самые свежие продукты\n" +
+      "\n" +
+      "прямо с полок магазина",
+  },
+];
+
+export const forCourier = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/360x360?text=Text",
+    number: "3",
+    text:
+      "**Курьер привезет продукты**\n" +
+      "\n" +
+      "через несколько часов, а вы\n" +
+      "\n" +
+      "можете заняться своими делами",
+  },
+];
+
+export const choiceTitleText = "СберМаркет сходит в магазин вместо вас";
+
+export const forApp = [
+  {
+    id: 1,
+    image: "https://via.placeholder.com/365x368?text=Text",
+    title:
+      "Скачивайте наше удобное приложение\n" +
+      "\n" +
+      "в Google Play или App Store",
+    googlePlayButton: "Google Play",
+    appStoreButton: "AppStore",
   },
 ];
 
@@ -577,7 +667,7 @@ export const productsSliderCards = [
     oldPrice: "889.00",
     currency: "₽",
     desc: "Сыр полутвердый Ламбер 50% ~ 1 кг бзмж",
-    weight: "1 кг"
+    weight: "1 кг",
   },
   {
     id: 2,
@@ -585,7 +675,7 @@ export const productsSliderCards = [
     price: "63.40",
     currency: "₽",
     desc: "Пиво безалкогольное Heineken пастеризованное",
-    weight: "467.7 г"
+    weight: "467.7 г",
   },
   {
     id: 3,
@@ -593,7 +683,7 @@ export const productsSliderCards = [
     price: "34.99",
     currency: "₽",
     desc: "Сахар-песок Aro 1 кг",
-    weight: "1 кг"
+    weight: "1 кг",
   },
   {
     id: 4,
@@ -602,7 +692,7 @@ export const productsSliderCards = [
     oldPrice: "166.00",
     currency: "₽",
     desc: "Сыр Сиртаки Classic для греческого салата 35% 330 ...",
-    weight: "330 г"
+    weight: "330 г",
   },
   {
     id: 5,
@@ -610,7 +700,7 @@ export const productsSliderCards = [
     price: "49.90",
     currency: "₽",
     desc: "Кабачки грунтовые",
-    weight: "1 кг"
+    weight: "1 кг",
   },
   {
     id: 6,
@@ -619,7 +709,7 @@ export const productsSliderCards = [
     oldPrice: "184.00",
     currency: "₽",
     desc: "Сыр полутвердый Arla Natura Сливочный 45% 200 г бз ...",
-    weight: "1 кг"
+    weight: "1 кг",
   },
   {
     id: 7,
@@ -627,7 +717,7 @@ export const productsSliderCards = [
     price: "21.90",
     currency: "₽",
     desc: "Капуста белокочанная ранняя",
-    weight: "1 кг"
+    weight: "1 кг",
   },
   {
     id: 8,
@@ -636,7 +726,7 @@ export const productsSliderCards = [
     oldPrice: "74.89 ",
     currency: "₽",
     desc: "Молоко Белый Город ультрапастеризованное 3,2% 1 л ...",
-    weight: "1 л"
+    weight: "1 л",
   },
   {
     id: 9,
@@ -644,7 +734,7 @@ export const productsSliderCards = [
     price: "24.90",
     currency: "₽",
     desc: "Лук репчатый",
-    weight: "1 кг"
+    weight: "1 кг",
   },
   {
     id: 10,
@@ -653,13 +743,56 @@ export const productsSliderCards = [
     oldPrice: "129.90",
     currency: "₽",
     desc: "Помидоры сливовидные",
-    weight: "1 кг"
+    weight: "1 кг",
   },
 ];
 
 export const productsSliderTitle = "Популярные товары";
 
-export const recentlyWatchedTitle = "Вы недавно смотрели"
+export const footerMenu = [
+  {
+    title: "СберМаркет",
+    items: [
+      "О Компании",
+      "Контакты",
+      "Вакансии",
+      "Документы",
+      "Стать партнером",
+    ]
+  },
+  {
+    title: "Помощь покупателю",
+    items: [
+      "Как мы работаем",
+      "Зоны доставки",
+      "Доставка и оплата",
+      "Помощь",
+    ]
+  }
+]
+
+export const logoFooter = "https://via.placeholder.com/220x40?img=logo";
+
+export const forUpFooterForm = {
+    number: "+7 800 222-11-00",
+    time: "Круглосуточно",
+    input: "Форма обратной связи",
+    text: "Пишите нам свои вопросы, комментарии и предложения",
+  };
+
+export const forDownFooter = {
+    copyright: "Copyright 2013 —2020",
+    company: 'ООО "Инстамарт Сервис"',
+    download: "Скачайте наше удобное приложение в Google Play и App Store",
+  };
+
+export const forFooterInfo = [
+    "Политика возврата",
+    "Обработка персональных данных",
+    "Официальное уведомление",
+  ];
+
+export const recentlyWatchedTitle = "Вы недавно смотрели";
 
 export const productsList = [
   {
@@ -675,7 +808,8 @@ export const productsList = [
         oldPrice: "347,56",
         discount: "-14%",
         disDate: "до 19.08",
-        desc: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи",
+        desc:
+          "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи",
         weight: "200 мл",
         currency: "₽",
       },
@@ -683,7 +817,8 @@ export const productsList = [
         id: 2,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "279,00",
-        desc: "Бальзам L’Oreal Paris Elseve Длина мечты для длинных поврежденных волос",
+        desc:
+          "Бальзам L’Oreal Paris Elseve Длина мечты для длинных поврежденных волос",
         weight: "1 шт",
         currency: "₽",
       },
@@ -691,7 +826,8 @@ export const productsList = [
         id: 3,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "361,00",
-        desc: "Экспресс-Кондиционер L’Oreal Paris Elseve Полное Восстановление 5 двухфазный",
+        desc:
+          "Экспресс-Кондиционер L’Oreal Paris Elseve Полное Восстановление 5 двухфазный",
         weight: "200 мл",
         currency: "₽",
       },
@@ -699,7 +835,8 @@ export const productsList = [
         id: 4,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "315,00",
-        desc: "Стойкая крем-краска для волос L'Oreal Excellence светло-русый пепельный оттенок 8.1",
+        desc:
+          "Стойкая крем-краска для волос L'Oreal Excellence светло-русый пепельный оттенок 8.1",
         weight: "1 шт",
         currency: "₽",
       },
@@ -707,7 +844,8 @@ export const productsList = [
         id: 5,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "265,00",
-        desc: "Шампунь L’Oreal Paris Elseve Роскошь 6 масел питательный для всех типов волос 400 мл",
+        desc:
+          "Шампунь L’Oreal Paris Elseve Роскошь 6 масел питательный для всех типов волос 400 мл",
         weight: "400 мл",
         currency: "₽",
       },
@@ -715,7 +853,8 @@ export const productsList = [
         id: 6,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "261,02",
-        desc: "Очищающий тоник для лица L'Oreal Paris Бесконечная Свежесть для нормальной и смешанной кожи с экстрактами Розы и Лотоса 200 мл",
+        desc:
+          "Очищающий тоник для лица L'Oreal Paris Бесконечная Свежесть для нормальной и смешанной кожи с экстрактами Розы и Лотоса 200 мл",
         weight: "200 мл",
         currency: "₽",
       },
@@ -726,11 +865,12 @@ export const productsList = [
         oldPrice: "334,96",
         discount: "-14%",
         disDate: "до 19.08",
-        desc: "Гель для бритья L'Oreal Paris Men Expert Sensitive для чувствительной кожи 200 мл",
+        desc:
+          "Гель для бритья L'Oreal Paris Men Expert Sensitive для чувствительной кожи 200 мл",
         weight: "200 мл",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -746,7 +886,7 @@ export const productsList = [
         weight: "0,5 л x 12",
         multipack: {
           amount: "12",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
@@ -804,7 +944,7 @@ export const productsList = [
         weight: "1 кг",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -820,7 +960,7 @@ export const productsList = [
         weight: "1,5 кг x 6",
         multipack: {
           amount: "6",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
@@ -832,7 +972,7 @@ export const productsList = [
         weight: "500 г x 12",
         multipack: {
           amount: "6",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
@@ -879,7 +1019,7 @@ export const productsList = [
         weight: "5 л",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -952,7 +1092,7 @@ export const productsList = [
         weight: "225 г",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -1004,7 +1144,8 @@ export const productsList = [
         id: 28,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "191,00",
-        desc: "Сыр мягкий Milkana GrandBlu сливочный с голубой плесенью 56% 100 г бзмж",
+        desc:
+          "Сыр мягкий Milkana GrandBlu сливочный с голубой плесенью 56% 100 г бзмж",
         weight: "100 г",
         currency: "₽",
       },
@@ -1016,7 +1157,7 @@ export const productsList = [
         weight: "125 г",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -1042,7 +1183,8 @@ export const productsList = [
       },
       {
         id: 32,
-        img: "https://sbermarket.ru/spree/products/60230/small/65988.jpg?1587399619",
+        img:
+          "https://sbermarket.ru/spree/products/60230/small/65988.jpg?1587399619",
         desc: "Кабачки грунтовые",
         weight: "Нет в наличии",
         currency: "₽",
@@ -1078,7 +1220,7 @@ export const productsList = [
         weight: "1 кг",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -1094,7 +1236,7 @@ export const productsList = [
         weight: "0,5 л x 12",
         multipack: {
           amount: "12",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
@@ -1106,7 +1248,7 @@ export const productsList = [
         weight: "1 кг x 6",
         multipack: {
           amount: "6",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
@@ -1118,7 +1260,7 @@ export const productsList = [
         weight: "0,25 л x 8",
         multipack: {
           amount: "8",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
@@ -1130,7 +1272,7 @@ export const productsList = [
         weight: "1 шт x 12",
         multipack: {
           amount: "12",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
@@ -1164,11 +1306,11 @@ export const productsList = [
         weight: "1 кг x 6",
         multipack: {
           amount: "6",
-          weight: "шт."
+          weight: "шт.",
         },
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -1207,7 +1349,8 @@ export const productsList = [
         id: 40,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "139,00",
-        desc: "Молоко Село Зеленое отборное ультрапастеризованное 2,8 - 5,5% 500 мл бзмж",
+        desc:
+          "Молоко Село Зеленое отборное ультрапастеризованное 2,8 - 5,5% 500 мл бзмж",
         weight: "0,5 л",
         currency: "₽",
       },
@@ -1238,7 +1381,7 @@ export const productsList = [
         weight: "1 шт",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -1305,7 +1448,7 @@ export const productsList = [
         weight: "400 г",
         currency: "₽",
       },
-    ]
+    ],
   },
   {
     header: {
@@ -1352,7 +1495,8 @@ export const productsList = [
         id: 55,
         img: "https://via.placeholder.com/100x100?img=Img",
         price: "117,00",
-        desc: "Конфеты КДВ Нильс карамельная жевательная с фруктово-ягодной начинкой",
+        desc:
+          "Конфеты КДВ Нильс карамельная жевательная с фруктово-ягодной начинкой",
         weight: "500 г",
         currency: "₽",
       },
@@ -1372,55 +1516,9 @@ export const productsList = [
         weight: "360 г",
         currency: "₽",
       },
-    ]
+    ],
   },
 ];
-
-export const forСhoice = [
-  {
-    id: 1,
-    image: "https://via.placeholder.com/360x360?text=Text",
-    number: "1",
-    text:
-      "Выберите магазин и положите\n" +
-      "\n" +
-      "в корзину нужные товары,\n" +
-      "\n" +
-      "выберите удобное время\n" +
-      "\n" +
-      "доставки заказа",
-  },
-];
-
-export const forSpecialist = [
-  {
-    id: 1,
-    image: "https://via.placeholder.com/360x360?text=Text",
-    number: "2",
-    text:
-      "Специалист по закупкам\n" +
-      "\n" +
-      "соберет самые свежие продукты\n" +
-      "\n" +
-      "прямо с полок магазина",
-  },
-];
-
-export const forCourier = [
-  {
-    id: 1,
-    image: "https://via.placeholder.com/360x360?text=Text",
-    number: "3",
-    text:
-      "Курьер привезет продукты\n" +
-      "\n" +
-      "через несколько часов, а вы\n" +
-      "\n" +
-      "можете заняться своими делами",
-  },
-];
-
-export const choiceTitleText = "СберМаркет сходит в магазин вместо вас";
 
 export const recentlyWatchedProducts = [
   {
@@ -1515,4 +1613,5 @@ export const recentlyWatchedProducts = [
     currency: "₽",
     weight: "125 г",
   },
-  ]
+];
+

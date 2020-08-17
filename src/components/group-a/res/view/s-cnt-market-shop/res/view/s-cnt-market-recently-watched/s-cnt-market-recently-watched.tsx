@@ -45,7 +45,7 @@ export class SCntMarketRecentlyWatched implements ComponentInterface {
   render() {
     return (
       <div class="recently-watched products">
-        <div class="container">
+        <div class="main-container">
           <div class="products-carousel-title">{this.recentlyWatchedTitle}</div>
           <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
             <RecentlyWatchedSlider

@@ -61,7 +61,7 @@ body {
   border-color: #21a038;
   border-radius: 6px;
   transition: all .3s;
-  top: -35px;
+  top: -29px;
 }
 
 .products .flickity-button {
@@ -78,4 +78,16 @@ body {
 .products .flickity-button-icon {
   width: 10px;
   height: 10px;
+}
+
+.recommended .flickity-prev-next-button {
+  top: -20px;
+}
+
+strong {
+  color: #21a038;
+}
+
+p {
+  margin: 0;
 }

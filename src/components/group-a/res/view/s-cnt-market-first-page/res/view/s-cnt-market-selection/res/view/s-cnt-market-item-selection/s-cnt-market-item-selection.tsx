@@ -11,19 +11,16 @@ export class SCntMarketItemSelection implements ComponentInterface {
   /**
    * Данные для карточек магазинов
    */
-  @Prop() forSelection: any;
-
-  /**
-   * Приём данных из массива для вывода
-   */
-  @Prop() MarketSelectionInterface: MarketSelectionInterface[] = [];
+  @Prop() forSelection: MarketSelectionInterface;
 
   render() {
     return (
       <div class="common">
         <div class="image">
-          <div class="img" style={{ backgroundImage: "url(" + this.forSelection.image + ")" }}>
-          </div>
+          <div
+            class="img"
+            style={{ backgroundImage: "url(" + this.forSelection.image + ")" }}
+          ></div>
         </div>
         <div class="commonText">
           <div class="title">{this.forSelection.title}</div>

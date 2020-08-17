@@ -6,6 +6,7 @@
 
 .info {
   font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .icons {
@@ -34,4 +35,16 @@
 .arrow-right:hover {
   background-color: #117b0a;
   transition: .3s;
+}
+
+.recommended {
+  margin: 0 15px;
+}
+
+.no-gutters {
+  padding-bottom: 30px;
+}
+
+.carousel-cell {
+  margin-right: 10px;
 }
