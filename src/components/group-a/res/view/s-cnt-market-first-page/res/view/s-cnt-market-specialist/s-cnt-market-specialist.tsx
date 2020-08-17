@@ -18,7 +18,7 @@ export class SCntMarketSpecialist implements ComponentInterface {
       <div class="choice">
         <div class="container">
           <div class="row justify-content-center no-gutters">
-            <div class="col-md-4">
+            <div class="col-lg-4 col-md-12">
               <div class="commonImage">
                 <div
                   class="image"
@@ -30,7 +30,7 @@ export class SCntMarketSpecialist implements ComponentInterface {
                 </div>
               </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-lg-5 col-md-12">
               <div
                 class="text"
                 innerHTML={markdown.toHTML(this.forSpecialist[0].text)}

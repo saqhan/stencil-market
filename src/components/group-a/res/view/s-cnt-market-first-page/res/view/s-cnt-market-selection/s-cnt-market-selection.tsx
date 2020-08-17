@@ -58,7 +58,7 @@ export class SCntMarketSelection implements ComponentInterface {
 const GetSelection = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="col-md-4">
+      <div class="col-lg-4 col-md-6">
         <s-cnt-market-item-selection
           forSelection={item}
         ></s-cnt-market-item-selection>

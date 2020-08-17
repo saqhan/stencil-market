@@ -14,8 +14,9 @@
 }
 
 .commonButton {
-  margin: 20px 200px 0 0;
-  padding-right: 180px;
+  margin: 30px 200px 0 0;
+  padding-right: 185px;
+  display: flex;
 }
 
 .image {
@@ -31,7 +32,7 @@
   text-align: left;
   line-height: 1.12;
   color: #fff;
-  font-size: 34px;
+  font-size: 37px;
   font-weight: 600;
 }
 
@@ -55,32 +56,113 @@
   transition-timing-function: ease-in-out;
 }
 
+.fa-google-play {
+  font-size: 17px;
+}
+
+.fa-apple {
+  font-size: 21px;
+}
+
 .fab  {
   color: #21a038;
-  font-size: 21px;
   margin: 10px 10px 0 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .app {
+    max-width: 684px;
+    height: 242px;
+    padding-top: 0;
+  }
+
+  .image {
+    left: 17%;
+    top: 10px;
+    width: 230px;
+    height: 232px;
+  }
+
+  .commonButton {
+    margin: 20px 10px 0 0;
+    padding: 0;
+  }
+
+  .title {
+    margin-top: 50px;
+    text-align: left;
+    line-height: 1.5;
+    font-size: 24px
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 154px;
+  }
 }
 
 
 @media only screen and (max-width: 400px) {
-  .row {
-    direction: rtl;
-  }
-
   .app {
-    max-width: 400px;
-    height: 630px;
+    max-width: 368px;
+    height: 639px;
+    padding-top: 0;
   }
 
   .image {
-    top: 6px;
+    left: 17%;
+    top: 45px;
     width: 280px;
     height: 282px;
   }
 
   .commonButton {
-    margin: 0;
+    display: block;
+    margin: 20px -50px 0 0;
     padding: 0;
+  }
+
+  .title {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 20px
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 308px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .app {
+    max-width: 288px;
+    height: 580px;
+  }
+
+  .common {
+    margin-right: -60px;
+    width: 250px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  .image {
+    left: 35%;
+    width: 220px;
+    height: 200px;
+  }
+
+  .commonButton {
+    margin: 19px -60px 0 0;
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 248px;
   }
 }
 

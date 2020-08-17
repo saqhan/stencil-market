@@ -15,8 +15,9 @@
 .title {
   font-weight: 600;
   margin-left: 25px;
-  line-height: .17;
+  line-height: 1.33;
   font-size: 35px;
+  margin-bottom: 15px;
 }
 
 .listOfCities {
@@ -56,6 +57,29 @@
   color: #333536;
 }
 
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-top: 0;
+  }
+
+  .deliveryImage {
+    max-width: 684px;
+    height: 441px;
+  }
+
+  .title {
+    margin-top: 30px;
+  }
+
+  .list {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    margin-top: 0;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .deliveryImage {
     width: 365px;
@@ -63,16 +87,14 @@
   }
 
   .title {
-    margin-top: -30px;
-    margin-bottom: 110px;
+    margin: -30px 0 110px 0;
     text-align: center;
-    line-height: 0.7;
     font-size: 24px;
   }
 
   .list {
     width: 170px;
-    margin-top: 145px;
+    margin-top: 140px;
   }
 
   .city {
@@ -83,5 +105,24 @@
     margin: 0 0 0 5px;
     width: 326px;
     height: 48px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .deliveryImage {
+    max-width: 288px;
+    height: 600px;
+  }
+
+  .btn {
+    max-width: 246px;
+  }
+
+  .list {
+    width: 130px;
+  }
+
+  .city {
+    margin-left: -20px;
   }
 }

@@ -83,3 +83,11 @@ body {
 .recommended .flickity-prev-next-button {
   top: -20px;
 }
+
+strong {
+  color: #21a038;
+}
+
+p {
+  margin: 0;
+}
