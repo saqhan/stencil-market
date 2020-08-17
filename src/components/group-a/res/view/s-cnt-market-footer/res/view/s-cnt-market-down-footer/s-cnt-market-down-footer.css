@@ -8,7 +8,7 @@
 }
 
 .copy {
-  margin: 0 0 0 10px;
+  /*margin: 0 0 0 10px;*/
 }
 
 .copyright {
@@ -27,7 +27,7 @@
 
 .icons {
   display: flex;
-  margin-left: 120px;
+  /*margin-left: 120px;*/
 }
 
 .facebook, .vk, .instagram, .apple, .google {
