@@ -64,19 +64,49 @@
 @media only screen and (max-width: 768px) {
   .common {
     display: block;
+    text-align: center;
   }
 
   .icons {
-    margin: 20px 0 0 10px;
+    justify-content: center;
+    margin: 15px;
   }
 
   .iconsApp {
-    margin-top: 20px;
+  margin: 20px auto;
   }
 
   .my-block {
-    display: block;
-    margin-left: 90px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .download {
+    width: 100%;
+    padding: 10px 30px;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .downFooter {
+    text-align: center;
+  }
+
+  .facebook, .vk, .instagram, .apple, .google {
+    margin: 10px;
+  }
+  .my-block {
+    text-align: center;
+    margin: auto;
+  }
+
+  .iconsApp {
+    margin-top: 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 }
 
