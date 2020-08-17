@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
 import {TopBarModalDeliveryInterface} from "./res/interface/common.interface";
 
 @Component({
@@ -13,6 +13,27 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
    */
   @Prop() deliveryData: TopBarModalDeliveryInterface;
 
+  /**
+   * Props значение для принятия и вывода данных
+   */
+  @State() rezBlock;
+
+  /**
+   * ref для
+   * */
+  searchInput: HTMLInputElement;
+
+  /**
+   * ref для
+   * */
+  addressItems: HTMLElement;
+
+  componentDidLoad() {
+    this.searchInput.addEventListener("input", () => this.searchAddress());
+    this.searchInput.addEventListener("focus", () => this.rezBlock = true);
+    this.searchInput.addEventListener("blur", () => this.rezBlock = false);
+  }
+
   render() {
     return (
       <div class="block-entering-delivery-address">
@@ -21,7 +42,14 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
         </div>
         <div class="map-block-wrapper">
           <div class="map-input-wrap">
-            <input class="map-input-wrap-inner" type="text" placeholder="Введите текст"/>
+            <input class="map-input-wrap-inner" type="search" placeholder="Введите текст"
+                   ref={(el) => this.searchInput = el}
+            />
+            <div class='coincidence-unit-wrapper'>
+              <div class='coincidence-unit-container'>
+                {this.rezBlock ? this.AddressForSelected() : ''}
+              </div>
+            </div>
             <div class="map-input-icon">
               <i class={this.deliveryData.searchIcon}></i>
             </div>
@@ -41,4 +69,55 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
     );
   }
 
+  /**
+   * функция для проверки совпадения паролей
+   * */
+  public searchAddress() {
+    let val = this.searchInput.value.trim();
+    if (val != '') {
+      this.AddressItems.forEach(function (elem) {
+        if (elem.innerText.toLowerCase().search(val.toLowerCase()) == -1) {
+          elem.classList.add('hide');
+          elem.innerText = elem.innerText;
+        } else {
+          elem.classList.remove('hide');
+          // let str = elem.innerText;
+          // elem.innerHTML = insertMark(str, elem.innerText.search(val), val.length)
+        }
+      })
+    } else {
+      this.AddressItems.forEach(function (elem) {
+        elem.classList.add('hide');
+        elem.innerHTML = elem.innerText;
+      })
+    }
+
+    // function insertMark(string, pos, len) {
+    //   return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
+    // }
+  }
+
+
+
+  /**
+   * перменная для создания массива из адресов
+   **/
+  public AddressItems = [];
+
+  /**
+   *
+   **/
+  public AddressForSelected() {
+    return this.deliveryData.cityForSelectedDelivery.map((i) => {
+      return i.storeAddress.map((item) => {
+        return (
+
+          <div class="coincidence-unit-item hide" ref={(el) => this.AddressItems.push(el)}>
+            {item.storeAddress}
+          </div>
+
+        );
+      })
+    })
+  }
 }

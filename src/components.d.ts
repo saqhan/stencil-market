@@ -155,7 +155,14 @@ export namespace Components {
         "registration": boolean;
     }
     interface SCntMarketLoginForm {
+        /**
+          * объект данных для компонента входа
+         */
         "login": any;
+        /**
+          * массив с данными пользователей
+         */
+        "users": any;
     }
     interface SCntMarketModalWindow {
     }
@@ -260,7 +267,7 @@ export namespace Components {
          */
         "reg": any;
         /**
-          * объект данных для компонента регистрации
+          * массив с данными пользователей
          */
         "users": any;
     }
@@ -804,7 +811,14 @@ declare namespace LocalJSX {
         "registration"?: boolean;
     }
     interface SCntMarketLoginForm {
+        /**
+          * объект данных для компонента входа
+         */
         "login"?: any;
+        /**
+          * массив с данными пользователей
+         */
+        "users"?: any;
     }
     interface SCntMarketModalWindow {
         /**
@@ -949,7 +963,7 @@ declare namespace LocalJSX {
          */
         "reg"?: any;
         /**
-          * объект данных для компонента регистрации
+          * массив с данными пользователей
          */
         "users"?: any;
     }

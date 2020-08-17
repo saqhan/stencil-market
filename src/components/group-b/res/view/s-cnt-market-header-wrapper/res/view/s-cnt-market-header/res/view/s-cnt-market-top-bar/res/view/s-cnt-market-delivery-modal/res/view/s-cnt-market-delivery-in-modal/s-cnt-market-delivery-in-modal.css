@@ -2,6 +2,10 @@
   outline: none;
 }
 
+.hide{
+  display: none;
+}
+
 .block-entering-delivery-address {
   width: 100%;
   background-color: #f7f7f7;
@@ -43,12 +47,48 @@
   font-weight: 500;
 }
 
-.map-input-wrap-inner:focus{
+.map-input-wrap-inner:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(33, 160, 56, .3);
 }
 
-.map-input-icon{
+.coincidence-unit-wrapper {
+  z-index: 900;
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  color: #333;
+  top: calc(100% + 5px);
+  left: 20px;
+  right: 0;
+  max-height: 400px;
+  max-width: 520px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .25);
+}
+
+.coincidence-unit-container {
+  position: relative;
+  flex: 1 0 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.coincidence-unit-item {
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.coincidence-unit-item:hover {
+  background-color: #f3f4f7;
+  outline: none;
+}
+
+.map-input-icon {
   position: absolute;
   display: flex;
   align-items: center;
@@ -102,20 +142,20 @@
 }
 
 @media (max-width: 400px) {
-  .map-input-icon{
+  .map-input-icon {
     left: 27px;
   }
 
-  .map-input-wrap{
+  .map-input-wrap {
     margin: 15px 0 20px 0;
     padding: 0 14px;
   }
 
-  .map-input-wrap-inner{
+  .map-input-wrap-inner {
     border-radius: 7px 0 0 7px;
   }
 
-  .map-addres-save-btn{
+  .map-addres-save-btn {
     margin: 0;
     border-radius: 0 7px 7px 0;
   }
