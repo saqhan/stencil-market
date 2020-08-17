@@ -17,7 +17,7 @@ export class GroupA implements ComponentInterface {
     return (
       <div>
         {/*<s-cnt-market-modal-window />*/}
-        {/*<s-cnt-market-first-page />*/}
+        <s-cnt-market-first-page />
         {/*<s-cnt-market-shop/>*/}
         <s-cnt-market-footer
           logoFooter={logoFooter}

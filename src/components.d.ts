@@ -202,7 +202,7 @@ export namespace Components {
           * Данные для Recommended
          */
         "getRecommended": MarketRecommendedInterface[];
-        "info": string;
+        "info": any;
     }
     interface SCntMarketSelection {
         /**
@@ -746,7 +746,7 @@ declare namespace LocalJSX {
           * Данные для Recommended
          */
         "getRecommended"?: MarketRecommendedInterface[];
-        "info"?: string;
+        "info"?: any;
     }
     interface SCntMarketSelection {
         /**
