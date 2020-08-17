@@ -20,7 +20,8 @@ import {
 })
 export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   private leftMenuTag: any;
-  // private leftMenuContentTag: any;
+  // private leftMenuContentTag: any;053205
+
 
   @Prop() openedLeftMenu: boolean;
 
@@ -64,7 +65,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
           }
           ref={(el) => (this.leftMenuTag = el)}
           onClick={(event) => this.clickOnLeftMenuOverlayHandler(event)}
-        ></div>
+        >
+          {" "}
+        </div>
         <div
           class={
             this.openedLeftMenu
@@ -80,9 +83,11 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                     class="category-menu-close category-menu-close--sbermarket"
                     onClick={() => this.closeLeftMenuHandler()}
                   >
-                    <i class="fas fa-times"></i>
+                    <i class="fas fa-times"> </i>
                   </button>
-                  <div class="category-menu-logo category-menu-logo--sbermarket"></div>
+                  <div class="category-menu-logo category-menu-logo--sbermarket">
+                    {" "}
+                  </div>
                 </div>
                 <div class="category-menu-content">
                   <ul
@@ -114,7 +119,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                                       style={{
                                         backgroundImage: `url(${item.img})`,
                                       }}
-                                    ></div>
+                                    >
+                                      {" "}
+                                    </div>
                                     <div class="category-menu-item-title">
                                       {item.title}
                                     </div>
@@ -186,23 +193,27 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
             </div>
           </a>
           {item.subcategories.map((subcategory) => {
-            return (<div class="category-menu-item-dropdown ">
-              <ul class="category-menu-item-dropdown-list">
-                <li class="category-menu-item">
-                  <a class="category-menu-item-link-dropdown">
-                    <div class="category-menu-item-content">
-                      <div
-                        class="category-menu-item-icon"
-                        style={{ backgroundImage: `url(${subcategory.img})` }}
-                      >
-                        {" "}
+            return (
+              <div class="category-menu-item-dropdown ">
+                <ul class="category-menu-item-dropdown-list">
+                  <li class="category-menu-item">
+                    <a class="category-menu-item-link-dropdown">
+                      <div class="category-menu-item-content">
+                        <div
+                          class="category-menu-item-icon"
+                          style={{ backgroundImage: `url(${subcategory.img})` }}
+                        >
+                          {" "}
+                        </div>
+                        <div class="category-menu-item-title">
+                          {subcategory.title}{" "}
+                        </div>
                       </div>
-                      <div class="category-menu-item-title">{subcategory.title} </div>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>);
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            );
           })}
         </li>
       );
