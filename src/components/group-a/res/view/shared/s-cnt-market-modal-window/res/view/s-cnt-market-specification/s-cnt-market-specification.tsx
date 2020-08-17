@@ -32,7 +32,8 @@ export class SCntMarketSpecification implements ComponentInterface {
             <div class="col-sm-6">
               <div class="my-spec">
                 <div class="block-value">
-                  <span class="value">{this.getSpecification.value}</span>   {this.getSpecification.weight}
+                  <span class="value">{this.getSpecification.value}</span>&nbsp;
+                  {this.getSpecification.weight}
                 </div>
                 <div class="line-item-wrapper">
                   <div class="line-item">
