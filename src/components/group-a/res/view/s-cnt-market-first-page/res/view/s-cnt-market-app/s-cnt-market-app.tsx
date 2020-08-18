@@ -11,7 +11,6 @@ export class SCntMarketApp implements ComponentInterface {
   /**
    * Данные для компонента app
    */
-
   @Prop() forApp: MarketAppInterface[] = [];
 
   render() {
