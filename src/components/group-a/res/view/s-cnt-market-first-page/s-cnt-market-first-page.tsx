@@ -25,7 +25,7 @@ import {
 export class SCntMarketFirstPage implements ComponentInterface {
   render() {
     return (
-      <div>
+      <main>
         <s-cnt-market-selection
           forSelection={forSelection}
           homePageImage={homePageImage}
@@ -61,7 +61,7 @@ export class SCntMarketFirstPage implements ComponentInterface {
         </s-cnt-market-courier>
         <s-cnt-market-app forApp={forApp}>
         </s-cnt-market-app>
-      </div>
+      </main>
     );
   }
 }

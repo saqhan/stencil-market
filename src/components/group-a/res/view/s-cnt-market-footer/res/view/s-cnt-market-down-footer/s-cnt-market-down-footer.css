@@ -12,12 +12,12 @@
 }
 
 .copyright {
-  opacity: .6;
+  opacity: 0.6;
   font-weight: 600;
 }
 
 .company {
-  opacity: .6;
+  opacity: 0.6;
   margin-top: 4px;
 }
 
@@ -30,7 +30,11 @@
   /*margin-left: 120px;*/
 }
 
-.facebook, .vk, .instagram, .apple, .google {
+.facebook,
+.vk,
+.instagram,
+.apple,
+.google {
   width: 35px;
   height: 35px;
   line-height: 35px;
@@ -46,7 +50,7 @@
 .download {
   width: 250px;
   color: gray;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .my-block {
@@ -60,7 +64,6 @@
 .google {
   font-size: 1em;
 }
-
 
 @media only screen and (max-width: 992px) {
   .copy {
@@ -93,7 +96,7 @@
   }
 
   .iconsApp {
-  margin: 20px auto;
+    margin: 20px auto;
   }
 
   .my-block {
@@ -114,7 +117,11 @@
     text-align: center;
   }
 
-  .facebook, .vk, .instagram, .apple, .google {
+  .facebook,
+  .vk,
+  .instagram,
+  .apple,
+  .google {
     margin: 10px;
   }
   .my-block {
@@ -123,7 +130,7 @@
   }
 
   .iconsApp {
-    margin-top: 0px;
+    margin-top: 0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -134,7 +141,7 @@
   .copy {
     margin: auto;
     text-align: center;
-    font-size: .9em;
+    font-size: 0.9em;
   }
 
   .icons {
