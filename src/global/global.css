@@ -91,3 +91,7 @@ strong {
 p {
   margin: 0;
 }
+
+main {
+  box-sizing: border-box;
+}

@@ -17,7 +17,7 @@ export class SCntMarketStatistics implements ComponentInterface {
     return (
       <div class="statistics">
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-around">
             <GetStatistics arrayStatistics={this.forStatistics}></GetStatistics>
           </div>
         </div>
@@ -29,7 +29,7 @@ export class SCntMarketStatistics implements ComponentInterface {
 const GetStatistics = (props) => {
   return props.arrayStatistics.map((item) => {
     return (
-      <div class="col-lg-6 col-md-12">
+      <div class="col-lg-5 col-md-12">
         <s-cnt-market-item-statistics
           forStatistics={item}
         ></s-cnt-market-item-statistics>

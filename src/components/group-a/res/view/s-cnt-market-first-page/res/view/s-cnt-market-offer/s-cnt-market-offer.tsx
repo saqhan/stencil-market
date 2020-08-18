@@ -33,8 +33,6 @@ export class SCntMarketOffer implements ComponentInterface {
               </div>
             </div>
           </div>
-        </div>
-        <div class="container">
           <div class="row">
             <GetOffer arrayOffer={this.forOffer}></GetOffer>
           </div>

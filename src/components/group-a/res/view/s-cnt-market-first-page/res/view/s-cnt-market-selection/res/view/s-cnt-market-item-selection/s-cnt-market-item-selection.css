@@ -1,15 +1,13 @@
 .common {
   cursor: pointer;
   display: flex;
-  margin: 15px 3px;
+  margin: 15px 1%;
   position: relative;
-  bottom: 55px;
-  right: 10px;
   box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
   border-radius: 12px;
   background-color: #fff;
   padding: 20px 19px;
-  width: 360px;
+  width: 100%;
 }
 .common:hover {
   box-shadow: 0 4px 12px 0 #d0d2d4;
@@ -51,26 +49,33 @@
   font-size: 14px
 }
 
-@media only screen and (max-width: 768px) {
-  .common {
-    width: 328px;
-    height: 110px;
-    margin: 15px 12px;
+@media only screen and (max-width: 575px) {
+  .common:nth-child(n) {
+    margin: 7px 0;
   }
 }
 
 
-@media only screen and (max-width: 400px) {
-  .common {
-    margin-left: 20px;
-    width: 350px;
-  }
-}
+/*@media only screen and (max-width: 768px) {*/
+/*  .common {*/
+/*    width: 328px;*/
+/*    height: 110px;*/
+/*    margin: 15px 12px;*/
+/*  }*/
+/*}*/
 
 
-@media only screen and (max-width: 320px) {
-  .common {
-    margin: 15px 20px 3px 10px;
-    max-width: 288px;
-  }
-}
+/*@media only screen and (max-width: 400px) {*/
+/*  .common {*/
+/*    margin-left: 20px;*/
+/*    width: 350px;*/
+/*  }*/
+/*}*/
+
+
+/*@media only screen and (max-width: 320px) {*/
+/*  .common {*/
+/*    margin: 15px 20px 3px 10px;*/
+/*    max-width: 288px;*/
+/*  }*/
+/*}*/

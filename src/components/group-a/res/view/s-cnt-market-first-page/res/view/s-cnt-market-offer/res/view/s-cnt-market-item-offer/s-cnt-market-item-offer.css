@@ -1,7 +1,12 @@
+.commonOffer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .icons {
   color: #21a038;
   font-size: 50px;
-  margin: 30px 0 0 90px;
 }
 
 .text {
@@ -11,22 +16,20 @@
   line-height: 1.28;
 }
 
-@media only screen and (max-width: 768px) {
-  .icons {
-    padding-top: 20px;
-    margin: auto;
-    text-align: center;
+@media only screen and (max-width: 1119px) {
+  .commonOffer {
+    margin-top: 25px;
   }
 }
 
 
-@media  only screen and (max-width: 400px) {
-  .icons {
-    text-align: center;
-    margin-right: 100px;
-  }
+/*@media  only screen and (max-width: 400px) {*/
+/*  .icons {*/
+/*    text-align: center;*/
+/*    margin-right: 100px;*/
+/*  }*/
 
-  .text {
-    font-size: 18px;
-  }
-}
+/*  .text {*/
+/*    font-size: 18px;*/
+/*  }*/
+/*}*/
