@@ -6,7 +6,7 @@
 .logo {
   width: 220px;
   height: 40px;
-  margin: 0 70px 0 0;
+  margin-bottom: 20px;
 }
 
 .sberMarket, .help {
@@ -49,9 +49,18 @@
     max-width: 768px;
   }
 
+
+}
+
+@media only screen and (max-width: 414px) {
   .my-block {
-    margin: 60px 0 0 -190px;
+      text-align: center;
+      margin: 15px 0px;
   }
+  .my-block:first-child {
+      margin-top: 15px;
+  }
+
 }
 
 @media only screen and (max-width: 320px) {

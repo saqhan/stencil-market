@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@stencil/core": "^1.12.2",
+    "prettier": "2.0.5",
     "rollup-plugin-node-polyfills": "^0.2.1"
   },
   "license": "MIT",
