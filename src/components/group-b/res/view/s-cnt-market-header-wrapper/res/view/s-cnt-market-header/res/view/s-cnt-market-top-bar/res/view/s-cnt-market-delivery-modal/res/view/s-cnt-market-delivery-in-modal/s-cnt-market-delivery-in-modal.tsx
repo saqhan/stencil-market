@@ -81,8 +81,8 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
           elem.innerText = elem.innerText;
         } else {
           elem.classList.remove('hide');
-          // let str = elem.innerText;
-          // elem.innerHTML = insertMark(str, elem.innerText.search(val), val.length)
+          let str = elem.innerText;
+          elem.innerHTML = insertMark(str, elem.innerText.toLowerCase().search(val.toLowerCase()), val.toLowerCase().length)
         }
       })
     } else {
@@ -92,9 +92,9 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
       })
     }
 
-    // function insertMark(string, pos, len) {
-    //   return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
-    // }
+    function insertMark(string, pos, len) {
+      return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
+    }
   }
 
 
