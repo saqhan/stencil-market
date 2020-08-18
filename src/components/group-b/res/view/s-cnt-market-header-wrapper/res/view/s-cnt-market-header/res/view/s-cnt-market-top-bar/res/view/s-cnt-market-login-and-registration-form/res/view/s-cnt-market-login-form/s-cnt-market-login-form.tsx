@@ -42,10 +42,6 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
    */
   logInBtn: HTMLElement;
 
-  componentDidLoad() {
-
-  }
-
   render() {
     return (
       <form class="login-form">
@@ -177,11 +173,11 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   };
 
   /**
-   * функция для проверки валидации написания mail
+   * функция для проверки валидации написания пароль
    * */
   public validatePassword() {
     let reg = /(?=.{6,})/;
-    let password = this.password.value
+    let password = this.password.value;
     if (reg.test(password) == false) {
       this.passwordError.innerHTML = 'Пароль должен быть не менее 6 символов';
       this.password.style.boxShadow = 'inset 0 -2px 0 0 #f36';
@@ -189,12 +185,14 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     } else {
       this.passwordError.innerHTML = '';
       this.password.style.boxShadow = 'none';
-      this.logInBtn.removeAttribute("disabled")
-      this.correctPassword()
-
+      this.logInBtn.removeAttribute("disabled");
+      this.correctPassword();
     }
-  }
+  };
 
+  /**
+   * переменная для присвоения выбранного пользователя
+   * */
   public selectedUser;
 
   /**
@@ -211,17 +209,17 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     if (this.selectedUser.length === 0) {
       this.mailError.innerHTML = 'Пользователя с таким e-mail нет';
       this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.logInBtn.setAttribute("disabled", "disabled")
+      this.logInBtn.setAttribute("disabled", "disabled");
 
       return false;
     } else {
       this.mailError.innerHTML = '';
       this.mail.style.boxShadow = 'none';
-      this.logInBtn.removeAttribute("disabled")
+      this.logInBtn.removeAttribute("disabled");
 
       return true;
     }
-  }
+  };
 
   /**
    * функция для проверки есть ли пользователь с таким майл
@@ -233,52 +231,13 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       if (passValue === pass) {
         this.mailError.innerHTML = '';
         this.mail.style.boxShadow = 'none';
-        this.logInBtn.removeAttribute("disabled")
+        this.logInBtn.removeAttribute("disabled");
       }
     } else {
       this.mailError.innerHTML = 'Пользователя с таким e-mail нет';
       this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.logInBtn.setAttribute("disabled", "disabled")
+      this.logInBtn.setAttribute("disabled", "disabled");
     }
   }
-
-  // public deletecorrectMail(z) {
-  //   //просто черновик
-  //   let mailVal = z
-    // let mailP;
-    // this.users.map((item) => {
-    //   for (let i = item.mail; i === mailVal; i++) {
-    //     if (i === mailVal) {
-    //       this.mailError.innerHTML = '';
-    //       this.mail.style.boxShadow = 'none';
-    //       this.logInBtn.removeAttribute("disabled")
-    //     } else {
-    //       this.mailError.innerHTML = 'Такого пользовтеля нет';
-    //       this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-    //       this.logInBtn.setAttribute("disabled", "disabled")
-    //     }
-    //   }
-    //
-    // })
-
-    // let mails = [];
-    // this.users.map((item) => {
-    //   if (mailVal === item.mail) {
-    //     mails.push(item.mail)
-    //   } else {
-    //     // alert('n')
-    //   }
-
-      // let mail = () => {
-      //   if (mailVal !== '' || this.validateMail() === false) {
-      //     return mailVal
-      //   }
-      // }
-      // console.log(mails.find(() => mail()))
-
-
-    // })
-  //   console.log(this.login.search)
-  // }
 
 }

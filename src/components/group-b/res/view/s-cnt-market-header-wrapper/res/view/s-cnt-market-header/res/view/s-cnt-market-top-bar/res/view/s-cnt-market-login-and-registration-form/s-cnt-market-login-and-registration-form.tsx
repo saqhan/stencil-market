@@ -15,7 +15,7 @@ import {
 })
 export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
-   * boolean значение для вывода/закрытия блока входа и присвоения класса
+   * объект данных для компонента LoginAndRegistrationForm и его подкомпонентов
    */
   @Prop() loginAndRegistration: any;
 

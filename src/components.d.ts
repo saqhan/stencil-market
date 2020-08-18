@@ -196,7 +196,7 @@ export namespace Components {
          */
         "login": boolean;
         /**
-          * boolean значение для вывода/закрытия блока входа и присвоения класса
+          * объект данных для компонента LoginAndRegistrationForm и его подкомпонентов
          */
         "loginAndRegistration": any;
         /**
@@ -961,7 +961,7 @@ declare namespace LocalJSX {
          */
         "login"?: boolean;
         /**
-          * boolean значение для вывода/закрытия блока входа и присвоения класса
+          * объект данных для компонента LoginAndRegistrationForm и его подкомпонентов
          */
         "loginAndRegistration"?: any;
         /**
