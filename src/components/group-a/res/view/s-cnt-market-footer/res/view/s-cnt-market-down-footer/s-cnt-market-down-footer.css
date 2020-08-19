@@ -144,16 +144,16 @@
     font-size: 0.9em;
   }
 
-  .icons {
-    margin: 20px 0 10px 70px;
-  }
+  /*.icons {*/
+  /*  margin: 20px 0 10px 70px;*/
+  /*}*/
 
   .my-block {
     display: block;
   }
 
   .download {
-    margin: 15px 0 0 20px;
+    /*margin: 15px 0 0 20px;*/
     text-align: center;
   }
 }
