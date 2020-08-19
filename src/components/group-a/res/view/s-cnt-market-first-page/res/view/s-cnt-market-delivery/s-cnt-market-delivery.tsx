@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 import { markdown } from "markdown";
-import { MarketDeliveryInterface } from "./res/interface/common.interface";
+import {MarketDeliveryInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-delivery",
@@ -12,17 +12,7 @@ export class SCntMarketDelivery implements ComponentInterface {
   /**
    * Данные для компонента delivery
    */
-  @Prop() forDelivery: MarketDeliveryInterface[] = [];
-
-  /**
-   * Данные для заголовка
-   */
-  @Prop() deliveryTitleText: string;
-
-  /**
-   * Данные для картинки
-   */
-  @Prop() deliveryImage: string;
+  @Prop() delivery: MarketDeliveryInterface;
 
   render() {
     return (
@@ -32,38 +22,34 @@ export class SCntMarketDelivery implements ComponentInterface {
             <div class="col-md-12 p-0">
               <div
                 class="title"
-                innerHTML={markdown.toHTML(this.deliveryTitleText)}
+                innerHTML={markdown.toHTML(this.delivery.title)}
               ></div>
-
             </div>
             <div
               class="deliveryImage"
-              style={{ backgroundImage: "url(" + this.deliveryImage + ")" }}
+              style={{ backgroundImage: "url(" + this.delivery.img + ")" }}
             ></div>
             <div class="listOfCities">
-              <ul class="list">
-                <li class="city">{this.forDelivery[0].nameCityMoscow}</li>
-                <li class="city">{this.forDelivery[0].nameCityAbakan}</li>
-                <li class="city">{this.forDelivery[0].nameCityAnadyr}</li>
-                <li class="city">{this.forDelivery[0].nameCityAstrahan}</li>
-                <li class="city">{this.forDelivery[0].nameCityBarnaul}</li>
-                <li class="city">{this.forDelivery[0].nameCityBerdsk}</li>
-              </ul>
-              <ul class="list">
-                <li class="city">
-                  {this.forDelivery[0].nameCitySaintPetersburg}
-                </li>
-                <li class="city">{this.forDelivery[0].nameCityAlmetyevsk}</li>
-                <li class="city">{this.forDelivery[0].nameCityArkhangelsk}</li>
-                <li class="city">{this.forDelivery[0].nameCityBalashikha}</li>
-                <li class="city">{this.forDelivery[0].nameCityBelgorod}</li>
-                <li class="city">{this.forDelivery[0].nameCityBiysk}</li>
-              </ul>
+              <div class="cities">
+                <DeliveryItem array={this.delivery.cities}></DeliveryItem>
+              </div>
             </div>
-              <button class="btn">{this.forDelivery[0].button}</button>
+            <button class="btn">{this.delivery.btn}</button>
           </div>
         </div>
       </div>
     );
   }
 }
+
+const DeliveryItem = (props) => {
+  return props.array.map((item) => {
+    return (
+      <div class="city">
+        <s-cnt-market-delivery-item
+          delivery={item}
+        ></s-cnt-market-delivery-item>
+      </div>
+    );
+  });
+};

@@ -9,37 +9,7 @@
 .choice {
   margin: 140px 0 0;
   padding: 0 110px;
-}
-
-.image {
-  width: 360px;
-  height: 360px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
-  margin-left: 50px;
-}
-
-.number {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(50%, 0%);
-  width: 80px;
-  height: 80px;
-  border-radius: 80px;
-  line-height: 70px;
-  font-size: 32px;
-  font-weight: 700;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.08), 0 5px 10px rgba(0, 0, 0, 0.05);
-  counter-increment: step;
-}
-
-.text {
-  margin: 120px 0 0 70px;
-  font-size: 26px;
+  counter-reset: step;
 }
 
 @media only screen and (max-width: 1199px) {
