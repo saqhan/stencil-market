@@ -50,6 +50,7 @@ export const header = {
         },
       ],
       login: {
+
         id: 1,
         rememberMe: 'Запомнить меня',
         logIn: 'Войти',
@@ -106,13 +107,22 @@ export const header = {
           },
         ],
       },
+      // reg: {
+      //   id: 1,
+      //   rememberMe: 'Запомнить меня',
+      //   logIn: 'Войти',
+      //   remindPass: 'Напомнить пароль',
+      //   logInToBank: 'Вход через Сбербанк ID',
+      //   orLogInSocial: 'или авторизуйтесь через'
+      // },
       reg: {
-        id: 1,
-        rememberMe: 'Запомнить меня',
-        logIn: 'Войти',
-        remindPass: 'Напомнить пароль',
-        logInToBank: 'Вход через Сбербанк ID',
-        orLogInSocial: 'или авторизуйтесь через'
+
+        checkForBis: 'Хочу заказывать для бизнеса',
+        checkForAdvertisingText: 'Согласен',
+        checkForAdvertisingLink: 'на рекламную рассылку',
+        regBtn: 'Зарегистрироваться',
+        agreementText: 'Продолжая, я соглашаюсь на обработку персональных данных на',
+        agreementLink: 'следующих условиях'
       },
     },
     modalWindow: {
@@ -506,6 +516,7 @@ export const header = {
               // },
             ]
           },
+
           {
             id: 29,
             city: 'Томск',
