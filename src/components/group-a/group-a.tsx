@@ -22,10 +22,9 @@ export class GroupA implements ComponentInterface {
 
   render() {
     return (
-      <div>
+      <main>
         {/*<s-cnt-market-modal-window />*/}
         <s-cnt-market-header-wrapper categories={header} login={this.login} > </s-cnt-market-header-wrapper>
-
         <s-cnt-market-first-page />
         {/*<s-cnt-market-shop/>*/}
         <s-cnt-market-footer
@@ -35,7 +34,8 @@ export class GroupA implements ComponentInterface {
           forDownFooter={forDownFooter}
           forFooterInfo={forFooterInfo}
         />
-      </div>
+        <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
+      </main>
     );
   }
 }
