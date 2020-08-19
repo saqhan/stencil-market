@@ -6,6 +6,7 @@ import {
   h,
   Prop,
 } from "@stencil/core";
+import {LoginAndRegistration} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-login-and-registration-form",
@@ -17,7 +18,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
    * объект данных для компонента LoginAndRegistrationForm и его подкомпонентов
    */
-  @Prop() loginAndRegistration: any;
+  @Prop() loginAndRegistration: LoginAndRegistration;
 
   /**
    * boolean значение для вывода/закрытия блока входа и присвоения класса
@@ -68,18 +69,17 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
             </div>
             <div class="login-or-registration-form-container">
               <div class="login-or-registration-buttons-wrapper">
-                <button
-                  class="login-selection-btn"
-                  id={this.login ? "selected-login-or-registration-btn" : ""}
-                  onClick={() => this.openLogin.emit()}
+                <button class="login-selection-btn"
+                        id={this.login ? "selected-login-or-registration-btn" : ""}
+                        onClick={() => this.openLogin.emit()}
                 >
                   {this.loginAndRegistration.loginBtnText}
                 </button>
                 <button
                   class="registration-selection-btn"
                   id={
-                    this.registration
-                      ? "selected-login-or-registration-btn"
+                    this.registration ?
+                      "selected-login-or-registration-btn"
                       : ""
                   }
                   onClick={() => this.openRegistration.emit()}
@@ -88,22 +88,22 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
                 </button>
               </div>
               <div>
-                {this.login ? (
-                  <s-cnt-market-login-form
-                    login={this.loginAndRegistration.login}
-                    users={this.loginAndRegistration.users}
-                  />
-                ) : (
-                  ""
-                )}
-                {this.registration ? (
-                  <s-cnt-market-registration-form
-                    reg={this.loginAndRegistration.reg}
-                    users={this.loginAndRegistration.users}
-                  />
-                ) : (
-                  ""
-                )}
+                {
+                  this.login ?
+                    <s-cnt-market-login-form
+                      login={this.loginAndRegistration.login}
+                      users={this.loginAndRegistration.users}
+                    />
+                    : ""
+                }
+                {
+                  this.registration ?
+                    <s-cnt-market-registration-form
+                      reg={this.loginAndRegistration.reg}
+                      users={this.loginAndRegistration.users}
+                    />
+                    : ""
+                }
               </div>
             </div>
           </div>

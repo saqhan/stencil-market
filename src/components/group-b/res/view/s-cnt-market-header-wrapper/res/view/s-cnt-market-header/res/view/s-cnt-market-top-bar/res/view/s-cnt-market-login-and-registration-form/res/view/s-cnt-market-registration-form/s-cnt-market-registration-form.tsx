@@ -1,4 +1,6 @@
 import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
+import {Registration} from "./res/interface/common.interface";
+import {UsersArr} from "../../interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-registration-form',
@@ -10,12 +12,12 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
    * объект данных для компонента регистрации
    * */
-  @Prop() reg: any;
+  @Prop() reg: Registration;
 
   /**
    * массив с данными пользователей
    * */
-  @Prop() users: any;
+  @Prop() users: UsersArr[];
 
   /**
    * State для переключения типа пароля
@@ -88,7 +90,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
             </div>
           </div>
           <div class="error-input" id="error-name" ref={(el) => this.nameError = el}>
-
+            {/*name адрес имеет неправильный формат*/}
           </div>
         </div>
         <div class="input-wrapper">
@@ -124,7 +126,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
             </div>
           </div>
           <div class="error-input" ref={(el) => this.passwordError = el}>
-            {/*Email адрес имеет неправильный формат*/}
+            {/*password адрес имеет неправильный формат*/}
           </div>
         </div>
         <div class="input-wrapper">
