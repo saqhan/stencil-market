@@ -112,6 +112,10 @@ export namespace Components {
     interface SCntMarketFirstPage {
     }
     interface SCntMarketFooter {
+        /**
+          * Данные для всего футера
+         */
+        "footerData": any;
         "footerMenu": MarketFooterMenuInterface[];
         "forDownFooter": MarketDownFooterInterface;
         "forFooterInfo": any;
@@ -921,6 +925,10 @@ declare namespace LocalJSX {
     interface SCntMarketFirstPage {
     }
     interface SCntMarketFooter {
+        /**
+          * Данные для всего футера
+         */
+        "footerData"?: any;
         "footerMenu"?: MarketFooterMenuInterface[];
         "forDownFooter"?: MarketDownFooterInterface;
         "forFooterInfo"?: any;

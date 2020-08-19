@@ -4,6 +4,7 @@ import {
   MarketFooterMenuInterface,
   MarketUpFooterFormInterface,
 } from "./res/interface/common.interface";
+// import {logoFooter} from "../../../../../utils/mock-a";
 
 @Component({
   tag: "s-cnt-market-footer",
@@ -12,6 +13,7 @@ import {
   scoped: true,
 })
 export class SCntMarketFooter implements ComponentInterface {
+
   @Prop() logoFooter: string;
 
   @Prop() footerMenu: MarketFooterMenuInterface[] = [];
@@ -22,6 +24,11 @@ export class SCntMarketFooter implements ComponentInterface {
 
   @Prop() forFooterInfo;
 
+  /**
+   * Данные для всего футера
+   * */
+  @Prop() footerData: any;
+
   render() {
     return (
       <footer>
@@ -31,10 +38,10 @@ export class SCntMarketFooter implements ComponentInterface {
               <div class=" col-12 col-lg-3   ">
                 <div
                   class="logo"
-                  style={{ backgroundImage: `url(${this.logoFooter})` }}
-                >
-                  {/*<img src={this.logoFooter} alt="" />*/}
-                </div>
+                  style={{
+                    backgroundImage: `url(${this.footerData.logoFooter})`,
+                  }}
+                > </div>
               </div>
               <FooterMenu array={this.footerMenu} />
               <div class=" col-12 col-sm-12 col-md-4 col-lg-3 ">

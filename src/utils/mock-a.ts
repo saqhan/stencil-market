@@ -747,34 +747,9 @@ export const footerMenu = [
 
 export const footerData = {
   logoFooter: "https://via.placeholder.com/220x40?img=logo",
-  footerFourthColumn: {
-    number: "+7 800 222-11-00",
-    time: "Круглосуточно",
-    input: "Форма обратной связи",
-    text: "Пишите нам свои вопросы, комментарии и предложения",
-  },
-  footerCopyright: {
-    copyright: "Copyright 2013 —2020",
-    company: 'ООО "Инстамарт Сервис"',
-    download: "Скачайте наше удобное приложение в Google Play и App Store",
-  },
-  footerLinksPolitics: [
-    {
-      title: 'Политика возврата',
-      link: '/',
-    },
-    {
-      title: 'Обработка персональных данных',
-      link: '/',
-    },
-    {
-      title: 'Официальное уведомление',
-      link: '/',
-    },
-  ],
   footerMenu: [
     {
-      title: 'Сбермаркет',
+      title: 'Сбермаркет1',
       menuItems: [
         {
           title: 'О Компании',
@@ -821,30 +796,61 @@ export const footerData = {
     },
 
   ],
-  footerSocialLinks: [
+  footerContactColumn: {
+    number: "+7 800 222-11-00",
+    time: "Круглосуточно",
+    input: "Форма обратной связи",
+    text: "Пишите нам свои вопросы, комментарии и предложения",
+  },
+  footerCopyrightRow: [
     {
-      icon: 'fa-facebook',
-      link: '#',
+      copyright: 'Copyright 2013 —2020',
+      nameCompany: 'ООО "Инстамарт Сервис"',
+      footerLinks: [
+        {
+          icon: 'fa-facebook',
+          link: '#',
+        },
+        {
+          icon: 'fa-vk',
+          link: '#',
+        },
+        {
+          icon: 'fa-instagram',
+          link: '#',
+        },
+      ],
     },
     {
-      icon: 'fa-vk',
-      link: '#',
+      copyright: 'Скачайте наше удобное приложение в Google Play и App Store',
+      nameCompany: '',
+      footerLinks: [
+        {
+          icon: 'fa-apple',
+          link: '#',
+        },
+        {
+          icon: 'fa-google-play',
+          link: '#',
+        },
+      ],
+    },
+
+  ],
+  footerLinksPolitics: [
+    {
+      title: 'Политика возврата',
+      link: '/',
     },
     {
-      icon: 'fa-instagram',
-      link: '#',
+      title: 'Обработка персональных данных',
+      link: '/',
+    },
+    {
+      title: 'Официальное уведомление',
+      link: '/',
     },
   ],
-  footerLinksOurApps: [
-    {
-      icon: 'fa-apple',
-      link: '#',
-    },
-    {
-      icon: 'fa-google-play',
-      link: '#',
-    },
-  ]
 }
 
 export const logoFooter = "https://via.placeholder.com/220x40?img=logo";
