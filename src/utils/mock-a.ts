@@ -797,7 +797,7 @@ export const footerData = {
 
   ],
   footerContactColumn: {
-    number: "+7 800 222-11-00",
+    number: "+7 800 222-11-11",
     time: "Круглосуточно",
     input: "Форма обратной связи",
     text: "Пишите нам свои вопросы, комментарии и предложения",

@@ -13,7 +13,6 @@ import {
   scoped: true,
 })
 export class SCntMarketFooter implements ComponentInterface {
-
   @Prop() logoFooter: string;
 
   @Prop() footerMenu: MarketFooterMenuInterface[] = [];
@@ -41,7 +40,8 @@ export class SCntMarketFooter implements ComponentInterface {
                   style={{
                     backgroundImage: `url(${this.footerData.logoFooter})`,
                   }}
-                > </div>
+                >
+                </div>
               </div>
               <FooterMenu array={this.footerMenu} />
               <div class=" col-12 col-sm-12 col-md-4 col-lg-3 ">

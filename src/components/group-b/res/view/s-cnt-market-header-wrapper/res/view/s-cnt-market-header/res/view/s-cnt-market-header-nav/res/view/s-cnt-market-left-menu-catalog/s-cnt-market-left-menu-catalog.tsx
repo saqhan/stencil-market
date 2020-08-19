@@ -20,9 +20,10 @@ import {
 })
 export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   private leftMenuTag: any;
-  // private leftMenuContentTag: any;053205
 
 
+  /**
+   * */
   @Prop() openedLeftMenu: boolean;
 
   /**
@@ -39,12 +40,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * закрывать меню
    * */
   @Event() closeLeftMenu: EventEmitter;
-
-  /**
-   * показывать/скрывать блок скидок
-   * */
-  // @State() isShowSalesBlock: boolean;
-
+  
   /**
    * тег обертки скидок
    * */
@@ -54,6 +50,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
     this.checkSales(this.leftMenuCatalogArr);
     this.getShopsWithSales();
   }
+
   render() {
     return (
       <div>
@@ -192,32 +189,34 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
               <i class="fas fa-angle-right"> </i>
             </div>
           </a>
-          {item.subcategories.map((subcategory) => {
-            return (
-              <div class="category-menu-item-dropdown ">
-                <ul class="category-menu-item-dropdown-list">
-                  <li class="category-menu-item">
-                    <a class="category-menu-item-link-dropdown">
-                      <div class="category-menu-item-content">
-                        <div
-                          class="category-menu-item-icon"
-                          style={{ backgroundImage: `url(${subcategory.img})` }}
-                        >
-                          {" "}
-                        </div>
-                        <div class="category-menu-item-title">
-                          {subcategory.title}{" "}
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            );
-          })}
+          <ChildMenuFunctionalComponent subcategories={item.subcategories}></ChildMenuFunctionalComponent>
+          {/*{*/}
+          {/*  item.subcategories.map((subcategory) => {*/}
+          {/*  return (*/}
+          {/*    <div class="category-menu-item-dropdown ">*/}
+          {/*      <ul class="category-menu-item-dropdown-list">*/}
+          {/*        <li class="category-menu-item">*/}
+          {/*          <a class="category-menu-item-link-dropdown">*/}
+          {/*            <div class="category-menu-item-content">*/}
+          {/*              <div*/}
+          {/*                class="category-menu-item-icon"*/}
+          {/*                style={{ backgroundImage: `url(${subcategory.img})` }}*/}
+          {/*              >*/}
+          {/*              </div>*/}
+          {/*              <div class="category-menu-item-title">*/}
+          {/*                {subcategory.title}*/}
+          {/*              </div>*/}
+          {/*            </div>*/}
+          {/*          </a>*/}
+          {/*        </li>*/}
+          {/*      </ul>*/}
+          {/*    </div>*/}
+          {/*  );*/}
+          {/*})*/}
+          {/*}*/}
         </li>
       );
-    });
+    })
   }
 
   /**
@@ -257,5 +256,41 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
         this.wrapperSales.classList.remove("d-none");
       }
     });
+  }
+}
+
+/**
+ *
+ * */
+const ChildMenuFunctionalComponent = (props) => {
+  {
+    return (
+      <div class="category-menu-item-dropdown fc">
+        {
+          props.subcategories.map((subcategory) => {
+            return (
+              // <div class="category-menu-item-dropdown fc">
+              <ul class="category-menu-item-dropdown-list">
+                <li class="category-menu-item">
+                  <a class="category-menu-item-link-dropdown">
+                    <div class="category-menu-item-content">
+                      <div
+                        class="category-menu-item-icon"
+                        style={{ backgroundImage: `url(${subcategory.img})` }}
+                      >
+                      </div>
+                      <div class="category-menu-item-title">
+                        {subcategory.title}
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              // </div>
+            );
+          })
+        }
+      </div>
+    )
   }
 }
