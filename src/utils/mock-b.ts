@@ -51,7 +51,7 @@ export const header = {
       ],
       login: {
 
-id: 1,
+        id: 1,
         rememberMe: 'Запомнить меня',
         logIn: 'Войти',
         remindPass: 'Напомнить пароль',
