@@ -19,10 +19,14 @@ import {
   scoped: true,
 })
 export class SCntMarketLeftMenuCatalog implements ComponentInterface {
-  private leftMenuTag: any;
-
 
   /**
+   *
+   * */
+  private leftMenuTag: any;
+
+  /**
+   *
    * */
   @Prop() openedLeftMenu: boolean;
 
@@ -40,7 +44,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * закрывать меню
    * */
   @Event() closeLeftMenu: EventEmitter;
-  
+
   /**
    * тег обертки скидок
    * */
@@ -63,7 +67,6 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
           ref={(el) => (this.leftMenuTag = el)}
           onClick={(event) => this.clickOnLeftMenuOverlayHandler(event)}
         >
-          {" "}
         </div>
         <div
           class={
@@ -117,7 +120,6 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                                         backgroundImage: `url(${item.img})`,
                                       }}
                                     >
-                                      {" "}
                                     </div>
                                     <div class="category-menu-item-title">
                                       {item.title}
@@ -190,37 +192,13 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
             </div>
           </a>
           <ChildMenuFunctionalComponent subcategories={item.subcategories}></ChildMenuFunctionalComponent>
-          {/*{*/}
-          {/*  item.subcategories.map((subcategory) => {*/}
-          {/*  return (*/}
-          {/*    <div class="category-menu-item-dropdown ">*/}
-          {/*      <ul class="category-menu-item-dropdown-list">*/}
-          {/*        <li class="category-menu-item">*/}
-          {/*          <a class="category-menu-item-link-dropdown">*/}
-          {/*            <div class="category-menu-item-content">*/}
-          {/*              <div*/}
-          {/*                class="category-menu-item-icon"*/}
-          {/*                style={{ backgroundImage: `url(${subcategory.img})` }}*/}
-          {/*              >*/}
-          {/*              </div>*/}
-          {/*              <div class="category-menu-item-title">*/}
-          {/*                {subcategory.title}*/}
-          {/*              </div>*/}
-          {/*            </div>*/}
-          {/*          </a>*/}
-          {/*        </li>*/}
-          {/*      </ul>*/}
-          {/*    </div>*/}
-          {/*  );*/}
-          {/*})*/}
-          {/*}*/}
         </li>
       );
     })
   }
 
   /**
-   * Получения подкатегорий TODO исправить вывод подкатегорий, где больше 1
+   * Получения подкатегорий
    * */
   public getSubcategories(array: subcategoriesInterface[]) {
     return array.map((item) => {
@@ -260,7 +238,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
 }
 
 /**
- *
+ * Компонент высшего порялка для дочерних категорий магазинов
  * */
 const ChildMenuFunctionalComponent = (props) => {
   {
