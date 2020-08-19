@@ -1,30 +1,17 @@
 .text {
   line-height: 1.25;
-  margin-top: 60px;
+  margin: 30px 0;
   font-size: 22px;
   font-family: 'Roboto', sans-serif;
 }
 
-.common {
-  margin-left: 63px;
-}
-
-@media only screen and (max-width: 768px) {
-  .common {
-    margin-right: 30px;
-    text-align: center;
-  }
-}
-
-
-@media only screen and (max-width: 400px) {
-  .common {
-    max-width: 300px;
-    margin-left: 35px;
-  }
+@media only screen and (max-width: 1199px) {
   .text {
+    margin: 50px 0 0;
     text-align: center;
-    line-height: 1.2;
-    font-size: 24px;
   }
 }
+  .info_12Nbl {
+    margin: 50px 0 0;
+    text-align: center;
+  }

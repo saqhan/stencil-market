@@ -4,8 +4,8 @@
 }
 
 .header-wrapper .container-fluid {
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .header-wrapper-child {
@@ -19,6 +19,6 @@
 }
 
 .sticky {
-  margin-top: -80px;
+  margin-top: -90px;
   transition: 0.3s ease;
 }

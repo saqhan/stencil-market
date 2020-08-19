@@ -31,20 +31,17 @@ export class SCntMarketSelection implements ComponentInterface {
 
   render() {
     return (
-      <div class="selection">
+      <div class="header">
         <div
           class="imageHome"
-          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}>
-          <div class="commonText">
-            <div class="homeText" innerHTML={markdown.toHTML(this.homeText)}>
-            </div>
-            <div
-              class="homeSubtext"
-              innerHTML={markdown.toHTML(this.homeSubText)}
-            >
-            </div>
-          </div>
-        </div>
+          style={{ backgroundImage: "url(" + this.homePageImage + ")" }}
+        ></div>
+        <h1 class="homeText" innerHTML={markdown.toHTML(this.homeText)}></h1>
+
+        <div
+          class="homeSubtext"
+          innerHTML={markdown.toHTML(this.homeSubText)}
+        ></div>
         <div class="container">
           <div class="row">
             <GetSelection array={this.forSelection}></GetSelection>
@@ -58,7 +55,7 @@ export class SCntMarketSelection implements ComponentInterface {
 const GetSelection = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="col-lg-4 col-md-6">
+      <div class="col-md-4 col-xs-6">
         <s-cnt-market-item-selection
           forSelection={item}
         ></s-cnt-market-item-selection>
