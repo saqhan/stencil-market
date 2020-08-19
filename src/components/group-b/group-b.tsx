@@ -26,7 +26,7 @@ export class GroupB implements ComponentInterface {
   /**
    * выводими в зависимости от авторизации начальную шапку
    * */
-  @State() login: boolean = false;
+  @State() login: boolean = true;
 
   render() {
     return (
