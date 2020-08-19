@@ -1,0 +1,24 @@
+.header-wrapper {
+  box-shadow: 0 6px 11px -6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 185px;
+}
+
+.header-wrapper .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.header-wrapper-child {
+  position: fixed;
+  transition: 0.2s;
+  right: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: #fff;
+  box-shadow: 0 6px 11px -6px rgba(0, 0, 0, 0.1);
+}
+
+.sticky {
+  margin-top: -75px;
+  transition: 0.3s ease;
+}

@@ -1,0 +1,29 @@
+.offer {
+  margin-top: 60px;
+  padding: 60px 150px 80px;
+  background-color: #f7f8fa;
+  border-radius: 24px;
+}
+
+.title {
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.12;
+}
+
+@media only screen and (max-width: 1119px) {
+  .offer {
+      padding: 45px 30px 50px;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .title {
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 0;
+  }
+}
+

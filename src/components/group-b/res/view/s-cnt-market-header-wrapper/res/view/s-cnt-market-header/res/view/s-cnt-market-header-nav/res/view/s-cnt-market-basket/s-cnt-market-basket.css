@@ -1,0 +1,204 @@
+.d-none {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+.sales-icon {
+  background-image: url("https://sbermarket.ru/spree/taxons/6246/normal/900000.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.drawer-backdrop {
+  position: fixed;
+  left: 0px;
+  right: auto;
+  bottom: 0px;
+  z-index: 2100;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.drawer-backdrop.opened {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.drawer-right.opened {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.drawer-right {
+  visibility: hidden;
+  display: flex;
+  position: fixed;
+  left: auto;
+  right: 0px;
+  bottom: 0px;
+  z-index: 2100;
+  top: 0px;
+  transform: translateX(105%);
+  flex: 1;
+  max-width: 100%;
+}
+
+.drawer-transition {
+  transition: transform 0.3s;
+  opacity: 1;
+}
+
+.drawer-transition.drawer-transition_faded {
+  -webkit-animation: fadeOutLeft 0s 0.3s forwards;
+  animation: fadeOutLeft 0s 0.3s forwards;
+}
+
+.drawer-content {
+  position: relative;
+  display: flex;
+}
+
+.new-cart, .new-cart-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.new-cart {
+  flex-direction: column;
+  width: 550px;
+  background: #fff;
+  z-index: 1000;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-weight: 400;
+  height: 100%;
+}
+
+.new-cart-header {
+  height: 56px;
+  padding: 0 24px;
+  border-bottom: 1px solid #e8ebed;
+  border-left: 1px solid #e8ebed;
+  align-items: center;
+  box-sizing: inherit;
+}
+
+.btn-close-cart {
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 14px;
+  font-size: 14px;
+  font-weight: 500;
+  touch-action: manipulation;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #e8ebed;
+  white-space: nowrap;
+  outline: none;
+  box-sizing: border-box;
+  color: #21a038;
+  background-color: #fff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: all .3s;
+}
+
+.btn-close-cart:hover {
+  background-color: #fafafa;
+}
+
+.new-cart-title {
+  font-size: 18px;
+  color: #7e7c86;
+  font-weight: 500;
+}
+
+.btn-close-cart-text {
+  flex: auto;
+  font-size: 14px;
+  margin-left: 7px;
+  font-weight: 700;
+}
+
+.new-cart-content {
+  position: relative;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  flex: 1;
+}
+
+.new-cart-empty {
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-cart-empty-img i {
+  font-size: 10rem;
+  color: #c2c3c4;
+}
+
+.new-cart-empty-text {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 30px;
+  color: #c2c3c4;
+}
+
+.message-box {
+  border-top: 1px solid #c2c3c4;
+  padding: 16px 24px;
+}
+
+.message-box button {
+  width: 100%;
+  font-size: 18px;
+  background-color: #c2c3c4;
+  color: #ffffff;
+  outline: none;
+  padding: 10px 0px;
+  border: none;
+  border-radius: 6px;
+}
+
+
+@media (max-width: 414px) {
+  .new-cart {
+    width: 414px;
+}
+}
+
+@media (max-width: 375px) {
+  .new-cart {
+    width: 375px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .new-cart {
+    width: 320px;
+  }
+}

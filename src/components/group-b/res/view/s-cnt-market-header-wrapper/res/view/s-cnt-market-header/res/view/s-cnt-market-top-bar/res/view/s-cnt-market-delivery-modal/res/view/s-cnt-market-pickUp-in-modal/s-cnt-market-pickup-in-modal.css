@@ -1,0 +1,377 @@
+* {
+  outline: none;
+}
+
+#d-none {
+  display: none !important;
+}
+
+#d-block {
+  display: block !important;
+}
+
+#d-flex {
+  display: flex !important;
+}
+
+.adress-in-city-blocks {
+  padding: 40px 50px 25px;
+  width: 100%;
+  background-color: #f7f7f7;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  font-weight: 500;
+}
+
+.option-city-modal-intop-bar {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.option-city-modal-intop-bar i {
+  color: #21a038;
+}
+
+.option-city-modal-intop-bar span {
+  margin-left: 5px;
+}
+
+.city-option-for-selected {
+  display: inline-block;
+  position: relative;
+  height: auto;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: normal;
+  color: #21a038;
+  user-select: none;
+  margin-left: 5px;
+}
+
+.city-option-for-selected i {
+  font-weight: 400;
+}
+
+.expandable-store-list {
+  width: 100%;
+  border: 1px solid #e7e9eb;
+  background-color: #fff;
+  transition: all .2s;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.expandable-store-list:hover {
+  box-shadow: 0 11px 30px 0 rgba(73, 73, 73, .2);
+}
+
+.expandable-store-list hr {
+  height: 1px;
+  background-color: #edeff2;
+  border: none;
+}
+
+.store-list-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.store-list {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+}
+
+.store-list-block-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.store-list-logo-img {
+  display: flex;
+  align-items: center;
+  background-color: rgb(0, 45, 114);
+  width: 68px;
+  height: 68px;
+  border-radius: 6px;
+  margin-right: 16px;
+  justify-content: center;
+}
+
+.store-list-logo-img div {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 33px;
+  height: 33px;
+  object-fit: contain;
+  max-width: 36px;
+  max-height: 36px;
+}
+
+.store-list-name {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.store-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(0, 45, 114);
+  margin-bottom: 4px;
+}
+
+.store-selected-address {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+  font-size: 13.5px;
+}
+
+.number-of-stores {
+  border: 1px solid #e7e9eb;
+  border-radius: 8px;
+  color: #96959b;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 6px 16px;
+}
+
+.list-stores-open-icon {
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #e7e9eb;
+}
+
+.list-stores-open-icon i {
+  color: #a6a8a9;;
+}
+
+.update-selected-address {
+
+}
+
+.store-address-and-work-time {
+  display: flex;
+  flex-direction: column;
+}
+
+.store-address {
+  font-size: 16px;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333536;
+}
+
+.store-work-time {
+  font-size: 14px;
+  font-weight: 500;
+  color: #96959b;
+}
+
+.store-secet-btn {
+  display: block;
+  border: 1px solid #d0d2d4;
+  color: #333536;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 7px;
+  padding: 7px 16px;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: inherit;
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 500;
+  transition-duration: .2s;
+  transition-timing-function: ease-in-out;
+  transition-property: color, background-color, border-color, box-shadow, opacity;
+  white-space: nowrap;
+}
+
+#selectedAddress, #updateSelectedAddress {
+  border: 1px solid #21a038;
+  color: #21a038;
+  padding: 7px 10px;
+}
+
+#updateSelectedAddress {
+  padding: 7px 16px;
+}
+
+.selection-city-block-backg{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.selection-city-block {
+  position: absolute;
+  top: 30px;
+  left: -4px;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px 0 rgba(0, 0, 0, .25);
+  z-index: 10;
+  max-height: 254px;
+  background-color: #fff;
+  border: 1px solid #eee;
+  overflow-y: scroll;
+  font-size: 15px;
+  line-height: 1.33;
+  color: #333;
+}
+
+.city-for-selected {
+  border-radius: 8px 8px 0 0;
+  padding: 16px;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  text-align: left;
+}
+
+.city-for-selected:hover {
+  background-color: #f6f7f8;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .adress-in-city-blocks{
+    height: 100%;
+  }
+
+  .option-city-modal-intop-bar, .city-option-for-selected {
+    font-size: 15px;
+  }
+
+  .store-list-logo-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .store-list-logo-img div {
+    width: 26px;
+    height: 26px;
+  }
+
+  .store-name {
+    font-size: 14px;
+  }
+
+  .number-of-stores {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .store-selected-address, .store-work-time {
+    font-size: 10px;
+  }
+
+  .adress-in-city-blocks {
+    padding: 40px 5px 25px;
+  }
+
+  .store-secet-btn {
+    font-size: 12px;
+    padding: 5px 11px;
+  }
+
+  #selectedAddress, #updateSelectedAddress {
+    padding: 5px 10px;
+  }
+
+  .store-address {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .method-of-obtaining-title {
+    font-size: 18px;
+  }
+
+  .option-city-modal-intop-bar i {
+    font-size: 14px;
+  }
+
+  .store-list-logo-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .store-list-logo-img div {
+    width: 20px;
+    height: 20px;
+  }
+
+  .number-of-stores {
+    font-size: 10px;
+  }
+
+  .list-stores-open-icon{
+    width: 32px;
+    height: 32px;
+  }
+
+  .list-stores-open-icon i{
+    font-size: 14px;
+  }
+
+  .store-list-wrapper{
+    padding: 15px;
+  }
+
+  .store-address {
+    font-size: 10px;
+  }
+
+  .store-selected-address, .store-work-time {
+    font-size: 8px;
+  }
+
+  .store-secet-btn {
+    font-size: 10px;
+    padding: 3px 9px;
+  }
+
+
+}

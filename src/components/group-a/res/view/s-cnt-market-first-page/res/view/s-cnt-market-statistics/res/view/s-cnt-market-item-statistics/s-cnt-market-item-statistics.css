@@ -1,0 +1,17 @@
+.text {
+  line-height: 1.25;
+  margin: 30px 0;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 1199px) {
+  .text {
+    margin: 50px 0 0;
+    text-align: center;
+  }
+}
+  .info_12Nbl {
+    margin: 50px 0 0;
+    text-align: center;
+  }

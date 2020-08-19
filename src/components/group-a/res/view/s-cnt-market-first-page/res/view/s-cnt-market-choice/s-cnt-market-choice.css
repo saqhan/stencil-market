@@ -1,0 +1,25 @@
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 1.12;
+  margin-bottom: 80px;
+}
+
+.choice {
+  margin: 140px 0 0;
+  padding: 0 110px;
+  counter-reset: step;
+}
+
+@media only screen and (max-width: 1199px) {
+  .choice {
+    margin-top: 60px;
+    padding: 0 10px;
+  }
+  .title {
+    font-size: 24px;
+    line-height: 1.33;
+    margin-bottom: 50px;
+  }
+}

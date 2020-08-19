@@ -1,0 +1,78 @@
+.promo-slider-card-container {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 4px;
+  height: 160px;
+}
+
+.promo-slider-card-content {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 25px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.promo-slider-card-body {
+  flex-basis: 65%;
+  padding-right: 5px;
+}
+
+.promo-slider-card-message {
+  padding-bottom: 13px;
+  color: #fff;
+}
+
+.promo-slider-card-message-header {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 26px;
+  padding-bottom: 2px;
+}
+
+.promo-slider-card-message-body {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.promo-slider-card-action {
+  background: #fff;
+  border-radius: 4px;
+  color: #43b02a;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 14px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.promo-slider-card-logo {
+  display: flex;
+  justify-content: flex-end;
+  width: 35%;
+}
+
+.promo-slider-card-logo-bg {
+  display: flex;
+  background: #fff;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+}
+
+.promo-slider-card-logo-img {
+  height: 80%;
+  width: 80%;
+  background-size: cover;
+  background-position: center;
+}
+
+.promo-slider-card-action:hover {
+  background: #f6fff4;
+  color: #666;
+}

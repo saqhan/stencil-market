@@ -1,0 +1,218 @@
+.row {
+  direction: rtl;
+}
+
+.app {
+  display: flex;
+  position: relative;
+  margin: auto;
+  border-radius: 20px;
+  background: linear-gradient(
+    186deg,
+    #31ac2d -27.41%,
+    #9fd81d 85.54%,
+    #e4f413 113.41%
+  );
+  padding: 80px 65px;
+  height: 313px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.right {
+  margin-right: 15px;
+}
+
+.commonButton {
+  /*margin: 30px 200px 0 0;*/
+  /*padding-right: 185px;*/
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image {
+  position: relative;
+  bottom: 132px;
+  width: 358px;
+  height: 368px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.title {
+  text-align: left;
+  line-height: 1.12;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.btn {
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #d0d2d4;
+  width: 154px;
+  height: 51px;
+  font-size: 16px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+  /*margin-left: 20px;*/
+}
+
+.btn:hover {
+  background-color: #f3f4f7;
+  color: #333536;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+
+.fa-google-play {
+  font-size: 17px;
+}
+
+.fa-apple {
+  font-size: 21px;
+}
+
+.fab {
+  color: #21a038;
+  margin: 10px 10px 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .image {
+    bottom: 90px;
+    width: 275px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .image {
+    bottom: 65px;
+    width: 225px;
+    left: 15px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .image {
+    bottom: 0px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .btn-wrapper {
+    margin-top: 0px;
+  }
+
+  .commonButton {
+    margin: 0;
+  }
+
+  .right {
+    margin-right: 0;
+  }
+
+  .app {
+    height: auto;
+    padding: 0 30px;
+    margin: 50px 0;
+  }
+
+  .btn-wrapper {
+    padding: 0;
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto;
+    flex-direction: column;
+  }
+
+  .title {
+    margin-top: 50px;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 20px;
+  }
+
+  .btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .image {
+    left: 0;
+    background-position: bottom;
+  }
+
+  .btn-wrapper {
+    margin: 10px auto;
+  }
+
+  /*.image {*/
+  /*  left: 17%;*/
+  /*  top: 45px;*/
+  /*  width: 280px;*/
+  /*  height: 282px;*/
+  /*}*/
+
+  /*.commonButton {*/
+  /*  display: block;*/
+  /*  margin: 20px -50px 0 0;*/
+  /*  padding: 0;*/
+  /*}*/
+
+  /*.title {*/
+  /*  margin-top: 50px;*/
+  /*  text-align: center;*/
+  /*  line-height: 1.5;*/
+  /*  font-size: 20px;*/
+  /*}*/
+
+  /*.btn {*/
+  /*  margin-top: 10px;*/
+  /*  width: 308px;*/
+  /*}*/
+}
+
+@media only screen and (max-width: 320px) {
+  /*.app {*/
+  /*  max-width: 288px;*/
+  /*  height: 580px;*/
+  /*}*/
+
+  /*.common {*/
+  /*  margin-right: -60px;*/
+  /*  width: 250px;*/
+  /*}*/
+
+  /*.title {*/
+  /*  font-size: 24px;*/
+  /*}*/
+
+  /*.image {*/
+  /*  left: 35%;*/
+  /*  width: 220px;*/
+  /*  height: 200px;*/
+  /*}*/
+
+  /*.commonButton {*/
+  /*  margin: 19px -60px 0 0;*/
+  /*}*/
+
+  /*.btn {*/
+  /*  margin-top: 10px;*/
+  /*  width: 248px;*/
+  /*}*/
+}

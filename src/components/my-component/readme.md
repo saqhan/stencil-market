@@ -5,14 +5,25 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
+## Dependencies
 
-| Property | Attribute | Description     | Type     | Default     |
-| -------- | --------- | --------------- | -------- | ----------- |
-| `first`  | `first`   | The first name  | `string` | `undefined` |
-| `last`   | `last`    | The last name   | `string` | `undefined` |
-| `middle` | `middle`  | The middle name | `string` | `undefined` |
+### Depends on
 
+- [group-b](../group-b)
+
+### Graph
+```mermaid
+graph TD;
+  my-component --> group-b
+  group-b --> s-cnt-market-header
+  s-cnt-market-header --> s-cnt-market-top-bar
+  s-cnt-market-header --> s-cnt-market-header-body
+  s-cnt-market-header --> s-cnt-market-header-nav
+  s-cnt-market-top-bar --> s-cnt-market-delivery-modal
+  s-cnt-market-delivery-modal --> s-cnt-market-delivery-in-modal
+  s-cnt-market-delivery-modal --> s-cnt-market-pickup-in-modal
+  style my-component fill:#f9f,stroke:#333,stroke-width:4px
+```
 
 ----------------------------------------------
 
