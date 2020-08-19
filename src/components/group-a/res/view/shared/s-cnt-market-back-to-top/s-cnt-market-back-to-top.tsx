@@ -13,9 +13,7 @@ export class SCntMarketBackToTop implements ComponentInterface {
   public btnTag: HTMLElement;
 
   componentDidLoad() {
-    window.onscroll = () => {
-      this.toggleButtonVisible();
-    };
+    document.addEventListener('scroll', () => this.toggleClassOnScroll())
   }
 
   render() {
@@ -33,11 +31,12 @@ export class SCntMarketBackToTop implements ComponentInterface {
   }
 
   /**
-   * Метод для смены внешнего вида главного меню при скролле
+   * Метод для показа и скрытия кнопки наверх
    */
-  public toggleButtonVisible() {
-    let scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled > 300) {
+
+  public toggleClassOnScroll() {
+    let scrollTop = window.scrollY;
+    if (scrollTop > 300) {
       this.btnTag.classList.remove("fadeOut");
       this.btnTag.classList.add("fadeIn");
     } else {

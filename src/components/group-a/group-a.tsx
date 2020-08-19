@@ -1,10 +1,11 @@
-import { Component, ComponentInterface, h } from "@stencil/core";
+import {Component, ComponentInterface, h, State} from "@stencil/core";
 import {
   footerMenu,
   forDownFooter,
   logoFooter, forFooterInfo,
   forUpFooterForm,
 } from "../../utils/mock-a";
+import {header} from "../../utils/mock-b";
 
 @Component({
   tag: "group-a",
@@ -13,10 +14,17 @@ import {
   scoped: true,
 })
 export class GroupA implements ComponentInterface {
+
+  /**
+   * выводими в зависимости от авторизации начальную шапку
+   * */
+  @State() login: boolean = true;
+
   render() {
     return (
-      <div>
+      <main>
         {/*<s-cnt-market-modal-window />*/}
+        <s-cnt-market-header-wrapper categories={header} login={this.login} > </s-cnt-market-header-wrapper>
         <s-cnt-market-first-page />
         {/*<s-cnt-market-shop/>*/}
         <s-cnt-market-footer
@@ -26,7 +34,8 @@ export class GroupA implements ComponentInterface {
           forDownFooter={forDownFooter}
           forFooterInfo={forFooterInfo}
         />
-      </div>
+        <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
+      </main>
     );
   }
 }
