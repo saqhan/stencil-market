@@ -30,7 +30,7 @@ export class SCntMarketDownFooter implements ComponentInterface {
                   <div class="col-12 col-md-6">
                     <div class="icons">
                       <div class="facebook">
-                        <i class="fab fa-facebook-f" />
+                        <i class="fab fa-facebook" />
                       </div>
                       <div class="vk">
                         <i class="fab fa-vk" />
