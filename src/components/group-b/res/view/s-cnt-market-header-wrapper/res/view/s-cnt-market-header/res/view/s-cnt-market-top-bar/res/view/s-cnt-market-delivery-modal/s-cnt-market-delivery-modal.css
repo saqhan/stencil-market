@@ -1,0 +1,223 @@
+button {
+  outline: none;
+}
+
+.delivery-modal-main-block-wrapper {
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /*overflow: scroll;*/
+}
+
+.delivery-modal-other-opacity {
+  z-index: 5002;
+}
+
+.delivery-modal-other-opacity {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 4;
+  position: fixed;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.delivery-modal-main-block {
+  max-width: 746px;
+  width: 100%;
+  will-change: opacity;
+  transition: opacity .3s 35ms;
+  display: flex;
+  z-index: 5002;
+}
+
+.delivery-modal-block-position {
+  max-height: 100%;
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  outline: none;
+}
+
+.delivery-modal-block-wrapper {
+  max-width: 746px;
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  will-change: transform;
+  transition: transform .3s 35ms;
+}
+
+.delivery-modal-block {
+  max-width: 100%;
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .1);
+  border-radius: 16px;
+}
+
+.close-btn-wrapper {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.close-btn {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+  font-weight: 500;
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+  transition-property: color, background-color, border;
+  white-space: nowrap;
+  margin-left: auto;
+  border: 1px solid #d0d2d4;
+  color: #333536;
+  min-width: 40px;
+  font-size: 15px;
+  line-height: 24px;
+  border-radius: 20px;
+  padding: 6px 10px;
+}
+
+.close-btn:hover{
+  background-color: #f3f4f7;
+  border: 1px solid #d0d2d4;
+  color: #333536;
+}
+
+.choose-way-to-get-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.method-of-obtaining-title-block {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.method-of-obtaining-title {
+  color: #393939;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 28px;
+  max-width: 100%;
+}
+
+.suggestions-signIn-in-modal-top-bar {
+  margin-top: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #96959b;
+  text-align: center;
+}
+
+.suggestions-signIn-in-modal-top-bar span {
+  color: #21a038;
+  cursor: pointer;
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.option-pickUp-or-delivery-block-wrapper {
+  padding: 0 30px;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.option-pickUp-or-delivery-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  max-width: 100%;
+  transform: translateY(50%);
+  border-radius: 8px;
+}
+
+.option-delivery, .option-pickUp {
+  border: 1px solid #e7e9eb;
+  background-color: #fff;
+  padding: 0 10px;
+  height: 38px;
+  width: 100%;
+  color: #333536;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all .2s;
+  text-align: center;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.option-delivery {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.option-pickUp {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.option-pickUp-or-delivery-block #option-delivery-selected {
+  pointer-events: none;
+  cursor: default;
+  border: 1px solid #21a038;
+  background-color: #21a038;
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+  .method-of-obtaining-title{
+    font-size: 24px;
+  }
+
+  .suggestions-signIn-in-modal-top-bar, .suggestions-signIn-in-modal-top-bar span{
+    font-size: 12px;
+  }
+
+  .delivery-modal-block-wrapper {
+    margin: 0;
+    height: 100%;
+  }
+
+  .delivery-modal-block {
+    border-radius: 0;
+    height: 100%;
+  }
+
+  .option-delivery, .option-pickUp {
+    font-size: 12px;
+  }
+
+
+}
