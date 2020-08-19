@@ -50,8 +50,7 @@ export const header = {
         },
       ],
       login: {
-<<<<<<< HEAD
-id: 1,
+        id: 1,
         rememberMe: 'Запомнить меня',
         logIn: 'Войти',
         remindPass: 'Напомнить пароль',
@@ -109,21 +108,11 @@ id: 1,
       },
       reg: {
         id: 1,
-=======
         rememberMe: 'Запомнить меня',
         logIn: 'Войти',
         remindPass: 'Напомнить пароль',
         logInToBank: 'Вход через Сбербанк ID',
         orLogInSocial: 'или авторизуйтесь через'
-      },
-      reg: {
->>>>>>> b34cf2e6f2a4c5bed1b5bde096121cfc3f1c50c2
-        checkForBis: 'Хочу заказывать для бизнеса',
-        checkForAdvertisingText: 'Согласен',
-        checkForAdvertisingLink: 'на рекламную рассылку',
-        regBtn: 'Зарегистрироваться',
-        agreementText: 'Продолжая, я соглашаюсь на обработку персональных данных на',
-        agreementLink: 'следующих условиях'
       },
     },
     modalWindow: {
@@ -517,10 +506,6 @@ id: 1,
               // },
             ]
           },
-<<<<<<< HEAD
-=======
-
->>>>>>> b34cf2e6f2a4c5bed1b5bde096121cfc3f1c50c2
           {
             id: 29,
             city: 'Томск',
