@@ -1,6 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { markdown } from "markdown";
-import {MarketCourierInterface} from "./res/interface/common.interface";
+import { MarketCourierInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-courier",
@@ -16,30 +15,21 @@ export class SCntMarketCourier implements ComponentInterface {
 
   render() {
     return (
-      <div class="choice">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-4 col-md-12">
-              <div class="commonImage">
-                <div
-                  class="image"
-                  style={{
-                    backgroundImage: "url(" + this.forCourier[0].image + ")",
-                  }}
-                >
-                  <div class="number">{this.forCourier[0].number}</div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-12">
-              <div
-                class="text"
-                innerHTML={markdown.toHTML(this.forCourier[0].text)}
-              ></div>
-            </div>
+      <div class="courier">
+        <div class="container-fluid">
+          <div class="row justify-content-start">
+            <ItemCourier array={this.forCourier}></ItemCourier>
           </div>
         </div>
       </div>
     );
   }
 }
+
+const ItemCourier = (props) => {
+  return props.array.map((item) => {
+    return (
+      <s-cnt-market-item-courier forCourier={item}></s-cnt-market-item-courier>
+    );
+  });
+};

@@ -1,9 +1,6 @@
 import { Component, ComponentInterface, h } from "@stencil/core";
 import {
   choiceTitleText,
-  deliveryImage,
-  deliveryTitleText,
-  forDelivery,
   forOffer,
   forSelection,
   forStatistics,
@@ -13,7 +10,7 @@ import {
   homeText,
   offerTitleText,
   forSpecialist,
-  forCourier, forApp,
+  forCourier, forApp, delivery,
 } from "../../../../../utils/mock-a";
 
 @Component({
@@ -43,9 +40,7 @@ export class SCntMarketFirstPage implements ComponentInterface {
         >
         </s-cnt-market-statistics>
         <s-cnt-market-delivery
-          forDelivery={forDelivery}
-          deliveryTitleText={deliveryTitleText}
-          deliveryImage={deliveryImage}
+          delivery={delivery}
         >
         </s-cnt-market-delivery>
         <s-cnt-market-choice

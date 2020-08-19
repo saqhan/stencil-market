@@ -399,8 +399,7 @@ export const homePageImage = "https://via.placeholder.com/1245x518?text=Text";
 export const homeText =
   "Продукты \n" + "\n" + "из магазинов\n" + "\n" + " на дом и в офис";
 
-export const homeSubText =
-  "Выберите магазин\n" + "\n" + " и начинайте делать покупки!";
+export const homeSubText = "Выберите магазин и начинайте делать покупки!";
 
 export const forOffer = [
   {
@@ -433,8 +432,7 @@ export const offerTitleText =
 export const forStatistics = [
   {
     id: 1,
-    text:
-      "**Более 20000 заказов** ежедневно доставляют наши курьеры",
+    text: "**Более 20000 заказов** ежедневно доставляют наши курьеры",
   },
   {
     id: 2,
@@ -459,28 +457,25 @@ export const forStatistics = [
   },
 ];
 
-export const forDelivery = [
-  {
-    id: 1,
-    nameCityMoscow: "Москва",
-    nameCityAbakan: "Абакан",
-    nameCityAnadyr: "Анадырь",
-    nameCityAstrahan: "Астрахань",
-    nameCityBarnaul: "Барнаул",
-    nameCityBerdsk: "Бердск",
-    nameCitySaintPetersburg: "Санкт-Петербург",
-    nameCityAlmetyevsk: "Альметьевск",
-    nameCityArkhangelsk: "Архангельск",
-    nameCityBalashikha: "Балашиха",
-    nameCityBelgorod: "Белгород",
-    nameCityBiysk: "Бийск",
-    button: "Показать все",
-  },
-];
-
-export const deliveryImage = "https://via.placeholder.com/1245x505?text=Text";
-
-export const deliveryTitleText = "Доставляем\n" + "\n" + "**в 115 городах** России";
+export const delivery = {
+  img: "https://via.placeholder.com/1245x505?text=Text",
+  title: "Доставляем\n" + "\n" + "**в 115 городах** России",
+  btn: "Показать всё",
+  cities: [
+    { name: "Москва" },
+    { name: "Абакан" },
+    { name: "Анадырь" },
+    { name: "Астрахань" },
+    { name: "Барнаул" },
+    { name: "Бердск" },
+    { name: "Санкт-Петербург" },
+    { name: "Альметьевск" },
+    { name: "Архангельск" },
+    { name: "Балашиха" },
+    { name: "Белгород" },
+    { name: "Бийск" },
+  ],
+};
 
 export const forChoice = [
   {
@@ -742,39 +737,34 @@ export const footerMenu = [
       "Вакансии",
       "Документы",
       "Стать партнером",
-    ]
+    ],
   },
   {
     title: "Помощь покупателю",
-    items: [
-      "Как мы работаем",
-      "Зоны доставки",
-      "Доставка и оплата",
-      "Помощь",
-    ]
-  }
-]
+    items: ["Как мы работаем", "Зоны доставки", "Доставка и оплата", "Помощь"],
+  },
+];
 
 export const logoFooter = "https://via.placeholder.com/220x40?img=logo";
 
 export const forUpFooterForm = {
-    number: "+7 800 222-11-00",
-    time: "Круглосуточно",
-    input: "Форма обратной связи",
-    text: "Пишите нам свои вопросы, комментарии и предложения",
-  };
+  number: "+7 800 222-11-00",
+  time: "Круглосуточно",
+  input: "Форма обратной связи",
+  text: "Пишите нам свои вопросы, комментарии и предложения",
+};
 
 export const forDownFooter = {
-    copyright: "Copyright 2013 —2020",
-    company: 'ООО "Инстамарт Сервис"',
-    download: "Скачайте наше удобное приложение в Google Play и App Store",
-  };
+  copyright: "Copyright 2013 —2020",
+  company: 'ООО "Инстамарт Сервис"',
+  download: "Скачайте наше удобное приложение в Google Play и App Store",
+};
 
 export const forFooterInfo = [
-    "Политика возврата",
-    "Обработка персональных данных",
-    "Официальное уведомление",
-  ];
+  "Политика возврата",
+  "Обработка персональных данных",
+  "Официальное уведомление",
+];
 
 export const recentlyWatchedTitle = "Вы недавно смотрели";
 
@@ -1598,4 +1588,3 @@ export const recentlyWatchedProducts = [
     weight: "125 г",
   },
 ];
-

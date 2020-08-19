@@ -72,17 +72,9 @@ export namespace Components {
     }
     interface SCntMarketDelivery {
         /**
-          * Данные для картинки
-         */
-        "deliveryImage": string;
-        /**
-          * Данные для заголовка
-         */
-        "deliveryTitleText": string;
-        /**
           * Данные для компонента delivery
          */
-        "forDelivery": MarketDeliveryInterface[];
+        "delivery": MarketDeliveryInterface;
     }
     interface SCntMarketDeliveryInModal {
         /**
@@ -813,17 +805,9 @@ declare namespace LocalJSX {
     }
     interface SCntMarketDelivery {
         /**
-          * Данные для картинки
-         */
-        "deliveryImage"?: string;
-        /**
-          * Данные для заголовка
-         */
-        "deliveryTitleText"?: string;
-        /**
           * Данные для компонента delivery
          */
-        "forDelivery"?: MarketDeliveryInterface[];
+        "delivery"?: MarketDeliveryInterface;
     }
     interface SCntMarketDeliveryInModal {
         /**

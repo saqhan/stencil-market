@@ -80,7 +80,12 @@
     position: static;
     max-width: 345px;
     height: 238px;
+    width: 100%;
   }
+}
+
+.col-md-4, .col-xs-6 {
+  padding: 0;
 }
 
 @media only screen and (max-width: 575px) {
@@ -99,35 +104,4 @@
 }
 
 
-/*@media only screen and (max-width: 320px) {*/
-/*  .container {*/
-/*    margin-top: 280px;*/
-/*  }*/
-
-/*  .imageHome {*/
-/*    border-radius: 25px;*/
-/*    max-width: 288px;*/
-/*    height: 238px;*/
-/*    margin-bottom: 150px;*/
-/*  }*/
-
-/*  .commonText {*/
-/*    z-index: 99;*/
-/*    position: absolute;*/
-/*    top: 25%;*/
-/*    transform: translate(-24%, -25%);*/
-/*  }*/
-
-/*  .homeText {*/
-/*    width: 400px;*/
-/*    color: #333;*/
-/*    font-size: 30px;*/
-/*  }*/
-
-/*  .homeSubtext {*/
-/*    margin-top: 20px;*/
-/*    font-size: 18px;*/
-/*    color: #333;*/
-/*  }*/
-/*}*/
 
