@@ -19,14 +19,9 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   @State() rezBlock;
 
   /**
-   * ref для
+   * ref для доступа к инпута поиска
    * */
   searchInput: HTMLInputElement;
-
-  /**
-   * ref для
-   * */
-  addressItems: HTMLElement;
 
   componentDidLoad() {
     this.searchInput.addEventListener("input", () => this.searchAddress());
@@ -70,7 +65,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   }
 
   /**
-   * функция для проверки совпадения паролей
+   * функция для поиска
    * */
   public searchAddress() {
     let val = this.searchInput.value.trim();
@@ -92,11 +87,13 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
       })
     }
 
+    /**
+     * функция для выделения совпадения букв при написанных в инпут
+     * */
     function insertMark(string, pos, len) {
       return string.slice(0, pos) + '<mark>' + string.slice(pos, pos + len) + '</mark>' + string.slice(pos + len);
     }
   }
-
 
 
   /**
@@ -105,17 +102,15 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   public AddressItems = [];
 
   /**
-   *
+   * компонентная функция для вывода адресов магазинов
    **/
   public AddressForSelected() {
     return this.deliveryData.cityForSelectedDelivery.map((i) => {
       return i.storeAddress.map((item) => {
         return (
-
           <div class="coincidence-unit-item hide" ref={(el) => this.AddressItems.push(el)}>
             {item.storeAddress}
           </div>
-
         );
       })
     })

@@ -81,8 +81,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
             <div class="store-list">
               <div class="store-list-block-wrap">
                 <div class="store-list-logo-img">
-                  <div
-                    style={{backgroundImage: "url(" + this.pickUpData.logoImg + ")"}}>
+                  <div style={{backgroundImage: "url(" + this.pickUpData.logoImg + ")"}}>
                     {/*картинка лого*/}
                   </div>
                 </div>

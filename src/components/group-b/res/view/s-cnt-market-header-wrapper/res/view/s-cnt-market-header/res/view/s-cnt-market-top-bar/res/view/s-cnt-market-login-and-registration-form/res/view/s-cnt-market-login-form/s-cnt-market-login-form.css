@@ -176,13 +176,6 @@
   background-color: white;
 }
 
-.login-through-bankId span svg {
-  color: #21a038;
-  height: 23px;
-  width: 23px;
-  margin-right: 5px;
-}
-
 .login-through-social {
   display: flex;
   justify-content: center;

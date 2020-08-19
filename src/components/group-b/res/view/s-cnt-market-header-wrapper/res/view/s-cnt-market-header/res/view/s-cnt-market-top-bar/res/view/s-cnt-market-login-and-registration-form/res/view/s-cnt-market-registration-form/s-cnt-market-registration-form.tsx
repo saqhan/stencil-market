@@ -1,4 +1,6 @@
 import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
+import {Registration} from "./res/interface/common.interface";
+import {UsersArr} from "../../interface/common.interface";
 
 @Component({
   tag: 's-cnt-market-registration-form',
@@ -10,12 +12,12 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
    * объект данных для компонента регистрации
    * */
-  @Prop() reg: any;
+  @Prop() reg: Registration;
 
   /**
    * массив с данными пользователей
    * */
-  @Prop() users: any;
+  @Prop() users: UsersArr[];
 
   /**
    * State для переключения типа пароля
@@ -88,7 +90,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
             </div>
           </div>
           <div class="error-input" id="error-name" ref={(el) => this.nameError = el}>
-
+            {/*name адрес имеет неправильный формат*/}
           </div>
         </div>
         <div class="input-wrapper">
@@ -124,7 +126,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
             </div>
           </div>
           <div class="error-input" ref={(el) => this.passwordError = el}>
-            {/*Email адрес имеет неправильный формат*/}
+            {/*password адрес имеет неправильный формат*/}
           </div>
         </div>
         <div class="input-wrapper">
@@ -160,9 +162,9 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
           </button>
           </span>
         </label>
-        <div class="registration-btn" ref={(el) => this.btnReg = el} onClick={()=> this.addUsers()}>
+        <button class="registration-btn" ref={(el) => this.btnReg = el}>
           {this.reg.regBtn}
-        </div>
+        </button>
         <footer class="form-footer-custom-conditions" id='foot'>
           {this.reg.agreementText}
           <button class="custom-conditions-link-btn">
@@ -182,11 +184,11 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     if (input.value === '' || input.value === ' ') {
       Error.innerHTML = ErrorText;
       input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled")
+      this.btnReg.setAttribute("disabled", "disabled");
     } else {
       Error.innerHTML = '';
       input.style.boxShadow = 'none';
-      this.btnReg.removeAttribute("disabled")
+      this.btnReg.removeAttribute("disabled");
     }
   }
 
@@ -194,14 +196,14 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
    * функция для проверки name на не заполнение
    * */
   public checkNameValueInput() {
-    this.emptyInput(this.regLogin, this.nameError, 'Укажите имя и фамилию')
+    this.emptyInput(this.regLogin, this.nameError, 'Укажите имя и фамилию');
   }
 
   /**
-   * функция для проверки name на не заполнение
+   * функция для проверки майл на не заполнение
    * */
   public checkMailValueInput() {
-    this.emptyInput(this.regMail, this.mailError, 'Укажите email')
+    this.emptyInput(this.regMail, this.mailError, 'Укажите email');
   }
 
   /**
@@ -213,25 +215,23 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     if (reg.test(address) == false) {
       this.mailError.innerHTML = 'Введите корректный e-mail';
       this.regMail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled")
-
-      return false;
+      this.btnReg.setAttribute("disabled", "disabled");
     } else {
       this.mailError.innerHTML = '';
       this.regMail.style.boxShadow = 'none';
-      this.btnReg.removeAttribute("disabled")
+      this.btnReg.removeAttribute("disabled");
     }
   }
 
   /**
-   * функция для проверки name на не заполнение
+   * функция для проверки строки пароль на не заполнение
    * */
   public checkPasswordValueInput() {
-    this.emptyInput(this.regPassword, this.passwordError, 'Укажите пароль')
+    this.emptyInput(this.regPassword, this.passwordError, 'Укажите пароль');
   }
 
   /**
-   * функция для проверки валидации написания mail
+   * функция для проверки валидации написания пароля
    * */
   public validatePassword() {
     let reg = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}/;
@@ -244,10 +244,13 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     } else {
       this.passwordError.innerHTML = '';
       this.regPassword.style.boxShadow = 'none';
-      this.btnReg.removeAttribute("disabled")
+      this.btnReg.removeAttribute("disabled");
     }
   }
 
+  /**
+   * функция для смены типа инпут путем изменения стейт
+   * */
   public passView(pasVal) {
     if (pasVal == 'pass') {
       this.passwordView = !this.passwordView;
@@ -278,20 +281,19 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     }
   }
 
-  homeUsers = [
-
-  ];
-
-  newUser = {
-    name: this.regLogin.value,
-    mail: this.regMail.value,
-    password: this.regPassword.value,
-  };
-
-  public addUsers() {
-    this.homeUsers.push(this.newUser)
-    console.log(this.homeUsers)
-  }
-
+  // homeUsers = [
+  //
+  // ];
+  //
+  // newUser = {
+  //   name: this.regLogin.value,
+  //   mail: this.regMail.value,
+  //   password: this.regPassword.value,
+  // };
+  //
+  // public addUsers() {
+  //   this.homeUsers.push(this.newUser)
+  //   console.log(this.homeUsers)
+  // }
 
 }

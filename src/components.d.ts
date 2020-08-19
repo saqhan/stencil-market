@@ -18,6 +18,8 @@ import { MarketOfferInterface, } from "./components/group-a/res/view/s-cnt-marke
 import { MarketRecommendedInterface, } from "./components/group-a/res/view/shared/s-cnt-market-modal-window/res/view/s-cnt-market-recommended/res/interface/common.interface";
 import { MarketSelectionInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-selection/res/interface/common.interface";
 import { MarketStatisticsInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-statistics/res/interface/common.interface";
+import { LoginAndRegistration, UsersArr, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-login-and-registration-form/res/interface/common.interface";
+import { Login, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-login-and-registration-form/res/view/s-cnt-market-login-form/res/interface/common.interface";
 import { TopBarModalPickUpInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-pickUp-in-modal/res/interface/common.interface";
 import { MarketProductInterface, } from "./components/group-a/res/view/shared/s-cnt-market-modal-window/res/view/s-cnt-market-product/res/interface/common.interface";
 import { MarketProductListInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/interface/common.interface";
@@ -25,6 +27,7 @@ import { MarketCardInterface, } from "./components/group-a/res/view/s-cnt-market
 import { MarketProductsSliderCardsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider/res/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 import { MarketRecentlyWatchedProductsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-recently-watched/res/interface/common.interface";
+import { Registration, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-login-and-registration-form/res/view/s-cnt-market-registration-form/res/interface/common.interface";
 import { MarketSpecialistInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-specialist/res/interface/common.interface";
 import { MarketSpecificationInterface, } from "./components/group-a/res/view/shared/s-cnt-market-modal-window/res/view/s-cnt-market-specification/res/interface/common.interface";
 import { TopBarInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/interface/common.interface";
@@ -196,9 +199,9 @@ export namespace Components {
          */
         "login": boolean;
         /**
-          * boolean значение для вывода/закрытия блока входа и присвоения класса
+          * объект данных для компонента LoginAndRegistrationForm и его подкомпонентов
          */
-        "loginAndRegistration": any;
+        "loginAndRegistration": LoginAndRegistration;
         /**
           * boolean значение для вывода/закрытия блока регистрации и присвоения класса
          */
@@ -208,11 +211,11 @@ export namespace Components {
         /**
           * объект данных для компонента входа
          */
-        "login": any;
+        "login": Login;
         /**
           * массив с данными пользователей
          */
-        "users": any;
+        "users": UsersArr[];
     }
     interface SCntMarketModalWindow {
     }
@@ -311,11 +314,11 @@ export namespace Components {
         /**
           * объект данных для компонента регистрации
          */
-        "reg": any;
+        "reg": Registration;
         /**
           * массив с данными пользователей
          */
-        "users": any;
+        "users": UsersArr[];
     }
     interface SCntMarketSelection {
         /**
@@ -961,9 +964,9 @@ declare namespace LocalJSX {
          */
         "login"?: boolean;
         /**
-          * boolean значение для вывода/закрытия блока входа и присвоения класса
+          * объект данных для компонента LoginAndRegistrationForm и его подкомпонентов
          */
-        "loginAndRegistration"?: any;
+        "loginAndRegistration"?: LoginAndRegistration;
         /**
           * Закрытие модального модального окна формы входа/регистрации
          */
@@ -985,11 +988,11 @@ declare namespace LocalJSX {
         /**
           * объект данных для компонента входа
          */
-        "login"?: any;
+        "login"?: Login;
         /**
           * массив с данными пользователей
          */
-        "users"?: any;
+        "users"?: UsersArr[];
     }
     interface SCntMarketModalWindow {
         /**
@@ -1128,11 +1131,11 @@ declare namespace LocalJSX {
         /**
           * объект данных для компонента регистрации
          */
-        "reg"?: any;
+        "reg"?: Registration;
         /**
           * массив с данными пользователей
          */
-        "users"?: any;
+        "users"?: UsersArr[];
     }
     interface SCntMarketSelection {
         /**
