@@ -1,11 +1,13 @@
 .text {
   color: #a7afaa;
   font-size: .9em;
+  cursor: pointer;
+  transition: .3s;
 }
 
 .text:hover {
   color: grey;
-  transition: .3s;
+
 }
 
 @media only screen and (max-width: 320px) {

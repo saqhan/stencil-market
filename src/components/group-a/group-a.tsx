@@ -1,9 +1,7 @@
 import {Component, ComponentInterface, h, State} from "@stencil/core";
 import {
-  footerMenu,
   forDownFooter,
-  logoFooter, forFooterInfo,
-  forUpFooterForm,
+  forFooterInfo,
 } from "../../utils/mock-a";
 import {header} from "../../utils/mock-b";
 
@@ -28,11 +26,11 @@ export class GroupA implements ComponentInterface {
         <s-cnt-market-first-page />
         {/*<s-cnt-market-shop/>*/}
         <s-cnt-market-footer
-          logoFooter={logoFooter}
-          footerMenu={footerMenu}
-          forUpFooterForm={forUpFooterForm}
-          forDownFooter={forDownFooter}
-          forFooterInfo={forFooterInfo}
+          // logoFooter={logoFooter}
+          // footerMenu={footerMenu}
+          // forUpFooterForm={forUpFooterForm}
+          // forDownFooter={forDownFooter}
+          // forFooterInfo={forFooterInfo}
         />
         <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
       </main>

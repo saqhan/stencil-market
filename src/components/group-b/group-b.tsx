@@ -1,7 +1,7 @@
 import {Component, ComponentInterface, h, State} from '@stencil/core';
 import {header} from "../../utils/mock-b";
 import {
-  footerMenu, forDownFooter, forFooterInfo, forUpFooterForm,
+  forDownFooter, forFooterInfo,
   footerData,
   productsList,
   productsSliderCards,
@@ -46,13 +46,7 @@ export class GroupB implements ComponentInterface {
           > </s-cnt-market-recently-watched>
           {this.showModalState === true ? (<s-cnt-market-modal-window onClickOnModal={() => this.showOrCloseModal()}> </s-cnt-market-modal-window>
           ) : ("")}
-          <s-cnt-market-footer
-            footerMenu={footerMenu}
-            forUpFooterForm={forUpFooterForm}
-            forDownFooter={forDownFooter}
-            forFooterInfo={forFooterInfo}
-            footerData={footerData}
-          > </s-cnt-market-footer>
+          <s-cnt-market-footer footerData={footerData}></s-cnt-market-footer>
           <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
         </main>
       </div>

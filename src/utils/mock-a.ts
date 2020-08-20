@@ -526,7 +526,8 @@ export const choiceTitleText = "СберМаркет сходит в магаз�
 export const forApp = [
   {
     id: 1,
-    image: "https://sbermarket.ru/assets/webpack/images/home_landing/mobile_sbermarket_2x-05ced63a@1x.png",
+    image:
+      "https://sbermarket.ru/assets/webpack/images/home_landing/mobile_sbermarket_2x-05ced63a@1x.png",
     title:
       "Скачивайте наше удобное приложение\n" +
       "\n" +
@@ -749,52 +750,51 @@ export const footerData = {
   logoFooter: "https://via.placeholder.com/220x40?img=logo",
   footerMenu: [
     {
-      title: 'Сбермаркет1',
+      title: "Сбермаркет1",
       menuItems: [
         {
-          title: 'О Компании',
-          link:'#',
+          title: "О Компании",
+          link: "#",
         },
         {
-          title: 'Контакты',
-          link:'#',
+          title: "Контакты",
+          link: "#",
         },
         {
-          title: 'Вакансии',
-          link:'#',
+          title: "Вакансии",
+          link: "#",
         },
         {
-          title: 'Документы',
-          link:'#',
+          title: "Документы",
+          link: "#",
         },
         {
-          title: 'Стать партнером',
-          link:'#',
+          title: "Стать партнером",
+          link: "#",
         },
-      ]
+      ],
     },
     {
-      title: 'Помощь покупателю',
+      title: "Помощь покупателю",
       menuItems: [
         {
-          title: 'Как мы работаем',
-          link:'#',
+          title: "Как мы работаем",
+          link: "#",
         },
         {
-          title: 'Зоны доставки',
-          link:'#',
+          title: "Зоны доставки",
+          link: "#",
         },
         {
-          title: 'Доставка и оплата',
-          link:'#',
+          title: "Доставка и оплата",
+          link: "#",
         },
         {
-          title: 'Помощь',
-          link:'#',
+          title: "Помощь",
+          link: "#",
         },
-      ]
+      ],
     },
-
   ],
   footerContactColumn: {
     number: "+7 800 222-11-11",
@@ -802,56 +802,26 @@ export const footerData = {
     input: "Форма обратной связи",
     text: "Пишите нам свои вопросы, комментарии и предложения",
   },
-  footerCopyrightRow: [
-    {
-      copyright: 'Copyright 2013 —2020',
+  footerCopyrightRow: {
+      copyright: "Copyright 2013 —2020",
       nameCompany: 'ООО "Инстамарт Сервис"',
-      footerLinks: [
-        {
-          icon: 'fa-facebook',
-          link: '#',
-        },
-        {
-          icon: 'fa-vk',
-          link: '#',
-        },
-        {
-          icon: 'fa-instagram',
-          link: '#',
-        },
-      ],
+      download: "Скачайте наше удобное приложение в Google Play и App Store",
     },
-    {
-      copyright: 'Скачайте наше удобное приложение в Google Play и App Store',
-      nameCompany: '',
-      footerLinks: [
-        {
-          icon: 'fa-apple',
-          link: '#',
-        },
-        {
-          icon: 'fa-google-play',
-          link: '#',
-        },
-      ],
-    },
-
-  ],
   footerLinksPolitics: [
     {
-      title: 'Политика возврата',
-      link: '/',
+      title: "Политика возврата",
+      link: "/",
     },
     {
-      title: 'Обработка персональных данных',
-      link: '/',
+      title: "Обработка персональных данных",
+      link: "/",
     },
     {
-      title: 'Официальное уведомление',
-      link: '/',
+      title: "Официальное уведомление",
+      link: "/",
     },
   ],
-}
+};
 
 export const logoFooter = "https://via.placeholder.com/220x40?img=logo";
 
@@ -873,7 +843,6 @@ export const forFooterInfo = [
   "Обработка персональных данных",
   "Официальное уведомление",
 ];
-
 
 export const recentlyWatchedTitle = "Вы недавно смотрели";
 

@@ -11,7 +11,7 @@ import { MarketCourierInterface, } from "./components/group-a/res/view/s-cnt-mar
 import { MarketCitiesInterface, MarketDeliveryInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-delivery/res/interface/common.interface";
 import { TopBarModalDeliveryInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-delivery-in-modal/res/interface/common.interface";
 import { TopBarModalInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/interface/common.interface";
-import { footerContactColumnInterface, MarketDownFooterInterface, MarketFooterMenuInterface, MarketUpFooterFormInterface, } from "./components/group-a/res/view/s-cnt-market-footer/res/interface/common.interface";
+import { footerContactColumnInterface, footerCopyrightRowInterface, footerDataInterface, footerItemsInterface, footerLinksPoliticsInterface, footerMenuInterface, } from "./components/group-a/res/view/s-cnt-market-footer/res/interface/common.interface";
 import { NavMenuItemInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-header-body/res/interface/common.interface";
 import { leftMenuCatalogInterface, navBarInterface, selectShopsInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-header-nav/res/interface/common.interface";
 import { MarketSpecialistInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-specialist/res/interface/common.interface";
@@ -106,7 +106,7 @@ export namespace Components {
         /**
           * Данные для DownFooter
          */
-        "forDownFooter": MarketDownFooterInterface;
+        "footerCopyrightRow": footerCopyrightRowInterface;
     }
     interface SCntMarketFirstPage {
     }
@@ -114,21 +114,25 @@ export namespace Components {
         /**
           * Данные для всего футера
          */
-        "footerData": any;
-        "footerMenu": MarketFooterMenuInterface[];
-        "forDownFooter": MarketDownFooterInterface;
-        "forFooterInfo": any;
-        "forUpFooterForm": MarketUpFooterFormInterface;
-        "logoFooter": string;
+        "footerData": footerDataInterface;
     }
     interface SCntMarketFooterInfo {
-        "forFooterInfo": any;
+        /**
+          * Данные для вывода в блок
+         */
+        "footerLinksPolitics": footerLinksPoliticsInterface;
     }
     interface SCntMarketFooterInfoItem {
-        "forFooterInfo": any;
+        /**
+          * Данные для политики безопасности
+         */
+        "footerLinksPolitics": footerLinksPoliticsInterface;
     }
     interface SCntMarketFooterItems {
-        "footerItems": any;
+        /**
+          * элементы списка меню
+         */
+        "footerItems": footerItemsInterface;
     }
     interface SCntMarketHeader {
         /**
@@ -418,7 +422,10 @@ export namespace Components {
         "topBar": TopBarInterface;
     }
     interface SCntMarketUpFooter {
-        "footerMenu": MarketFooterMenuInterface;
+        /**
+          * Данные для элементов меню в подвале
+         */
+        "footerMenu": footerMenuInterface;
     }
     interface SCntMarketUpFooterForm {
         "footerContactColumn": footerContactColumnInterface;
@@ -937,7 +944,7 @@ declare namespace LocalJSX {
         /**
           * Данные для DownFooter
          */
-        "forDownFooter"?: MarketDownFooterInterface;
+        "footerCopyrightRow"?: footerCopyrightRowInterface;
     }
     interface SCntMarketFirstPage {
     }
@@ -945,21 +952,25 @@ declare namespace LocalJSX {
         /**
           * Данные для всего футера
          */
-        "footerData"?: any;
-        "footerMenu"?: MarketFooterMenuInterface[];
-        "forDownFooter"?: MarketDownFooterInterface;
-        "forFooterInfo"?: any;
-        "forUpFooterForm"?: MarketUpFooterFormInterface;
-        "logoFooter"?: string;
+        "footerData"?: footerDataInterface;
     }
     interface SCntMarketFooterInfo {
-        "forFooterInfo"?: any;
+        /**
+          * Данные для вывода в блок
+         */
+        "footerLinksPolitics"?: footerLinksPoliticsInterface;
     }
     interface SCntMarketFooterInfoItem {
-        "forFooterInfo"?: any;
+        /**
+          * Данные для политики безопасности
+         */
+        "footerLinksPolitics"?: footerLinksPoliticsInterface;
     }
     interface SCntMarketFooterItems {
-        "footerItems"?: any;
+        /**
+          * элементы списка меню
+         */
+        "footerItems"?: footerItemsInterface;
     }
     interface SCntMarketHeader {
         /**
@@ -1309,7 +1320,10 @@ declare namespace LocalJSX {
         "topBar"?: TopBarInterface;
     }
     interface SCntMarketUpFooter {
-        "footerMenu"?: MarketFooterMenuInterface;
+        /**
+          * Данные для элементов меню в подвале
+         */
+        "footerMenu"?: footerMenuInterface;
     }
     interface SCntMarketUpFooterForm {
         "footerContactColumn"?: footerContactColumnInterface;
