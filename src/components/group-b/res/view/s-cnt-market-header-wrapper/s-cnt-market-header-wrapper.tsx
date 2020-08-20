@@ -27,7 +27,7 @@ export class SCntMarketHeaderWrapper implements ComponentInterface {
     return (
       <div>
         {this.firstPage
-          ? <s-cnt-market-header-unlogged logo={this.categories.body.logo} number={this.categories.numberHeader}></s-cnt-market-header-unlogged>
+          ? <s-cnt-market-header-base logo={this.categories.body.logo} number={this.categories.numberHeader}></s-cnt-market-header-base>
           : <s-cnt-market-header categories={this.categories} login={this.login}></s-cnt-market-header>
         }
       </div>

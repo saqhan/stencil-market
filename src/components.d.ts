@@ -140,6 +140,10 @@ export namespace Components {
          */
         "login": boolean;
     }
+    interface SCntMarketHeaderBase {
+        "logo": string;
+        "number": string;
+    }
     interface SCntMarketHeaderBody {
         "body": NavMenuItemInterface;
     }
@@ -157,10 +161,6 @@ export namespace Components {
           * магазины для вашего города
          */
         "selectShops": selectShopsInterface[];
-    }
-    interface SCntMarketHeaderUnlogged {
-        "logo": string;
-        "number": string;
     }
     interface SCntMarketHeaderWrapper {
         /**
@@ -545,6 +545,12 @@ declare global {
         prototype: HTMLSCntMarketHeaderElement;
         new (): HTMLSCntMarketHeaderElement;
     };
+    interface HTMLSCntMarketHeaderBaseElement extends Components.SCntMarketHeaderBase, HTMLStencilElement {
+    }
+    var HTMLSCntMarketHeaderBaseElement: {
+        prototype: HTMLSCntMarketHeaderBaseElement;
+        new (): HTMLSCntMarketHeaderBaseElement;
+    };
     interface HTMLSCntMarketHeaderBodyElement extends Components.SCntMarketHeaderBody, HTMLStencilElement {
     }
     var HTMLSCntMarketHeaderBodyElement: {
@@ -556,12 +562,6 @@ declare global {
     var HTMLSCntMarketHeaderNavElement: {
         prototype: HTMLSCntMarketHeaderNavElement;
         new (): HTMLSCntMarketHeaderNavElement;
-    };
-    interface HTMLSCntMarketHeaderUnloggedElement extends Components.SCntMarketHeaderUnlogged, HTMLStencilElement {
-    }
-    var HTMLSCntMarketHeaderUnloggedElement: {
-        prototype: HTMLSCntMarketHeaderUnloggedElement;
-        new (): HTMLSCntMarketHeaderUnloggedElement;
     };
     interface HTMLSCntMarketHeaderWrapperElement extends Components.SCntMarketHeaderWrapper, HTMLStencilElement {
     }
@@ -794,9 +794,9 @@ declare global {
         "s-cnt-market-footer-info-item": HTMLSCntMarketFooterInfoItemElement;
         "s-cnt-market-footer-items": HTMLSCntMarketFooterItemsElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
+        "s-cnt-market-header-base": HTMLSCntMarketHeaderBaseElement;
         "s-cnt-market-header-body": HTMLSCntMarketHeaderBodyElement;
         "s-cnt-market-header-nav": HTMLSCntMarketHeaderNavElement;
-        "s-cnt-market-header-unlogged": HTMLSCntMarketHeaderUnloggedElement;
         "s-cnt-market-header-wrapper": HTMLSCntMarketHeaderWrapperElement;
         "s-cnt-market-item-choice": HTMLSCntMarketItemChoiceElement;
         "s-cnt-market-item-courier": HTMLSCntMarketItemCourierElement;
@@ -971,6 +971,10 @@ declare namespace LocalJSX {
          */
         "login"?: boolean;
     }
+    interface SCntMarketHeaderBase {
+        "logo"?: string;
+        "number"?: string;
+    }
     interface SCntMarketHeaderBody {
         "body"?: NavMenuItemInterface;
     }
@@ -988,10 +992,6 @@ declare namespace LocalJSX {
           * магазины для вашего города
          */
         "selectShops"?: selectShopsInterface[];
-    }
-    interface SCntMarketHeaderUnlogged {
-        "logo"?: string;
-        "number"?: string;
     }
     interface SCntMarketHeaderWrapper {
         /**
@@ -1335,9 +1335,9 @@ declare namespace LocalJSX {
         "s-cnt-market-footer-info-item": SCntMarketFooterInfoItem;
         "s-cnt-market-footer-items": SCntMarketFooterItems;
         "s-cnt-market-header": SCntMarketHeader;
+        "s-cnt-market-header-base": SCntMarketHeaderBase;
         "s-cnt-market-header-body": SCntMarketHeaderBody;
         "s-cnt-market-header-nav": SCntMarketHeaderNav;
-        "s-cnt-market-header-unlogged": SCntMarketHeaderUnlogged;
         "s-cnt-market-header-wrapper": SCntMarketHeaderWrapper;
         "s-cnt-market-item-choice": SCntMarketItemChoice;
         "s-cnt-market-item-courier": SCntMarketItemCourier;
@@ -1399,9 +1399,9 @@ declare module "@stencil/core" {
             "s-cnt-market-footer-info-item": LocalJSX.SCntMarketFooterInfoItem & JSXBase.HTMLAttributes<HTMLSCntMarketFooterInfoItemElement>;
             "s-cnt-market-footer-items": LocalJSX.SCntMarketFooterItems & JSXBase.HTMLAttributes<HTMLSCntMarketFooterItemsElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
+            "s-cnt-market-header-base": LocalJSX.SCntMarketHeaderBase & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBaseElement>;
             "s-cnt-market-header-body": LocalJSX.SCntMarketHeaderBody & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBodyElement>;
             "s-cnt-market-header-nav": LocalJSX.SCntMarketHeaderNav & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderNavElement>;
-            "s-cnt-market-header-unlogged": LocalJSX.SCntMarketHeaderUnlogged & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderUnloggedElement>;
             "s-cnt-market-header-wrapper": LocalJSX.SCntMarketHeaderWrapper & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderWrapperElement>;
             "s-cnt-market-item-choice": LocalJSX.SCntMarketItemChoice & JSXBase.HTMLAttributes<HTMLSCntMarketItemChoiceElement>;
             "s-cnt-market-item-courier": LocalJSX.SCntMarketItemCourier & JSXBase.HTMLAttributes<HTMLSCntMarketItemCourierElement>;
