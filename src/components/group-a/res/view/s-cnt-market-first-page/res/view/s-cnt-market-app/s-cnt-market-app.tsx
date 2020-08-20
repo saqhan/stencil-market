@@ -33,22 +33,6 @@ export class SCntMarketApp implements ComponentInterface {
                       <i class="fab fa-google-play"> </i>
                     </button>
                   </div>
-                  {/*<div class="appStoreButton">*/}
-                  {/*  <div class="button">*/}
-                  {/*    <button class="btn">*/}
-                  {/*      {this.forApp[0].appStoreButton}*/}
-                  {/*      <i class="fab fa-apple"> </i>*/}
-                  {/*    </button>*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
-                  {/*<div class="googlePlayButton">*/}
-                  {/*  <div class="button">*/}
-                  {/*    <button class="btn">*/}
-                  {/*      {this.forApp[0].googlePlayButton}*/}
-                  {/*      <i class="fab fa-google-play"> </i>*/}
-                  {/*    </button>*/}
-                  {/*  </div>*/}
-                  {/*</div>*/}
                 </div>
               </div>
             </div>

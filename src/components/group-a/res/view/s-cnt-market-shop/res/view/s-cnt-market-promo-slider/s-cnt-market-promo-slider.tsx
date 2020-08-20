@@ -23,21 +23,11 @@ export class SCntMarketPromoSlider implements ComponentInterface {
   componentDidLoad() {
     const elem = this.promoCarouselTag;
 
-    console.log(
-      'SCntMarketPromoSlider promoSliderCards',
-      {
-        l: this.promoSliderCards?.length,
-        promoSliderCards: this.promoSliderCards,
-        elem,
-      }
-    )
-
     new Flickity(elem, {
       cellAlign: 'left',
       pageDots: false,
       freeScroll: true,
       draggable: false,
-      // contain: true,
       wrapAround: true,
       percentPosition: false,
     });

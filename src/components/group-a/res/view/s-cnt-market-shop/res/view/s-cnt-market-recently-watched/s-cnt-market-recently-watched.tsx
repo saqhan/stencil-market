@@ -1,6 +1,8 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
 import { MarketRecentlyWatchedProductsInterface } from "./res/interface/common.interface";
 
+declare const Flickity: any;
+
 @Component({
   tag: "s-cnt-market-recently-watched",
   styleUrl: "s-cnt-market-recently-watched.css",
@@ -32,12 +34,13 @@ export class SCntMarketRecentlyWatched implements ComponentInterface {
 
   componentDidLoad() {
     const elem = this.carouselTag;
-    // @ts-ignore
-    const flkty = new Flickity(elem, {
-      // options
-      cellAlign: "left",
+
+    new Flickity(elem, {
+      cellAlign: 'left',
       pageDots: false,
+      freeScroll: true,
       draggable: false,
+      wrapAround: true,
       percentPosition: false,
     });
   }
