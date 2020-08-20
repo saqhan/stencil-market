@@ -51,7 +51,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
 
   componentDidLoad() {
     this.checkSales(this.leftMenuCatalogArr);
-    this.getShopsWithSales();
+    this.filterShopsWithSales();
   }
 
   render() {
@@ -141,9 +141,9 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   }
 
   /**
-   * Получение магазинов со скидками
+   * Получение из массива магазинов со скидками
    * */
-  public getShopsWithSales() {
+  public filterShopsWithSales() {
     this.leftMenuCatalogArrState = this.leftMenuCatalogArr.filter(
       (item) => item.sales
     );
