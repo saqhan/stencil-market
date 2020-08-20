@@ -20,6 +20,13 @@ export interface MarketDownFooterInterface {
   download: string
 }
 
+export interface footerContactColumnInterface {
+  number: string,
+  time: string,
+  input: string,
+  text: string,
+}
+
 // export interface MarketFooterInfoInterface {
 //   forFooterInfo: string[]
 // }

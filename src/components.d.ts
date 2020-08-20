@@ -11,7 +11,7 @@ import { MarketCourierInterface, } from "./components/group-a/res/view/s-cnt-mar
 import { MarketCitiesInterface, MarketDeliveryInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-delivery/res/interface/common.interface";
 import { TopBarModalDeliveryInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-delivery-in-modal/res/interface/common.interface";
 import { TopBarModalInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/interface/common.interface";
-import { MarketDownFooterInterface, MarketFooterMenuInterface, MarketUpFooterFormInterface, } from "./components/group-a/res/view/s-cnt-market-footer/res/interface/common.interface";
+import { footerContactColumnInterface, MarketDownFooterInterface, MarketFooterMenuInterface, MarketUpFooterFormInterface, } from "./components/group-a/res/view/s-cnt-market-footer/res/interface/common.interface";
 import { NavMenuItemInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-header-body/res/interface/common.interface";
 import { leftMenuCatalogInterface, navBarInterface, selectShopsInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-header-nav/res/interface/common.interface";
 import { MarketSpecialistInterface, } from "./components/group-a/res/view/s-cnt-market-first-page/res/view/s-cnt-market-specialist/res/interface/common.interface";
@@ -421,7 +421,7 @@ export namespace Components {
         "footerMenu": MarketFooterMenuInterface;
     }
     interface SCntMarketUpFooterForm {
-        "forUpFooterForm": MarketUpFooterFormInterface;
+        "footerContactColumn": footerContactColumnInterface;
     }
 }
 declare global {
@@ -1312,7 +1312,7 @@ declare namespace LocalJSX {
         "footerMenu"?: MarketFooterMenuInterface;
     }
     interface SCntMarketUpFooterForm {
-        "forUpFooterForm"?: MarketUpFooterFormInterface;
+        "footerContactColumn"?: footerContactColumnInterface;
     }
     interface IntrinsicElements {
         "group-a": GroupA;
