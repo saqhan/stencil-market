@@ -20,12 +20,12 @@ import {
 })
 export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
-   *
+   * Обертка для бэкграунда модалки меню слева
    * */
-  private leftMenuTag: any;
+  private leftMenuTag: HTMLElement;
 
   /**
-   *
+   * стейт на состояние меню
    * */
   @Prop() openedLeftMenu: boolean;
 
@@ -96,8 +96,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                     <li class="category-menu-item category-menu-item-promoted">
                       <a class="category-menu-item-link">
                         <div class="category-menu-item-content">
-                          <div class="category-menu-item-icon sales-icon">
-                          </div>
+                          <div class="category-menu-item-icon sales-icon"></div>
                           <div class="category-menu-item-title">Скидки</div>
                         </div>
                         <div class="category-menu-item-link-pointer-container swing">
@@ -224,7 +223,7 @@ const ChildMenuFunctionalComponent = (props) => {
 };
 
 /**
- *
+ * Получение магазинов, у которых есть скидки
  * */
 const GetItemsShopsWithSalesFunctionalComponent = (props) => {
   {
