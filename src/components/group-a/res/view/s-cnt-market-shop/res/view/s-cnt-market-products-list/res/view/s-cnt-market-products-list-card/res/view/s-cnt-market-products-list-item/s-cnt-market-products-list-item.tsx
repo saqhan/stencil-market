@@ -36,7 +36,6 @@ export class SCntMarketProductsListItem implements ComponentInterface {
 
   render() {
     return (
-      <div class="product-list-card">
         <div
           class="product-link"
           ref={(el) => (this.productLinkTag = el)}
@@ -56,10 +55,7 @@ export class SCntMarketProductsListItem implements ComponentInterface {
           )}
 
           <div class="product-img-wrapper">
-            <div
-              class="product-img"
-              style={{ backgroundImage: `url(${this.productsListCard.img})` }}
-            ></div>
+            <img class="product-img" src={this.productsListCard.img} alt="товар"/>
             <div class="product-cart">
               <div class="product-favorite">
                 <i class="fas fa-heart"></i>
@@ -104,7 +100,6 @@ export class SCntMarketProductsListItem implements ComponentInterface {
           <p class="product-desc">{this.productsListCard.desc}</p>
           <p class="product-weight">{this.productsListCard.weight}</p>
         </div>
-      </div>
     );
   }
 

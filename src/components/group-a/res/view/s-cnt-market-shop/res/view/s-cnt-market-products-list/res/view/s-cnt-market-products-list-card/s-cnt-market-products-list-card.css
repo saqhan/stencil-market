@@ -46,7 +46,16 @@ i {
 
 .products-list-body {
   display: flex;
-  flex-wrap: wrap;
+}
+
+.product-list-card {
+  padding: 12px;
+  border: 1px solid #e1dede;
+  font-size: 14px;
+  margin: 0 -1px -1px 0;
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 350px;
 }
 
 @media (max-width: 768px) {
@@ -56,5 +65,14 @@ i {
   .products-list-title {
     font-size: 20px;
   }
+  .product-list-card {
+    height: 278px;
+  }
 }
 
+@media (max-width: 480px) {
+  .product-list-card {
+    padding: 8px;
+    height: 265px;
+  }
+}
