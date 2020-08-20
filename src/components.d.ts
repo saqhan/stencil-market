@@ -216,6 +216,9 @@ export namespace Components {
           * массив магазинов для вывода
          */
         "leftMenuCatalogArr": leftMenuCatalogInterface[];
+        /**
+          * стейт на состояние меню
+         */
         "openedLeftMenu": boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
@@ -1033,6 +1036,9 @@ declare namespace LocalJSX {
           * закрывать меню
          */
         "onCloseLeftMenu"?: (event: CustomEvent<any>) => void;
+        /**
+          * стейт на состояние меню
+         */
         "openedLeftMenu"?: boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {

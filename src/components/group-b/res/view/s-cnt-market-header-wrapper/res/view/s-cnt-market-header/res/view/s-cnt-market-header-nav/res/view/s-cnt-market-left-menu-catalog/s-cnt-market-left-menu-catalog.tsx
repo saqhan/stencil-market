@@ -9,7 +9,7 @@ import {
 } from "@stencil/core";
 import {
   leftMenuCatalogInterface,
-  subcategoriesInterface,
+  // subcategoriesInterface,
 } from "../../interface/common.interface";
 
 @Component({
@@ -19,14 +19,13 @@ import {
   scoped: true,
 })
 export class SCntMarketLeftMenuCatalog implements ComponentInterface {
-
   /**
-   *
+   * Обертка для бэкграунда модалки меню слева
    * */
-  private leftMenuTag: any;
+  private leftMenuTag: HTMLElement;
 
   /**
-   *
+   * стейт на состояние меню
    * */
   @Prop() openedLeftMenu: boolean;
 
@@ -52,7 +51,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
 
   componentDidLoad() {
     this.checkSales(this.leftMenuCatalogArr);
-    this.getShopsWithSales();
+    this.filterShopsWithSales();
   }
 
   render() {
@@ -66,8 +65,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
           }
           ref={(el) => (this.leftMenuTag = el)}
           onClick={(event) => this.clickOnLeftMenuOverlayHandler(event)}
-        >
-        </div>
+        ></div>
         <div
           class={
             this.openedLeftMenu
@@ -98,9 +96,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                     <li class="category-menu-item category-menu-item-promoted">
                       <a class="category-menu-item-link">
                         <div class="category-menu-item-content">
-                          <div class="category-menu-item-icon sales-icon">
-                            {" "}
-                          </div>
+                          <div class="category-menu-item-icon sales-icon"></div>
                           <div class="category-menu-item-title">Скидки</div>
                         </div>
                         <div class="category-menu-item-link-pointer-container swing">
@@ -108,33 +104,16 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                         </div>
                       </a>
                       <div class="category-menu-item-dropdown ">
-                        <ul class="category-menu-item-dropdown-list">
-                          {this.leftMenuCatalogArrState.map((item) => {
-                            return (
-                              <li class="category-menu-item">
-                                <a class="category-menu-item-link-dropdown">
-                                  <div class="category-menu-item-content">
-                                    <div
-                                      class="category-menu-item-icon"
-                                      style={{
-                                        backgroundImage: `url(${item.img})`,
-                                      }}
-                                    >
-                                    </div>
-                                    <div class="category-menu-item-title">
-                                      {item.title}
-                                    </div>
-                                  </div>
-                                </a>
-                              </li>
-                            );
-                          })}
-                        </ul>
+                        <GetItemsShopsWithSalesFunctionalComponent
+                          sales={this.leftMenuCatalogArrState}
+                        ></GetItemsShopsWithSalesFunctionalComponent>
                       </div>
                     </li>
                   </ul>
                   <ul class="category-menu-list border-gray">
-                    {this.getShopsItems(this.leftMenuCatalogArr)}
+                    <ParentMenuFunctionalComponent
+                      categories={this.leftMenuCatalogArr}
+                    ></ParentMenuFunctionalComponent>
                   </ul>
                 </div>
               </div>
@@ -162,66 +141,12 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   }
 
   /**
-   * Получение магазинов со скидками
+   * Получение из массива магазинов со скидками
    * */
-  public getShopsWithSales() {
+  public filterShopsWithSales() {
     this.leftMenuCatalogArrState = this.leftMenuCatalogArr.filter(
       (item) => item.sales
     );
-  }
-
-  /**
-   * Получение магазинов
-   **/
-  public getShopsItems(array): leftMenuCatalogInterface[] {
-    return array.map((item) => {
-      return (
-        <li class="category-menu-item" id={item.id}>
-          <a class="category-menu-item-link">
-            <div class="category-menu-item-content ">
-              <div
-                class="category-menu-item-icon"
-                style={{ backgroundImage: `url(${item.img})` }}
-              >
-                {" "}
-              </div>
-              <div class="category-menu-item-title">{item.title}</div>
-            </div>
-            <div class="category-menu-item-link-pointer-container swing ">
-              <i class="fas fa-angle-right"> </i>
-            </div>
-          </a>
-          <ChildMenuFunctionalComponent subcategories={item.subcategories}></ChildMenuFunctionalComponent>
-        </li>
-      );
-    })
-  }
-
-  /**
-   * Получения подкатегорий
-   * */
-  public getSubcategories(array: subcategoriesInterface[]) {
-    return array.map((item) => {
-      return (
-        <div class="category-menu-item-dropdown ">
-          <ul class="category-menu-item-dropdown-list">
-            <li class="category-menu-item">
-              <a class="category-menu-item-link-dropdown">
-                <div class="category-menu-item-content">
-                  <div
-                    class="category-menu-item-icon"
-                    style={{ backgroundImage: `url(${item.img})` }}
-                  >
-                    {" "}
-                  </div>
-                  <div class="category-menu-item-title">{item.title}</div>
-                </div>
-              </a>
-            </li>
-          </ul>
-        </div>
-      );
-    });
   }
 
   /**
@@ -238,37 +163,90 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
 }
 
 /**
+ * Получение магазинов в левом меню
+ * */
+const ParentMenuFunctionalComponent = (props) => {
+  return props.categories.map((item) => {
+    return (
+      <li class="category-menu-item" id={item.id}>
+        <a class="category-menu-item-link">
+          <div class="category-menu-item-content ">
+            <div
+              class="category-menu-item-icon"
+              style={{ backgroundImage: `url(${item.img})` }}
+            ></div>
+            <div class="category-menu-item-title">{item.title}</div>
+          </div>
+          <div class="category-menu-item-link-pointer-container swing ">
+            <i class="fas fa-angle-right"> </i>
+          </div>
+        </a>
+        <ChildMenuFunctionalComponent
+          subcategories={item.subcategories}
+        ></ChildMenuFunctionalComponent>
+      </li>
+    );
+  });
+};
+
+/**
  * Компонент высшего порялка для дочерних категорий магазинов
  * */
 const ChildMenuFunctionalComponent = (props) => {
   {
     return (
       <div class="category-menu-item-dropdown fc">
-        {
-          props.subcategories.map((subcategory) => {
-            return (
-              // <div class="category-menu-item-dropdown fc">
-              <ul class="category-menu-item-dropdown-list">
-                <li class="category-menu-item">
-                  <a class="category-menu-item-link-dropdown">
-                    <div class="category-menu-item-content">
-                      <div
-                        class="category-menu-item-icon"
-                        style={{ backgroundImage: `url(${subcategory.img})` }}
-                      >
-                      </div>
-                      <div class="category-menu-item-title">
-                        {subcategory.title}
-                      </div>
+        {props.subcategories.map((subcategory) => {
+          return (
+            // <div class="category-menu-item-dropdown fc">
+            <ul class="category-menu-item-dropdown-list">
+              <li class="category-menu-item">
+                <a class="category-menu-item-link-dropdown">
+                  <div class="category-menu-item-content">
+                    <div
+                      class="category-menu-item-icon"
+                      style={{ backgroundImage: `url(${subcategory.img})` }}
+                    ></div>
+                    <div class="category-menu-item-title">
+                      {subcategory.title}
                     </div>
-                  </a>
-                </li>
-              </ul>
-              // </div>
-            );
-          })
-        }
+                  </div>
+                </a>
+              </li>
+            </ul>
+            // </div>
+          );
+        })}
       </div>
-    )
+    );
   }
-}
+};
+
+/**
+ * Получение магазинов, у которых есть скидки
+ * */
+const GetItemsShopsWithSalesFunctionalComponent = (props) => {
+  {
+    return (
+      <ul class="category-menu-item-dropdown-list">
+        {props.sales.map((item) => {
+          return (
+            <li class="category-menu-item">
+              <a class="category-menu-item-link-dropdown">
+                <div class="category-menu-item-content">
+                  <div
+                    class="category-menu-item-icon"
+                    style={{
+                      backgroundImage: `url(${item.img})`,
+                    }}
+                  ></div>
+                  <div class="category-menu-item-title">{item.title}</div>
+                </div>
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  }
+};

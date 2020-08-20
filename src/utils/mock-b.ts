@@ -1313,7 +1313,7 @@ export const header = {
       id: 6,
       title: "Бакалея",
       img: "https://sbermarket.ru/spree/taxons/4329/normal/3000000.png",
-      sales: false,
+      sales: true,
       subcategories: [
         {
           id: 1,
