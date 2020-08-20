@@ -1,6 +1,8 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
 import { MarketProductsSliderCardsInterface } from "./res/interface/common.interface";
 
+declare const Flickity: any;
+
 @Component({
   tag: "s-cnt-market-products-slider",
   styleUrl: "s-cnt-market-products-slider.css",
@@ -32,11 +34,14 @@ export class SCntMarketProductsSlider implements ComponentInterface {
 
   componentDidLoad() {
     let elem = this.carouselTag;
-    // @ts-ignore
-    let flkty = new Flickity(elem, {
-      // options
+
+    new Flickity(elem, {
+      cellAlign: 'left',
       pageDots: false,
-      cellAlign: "left",
+      freeScroll: true,
+      draggable: false,
+      wrapAround: true,
+      percentPosition: false,
     });
   }
 
