@@ -1,7 +1,6 @@
 import {Component, ComponentInterface, h, State} from '@stencil/core';
 import {header} from "../../utils/mock-b";
 import {
-  forDownFooter, forFooterInfo,
   footerData,
   productsList,
   productsSliderCards,

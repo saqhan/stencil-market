@@ -11,7 +11,7 @@ export class SCntMarketFooter implements ComponentInterface {
   /**
    * Данные для всего футера
    * */
-  @Prop() footerData: any;
+  @Prop() footerData: footerDataInterface;
 
   render() {
     return (
