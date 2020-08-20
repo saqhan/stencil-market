@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import {footerDataInterface} from "./res/interface/common.interface";
+import { footerDataInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-footer",
@@ -8,11 +8,10 @@ import {footerDataInterface} from "./res/interface/common.interface";
   scoped: true,
 })
 export class SCntMarketFooter implements ComponentInterface {
-
   /**
    * Данные для всего футера
    * */
-  @Prop() footerData: footerDataInterface;
+  @Prop() footerData: any;
 
   render() {
     return (
@@ -38,13 +37,16 @@ export class SCntMarketFooter implements ComponentInterface {
           </div>
           <div class="line"> </div>
         </div>
-        <s-cnt-market-down-footer footerCopyrightRow={this.footerData.footerCopyrightRow} />
-        <s-cnt-market-footer-info footerLinksPolitics={this.footerData.footerLinksPolitics} />
+        <s-cnt-market-down-footer
+          footerCopyrightRow={this.footerData.footerCopyrightRow}
+        />
+        <s-cnt-market-footer-info
+          footerLinksPolitics={this.footerData.footerLinksPolitics}
+        />
       </footer>
     );
   }
 }
-
 
 /**
  * Получаем список элементов меню

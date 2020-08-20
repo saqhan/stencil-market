@@ -7,12 +7,12 @@ export interface MarketFooterMenuInterface {
   items: string[];
 }
 
-export interface MarketUpFooterFormInterface {
-  number: string;
-  time: string;
-  input: string;
-  text: string;
-}
+// export interface MarketUpFooterFormInterface {
+//   number: string;
+//   time: string;
+//   input: string;
+//   text: string;
+// }
 
 export interface MarketDownFooterInterface {
   copyright: string;
@@ -32,7 +32,7 @@ export interface footerMenuInterface {
   menuItems: {
     title: string;
     link: string;
-  }[];
+  };
 }
 
 export interface footerCopyrightRowInterface {
@@ -52,11 +52,11 @@ export interface footerLinksPoliticsInterface {
 }
 
 export interface footerDataInterface {
-  logoFooter: string;
-  footerMenu: footerMenuInterface;
-  footerContactColumn: footerContactColumnInterface;
-  footerCopyrightRow: footerCopyrightRowInterface;
-  footerLinksPolitics: footerLinksPoliticsInterface;
+  logoFooter: any;
+  footerMenu: any;
+  footerContactColumn: any;
+  footerCopyrightRow: any;
+  footerLinksPolitics: any;
 }
 
 // export interface MarketFooterInfoInterface {
