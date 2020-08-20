@@ -391,6 +391,9 @@ export namespace Components {
         "forStatistics": MarketStatisticsInterface[];
     }
     interface SCntMarketStoreSelectTop {
+        /**
+          * состояние модалки
+         */
         "openedStoreSelect": boolean;
         /**
           * selectShops
@@ -1267,6 +1270,9 @@ declare namespace LocalJSX {
           * /Закрыть корзину
          */
         "onCloseStoreSelect"?: (event: CustomEvent<any>) => void;
+        /**
+          * состояние модалки
+         */
         "openedStoreSelect"?: boolean;
         /**
           * selectShops
