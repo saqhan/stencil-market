@@ -29,7 +29,6 @@ export class SCntMarketItemSpecialist implements ComponentInterface {
           class="text"
           innerHTML={markdown.toHTML(this.forSpecialist.text)}
         ></div>
-
       </div>
     );
   }

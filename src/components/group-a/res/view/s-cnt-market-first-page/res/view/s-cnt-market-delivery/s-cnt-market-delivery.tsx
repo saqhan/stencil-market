@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 import { markdown } from "markdown";
-import {MarketDeliveryInterface} from "./res/interface/common.interface";
+import { MarketDeliveryInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-delivery",
@@ -31,7 +31,9 @@ export class SCntMarketDelivery implements ComponentInterface {
             ></div>
             <div class="listOfCities">
               <div class="cities">
-                <DeliveryItem array={this.delivery.cities}></DeliveryItem>
+                <DeliveryItemFunctionalComponent
+                  array={this.delivery.cities}
+                ></DeliveryItemFunctionalComponent>
               </div>
             </div>
             <button class="btn">{this.delivery.btn}</button>
@@ -42,7 +44,7 @@ export class SCntMarketDelivery implements ComponentInterface {
   }
 }
 
-const DeliveryItem = (props) => {
+const DeliveryItemFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
       <div class="city">

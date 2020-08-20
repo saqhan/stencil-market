@@ -1,4 +1,11 @@
-import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+} from "@stencil/core";
 import { MarketRecentlyWatchedProductsInterface } from "./res/interface/common.interface";
 
 declare const Flickity: any;
@@ -21,7 +28,6 @@ export class SCntMarketRecentlyWatched implements ComponentInterface {
    */
   @Prop() recentlyWatchedTitle: string;
 
-
   /**
    * Клик по карточке для показа модального окна
    */
@@ -36,7 +42,7 @@ export class SCntMarketRecentlyWatched implements ComponentInterface {
     const elem = this.carouselTag;
 
     new Flickity(elem, {
-      cellAlign: 'left',
+      cellAlign: "left",
       pageDots: false,
       freeScroll: true,
       draggable: false,
@@ -51,9 +57,9 @@ export class SCntMarketRecentlyWatched implements ComponentInterface {
         <div class="main-container">
           <div class="products-carousel-title">{this.recentlyWatchedTitle}</div>
           <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
-            <RecentlyWatchedSlider
+            <RecentlyWatchedSliderFunctionalComponent
               array={this.recentlyWatchedProducts}
-            ></RecentlyWatchedSlider>
+            ></RecentlyWatchedSliderFunctionalComponent>
           </div>
         </div>
       </div>
@@ -61,7 +67,7 @@ export class SCntMarketRecentlyWatched implements ComponentInterface {
   }
 }
 
-const RecentlyWatchedSlider = (props) => {
+const RecentlyWatchedSliderFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
       <div class="carousel-cell">

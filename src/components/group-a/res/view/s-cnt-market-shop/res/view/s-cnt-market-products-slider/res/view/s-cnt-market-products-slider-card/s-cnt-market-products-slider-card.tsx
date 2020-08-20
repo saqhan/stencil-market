@@ -1,4 +1,11 @@
-import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
+import {
+  Component,
+  ComponentInterface,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+} from "@stencil/core";
 import { MarketProductsSliderCardsInterface } from "../../interface/common.interface";
 
 @Component({
@@ -32,13 +39,12 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
           </div>
           <div class="products-card-desc">
             <div class="products-price">
-              {this.productsSliderCards.price
-                ?
+              {this.productsSliderCards.price ? (
                 <span class="price">
                   {this.productsSliderCards.price}
                   <span> {this.productsSliderCards.currency}</span>
                 </span>
-                :
+              ) : (
                 <div>
                   <span class="price-dis">
                     {this.productsSliderCards.disPrice}
@@ -49,7 +55,7 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
                     <span> {this.productsSliderCards.currency}</span>
                   </span>
                 </div>
-              }
+              )}
             </div>
             <p class="products-name">{this.productsSliderCards.desc}</p>
             <div class="products-bottom-info">
@@ -75,5 +81,4 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
   public showModalHandler() {
     this.showModal.emit();
   }
-
 }

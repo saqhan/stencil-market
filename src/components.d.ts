@@ -23,8 +23,7 @@ import { LoginAndRegistration, UsersArr, } from "./components/group-b/res/view/s
 import { Login, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-login-and-registration-form/res/view/s-cnt-market-login-form/res/interface/common.interface";
 import { TopBarModalPickUpInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-delivery-modal/res/view/s-cnt-market-pickUp-in-modal/res/interface/common.interface";
 import { MarketProductInterface, } from "./components/group-a/res/view/shared/s-cnt-market-modal-window/res/view/s-cnt-market-product/res/interface/common.interface";
-import { MarketProductListInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/interface/common.interface";
-import { MarketCardInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/view/s-cnt-market-products-list-card/res/view/s-cnt-market-products-list-item/res/interface/common.interface";
+import { MarketProductListCardInterface, MarketProductListInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list/res/interface/common.interface";
 import { MarketProductsSliderCardsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider/res/interface/common.interface";
 import { MarketPromoSliderInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider/res/interface/common.interface";
 import { MarketRecentlyWatchedProductsInterface, } from "./components/group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-recently-watched/res/interface/common.interface";
@@ -284,7 +283,7 @@ export namespace Components {
         /**
           * Данные для карточки товара
          */
-        "productsListCard": MarketCardInterface;
+        "productsListCard": MarketProductListCardInterface;
     }
     interface SCntMarketProductsSlider {
         /**
@@ -1140,7 +1139,7 @@ declare namespace LocalJSX {
         /**
           * Данные для карточки товара
          */
-        "productsListCard"?: MarketCardInterface;
+        "productsListCard"?: MarketProductListCardInterface;
     }
     interface SCntMarketProductsSlider {
         /**

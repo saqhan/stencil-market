@@ -18,7 +18,9 @@ export class SCntMarketCourier implements ComponentInterface {
       <div class="courier">
         <div class="container-fluid">
           <div class="row justify-content-start">
-            <ItemCourier array={this.forCourier}></ItemCourier>
+            <ItemCourierFunctionalComponent
+              array={this.forCourier}
+            ></ItemCourierFunctionalComponent>
           </div>
         </div>
       </div>
@@ -26,7 +28,7 @@ export class SCntMarketCourier implements ComponentInterface {
   }
 }
 
-const ItemCourier = (props) => {
+const ItemCourierFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
       <s-cnt-market-item-courier forCourier={item}></s-cnt-market-item-courier>

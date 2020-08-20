@@ -7,7 +7,6 @@ import { MarketSpecialistInterface } from "./res/interface/common.interface";
   shadow: false,
   scoped: true,
 })
-
 export class SCntMarketSpecialist implements ComponentInterface {
   /**
    * Данные для компонента Specialist
@@ -19,18 +18,22 @@ export class SCntMarketSpecialist implements ComponentInterface {
       <div class="specialist">
         <div class="container-fluid">
           <div class="row justify-content-end">
-            <GetSpecialist array={this.forSpecialist}></GetSpecialist>
-            </div>
+            <GetSpecialistFunctionalComponent
+              array={this.forSpecialist}
+            ></GetSpecialistFunctionalComponent>
+          </div>
         </div>
       </div>
     );
   }
 }
 
-const GetSpecialist = (props) => {
+const GetSpecialistFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
-        <s-cnt-market-item-specialist forSpecialist={item}></s-cnt-market-item-specialist>
+      <s-cnt-market-item-specialist
+        forSpecialist={item}
+      ></s-cnt-market-item-specialist>
     );
   });
 };

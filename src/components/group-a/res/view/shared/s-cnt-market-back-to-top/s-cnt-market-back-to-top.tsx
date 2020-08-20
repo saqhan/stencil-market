@@ -13,7 +13,7 @@ export class SCntMarketBackToTop implements ComponentInterface {
   public btnTag: HTMLElement;
 
   componentDidLoad() {
-    document.addEventListener('scroll', () => this.toggleClassOnScroll())
+    document.addEventListener("scroll", () => this.toggleClassOnScroll());
   }
 
   render() {
@@ -33,7 +33,6 @@ export class SCntMarketBackToTop implements ComponentInterface {
   /**
    * Метод для показа и скрытия кнопки наверх
    */
-
   public toggleClassOnScroll() {
     let scrollTop = window.scrollY;
     if (scrollTop > 300) {

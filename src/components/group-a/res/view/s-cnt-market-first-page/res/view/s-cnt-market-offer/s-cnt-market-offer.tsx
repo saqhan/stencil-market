@@ -34,7 +34,9 @@ export class SCntMarketOffer implements ComponentInterface {
             </div>
           </div>
           <div class="row">
-            <GetOffer arrayOffer={this.forOffer}></GetOffer>
+            <GetOfferFunctionalComponent
+              arrayOffer={this.forOffer}
+            ></GetOfferFunctionalComponent>
           </div>
         </div>
       </div>
@@ -42,7 +44,7 @@ export class SCntMarketOffer implements ComponentInterface {
   }
 }
 
-const GetOffer = (props) => {
+const GetOfferFunctionalComponent = (props) => {
   return props.arrayOffer.map((item) => {
     return (
       <div class="col-lg-3 col-md-6">

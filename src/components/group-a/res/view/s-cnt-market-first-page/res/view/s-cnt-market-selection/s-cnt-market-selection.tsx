@@ -44,7 +44,9 @@ export class SCntMarketSelection implements ComponentInterface {
         ></div>
         <div class="container">
           <div class="row">
-            <GetSelection array={this.forSelection}></GetSelection>
+            <GetSelectionFunctionalComponent
+              array={this.forSelection}
+            ></GetSelectionFunctionalComponent>
           </div>
         </div>
       </div>
@@ -52,7 +54,7 @@ export class SCntMarketSelection implements ComponentInterface {
   }
 }
 
-const GetSelection = (props) => {
+const GetSelectionFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
       <div class="col-md-4 col-xs-6">
