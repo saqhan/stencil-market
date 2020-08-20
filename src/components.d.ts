@@ -169,7 +169,11 @@ export namespace Components {
          */
         "categories": any;
         /**
-          * log in user
+          * Первоначальная страница
+         */
+        "firstPage": boolean;
+        /**
+          * Авторизация юзера
          */
         "login": boolean;
     }
@@ -996,7 +1000,11 @@ declare namespace LocalJSX {
          */
         "categories"?: any;
         /**
-          * log in user
+          * Первоначальная страница
+         */
+        "firstPage"?: boolean;
+        /**
+          * Авторизация юзера
          */
         "login"?: boolean;
     }

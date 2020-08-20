@@ -13,6 +13,7 @@ import {
 })
 export class SCntMarketHeaderNav implements ComponentInterface {
 
+
   /**
    * Log in user
    * */

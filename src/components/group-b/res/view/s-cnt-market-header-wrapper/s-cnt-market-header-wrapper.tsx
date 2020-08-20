@@ -13,17 +13,23 @@ export class SCntMarketHeaderWrapper implements ComponentInterface {
   @Prop() categories: any;
 
   /**
-   * log in user
+   * Авторизация юзера
    * */
-  @Prop() login: boolean = false;
+  @Prop() login: boolean;
+
+  /**
+   * Первоначальная страница
+   * */
+  @Prop() firstPage: boolean;
+
 
   render() {
     return (
       <div>
         {
-          this.login
-            ? <s-cnt-market-header categories={this.categories} login={this.login}  > </s-cnt-market-header>
-            : <s-cnt-market-header-unlogged logo={this.categories.body.logo} number={this.categories.numberHeader} > </s-cnt-market-header-unlogged>
+          this.firstPage
+            ? <s-cnt-market-header-unlogged logo={this.categories.body.logo} number={this.categories.numberHeader} > </s-cnt-market-header-unlogged>
+            : <s-cnt-market-header categories={this.categories} login={this.login} > </s-cnt-market-header>
         }
       </div>
     );

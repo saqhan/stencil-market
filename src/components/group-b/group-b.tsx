@@ -28,10 +28,15 @@ export class GroupB implements ComponentInterface {
    * */
   @State() login: boolean = true;
 
+  /**
+   * Первоначальная страница
+   * */
+  @State() firstPage: boolean = false;
+
   render() {
     return (
       <div>
-        <s-cnt-market-header-wrapper categories={header} login={this.login} > </s-cnt-market-header-wrapper>
+        <s-cnt-market-header-wrapper categories={header} login={this.login} firstPage={this.firstPage} > </s-cnt-market-header-wrapper>
         <main >
           <div class='overlayBackDrop'> </div>
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}> </s-cnt-market-promo-slider>
