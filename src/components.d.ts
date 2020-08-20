@@ -136,6 +136,10 @@ export namespace Components {
           * Массив данных для хедера
          */
         "categories": any;
+        /**
+          * Данные об авторизации пользователя
+         */
+        "login": boolean;
     }
     interface SCntMarketHeaderBody {
         "body": NavMenuItemInterface;
@@ -145,6 +149,10 @@ export namespace Components {
           * Данные для магазинов из каталога
          */
         "leftMenuCatalogArr": leftMenuCatalogInterface[];
+        /**
+          * Log in user
+         */
+        "login": boolean;
         "navBar": navBarInterface;
         /**
           * магазины для вашего города
@@ -955,6 +963,10 @@ declare namespace LocalJSX {
           * Массив данных для хедера
          */
         "categories"?: any;
+        /**
+          * Данные об авторизации пользователя
+         */
+        "login"?: boolean;
     }
     interface SCntMarketHeaderBody {
         "body"?: NavMenuItemInterface;
@@ -964,6 +976,10 @@ declare namespace LocalJSX {
           * Данные для магазинов из каталога
          */
         "leftMenuCatalogArr"?: leftMenuCatalogInterface[];
+        /**
+          * Log in user
+         */
+        "login"?: boolean;
         "navBar"?: navBarInterface;
         /**
           * магазины для вашего города
