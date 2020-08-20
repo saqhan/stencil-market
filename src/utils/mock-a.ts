@@ -523,8 +523,7 @@ export const forCourier = [
 
 export const choiceTitleText = "СберМаркет сходит в магазин вместо вас";
 
-export const forApp = [
-  {
+export const forApp = {
     id: 1,
     image:
       "https://sbermarket.ru/assets/webpack/images/home_landing/mobile_sbermarket_2x-05ced63a@1x.png",
@@ -534,8 +533,7 @@ export const forApp = [
       "в Google Play или App Store",
     googlePlayButton: "Google Play",
     appStoreButton: "AppStore",
-  },
-];
+  };
 
 export const getProduct = {
   brand: "Бренды ЛЕНТЫ",

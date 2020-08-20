@@ -44,7 +44,7 @@ export namespace Components {
         /**
           * Данные для компонента app
          */
-        "forApp": MarketAppInterface[];
+        "forApp": MarketAppInterface;
     }
     interface SCntMarketBackToTop {
     }
@@ -858,7 +858,7 @@ declare namespace LocalJSX {
         /**
           * Данные для компонента app
          */
-        "forApp"?: MarketAppInterface[];
+        "forApp"?: MarketAppInterface;
     }
     interface SCntMarketBackToTop {
     }
