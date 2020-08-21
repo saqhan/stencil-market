@@ -25,17 +25,17 @@ export class GroupB implements ComponentInterface {
   /**
    * выводими в зависимости от авторизации начальную шапку
    * */
-  @State() login: boolean = true;
+  @State() loginState: boolean = true;
 
   /**
    * Первоначальная страница
    * */
-  @State() firstPage: boolean = false;
+  @State() firstPageState: boolean = false;
 
   render() {
     return (
       <div>
-        <s-cnt-market-header-wrapper categories={header} login={this.login} firstPage={this.firstPage} > </s-cnt-market-header-wrapper>
+        <s-cnt-market-header-wrapper categories={header} login={this.loginState} firstPage={this.firstPageState} > </s-cnt-market-header-wrapper>
         <main >
           <div class='overlayBackDrop'> </div>
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}> </s-cnt-market-promo-slider>

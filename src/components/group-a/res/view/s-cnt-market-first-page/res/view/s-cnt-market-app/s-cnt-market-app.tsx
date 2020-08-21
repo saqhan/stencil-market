@@ -42,7 +42,6 @@ export class SCntMarketApp implements ComponentInterface {
                 class="image"
                 style={{ backgroundImage: "url(" + this.forApp.image + ")" }}
               >
-                {" "}
               </div>
             </div>
           </div>
