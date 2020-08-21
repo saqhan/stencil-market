@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, EventEmitter, h, Prop, Event} from "@stencil/core";
-import { MarketProductInterface } from "./res/interface/common.interface";
+import {MarketProductInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-product",

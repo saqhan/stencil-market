@@ -1,10 +1,9 @@
 /**
  * Элементы компонента Recommended
  */
+import {MarketRecommendedArrInterface} from "../view/s-cnt-market-item-recommended/res/interface/common.interface";
+
 export interface MarketRecommendedInterface {
-  id: number
-  image: any,
-  price: string,
-  productName: string,
-  weight: string,
+  recommendedTitle: string;
+  featuredProduct: MarketRecommendedArrInterface[];
 }

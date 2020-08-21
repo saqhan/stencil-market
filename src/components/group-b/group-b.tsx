@@ -1,8 +1,7 @@
 import {Component, ComponentInterface, h, State} from '@stencil/core';
 import {header} from "../../utils/mock-b";
 import {
-  footerMenu, forDownFooter, forFooterInfo, forUpFooterForm,
-  logoFooter,
+  footerData,
   productsList,
   productsSliderCards,
   productsSliderTitle,
@@ -26,12 +25,17 @@ export class GroupB implements ComponentInterface {
   /**
    * выводими в зависимости от авторизации начальную шапку
    * */
-  @State() login: boolean = false;
+  @State() loginState: boolean = true;
+
+  /**
+   * Первоначальная страница
+   * */
+  @State() firstPageState: boolean = false;
 
   render() {
     return (
       <div>
-        <s-cnt-market-header-wrapper categories={header} login={this.login} > </s-cnt-market-header-wrapper>
+        <s-cnt-market-header-wrapper categories={header} login={this.loginState} firstPage={this.firstPageState} > </s-cnt-market-header-wrapper>
         <main >
           <div class='overlayBackDrop'> </div>
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}> </s-cnt-market-promo-slider>
@@ -41,13 +45,7 @@ export class GroupB implements ComponentInterface {
           > </s-cnt-market-recently-watched>
           {this.showModalState === true ? (<s-cnt-market-modal-window onClickOnModal={() => this.showOrCloseModal()}> </s-cnt-market-modal-window>
           ) : ("")}
-          <s-cnt-market-footer
-            logoFooter={logoFooter}
-            footerMenu={footerMenu}
-            forUpFooterForm={forUpFooterForm}
-            forDownFooter={forDownFooter}
-            forFooterInfo={forFooterInfo}
-          > </s-cnt-market-footer>
+          <s-cnt-market-footer footerData={footerData}></s-cnt-market-footer>
           <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
         </main>
       </div>
@@ -55,9 +53,9 @@ export class GroupB implements ComponentInterface {
   }
 
 
-/**
- * GROUP A
- * */
+  /**
+   * GROUP A
+   * */
 
   /**
    * Открытие и закрытие модального окна

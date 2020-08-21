@@ -11,9 +11,7 @@ export class SCntMarketRecommended implements ComponentInterface {
   /**
    * Данные для Recommended
    */
-  @Prop() getRecommended: MarketRecommendedInterface[] = [];
-
-  @Prop() info: any;
+  @Prop() getRecommended: MarketRecommendedInterface;
 
   /**
    *
@@ -33,29 +31,29 @@ export class SCntMarketRecommended implements ComponentInterface {
   render() {
     return (
       <div class="recommended products">
-          <div class="row justify-content-between">
-            <div class="col">
-              <div class="info">
-                {this.info}
-              </div>
+        <div class="row justify-content-between">
+          <div class="col">
+            <div class="info">
+              {this.getRecommended.recommendedTitle}
             </div>
-            {/*<div class="col-2">*/}
-            {/*  <div class="icons">*/}
-            {/*    <div class="arrow-left">*/}
-            {/*      <i class="fa fa-arrow-left arrow" aria-hidden="true"/>*/}
-            {/*    </div>*/}
-            {/*    <div class="arrow-right">*/}
-            {/*      <i class="fa fa-arrow-right" aria-hidden="true"/>*/}
-            {/*    </div>*/}
-            {/*  </div>*/}
-            {/*</div>*/}
           </div>
-          <div class="no-gutters" ref={(el) => (this.carouselTag = el)}>
-            <GetRecommended
-              array={this.getRecommended}>
-            </GetRecommended>
-          </div>
+          {/*<div class="col-2">*/}
+          {/*  <div class="icons">*/}
+          {/*    <div class="arrow-left">*/}
+          {/*      <i class="fa fa-arrow-left arrow" aria-hidden="true"/>*/}
+          {/*    </div>*/}
+          {/*    <div class="arrow-right">*/}
+          {/*      <i class="fa fa-arrow-right" aria-hidden="true"/>*/}
+          {/*    </div>*/}
+          {/*  </div>*/}
+          {/*</div>*/}
         </div>
+        <div class="no-gutters" ref={(el) => (this.carouselTag = el)}>
+          <GetRecommended
+            array={this.getRecommended.featuredProduct}>
+          </GetRecommended>
+        </div>
+      </div>
     );
   }
 }
