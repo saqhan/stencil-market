@@ -42,7 +42,14 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
             />
             <div class='coincidence-unit-wrapper'>
               <div class='coincidence-unit-container'>
-                {this.rezBlock ? this.AddressForSelected() : ''}
+                {
+                  this.rezBlock ?
+                    <AddressForSelectedFunctionalComponent arr={this.deliveryData.cityForSelectedDelivery}
+                                                           AddressItems={this.AddressItems}
+                    /> :
+                    ''
+                }
+
               </div>
             </div>
             <div class="map-input-icon">
@@ -100,19 +107,21 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
    * перменная для создания массива из адресов
    **/
   public AddressItems = [];
+}
 
-  /**
-   * компонентная функция для вывода адресов магазинов
-   **/
-  public AddressForSelected() {
-    return this.deliveryData.cityForSelectedDelivery.map((i) => {
-      return i.storeAddress.map((item) => {
-        return (
-          <div class="coincidence-unit-item hide" ref={(el) => this.AddressItems.push(el)}>
-            {item.storeAddress}
-          </div>
-        );
-      })
+/**
+ * компонентная функция для вывода адресов магазинов при совпадении в поиске
+ **/
+const AddressForSelectedFunctionalComponent = (props) => {
+  return props.arr.map((i) => {
+    return i.storeAddress.map((item) => {
+      return (
+        <div class="coincidence-unit-item hide"
+             ref={(el) => props.AddressItems.push(el)}
+        >
+          {item.storeAddress}
+        </div>
+      );
     })
-  }
+  })
 }
