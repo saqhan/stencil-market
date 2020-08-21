@@ -162,7 +162,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
             <div class="password-view" ref={(el) => this.passViewRef = el} onClick={() => this.passView('pass')}>
               <i class="far fa-eye"></i>
             </div>
-            <div class="discharge-login" ref={(el) => this.resetPass = el}
+            <div class="discharge-login hide" ref={(el) => this.resetPass = el}
                  onClick={() => {
                    this.reset(this.regPassword);
                    this.checkPasswordValueInput();
@@ -187,7 +187,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
                  onClick={() => this.passView('passConf')}>
               <i class="far fa-eye"></i>
             </div>
-            <div class="discharge-login" ref={(el) => this.resetConfPass = el}>
+            <div class="discharge-login hide" ref={(el) => this.resetConfPass = el}>
               {/*должен быть "х" для сброса логина*/}
             </div>
           </div>
@@ -328,7 +328,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         this.regPassword.style.backgroundColor = '#f7f7f7';
         this.resetPass.classList.add('hide');
 
-        this.passwordError.innerHTML = 'Введите e-mail';
+        this.passwordError.innerHTML = 'Введите пароль';
         this.regPassword.style.boxShadow = 'inset 0 -2px 0 0 #f36';
         this.btnReg.setAttribute("disabled", "disabled");
       }
