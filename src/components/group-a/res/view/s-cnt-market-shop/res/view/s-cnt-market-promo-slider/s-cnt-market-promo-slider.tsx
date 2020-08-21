@@ -1,6 +1,8 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 import { MarketPromoSliderInterface } from "./res/interface/common.interface";
 
+declare const Flickity: any;
+
 @Component({
   tag: "s-cnt-market-promo-slider",
   styleUrl: "s-cnt-market-promo-slider.css",
@@ -20,12 +22,13 @@ export class SCntMarketPromoSlider implements ComponentInterface {
 
   componentDidLoad() {
     const elem = this.promoCarouselTag;
-    // @ts-ignore
-    const flkty = new Flickity(elem, {
-      // options
+
+    new Flickity(elem, {
       cellAlign: 'left',
       pageDots: false,
+      freeScroll: true,
       draggable: false,
+      wrapAround: true,
       percentPosition: false,
     });
   }
@@ -33,13 +36,13 @@ export class SCntMarketPromoSlider implements ComponentInterface {
   render() {
     return (
       <div class="main-carousel" ref={(el) => this.promoCarouselTag = el}>
-        <PromoSliderCard array={this.promoSliderCards}></PromoSliderCard>
+        <PromoSliderCardFunctionalComponent array={this.promoSliderCards}></PromoSliderCardFunctionalComponent>
       </div>
     );
   }
 }
 
-const PromoSliderCard = (props) => {
+const PromoSliderCardFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
       <div class="carousel-cell">

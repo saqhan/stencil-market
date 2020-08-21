@@ -22,7 +22,7 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   @Prop() selectShops: selectShopsInterface[];
 
   /**
-   *
+   * состояние модалки
    * */
   @Prop() openedStoreSelect: boolean;
 
@@ -31,6 +31,9 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
    * */
   @Event() closeStoreSelect: EventEmitter;
 
+  /**
+   * Обертка модалки
+   * */
   @State() selectStoreTag: HTMLElement;
 
   render() {
@@ -67,7 +70,11 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
               </div>
               <div class="store-select-content">
                 <div class="container">
-                  <div class="row">{this.getSelectShops(this.selectShops)}</div>
+                  <div class="row">
+                    <GetAvailableShopsFunctionalComponent
+                      array={this.selectShops}
+                    ></GetAvailableShopsFunctionalComponent>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,36 +85,9 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   }
 
   /**
-   * получение магазинов
-   * */
-  public getSelectShops(array): selectShopsInterface {
-    return array.map((item) => {
-      return (
-        <div class="col-12 col-md-6 col-lg-4  ">
-          <a class="store-card">
-            <div class="store-card-description">
-              <div class="store-card-name">{item.title}</div>
-              <div class="store-card-detail">
-                {item.description}, {item.time}
-              </div>
-            </div>
-            <div
-              class="store-card-img"
-              style={{
-                backgroundColor: `${item.backgroundColor}`,
-                backgroundImage: `url(${item.img})`,
-              }}
-            ></div>
-          </a>
-        </div>
-      );
-    });
-  }
-
-  /**
    * клик на открытие меню
    * */
-  public clickOnSelectStoreHandler(event) {
+  public clickOnSelectStoreHandler(event): void {
     if (event.target === this.selectStoreTag) {
       this.closeStoreSelect.emit();
     }
@@ -116,7 +96,34 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   /**
    * клик на закрытие меню
    * */
-  public clickOnCloseSelectStoreHandler() {
+  public clickOnCloseSelectStoreHandler(): void {
     this.closeStoreSelect.emit();
   }
 }
+
+/**
+ * Получение доступных магазинов
+ * */
+const GetAvailableShopsFunctionalComponent = (props) => {
+  return props.array.map((item) => {
+    return (
+      <div class="col-12 col-md-6 col-lg-4  ">
+        <a class="store-card">
+          <div class="store-card-description">
+            <div class="store-card-name">{item.title}</div>
+            <div class="store-card-detail">
+              {item.description}, {item.time}
+            </div>
+          </div>
+          <div
+            class="store-card-img"
+            style={{
+              backgroundColor: `${item.backgroundColor}`,
+              backgroundImage: `url(${item.img})`,
+            }}
+          ></div>
+        </a>
+      </div>
+    );
+  });
+};
