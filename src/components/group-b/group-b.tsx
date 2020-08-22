@@ -26,12 +26,12 @@ export class GroupB implements ComponentInterface {
   /**
    * выводими в зависимости от авторизации начальную шапку
    * */
-  @State() loginState: boolean = true;
+  @State() loginState: boolean = false;
 
   /**
    * Первоначальная страница
    * */
-  @State() firstPageState: boolean = false;
+  @State() firstPageState: boolean = true;
 
   render() {
     return (
