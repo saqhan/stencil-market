@@ -53,9 +53,9 @@ export class GroupB implements ComponentInterface {
   }
 
 
-/**
- * GROUP A
- * */
+  /**
+   * GROUP A
+   * */
 
   /**
    * Открытие и закрытие модального окна

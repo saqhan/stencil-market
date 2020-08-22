@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketRecommendedInterface } from "../../interface/common.interface";
+import {MarketRecommendedArrInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-item-recommended",
@@ -11,7 +11,7 @@ export class SCntMarketItemRecommended implements ComponentInterface {
   /**
    * Данные для Item-Recommended
    */
-  @Prop() getRecommended: MarketRecommendedInterface;
+  @Prop() getRecommended: MarketRecommendedArrInterface;
 
   render() {
     return (

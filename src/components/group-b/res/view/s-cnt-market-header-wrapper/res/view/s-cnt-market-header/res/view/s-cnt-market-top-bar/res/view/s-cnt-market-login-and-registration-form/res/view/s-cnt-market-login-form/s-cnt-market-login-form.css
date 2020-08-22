@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+.hide{
+  display: none;
+}
+
 .login-form {
   transition: all .25s ease-out;
 }
@@ -44,6 +48,45 @@
 .view-input:focus {
   border-color: #1ea038;
   background-color: white;
+}
+
+.password-view {
+  position: absolute;
+  right: 13px;
+  bottom: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: right 0.1s ease;
+}
+
+.discharge-login {
+  position: absolute;
+  right: 36px;
+  top: 12px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: display 0.2s ease;
+}
+
+.discharge-login:hover {
+  opacity: 1;
+}
+
+.discharge-login:before, .discharge-login:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 18px;
+  width: 2px;
+  background-color: #333;
+}
+
+.discharge-login:before {
+  transform: rotate(45deg);
+}
+
+.discharge-login:after {
+  transform: rotate(-45deg);
 }
 
 .error-input {
@@ -213,7 +256,6 @@
   transition-timing-function: ease-in-out;
   transition-property: color, background-color, border;
 }
-
 
 
 .login-social-btn span {
