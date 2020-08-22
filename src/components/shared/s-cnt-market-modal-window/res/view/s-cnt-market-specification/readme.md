@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property                       | Attribute           | Description                 | Type                             | Default     |
-| ------------------------------ | ------------------- | --------------------------- | -------------------------------- | ----------- |
-| `MarketSpecificationInterface` | --                  | Интерфейс для Specification | `MarketSpecificationInterface[]` | `[]`        |
-| `getSpecification`             | `get-specification` | Данные для Specification    | `any`                            | `undefined` |
+| Property           | Attribute | Description              | Type                              | Default     |
+| ------------------ | --------- | ------------------------ | --------------------------------- | ----------- |
+| `getSpecification` | --        | Данные для Specification | `MarketGetSpecificationInterface` | `undefined` |
 
 
 ## Dependencies

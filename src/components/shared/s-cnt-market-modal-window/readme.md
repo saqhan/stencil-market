@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property       | Attribute | Description                | Type                          | Default     |
+| -------------- | --------- | -------------------------- | ----------------------------- | ----------- |
+| `productModal` | --        | Данные для модального окна | `MarketProductModalInterface` | `undefined` |
+
+
 ## Events
 
 | Event          | Description                             | Type                |
@@ -21,9 +28,9 @@
 
 ### Depends on
 
-- [s-cnt-market-product](res/view/s-cnt-market-product)
-- [s-cnt-market-recommended](res/view/s-cnt-market-recommended)
-- [s-cnt-market-specification](res/view/s-cnt-market-specification)
+- [s-cnt-market-product](./res/view/s-cnt-market-product)
+- [s-cnt-market-recommended](./res/view/s-cnt-market-recommended)
+- [s-cnt-market-specification](./res/view/s-cnt-market-specification)
 
 ### Graph
 ```mermaid

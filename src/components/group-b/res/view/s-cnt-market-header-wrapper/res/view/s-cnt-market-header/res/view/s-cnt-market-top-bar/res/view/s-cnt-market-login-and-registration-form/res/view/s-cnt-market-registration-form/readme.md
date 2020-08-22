@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description                              | Type           | Default     |
-| -------- | --------- | ---------------------------------------- | -------------- | ----------- |
-| `reg`    | --        | объект данных для компонента регистрации | `Registration` | `undefined` |
-| `users`  | --        | массив с данными пользователей           | `UsersArr[]`   | `undefined` |
+| Property | Attribute | Description                              | Type                          | Default     |
+| -------- | --------- | ---------------------------------------- | ----------------------------- | ----------- |
+| `reg`    | --        | объект данных для компонента регистрации | `MarketRegistrationInterface` | `undefined` |
+| `users`  | --        | массив с данными пользователей           | `MarketUsersArrInterface[]`   | `[]`        |
 
 
 ## Dependencies

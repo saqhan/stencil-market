@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property           | Attribute | Description                | Type                  | Default     |
-| ------------------ | --------- | -------------------------- | --------------------- | ----------- |
-| `productsListCard` | --        | Данные для карточки товара | `MarketCardInterface` | `undefined` |
+| Property           | Attribute | Description                | Type                             | Default     |
+| ------------------ | --------- | -------------------------- | -------------------------------- | ----------- |
+| `productsListCard` | --        | Данные для карточки товара | `MarketProductListCardInterface` | `undefined` |
 
 
 ## Events

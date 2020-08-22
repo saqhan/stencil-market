@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property | Attribute | Description                        | Type         | Default     |
-| -------- | --------- | ---------------------------------- | ------------ | ----------- |
-| `login`  | --        | объект данных для компонента входа | `Login`      | `undefined` |
-| `users`  | --        | массив с данными пользователей     | `UsersArr[]` | `undefined` |
+| Property | Attribute | Description                        | Type                        | Default     |
+| -------- | --------- | ---------------------------------- | --------------------------- | ----------- |
+| `login`  | --        | объект данных для компонента входа | `MarketLoginInterface`      | `undefined` |
+| `users`  | --        | массив с данными пользователей     | `MarketUsersArrInterface[]` | `undefined` |
 
 
 ## Dependencies

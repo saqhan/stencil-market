@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property         | Attribute | Description            | Type                           | Default     |
-| ---------------- | --------- | ---------------------- | ------------------------------ | ----------- |
-| `getRecommended` | --        | Данные для Recommended | `MarketRecommendedInterface[]` | `[]`        |
-| `info`           | `info`    |                        | `any`                          | `undefined` |
+| Property         | Attribute | Description            | Type                            | Default     |
+| ---------------- | --------- | ---------------------- | ------------------------------- | ----------- |
+| `getRecommended` | --        | Данные для Recommended | `MarketGetRecommendedInterface` | `undefined` |
 
 
 ## Dependencies
@@ -21,7 +20,7 @@
 
 ### Depends on
 
-- [s-cnt-market-item-recommended](res/view/s-cnt-market-item-recommended)
+- [s-cnt-market-item-recommended](./res/view/s-cnt-market-item-recommended)
 
 ### Graph
 ```mermaid

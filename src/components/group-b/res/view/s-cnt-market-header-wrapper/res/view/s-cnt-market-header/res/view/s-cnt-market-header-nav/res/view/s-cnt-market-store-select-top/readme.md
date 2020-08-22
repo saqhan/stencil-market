@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property            | Attribute             | Description       | Type                     | Default     |
-| ------------------- | --------------------- | ----------------- | ------------------------ | ----------- |
-| `openedStoreSelect` | `opened-store-select` | состояние модалки | `boolean`                | `undefined` |
-| `selectShops`       | --                    | selectShops       | `selectShopsInterface[]` | `undefined` |
+| Property            | Attribute             | Description       | Type                           | Default     |
+| ------------------- | --------------------- | ----------------- | ------------------------------ | ----------- |
+| `openedStoreSelect` | `opened-store-select` | состояние модалки | `boolean`                      | `undefined` |
+| `selectShops`       | --                    | selectShops       | `MarketSelectShopsInterface[]` | `undefined` |
 
 
 ## Events

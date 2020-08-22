@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property             | Attribute | Description                      | Type                         | Default     |
-| -------------------- | --------- | -------------------------------- | ---------------------------- | ----------- |
-| `leftMenuCatalogArr` | --        | Данные для магазинов из каталога | `leftMenuCatalogInterface[]` | `[]`        |
-| `login`              | `login`   | Log in user                      | `boolean`                    | `undefined` |
-| `navBar`             | --        |                                  | `navBarInterface`            | `undefined` |
-| `selectShops`        | --        | магазины для вашего города       | `selectShopsInterface[]`     | `[]`        |
+| Property             | Attribute | Description                      | Type                               | Default     |
+| -------------------- | --------- | -------------------------------- | ---------------------------------- | ----------- |
+| `leftMenuCatalogArr` | --        | Данные для магазинов из каталога | `MarketLeftMenuCatalogInterface[]` | `[]`        |
+| `login`              | `login`   | Log in user                      | `boolean`                          | `undefined` |
+| `navBar`             | --        |                                  | `MarketNavBarInterface`            | `undefined` |
+| `selectShops`        | --        | магазины для вашего города       | `MarketSelectShopsInterface[]`     | `[]`        |
 
 
 ## Dependencies

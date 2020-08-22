@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property         | Attribute | Description                 | Type                         | Default     |
-| ---------------- | --------- | --------------------------- | ---------------------------- | ----------- |
-| `getRecommended` | --        | Данные для Item-Recommended | `MarketRecommendedInterface` | `undefined` |
+| Property         | Attribute | Description                 | Type                             | Default     |
+| ---------------- | --------- | --------------------------- | -------------------------------- | ----------- |
+| `getRecommended` | --        | Данные для Item-Recommended | `MarketFeaturedProductInterface` | `undefined` |
 
 
 ## Dependencies
