@@ -1,8 +1,8 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 
 @Component({
-  tag: "s-cnt-market-header-unlogged",
-  styleUrl: "s-cnt-market-header-unlogged.css",
+  tag: "s-cnt-market-header-base",
+  styleUrl: "s-cnt-market-header-base.css",
   shadow: false,
   scoped: true,
 })

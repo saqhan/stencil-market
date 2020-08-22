@@ -11,7 +11,7 @@ export class SCntMarketSpecification implements ComponentInterface {
   /**
    * Данные для Specification
    */
-  @Prop() getSpecification: any;
+  @Prop() getSpecification: MarketSpecificationInterface;
 
   /**
    * Интерфейс для Specification

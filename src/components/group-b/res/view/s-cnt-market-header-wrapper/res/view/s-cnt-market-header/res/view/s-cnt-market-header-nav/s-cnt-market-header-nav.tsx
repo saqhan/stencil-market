@@ -12,6 +12,13 @@ import {
   scoped: true,
 })
 export class SCntMarketHeaderNav implements ComponentInterface {
+
+
+  /**
+   * Log in user
+   * */
+  @Prop() login: boolean;
+
   /*
    * массив данных для навигации
    **/
@@ -47,7 +54,10 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   @State() openedStoreSelect: boolean;
 
-  private modalTag: any;
+  /**
+   * Тег для модалки
+   * */
+  private modalTag: HTMLElement;
 
   render() {
     return (
@@ -101,14 +111,26 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 </div>
               </div>
               <div class="nav-user-profile">
-                <div
-                  class="user-profile-btn"
-                  onClick={() => this.onClickAccountHandler()}
-                >
-                  <a>
-                    <i class={this.navBar.iconUser}></i>
-                  </a>
-                </div>
+                {this.login
+                  ? (<div
+                    class="user-profile-btn"
+                    onClick={() => this.onClickAccountHandler()}
+                  >
+                    <a>
+                      <i class={this.navBar.iconUser}></i>
+                    </a>
+                  </div>)
+                : (<div
+                      class=" not-logged"
+                      onClick={() => this.onClickAccountHandler()}
+                    >
+                      <a>
+                        <i class={this.navBar.iconUser}></i> Войти
+                      </a>
+                    </div>)
+                }
+
+
                 <div
                   class="menu-account-wrapper"
                   ref={(el) => (this.modalTag = el)}
@@ -127,12 +149,15 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class={this.navBar.iconWishList}></i>
                 </a>
               </div>
-              <div class="user-orders">
-                <a>
+              {this.login
+                ? (<div class="user-orders">
+                    <a>
                   <i class={this.navBar.iconOrders}></i>
                   <span>{this.navBar.titleOrders}</span>
-                </a>
-              </div>
+                    </a>
+                  </div>)
+                : ''
+              }
               <div class="user-cart">
                 <a onClick={() => this.onClickBasketHandler()}>
                   <i class="fas fa-shopping-cart"></i>
@@ -167,7 +192,6 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * close account menu
    * */
-
   public closeAccountMenuHandler() {
     this.isShowUserAccount = false;
   }

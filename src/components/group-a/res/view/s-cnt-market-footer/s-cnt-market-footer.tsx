@@ -1,10 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import {
-  MarketDownFooterInterface,
-  MarketFooterMenuInterface,
-  MarketUpFooterFormInterface,
-} from "./res/interface/common.interface";
-// import {logoFooter} from "../../../../../utils/mock-a";
+import { footerDataInterface } from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-footer",
@@ -13,20 +8,10 @@ import {
   scoped: true,
 })
 export class SCntMarketFooter implements ComponentInterface {
-  @Prop() logoFooter: string;
-
-  @Prop() footerMenu: MarketFooterMenuInterface[] = [];
-
-  @Prop() forUpFooterForm: MarketUpFooterFormInterface;
-
-  @Prop() forDownFooter: MarketDownFooterInterface;
-
-  @Prop() forFooterInfo;
-
   /**
    * Данные для всего футера
    * */
-  @Prop() footerData: any;
+  @Prop() footerData: footerDataInterface;
 
   render() {
     return (
@@ -40,26 +25,32 @@ export class SCntMarketFooter implements ComponentInterface {
                   style={{
                     backgroundImage: `url(${this.footerData.logoFooter})`,
                   }}
-                >
-                </div>
+                ></div>
               </div>
-              <FooterMenu array={this.footerMenu} />
+              <FooterMenu array={this.footerData.footerMenu} />
               <div class=" col-12 col-sm-12 col-md-4 col-lg-3 ">
                 <s-cnt-market-up-footer-form
-                  forUpFooterForm={this.forUpFooterForm}
+                  footerContactColumn={this.footerData.footerContactColumn}
                 />
               </div>
             </div>
           </div>
           <div class="line"> </div>
         </div>
-        <s-cnt-market-down-footer forDownFooter={this.forDownFooter} />
-        <s-cnt-market-footer-info forFooterInfo={this.forFooterInfo} />
+        <s-cnt-market-down-footer
+          footerCopyrightRow={this.footerData.footerCopyrightRow}
+        />
+        <s-cnt-market-footer-info
+          footerLinksPolitics={this.footerData.footerLinksPolitics}
+        />
       </footer>
     );
   }
 }
 
+/**
+ * Получаем список элементов меню
+ * */
 const FooterMenu = (props) => {
   return props.array.map((item) => {
     return (

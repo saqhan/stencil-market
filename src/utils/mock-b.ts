@@ -1410,7 +1410,7 @@ export const header = {
       img:
         "https://sbermarket.ru/spree/retailer_logos/86854/default/selgros_square.png?15132714340",
       backgroundColor: "#e52720",
-      city: "moscow",
+      city: "SPB",
     },
     {
       id: 3,

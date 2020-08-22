@@ -3,6 +3,10 @@
   box-sizing: border-box;
 }
 
+.hide{
+  display: none;
+}
+
 .registration-form {
   transition: all .25s ease-out;
 }
@@ -44,12 +48,42 @@
   background-color: white;
 }
 
-.password-view{
+.password-view {
   position: absolute;
   right: 13px;
   bottom: 12px;
   font-size: 14px;
   cursor: pointer;
+}
+
+.discharge-login {
+  position: absolute;
+  right: 36px;
+  top: 12px;
+  opacity: 0.3;
+  cursor: pointer;
+  transition: display 0.2s ease;
+}
+
+.discharge-login:hover {
+  opacity: 1;
+}
+
+.discharge-login:before, .discharge-login:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 18px;
+  width: 2px;
+  background-color: #333;
+}
+
+.discharge-login:before {
+  transform: rotate(45deg);
+}
+
+.discharge-login:after {
+  transform: rotate(-45deg);
 }
 
 .error-input {
@@ -178,7 +212,7 @@
     font-size: 12px;
   }
 
-  .form-footer-custom-conditions{
+  .form-footer-custom-conditions {
     font-size: 10px;
     padding-bottom: 5px;
   }

@@ -1,5 +1,6 @@
-import { Component, ComponentInterface, h, State } from "@stencil/core";
+import {Component, ComponentInterface, h, State} from "@stencil/core";
 import {
+  productModal,
   productsList,
   productsSliderCards,
   productsSliderTitle,
@@ -42,8 +43,9 @@ export class SCntMarketShop implements ComponentInterface {
         ></s-cnt-market-recently-watched>
         {this.showModalState === true ? (
           <s-cnt-market-modal-window
+            productModal={productModal}
             onClickOnModal={() => this.showOrCloseModal()}
-          ></s-cnt-market-modal-window>
+          />
         ) : (
           ""
         )}

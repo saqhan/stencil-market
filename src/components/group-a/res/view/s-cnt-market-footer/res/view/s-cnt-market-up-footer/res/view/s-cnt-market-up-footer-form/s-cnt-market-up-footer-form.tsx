@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import {MarketUpFooterFormInterface} from "../../../../../interface/common.interface";
+import {footerContactColumnInterface} from "../../../../../interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-up-footer-form",
@@ -9,18 +9,18 @@ import {MarketUpFooterFormInterface} from "../../../../../interface/common.inter
 })
 export class SCntMarketUpFooterForm implements ComponentInterface {
 
-  @Prop() forUpFooterForm: MarketUpFooterFormInterface;
+  @Prop() footerContactColumn: footerContactColumnInterface;
 
   render() {
     return (
       <div class="upFooterForm">
-        <div class="number">{this.forUpFooterForm.number}</div>
-        <div class="time">{this.forUpFooterForm.time}</div>
+        <div class="number">{this.footerContactColumn.number}</div>
+        <div class="time">{this.footerContactColumn.time}</div>
         <div class="input-block">
           <i class="far fa-comment-alt icon" />
-          <div class="input">{this.forUpFooterForm.input}</div>
+          <div class="input">{this.footerContactColumn.input}</div>
         </div>
-        <div class="text">{this.forUpFooterForm.text}</div>
+        <div class="text">{this.footerContactColumn.text}</div>
       </div>
     );
   }

@@ -56,7 +56,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
             {this.pickUpData.city}
           </span>
           <div class="city-option-for-selected" onClick={() => this.openCityList()}>
-            {this.selectedCity(this.pickUpData.cityForSelected)}
+            {this.SelectedCityFunctionalComponent(this.pickUpData.cityForSelected)}
             <span>
               <i class={this.pickUpData.selectIcon}></i>
             </span>
@@ -68,10 +68,10 @@ export class SCntMarketPickupInModal implements ComponentInterface {
 
                   </div>
                   <div class="selection-city-block">
-                    <CityForSelected arr={this.pickUpData.cityForSelected} idSelected={(x) => this.idSelected(x)}/>
+                    <CityForSelectedFunctionalComponent arr={this.pickUpData.cityForSelected} idSelected={(x) => this.idSelected(x)}/>
                   </div>
                 </div>
-                 :
+                :
                 ''
             }
           </div>
@@ -81,7 +81,8 @@ export class SCntMarketPickupInModal implements ComponentInterface {
             <div class="store-list">
               <div class="store-list-block-wrap">
                 <div class="store-list-logo-img">
-                  <div style={{backgroundImage: "url(" + this.pickUpData.logoImg + ")"}}>
+                  <div
+                    style={{backgroundImage: "url(" + this.pickUpData.logoImg + ")"}}>
                     {/*картинка лого*/}
                   </div>
                 </div>
@@ -89,139 +90,27 @@ export class SCntMarketPickupInModal implements ComponentInterface {
                   <span class="store-name">
                     {this.pickUpData.storeName}
                   </span>
-                  {this.selectedAddress(this.pickUpData.cityForSelected)}
+                  {this.SelectedAddressFunctionalComponent(this.pickUpData.cityForSelected)}
                 </div>
               </div>
               <div>
                 {/*количество магазинов из длины массива и текст из объекта вызванная из функции*/}
-                {this.storeQuantity()}
+                {this.StoreQuantityFunctionalComponent()}
               </div>
               <div>
-                {this.iconOrButton()}
+                {this.IconOrButtonFunctionalComponent()}
               </div>
             </div>
           </div>
           {
             this.StoreAddress ?
               //выводящийся и закрывающийся блок с адресами магазинов по клику меняющему State
-              this.StoreAddressComp(this.pickUpData.cityForSelected) :
+              this.StoreAddressCompFunctionalComponent(this.pickUpData.cityForSelected) :
               ''
           }
         </div>
       </div>
     );
-  }
-
-  /*
-* компонентная функция для вывода блоков списка магазинов
- */
-  public StoreAddressComp(props) {
-    return props.map(item => {
-      if (this.idCity === item.id) {
-        return item.storeAddress.map((item) => {
-          return (
-            <div>
-              <hr/>
-              <div class="store-list-wrapper">
-                <div class="store-list">
-                  <div class="store-address-and-work-time">
-              <span class="store-address">
-                {item.storeAddress}
-              </span>
-                    <span class="store-work-time">
-                {item.storeWorkTime}
-              </span>
-                  </div>
-                  <button class="store-secet-btn" id={this.idSelectedAddress(item.id, 'selectedAddress')}
-                          onClick={() => {
-                            this.idSelectionAddress.emit(item.storeAddress);
-                            this.idSelectionAddressInside(item.id)
-                          }}>
-                    <i class={this.idSelectedAddress(item.id, 'fas fa-check mr-1')}></i>
-                    {item.btnText}
-                  </button>
-                </div>
-              </div>
-            </div>
-          );
-        })
-      }
-    })
-
-  }
-
-  /**
-   * Вывод выбранного города
-   */
-  public selectedCity(array) {
-    return array.map(item => {
-      if (this.idCity === item.id) {
-        return (
-          <span>
-            {item.city}
-          </span>
-        );
-      }
-    })
-  }
-
-  /**
-   * Вывод выбранного адресов магазинов выбранного города
-   */
-  public selectedAddress(array) {
-    return array.map(item => {
-      if (this.idCity === item.id) {
-        return item.storeAddress.map(i => {
-          if (this.idAddress === i.id) {
-            return (
-              <span class="store-selected-address">
-              {i.storeAddress}
-            </span>
-            );
-          }
-        })
-      }
-    })
-  }
-
-  /**
-   * Вывод количества магазинов
-   */
-  public storeQuantity() {
-    if (typeof this.idAddress != 'number') {
-      return (
-        <div class="number-of-stores">
-          {
-            this.pickUpData.cityForSelected.map(item => {
-              if (this.idCity === item.id) {
-                return (
-                  item.storeAddress.length + ' ' + this.pickUpData.numberOfStores
-                )
-              }
-            })
-          }
-        </div>
-      );
-    }
-  }
-
-  /**
-   * Изменение Иконок на button при выборе магазина
-   */
-  public iconOrButton() {
-    if (typeof this.idAddress != 'number') {
-      return (
-        <div class="list-stores-open-icon">
-          <i class={this.StoreAddress ? this.pickUpData.selectedStoreIcon : this.pickUpData.storeWithdrawalIcon}></i>
-        </div>
-      );
-    } else {
-      return (
-        <button class="store-secet-btn" id='updateSelectedAddress'>
-          {this.pickUpData.updateSelectedAddress}
-        </button>
-      );
-    }
   }
 
   /**
@@ -243,7 +132,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
    * Вывод количества магазинов
    */
   public idAddressNull() {
-    if (typeof this.idCity != 'undefined' || 1) {
+    if (typeof this.idCity != 'undefined') {
       this.idAddress = null;
     }
   }
@@ -280,12 +169,124 @@ export class SCntMarketPickupInModal implements ComponentInterface {
     }
   }
 
+  /**
+   * Вывод выбранного города
+   */
+  public SelectedCityFunctionalComponent(array) {
+    return array.map(item => {
+      if (this.idCity === item.id) {
+        return (
+          <span>
+            {item.city}
+          </span>
+        );
+      }
+    })
+  }
+
+  /**
+   * Вывод выбранного адресов магазинов выбранного города
+   */
+  public SelectedAddressFunctionalComponent(array) {
+    return array.map(item => {
+      if (this.idCity === item.id) {
+        return item.storeAddress.map(i => {
+          if (this.idAddress === i.id) {
+            return (
+              <span class="store-selected-address">
+              {i.storeAddress}
+            </span>
+            );
+          }
+        })
+      }
+    })
+  }
+
+  /**
+   * Вывод количества магазинов
+   */
+  public StoreQuantityFunctionalComponent() {
+    if (typeof this.idAddress != 'number') {
+      return (
+        <div class="number-of-stores">
+          {
+            this.pickUpData.cityForSelected.map(item => {
+              if (this.idCity === item.id) {
+                return (
+                  item.storeAddress.length + ' ' + this.pickUpData.numberOfStores
+                )
+              }
+            })
+          }
+        </div>
+      );
+    }
+  }
+
+  /**
+   * Изменение Иконок на button при выборе магазина
+   */
+  public IconOrButtonFunctionalComponent() {
+    if (typeof this.idAddress != 'number') {
+      return (
+        <div class="list-stores-open-icon">
+          <i class={this.StoreAddress ? this.pickUpData.selectedStoreIcon : this.pickUpData.storeWithdrawalIcon}></i>
+        </div>
+      );
+    } else {
+      return (
+        <button class="store-secet-btn" id='updateSelectedAddress'>
+          {this.pickUpData.updateSelectedAddress}
+        </button>
+      );
+    }
+  }
+
+  /**
+   * компонентная функция для вывода блоков списка магазинов
+   */
+  public StoreAddressCompFunctionalComponent(props) {
+    return props.map(item => {
+      if (this.idCity === item.id) {
+        return item.storeAddress.map((item) => {
+          return (
+            <div>
+              <hr/>
+              <div class="store-list-wrapper">
+                <div class="store-list">
+                  <div class="store-address-and-work-time">
+              <span class="store-address">
+                {item.storeAddress}
+              </span>
+                    <span class="store-work-time">
+                {item.storeWorkTime}
+              </span>
+                  </div>
+                  <button class="store-secet-btn" id={this.idSelectedAddress(item.id, 'selectedAddress')}
+                          onClick={() => {
+                            this.idSelectionAddress.emit(item.storeAddress);
+                            this.idSelectionAddressInside(item.id)
+                          }}>
+                    <i class={this.idSelectedAddress(item.id, 'fas fa-check mr-1')}></i>
+                    {item.btnText}
+                  </button>
+                </div>
+              </div>
+            </div>
+          );
+        })
+      }
+    })
+
+  }
+
 }
 
 /**
  * компонентная функция для вывода списка городов при выборе города
  **/
-const CityForSelected = (props) => {
+const CityForSelectedFunctionalComponent = (props) => {
   return props.arr.map((item) => {
     return (
       <div class="city-for-selected" onClick={() => props.idSelected(item.id)}>

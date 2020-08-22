@@ -1,5 +1,5 @@
-import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
-import { TopBarInterface } from "./res/interface/common.interface";
+import {Component, ComponentInterface, h, Prop, State} from "@stencil/core";
+import {TopBarInterface} from "./res/interface/common.interface";
 
 @Component({
   tag: "s-cnt-market-top-bar",
@@ -125,21 +125,23 @@ export class SCntMarketTopBar implements ComponentInterface {
             </div>
           </div>
         </div>
-        {this.addressCompleted ? (
-          <s-cnt-market-delivery-modal
-            delivery={this.deliveryCompleted}
-            pickUp={this.pickUpCompleted}
-            modalData={this.topBar.modalWindow}
-            onCloseForm={() => this.closeAddressModal()}
-            onOpenDelivery={() => this.openDelivery()}
-            onOpenPickUp={() => this.openPickUp()}
-            onIdSelectionAddress={(detail) => this.idSelectionAddress(detail)}
-            // event-ы для формы входа/регистрации
-            onOpenLogin={() => this.openLoginModal()}
-          />
-        ) : (
-          ""
-        )}
+        {
+          this.addressCompleted ? (
+            <s-cnt-market-delivery-modal
+              delivery={this.deliveryCompleted}
+              pickUp={this.pickUpCompleted}
+              modalData={this.topBar.modalWindow}
+              onCloseForm={() => this.closeAddressModal()}
+              onOpenDelivery={() => this.openDelivery()}
+              onOpenPickUp={() => this.openPickUp()}
+              onIdSelectionAddress={(detail) => this.idSelectionAddress(detail)}
+              // event-ы для формы входа/регистрации
+              onOpenLogin={() => this.openLoginModal()}
+            />
+          ) : (
+            ""
+          )
+        }
       </div>
     );
   }
@@ -149,6 +151,7 @@ export class SCntMarketTopBar implements ComponentInterface {
    */
   public openAddressModal() {
     this.addressCompleted = true;
+    document.body.style.overflow = 'hidden';
   }
 
   /**
@@ -156,6 +159,7 @@ export class SCntMarketTopBar implements ComponentInterface {
    */
   public closeAddressModal() {
     this.addressCompleted = false;
+    document.body.style.overflow = '';
   }
 
   /**
@@ -225,7 +229,7 @@ export class SCntMarketTopBar implements ComponentInterface {
   /**
    * функция для прослушивания значения {detail}(улицы) у блока выбранного магазина
    * */
-  public idSelectionAddress({ detail }) {
+  public idSelectionAddress({detail}) {
     this.idAddress = detail;
     if (detail !== null) {
       if (detail.lenght > 30) {

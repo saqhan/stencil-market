@@ -462,18 +462,18 @@ export const delivery = {
   title: "Доставляем\n" + "\n" + "**в 115 городах** России",
   btn: "Показать всё",
   cities: [
-    { name: "Москва" },
-    { name: "Абакан" },
-    { name: "Анадырь" },
-    { name: "Астрахань" },
-    { name: "Барнаул" },
-    { name: "Бердск" },
-    { name: "Санкт-Петербург" },
-    { name: "Альметьевск" },
-    { name: "Архангельск" },
-    { name: "Балашиха" },
-    { name: "Белгород" },
-    { name: "Бийск" },
+    {name: "Москва"},
+    {name: "Абакан"},
+    {name: "Анадырь"},
+    {name: "Астрахань"},
+    {name: "Барнаул"},
+    {name: "Бердск"},
+    {name: "Санкт-Петербург"},
+    {name: "Альметьевск"},
+    {name: "Архангельск"},
+    {name: "Балашиха"},
+    {name: "Белгород"},
+    {name: "Бийск"},
   ],
 };
 
@@ -523,120 +523,122 @@ export const forCourier = [
 
 export const choiceTitleText = "СберМаркет сходит в магазин вместо вас";
 
-export const forApp = [
-  {
-    id: 1,
-    image: "https://sbermarket.ru/assets/webpack/images/home_landing/mobile_sbermarket_2x-05ced63a@1x.png",
-    title:
-      "Скачивайте наше удобное приложение\n" +
-      "\n" +
-      "в Google Play или App Store",
-    googlePlayButton: "Google Play",
-    appStoreButton: "AppStore",
-  },
-];
-
-export const getProduct = {
-  brand: "Бренды ЛЕНТЫ",
-  products: "Продукты питания",
-  category: "Сладости",
-  image: "https://via.placeholder.com/300x200?text=Text",
-  name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
-  weight: "200 г",
-  price: "252,69 ₽",
-  presence: "Товара много",
-  button: "Купить",
+export const forApp = {
+  id: 1,
+  image:
+    "https://sbermarket.ru/assets/webpack/images/home_landing/mobile_sbermarket_2x-05ced63a@1x.png",
+  title:
+    "Скачивайте наше удобное приложение\n" +
+    "\n" +
+    "в Google Play или App Store",
+  googlePlayButton: "Google Play",
+  appStoreButton: "AppStore",
 };
 
-export const getRecommended = [
-  {
-    id: 1,
-    image: "https://via.placeholder.com/70x70?text=Text",
-    price: "269.59 ₽",
-    productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
-    weight: "190 г",
-  },
-  {
-    id: 2,
-    image: "https://via.placeholder.com/70x70?text=Text",
-    price: "252.69 ₽",
-    productName: "Конфеты Dolce Albero Ассорти",
+export const productModal = {
+  getProduct: {
+    brand: "Бренды ЛЕНТЫ",
+    products: "Продукты питания",
+    category: "Сладости",
+    image: "https://via.placeholder.com/300x200?text=Text",
+    name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
     weight: "200 г",
+    price: "252,69 ₽",
+    presence: "Товара много",
+    button: "Купить",
   },
-  {
-    id: 3,
-    image: "https://via.placeholder.com/70x70?text=Text",
-    price: "115.79 ₽",
-    productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
-    weight: "200 г",
-  },
-  {
-    id: 4,
-    image: "https://via.placeholder.com/70x70?text=Text",
-    price: "105.29 ₽",
-    productName: "Миска Mallony 1,1л",
-    weight: "1 шт",
-  },
-  {
-    id: 5,
-    image: "https://via.placeholder.com/70x70?text=Text",
-    price: "168.49 ₽",
-    productName: "Миска Mallony 3,3л",
-    weight: "1 шт",
-  },
-  {
-    id: 6,
-    image: "https://via.placeholder.com/70x70?text=Text",
-    price: "105.29 ₽",
-    productName: "Грибы вешенки свежие",
-    weight: "300 гр",
-  },
-];
 
-export const getSpecification = {
-  op: "Описание",
-  spec: "Шоколадные конфеты Dolce Albero на каждый день к чаю.",
-  value: "Пищевая ценность",
-  weight: "на 100 г",
-  protein: "Белки",
-  weightProtein: "6,8 г",
-  fat: "Жиры",
-  weightFat: "37,9 г",
-  carbohydrates: "Углеводы",
-  weightCarbohydrates: "46,5 г",
-  calories: "Калорийность",
-  weightCalories: "549 ккал",
-  item_1: "Состав",
-  composition:
-    'Сахар, какао тертое, жир специального назначения (пальмовое масло, пальмоядрогвое масло, эмульгатор лецитин соевый), ядра ореха фундука (лесного ореха) обжаренные, масло какао, какао-порошок, ядра ореха фундука (лесного ореха) обжаренные тертые, молоко сухое цельное, молоко сухое обезжиренное, эмульгатор лецитин соевый, ароматизаторы: "Ванилин", "Фундук", антиокислитель аскорбановая кислота.',
-  info: "Общая информация",
-  brand: "Бренд",
-  dolce: "Dolce Albero",
-  manufacturer: "Производитель",
-  lenta: "Лента",
-  country: "Страна",
-  russia: "Россия",
-  storageConditions: "Условия хранения",
-  terms:
-    "При температуре от +15°C до +21°C и относительной влажности воздуха не более 75%",
-  term: "Срок хранения",
-  month: "9 мес",
-  kindOfCandy: "Вид конфет",
-  chocolate: "Шоколадные",
-  typeOfChocolate: "Вид шоколада",
-  bitter: "Горький",
-  flavor: "Вкус",
-  walnut: "Ореховый",
-  supplements: "Добавки",
-  hazelnut: "Фундук",
-  feature: "Особенность",
-  glazed: "Глазированные",
-  packaging: "Упаковка",
-  box: "Картонная коробка",
-  hideInformation: "Скрыть подробную информацию",
+  getRecommended: {
+    recommendedTitle: 'С этим смотрят',
+    featuredProduct: [
+      {
+        id: 1,
+        image: "https://via.placeholder.com/70x70?text=Text",
+        price: "269.59 ₽",
+        productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+        weight: "190 г",
+      },
+      {
+        id: 2,
+        image: "https://via.placeholder.com/70x70?text=Text",
+        price: "252.69 ₽",
+        productName: "Конфеты Dolce Albero Ассорти",
+        weight: "200 г",
+      },
+      {
+        id: 3,
+        image: "https://via.placeholder.com/70x70?text=Text",
+        price: "115.79 ₽",
+        productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+        weight: "200 г",
+      },
+      {
+        id: 4,
+        image: "https://via.placeholder.com/70x70?text=Text",
+        price: "105.29 ₽",
+        productName: "Миска Mallony 1,1л",
+        weight: "1 шт",
+      },
+      {
+        id: 5,
+        image: "https://via.placeholder.com/70x70?text=Text",
+        price: "168.49 ₽",
+        productName: "Миска Mallony 3,3л",
+        weight: "1 шт",
+      },
+      {
+        id: 6,
+        image: "https://via.placeholder.com/70x70?text=Text",
+        price: "105.29 ₽",
+        productName: "Грибы вешенки свежие",
+        weight: "300 гр",
+      },
+    ]
+  },
+
+  getSpecification: {
+    op: "Описание",
+    spec: "Шоколадные конфеты Dolce Albero на каждый день к чаю.",
+    value: "Пищевая ценность",
+    weight: "на 100 г",
+    protein: "Белки",
+    weightProtein: "6,8 г",
+    fat: "Жиры",
+    weightFat: "37,9 г",
+    carbohydrates: "Углеводы",
+    weightCarbohydrates: "46,5 г",
+    calories: "Калорийность",
+    weightCalories: "549 ккал",
+    item_1: "Состав",
+    composition:
+      'Сахар, какао тертое, жир специального назначения (пальмовое масло, пальмоядрогвое масло, эмульгатор лецитин соевый), ядра ореха фундука (лесного ореха) обжаренные, масло какао, какао-порошок, ядра ореха фундука (лесного ореха) обжаренные тертые, молоко сухое цельное, молоко сухое обезжиренное, эмульгатор лецитин соевый, ароматизаторы: "Ванилин", "Фундук", антиокислитель аскорбановая кислота.',
+    info: "Общая информация",
+    brand: "Бренд",
+    dolce: "Dolce Albero",
+    manufacturer: "Производитель",
+    lenta: "Лента",
+    country: "Страна",
+    russia: "Россия",
+    storageConditions: "Условия хранения",
+    terms:
+      "При температуре от +15°C до +21°C и относительной влажности воздуха не более 75%",
+    term: "Срок хранения",
+    month: "9 мес",
+    kindOfCandy: "Вид конфет",
+    chocolate: "Шоколадные",
+    typeOfChocolate: "Вид шоколада",
+    bitter: "Горький",
+    flavor: "Вкус",
+    walnut: "Ореховый",
+    supplements: "Добавки",
+    hazelnut: "Фундук",
+    feature: "Особенность",
+    glazed: "Глазированные",
+    packaging: "Упаковка",
+    box: "Картонная коробка",
+    hideInformation: "Скрыть подробную информацию",
+  },
 };
-
-export const info = "С этим смотрят";
 
 export const productsSliderCards = [
   {
@@ -749,52 +751,51 @@ export const footerData = {
   logoFooter: "https://via.placeholder.com/220x40?img=logo",
   footerMenu: [
     {
-      title: 'Сбермаркет1',
+      title: "Сбермаркет1",
       menuItems: [
         {
-          title: 'О Компании',
-          link:'#',
+          title: "О Компании",
+          link: "#",
         },
         {
-          title: 'Контакты',
-          link:'#',
+          title: "Контакты",
+          link: "#",
         },
         {
-          title: 'Вакансии',
-          link:'#',
+          title: "Вакансии",
+          link: "#",
         },
         {
-          title: 'Документы',
-          link:'#',
+          title: "Документы",
+          link: "#",
         },
         {
-          title: 'Стать партнером',
-          link:'#',
+          title: "Стать партнером",
+          link: "#",
         },
-      ]
+      ],
     },
     {
-      title: 'Помощь покупателю',
+      title: "Помощь покупателю",
       menuItems: [
         {
-          title: 'Как мы работаем',
-          link:'#',
+          title: "Как мы работаем",
+          link: "#",
         },
         {
-          title: 'Зоны доставки',
-          link:'#',
+          title: "Зоны доставки",
+          link: "#",
         },
         {
-          title: 'Доставка и оплата',
-          link:'#',
+          title: "Доставка и оплата",
+          link: "#",
         },
         {
-          title: 'Помощь',
-          link:'#',
+          title: "Помощь",
+          link: "#",
         },
-      ]
+      ],
     },
-
   ],
   footerContactColumn: {
     number: "+7 800 222-11-11",
@@ -802,56 +803,26 @@ export const footerData = {
     input: "Форма обратной связи",
     text: "Пишите нам свои вопросы, комментарии и предложения",
   },
-  footerCopyrightRow: [
-    {
-      copyright: 'Copyright 2013 —2020',
-      nameCompany: 'ООО "Инстамарт Сервис"',
-      footerLinks: [
-        {
-          icon: 'fa-facebook',
-          link: '#',
-        },
-        {
-          icon: 'fa-vk',
-          link: '#',
-        },
-        {
-          icon: 'fa-instagram',
-          link: '#',
-        },
-      ],
-    },
-    {
-      copyright: 'Скачайте наше удобное приложение в Google Play и App Store',
-      nameCompany: '',
-      footerLinks: [
-        {
-          icon: 'fa-apple',
-          link: '#',
-        },
-        {
-          icon: 'fa-google-play',
-          link: '#',
-        },
-      ],
-    },
-
-  ],
+  footerCopyrightRow: {
+    copyright: "Copyright 2013 —2020",
+    nameCompany: 'ООО "Инстамарт Сервис"',
+    download: "Скачайте наше удобное приложение в Google Play и App Store",
+  },
   footerLinksPolitics: [
     {
-      title: 'Политика возврата',
-      link: '/',
+      title: "Политика возврата",
+      link: "/",
     },
     {
-      title: 'Обработка персональных данных',
-      link: '/',
+      title: "Обработка персональных данных",
+      link: "/",
     },
     {
-      title: 'Официальное уведомление',
-      link: '/',
+      title: "Официальное уведомление",
+      link: "/",
     },
   ],
-}
+};
 
 export const logoFooter = "https://via.placeholder.com/220x40?img=logo";
 
@@ -873,7 +844,6 @@ export const forFooterInfo = [
   "Обработка персональных данных",
   "Официальное уведомление",
 ];
-
 
 export const recentlyWatchedTitle = "Вы недавно смотрели";
 

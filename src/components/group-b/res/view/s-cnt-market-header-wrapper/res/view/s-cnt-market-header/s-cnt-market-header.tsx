@@ -7,11 +7,20 @@ import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
   scoped: true,
 })
 export class SCntMarketHeader implements ComponentInterface {
+
+  /**
+   * Данные об авторизации пользователя
+   * */
+  @Prop() login: boolean = false;
+
   /**
    * Массив данных для хедера
    * */
   @Prop() categories: any;
 
+  /**
+   * Обертка для липкого хедера
+   * */
   @State() stickyTopTag: HTMLElement;
 
   componentDidLoad() {
@@ -36,6 +45,7 @@ export class SCntMarketHeader implements ComponentInterface {
                   body={this.categories.body}
                 ></s-cnt-market-header-body>
                 <s-cnt-market-header-nav
+                  login={this.login}
                   navBar={this.categories.navBar}
                   selectShops={this.categories.selectShops}
                   leftMenuCatalogArr={this.categories.leftMenuCatalog}
@@ -47,10 +57,11 @@ export class SCntMarketHeader implements ComponentInterface {
       </div>
     );
   }
+
   /**
    * Метод для смены внешнего вида главного меню при скролле
    */
-  public stickyTop() {
+  public stickyTop():void {
     let scrolled = window.pageYOffset || document.documentElement.scrollTop;
     if (scrolled > 90) {
       this.stickyTopTag.classList.add("sticky");

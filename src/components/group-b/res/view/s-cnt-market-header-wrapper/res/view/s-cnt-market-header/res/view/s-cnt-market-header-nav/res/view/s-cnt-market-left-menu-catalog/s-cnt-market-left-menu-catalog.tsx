@@ -127,14 +127,14 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * Закрытие меню слева
    * */
-  public closeLeftMenuHandler() {
+  public closeLeftMenuHandler():void {
     this.closeLeftMenu.emit();
   }
 
   /**
    * Клик на фон меню
    * */
-  public clickOnLeftMenuOverlayHandler(event) {
+  public clickOnLeftMenuOverlayHandler(event):void {
     if (event.target === this.leftMenuTag) {
       this.closeLeftMenuHandler();
     }
@@ -143,7 +143,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * Получение из массива магазинов со скидками
    * */
-  public filterShopsWithSales() {
+  public filterShopsWithSales():void {
     this.leftMenuCatalogArrState = this.leftMenuCatalogArr.filter(
       (item) => item.sales
     );
