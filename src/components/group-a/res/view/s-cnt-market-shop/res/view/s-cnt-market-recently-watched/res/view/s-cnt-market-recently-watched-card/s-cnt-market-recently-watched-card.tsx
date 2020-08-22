@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
-import {MarketRecentlyWatchedProductsInterface} from "../../interface/common.interface";
+import {MarketRecentlyWatchedProductsInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-recently-watched-card",

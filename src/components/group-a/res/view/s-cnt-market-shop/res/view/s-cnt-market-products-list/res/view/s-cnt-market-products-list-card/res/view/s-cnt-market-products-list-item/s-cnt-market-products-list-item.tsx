@@ -6,7 +6,7 @@ import {
   Prop,
   Event,
 } from "@stencil/core";
-import { MarketProductListCardInterface } from "../../../../../interface/common.interface";
+import {MarketProductListCardInterface} from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-products-list-item",

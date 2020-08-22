@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketSelectionInterface } from "./res/interface/common.interface";
 import { markdown } from "markdown";
+import {MarketSelectionInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-selection",

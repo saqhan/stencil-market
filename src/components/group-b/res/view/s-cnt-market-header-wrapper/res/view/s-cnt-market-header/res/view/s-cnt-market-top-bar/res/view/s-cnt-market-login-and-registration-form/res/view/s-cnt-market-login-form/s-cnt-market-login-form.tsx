@@ -1,6 +1,5 @@
 import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
-import {Login} from "./res/interface/common.interface";
-import {UsersArr} from "../../interface/common.interface";
+import {MarketLoginInterface, MarketUsersArrInterface} from "../../../../../../../../../../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-login-form',
@@ -12,12 +11,12 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
    * объект данных для компонента входа
    * */
-  @Prop() login: Login;
+  @Prop() login: MarketLoginInterface;
 
   /**
    * массив с данными пользователей
    * */
-  @Prop() users: UsersArr[];
+  @Prop() users: MarketUsersArrInterface[];
 
   /**
    * State для переключения типа пароля

@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import {footerLinksPoliticsInterface} from "../../../../../interface/common.interface";
+import {footerLinksPoliticsInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-footer-info-item',

@@ -6,7 +6,8 @@ import {
   h,
   Prop,
 } from "@stencil/core";
-import { MarketProductListInterface } from "./res/interface/common.interface";
+
+import {MarketProductListInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-products-list",
@@ -14,6 +15,7 @@ import { MarketProductListInterface } from "./res/interface/common.interface";
   shadow: false,
   scoped: true,
 })
+
 export class SCntMarketProductsList implements ComponentInterface {
   /**
    * Данные для списка товаров

@@ -6,7 +6,7 @@ import {
   h,
   Prop,
 } from "@stencil/core";
-import { MarketProductsSliderCardsInterface } from "../../interface/common.interface";
+import {MarketProductsSliderCardsInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-products-slider-card",
@@ -14,6 +14,7 @@ import { MarketProductsSliderCardsInterface } from "../../interface/common.inter
   shadow: false,
   scoped: true,
 })
+
 export class SCntMarketProductsSliderCard implements ComponentInterface {
   /**
    * Получаем данные карточек слайдера популярных продуктов

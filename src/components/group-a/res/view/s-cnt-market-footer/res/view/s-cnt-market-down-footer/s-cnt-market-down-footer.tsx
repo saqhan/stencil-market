@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import {footerCopyrightRowInterface} from "../../interface/common.interface";
+import {footerCopyrightRowInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-down-footer",

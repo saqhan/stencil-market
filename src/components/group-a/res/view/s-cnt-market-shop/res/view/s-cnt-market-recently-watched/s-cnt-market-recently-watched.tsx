@@ -6,7 +6,7 @@ import {
   h,
   Prop,
 } from "@stencil/core";
-import { MarketRecentlyWatchedProductsInterface } from "./res/interface/common.interface";
+import {MarketRecentlyWatchedProductsInterface} from "../../../../../../../../index";
 
 declare const Flickity: any;
 

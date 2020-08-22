@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
-import { MarketProductsSliderCardsInterface } from "./res/interface/common.interface";
+import {MarketProductsSliderCardsInterface} from "../../../../../../../../index";
 
 declare const Flickity: any;
 

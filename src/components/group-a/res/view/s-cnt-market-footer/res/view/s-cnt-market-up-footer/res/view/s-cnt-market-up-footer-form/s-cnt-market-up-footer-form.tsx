@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import {footerContactColumnInterface} from "../../../../../interface/common.interface";
+import {footerContactColumnInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-up-footer-form",

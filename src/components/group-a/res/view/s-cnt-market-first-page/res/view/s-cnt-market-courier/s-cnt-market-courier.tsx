@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketCourierInterface } from "./res/interface/common.interface";
+import {MarketCourierInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-courier",

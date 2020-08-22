@@ -16,7 +16,7 @@
 - [s-cnt-market-header-wrapper](../group-b/res/view/s-cnt-market-header-wrapper)
 - [s-cnt-market-first-page](./res/view/s-cnt-market-first-page)
 - [s-cnt-market-footer](./res/view/s-cnt-market-footer)
-- [s-cnt-market-back-to-top](./res/view/shared/s-cnt-market-back-to-top)
+- [s-cnt-market-back-to-top](../shared/s-cnt-market-back-to-top)
 
 ### Graph
 ```mermaid

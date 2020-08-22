@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, State} from "@stencil/core";
+import { Component, ComponentInterface, h, State } from "@stencil/core";
 import {
   productModal,
   productsList,
@@ -41,7 +41,7 @@ export class SCntMarketShop implements ComponentInterface {
           recentlyWatchedProducts={recentlyWatchedProducts}
           recentlyWatchedTitle={recentlyWatchedTitle}
         ></s-cnt-market-recently-watched>
-        {this.showModalState === true ? (
+        {this.showModalState ? (
           <s-cnt-market-modal-window
             productModal={productModal}
             onClickOnModal={() => this.showOrCloseModal()}
@@ -58,6 +58,7 @@ export class SCntMarketShop implements ComponentInterface {
    * Открытие и закрытие модального окна
    */
   public showOrCloseModal() {
+    console.log('ГетПродукт')
     this.showModalState = !this.showModalState;
     this.bodyToggleScroll();
   }
@@ -72,5 +73,4 @@ export class SCntMarketShop implements ComponentInterface {
       document.body.style.overflow = "auto";
     }
   }
-
 }

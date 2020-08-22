@@ -14,9 +14,9 @@
 - [s-cnt-market-products-slider](../group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider)
 - [s-cnt-market-products-list](../group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list)
 - [s-cnt-market-recently-watched](../group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-recently-watched)
-- [s-cnt-market-modal-window](../group-a/res/view/shared/s-cnt-market-modal-window)
+- [s-cnt-market-modal-window](../shared/s-cnt-market-modal-window)
 - [s-cnt-market-footer](../group-a/res/view/s-cnt-market-footer)
-- [s-cnt-market-back-to-top](../group-a/res/view/shared/s-cnt-market-back-to-top)
+- [s-cnt-market-back-to-top](../shared/s-cnt-market-back-to-top)
 
 ### Graph
 ```mermaid
