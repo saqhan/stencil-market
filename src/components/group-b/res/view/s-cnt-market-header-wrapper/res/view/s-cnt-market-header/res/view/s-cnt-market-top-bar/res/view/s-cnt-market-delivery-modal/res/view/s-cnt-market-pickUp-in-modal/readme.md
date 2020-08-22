@@ -7,9 +7,16 @@
 
 ## Properties
 
-| Property     | Attribute      | Description                 | Type  | Default     |
-| ------------ | -------------- | --------------------------- | ----- | ----------- |
-| `pickUpData` | `pick-up-data` | boolean значение для вывода | `any` | `undefined` |
+| Property     | Attribute | Description                  | Type                         | Default     |
+| ------------ | --------- | ---------------------------- | ---------------------------- | ----------- |
+| `pickUpData` | --        | Данные из объекта данных мок | `TopBarModalPickUpInterface` | `undefined` |
+
+
+## Events
+
+| Event                | Description                                      | Type               |
+| -------------------- | ------------------------------------------------ | ------------------ |
+| `idSelectionAddress` | функция для смены значения boolean пропса pickUp | `CustomEvent<any>` |
 
 
 ## Dependencies

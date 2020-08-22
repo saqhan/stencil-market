@@ -1,4 +1,4 @@
-# s-cnt-market-header
+# s-cnt-market-header-wrapper
 
 
 
@@ -7,27 +7,30 @@
 
 ## Properties
 
-| Property     | Attribute    | Description                        | Type      | Default     |
-| ------------ | ------------ | ---------------------------------- | --------- | ----------- |
-| `categories` | `categories` | Массив данных для хедера           | `any`     | `undefined` |
-| `login`      | `login`      | Данные об авторизации пользователя | `boolean` | `false`     |
+| Property     | Attribute    | Description              | Type      | Default     |
+| ------------ | ------------ | ------------------------ | --------- | ----------- |
+| `categories` | `categories` | Массив данных для хедера | `any`     | `undefined` |
+| `firstPage`  | `first-page` | Первоначальная страница  | `boolean` | `undefined` |
+| `login`      | `login`      | Авторизация юзера        | `boolean` | `undefined` |
 
 
 ## Dependencies
 
 ### Used by
 
- - [s-cnt-market-header-wrapper](../../..)
+ - [group-a](../../../../group-a)
+ - [group-b](../../..)
 
 ### Depends on
 
-- [s-cnt-market-top-bar](./res/view/s-cnt-market-top-bar)
-- [s-cnt-market-header-body](./res/view/s-cnt-market-header-body)
-- [s-cnt-market-header-nav](./res/view/s-cnt-market-header-nav)
+- [s-cnt-market-header-base](./res/view/s-cnt-market-header-base)
+- [s-cnt-market-header](./res/view/s-cnt-market-header)
 
 ### Graph
 ```mermaid
 graph TD;
+  s-cnt-market-header-wrapper --> s-cnt-market-header-base
+  s-cnt-market-header-wrapper --> s-cnt-market-header
   s-cnt-market-header --> s-cnt-market-top-bar
   s-cnt-market-header --> s-cnt-market-header-body
   s-cnt-market-header --> s-cnt-market-header-nav
@@ -41,8 +44,9 @@ graph TD;
   s-cnt-market-header-nav --> s-cnt-market-store-select-top
   s-cnt-market-header-nav --> s-cnt-market-account-menu
   s-cnt-market-header-nav --> s-cnt-market-basket
-  s-cnt-market-header-wrapper --> s-cnt-market-header
-  style s-cnt-market-header fill:#f9f,stroke:#333,stroke-width:4px
+  group-a --> s-cnt-market-header-wrapper
+  group-b --> s-cnt-market-header-wrapper
+  style s-cnt-market-header-wrapper fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
