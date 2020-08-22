@@ -32,6 +32,7 @@ export class SCntMarketProductsListCard implements ComponentInterface {
   @State() productListState = this.productsList.card;
 
   componentDidLoad() {
+    this.changesAmountCards()
     window.addEventListener("resize", () => this.changesAmountCards());
   }
 
