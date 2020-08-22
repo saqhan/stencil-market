@@ -43,7 +43,7 @@ export class SCntMarketSelection implements ComponentInterface {
           innerHTML={markdown.toHTML(this.homeSubText)}
         ></div>
         <div class="container">
-          <div class="row">
+          <div class="row justify-content-center">
             <GetSelectionFunctionalComponent
               array={this.forSelection}
             ></GetSelectionFunctionalComponent>
@@ -57,7 +57,7 @@ export class SCntMarketSelection implements ComponentInterface {
 const GetSelectionFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="col-md-4 col-xs-6">
+      <div class="col-md-4 col-sm-6 selection-card">
         <s-cnt-market-item-selection
           forSelection={item}
         ></s-cnt-market-item-selection>

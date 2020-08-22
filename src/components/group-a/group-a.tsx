@@ -24,7 +24,7 @@ export class GroupA implements ComponentInterface {
     return (
       <main>
         {/*<s-cnt-market-modal-window />*/}
-        <s-cnt-market-header-wrapper categories={header} login={this.login} firstPage={this.firstPageState} > </s-cnt-market-header-wrapper>
+        <s-cnt-market-header-wrapper categories={header} login={this.login} > </s-cnt-market-header-wrapper>
         <s-cnt-market-first-page/>
         {/*<s-cnt-market-shop/>*/}
         <s-cnt-market-footer
