@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketSpecialistInterface } from "../../interface/common.interface";
 import { markdown } from "markdown";
+import {MarketSpecialistInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-item-specialist",
@@ -29,7 +29,6 @@ export class SCntMarketItemSpecialist implements ComponentInterface {
           class="text"
           innerHTML={markdown.toHTML(this.forSpecialist.text)}
         ></div>
-
       </div>
     );
   }

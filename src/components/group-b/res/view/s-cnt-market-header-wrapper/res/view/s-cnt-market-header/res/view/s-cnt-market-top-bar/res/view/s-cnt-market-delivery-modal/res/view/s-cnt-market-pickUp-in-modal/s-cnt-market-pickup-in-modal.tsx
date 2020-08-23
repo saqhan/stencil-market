@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, EventEmitter, h, Prop, State, Event} from '@stencil/core';
-import {TopBarModalPickUpInterface} from "./res/interface/common.interface";
+import {MarketTopBarModalPickUpInterface} from "../../../../../../../../../../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-pickup-in-modal',
@@ -11,7 +11,7 @@ export class SCntMarketPickupInModal implements ComponentInterface {
   /**
    * Данные из объекта данных мок
    */
-  @Prop() pickUpData: TopBarModalPickUpInterface;
+  @Prop() pickUpData: MarketTopBarModalPickUpInterface;
 
   /**
    * значение number для присвоения id выбранного города

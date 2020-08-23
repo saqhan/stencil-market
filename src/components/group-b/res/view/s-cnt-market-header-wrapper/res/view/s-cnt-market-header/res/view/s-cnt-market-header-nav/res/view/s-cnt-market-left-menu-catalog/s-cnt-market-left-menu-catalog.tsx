@@ -7,10 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import {
-  leftMenuCatalogInterface,
-  // subcategoriesInterface,
-} from "../../interface/common.interface";
+import {MarketLeftMenuCatalogInterface} from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-left-menu-catalog",
@@ -32,7 +29,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * массив магазинов для вывода
    * */
-  @Prop() leftMenuCatalogArr: leftMenuCatalogInterface[] = [];
+  @Prop() leftMenuCatalogArr: MarketLeftMenuCatalogInterface[] = [];
 
   /**
    * Стейт для фильтраций скидов

@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
-import { MarketProductsSliderCardsInterface } from "./res/interface/common.interface";
+import {MarketProductsSliderCardsInterface} from "../../../../../../../../index";
 
 declare const Flickity: any;
 
@@ -30,8 +30,6 @@ export class SCntMarketProductsSlider implements ComponentInterface {
    */
   public carouselTag: HTMLElement;
 
-
-
   componentDidLoad() {
     let elem = this.carouselTag;
 
@@ -51,9 +49,9 @@ export class SCntMarketProductsSlider implements ComponentInterface {
         <div class="main-container">
           <div class="products-carousel-title">{this.productsSliderTitle}</div>
           <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
-            <ProductsSliderCard
+            <ProductsSliderCardFunctionalComponent
               array={this.productsSliderCards}
-            ></ProductsSliderCard>
+            ></ProductsSliderCardFunctionalComponent>
           </div>
         </div>
       </div>
@@ -61,7 +59,7 @@ export class SCntMarketProductsSlider implements ComponentInterface {
   }
 }
 
-const ProductsSliderCard = (props) => {
+const ProductsSliderCardFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
       <div class="carousel-cell">

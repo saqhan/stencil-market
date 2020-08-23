@@ -7,7 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import { selectShopsInterface } from "../../interface/common.interface";
+import {MarketSelectShopsInterface} from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-store-select-top",
@@ -19,7 +19,7 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   /**
    * selectShops
    * */
-  @Prop() selectShops: selectShopsInterface[];
+  @Prop() selectShops: MarketSelectShopsInterface[];
 
   /**
    * состояние модалки

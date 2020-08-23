@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketStatisticsInterface } from "./res/interface/common.interface";
+import {MarketStatisticsInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-statistics",
@@ -11,14 +11,16 @@ export class SCntMarketStatistics implements ComponentInterface {
   /**
    * Данные для компонента Statistics
    */
-  @Prop() forStatistics: MarketStatisticsInterface [] = [];
+  @Prop() forStatistics: MarketStatisticsInterface[] = [];
 
   render() {
     return (
       <div class="statistics">
         <div class="container">
           <div class="row justify-content-around">
-            <GetStatistics arrayStatistics={this.forStatistics}></GetStatistics>
+            <GetStatisticsFunctionalComponent
+              arrayStatistics={this.forStatistics}
+            ></GetStatisticsFunctionalComponent>
           </div>
         </div>
       </div>
@@ -26,7 +28,7 @@ export class SCntMarketStatistics implements ComponentInterface {
   }
 }
 
-const GetStatistics = (props) => {
+const GetStatisticsFunctionalComponent = (props) => {
   return props.arrayStatistics.map((item) => {
     return (
       <div class="col-lg-5 col-md-12">

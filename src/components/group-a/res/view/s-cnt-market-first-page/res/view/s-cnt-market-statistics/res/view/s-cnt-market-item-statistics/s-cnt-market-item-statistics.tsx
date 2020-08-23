@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 import { markdown } from "markdown";
-import { MarketStatisticsInterface } from "../../interface/common.interface";
+import {MarketStatisticsInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-item-statistics",

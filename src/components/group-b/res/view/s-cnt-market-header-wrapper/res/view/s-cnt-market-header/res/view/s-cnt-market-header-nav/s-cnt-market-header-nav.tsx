@@ -1,9 +1,9 @@
 import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
 import {
-  leftMenuCatalogInterface,
-  navBarInterface,
-  selectShopsInterface,
-} from "./res/interface/common.interface";
+  MarketLeftMenuCatalogInterface,
+  MarketNavBarInterface,
+  MarketSelectShopsInterface,
+} from "../../../../../../../../../../..";
 
 @Component({
   tag: "s-cnt-market-header-nav",
@@ -22,17 +22,17 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /*
    * массив данных для навигации
    **/
-  @Prop() navBar: navBarInterface;
+  @Prop() navBar: MarketNavBarInterface;
 
   /**
    * магазины для вашего города
    * */
-  @Prop() selectShops: selectShopsInterface[] = [];
+  @Prop() selectShops: MarketSelectShopsInterface[] = [];
 
   /**
    * Данные для магазинов из каталога
    * */
-  @Prop() leftMenuCatalogArr: leftMenuCatalogInterface[] = [];
+  @Prop() leftMenuCatalogArr: MarketLeftMenuCatalogInterface[] = [];
 
   /*
    * Показывать/скрывать аккаунт юзера

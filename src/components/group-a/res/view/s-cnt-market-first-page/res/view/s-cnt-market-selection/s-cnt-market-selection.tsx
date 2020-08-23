@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketSelectionInterface } from "./res/interface/common.interface";
 import { markdown } from "markdown";
+import {MarketSelectionInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-selection",
@@ -43,8 +43,10 @@ export class SCntMarketSelection implements ComponentInterface {
           innerHTML={markdown.toHTML(this.homeSubText)}
         ></div>
         <div class="container">
-          <div class="row">
-            <GetSelection array={this.forSelection}></GetSelection>
+          <div class="row justify-content-center">
+            <GetSelectionFunctionalComponent
+              array={this.forSelection}
+            ></GetSelectionFunctionalComponent>
           </div>
         </div>
       </div>
@@ -52,10 +54,10 @@ export class SCntMarketSelection implements ComponentInterface {
   }
 }
 
-const GetSelection = (props) => {
+const GetSelectionFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="col-md-4 col-xs-6">
+      <div class="col-md-4 col-sm-6 selection-card">
         <s-cnt-market-item-selection
           forSelection={item}
         ></s-cnt-market-item-selection>

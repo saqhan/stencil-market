@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketPromoSliderInterface } from "../../interface/common.interface";
+import {MarketPromoSliderInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-promo-slider-card",

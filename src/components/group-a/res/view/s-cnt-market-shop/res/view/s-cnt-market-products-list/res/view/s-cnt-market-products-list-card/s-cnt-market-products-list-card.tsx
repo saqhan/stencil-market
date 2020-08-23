@@ -7,7 +7,8 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import { MarketProductListInterface } from "../../interface/common.interface";
+import {MarketProductListInterface} from "../../../../../../../../../../../index";
+
 
 @Component({
   tag: "s-cnt-market-products-list-card",
@@ -15,6 +16,7 @@ import { MarketProductListInterface } from "../../interface/common.interface";
   shadow: false,
   scoped: true,
 })
+
 export class SCntMarketProductsListCard implements ComponentInterface {
   /**
    * Данные для списка товаров
@@ -32,7 +34,12 @@ export class SCntMarketProductsListCard implements ComponentInterface {
   @State() productListState = this.productsList.card;
 
   componentDidLoad() {
+    this.changesAmountCards()
     window.addEventListener("resize", () => this.changesAmountCards());
+  }
+
+  disconnectedCallback() {
+    window.removeEventListener("resize", () => this.changesAmountCards());
   }
 
   render() {
@@ -60,10 +67,9 @@ export class SCntMarketProductsListCard implements ComponentInterface {
    * Количество выводимых карточек товара в зависимости от размера экрана
    */
   public changesAmountCards() {
-    if (window.innerWidth < 1883) {
+    if (window.innerWidth < 1883 && window.innerWidth >= 1676) {
       this.productListState = this.productsList.card.slice(0, 8);
-    }
-    if (window.innerWidth < 1676 && window.innerWidth >= 1469) {
+    } else if (window.innerWidth < 1676 && window.innerWidth >= 1469) {
       this.productListState = this.productsList.card.slice(0, 7);
     } else if (window.innerWidth < 1469 && window.innerWidth >= 1261) {
       this.productListState = this.productsList.card.slice(0, 6);
@@ -76,7 +82,7 @@ export class SCntMarketProductsListCard implements ComponentInterface {
     } else if (window.innerWidth < 481) {
       this.productListState = this.productsList.card.slice(0, 2);
     } else {
-      this.productListState = this.productsList.card;
+      this.productListState = this.productsList.card.slice(0, 9);
     }
   }
 }

@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property       | Attribute       | Description                 | Type  | Default     |
-| -------------- | --------------- | --------------------------- | ----- | ----------- |
-| `deliveryData` | `delivery-data` | boolean значение для вывода | `any` | `undefined` |
+| Property       | Attribute | Description                                 | Type                                 | Default     |
+| -------------- | --------- | ------------------------------------------- | ------------------------------------ | ----------- |
+| `deliveryData` | --        | Props значение для принятия и вывода данных | `MarketTopBarModalDeliveryInterface` | `undefined` |
 
 
 ## Dependencies
