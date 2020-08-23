@@ -264,6 +264,10 @@ export namespace Components {
         /**
           * Данные для Product
          */
+        "getProduct": any;
+        /**
+          * Данные для Product
+         */
         "productBlock": any;
     }
     interface SCntMarketProductsList {
@@ -332,6 +336,10 @@ export namespace Components {
         /**
           * Данные для Recommended
          */
+        "getRecommended": any;
+        /**
+          * Данные для Recommended
+         */
         "recommendedBlock": any;
     }
     interface SCntMarketRegistrationForm {
@@ -371,6 +379,10 @@ export namespace Components {
         "forSpecialist": MarketSpecialistInterface[];
     }
     interface SCntMarketSpecification {
+        /**
+          * Данные для Specification
+         */
+        "getSpecification": any;
         /**
           * Данные для Specification
          */
@@ -1124,6 +1136,10 @@ declare namespace LocalJSX {
     }
     interface SCntMarketProduct {
         /**
+          * Данные для Product
+         */
+        "getProduct"?: any;
+        /**
           * Клик по кнопке закрытия модального окна
          */
         "onClickOnModal"?: (event: CustomEvent<void>) => void;
@@ -1226,6 +1242,10 @@ declare namespace LocalJSX {
         /**
           * Данные для Recommended
          */
+        "getRecommended"?: any;
+        /**
+          * Данные для Recommended
+         */
         "recommendedBlock"?: any;
     }
     interface SCntMarketRegistrationForm {
@@ -1265,6 +1285,10 @@ declare namespace LocalJSX {
         "forSpecialist"?: MarketSpecialistInterface[];
     }
     interface SCntMarketSpecification {
+        /**
+          * Данные для Specification
+         */
+        "getSpecification"?: any;
         /**
           * Данные для Specification
          */

@@ -66,7 +66,6 @@ export class SCntMarketShop implements ComponentInterface {
     this.productData = {
       ...detail
     }
-    console.log(detail)
   }
 
   /**

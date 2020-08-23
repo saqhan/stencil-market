@@ -13,6 +13,11 @@ export class SCntMarketRecommended implements ComponentInterface {
   @Prop() recommendedBlock: any;
 
   /**
+   * Данные для Recommended
+   */
+  @Prop() getRecommended: any;
+
+  /**
    *
    */
   public carouselTag: HTMLElement;
@@ -38,23 +43,23 @@ export class SCntMarketRecommended implements ComponentInterface {
           </div>
         </div>
         <div class="no-gutters" ref={(el) => (this.carouselTag = el)}>
-          {/*<GetRecommended*/}
-          {/*  array={this.recommendedBlock.featuredProduct}>*/}
-          {/*</GetRecommended>*/}
+          <GetRecommended
+            array={this.getRecommended.featuredProduct}>
+          </GetRecommended>
         </div>
       </div>
     );
   }
 }
 
-// const GetRecommended = (props) => {
-//   return props.array.map((item) => {
-//     return (
-//       <div class="carousel-cell">
-//         <s-cnt-market-item-recommended
-//           getRecommended={item}>
-//         </s-cnt-market-item-recommended>
-//       </div>
-//     )
-//   })
-// }
+const GetRecommended = (props) => {
+  return props.array.map((item) => {
+    return (
+      <div class="carousel-cell">
+        <s-cnt-market-item-recommended
+          getRecommended={item}>
+        </s-cnt-market-item-recommended>
+      </div>
+    )
+  })
+}

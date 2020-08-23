@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, h, Prop} from "@stencil/core";
 
 @Component({
   tag: "s-cnt-market-specification",
@@ -12,6 +12,11 @@ export class SCntMarketSpecification implements ComponentInterface {
    */
   @Prop() specificationBlock: any;
 
+  /**
+   * Данные для Specification
+   */
+  @Prop() getSpecification: any;
+
   render() {
     return (
       <div class="specification">
@@ -23,132 +28,54 @@ export class SCntMarketSpecification implements ComponentInterface {
                   {this.specificationBlock.descriptionTitle}
                 </b>
               </div>
-              {/*<div class="spec">{this.getSpecification.spec}</div>*/}
+              <div class="spec">
+                {this.getSpecification.description}
+              </div>
             </div>
             <div class="col-sm-6">
-              <div class="my-spec">
-                <div class="block-value">
+              {
+                // выводитсч если есть пищевая ценность
+                this.getSpecification.nutritionalValue.length > 0 ?
+                  <div class="my-spec">
+                    <div class="block-value">
                   <span class="value">
                     {this.specificationBlock.nutritionalValueTitle}
                   </span>&nbsp;
-                  {this.specificationBlock.nutritionalOnTheValueTitle}
-                </div>
-                <div class="line-item-wrapper">
-                  <div class="line-item">
-                    <div class="protein">
-                      {/*{this.getSpecification.protein}*/}
+                      {this.specificationBlock.nutritionalOnTheValueTitle}
                     </div>
-                    <div class="weightProtein">
-                      {/*{this.getSpecification.weightProtein}*/}
+                    <div class="line-item-wrapper">
+                      <NutritionalValue arr={this.getSpecification.nutritionalValue}/>
                     </div>
-                  </div>
-                </div>
-
-                <div class="calories">
-                  {/*{this.getSpecification.calories}*/}
-                </div>
-                <div class="weightCalories">
-                  {/*{this.getSpecification.weightCalories}*/}
-                </div>
-              </div>
+                  </div> :
+                  ''
+              }
               <div class="block-composition">
                 <div class="item_1">
-                  {/*{this.getSpecification.compositionTitle}*/}
+                  {this.specificationBlock.compositionTitle}
                 </div>
                 <div class="composition">
-                  {/*{this.getSpecification.composition}*/}
+                  {this.getSpecification.composition}
                 </div>
                 <div class="line-composition">
                   <div class="info">
-                    {/*{this.getSpecification.generalInformationTitle}*/}
+                    {this.specificationBlock.generalInformationTitle}
                   </div>
                 </div>
-                <div class="line-composition">
-                  <div class="brand">
-                    {/*{this.getSpecification.brand}*/}
-                  </div>
-                  <div class="dolce">
-                    <u>
-                      {/*{this.getSpecification.dolce}*/}
-                    </u>
-                  </div>
-                </div>
-                <div class="line-composition">
-                  <div class="manufacturer">
-                    {/*{this.getSpecification.manufacturer}*/}
-                  </div>
-                  {/*<div class="lenta">{this.getSpecification.lenta}</div>*/}
-                </div>
-                <div class="line-composition">
-                  <div class="country">
-                    {/*{this.getSpecification.country}*/}
-                  </div>
-                   <div class="russia">
-                  {/*{this.getSpecification.russia}*/}
-                </div>
-                </div>
-                <div class="line-composition">
-                  <div class="storageСonditions">
-                    {/*{this.getSpecification.storageConditions}*/}
-                  </div>
-                  <div class="terms">
-                    {/*{this.getSpecification.terms}*/}
+                <div class="product-property">
+                  <div class="product-property-child">
+                    <div class="info-value-title">
+                      <strong>
+                        {this.getSpecification.BrandNameTitle}
+                      </strong>
+                    </div>
+                    <div class="info-value brand-name">
+                      <u>
+                        {this.getSpecification.BrandName}
+                      </u>
+                    </div>
                   </div>
                 </div>
-                <div class="line-composition">
-                   <div class="term">
-                     {/*{this.getSpecification.term}*/}
-                   </div>
-                  <div class="month">
-                    {/*{this.getSpecification.month}*/}
-                  </div>
-                </div>
-                <div class="line-composition">
-                  <div class="kindOfCandy">
-                    {/*{this.getSpecification.kindOfCandy}*/}
-                  </div>
-                   <div class="chocolate">
-                  {/*{this.getSpecification.chocolate}*/}
-                </div>
-                </div>
-                <div class="line-composition">
-                  <div class="typeOfChocolate">
-                    {/*{this.getSpecification.typeOfChocolate}*/}
-                  </div>
-                  {/*<div class="bitter">{this.getSpecification.bitter}</div>*/}
-                </div>
-                <div class="line-composition">
-                  <div class="flavor">
-                    {/*{this.getSpecification.flavor}*/}
-                  </div>
-                   <div class="walnut">
-                     {/*{this.getSpecification.walnut}*/}
-                   </div>
-                </div>
-                <div class="line-composition">
-                  <div class="supplements">
-                    {/*{this.getSpecification.supplements}*/}
-                  </div>
-                  <div class="hazelnut">
-                    {/*{this.getSpecification.hazelnut}*/}
-                  </div>
-                </div>
-                <div class="line-composition">
-                  <div class="feature">
-                    {/*{this.getSpecification.feature}*/}
-                  </div>
-                  <div class="glazed">
-                    {/*{this.getSpecification.glazed}*/}
-                  </div>
-                </div>
-                <div class="line-composition">
-                  <div class="packaging">
-                    {/*{this.getSpecification.packaging}*/}
-                  </div>
-                  <div class="box">
-                    {/*{this.getSpecification.box}*/}
-                  </div>
-                </div>
+                <GeneralInformation arr={this.getSpecification.generalInformation}/>
               </div>
             </div>
           </div>
@@ -168,4 +95,45 @@ export class SCntMarketSpecification implements ComponentInterface {
       </div>
     );
   }
+}
+
+/*
+* компонентная функция для вывода элементов ...
+ */
+const NutritionalValue = (props) => {
+  return props.arr.map((item) => {
+    return (
+      <div class="line-item">
+        <div class="nutritional-value-title">
+          {item.infoTitle}
+        </div>
+        <div class="nutritional-value">
+          {item.info}
+        </div>
+      </div>
+    );
+  })
+}
+
+
+/*
+* компонентная функция для вывода элементов ...
+ */
+const GeneralInformation = (props) => {
+  return props.arr.map((item) => {
+    return (
+      <div class="product-property">
+        <div class="product-property-child">
+          <div class="info-value-title">
+            <strong>
+              {item.infoTitle}
+            </strong>
+          </div>
+          <div class="info-value">
+              {item.info}
+          </div>
+        </div>
+      </div>
+    );
+  })
 }

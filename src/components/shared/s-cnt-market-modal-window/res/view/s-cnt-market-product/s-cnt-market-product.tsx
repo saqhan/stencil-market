@@ -13,6 +13,11 @@ export class SCntMarketProduct implements ComponentInterface {
   @Prop() productBlock: any;
 
   /**
+   * Данные для Product
+   */
+  @Prop() getProduct: any;
+
+  /**
    * Клик по кнопке закрытия модального окна
    */
   @Event() clickOnModal: EventEmitter<void>;
@@ -27,28 +32,48 @@ export class SCntMarketProduct implements ComponentInterface {
           <div class="row modal-nav">
             <div class="col">
               <div class="info">
-                {/*<span class="brand">{this.getProduct.brand}</span>*/}
-                {/*<span class="products">{this.getProduct.products}</span>*/}
-                {/*<span class="category">{this.getProduct.category}</span>*/}
+                <span class="brand">
+                  {this.getProduct.brand}
+                </span>
+                <span class="products">
+                  {this.getProduct.products}
+                </span>
+                <span class="category">
+                  {this.getProduct.category}
+                </span>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-6">
               <div class="image">
-                {/*<img src={this.getProduct.image} alt="" />*/}
+                <img src={this.getProduct.img} alt="" />
+              </div>
+              <div class="product-img-item-wrapper">
+                <div class="product-img-item">
+                  <img src={this.getProduct.img} alt="" width="76px" />
+                </div>
+                <div class="product-img-item">
+                  <img src={this.getProduct.img} alt="" />
+                </div>
+                <div class="product-img-item">
+                  <img src={this.getProduct.img} alt="" />
+                </div>
               </div>
             </div>
             <div class="col-sm-6">
               <div class="info-product">
                 <div class="name">
-                  {/*{this.getProduct.name}*/}
+                  {this.getProduct.name}
                 </div>
                 <div class="weight">
-                  {/*{this.getProduct.weight}*/}
+                  {this.getProduct.weight}
                 </div>
                 <div class="price">
-                  {/*{this.getProduct.price}*/}
+                  {this.getProduct.price}
+                  <span>
+                    {this.getProduct.currency}
+                  </span>
                 </div>
                 <div class="info-presence">
                   <div class="circle">
