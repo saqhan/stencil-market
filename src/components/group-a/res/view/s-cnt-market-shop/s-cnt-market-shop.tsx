@@ -21,6 +21,8 @@ export class SCntMarketShop implements ComponentInterface {
    */
   @State() showModalState = false;
 
+  public productData = {};
+
   render() {
     return (
       <main>
@@ -30,21 +32,22 @@ export class SCntMarketShop implements ComponentInterface {
         <s-cnt-market-products-slider
           productsSliderCards={productsSliderCards}
           productsSliderTitle={productsSliderTitle}
-          onShowModal={() => this.showOrCloseModal()}
+          onShowModal={(x) => this.showOrCloseModal(x)}
         ></s-cnt-market-products-slider>
         <s-cnt-market-products-list
-          onShowModal={() => this.showOrCloseModal()}
+          onShowModal={(x) => this.showOrCloseModal(x)}
           productsList={productsList}
         ></s-cnt-market-products-list>
         <s-cnt-market-recently-watched
-          onShowModal={() => this.showOrCloseModal()}
+          onShowModal={(x) => this.showOrCloseModal(x)}
           recentlyWatchedProducts={recentlyWatchedProducts}
           recentlyWatchedTitle={recentlyWatchedTitle}
         ></s-cnt-market-recently-watched>
         {this.showModalState ? (
           <s-cnt-market-modal-window
             productModal={productModal}
-            onClickOnModal={() => this.showOrCloseModal()}
+            productData={this.productData}
+            onClickOnModal={(x) => this.showOrCloseModal(x)}
           />
         ) : (
           ""
@@ -57,10 +60,13 @@ export class SCntMarketShop implements ComponentInterface {
   /**
    * Открытие и закрытие модального окна
    */
-  public showOrCloseModal() {
-    console.log('ГетПродукт')
+  public showOrCloseModal({detail}) {
     this.showModalState = !this.showModalState;
     this.bodyToggleScroll();
+    this.productData = {
+      ...detail
+    }
+    console.log(detail)
   }
 
   /**

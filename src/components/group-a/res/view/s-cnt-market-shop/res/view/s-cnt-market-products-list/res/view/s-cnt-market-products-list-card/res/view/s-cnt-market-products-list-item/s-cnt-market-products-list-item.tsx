@@ -6,7 +6,6 @@ import {
   Prop,
   Event,
 } from "@stencil/core";
-import {MarketProductListCardInterface} from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-products-list-item",
@@ -18,7 +17,7 @@ export class SCntMarketProductsListItem implements ComponentInterface {
   /**
    * Данные для карточки товара
    */
-  @Prop() productsListCard: MarketProductListCardInterface;
+  @Prop() productsListCard: any;
 
   /**
    * Клик по карточке для показа модального окна
@@ -39,7 +38,7 @@ export class SCntMarketProductsListItem implements ComponentInterface {
       <div
         class="product-link"
         ref={(el) => (this.productLinkTag = el)}
-        onClick={() => this.showModalHandler()}
+        onClick={() => this.showModalHandler(this.productsListCard)}
       >
         {this.productsListCard.multipack ? (
           <div class="product-multipack">
@@ -110,8 +109,8 @@ export class SCntMarketProductsListItem implements ComponentInterface {
   /**
    *
    */
-  public showModalHandler() {
-    this.showModal.emit();
+  public showModalHandler(x) {
+    this.showModal.emit(x);
   }
 
   /**

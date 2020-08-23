@@ -1,5 +1,4 @@
 import {Component, ComponentInterface, h, Prop} from "@stencil/core";
-import {MarketGetRecommendedInterface} from "../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-recommended",
@@ -11,7 +10,7 @@ export class SCntMarketRecommended implements ComponentInterface {
   /**
    * Данные для Recommended
    */
-  @Prop() getRecommended: MarketGetRecommendedInterface;
+  @Prop() recommendedBlock: any;
 
   /**
    *
@@ -34,28 +33,28 @@ export class SCntMarketRecommended implements ComponentInterface {
         <div class="row justify-content-between">
           <div class="col">
             <div class="info">
-              {this.getRecommended.recommendedTitle}
+              {this.recommendedBlock.recommendedTitle}
             </div>
           </div>
         </div>
         <div class="no-gutters" ref={(el) => (this.carouselTag = el)}>
-          <GetRecommended
-            array={this.getRecommended.featuredProduct}>
-          </GetRecommended>
+          {/*<GetRecommended*/}
+          {/*  array={this.recommendedBlock.featuredProduct}>*/}
+          {/*</GetRecommended>*/}
         </div>
       </div>
     );
   }
 }
 
-const GetRecommended = (props) => {
-  return props.array.map((item) => {
-    return (
-      <div class="carousel-cell">
-        <s-cnt-market-item-recommended
-          getRecommended={item}>
-        </s-cnt-market-item-recommended>
-      </div>
-    )
-  })
-}
+// const GetRecommended = (props) => {
+//   return props.array.map((item) => {
+//     return (
+//       <div class="carousel-cell">
+//         <s-cnt-market-item-recommended
+//           getRecommended={item}>
+//         </s-cnt-market-item-recommended>
+//       </div>
+//     )
+//   })
+// }

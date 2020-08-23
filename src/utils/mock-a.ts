@@ -536,106 +536,21 @@ export const forApp = {
 };
 
 export const productModal = {
-  getProduct: {
-    brand: "Бренды ЛЕНТЫ",
-    products: "Продукты питания",
-    category: "Сладости",
-    image: "https://via.placeholder.com/300x200?text=Text",
-    name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
-    weight: "200 г",
-    price: "252,69 ₽",
-    presence: "Товара много",
+  productBlock: {
     button: "Купить",
+    likeIcon: 'fas fa-heart my-heart',
   },
 
-  getRecommended: {
+  recommendedBlock: {
     recommendedTitle: 'С этим смотрят',
-    featuredProduct: [
-      {
-        id: 1,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "269.59 ₽",
-        productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
-        weight: "190 г",
-      },
-      {
-        id: 2,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "252.69 ₽",
-        productName: "Конфеты Dolce Albero Ассорти",
-        weight: "200 г",
-      },
-      {
-        id: 3,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "115.79 ₽",
-        productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
-        weight: "200 г",
-      },
-      {
-        id: 4,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "105.29 ₽",
-        productName: "Миска Mallony 1,1л",
-        weight: "1 шт",
-      },
-      {
-        id: 5,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "168.49 ₽",
-        productName: "Миска Mallony 3,3л",
-        weight: "1 шт",
-      },
-      {
-        id: 6,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "105.29 ₽",
-        productName: "Грибы вешенки свежие",
-        weight: "300 гр",
-      },
-    ]
   },
 
-  getSpecification: {
-    op: "Описание",
-    spec: "Шоколадные конфеты Dolce Albero на каждый день к чаю.",
-    value: "Пищевая ценность",
-    weight: "на 100 г",
-    protein: "Белки",
-    weightProtein: "6,8 г",
-    fat: "Жиры",
-    weightFat: "37,9 г",
-    carbohydrates: "Углеводы",
-    weightCarbohydrates: "46,5 г",
-    calories: "Калорийность",
-    weightCalories: "549 ккал",
-    item_1: "Состав",
-    composition:
-      'Сахар, какао тертое, жир специального назначения (пальмовое масло, пальмоядрогвое масло, эмульгатор лецитин соевый), ядра ореха фундука (лесного ореха) обжаренные, масло какао, какао-порошок, ядра ореха фундука (лесного ореха) обжаренные тертые, молоко сухое цельное, молоко сухое обезжиренное, эмульгатор лецитин соевый, ароматизаторы: "Ванилин", "Фундук", антиокислитель аскорбановая кислота.',
-    info: "Общая информация",
-    brand: "Бренд",
-    dolce: "Dolce Albero",
-    manufacturer: "Производитель",
-    lenta: "Лента",
-    country: "Страна",
-    russia: "Россия",
-    storageConditions: "Условия хранения",
-    terms:
-      "При температуре от +15°C до +21°C и относительной влажности воздуха не более 75%",
-    term: "Срок хранения",
-    month: "9 мес",
-    kindOfCandy: "Вид конфет",
-    chocolate: "Шоколадные",
-    typeOfChocolate: "Вид шоколада",
-    bitter: "Горький",
-    flavor: "Вкус",
-    walnut: "Ореховый",
-    supplements: "Добавки",
-    hazelnut: "Фундук",
-    feature: "Особенность",
-    glazed: "Глазированные",
-    packaging: "Упаковка",
-    box: "Картонная коробка",
+  specificationBlock: {
+    descriptionTitle: "Описание",
+    nutritionalValueTitle: "Пищевая ценность",
+    nutritionalOnTheValueTitle: "на 100 г",
+    compositionTitle: "Состав",
+    generalInformationTitle: "Общая информация",
     hideInformation: "Скрыть подробную информацию",
   },
 };
@@ -857,14 +772,97 @@ export const productsList = [
       {
         id: 1,
         img: "https://via.placeholder.com/200x200?img=Img",
-        disPrice: "299,00",
-        oldPrice: "347,56",
-        discount: "-14%",
-        disDate: "до 19.08",
-        desc:
-          "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи",
+        price: "347,56",
+        desc: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
         weight: "200 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/300x200?img=Img'
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/300x200?img=Img'
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/300x200?img=Img'
+              },
+            ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56 ₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: '',
+            composition: '',
+            nutritionalValue: [
+              {
+                id:1,
+                vTitil: '',
+                v: ''
+              }
+            ],
+            generalInformation: [
+
+            ],
+          },
+        },
       },
       {
         id: 2,
