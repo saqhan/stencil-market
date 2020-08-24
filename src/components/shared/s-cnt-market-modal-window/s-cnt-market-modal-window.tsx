@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
+import {MarketProductDataInterface, MarketProductModalInterface} from "../../../index";
 
 @Component({
   tag: "s-cnt-market-modal-window",
@@ -10,12 +11,12 @@ export class SCntMarketModalWindow implements ComponentInterface {
   /**
    * Данные для модального окна
    */
-  @Prop() productModal: any;
+  @Prop() productModal: MarketProductModalInterface;
 
   /**
    *
    */
-  @Prop() productData: any;
+  @Prop() productData: MarketProductDataInterface;
 
   /**
    * Клик по кнопке закрытия модального окна
@@ -27,10 +28,6 @@ export class SCntMarketModalWindow implements ComponentInterface {
    * @private
    */
   public modalTag: HTMLElement;
-
-  componentDidLoad() {
-    console.log(this.productData)
-  }
 
   render() {
     return (

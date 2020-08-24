@@ -8,6 +8,7 @@ import {
   recentlyWatchedProducts,
   recentlyWatchedTitle,
 } from "../../../../../utils/mock-a";
+import {MarketProductDataInterface} from "../../../../../index";
 
 @Component({
   tag: "s-cnt-market-shop",
@@ -21,7 +22,10 @@ export class SCntMarketShop implements ComponentInterface {
    */
   @State() showModalState = false;
 
-  public productData = {};
+  /**
+   *
+   */
+  @State() productData: MarketProductDataInterface;
 
   render() {
     return (

@@ -1,22 +1,24 @@
 .container {
   max-width: 100%;
   padding: 0;
-}
-
-.row {
-  background-color: #f7f7f7;
+  color: #333;
 }
 
 .row-desc {
-  padding: 0 15px;
+  background-color: #f7f7f7;
+  border-radius: 4px;
+  padding-bottom: 25px;
+  padding-top: 25px;
 }
 
 .row-radius {
   border-radius: 0 0 15px 15px;
 }
 
-.op {
+.op b {
   margin: 20px 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .spec {
@@ -107,9 +109,9 @@
 
 .composition {
   font-size: 0.9em;
-  opacity: 0.7;
-  line-height: 23px;
   padding: 0 0 20px 15px;
+  line-height: 1.43;
+  color: #393939;
 }
 
 .line-composition {
@@ -124,28 +126,28 @@
   border-bottom: 0;
 }
 
-.product-property{
+.product-property {
   border-bottom: 1px solid #e6e6e6;
   padding: 10px 0;
   font-size: 0.9em;
 }
 
-.product-property-child{
+.product-property-child {
   display: flex;
   line-height: 16px;
 }
 
-.info-value-title{
+.info-value-title {
   line-height: 1.27;
   flex: 1;
   margin-right: 15px;
 }
 
-.info-value-title strong{
+.info-value-title strong {
   color: #333 !important;
 }
 
-.info-value{
+.info-value {
   line-height: 1.27;
   flex: 1;
   color: #393939;
@@ -265,4 +267,10 @@
 
 .recommendations {
   padding: 0;
+}
+
+@media only screen and (max-width: 400px) {
+  .block-composition {
+    padding-top: 20px;
+  }
 }

@@ -6,6 +6,7 @@ import {
   h,
   Prop,
 } from "@stencil/core";
+import {MarketProductListInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-products-list",
@@ -18,7 +19,7 @@ export class SCntMarketProductsList implements ComponentInterface {
   /**
    * Данные для списка товаров
    */
-  @Prop() productsList: any;
+  @Prop() productsList: MarketProductListInterface[];
 
   /**
    * Клик по карточке для показа модального окна
