@@ -976,6 +976,7 @@ declare namespace LocalJSX {
           * Данные об авторизации пользователя
          */
         "login"?: boolean;
+        "onOpenLoginModal"?: (event: CustomEvent<any>) => void;
     }
     interface SCntMarketHeaderBase {
         "logo"?: string;
@@ -998,6 +999,7 @@ declare namespace LocalJSX {
          */
         "login"?: boolean;
         "navBar"?: MarketNavBarInterface;
+        "onOpenLoginModal"?: (event: CustomEvent<any>) => void;
         /**
           * магазины для вашего города
          */

@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop, State} from "@stencil/core";
 
 @Component({
   tag: "s-cnt-market-header",
@@ -22,6 +22,11 @@ export class SCntMarketHeader implements ComponentInterface {
    * Обертка для липкого хедера
    * */
   @State() stickyTopTag: HTMLElement;
+
+  /**
+   *
+   */
+  @Event() openLoginModal: EventEmitter;
 
   componentDidLoad() {
     window.onscroll = () => {
