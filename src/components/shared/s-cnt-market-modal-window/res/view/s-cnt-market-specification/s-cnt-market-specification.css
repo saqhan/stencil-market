@@ -21,6 +21,7 @@
 
 .spec {
   margin: 10px 0 0 10px;
+  font-size: 0.9rem;
 }
 
 .my-spec {
@@ -49,9 +50,7 @@
   font-weight: 600;
 }
 
-.protein,
-.fat,
-.carbohydrates {
+.nutritional-value-title {
   display: inline-block;
   padding: 0 8px 10px 0;
   font-weight: 600;
@@ -64,8 +63,7 @@
   font-size: 1.1em;
 }
 
-.weightProtein,
-.weightFat {
+.nutritional-value {
   display: inline-block;
   padding: 10px 0 10px 80px;
   opacity: 0.7;
@@ -118,12 +116,40 @@
   /*width: 280px;*/
   padding: 10px 0;
   margin: auto;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #e6e6e6;
   display: flex;
 }
 
 .line-composition:last-child {
   border-bottom: 0;
+}
+
+.product-property{
+  border-bottom: 1px solid #e6e6e6;
+  padding: 10px 0;
+  font-size: 0.9em;
+}
+
+.product-property-child{
+  display: flex;
+  line-height: 16px;
+}
+
+.info-value-title{
+  line-height: 1.27;
+  flex: 1;
+  margin-right: 15px;
+}
+
+.info-value-title strong{
+  color: #333 !important;
+}
+
+.info-value{
+  line-height: 1.27;
+  flex: 1;
+  color: #393939;
+  word-break: break-word;
 }
 
 .brand,
@@ -145,10 +171,10 @@
   flex: 1;
 }
 
-.dolce {
+.brand-name {
   display: inline-block;
   opacity: 0.7;
-  font-size: 0.9em;
+
   color: #21a038;
   flex: 1;
 }
@@ -228,6 +254,7 @@
   margin: 40px 0 0 0;
   text-align: center;
   color: #21a038;
+  font-size: 0.9rem;
 }
 
 .space {

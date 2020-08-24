@@ -39,7 +39,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * закрывать меню
    * */
-  @Event() closeLeftMenuState: EventEmitter<void>;
+  @Event() closeLeftMenu: EventEmitter<void>;
 
   /**
    * тег обертки скидок
@@ -125,7 +125,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * Закрытие меню слева
    * */
   public closeLeftMenuHandler():void {
-    this.closeLeftMenuState.emit();
+    this.closeLeftMenu.emit();
   }
 
   /**

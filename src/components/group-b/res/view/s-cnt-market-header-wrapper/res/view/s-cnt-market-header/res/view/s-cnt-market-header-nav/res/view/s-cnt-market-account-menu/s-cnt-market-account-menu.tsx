@@ -21,7 +21,7 @@ export class SCntMarketAccountMenu implements ComponentInterface {
   /**
    * close account menu modal
    * */
-  @Event() closeAccountMenu: EventEmitter;
+  @Event() closeAccountMenu: EventEmitter<void>;
 
   render() {
     return (

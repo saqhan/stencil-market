@@ -1,5 +1,4 @@
 import {Component, ComponentInterface, h, Prop} from "@stencil/core";
-import {MarketGetRecommendedInterface} from "../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-recommended",
@@ -11,7 +10,12 @@ export class SCntMarketRecommended implements ComponentInterface {
   /**
    * Данные для Recommended
    */
-  @Prop() getRecommended: MarketGetRecommendedInterface;
+  @Prop() recommendedBlock: any;
+
+  /**
+   * Данные для Recommended
+   */
+  @Prop() getRecommended: any;
 
   /**
    *
@@ -34,7 +38,7 @@ export class SCntMarketRecommended implements ComponentInterface {
         <div class="row justify-content-between">
           <div class="col">
             <div class="info">
-              {this.getRecommended.recommendedTitle}
+              {this.recommendedBlock.recommendedTitle}
             </div>
           </div>
         </div>

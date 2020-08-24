@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
 
 @Component({
   tag: "s-cnt-market-header-base",
@@ -16,6 +16,11 @@ export class SCntMarketHeaderUnlogged implements ComponentInterface {
    *
    * */
   @Prop() number: string;
+
+  /**
+   *
+   */
+  @Event() openLoginModal: EventEmitter;
 
   render() {
     return (
@@ -39,7 +44,7 @@ export class SCntMarketHeaderUnlogged implements ComponentInterface {
                     <a href="tel:+78002221100">{this.number}</a>
                   </div>
                   <div class="btn-login">
-                    <button>Войти</button>
+                    <button onClick={()=> this.openLoginModal.emit()}>Войти</button>
                   </div>
                 </div>
               </div>
