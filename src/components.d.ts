@@ -111,6 +111,12 @@ export namespace Components {
          */
         "footerItems": footerItemsInterface;
     }
+    interface SCntMarketFooterModalForm {
+        /**
+          * show modal form
+         */
+        "showModalForm": boolean;
+    }
     interface SCntMarketHeader {
         /**
           * Массив данных для хедера
@@ -541,6 +547,12 @@ declare global {
         prototype: HTMLSCntMarketFooterItemsElement;
         new (): HTMLSCntMarketFooterItemsElement;
     };
+    interface HTMLSCntMarketFooterModalFormElement extends Components.SCntMarketFooterModalForm, HTMLStencilElement {
+    }
+    var HTMLSCntMarketFooterModalFormElement: {
+        prototype: HTMLSCntMarketFooterModalFormElement;
+        new (): HTMLSCntMarketFooterModalFormElement;
+    };
     interface HTMLSCntMarketHeaderElement extends Components.SCntMarketHeader, HTMLStencilElement {
     }
     var HTMLSCntMarketHeaderElement: {
@@ -795,6 +807,7 @@ declare global {
         "s-cnt-market-footer-info": HTMLSCntMarketFooterInfoElement;
         "s-cnt-market-footer-info-item": HTMLSCntMarketFooterInfoItemElement;
         "s-cnt-market-footer-items": HTMLSCntMarketFooterItemsElement;
+        "s-cnt-market-footer-modal-form": HTMLSCntMarketFooterModalFormElement;
         "s-cnt-market-header": HTMLSCntMarketHeaderElement;
         "s-cnt-market-header-base": HTMLSCntMarketHeaderBaseElement;
         "s-cnt-market-header-body": HTMLSCntMarketHeaderBodyElement;
@@ -967,6 +980,13 @@ declare namespace LocalJSX {
          */
         "footerItems"?: footerItemsInterface;
     }
+    interface SCntMarketFooterModalForm {
+        "onClickOnCloseModalForm"?: (event: CustomEvent<any>) => void;
+        /**
+          * show modal form
+         */
+        "showModalForm"?: boolean;
+    }
     interface SCntMarketHeader {
         /**
           * Массив данных для хедера
@@ -976,6 +996,7 @@ declare namespace LocalJSX {
           * Данные об авторизации пользователя
          */
         "login"?: boolean;
+        "onOpenLoginModal"?: (event: CustomEvent<any>) => void;
     }
     interface SCntMarketHeaderBase {
         "logo"?: string;
@@ -998,6 +1019,7 @@ declare namespace LocalJSX {
          */
         "login"?: boolean;
         "navBar"?: MarketNavBarInterface;
+        "onOpenLoginModal"?: (event: CustomEvent<any>) => void;
         /**
           * магазины для вашего города
          */
@@ -1363,6 +1385,7 @@ declare namespace LocalJSX {
         "s-cnt-market-footer-info": SCntMarketFooterInfo;
         "s-cnt-market-footer-info-item": SCntMarketFooterInfoItem;
         "s-cnt-market-footer-items": SCntMarketFooterItems;
+        "s-cnt-market-footer-modal-form": SCntMarketFooterModalForm;
         "s-cnt-market-header": SCntMarketHeader;
         "s-cnt-market-header-base": SCntMarketHeaderBase;
         "s-cnt-market-header-body": SCntMarketHeaderBody;
@@ -1427,6 +1450,7 @@ declare module "@stencil/core" {
             "s-cnt-market-footer-info": LocalJSX.SCntMarketFooterInfo & JSXBase.HTMLAttributes<HTMLSCntMarketFooterInfoElement>;
             "s-cnt-market-footer-info-item": LocalJSX.SCntMarketFooterInfoItem & JSXBase.HTMLAttributes<HTMLSCntMarketFooterInfoItemElement>;
             "s-cnt-market-footer-items": LocalJSX.SCntMarketFooterItems & JSXBase.HTMLAttributes<HTMLSCntMarketFooterItemsElement>;
+            "s-cnt-market-footer-modal-form": LocalJSX.SCntMarketFooterModalForm & JSXBase.HTMLAttributes<HTMLSCntMarketFooterModalFormElement>;
             "s-cnt-market-header": LocalJSX.SCntMarketHeader & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderElement>;
             "s-cnt-market-header-base": LocalJSX.SCntMarketHeaderBase & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBaseElement>;
             "s-cnt-market-header-body": LocalJSX.SCntMarketHeaderBody & JSXBase.HTMLAttributes<HTMLSCntMarketHeaderBodyElement>;

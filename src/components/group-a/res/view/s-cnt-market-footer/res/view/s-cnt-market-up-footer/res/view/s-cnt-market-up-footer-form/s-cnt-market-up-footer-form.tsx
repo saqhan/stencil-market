@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, h, Prop, State} from "@stencil/core";
 import {footerContactColumnInterface} from "../../../../../../../../../../../index";
 
 @Component({
@@ -14,16 +14,23 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
    * */
   @Prop() footerContactColumn: footerContactColumnInterface;
 
+  /**
+   *
+   * */
+  @State() isShowFormState: boolean;
+
   render() {
     return (
       <div class="upFooterForm">
         <div class="number">{this.footerContactColumn.number}</div>
         <div class="time">{this.footerContactColumn.time}</div>
-        <div class="input-block"
-          onClick={() => this.clickOnShowFormFooterHandler()}
-        >
+        <div class="input-block" onClick={() => this.clickOnShowFormFooterHandler()}>
           <i class="far fa-comment-alt icon" />
           <div class="input">{this.footerContactColumn.input}</div>
+          <s-cnt-market-footer-modal-form
+            showModalForm={this.isShowFormState}
+            onClickOnCloseModalForm={()=> this.clickOnCloseModalForm()}
+          ></s-cnt-market-footer-modal-form>
         </div>
         <div class="text">{this.footerContactColumn.text}</div>
       </div>
@@ -33,7 +40,16 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
   /**
    * клик по форме обратной связи
    * */
-  public clickOnShowFormFooterHandler() {
-    console.log('sa')
+  public clickOnShowFormFooterHandler(): void {
+    this.isShowFormState = true;
   }
+
+  /**
+   *
+   * */
+  public clickOnCloseModalForm(): void {
+    this.isShowFormState = false
+    console.log('состоняие у родителя', this.isShowFormState)
+  }
+
 }

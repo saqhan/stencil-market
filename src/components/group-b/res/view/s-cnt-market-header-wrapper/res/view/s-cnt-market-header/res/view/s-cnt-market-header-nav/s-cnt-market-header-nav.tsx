@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
+import {Component, ComponentInterface, EventEmitter, h, Prop, State, Event} from "@stencil/core";
 import {
   MarketLeftMenuCatalogInterface,
   MarketNavBarInterface,
@@ -53,6 +53,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * Показывать/скрывать  выбор магазина
    * */
   @State() openedStoreSelectState: boolean;
+
+    /**
+   *
+   */
+  @Event() openLoginModal: EventEmitter;
 
   /**
    * Тег для модалки
@@ -122,7 +127,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   </div>)
                 : (<div
                       class=" not-logged"
-                    /*TODO*/
+                     onClick={()=> this.openLoginModal.emit()}
                     >
                       <a>
                         <i class={this.navBar.iconUser}></i> Войти

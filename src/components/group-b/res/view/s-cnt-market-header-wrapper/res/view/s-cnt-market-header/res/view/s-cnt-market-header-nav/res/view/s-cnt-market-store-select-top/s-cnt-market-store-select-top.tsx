@@ -7,7 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import {MarketSelectShopsInterface} from "../../../../../../../../../../../../../../index";
+import { MarketSelectShopsInterface } from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-store-select-top",
@@ -43,7 +43,7 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
           class={
             this.openedStoreSelect
               ? "drawer-backdrop opened drawer-backdrop-transition "
-              : "drawer-backdrop "
+              : "drawer-backdrop"
           }
           ref={(el) => (this.selectStoreTagState = el)}
           onClick={(event) => this.clickOnSelectStoreHandler(event)}
