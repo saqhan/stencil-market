@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property     | Attribute | Description                  | Type                         | Default     |
-| ------------ | --------- | ---------------------------- | ---------------------------- | ----------- |
-| `pickUpData` | --        | Данные из объекта данных мок | `TopBarModalPickUpInterface` | `undefined` |
+| Property     | Attribute | Description                  | Type                               | Default     |
+| ------------ | --------- | ---------------------------- | ---------------------------------- | ----------- |
+| `pickUpData` | --        | Данные из объекта данных мок | `MarketTopBarModalPickUpInterface` | `undefined` |
 
 
 ## Events

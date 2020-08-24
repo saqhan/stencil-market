@@ -26,12 +26,27 @@ export class GroupB implements ComponentInterface {
   /**
    * выводими в зависимости от авторизации начальную шапку
    * */
-  @State() loginState: boolean = true;
+  @State() loginState: boolean = false;
 
   /**
    * Первоначальная страница
    * */
   @State() firstPageState: boolean = false;
+
+  /**
+   * boolean значение для вывода/закрытия модального окна входа/регистрация
+   */
+  @State() loginRegistrationCompleted: boolean;
+  /**
+   * boolean значение для вывода блока доставка при открытии модального окна
+   */
+  @State() loginCompleted: boolean;
+
+  /**
+   * boolean значение для вывода блока доставка при открытии модального окна
+   * и выделении кнопки самовывоза при его выборе посредством присвоения id родительскому блоку
+   */
+  @State() registrationCompleted: boolean;
 
   render() {
     return (
@@ -40,9 +55,24 @@ export class GroupB implements ComponentInterface {
           categories={header}
           login={this.loginState}
           firstPage={this.firstPageState}
+          onOpenLoginModal={() => this.openLoginModal()}
         >
           {" "}
         </s-cnt-market-header-wrapper>
+        {
+          this.loginRegistrationCompleted ? (
+            <s-cnt-market-login-and-registration-form
+              loginAndRegistration={header.topBar.loginAndRegistration}
+              login={this.loginCompleted}
+              registration={this.registrationCompleted}
+              onCloseLogin={() => this.closeLoginModal()}
+              onOpenLogin={() => this.openLogin()}
+              onOpenRegistration={() => this.openRegistration()}
+            ></s-cnt-market-login-and-registration-form>
+          ) : (
+            ""
+          )
+        }
         <main>
           <div class="overlayBackDrop"> </div>
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}>
@@ -82,6 +112,39 @@ export class GroupB implements ComponentInterface {
       </div>
     );
   }
+
+  /**
+   * Вызов модального окна компонента входа
+   */
+  public openLoginModal() {
+    this.loginRegistrationCompleted = true;
+    this.loginCompleted = true;
+    this.registrationCompleted = false;
+  }
+
+  /**
+   * Закрытие модального окна компонента входа
+   */
+  public closeLoginModal() {
+    this.loginRegistrationCompleted = false;
+  }
+
+  /**
+   * открытие блока/компонента входа при открытии модального окна
+   */
+  public openLogin() {
+    this.loginCompleted = true;
+    this.registrationCompleted = false;
+  }
+
+  /**
+   * открытие блока/компонента регистрации при открытии модального окна
+   */
+  public openRegistration() {
+    this.registrationCompleted = true;
+    this.loginCompleted = false;
+  }
+
 
   /**
    * GROUP A

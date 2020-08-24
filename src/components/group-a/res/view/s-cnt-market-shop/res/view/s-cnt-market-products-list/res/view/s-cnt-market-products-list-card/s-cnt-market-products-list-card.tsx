@@ -7,7 +7,6 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import {MarketProductListInterface} from "../../../../../../../../../../../index";
 
 
 @Component({
@@ -21,7 +20,7 @@ export class SCntMarketProductsListCard implements ComponentInterface {
   /**
    * Данные для списка товаров
    */
-  @Prop() productsList: MarketProductListInterface;
+  @Prop() productsList: any;
 
   /**
    * Клик по карточке для показа модального окна

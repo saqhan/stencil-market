@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description                                               | Type              | Default     |
-| -------- | --------- | --------------------------------------------------------- | ----------------- | ----------- |
-| `topBar` | --        | объект данных для компонента top-bar и его подкомпонентов | `TopBarInterface` | `undefined` |
+| Property | Attribute | Description                                               | Type                    | Default     |
+| -------- | --------- | --------------------------------------------------------- | ----------------------- | ----------- |
+| `topBar` | --        | объект данных для компонента top-bar и его подкомпонентов | `MarketTopBarInterface` | `undefined` |
 
 
 ## Dependencies

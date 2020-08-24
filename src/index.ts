@@ -461,8 +461,8 @@ export interface MarketUsersArrInterface {
   name: string;
   mail: string;
   password: string;
-  forBusiness: string;
-  mailing: string;
+  forBusiness: boolean;
+  mailing: boolean;
 }
 
 export interface MarketLoginInterface {

@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property    | Attribute  | Description                                                               | Type                   | Default     |
-| ----------- | ---------- | ------------------------------------------------------------------------- | ---------------------- | ----------- |
-| `delivery`  | `delivery` | boolean значение для вывода/закрытия блока доставки и присвоения класса   | `boolean`              | `undefined` |
-| `modalData` | --         | объект из mock для вывода данных в компоненте модального окна             | `TopBarModalInterface` | `undefined` |
-| `pickUp`    | `pick-up`  | boolean значение для вывода/закрытия блока самовывоза и присвоения класса | `boolean`              | `undefined` |
+| Property    | Attribute  | Description                                                               | Type                         | Default     |
+| ----------- | ---------- | ------------------------------------------------------------------------- | ---------------------------- | ----------- |
+| `delivery`  | `delivery` | boolean значение для вывода/закрытия блока доставки и присвоения класса   | `boolean`                    | `undefined` |
+| `modalData` | --         | объект из mock для вывода данных в компоненте модального окна             | `MarketTopBarModalInterface` | `undefined` |
+| `pickUp`    | `pick-up`  | boolean значение для вывода/закрытия блока самовывоза и присвоения класса | `boolean`                    | `undefined` |
 
 
 ## Events

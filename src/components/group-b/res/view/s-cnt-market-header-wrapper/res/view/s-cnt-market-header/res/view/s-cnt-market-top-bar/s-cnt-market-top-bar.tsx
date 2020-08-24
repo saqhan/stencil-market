@@ -54,18 +54,20 @@ export class SCntMarketTopBar implements ComponentInterface {
   render() {
     return (
       <div class="container-fluid parent-block-top-bar">
-        {this.loginRegistrationCompleted ? (
-          <s-cnt-market-login-and-registration-form
-            loginAndRegistration={this.topBar.loginAndRegistration}
-            login={this.loginCompleted}
-            registration={this.registrationCompleted}
-            onCloseLogin={() => this.closeLoginModal()}
-            onOpenLogin={() => this.openLogin()}
-            onOpenRegistration={() => this.openRegistration()}
-          ></s-cnt-market-login-and-registration-form>
-        ) : (
-          ""
-        )}
+        {
+          this.loginRegistrationCompleted ? (
+            <s-cnt-market-login-and-registration-form
+              loginAndRegistration={this.topBar.loginAndRegistration}
+              login={this.loginCompleted}
+              registration={this.registrationCompleted}
+              onCloseLogin={() => this.closeLoginModal()}
+              onOpenLogin={() => this.openLogin()}
+              onOpenRegistration={() => this.openRegistration()}
+            ></s-cnt-market-login-and-registration-form>
+          ) : (
+            ""
+          )
+        }
         <div class="container top-bar-content-outer-block">
           <div class="top-bar-content-inner-block">
             <div class="top-bar-delivery-and-adress">

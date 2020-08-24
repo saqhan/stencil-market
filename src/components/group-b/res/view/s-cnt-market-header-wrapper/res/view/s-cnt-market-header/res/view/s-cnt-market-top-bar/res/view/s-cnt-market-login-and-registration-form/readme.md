@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property               | Attribute      | Description                                                                | Type                   | Default     |
-| ---------------------- | -------------- | -------------------------------------------------------------------------- | ---------------------- | ----------- |
-| `login`                | `login`        | boolean значение для вывода/закрытия блока входа и присвоения класса       | `boolean`              | `undefined` |
-| `loginAndRegistration` | --             | объект данных для компонента LoginAndRegistrationForm и его подкомпонентов | `LoginAndRegistration` | `undefined` |
-| `registration`         | `registration` | boolean значение для вывода/закрытия блока регистрации и присвоения класса | `boolean`              | `undefined` |
+| Property               | Attribute      | Description                                                                | Type                                  | Default     |
+| ---------------------- | -------------- | -------------------------------------------------------------------------- | ------------------------------------- | ----------- |
+| `login`                | `login`        | boolean значение для вывода/закрытия блока входа и присвоения класса       | `boolean`                             | `undefined` |
+| `loginAndRegistration` | --             | объект данных для компонента LoginAndRegistrationForm и его подкомпонентов | `MarketLoginAndRegistrationInterface` | `undefined` |
+| `registration`         | `registration` | boolean значение для вывода/закрытия блока регистрации и присвоения класса | `boolean`                             | `undefined` |
 
 
 ## Events

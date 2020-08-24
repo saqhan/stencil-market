@@ -8,6 +8,7 @@ import {footerCopyrightRowInterface} from "../../../../../../../../index";
   scoped: true,
 })
 export class SCntMarketDownFooter implements ComponentInterface {
+
   /**
    * Данные для DownFooter
    */

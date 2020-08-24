@@ -156,17 +156,8 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
       this.logInBtn.setAttribute("disabled", "disabled");
 
-      if (mail !== '') {
-        this.mail.style.backgroundColor = 'white';
-        this.resetMail.classList.remove('hide');
-      } else {
-        this.mail.style.backgroundColor = '#f7f7f7';
-        this.resetMail.classList.add('hide');
-
-        this.mailError.innerHTML = 'Введите e-mail';
-        this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-        this.logInBtn.setAttribute("disabled", "disabled");
-      }
+      let errorVal = 'Введите mail';
+      mailValue(this.mail, this.resetMail, this.mailError, errorVal, this.logInBtn);
 
       return false;
     } else {
@@ -176,14 +167,25 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.resetMail.classList.add('hide');
       this.correctMail();
     }
-  };
 
-  /**
-   * функция для сброса введенных данных
-   * */
-  public reset(block) {
-    block.value = '';
-  }
+    /**
+     *
+     * */
+    function mailValue(input, reset, error, errorVal, btn) {
+      let inp = input.value;
+      if (inp !== '') {
+        input.style.backgroundColor = 'white';
+        reset.classList.remove('hide');
+      } else {
+        input.style.backgroundColor = '#f7f7f7';
+        reset.classList.add('hide');
+
+        error.innerHTML = errorVal;
+        input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
+        btn.setAttribute("disabled", "disabled");
+      }
+    }
+  };
 
   /**
    * функция для проверки валидации написания пароль
@@ -196,19 +198,8 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.password.style.boxShadow = 'inset 0 -2px 0 0 #f36';
       this.logInBtn.setAttribute("disabled", "disabled");
 
-      if (password !== '') {
-        this.password.style.backgroundColor = 'white';
-        this.resetPass.classList.remove('hide');
-        this.passViewRef.style.right = '40px';
-      } else {
-        this.password.style.backgroundColor = '#f7f7f7';
-        this.resetPass.classList.add('hide');
-        this.passViewRef.style.right = '13px';
-
-        this.passwordError.innerHTML = 'Пароль не введен';
-        this.password.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-        this.logInBtn.setAttribute("disabled", "disabled");
-      }
+      let errorVal = 'Пароль не введен';
+      passlValue(this.password, this.resetPass, this.passwordError, errorVal, this.logInBtn, this.passViewRef);
 
     } else {
       this.passwordError.innerHTML = '';
@@ -219,7 +210,35 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
 
       this.correctPassword();
     }
+
+    /**
+     *
+     * */
+    function passlValue(input, reset, error, errorVal, btn, view) {
+      let inp = input.value;
+      if (inp !== '') {
+        input.style.backgroundColor = 'white';
+        reset.classList.remove('hide');
+
+        view.style.right = '40px';
+      } else {
+        input.style.backgroundColor = '#f7f7f7';
+        reset.classList.add('hide');
+        view.style.right = '13px';
+
+        error.innerHTML = errorVal;
+        input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
+        btn.setAttribute("disabled", "disabled");
+      }
+    }
   };
+
+  /**
+   * функция для сброса введенных данных
+   * */
+  public reset(block) {
+    block.value = '';
+  }
 
   /**
    * функция для смены типа инпут путем изменения стейт
@@ -277,7 +296,6 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.logInBtn.setAttribute("disabled", "disabled");
     }
   }
-
 }
 
 /*

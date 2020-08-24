@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property     | Attribute | Description        | Type                     | Default     |
-| ------------ | --------- | ------------------ | ------------------------ | ----------- |
-| `getProduct` | --        | Данные для Product | `MarketProductInterface` | `undefined` |
+| Property     | Attribute | Description        | Type                        | Default     |
+| ------------ | --------- | ------------------ | --------------------------- | ----------- |
+| `getProduct` | --        | Данные для Product | `MarketGetProductInterface` | `undefined` |
 
 
 ## Events

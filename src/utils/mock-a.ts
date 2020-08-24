@@ -536,106 +536,21 @@ export const forApp = {
 };
 
 export const productModal = {
-  getProduct: {
-    brand: "Бренды ЛЕНТЫ",
-    products: "Продукты питания",
-    category: "Сладости",
-    image: "https://via.placeholder.com/300x200?text=Text",
-    name: "Конфеты Dolce Albero из горького шоколада с цельным лесным орехом",
-    weight: "200 г",
-    price: "252,69 ₽",
-    presence: "Товара много",
+  productBlock: {
     button: "Купить",
+    likeIcon: 'fas fa-heart my-heart',
   },
 
-  getRecommended: {
+  recommendedBlock: {
     recommendedTitle: 'С этим смотрят',
-    featuredProduct: [
-      {
-        id: 1,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "269.59 ₽",
-        productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
-        weight: "190 г",
-      },
-      {
-        id: 2,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "252.69 ₽",
-        productName: "Конфеты Dolce Albero Ассорти",
-        weight: "200 г",
-      },
-      {
-        id: 3,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "115.79 ₽",
-        productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
-        weight: "200 г",
-      },
-      {
-        id: 4,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "105.29 ₽",
-        productName: "Миска Mallony 1,1л",
-        weight: "1 шт",
-      },
-      {
-        id: 5,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "168.49 ₽",
-        productName: "Миска Mallony 3,3л",
-        weight: "1 шт",
-      },
-      {
-        id: 6,
-        image: "https://via.placeholder.com/70x70?text=Text",
-        price: "105.29 ₽",
-        productName: "Грибы вешенки свежие",
-        weight: "300 гр",
-      },
-    ]
   },
 
-  getSpecification: {
-    op: "Описание",
-    spec: "Шоколадные конфеты Dolce Albero на каждый день к чаю.",
-    value: "Пищевая ценность",
-    weight: "на 100 г",
-    protein: "Белки",
-    weightProtein: "6,8 г",
-    fat: "Жиры",
-    weightFat: "37,9 г",
-    carbohydrates: "Углеводы",
-    weightCarbohydrates: "46,5 г",
-    calories: "Калорийность",
-    weightCalories: "549 ккал",
-    item_1: "Состав",
-    composition:
-      'Сахар, какао тертое, жир специального назначения (пальмовое масло, пальмоядрогвое масло, эмульгатор лецитин соевый), ядра ореха фундука (лесного ореха) обжаренные, масло какао, какао-порошок, ядра ореха фундука (лесного ореха) обжаренные тертые, молоко сухое цельное, молоко сухое обезжиренное, эмульгатор лецитин соевый, ароматизаторы: "Ванилин", "Фундук", антиокислитель аскорбановая кислота.',
-    info: "Общая информация",
-    brand: "Бренд",
-    dolce: "Dolce Albero",
-    manufacturer: "Производитель",
-    lenta: "Лента",
-    country: "Страна",
-    russia: "Россия",
-    storageConditions: "Условия хранения",
-    terms:
-      "При температуре от +15°C до +21°C и относительной влажности воздуха не более 75%",
-    term: "Срок хранения",
-    month: "9 мес",
-    kindOfCandy: "Вид конфет",
-    chocolate: "Шоколадные",
-    typeOfChocolate: "Вид шоколада",
-    bitter: "Горький",
-    flavor: "Вкус",
-    walnut: "Ореховый",
-    supplements: "Добавки",
-    hazelnut: "Фундук",
-    feature: "Особенность",
-    glazed: "Глазированные",
-    packaging: "Упаковка",
-    box: "Картонная коробка",
+  specificationBlock: {
+    descriptionTitle: "Описание",
+    nutritionalValueTitle: "Пищевая ценность",
+    nutritionalOnTheValueTitle: "на 100 г",
+    compositionTitle: "Состав",
+    generalInformationTitle: "Общая информация",
     hideInformation: "Скрыть подробную информацию",
   },
 };
@@ -857,14 +772,159 @@ export const productsList = [
       {
         id: 1,
         img: "https://via.placeholder.com/200x200?img=Img",
-        disPrice: "299,00",
-        oldPrice: "347,56",
-        discount: "-14%",
-        disDate: "до 19.08",
-        desc:
-          "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи",
+        price: "347,56",
+        desc: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
         weight: "200 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 2,
@@ -874,6 +934,155 @@ export const productsList = [
           "Бальзам L’Oreal Paris Elseve Длина мечты для длинных поврежденных волос",
         weight: "1 шт",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 3,
@@ -883,6 +1092,155 @@ export const productsList = [
           "Экспресс-Кондиционер L’Oreal Paris Elseve Полное Восстановление 5 двухфазный",
         weight: "200 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 4,
@@ -892,6 +1250,155 @@ export const productsList = [
           "Стойкая крем-краска для волос L'Oreal Excellence светло-русый пепельный оттенок 8.1",
         weight: "1 шт",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 5,
@@ -901,6 +1408,155 @@ export const productsList = [
           "Шампунь L’Oreal Paris Elseve Роскошь 6 масел питательный для всех типов волос 400 мл",
         weight: "400 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 6,
@@ -910,6 +1566,155 @@ export const productsList = [
           "Очищающий тоник для лица L'Oreal Paris Бесконечная Свежесть для нормальной и смешанной кожи с экстрактами Розы и Лотоса 200 мл",
         weight: "200 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 7,
@@ -922,6 +1727,155 @@ export const productsList = [
           "Гель для бритья L'Oreal Paris Men Expert Sensitive для чувствительной кожи 200 мл",
         weight: "200 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 8,
@@ -934,6 +1888,155 @@ export const productsList = [
           "Лосьон для бритья L'Oreal Paris Men Expert Sensitive для чувствительной кожи 200 мл",
         weight: "200 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
       {
         id: 9,
@@ -946,6 +2049,155 @@ export const productsList = [
           "Гель после бритья L'Oreal Paris Men Expert Sensitive для чувствительной кожи 200 мл",
         weight: "200 мл",
         currency: "₽",
+        productData: {
+          getProduct: {
+            brand: "Товары для офиса",
+            products: "Подарки для сотрудников",
+            category: "Средства для бритья",
+            img: 'https://via.placeholder.com/300x200?img=Img',
+            // image: [
+            //   {
+            //     id: 1,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 2,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            //   {
+            //     id: 3,
+            //     img: 'https://via.placeholder.com/300x200?img=Img'
+            //   },
+            // ],
+            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
+            weight: "200 мл",
+            price: "347,56",
+            currency: "₽",
+            presence: 22,
+          },
+
+          getRecommended: {
+            featuredProduct: [
+              {
+                id: 1,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "269.59 ₽",
+                productName: "Конфеты Россия Щедрая душа Родные просторы с начинкой",
+                weight: "190 г",
+              },
+              {
+                id: 2,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "252.69 ₽",
+                productName: "Конфеты Dolce Albero Ассорти",
+                weight: "200 г",
+              },
+              {
+                id: 3,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "115.79 ₽",
+                productName: "Конфеты Бабаевский оригинальные с фундуком и какао",
+                weight: "200 г",
+              },
+              {
+                id: 4,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Миска Mallony 1,1л",
+                weight: "1 шт",
+              },
+              {
+                id: 5,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "168.49 ₽",
+                productName: "Миска Mallony 3,3л",
+                weight: "1 шт",
+              },
+              {
+                id: 6,
+                image: "https://via.placeholder.com/70x70?text=Text",
+                price: "105.29 ₽",
+                productName: "Грибы вешенки свежие",
+                weight: "300 гр",
+              },
+            ]
+          },
+
+          getSpecification: {
+            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
+              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
+              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
+              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
+            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
+              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
+              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
+            nutritionalValue: [],
+            BrandNameTitle: 'Бренд',
+            BrandName: 'L\'Oreal Paris',
+            generalInformation: [
+              {
+                id: 1,
+                infoTitle: 'Производитель',
+                info: 'ЗАО Лореаль'
+              },
+              {
+                id: 2,
+                infoTitle: 'Страна',
+                info: 'Франция'
+              },
+              {
+                id: 3,
+                infoTitle: 'Количество в упаковке',
+                info: '200 мл'
+              },
+              {
+                id: 4,
+                infoTitle: 'Условия хранения',
+                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+              },
+              {
+                id: 5,
+                infoTitle: 'Срок хранения',
+                info: '3 г'
+              },
+              {
+                id: 6,
+                infoTitle: 'Вид средства для бритья',
+                info: 'Пена'
+              },
+              {
+                id: 7,
+                infoTitle: 'Пол',
+                info: 'Мужской'
+              },
+              {
+                id: 8,
+                infoTitle: 'Свойства',
+                info: 'Смягчающие'
+              },
+              {
+                id: 9,
+                infoTitle: 'Тип кожи',
+                info: 'Чувствительная'
+              },
+              {
+                id: 10,
+                infoTitle: 'Экстракт алоэ',
+                info: 'Добавки'
+              },
+              {
+                id: 11,
+                infoTitle: 'Особенность',
+                info: 'Гладкое скольжение'
+              },
+              {
+                id: 12,
+                infoTitle: 'Упаковка',
+                info: 'Аэрозоль'
+              },
+            ],
+          },
+        },
       },
     ],
   },

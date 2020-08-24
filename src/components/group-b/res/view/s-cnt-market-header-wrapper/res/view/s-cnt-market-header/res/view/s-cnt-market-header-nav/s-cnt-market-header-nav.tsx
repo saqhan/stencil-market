@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
+import {Component, ComponentInterface, EventEmitter, h, Prop, State, Event} from "@stencil/core";
 import {
   MarketLeftMenuCatalogInterface,
   MarketNavBarInterface,
@@ -37,22 +37,27 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /*
    * Показывать/скрывать аккаунт юзера
    * */
-  @State() isShowUserAccount: boolean;
+  @State() isShowUserAccountState: boolean;
 
   /*
    * Показывать/скрывать левое меню-каталог
    * */
-  @State() openedLeftMenu: boolean;
+  @State() openedLeftMenuState: boolean;
 
   /**
    * Показывать/скрывать корзину
    * */
-  @State() openedBasket: boolean;
+  @State() openedBasketState: boolean;
 
   /**
    * Показывать/скрывать  выбор магазина
    * */
-  @State() openedStoreSelect: boolean;
+  @State() openedStoreSelectState: boolean;
+
+    /**
+   *
+   */
+  @Event() openLoginModal: EventEmitter;
 
   /**
    * Тег для модалки
@@ -73,7 +78,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 {
                   <s-cnt-market-left-menu-catalog
                     leftMenuCatalogArr={this.leftMenuCatalogArr}
-                    openedLeftMenu={this.openedLeftMenu}
+                    openedLeftMenu={this.openedLeftMenuState}
                     onCloseLeftMenu={() => this.closeLeftMenu()}
                   ></s-cnt-market-left-menu-catalog>
                 }
@@ -93,7 +98,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                 </div>
                 <s-cnt-market-store-select-top
                   selectShops={this.selectShops}
-                  openedStoreSelect={this.openedStoreSelect}
+                  openedStoreSelect={this.openedStoreSelectState}
                   onCloseStoreSelect={() => this.closeStoreSelect()}
                 ></s-cnt-market-store-select-top>
                 <div class="search-wrapper">
@@ -122,7 +127,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   </div>)
                 : (<div
                       class=" not-logged"
-                      onClick={() => this.onClickAccountHandler()}
+                     onClick={()=> this.openLoginModal.emit()}
                     >
                       <a>
                         <i class={this.navBar.iconUser}></i> Войти
@@ -135,7 +140,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   class="menu-account-wrapper"
                   ref={(el) => (this.modalTag = el)}
                 >
-                  {this.isShowUserAccount ? (
+                  {this.isShowUserAccountState ? (
                     <s-cnt-market-account-menu
                       onCloseAccountMenu={() => this.closeAccountMenuHandler()}
                     ></s-cnt-market-account-menu>
@@ -164,7 +169,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <span>{this.navBar.titleCart}</span>
                 </a>
                 <s-cnt-market-basket
-                  openedBasket={this.openedBasket}
+                  openedBasket={this.openedBasketState}
                   onCloseBasket={() => this.closeBasket()}
                 ></s-cnt-market-basket>
               </div>
@@ -178,28 +183,28 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * клик на выбор магазина в шапке
    * */
-  public onClickSelectStoreHandler() {
-    this.openedStoreSelect = true;
+  public onClickSelectStoreHandler(): void  {
+    this.openedStoreSelectState = true;
   }
 
   /**
    * Переключаем состояние аккаунта юзера
    **/
-  public onClickAccountHandler() {
-    this.isShowUserAccount = !this.isShowUserAccount;
+  public onClickAccountHandler(): void  {
+    this.isShowUserAccountState = !this.isShowUserAccountState;
   }
 
   /**
    * close account menu
    * */
-  public closeAccountMenuHandler() {
-    this.isShowUserAccount = false;
+  public closeAccountMenuHandler(): void  {
+    this.isShowUserAccountState = false;
   }
 
   /**
    * Переключаем состояние аккаунта юзера
    * */
-  public clickOnModal(event) {
+  public clickOnModal(event): void  {
     if (event.target !== this.modalTag) {
       this.onClickAccountHandler();
     }
@@ -208,42 +213,42 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * Show/hide left menu
    * */
-  public onClickCatalogHandler() {
-    this.openedLeftMenu = true;
+  public onClickCatalogHandler(): void  {
+    this.openedLeftMenuState = true;
   }
 
   /**
    * Показываь корзину
    * */
-  public onClickBasketHandler() {
-    this.openedBasket = true;
+  public onClickBasketHandler(): void  {
+    this.openedBasketState = true;
   }
 
   /**
    *
    * */
-  public closeLeftMenu() {
-    this.openedLeftMenu = false;
+  public closeLeftMenu(): void  {
+    this.openedLeftMenuState = false;
   }
 
   /**
    * Закрыть корзину
    * */
-  public closeBasket() {
-    this.openedBasket = false;
+  public closeBasket(): void  {
+    this.openedBasketState = false;
   }
 
   /**
    * close select store
    * */
-  public closeStoreSelect() {
-    this.openedStoreSelect = false;
+  public closeStoreSelect(): void  {
+    this.openedStoreSelectState = false;
   }
 
   /**
    * click to input
    * */
-  public focusInputSearhHandler() {
+  public focusInputSearhHandler(): void  {
     const overlay = document.querySelector(".overlayBackDrop");
     overlay.classList.add("overlay");
   }
@@ -251,7 +256,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
   /**
    * blur on input
    * */
-  public blurInputSearchHandler() {
+  public blurInputSearchHandler(): void {
     const overlay = document.querySelector(".overlayBackDrop");
     overlay.classList.remove("overlay");
   }

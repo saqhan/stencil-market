@@ -8,17 +8,22 @@ import { NavMenuItemInterface } from "./res/interface/common.interface";
   scoped: true,
 })
 export class SCntMarketHeaderBody implements ComponentInterface {
+
+  /**
+   * Элементы для навигации
+   * */
   @Prop() body: NavMenuItemInterface;
 
   /**
    *
    */
   public mobileMenuTag: HTMLElement;
+
   /**
    * show hide bars
    * */
-
   public isShowBar: boolean;
+
   render() {
     return (
       <div class="container">
@@ -79,15 +84,15 @@ export class SCntMarketHeaderBody implements ComponentInterface {
   /**
    * Открытие и закрытие мобильного меню при нажатии на иконки
    */
-  public showMobileMenuHandler() {
+  public showMobileMenuHandler(): void {
     this.mobileMenuTag.classList.toggle("active");
     this.isShowBar = true;
-    console.log(this.isShowBar);
   }
+
   /*
    * получаем список меню
    * */
-  public getItemsMenu(array) {
+  public getItemsMenu(array): NavMenuItemInterface {
     return array.map((item) => {
       return <li>{item.name}</li>;
     });

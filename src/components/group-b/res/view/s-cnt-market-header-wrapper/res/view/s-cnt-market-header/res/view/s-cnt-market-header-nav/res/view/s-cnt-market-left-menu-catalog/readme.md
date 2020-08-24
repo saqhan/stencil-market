@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property             | Attribute          | Description                 | Type                         | Default     |
-| -------------------- | ------------------ | --------------------------- | ---------------------------- | ----------- |
-| `leftMenuCatalogArr` | --                 | массив магазинов для вывода | `leftMenuCatalogInterface[]` | `[]`        |
-| `openedLeftMenu`     | `opened-left-menu` | стейт на состояние меню     | `boolean`                    | `undefined` |
+| Property             | Attribute          | Description                 | Type                               | Default     |
+| -------------------- | ------------------ | --------------------------- | ---------------------------------- | ----------- |
+| `leftMenuCatalogArr` | --                 | массив магазинов для вывода | `MarketLeftMenuCatalogInterface[]` | `[]`        |
+| `openedLeftMenu`     | `opened-left-menu` | стейт на состояние меню     | `boolean`                          | `undefined` |
 
 
 ## Events
