@@ -31,7 +31,7 @@ export class GroupB implements ComponentInterface {
   /**
    * Первоначальная страница
    * */
-  @State() firstPageState: boolean = true;
+  @State() firstPageState: boolean = false;
 
   render() {
     return (

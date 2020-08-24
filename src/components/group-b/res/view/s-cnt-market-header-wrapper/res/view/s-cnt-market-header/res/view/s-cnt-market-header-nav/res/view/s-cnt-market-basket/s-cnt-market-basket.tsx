@@ -16,7 +16,7 @@ export class SCntMarketBasket implements ComponentInterface {
   /**
    * /Закрыть корзину
    * */
-  @Event() closeBasket: EventEmitter;
+  @Event() closeBasket: EventEmitter <void>;
 
   /**
    * Тег обертки оверлея корзины

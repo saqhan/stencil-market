@@ -39,12 +39,12 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   /**
    * закрывать меню
    * */
-  @Event() closeLeftMenu: EventEmitter;
+  @Event() closeLeftMenuState: EventEmitter<void>;
 
   /**
    * тег обертки скидок
    * */
-  @State() wrapperSales: HTMLElement;
+  @State() wrapperSalesState: HTMLElement;
 
   componentDidLoad() {
     this.checkSales(this.leftMenuCatalogArr);
@@ -87,7 +87,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
                 <div class="category-menu-content">
                   <ul
                     class="category-menu-list d-none "
-                    ref={(el) => (this.wrapperSales = el)}
+                    ref={(el) => (this.wrapperSalesState = el)}
                   >
                     {/*<li class="category-menu-item-placeholder"></li>*/}
                     <li class="category-menu-item category-menu-item-promoted">
@@ -125,7 +125,7 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
    * Закрытие меню слева
    * */
   public closeLeftMenuHandler():void {
-    this.closeLeftMenu.emit();
+    this.closeLeftMenuState.emit();
   }
 
   /**
@@ -152,8 +152,8 @@ export class SCntMarketLeftMenuCatalog implements ComponentInterface {
   public checkSales(array): void {
     array.map((item) => {
       if (item.sales) {
-        this.wrapperSales.classList.add("visible");
-        this.wrapperSales.classList.remove("d-none");
+        this.wrapperSalesState.classList.add("visible");
+        this.wrapperSalesState.classList.remove("d-none");
       }
     });
   }

@@ -72,7 +72,7 @@ export class SCntMarketAccountMenu implements ComponentInterface {
   /**
    * Клик на закрытие модалки
    * */
-  public clickOnCloseAccountHandler(event) {
+  public clickOnCloseAccountHandler(event): void  {
     if (event.target === this.backDropTag) {
       this.closeAccountMenu.emit();
     }

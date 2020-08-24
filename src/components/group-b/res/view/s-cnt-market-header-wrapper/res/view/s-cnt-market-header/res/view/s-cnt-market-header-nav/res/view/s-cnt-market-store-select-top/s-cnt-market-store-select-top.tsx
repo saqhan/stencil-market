@@ -29,12 +29,12 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   /**
    * /Закрыть корзину
    * */
-  @Event() closeStoreSelect: EventEmitter;
+  @Event() closeStoreSelect: EventEmitter<void>;
 
   /**
    * Обертка модалки
    * */
-  @State() selectStoreTag: HTMLElement;
+  @State() selectStoreTagState: HTMLElement;
 
   render() {
     return (
@@ -45,7 +45,7 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
               ? "drawer-backdrop opened drawer-backdrop-transition "
               : "drawer-backdrop "
           }
-          ref={(el) => (this.selectStoreTag = el)}
+          ref={(el) => (this.selectStoreTagState = el)}
           onClick={(event) => this.clickOnSelectStoreHandler(event)}
         ></div>
         <div
@@ -88,7 +88,7 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
    * клик на открытие меню
    * */
   public clickOnSelectStoreHandler(event): void {
-    if (event.target === this.selectStoreTag) {
+    if (event.target === this.selectStoreTagState) {
       this.closeStoreSelect.emit();
     }
   }

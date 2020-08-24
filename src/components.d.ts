@@ -126,6 +126,9 @@ export namespace Components {
         "number": string;
     }
     interface SCntMarketHeaderBody {
+        /**
+          * Элементы для навигации
+         */
         "body": NavMenuItemInterface;
     }
     interface SCntMarketHeaderNav {
@@ -963,6 +966,9 @@ declare namespace LocalJSX {
         "number"?: string;
     }
     interface SCntMarketHeaderBody {
+        /**
+          * Элементы для навигации
+         */
         "body"?: NavMenuItemInterface;
     }
     interface SCntMarketHeaderNav {
