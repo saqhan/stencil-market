@@ -122,7 +122,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   </div>)
                 : (<div
                       class=" not-logged"
-                      onClick={() => this.onClickAccountHandler()}
+                    /*TODO*/
                     >
                       <a>
                         <i class={this.navBar.iconUser}></i> Войти
