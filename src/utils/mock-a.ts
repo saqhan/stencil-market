@@ -781,21 +781,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -939,21 +939,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -1097,21 +1097,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -1255,21 +1255,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -1413,21 +1413,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -1571,21 +1571,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -1732,21 +1732,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -1893,21 +1893,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",
@@ -2054,21 +2054,21 @@ export const productsList = [
             brand: "Товары для офиса",
             products: "Подарки для сотрудников",
             category: "Средства для бритья",
-            img: 'https://via.placeholder.com/300x200?img=Img',
-            // image: [
-            //   {
-            //     id: 1,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 2,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            //   {
-            //     id: 3,
-            //     img: 'https://via.placeholder.com/300x200?img=Img'
-            //   },
-            // ],
+            defaultImgId: 1,
+            image: [
+              {
+                id: 1,
+                img: 'https://via.placeholder.com/250x250?img=Img',
+              },
+              {
+                id: 2,
+                img: 'https://via.placeholder.com/251x250?img=Img',
+              },
+              {
+                id: 3,
+                img: 'https://via.placeholder.com/252x250?img=Img',
+              },
+            ],
             name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
             weight: "200 мл",
             price: "347,56",

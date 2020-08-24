@@ -27,27 +27,27 @@ export interface MarketCourierInterface {
 }
 
 export interface MarketDeliveryInterface {
-  img: string,
-  title: string,
-  btn: string,
-  cities: MarketCitiesInterface[],
+  img: string;
+  title: string;
+  btn: string;
+  cities: MarketCitiesInterface[];
 }
 
 export interface MarketCitiesInterface {
-  name: string
+  name: string;
 }
 
 export interface MarketOfferInterface{
-  id: number,
-  icon: string,
-  text: string,
+  id: number;
+  icon: string;
+  text: string;
 }
 
 export interface MarketSelectionInterface{
-  id: number,
-  image: string,
-  text?: string,
-  title: string
+  id: number;
+  image: string;
+  text?: string;
+  title: string;
 }
 
 export interface MarketSpecialistInterface {
@@ -58,8 +58,8 @@ export interface MarketSpecialistInterface {
 }
 
 export interface MarketStatisticsInterface{
-  id: number,
-  text: string
+  id: number;
+  text: string;
 }
 
 export interface MarketFooterMenuInterface {
@@ -113,8 +113,8 @@ export interface footerDataInterface {
 }
 
 export interface MarketProductListInterface {
-  header: MarketProductListHeaderInterface;
-  card: MarketProductListCardInterface[];
+  header: any;
+  card: any;
 }
 
 export interface MarketProductListCardInterface {
@@ -129,6 +129,7 @@ export interface MarketProductListCardInterface {
   disPrice?: string;
   discount?: string;
   oldPrice?: string;
+  productData?: MarketProductDataItemsInterface;
 }
 
 export interface MarketProductListHeaderInterface {
@@ -174,6 +175,34 @@ export interface MarketRecentlyWatchedProductsInterface {
 }
 
 export interface MarketProductModalInterface {
+  productBlock: MarketProductBlockInterface,
+  recommendedBlock: MarketRecommendedBlockInterface,
+  specificationBlock: MarketSpecificationBlockInterface,
+}
+
+export interface MarketProductBlockInterface {
+  button: string,
+  likeIcon: string,
+}
+
+export interface MarketRecommendedBlockInterface {
+  recommendedTitle: string,
+}
+
+export interface MarketSpecificationBlockInterface {
+  descriptionTitle: string,
+  nutritionalValueTitle: string,
+  nutritionalOnTheValueTitle: string,
+  compositionTitle: string,
+  generalInformationTitle: string,
+  hideInformation: string,
+}
+
+export interface MarketProductDataInterface {
+  productData: MarketProductDataItemsInterface,
+}
+
+export interface MarketProductDataItemsInterface {
   getProduct: MarketGetProductInterface,
   getRecommended: MarketGetRecommendedInterface,
   getSpecification: MarketGetSpecificationInterface,
@@ -183,17 +212,37 @@ export interface MarketGetProductInterface {
   brand: string,
   products: string,
   category: string,
-  image: string,
+  defaultImgId: number,
+  image?: MarketProductImgInterface[],
   name: string,
   weight: string,
   price: string,
-  presence: string,
-  button: string,
+  currency: string,
+  presence: number,
+}
+
+export interface MarketProductImgInterface {
+  id: number,
+  img: string,
 }
 
 export interface MarketGetRecommendedInterface {
-  recommendedTitle: string,
   featuredProduct: MarketFeaturedProductInterface[],
+}
+
+export interface MarketGetSpecificationInterface {
+  description: string,
+  composition: string,
+  nutritionalValue: MarketGetSpecificationInfoArrInterface[],
+  BrandNameTitle: string,
+  BrandName: string,
+  generalInformation: MarketGetSpecificationInfoArrInterface[],
+}
+
+export interface MarketGetSpecificationInfoArrInterface {
+  id: number,
+  infoTitle: string,
+  info: string,
 }
 
 export interface MarketFeaturedProductInterface {
@@ -202,47 +251,6 @@ export interface MarketFeaturedProductInterface {
   price: string,
   productName: string,
   weight: string,
-}
-
-export interface MarketGetSpecificationInterface {
-  op: string,
-  spec: string,
-  value: string,
-  weight: string,
-  protein: string,
-  weightProtein: string,
-  fat: string,
-  weightFat: string,
-  carbohydrates: string,
-  weightCarbohydrates: string,
-  calories: string,
-  weightCalories: string,
-  item_1: string,
-  composition: string,
-  info: string,
-  brand: string,
-  dolce: string,
-  manufacturer: string,
-  lenta: string,
-  country: string,
-  russia: string,
-  storageConditions: string,
-  terms: string,
-  term: string,
-  month: string,
-  kindOfCandy: string,
-  chocolate: string,
-  typeOfChocolate: string,
-  bitter: string,
-  flavor: string,
-  walnut: string,
-  supplements: string,
-  hazelnut: string,
-  feature: string,
-  glazed: string,
-  packaging: string,
-  box: string,
-  hideInformation: string,
 }
 
 export interface MarketChoiceInterface {

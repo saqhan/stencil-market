@@ -29,6 +29,12 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
     this.searchInput.addEventListener("blur", () => (this.rezBlock = false));
   }
 
+  disconnectedCallback() {
+    this.searchInput.removeEventListener("input", () => this.searchAddress());
+    this.searchInput.removeEventListener("focus", () => (this.rezBlock = true));
+    this.searchInput.removeEventListener("blur", () => (this.rezBlock = false));
+  }
+
   render() {
     return (
       <div class="block-entering-delivery-address">

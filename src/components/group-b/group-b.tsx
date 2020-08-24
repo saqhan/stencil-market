@@ -1,5 +1,5 @@
-import { Component, ComponentInterface, h, State } from "@stencil/core";
-import { header } from "../../utils/mock-b";
+import {Component, ComponentInterface, h, State} from "@stencil/core";
+import {header} from "../../utils/mock-b";
 import {
   footerData,
   productModal,
@@ -31,7 +31,7 @@ export class GroupB implements ComponentInterface {
   /**
    * Первоначальная страница
    * */
-  @State() firstPageState: boolean = false;
+  @State() firstPageState: boolean = true;
 
   /**
    * boolean значение для вывода/закрытия модального окна входа/регистрация
@@ -65,6 +65,7 @@ export class GroupB implements ComponentInterface {
               loginAndRegistration={header.topBar.loginAndRegistration}
               login={this.loginCompleted}
               registration={this.registrationCompleted}
+              blockWidth='440px'
               onCloseLogin={() => this.closeLoginModal()}
               onOpenLogin={() => this.openLogin()}
               onOpenRegistration={() => this.openRegistration()}
@@ -74,7 +75,7 @@ export class GroupB implements ComponentInterface {
           )
         }
         <main>
-          <div class="overlayBackDrop"> </div>
+          <div class="overlayBackDrop"></div>
           <s-cnt-market-promo-slider promoSliderCards={promoSliderCards}>
             {" "}
           </s-cnt-market-promo-slider>
@@ -120,6 +121,7 @@ export class GroupB implements ComponentInterface {
     this.loginRegistrationCompleted = true;
     this.loginCompleted = true;
     this.registrationCompleted = false;
+    document.body.style.overflow= 'hidden'
   }
 
   /**
@@ -127,6 +129,7 @@ export class GroupB implements ComponentInterface {
    */
   public closeLoginModal() {
     this.loginRegistrationCompleted = false;
+    document.body.style.overflow= ''
   }
 
   /**

@@ -60,6 +60,7 @@ export class SCntMarketTopBar implements ComponentInterface {
               loginAndRegistration={this.topBar.loginAndRegistration}
               login={this.loginCompleted}
               registration={this.registrationCompleted}
+              blockWidth='746px'
               onCloseLogin={() => this.closeLoginModal()}
               onOpenLogin={() => this.openLogin()}
               onOpenRegistration={() => this.openRegistration()}

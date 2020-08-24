@@ -33,7 +33,6 @@
 
 .login-or-registration-form-parent {
   z-index: 5;
-  max-width: 746px;
   width: 100%;
   position: relative;
   margin: 30px auto;

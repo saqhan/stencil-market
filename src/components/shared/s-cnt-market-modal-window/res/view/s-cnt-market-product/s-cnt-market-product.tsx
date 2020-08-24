@@ -1,4 +1,5 @@
-import {Component, ComponentInterface, EventEmitter, h, Prop, Event} from "@stencil/core";
+import {Component, ComponentInterface, EventEmitter, h, Prop, Event, State} from "@stencil/core";
+import {MarketGetProductInterface, MarketProductBlockInterface} from "../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-product",
@@ -10,23 +11,37 @@ export class SCntMarketProduct implements ComponentInterface {
   /**
    * Данные для Product
    */
-  @Prop() productBlock: any;
+  @Prop() productBlock: MarketProductBlockInterface;
 
   /**
    * Данные для Product
    */
-  @Prop() getProduct: any;
+  @Prop() getProduct: MarketGetProductInterface;
 
   /**
    * Клик по кнопке закрытия модального окна
    */
   @Event() clickOnModal: EventEmitter<void>;
 
+  /**
+   *
+   */
+  @State() selectedImg: number;
+
+  /**
+   *
+   */
+  likeCheck: HTMLElement;
+
+  componentDidLoad() {
+    this.selectedImg = this.getProduct.defaultImgId;
+  }
+
   render() {
     return (
       <div class="product">
-        <div class="close" onClick={() => this.closeModalHandler() }>
-          <i class="fa fa-times" aria-hidden="true" />
+        <div class="close" onClick={() => this.closeModalHandler()}>
+          <i class="fa fa-times" aria-hidden="true"/>
         </div>
         <div class="container">
           <div class="row modal-nav">
@@ -47,18 +62,14 @@ export class SCntMarketProduct implements ComponentInterface {
           <div class="row">
             <div class="col-sm-6">
               <div class="image">
-                <img src={this.getProduct.img} alt="" />
+                <ProductImg arr={this.getProduct.image} selectedImg={this.selectedImg}>
+
+                </ProductImg>
               </div>
               <div class="product-img-item-wrapper">
-                <div class="product-img-item">
-                  <img src={this.getProduct.img} alt="" width="76px" />
-                </div>
-                <div class="product-img-item">
-                  <img src={this.getProduct.img} alt="" />
-                </div>
-                <div class="product-img-item">
-                  <img src={this.getProduct.img} alt="" />
-                </div>
+                <ProductImgItems arr={this.getProduct.image} imgIdSelect={(x) => this.imgIdSelect(x)}>
+
+                </ProductImgItems>
               </div>
             </div>
             <div class="col-sm-6">
@@ -77,10 +88,10 @@ export class SCntMarketProduct implements ComponentInterface {
                 </div>
                 <div class="info-presence">
                   <div class="circle">
-                    <i class="fa fa-circle cir" aria-hidden="true" />
-                    <i class="fa fa-circle cir" aria-hidden="true" />
-                    <i class="fa fa-circle cir" aria-hidden="true" />
-                    <i class="fa fa-circle cir" aria-hidden="true" />
+                    <i class="fa fa-circle cir" aria-hidden="true"/>
+                    <i class="fa fa-circle cir" aria-hidden="true"/>
+                    <i class="fa fa-circle cir" aria-hidden="true"/>
+                    <i class="fa fa-circle cir" aria-hidden="true"/>
                   </div>
                   <div class="presence">
                     {/*{this.getProduct.presence}*/}
@@ -90,8 +101,8 @@ export class SCntMarketProduct implements ComponentInterface {
                   <div class="button">
                     <button class="my-button">{this.productBlock.button}</button>
                   </div>
-                  <div class="heart">
-                    <i class={this.productBlock.likeIcon} aria-hidden="true" />
+                  <div class="heart" ref={(el) => this.likeCheck = el} onClick={() => this.iconLike(this.likeCheck)}>
+                    <i class={this.productBlock.likeIcon} aria-hidden="true"/>
                   </div>
                 </div>
               </div>
@@ -108,4 +119,54 @@ export class SCntMarketProduct implements ComponentInterface {
   public closeModalHandler() {
     this.clickOnModal.emit()
   }
+
+  /**
+   * Закрытие модального окна
+   */
+  public imgIdSelect(number) {
+    this.selectedImg = number;
+  }
+
+  /**
+   * Закрытие модального окна
+   */
+  public iconLike(detail) {
+    if (detail === this.likeCheck) {
+      if (detail.id != 'check') {
+        detail.id = 'check'
+      } else {
+        detail.id = ''
+      }
+    }
+  }
+}
+
+/*
+* компонентная функция для вывода элементов
+ */
+const ProductImg = (props) => {
+  return props.arr.map((item) => {
+    if (props.selectedImg === item.id) {
+      return (
+        <div style={{backgroundImage: "url(" + item.img + ")"}}>
+
+        </div>
+      );
+    }
+  })
+}
+
+/*
+* компонентная функция для вывода элементов
+ */
+const ProductImgItems = (props) => {
+  return props.arr.map((item) => {
+    return (
+      <div class="product-img-item">
+        <div style={{backgroundImage: "url(" + item.img + ")"}} onClick={() => props.imgIdSelect(item.id)}>
+
+        </div>
+      </div>
+    );
+  })
 }
