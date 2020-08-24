@@ -68,7 +68,7 @@ export class GroupB implements ComponentInterface {
           >
             {" "}
           </s-cnt-market-recently-watched>
-          {this.showModalState === true ? (
+          {this.showModalState ? (
             <s-cnt-market-modal-window
               productModal={productModal}
               onClickOnModal={() => this.showOrCloseModal()}
