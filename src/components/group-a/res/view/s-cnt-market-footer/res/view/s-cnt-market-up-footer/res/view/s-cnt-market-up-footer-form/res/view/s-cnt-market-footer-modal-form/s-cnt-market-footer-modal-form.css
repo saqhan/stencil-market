@@ -8,21 +8,23 @@
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
-  opacity: 0;
+  /*opacity: 0;*/
+  visibility: hidden;
   transition: opacity 0.3s;
   pointer-events: none;
-  transition: opacity 0.3s;
 }
 
 .drawer-backdrop.opened {
-  opacity: 1;
+  /*opacity: 1;*/
+  visibility: visible;
   pointer-events: auto;
   visibility: visible;
   z-index: 2000;
 }
 
 .drawer-footer-modal {
-  opacity: 0;
+  /*opacity: 0;*/
+  visibility: hidden;
   position: fixed;
   left: 0;
   top: 0;
@@ -32,8 +34,9 @@
 }
 
 .drawer-footer-modal.opened {
-  opacity: 1;
+  /*opacity: 1;*/
   z-index: 2100;
+  visibility: visible;
 }
 
 .drawer-content {
@@ -116,7 +119,8 @@ header .subtitle {
 }
 
 .input-parent {
-  margin: 10px 0px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 .input-parent input {
@@ -129,7 +133,6 @@ header .subtitle {
   width: auto;
   min-width: 100%;
   height: 48px;
-  margin-bottom: 30px;
   padding: 11px 16px;
   transition-duration: 0.2s;
   transition-timing-function: ease;
@@ -143,6 +146,22 @@ header .subtitle {
   -webkit-appearance: none;
   -webkit-overflow-scrolling: touch;
   outline: none;
+}
+
+.error input {
+  border-color: #f36;
+  background-color: #ffebf0;
+}
+
+.error .error-text {
+  visibility: visible;
+}
+
+.error-text {
+  visibility: hidden;
+  color: #ff3366;
+  font-size: 12px;
+  margin-left: 10px;
 }
 
 .input-parent input::placeholder {
@@ -178,8 +197,6 @@ header .subtitle {
   transition: 0.3s ease;
   cursor: pointer;
 }
-
-
 
 .subject-btn.selected {
   background-color: #21a038;
@@ -243,7 +260,7 @@ header .subtitle {
 
 .btn-send {
   background-color: #21a038;
-  box-shadow:0 10px 30px rgba(33,160,56,.4);
+  box-shadow: 0 10px 30px rgba(33, 160, 56, 0.4);
   font-size: 16px;
   line-height: 24px;
   border-radius: 8px;
@@ -261,7 +278,7 @@ header .subtitle {
 }
 
 .checkbox-input::before {
-  content: ' ';
+  content: " ";
   display: inline-flex;
   text-align: center;
   color: white;
@@ -288,7 +305,7 @@ header .subtitle {
   border-radius: 6px;
   border: 1px solid #d0d2d4;
   background-color: #fff;
-  transition-duration: .2s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
   transition-property: border-color, background-color, box-shadow;
   color: #fff;
@@ -298,5 +315,5 @@ header .subtitle {
 .politics-title a {
   text-decoration: underline;
   color: #21a038;
-  transition: color .2s ease;
+  transition: color 0.2s ease;
 }
