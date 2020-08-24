@@ -6,6 +6,10 @@ button {
   outline: none;
 }
 
+.login-form{
+  max-width: 746px;
+}
+
 .parent-block-top-bar {
   margin: 0 !important;
   padding: 0 !important;

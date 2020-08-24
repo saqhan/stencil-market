@@ -26,6 +26,11 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   @Prop() login: boolean;
 
   /**
+   *
+   */
+  @Prop() blockWidth: string;
+
+  /**
    * boolean значение для вывода/закрытия блока регистрации и присвоения класса
    */
   @Prop() registration: boolean;
@@ -60,7 +65,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         >
           {/*полупрозрачный бэкграунд*/}
         </div>
-        <div class="login-or-registration-form-parent">
+        <div class="login-or-registration-form-parent" style={{maxWidth: this.blockWidth}}>
           <div class="login-or-registration-form-child">
             <div class="close-btn-wrapper">
               <button class="close-btn" onClick={() => this.closeLogin.emit()}>

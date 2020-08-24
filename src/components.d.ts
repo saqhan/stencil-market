@@ -217,6 +217,7 @@ export namespace Components {
         "openedLeftMenu": boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
+        "blockWidth": string;
         /**
           * boolean значение для вывода/закрытия блока входа и присвоения класса
          */
@@ -1081,6 +1082,7 @@ declare namespace LocalJSX {
         "openedLeftMenu"?: boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
+        "blockWidth"?: string;
         /**
           * boolean значение для вывода/закрытия блока входа и присвоения класса
          */
