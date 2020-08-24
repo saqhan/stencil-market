@@ -28,6 +28,9 @@ export class SCntMarketFooterInfo implements ComponentInterface {
 
 }
 
+/**
+ * получение списка меню
+ * */
 const FooterInfoItem = (props) => {
   return props.array.map((item) => {
     return (

@@ -420,6 +420,9 @@ export namespace Components {
         "footerMenu": footerMenuInterface;
     }
     interface SCntMarketUpFooterForm {
+        /**
+          * Контактные данные для 4 колонки в футере
+         */
         "footerContactColumn": footerContactColumnInterface;
     }
 }
@@ -1335,6 +1338,9 @@ declare namespace LocalJSX {
         "footerMenu"?: footerMenuInterface;
     }
     interface SCntMarketUpFooterForm {
+        /**
+          * Контактные данные для 4 колонки в футере
+         */
         "footerContactColumn"?: footerContactColumnInterface;
     }
     interface IntrinsicElements {

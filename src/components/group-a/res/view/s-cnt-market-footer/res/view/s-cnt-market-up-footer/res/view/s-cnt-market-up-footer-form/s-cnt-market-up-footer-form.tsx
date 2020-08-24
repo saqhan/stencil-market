@@ -9,6 +9,9 @@ import {footerContactColumnInterface} from "../../../../../../../../../../../ind
 })
 export class SCntMarketUpFooterForm implements ComponentInterface {
 
+  /**
+   * Контактные данные для 4 колонки в футере
+   * */
   @Prop() footerContactColumn: footerContactColumnInterface;
 
   render() {
