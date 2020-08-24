@@ -19,12 +19,21 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
       <div class="upFooterForm">
         <div class="number">{this.footerContactColumn.number}</div>
         <div class="time">{this.footerContactColumn.time}</div>
-        <div class="input-block">
+        <div class="input-block"
+          onClick={() => this.clickOnShowFormFooterHandler()}
+        >
           <i class="far fa-comment-alt icon" />
           <div class="input">{this.footerContactColumn.input}</div>
         </div>
         <div class="text">{this.footerContactColumn.text}</div>
       </div>
     );
+  }
+
+  /**
+   * клик по форме обратной связи
+   * */
+  public clickOnShowFormFooterHandler() {
+    console.log('sa')
   }
 }
