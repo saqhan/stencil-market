@@ -1,4 +1,4 @@
-import { Component, ComponentInterface, h, Prop } from "@stencil/core";
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
 
 @Component({
   tag: "s-cnt-market-header-wrapper",
@@ -22,6 +22,11 @@ export class SCntMarketHeaderWrapper implements ComponentInterface {
    * Первоначальная страница
    * */
   @Prop() firstPage: boolean;
+
+  /**
+   *
+   */
+  @Event() openLoginModal: EventEmitter;
 
   render() {
     return (

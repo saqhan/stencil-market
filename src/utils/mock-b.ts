@@ -106,15 +106,8 @@ export const header = {
           },
         ],
       },
-      // reg: {
-      //   id: 1,
-      //   rememberMe: 'Запомнить меня',
-      //   logIn: 'Войти',
-      //   remindPass: 'Напомнить пароль',
-      //   logInToBank: 'Вход через Сбербанк ID',
-      //   orLogInSocial: 'или авторизуйтесь через'
-      // },
       reg: {
+        id: 1,
         checkForBis: "Хочу заказывать для бизнеса",
         checkForAdvertisingText: "Согласен",
         checkForAdvertisingLink: "на рекламную рассылку",
