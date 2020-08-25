@@ -222,13 +222,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public onClickBasketHandler(): void  {
     this.openedBasketState = true;
-  }
-
-  /**
-   *
-   * */
-  public closeLeftMenu(): void  {
-    this.openedLeftMenuState = false;
+    document.querySelector('body').style.overflow = 'hidden';
   }
 
   /**
@@ -236,6 +230,15 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public closeBasket(): void  {
     this.openedBasketState = false;
+    document.querySelector('body').style.overflow = 'visible';
+
+  }
+
+  /**
+   *
+   * */
+  public closeLeftMenu(): void  {
+    this.openedLeftMenuState = false;
   }
 
   /**
