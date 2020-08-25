@@ -7,7 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import { selectShopsInterface } from "../../interface/common.interface";
+import { MarketSelectShopsInterface } from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-store-select-top",
@@ -19,19 +19,22 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   /**
    * selectShops
    * */
-  @Prop() selectShops: selectShopsInterface[];
+  @Prop() selectShops: MarketSelectShopsInterface[];
 
   /**
-   *
+   * состояние модалки
    * */
   @Prop() openedStoreSelect: boolean;
 
   /**
    * /Закрыть корзину
    * */
-  @Event() closeStoreSelect: EventEmitter;
+  @Event() closeStoreSelect: EventEmitter<void>;
 
-  @State() selectStoreTag: HTMLElement;
+  /**
+   * Обертка модалки
+   * */
+  @State() selectStoreTagState: HTMLElement;
 
   render() {
     return (
@@ -40,9 +43,9 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
           class={
             this.openedStoreSelect
               ? "drawer-backdrop opened drawer-backdrop-transition "
-              : "drawer-backdrop "
+              : "drawer-backdrop"
           }
-          ref={(el) => (this.selectStoreTag = el)}
+          ref={(el) => (this.selectStoreTagState = el)}
           onClick={(event) => this.clickOnSelectStoreHandler(event)}
         ></div>
         <div
@@ -67,7 +70,11 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
               </div>
               <div class="store-select-content">
                 <div class="container">
-                  <div class="row">{this.getSelectShops(this.selectShops)}</div>
+                  <div class="row">
+                    <GetAvailableShopsFunctionalComponent
+                      array={this.selectShops}
+                    ></GetAvailableShopsFunctionalComponent>
+                  </div>
                 </div>
               </div>
             </div>
@@ -78,37 +85,10 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   }
 
   /**
-   * получение магазинов
-   * */
-  public getSelectShops(array): selectShopsInterface {
-    return array.map((item) => {
-      return (
-        <div class="col-12 col-md-6 col-lg-4  ">
-          <a class="store-card">
-            <div class="store-card-description">
-              <div class="store-card-name">{item.title}</div>
-              <div class="store-card-detail">
-                {item.description}, {item.time}
-              </div>
-            </div>
-            <div
-              class="store-card-img"
-              style={{
-                backgroundColor: `${item.backgroundColor}`,
-                backgroundImage: `url(${item.img})`,
-              }}
-            ></div>
-          </a>
-        </div>
-      );
-    });
-  }
-
-  /**
    * клик на открытие меню
    * */
-  public clickOnSelectStoreHandler(event) {
-    if (event.target === this.selectStoreTag) {
+  public clickOnSelectStoreHandler(event): void {
+    if (event.target === this.selectStoreTagState) {
       this.closeStoreSelect.emit();
     }
   }
@@ -116,7 +96,34 @@ export class SCntMarketStoreSelectTop implements ComponentInterface {
   /**
    * клик на закрытие меню
    * */
-  public clickOnCloseSelectStoreHandler() {
+  public clickOnCloseSelectStoreHandler(): void {
     this.closeStoreSelect.emit();
   }
 }
+
+/**
+ * Получение доступных магазинов
+ * */
+const GetAvailableShopsFunctionalComponent = (props) => {
+  return props.array.map((item) => {
+    return (
+      <div class="col-12 col-md-6 col-lg-4  ">
+        <a class="store-card">
+          <div class="store-card-description">
+            <div class="store-card-name">{item.title}</div>
+            <div class="store-card-detail">
+              {item.description}, {item.time}
+            </div>
+          </div>
+          <div
+            class="store-card-img"
+            style={{
+              backgroundColor: `${item.backgroundColor}`,
+              backgroundImage: `url(${item.img})`,
+            }}
+          ></div>
+        </a>
+      </div>
+    );
+  });
+};

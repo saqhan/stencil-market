@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import {MarketFooterMenuInterface} from "../../interface/common.interface";
+import {footerMenuInterface} from "../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-up-footer',
@@ -9,7 +9,10 @@ import {MarketFooterMenuInterface} from "../../interface/common.interface";
 })
 export class SCntMarketUpFooter implements ComponentInterface {
 
-  @Prop() footerMenu: MarketFooterMenuInterface;
+  /**
+   * Данные для элементов меню в подвале
+   * */
+  @Prop() footerMenu: footerMenuInterface;
 
   render() {
     return (
@@ -17,13 +20,14 @@ export class SCntMarketUpFooter implements ComponentInterface {
         <div class="sberMarket">
           {this.footerMenu.title}
         </div>
-        <FooterItems array={this.footerMenu.items}/>
+        <FooterItems array={this.footerMenu.menuItems}/>
       </div>
     );
   }
 
 }
 
+//HOC для элементов меню
 const FooterItems = (props) => {
   return props.array.map((item) => {
     return (

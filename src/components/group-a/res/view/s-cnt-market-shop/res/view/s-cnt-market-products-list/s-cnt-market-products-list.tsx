@@ -1,5 +1,12 @@
-import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
-import {MarketProductListInterface} from "./res/interface/common.interface";
+import {
+  Component,
+  ComponentInterface,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+} from "@stencil/core";
+import {MarketProductListInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-products-list",
@@ -7,11 +14,12 @@ import {MarketProductListInterface} from "./res/interface/common.interface";
   shadow: false,
   scoped: true,
 })
+
 export class SCntMarketProductsList implements ComponentInterface {
   /**
    * Данные для списка товаров
    */
-  @Prop() productsList: MarketProductListInterface[] = [];
+  @Prop() productsList: MarketProductListInterface[];
 
   /**
    * Клик по карточке для показа модального окна
@@ -23,7 +31,9 @@ export class SCntMarketProductsList implements ComponentInterface {
       <div class="products-list">
         <div class="main-container">
           <div class="products-list-row">
-            <ProductsList array={this.productsList}></ProductsList>
+            <ProductsListFunctionalComponent
+              array={this.productsList}
+            ></ProductsListFunctionalComponent>
           </div>
         </div>
       </div>
@@ -31,7 +41,7 @@ export class SCntMarketProductsList implements ComponentInterface {
   }
 }
 
-const ProductsList = (props) => {
+const ProductsListFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
       <s-cnt-market-products-list-card

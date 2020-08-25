@@ -1,5 +1,12 @@
-import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
-import { MarketProductsSliderCardsInterface } from "../../interface/common.interface";
+import {
+  Component,
+  ComponentInterface,
+  Event,
+  EventEmitter,
+  h,
+  Prop,
+} from "@stencil/core";
+import {MarketProductsSliderCardsInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-products-slider-card",
@@ -7,6 +14,7 @@ import { MarketProductsSliderCardsInterface } from "../../interface/common.inter
   shadow: false,
   scoped: true,
 })
+
 export class SCntMarketProductsSliderCard implements ComponentInterface {
   /**
    * Получаем данные карточек слайдера популярных продуктов
@@ -20,7 +28,7 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
 
   render() {
     return (
-      <div class="products-card" onClick={() => this.showModalHandler()}>
+      <div class="products-card" onClick={() => this.showModalHandler(this.productsSliderCards)}>
         <div class="products-card-item">
           <div class="products-card-img-wrapper">
             <div
@@ -32,13 +40,12 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
           </div>
           <div class="products-card-desc">
             <div class="products-price">
-              {this.productsSliderCards.price
-                ?
+              {this.productsSliderCards.price ? (
                 <span class="price">
                   {this.productsSliderCards.price}
                   <span> {this.productsSliderCards.currency}</span>
                 </span>
-                :
+              ) : (
                 <div>
                   <span class="price-dis">
                     {this.productsSliderCards.disPrice}
@@ -49,7 +56,7 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
                     <span> {this.productsSliderCards.currency}</span>
                   </span>
                 </div>
-              }
+              )}
             </div>
             <p class="products-name">{this.productsSliderCards.desc}</p>
             <div class="products-bottom-info">
@@ -72,8 +79,7 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
   /**
    *
    */
-  public showModalHandler() {
-    this.showModal.emit();
+  public showModalHandler(z) {
+    this.showModal.emit(z);
   }
-
 }

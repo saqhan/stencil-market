@@ -1,5 +1,5 @@
-import { Component, ComponentInterface, h, Prop, State } from "@stencil/core";
-import { TopBarInterface } from "./res/interface/common.interface";
+import {Component, ComponentInterface, h, Prop, State} from "@stencil/core";
+import {MarketTopBarInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-top-bar",
@@ -12,7 +12,7 @@ export class SCntMarketTopBar implements ComponentInterface {
   /**
    * объект данных для компонента top-bar и его подкомпонентов
    */
-  @Prop() topBar: TopBarInterface;
+  @Prop() topBar: MarketTopBarInterface;
 
   /**
    * boolean значение для вывода/закрытия модального окна входа/регистрация
@@ -54,18 +54,21 @@ export class SCntMarketTopBar implements ComponentInterface {
   render() {
     return (
       <div class="container-fluid parent-block-top-bar">
-        {this.loginRegistrationCompleted ? (
-          <s-cnt-market-login-and-registration-form
-            loginAndRegistration={this.topBar.loginAndRegistration}
-            login={this.loginCompleted}
-            registration={this.registrationCompleted}
-            onCloseLogin={() => this.closeLoginModal()}
-            onOpenLogin={() => this.openLogin()}
-            onOpenRegistration={() => this.openRegistration()}
-          ></s-cnt-market-login-and-registration-form>
-        ) : (
-          ""
-        )}
+        {
+          this.loginRegistrationCompleted ? (
+            <s-cnt-market-login-and-registration-form
+              loginAndRegistration={this.topBar.loginAndRegistration}
+              login={this.loginCompleted}
+              registration={this.registrationCompleted}
+              blockWidth='746px'
+              onCloseLogin={() => this.closeLoginModal()}
+              onOpenLogin={() => this.openLogin()}
+              onOpenRegistration={() => this.openRegistration()}
+            ></s-cnt-market-login-and-registration-form>
+          ) : (
+            ""
+          )
+        }
         <div class="container top-bar-content-outer-block">
           <div class="top-bar-content-inner-block">
             <div class="top-bar-delivery-and-adress">
@@ -125,21 +128,23 @@ export class SCntMarketTopBar implements ComponentInterface {
             </div>
           </div>
         </div>
-        {this.addressCompleted ? (
-          <s-cnt-market-delivery-modal
-            delivery={this.deliveryCompleted}
-            pickUp={this.pickUpCompleted}
-            modalData={this.topBar.modalWindow}
-            onCloseForm={() => this.closeAddressModal()}
-            onOpenDelivery={() => this.openDelivery()}
-            onOpenPickUp={() => this.openPickUp()}
-            onIdSelectionAddress={(detail) => this.idSelectionAddress(detail)}
-            // event-ы для формы входа/регистрации
-            onOpenLogin={() => this.openLoginModal()}
-          />
-        ) : (
-          ""
-        )}
+        {
+          this.addressCompleted ? (
+            <s-cnt-market-delivery-modal
+              delivery={this.deliveryCompleted}
+              pickUp={this.pickUpCompleted}
+              modalData={this.topBar.modalWindow}
+              onCloseForm={() => this.closeAddressModal()}
+              onOpenDelivery={() => this.openDelivery()}
+              onOpenPickUp={() => this.openPickUp()}
+              onIdSelectionAddress={(detail) => this.idSelectionAddress(detail)}
+              // event-ы для формы входа/регистрации
+              onOpenLogin={() => this.openLoginModal()}
+            />
+          ) : (
+            ""
+          )
+        }
       </div>
     );
   }
@@ -149,6 +154,7 @@ export class SCntMarketTopBar implements ComponentInterface {
    */
   public openAddressModal() {
     this.addressCompleted = true;
+    document.body.style.overflow = 'hidden';
   }
 
   /**
@@ -156,6 +162,7 @@ export class SCntMarketTopBar implements ComponentInterface {
    */
   public closeAddressModal() {
     this.addressCompleted = false;
+    document.body.style.overflow = '';
   }
 
   /**
@@ -225,7 +232,7 @@ export class SCntMarketTopBar implements ComponentInterface {
   /**
    * функция для прослушивания значения {detail}(улицы) у блока выбранного магазина
    * */
-  public idSelectionAddress({ detail }) {
+  public idSelectionAddress({detail}) {
     this.idAddress = detail;
     if (detail !== null) {
       if (detail.lenght > 30) {

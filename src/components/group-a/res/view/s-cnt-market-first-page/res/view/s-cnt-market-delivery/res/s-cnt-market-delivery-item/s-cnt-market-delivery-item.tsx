@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketCityNameInterface } from "./res/interface/common.interface";
+import {MarketCitiesInterface} from "../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-delivery-item",
@@ -11,7 +11,7 @@ export class SCntMarketDeliveryItem implements ComponentInterface {
   /**
    * Список городов
    */
-  @Prop() delivery: MarketCityNameInterface;
+  @Prop() delivery: MarketCitiesInterface;
 
   render() {
     return <span>{this.delivery.name}</span>;

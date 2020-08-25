@@ -1,5 +1,6 @@
 import { Component, ComponentInterface, h, State } from "@stencil/core";
 import {
+  productModal,
   productsList,
   productsSliderCards,
   productsSliderTitle,
@@ -7,6 +8,7 @@ import {
   recentlyWatchedProducts,
   recentlyWatchedTitle,
 } from "../../../../../utils/mock-a";
+import {MarketProductDataInterface} from "../../../../../index";
 
 @Component({
   tag: "s-cnt-market-shop",
@@ -20,6 +22,11 @@ export class SCntMarketShop implements ComponentInterface {
    */
   @State() showModalState = false;
 
+  /**
+   *
+   */
+  @State() productData: MarketProductDataInterface;
+
   render() {
     return (
       <main>
@@ -29,21 +36,23 @@ export class SCntMarketShop implements ComponentInterface {
         <s-cnt-market-products-slider
           productsSliderCards={productsSliderCards}
           productsSliderTitle={productsSliderTitle}
-          onShowModal={() => this.showOrCloseModal()}
+          onShowModal={(x) => this.showOrCloseModal(x)}
         ></s-cnt-market-products-slider>
         <s-cnt-market-products-list
-          onShowModal={() => this.showOrCloseModal()}
+          onShowModal={(x) => this.showOrCloseModal(x)}
           productsList={productsList}
         ></s-cnt-market-products-list>
         <s-cnt-market-recently-watched
-          onShowModal={() => this.showOrCloseModal()}
+          onShowModal={(x) => this.showOrCloseModal(x)}
           recentlyWatchedProducts={recentlyWatchedProducts}
           recentlyWatchedTitle={recentlyWatchedTitle}
         ></s-cnt-market-recently-watched>
-        {this.showModalState === true ? (
+        {this.showModalState ? (
           <s-cnt-market-modal-window
-            onClickOnModal={() => this.showOrCloseModal()}
-          ></s-cnt-market-modal-window>
+            productModal={productModal}
+            productData={this.productData}
+            onClickOnModal={(x) => this.showOrCloseModal(x)}
+          />
         ) : (
           ""
         )}
@@ -55,9 +64,12 @@ export class SCntMarketShop implements ComponentInterface {
   /**
    * Открытие и закрытие модального окна
    */
-  public showOrCloseModal() {
+  public showOrCloseModal({detail}) {
     this.showModalState = !this.showModalState;
     this.bodyToggleScroll();
+    this.productData = {
+      ...detail
+    }
   }
 
   /**
@@ -70,5 +82,4 @@ export class SCntMarketShop implements ComponentInterface {
       document.body.style.overflow = "auto";
     }
   }
-
 }

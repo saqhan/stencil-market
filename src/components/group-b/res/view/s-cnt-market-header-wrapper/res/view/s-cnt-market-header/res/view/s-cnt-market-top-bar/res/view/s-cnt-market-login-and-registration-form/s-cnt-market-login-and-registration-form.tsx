@@ -6,7 +6,7 @@ import {
   h,
   Prop,
 } from "@stencil/core";
-import {LoginAndRegistration} from "./res/interface/common.interface";
+import {MarketLoginAndRegistrationInterface} from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-login-and-registration-form",
@@ -18,12 +18,17 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
    * объект данных для компонента LoginAndRegistrationForm и его подкомпонентов
    */
-  @Prop() loginAndRegistration: LoginAndRegistration;
+  @Prop() loginAndRegistration: MarketLoginAndRegistrationInterface;
 
   /**
    * boolean значение для вывода/закрытия блока входа и присвоения класса
    */
   @Prop() login: boolean;
+
+  /**
+   *
+   */
+  @Prop() blockWidth: string;
 
   /**
    * boolean значение для вывода/закрытия блока регистрации и присвоения класса
@@ -60,7 +65,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         >
           {/*полупрозрачный бэкграунд*/}
         </div>
-        <div class="login-or-registration-form-parent">
+        <div class="login-or-registration-form-parent" style={{maxWidth: this.blockWidth}}>
           <div class="login-or-registration-form-child">
             <div class="close-btn-wrapper">
               <button class="close-btn" onClick={() => this.closeLogin.emit()}>

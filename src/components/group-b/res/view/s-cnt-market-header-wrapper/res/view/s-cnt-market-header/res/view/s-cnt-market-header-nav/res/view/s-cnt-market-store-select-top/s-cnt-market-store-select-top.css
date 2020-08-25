@@ -22,10 +22,9 @@ drawer-backdrop-transition {
   pointer-events: auto;
   visibility: visible;
   z-index: 2000;
-  top: 45px;
-  max-height: calc(100vh - 45px);
+  top: 30px;
+  max-height: calc(100vh - 30px);
 }
-
 
 .drawer-top.opened {
   transform: translateY(0);
@@ -34,8 +33,8 @@ drawer-backdrop-transition {
   right: 0px;
   bottom: auto;
   z-index: 2000;
-  top: 45px;
-  max-height: calc(100vh - 45px);
+  top: 30px;
+  max-height: calc(100vh - 30px);
 }
 
 .drawer-top {
@@ -51,7 +50,7 @@ drawer-backdrop-transition {
 }
 
 .drawer-transition {
-  transition: transform .3s;
+  transition: transform 0.3s;
   opacity: 1;
 }
 
@@ -66,7 +65,7 @@ drawer-backdrop-transition {
   display: flex;
   z-index: 1;
   flex-direction: column;
-  box-shadow: 0 9px 16px 0 rgba(0,0,0,.2);
+  box-shadow: 0 9px 16px 0 rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
   background-color: #f7f7f7;
   cursor: default;
@@ -88,7 +87,6 @@ drawer-backdrop-transition {
   font-size: 28px;
   font-weight: 500;
 }
-
 
 .store-select-close {
   position: absolute;
@@ -119,16 +117,15 @@ drawer-backdrop-transition {
   width: 100%;
   max-width: 330px;
   cursor: pointer;
-  transition: .3s ease;
+  transition: 0.3s ease;
   background-color: #fff;
 }
 
 .store-card:hover {
-  box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.08), 0 5px 10px rgba(0, 0, 0, 0.05);
   border: 1px solid #fff;
   color: #343434;
 }
-
 
 .store-card-description {
   text-align: left;
@@ -172,10 +169,10 @@ drawer-backdrop-transition {
   align-items: center;
   justify-content: center;
   margin-left: 24px;
-  box-shadow: 0 10px 45px rgba(0,0,0,.08), 0 5px 10px rgba(0,0,0,.05);
+  box-shadow: 0 10px 45px rgba(0, 0, 0, 0.08), 0 5px 10px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
-  overflow: hidden;}
-
+  overflow: hidden;
+}
 
 @media (max-width: 414px) {
   .store-select-title {

@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from "@stencil/core";
-import {MarketRecentlyWatchedProductsInterface} from "../../interface/common.interface";
+import {MarketRecentlyWatchedProductsInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-recently-watched-card",
@@ -20,7 +20,7 @@ export class SCntMarketRecentlyWatchedCard implements ComponentInterface {
 
   render() {
     return (
-      <div class="product-card" onClick={() => this.showModalHandler()}>
+      <div class="product-card" onClick={() => this.showModalHandler(this.recentlyWatchedProducts)}>
         <div class="product-card-item">
           <div class="product-card-img-wrapper">
             <div
@@ -73,7 +73,7 @@ export class SCntMarketRecentlyWatchedCard implements ComponentInterface {
   /**
    *
    */
-  public showModalHandler() {
-    this.showModal.emit();
+  public showModalHandler(x) {
+    this.showModal.emit(x);
   }
 }

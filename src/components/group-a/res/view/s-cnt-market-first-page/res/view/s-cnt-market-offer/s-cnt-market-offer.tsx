@@ -1,6 +1,6 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
 import { markdown } from "markdown";
-import { MarketOfferInterface } from "./res/interface/common.interface";
+import {MarketOfferInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-offer",
@@ -34,7 +34,9 @@ export class SCntMarketOffer implements ComponentInterface {
             </div>
           </div>
           <div class="row">
-            <GetOffer arrayOffer={this.forOffer}></GetOffer>
+            <GetOfferFunctionalComponent
+              arrayOffer={this.forOffer}
+            ></GetOfferFunctionalComponent>
           </div>
         </div>
       </div>
@@ -42,10 +44,10 @@ export class SCntMarketOffer implements ComponentInterface {
   }
 }
 
-const GetOffer = (props) => {
+const GetOfferFunctionalComponent = (props) => {
   return props.arrayOffer.map((item) => {
     return (
-      <div class="col-lg-3 col-md-6">
+      <div class="col-lg-3 col-sm-6">
         <s-cnt-market-item-offer forOffer={item}></s-cnt-market-item-offer>
       </div>
     );

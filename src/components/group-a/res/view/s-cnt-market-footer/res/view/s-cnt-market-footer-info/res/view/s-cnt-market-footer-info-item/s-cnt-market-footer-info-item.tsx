@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {footerLinksPoliticsInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-footer-info-item',
@@ -8,12 +9,15 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 })
 export class SCntMarketFooterInfoItem implements ComponentInterface {
 
-  @Prop() forFooterInfo;
+  /**
+   * Данные для политики безопасности
+   * */
+  @Prop() footerLinksPolitics: footerLinksPoliticsInterface
 
   render() {
     return (
       <div class="text">
-        {this.forFooterInfo}
+        {this.footerLinksPolitics.title}
       </div>
     );
   }

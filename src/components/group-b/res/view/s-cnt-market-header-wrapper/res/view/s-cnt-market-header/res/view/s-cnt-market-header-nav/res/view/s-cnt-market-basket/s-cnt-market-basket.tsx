@@ -16,12 +16,12 @@ export class SCntMarketBasket implements ComponentInterface {
   /**
    * /Закрыть корзину
    * */
-  @Event() closeBasket: EventEmitter;
+  @Event() closeBasket: EventEmitter <void>;
 
   /**
    * Тег обертки оверлея корзины
    * */
-  private basketTag: any;
+  private basketTag: HTMLElement;
 
   render() {
     return (
@@ -67,7 +67,7 @@ export class SCntMarketBasket implements ComponentInterface {
   /**
    * клик на закрыть корзину
    * */
-  public clickOnBasketHandler(event) {
+  public clickOnBasketHandler(event):void {
     if (event.target === this.basketTag) {
       this.closeBasket.emit();
     }
@@ -76,7 +76,7 @@ export class SCntMarketBasket implements ComponentInterface {
   /**
    * Закрытие  Basket
    * */
-  public closeBasketHandler() {
+  public closeBasketHandler():void {
     this.closeBasket.emit();
   }
 }

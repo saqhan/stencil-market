@@ -1,6 +1,5 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
-import {Login} from "./res/interface/common.interface";
-import {UsersArr} from "../../interface/common.interface";
+import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
+import {MarketLoginInterface, MarketUsersArrInterface} from "../../../../../../../../../../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-login-form',
@@ -12,12 +11,17 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   /**
    * объект данных для компонента входа
    * */
-  @Prop() login: Login;
+  @Prop() login: MarketLoginInterface;
 
   /**
    * массив с данными пользователей
    * */
-  @Prop() users: UsersArr[];
+  @Prop() users: MarketUsersArrInterface[];
+
+  /**
+   * State для переключения типа пароля
+   * */
+  @State() passwordView: boolean;
 
   /**
    * ref для закрытия модального окна
@@ -44,16 +48,37 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
    */
   logInBtn: HTMLElement;
 
+  /**
+   * ref для для поключения к кнопке сброса майл
+   */
+  resetMail: HTMLElement;
+
+  /**
+   * ref для для поключения к кнопке сброса пароля
+   */
+  resetPass: HTMLElement;
+
+  /**
+   * ref для для поключения к кнопке сброса пароля
+   */
+  passViewRef: HTMLElement;
+
   render() {
     return (
       <form class="login-form">
         <div class="input-wrapper">
           <div class="input-container">
-            <input class="view-input" type="email" placeholder="Электронная почта" ref={(el) => this.mail = el}
+            <input class="view-input" type="email" placeholder="Электронная почта"
+                   ref={(el) => this.mail = el}
                    onBlur={() => this.validateMail()}
             />
-            <div class="discharge-login">
-              {/*должен быть "х" для сброса логина*/}
+            <div class="discharge-login hide" ref={(el) => this.resetMail = el}
+                 onClick={() => {
+                   this.reset(this.mail);
+                   this.validateMail();
+                 }}
+            >
+              {/*"х" для сброса mail*/}
             </div>
           </div>
           <div class="error-input" ref={(el) => this.mailError = el}>
@@ -62,11 +87,21 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         </div>
         <div class="input-wrapper">
           <div class="input-container">
-            <input class="view-input" id="" type="password" placeholder="Ваш пароль" ref={(el) => this.password = el}
+            <input class="view-input" id="" type={this.passwordView ? 'text' : 'password'}
+                   placeholder="Ваш пароль"
+                   ref={(el) => this.password = el}
                    onBlur={() => this.validatePassword()}
             />
-            <div class="discharge-login">
-              {/*должен быть "х" для сброса логина*/}
+            <div class="password-view" ref={(el) => this.passViewRef = el} onClick={() => this.passView()}>
+              <i class="far fa-eye"></i>
+            </div>
+            <div class="discharge-login hide" ref={(el) => this.resetPass = el}
+                 onClick={() => {
+                   this.reset(this.password);
+                   this.validatePassword();
+                 }}
+            >
+              {/*"х" для сброса password*/}
             </div>
           </div>
           <div class="error-input" ref={(el) => this.passwordError = el}>
@@ -102,7 +137,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
               {this.login.orLogInSocial}
             </p>
             <div>
-              <SocialIcons arr={this.login.socialIcons}/>
+              <SocialIconsFunctionalComponent arr={this.login.socialIcons}/>
             </div>
           </div>
         </div>
@@ -119,14 +154,36 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     if (reg.test(mail) == false) {
       this.mailError.innerHTML = 'Введите корректный e-mail';
       this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.logInBtn.setAttribute("disabled", "disabled")
+      this.logInBtn.setAttribute("disabled", "disabled");
+
+      let errorVal = 'Введите mail';
+      mailValue(this.mail, this.resetMail, this.mailError, errorVal, this.logInBtn);
 
       return false;
     } else {
       this.mailError.innerHTML = '';
       this.mail.style.boxShadow = 'none';
-      this.logInBtn.removeAttribute("disabled")
+      this.logInBtn.removeAttribute("disabled");
+      this.resetMail.classList.add('hide');
       this.correctMail();
+    }
+
+    /**
+     *
+     * */
+    function mailValue(input, reset, error, errorVal, btn) {
+      let inp = input.value;
+      if (inp !== '') {
+        input.style.backgroundColor = 'white';
+        reset.classList.remove('hide');
+      } else {
+        input.style.backgroundColor = '#f7f7f7';
+        reset.classList.add('hide');
+
+        error.innerHTML = errorVal;
+        input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
+        btn.setAttribute("disabled", "disabled");
+      }
     }
   };
 
@@ -140,13 +197,55 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.passwordError.innerHTML = 'Пароль должен быть не менее 6 символов';
       this.password.style.boxShadow = 'inset 0 -2px 0 0 #f36';
       this.logInBtn.setAttribute("disabled", "disabled");
+
+      let errorVal = 'Пароль не введен';
+      passlValue(this.password, this.resetPass, this.passwordError, errorVal, this.logInBtn, this.passViewRef);
+
     } else {
       this.passwordError.innerHTML = '';
       this.password.style.boxShadow = 'none';
       this.logInBtn.removeAttribute("disabled");
+
+      this.resetPass.classList.add('hide');
+
       this.correctPassword();
     }
+
+    /**
+     *
+     * */
+    function passlValue(input, reset, error, errorVal, btn, view) {
+      let inp = input.value;
+      if (inp !== '') {
+        input.style.backgroundColor = 'white';
+        reset.classList.remove('hide');
+
+        view.style.right = '40px';
+      } else {
+        input.style.backgroundColor = '#f7f7f7';
+        reset.classList.add('hide');
+        view.style.right = '13px';
+
+        error.innerHTML = errorVal;
+        input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
+        btn.setAttribute("disabled", "disabled");
+      }
+    }
   };
+
+  /**
+   * функция для сброса введенных данных
+   * */
+  public reset(block) {
+    block.value = '';
+  }
+
+  /**
+   * функция для смены типа инпут путем изменения стейт
+   * */
+  public passView() {
+    this.passwordView = !this.passwordView;
+  }
 
   /**
    * переменная для присвоения выбранного пользователя
@@ -197,13 +296,12 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.logInBtn.setAttribute("disabled", "disabled");
     }
   }
-
 }
 
 /*
 * компонентная функция для вывода элементов меню
  */
-const SocialIcons = (props) => {
+const SocialIconsFunctionalComponent = (props) => {
   return props.arr.map((item) => {
     return (
       <button class="login-social-btn">

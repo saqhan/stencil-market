@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { MarketDownFooterInterface } from "../../interface/common.interface";
+import {footerCopyrightRowInterface} from "../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-down-footer",
@@ -8,10 +8,11 @@ import { MarketDownFooterInterface } from "../../interface/common.interface";
   scoped: true,
 })
 export class SCntMarketDownFooter implements ComponentInterface {
+
   /**
    * Данные для DownFooter
    */
-  @Prop() forDownFooter: MarketDownFooterInterface;
+  @Prop() footerCopyrightRow: footerCopyrightRowInterface;
 
   render() {
     return (
@@ -23,14 +24,14 @@ export class SCntMarketDownFooter implements ComponentInterface {
                 <div class="row">
                   <div class="col-12 col-md-6">
                     <div class="copy ">
-                      <div class="copyright">{this.forDownFooter.copyright}</div>
-                      <div class="company">{this.forDownFooter.company}</div>
+                      <div class="copyright">{this.footerCopyrightRow.copyright}</div>
+                      <div class="company">{this.footerCopyrightRow.nameCompany}</div>
                     </div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="icons">
                       <div class="facebook">
-                        <i class="fab fa-facebook-f" />
+                        <i class="fab fa-facebook" />
                       </div>
                       <div class="vk">
                         <i class="fab fa-vk" />
@@ -47,7 +48,7 @@ export class SCntMarketDownFooter implements ComponentInterface {
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-md-6">
-                    <div class="download">{this.forDownFooter.download}</div>
+                    <div class="download">{this.footerCopyrightRow.download}</div>
                   </div>
                   <div class="col-12 col-md-6">
                     <div class="iconsApp">

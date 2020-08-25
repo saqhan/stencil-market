@@ -129,6 +129,24 @@ textarea[placeholder] {
 
 }
 
+.not-logged {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 6px;
+  margin-left: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #edeff2;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.not-logged i {
+  color: #21a038;
+}
+
 .user-profile-btn {
   height: 100%;
   display: flex;

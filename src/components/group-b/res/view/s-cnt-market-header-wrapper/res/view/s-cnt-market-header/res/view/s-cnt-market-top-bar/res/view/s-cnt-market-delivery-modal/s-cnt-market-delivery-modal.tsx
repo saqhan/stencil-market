@@ -1,5 +1,5 @@
 import {Component, ComponentInterface, EventEmitter, h, Event, Prop} from '@stencil/core';
-import {TopBarModalInterface} from "./res/interface/common.interface";
+import {MarketTopBarModalInterface} from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-delivery-modal',
@@ -11,7 +11,7 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
   /**
    * объект из mock для вывода данных в компоненте модального окна
    */
-  @Prop() modalData: TopBarModalInterface;
+  @Prop() modalData: MarketTopBarModalInterface;
 
   /**
    * boolean значение для вывода/закрытия блока доставки и присвоения класса

@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {footerLinksPoliticsInterface} from "../../../../../../../../index";
 
 @Component({
   tag: 's-cnt-market-footer-info',
@@ -8,14 +9,17 @@ import {Component, ComponentInterface, h, Prop} from '@stencil/core';
 })
 export class SCntMarketFooterInfo implements ComponentInterface {
 
-  @Prop() forFooterInfo;
+  /**
+   * Данные для вывода в блок
+   * */
+  @Prop() footerLinksPolitics: footerLinksPoliticsInterface;
 
   render() {
     return (
       <div class="footerInfo">
         <div class="container">
           <div class="row justify-content-center">
-            <FooterInfoItem array={this.forFooterInfo}/>
+            <FooterInfoItem array={this.footerLinksPolitics}/>
           </div>
         </div>
       </div>
@@ -24,11 +28,14 @@ export class SCntMarketFooterInfo implements ComponentInterface {
 
 }
 
+/**
+ * получение списка меню
+ * */
 const FooterInfoItem = (props) => {
   return props.array.map((item) => {
     return (
       <div class="col-auto">
-        <s-cnt-market-footer-info-item forFooterInfo={item} />
+        <s-cnt-market-footer-info-item footerLinksPolitics={item} />
       </div>
     )
   })
