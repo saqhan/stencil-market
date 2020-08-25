@@ -7,6 +7,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [group-a](../../..)
+
 ### Depends on
 
 - [s-cnt-market-promo-slider](./res/view/s-cnt-market-promo-slider)
@@ -34,6 +38,7 @@ graph TD;
   s-cnt-market-modal-window --> s-cnt-market-recommended
   s-cnt-market-modal-window --> s-cnt-market-specification
   s-cnt-market-recommended --> s-cnt-market-item-recommended
+  group-a --> s-cnt-market-shop
   style s-cnt-market-shop fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

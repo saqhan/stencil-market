@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property         | Attribute | Description            | Type                            | Default     |
-| ---------------- | --------- | ---------------------- | ------------------------------- | ----------- |
-| `getRecommended` | --        | Данные для Recommended | `MarketGetRecommendedInterface` | `undefined` |
+| Property           | Attribute | Description            | Type                              | Default     |
+| ------------------ | --------- | ---------------------- | --------------------------------- | ----------- |
+| `getRecommended`   | --        | Данные для Recommended | `MarketGetRecommendedInterface`   | `undefined` |
+| `recommendedBlock` | --        | Данные для Recommended | `MarketRecommendedBlockInterface` | `undefined` |
 
 
 ## Dependencies

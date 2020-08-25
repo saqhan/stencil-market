@@ -14,7 +14,7 @@
 ### Depends on
 
 - [s-cnt-market-header-wrapper](../group-b/res/view/s-cnt-market-header-wrapper)
-- [s-cnt-market-first-page](./res/view/s-cnt-market-first-page)
+- [s-cnt-market-shop](./res/view/s-cnt-market-shop)
 - [s-cnt-market-footer](./res/view/s-cnt-market-footer)
 - [s-cnt-market-back-to-top](../shared/s-cnt-market-back-to-top)
 
@@ -22,7 +22,7 @@
 ```mermaid
 graph TD;
   group-a --> s-cnt-market-header-wrapper
-  group-a --> s-cnt-market-first-page
+  group-a --> s-cnt-market-shop
   group-a --> s-cnt-market-footer
   group-a --> s-cnt-market-back-to-top
   s-cnt-market-header-wrapper --> s-cnt-market-header-base
@@ -40,25 +40,26 @@ graph TD;
   s-cnt-market-header-nav --> s-cnt-market-store-select-top
   s-cnt-market-header-nav --> s-cnt-market-account-menu
   s-cnt-market-header-nav --> s-cnt-market-basket
-  s-cnt-market-first-page --> s-cnt-market-selection
-  s-cnt-market-first-page --> s-cnt-market-offer
-  s-cnt-market-first-page --> s-cnt-market-statistics
-  s-cnt-market-first-page --> s-cnt-market-delivery
-  s-cnt-market-first-page --> s-cnt-market-choice
-  s-cnt-market-first-page --> s-cnt-market-specialist
-  s-cnt-market-first-page --> s-cnt-market-courier
-  s-cnt-market-first-page --> s-cnt-market-app
-  s-cnt-market-selection --> s-cnt-market-item-selection
-  s-cnt-market-offer --> s-cnt-market-item-offer
-  s-cnt-market-statistics --> s-cnt-market-item-statistics
-  s-cnt-market-delivery --> s-cnt-market-delivery-item
-  s-cnt-market-choice --> s-cnt-market-item-choice
-  s-cnt-market-specialist --> s-cnt-market-item-specialist
-  s-cnt-market-courier --> s-cnt-market-item-courier
+  s-cnt-market-shop --> s-cnt-market-promo-slider
+  s-cnt-market-shop --> s-cnt-market-products-slider
+  s-cnt-market-shop --> s-cnt-market-products-list
+  s-cnt-market-shop --> s-cnt-market-recently-watched
+  s-cnt-market-shop --> s-cnt-market-modal-window
+  s-cnt-market-shop --> s-cnt-market-back-to-top
+  s-cnt-market-promo-slider --> s-cnt-market-promo-slider-card
+  s-cnt-market-products-slider --> s-cnt-market-products-slider-card
+  s-cnt-market-products-list --> s-cnt-market-products-list-card
+  s-cnt-market-products-list-card --> s-cnt-market-products-list-item
+  s-cnt-market-recently-watched --> s-cnt-market-recently-watched-card
+  s-cnt-market-modal-window --> s-cnt-market-product
+  s-cnt-market-modal-window --> s-cnt-market-recommended
+  s-cnt-market-modal-window --> s-cnt-market-specification
+  s-cnt-market-recommended --> s-cnt-market-item-recommended
   s-cnt-market-footer --> s-cnt-market-up-footer-form
   s-cnt-market-footer --> s-cnt-market-down-footer
   s-cnt-market-footer --> s-cnt-market-footer-info
   s-cnt-market-footer --> s-cnt-market-up-footer
+  s-cnt-market-up-footer-form --> s-cnt-market-footer-modal-form
   s-cnt-market-footer-info --> s-cnt-market-footer-info-item
   s-cnt-market-up-footer --> s-cnt-market-footer-items
   my-component --> group-a

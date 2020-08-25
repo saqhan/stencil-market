@@ -15,9 +15,9 @@
 
 ## Events
 
-| Event              | Description      | Type               |
-| ------------------ | ---------------- | ------------------ |
-| `closeStoreSelect` | /Закрыть корзину | `CustomEvent<any>` |
+| Event              | Description      | Type                |
+| ------------------ | ---------------- | ------------------- |
+| `closeStoreSelect` | /Закрыть корзину | `CustomEvent<void>` |
 
 
 ## Dependencies

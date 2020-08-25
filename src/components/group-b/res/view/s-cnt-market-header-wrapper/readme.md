@@ -14,6 +14,13 @@
 | `login`      | `login`      | Авторизация юзера        | `boolean` | `undefined` |
 
 
+## Events
+
+| Event            | Description | Type                |
+| ---------------- | ----------- | ------------------- |
+| `openLoginModal` |             | `CustomEvent<void>` |
+
+
 ## Dependencies
 
 ### Used by

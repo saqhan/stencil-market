@@ -33,6 +33,7 @@ graph TD;
   s-cnt-market-footer --> s-cnt-market-down-footer
   s-cnt-market-footer --> s-cnt-market-footer-info
   s-cnt-market-footer --> s-cnt-market-up-footer
+  s-cnt-market-up-footer-form --> s-cnt-market-footer-modal-form
   s-cnt-market-footer-info --> s-cnt-market-footer-info-item
   s-cnt-market-up-footer --> s-cnt-market-footer-items
   group-a --> s-cnt-market-footer

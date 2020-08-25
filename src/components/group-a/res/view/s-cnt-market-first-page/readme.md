@@ -7,10 +7,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [group-a](../../..)
-
 ### Depends on
 
 - [s-cnt-market-selection](./res/view/s-cnt-market-selection)
@@ -40,7 +36,6 @@ graph TD;
   s-cnt-market-choice --> s-cnt-market-item-choice
   s-cnt-market-specialist --> s-cnt-market-item-specialist
   s-cnt-market-courier --> s-cnt-market-item-courier
-  group-a --> s-cnt-market-first-page
   style s-cnt-market-first-page fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
