@@ -7,9 +7,9 @@
 
 ## Events
 
-| Event              | Description              | Type               |
-| ------------------ | ------------------------ | ------------------ |
-| `closeAccountMenu` | close account menu modal | `CustomEvent<any>` |
+| Event              | Description              | Type                |
+| ------------------ | ------------------------ | ------------------- |
+| `closeAccountMenu` | close account menu modal | `CustomEvent<void>` |
 
 
 ## Dependencies

@@ -10,6 +10,7 @@
 ### Depends on
 
 - [s-cnt-market-header-wrapper](./res/view/s-cnt-market-header-wrapper)
+- [s-cnt-market-login-and-registration-form](./res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-top-bar/res/view/s-cnt-market-login-and-registration-form)
 - [s-cnt-market-promo-slider](../group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-promo-slider)
 - [s-cnt-market-products-slider](../group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-slider)
 - [s-cnt-market-products-list](../group-a/res/view/s-cnt-market-shop/res/view/s-cnt-market-products-list)
@@ -22,6 +23,7 @@
 ```mermaid
 graph TD;
   group-b --> s-cnt-market-header-wrapper
+  group-b --> s-cnt-market-login-and-registration-form
   group-b --> s-cnt-market-promo-slider
   group-b --> s-cnt-market-products-slider
   group-b --> s-cnt-market-products-list
@@ -57,6 +59,7 @@ graph TD;
   s-cnt-market-footer --> s-cnt-market-down-footer
   s-cnt-market-footer --> s-cnt-market-footer-info
   s-cnt-market-footer --> s-cnt-market-up-footer
+  s-cnt-market-up-footer-form --> s-cnt-market-footer-modal-form
   s-cnt-market-footer-info --> s-cnt-market-footer-info-item
   s-cnt-market-up-footer --> s-cnt-market-footer-items
   style group-b fill:#f9f,stroke:#333,stroke-width:4px

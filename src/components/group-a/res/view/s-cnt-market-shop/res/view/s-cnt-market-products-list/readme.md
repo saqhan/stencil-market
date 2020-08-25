@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property       | Attribute | Description               | Type                           | Default |
-| -------------- | --------- | ------------------------- | ------------------------------ | ------- |
-| `productsList` | --        | Данные для списка товаров | `MarketProductListInterface[]` | `[]`    |
+| Property       | Attribute | Description               | Type                           | Default     |
+| -------------- | --------- | ------------------------- | ------------------------------ | ----------- |
+| `productsList` | --        | Данные для списка товаров | `MarketProductListInterface[]` | `undefined` |
 
 
 ## Events
