@@ -28,7 +28,7 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
 
   render() {
     return (
-      <div class="products-card" onClick={() => this.showModalHandler()}>
+      <div class="products-card" onClick={() => this.showModalHandler(this.productsSliderCards)}>
         <div class="products-card-item">
           <div class="products-card-img-wrapper">
             <div
@@ -79,7 +79,7 @@ export class SCntMarketProductsSliderCard implements ComponentInterface {
   /**
    *
    */
-  public showModalHandler() {
-    this.showModal.emit();
+  public showModalHandler(z) {
+    this.showModal.emit(z);
   }
 }
