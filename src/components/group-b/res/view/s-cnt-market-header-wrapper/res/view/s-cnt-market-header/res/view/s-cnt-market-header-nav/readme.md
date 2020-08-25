@@ -15,6 +15,13 @@
 | `selectShops`        | --        | магазины для вашего города       | `MarketSelectShopsInterface[]`     | `[]`        |
 
 
+## Events
+
+| Event            | Description | Type               |
+| ---------------- | ----------- | ------------------ |
+| `openLoginModal` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

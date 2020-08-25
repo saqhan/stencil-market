@@ -13,6 +13,13 @@
 | `number` | `number`  |             | `string` | `undefined` |
 
 
+## Events
+
+| Event            | Description | Type               |
+| ---------------- | ----------- | ------------------ |
+| `openLoginModal` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

@@ -13,6 +13,13 @@
 | `login`      | `login`      | Данные об авторизации пользователя | `boolean` | `false`     |
 
 
+## Events
+
+| Event            | Description | Type               |
+| ---------------- | ----------- | ------------------ |
+| `openLoginModal` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

@@ -9,6 +9,7 @@
 
 | Property       | Attribute | Description                | Type                          | Default     |
 | -------------- | --------- | -------------------------- | ----------------------------- | ----------- |
+| `productData`  | --        |                            | `MarketProductDataInterface`  | `undefined` |
 | `productModal` | --        | Данные для модального окна | `MarketProductModalInterface` | `undefined` |
 
 

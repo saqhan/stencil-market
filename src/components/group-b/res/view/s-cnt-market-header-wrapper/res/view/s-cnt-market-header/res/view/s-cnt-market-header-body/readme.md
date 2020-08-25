@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                   | Default     |
-| -------- | --------- | ----------- | ---------------------- | ----------- |
-| `body`   | --        |             | `NavMenuItemInterface` | `undefined` |
+| Property | Attribute | Description            | Type                   | Default     |
+| -------- | --------- | ---------------------- | ---------------------- | ----------- |
+| `body`   | --        | Элементы для навигации | `NavMenuItemInterface` | `undefined` |
 
 
 ## Dependencies

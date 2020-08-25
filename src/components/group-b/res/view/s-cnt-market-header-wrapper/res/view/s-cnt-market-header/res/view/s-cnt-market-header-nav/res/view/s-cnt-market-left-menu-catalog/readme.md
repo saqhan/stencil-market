@@ -15,9 +15,9 @@
 
 ## Events
 
-| Event           | Description    | Type               |
-| --------------- | -------------- | ------------------ |
-| `closeLeftMenu` | закрывать меню | `CustomEvent<any>` |
+| Event           | Description    | Type                |
+| --------------- | -------------- | ------------------- |
+| `closeLeftMenu` | закрывать меню | `CustomEvent<void>` |
 
 
 ## Dependencies
