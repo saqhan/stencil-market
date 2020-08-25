@@ -3,40 +3,41 @@
   left: 0px;
   right: auto;
   bottom: 0px;
-  z-index: 2100;
+  z-index: 2000;
   top: 0px;
   background: rgba(0, 0, 0, 0.5);
   height: 100%;
   width: 100%;
-  /*opacity: 0;*/
+  opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s;
   pointer-events: none;
 }
 
 .drawer-backdrop.opened {
-  /*opacity: 1;*/
+  opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  visibility: visible;
-  z-index: 2000;
 }
 
 .drawer-footer-modal {
-  /*opacity: 0;*/
+  opacity: 0;
   visibility: hidden;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   right: 0;
-  transition: opacity 0.3s;
+  transform: translateY(-5%);
+  transition: all 0.2s;
 }
 
 .drawer-footer-modal.opened {
-  /*opacity: 1;*/
-  z-index: 2100;
+  opacity: 1;
+  transition: all 0.2s;
+  transform: translateY(0%);
   visibility: visible;
+  z-index: 2100;
 }
 
 .drawer-content {

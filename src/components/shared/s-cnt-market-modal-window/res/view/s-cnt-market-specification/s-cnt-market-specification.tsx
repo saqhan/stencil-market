@@ -1,4 +1,5 @@
 import {Component, ComponentInterface, h, Prop} from "@stencil/core";
+import {MarketGetSpecificationInterface, MarketSpecificationBlockInterface} from "../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-specification",
@@ -10,12 +11,12 @@ export class SCntMarketSpecification implements ComponentInterface {
   /**
    * Данные для Specification
    */
-  @Prop() specificationBlock: any;
+  @Prop() specificationBlock: MarketSpecificationBlockInterface;
 
   /**
    * Данные для Specification
    */
-  @Prop() getSpecification: any;
+  @Prop() getSpecification: MarketGetSpecificationInterface;
 
   render() {
     return (

@@ -17,7 +17,7 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
   /**
    *
    * */
-  @State() isShowFormState: boolean;
+  @State() isShowFormState: boolean = false;
 
   render() {
     return (
@@ -27,11 +27,11 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
         <div class="input-block" onClick={() => this.clickOnShowFormFooterHandler()}>
           <i class="far fa-comment-alt icon" />
           <div class="input">{this.footerContactColumn.input}</div>
-          <s-cnt-market-footer-modal-form
-            showModalForm={this.isShowFormState}
-            onClickOnCloseModalForm={()=> this.clickOnCloseModalForm()}
-          ></s-cnt-market-footer-modal-form>
         </div>
+        <s-cnt-market-footer-modal-form
+          showModalForm={this.isShowFormState}
+          onClickOnCloseModalForm={()=> this.clickOnCloseModalForm()}
+        ></s-cnt-market-footer-modal-form>
         <div class="text">{this.footerContactColumn.text}</div>
       </div>
     );
@@ -42,6 +42,7 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
    * */
   public clickOnShowFormFooterHandler(): void {
     this.isShowFormState = true;
+    // console.log('при первом клике в подвале', this.isShowFormState)
   }
 
   /**
@@ -49,7 +50,7 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
    * */
   public clickOnCloseModalForm(): void {
     this.isShowFormState = false
-    console.log('состоняие у родителя', this.isShowFormState)
+    // console.log('состоняие у родителя', this.isShowFormState)
   }
 
 }
