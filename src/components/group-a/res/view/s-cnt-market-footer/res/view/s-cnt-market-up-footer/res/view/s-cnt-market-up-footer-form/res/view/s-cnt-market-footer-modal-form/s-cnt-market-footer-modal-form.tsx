@@ -5,7 +5,6 @@ import {
   h,
   Prop,
   Event,
-  State,
 } from "@stencil/core";
 
 @Component({
@@ -29,7 +28,7 @@ export class SCntMarketFooterModalForm implements ComponentInterface {
   /**
    *
    * */
-  @State() backgroundModalFormTagState: HTMLElement;
+  public backgroundModalFormTag: HTMLElement;
 
   /**
    * тег инпута для имени пользователя
@@ -73,11 +72,12 @@ export class SCntMarketFooterModalForm implements ComponentInterface {
 
   render() {
     return (
-      <div>
+      <div
+
+      >
         <div
+
           class={this.showModalForm ? "drawer-backdrop opened " : "drawer-backdrop"}
-          onClick={(event) => this.closeModalFormHandler(event)}
-          ref={(el) => (this.backgroundModalFormTagState = el)}
         ></div>
         <div
           class={
@@ -85,6 +85,8 @@ export class SCntMarketFooterModalForm implements ComponentInterface {
               ? "drawer-footer-modal opened"
               : "drawer-footer-modal"
           }
+          onClick={(event) => this.closeModalFormHandler(event)}
+          ref={(el) => (this.backgroundModalFormTag = el)}
         >
           <div class="drawer-content">
             <div class="wrapper-content">
@@ -215,10 +217,10 @@ export class SCntMarketFooterModalForm implements ComponentInterface {
    * close modal form
    * */
   public closeModalFormHandler(event) {
-    console.log('clickOnCloseModalForm 1');
-    if (this.backgroundModalFormTagState === event.target) {
-      // this.clickOnCloseModalForm.emit();
-      // console.log('clickOnCloseModalForm 2');
+    console.log('clickOnCloseModalForm 1', event.target);
+    if (this.backgroundModalFormTag === event.target) {
+      this.clickOnCloseModalForm.emit();
+      console.log('clickOnCloseModalForm 2');
     }
   }
 
