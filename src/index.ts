@@ -172,6 +172,7 @@ export interface MarketRecentlyWatchedProductsInterface {
   weight: string,
   oldPrice?: string,
   disPrice?: string
+  productData?: MarketProductDataItemsInterface;
 }
 
 export interface MarketProductModalInterface {
