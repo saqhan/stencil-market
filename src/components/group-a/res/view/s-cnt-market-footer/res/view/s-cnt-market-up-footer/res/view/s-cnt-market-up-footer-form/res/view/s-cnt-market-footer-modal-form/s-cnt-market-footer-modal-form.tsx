@@ -217,10 +217,8 @@ export class SCntMarketFooterModalForm implements ComponentInterface {
    * close modal form
    * */
   public closeModalFormHandler(event) {
-    console.log('clickOnCloseModalForm 1', event.target);
     if (this.backgroundModalFormTag === event.target) {
       this.clickOnCloseModalForm.emit();
-      console.log('clickOnCloseModalForm 2');
     }
   }
 
