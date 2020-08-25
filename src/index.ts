@@ -151,6 +151,7 @@ export interface MarketProductsSliderCardsInterface {
   currency: string,
   desc: string,
   weight: string,
+  productData?: MarketProductDataItemsInterface;
 }
 
 export interface MarketPromoSliderInterface {
