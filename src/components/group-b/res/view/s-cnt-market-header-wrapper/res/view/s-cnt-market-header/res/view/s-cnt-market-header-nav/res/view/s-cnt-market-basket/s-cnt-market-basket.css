@@ -334,6 +334,7 @@
 
 .line-item-counter-control {
   display: none;
+  outline: none;
   cursor: pointer;
   color: #929292;
   background-color: inherit;
@@ -444,7 +445,13 @@
   transition: color .25s ease-out;
 }
 
+.old-price {
+  text-decoration: line-through;
+}
 
+.price-sale {
+  color: #ff3366;
+}
 
 
 

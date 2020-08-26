@@ -7,18 +7,18 @@ export const MarketCartProducts = [
     weight: 200,
     weightValue: 'г',
     img: 'https://sbermarket.ru/spree/products/7546/mini/15220.PNG',
-    price: 150,
-    sales: 100,
+    price: 453,
+    sales: 300,
     count: 1
   },
   {
     id: 2,
     name: 'Шашлык Мираторг Традиционный охлажденный',
-    weight: 200,
+    weight: 50,
     weightValue: 'г',
     img: 'https://sbermarket.ru/spree/products/35454/mini/33550.png',
     price: 900,
-    sales: 0,
+    sales: 549,
     count: 1
   },
   {
@@ -37,7 +37,7 @@ export const MarketCartProducts = [
     weight: 100,
     weightValue: 'г',
     img: 'https://sbermarket.ru/spree/products/35454/mini/33550.png',
-    price: 900,
+    price: 220,
     sales: 0,
     count: 1
   },
@@ -57,7 +57,7 @@ export const MarketCartProducts = [
     weight: 100,
     weightValue: 'г',
     img: 'https://sbermarket.ru/spree/products/35454/mini/33550.png',
-    price: 900,
+    price: 30,
     sales: 0,
     count: 1
   },
@@ -77,7 +77,7 @@ export const MarketCartProducts = [
     weight: 100,
     weightValue: 'г',
     img: 'https://sbermarket.ru/spree/products/35454/mini/33550.png',
-    price: 900,
+    price: 50,
     sales: 0,
     count: 1
   },
@@ -97,7 +97,7 @@ export const MarketCartProducts = [
     weight: 100,
     weightValue: 'г',
     img: 'https://sbermarket.ru/spree/products/35454/mini/33550.png',
-    price: 900,
+    price: 100,
     sales: 0,
     count: 1
   },
@@ -107,7 +107,7 @@ export const MarketCartProducts = [
     weight: 100,
     weightValue: 'г',
     img: 'https://sbermarket.ru/spree/products/35454/mini/33550.png',
-    price: 900,
+    price: 100,
     sales: 0,
     count: 1
   },

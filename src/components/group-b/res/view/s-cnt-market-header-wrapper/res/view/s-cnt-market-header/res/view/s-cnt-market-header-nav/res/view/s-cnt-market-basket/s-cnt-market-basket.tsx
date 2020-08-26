@@ -7,7 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
-import {MarketCartProductsInterface} from "../../../../../../../../../../../../../../index";
+import { MarketCartProductsInterface } from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-basket",
@@ -16,7 +16,6 @@ import {MarketCartProductsInterface} from "../../../../../../../../../../../../.
   scoped: true,
 })
 export class SCntMarketBasket implements ComponentInterface {
-
   /**
    * Продукты из корзины
    * */
@@ -142,7 +141,7 @@ export class SCntMarketBasket implements ComponentInterface {
                 {this.MarketCartProductsState.length ? (
                   <button class="btn-buy">
                     Сделать заказ
-                    <span class="btn-price" >
+                    <span class="btn-price">
                       {this.getTotalPriceProducts(this.MarketCartProductsState)}
                     </span>
                   </button>
@@ -178,7 +177,8 @@ export class SCntMarketBasket implements ComponentInterface {
    * */
   public getTotalPriceProducts(array) {
     const reducer = (accumulator, currentValue) =>
-      accumulator + currentValue.price;
+      accumulator +
+      (currentValue.sales ? currentValue.sales : currentValue.price);
     const totalValue = " ₽";
     const total = array.reduce(reducer, 0) + totalValue;
     return total;
@@ -188,11 +188,13 @@ export class SCntMarketBasket implements ComponentInterface {
    * Получение общего веса продуктов
    * */
   public getTotalWeightProducts(array) {
-    const reducer = (accumulator, currentValue) =>
-      accumulator + currentValue.weight;
+    const reducer = (accumulator, currentValue) => accumulator + currentValue.weight;
     const weight = array.reduce(reducer, 0);
-    const weightValue = weight > 1000 ? "кг" : "г";
-    return `${weight} ${weightValue}`;
+    if (weight > 999) {
+      return weight / 1000 + " кг";
+    } else {
+      return weight + " г";
+    }
   }
 }
 
@@ -226,10 +228,23 @@ const CardProductCart = (props) => {
             </div>
           </a>
           <div class="cart-line-item-price">
-            <div class="price">
-              {item.price}
-              <span> ₽</span>
-            </div>
+            {item.sales ? (
+              <div>
+                <div class="price old-price ">
+                  {item.price}
+                  <span> ₽</span>
+                </div>
+                <div class="price price-sale">
+                  {item.sales}
+                  <span> ₽</span>
+                </div>
+              </div>
+            ) : (
+              <div class="price">
+                {item.price}
+                <span> ₽</span>
+              </div>
+            )}
             <div class="cart-line-item-remove">удалить</div>
           </div>
         </div>
