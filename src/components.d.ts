@@ -27,6 +27,10 @@ export namespace Components {
     }
     interface SCntMarketBasket {
         /**
+          * Продукты из корзины
+         */
+        "marketCartProducts": any;
+        /**
           * Стейт на состояние корзины открыто/закрыто
          */
         "openedBasket": boolean;
@@ -872,6 +876,10 @@ declare namespace LocalJSX {
     interface SCntMarketBackToTop {
     }
     interface SCntMarketBasket {
+        /**
+          * Продукты из корзины
+         */
+        "marketCartProducts"?: any;
         /**
           * /Закрыть корзину
          */

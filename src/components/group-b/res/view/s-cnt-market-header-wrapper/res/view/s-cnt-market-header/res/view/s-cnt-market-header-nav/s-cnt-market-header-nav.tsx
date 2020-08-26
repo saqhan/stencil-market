@@ -4,6 +4,8 @@ import {
   MarketNavBarInterface,
   MarketSelectShopsInterface,
 } from "../../../../../../../../../../..";
+import {MarketCartProducts} from "../../../../../../../../../../../utils/mock-s";
+
 
 @Component({
   tag: "s-cnt-market-header-nav",
@@ -168,9 +170,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class="fas fa-shopping-cart"></i>
                   <span>{this.navBar.titleCart}</span>
                 </a>
+                <span class="count-cart" >{MarketCartProducts.length}</span>
                 <s-cnt-market-basket
                   openedBasket={this.openedBasketState}
                   onCloseBasket={() => this.closeBasket()}
+                  marketCartProducts={MarketCartProducts}
                 ></s-cnt-market-basket>
               </div>
             </div>
