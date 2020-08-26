@@ -1,5 +1,17 @@
 export * from './components';
 
+
+export interface MarketCartProductsInterface {
+  id: number,
+  name: string,
+  weight: number,
+  weightValue: string,
+  img: string,
+  price: number,
+  sales: number,
+  count: number,
+}
+
 export interface MarketAppInterface {
   id: number;
   image: string;

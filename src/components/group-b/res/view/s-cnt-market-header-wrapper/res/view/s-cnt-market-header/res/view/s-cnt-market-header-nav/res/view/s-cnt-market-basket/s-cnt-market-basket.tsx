@@ -7,6 +7,7 @@ import {
   Prop,
   State,
 } from "@stencil/core";
+import {MarketCartProductsInterface} from "../../../../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-basket",
@@ -19,7 +20,7 @@ export class SCntMarketBasket implements ComponentInterface {
   /**
    * Продукты из корзины
    * */
-  @Prop() marketCartProducts: any;
+  @Prop() marketCartProducts: MarketCartProductsInterface[] = [];
 
   /**
    * Стейт на состояние корзины открыто/закрыто
