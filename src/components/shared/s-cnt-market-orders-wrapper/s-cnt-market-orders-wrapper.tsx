@@ -27,8 +27,8 @@ export class SCntMarketOrdersWrapper implements ComponentInterface {
         <main>
           <div class="overlayBackDrop"></div>
           {/*<s-cnt-market-user-account></s-cnt-market-user-account>*/}
-          {/*<s-cnt-market-shipments></s-cnt-market-shipments>*/}
-          <s-cnt-market-favorite-products></s-cnt-market-favorite-products>
+          <s-cnt-market-shipments></s-cnt-market-shipments>
+          {/*<s-cnt-market-favorite-products></s-cnt-market-favorite-products>*/}
           <s-cnt-market-footer footerData={footerData}></s-cnt-market-footer>
           <s-cnt-market-back-to-top></s-cnt-market-back-to-top>
         </main>

@@ -36,7 +36,16 @@ export class SCntMarketBasket implements ComponentInterface {
    * */
   private basketTag: HTMLElement;
 
+  /**
+   *
+   * */
   @State() MarketCartProductsState = this.marketCartProducts;
+
+  /**
+   * стейт для открытие/закрытие информации о самовывозе
+   * */
+
+  @State() isShowInfoPickup: boolean;
 
   render() {
     return (
@@ -102,8 +111,10 @@ export class SCntMarketBasket implements ComponentInterface {
                         </div>
                       </div>
                     </div>
-                    <div class="retailer-deliveries">
-                      <div class="retailer-deliveries-caption">
+                    <div class={this.isShowInfoPickup ? "retailer-deliveries opened-retailer" : "retailer-deliveries"}>
+                      <div class={this.isShowInfoPickup ? "retailer-deliveries-caption opened-caption" : "retailer-deliveries-caption"}
+                        onClick={()=> this.clickOnCaptionPickupHandler()}
+                      >
                         <div class="retailer-delivery">
                           <div class="cart-retailer-subheader">
                             <div class="cart-box">
@@ -122,15 +133,44 @@ export class SCntMarketBasket implements ComponentInterface {
                           </div>
                         </div>
                       </div>
+                      <div class={this.isShowInfoPickup ? "retailer-deliveries-list opened-list" : "retailer-deliveries-list"}
+                        onClick={()=> this.clickOnCaptionPickupHandler()}
+                      >
+                        <div class="retailer-delivery">
+                          <div class="cart-retailer-subheader">
+                            <div class="cart-box">
+                              <div class="retailer-delivery-summary">
+                                <span>Сегодня, 19:00-20:00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="retailer-delivery">
+                          <div class="cart-retailer-subheader">
+                            <div class="cart-box">
+                              <div class="retailer-delivery-summary">
+                                <span>Сегодня, 19:00-20:00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="retailer-delivery">
+                          <div class="cart-retailer-subheader">
+                            <div class="cart-box">
+                              <div class="retailer-delivery-summary">
+                                <span>Сегодня, 19:00-20:00</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                   <div class="cart-line-items">
                     <div class="cart-line-items-i">
                       <div class="cart-line-item-wrapper">
                         <div class="swipable">
-                          <CardProductCart
-                            array={this.MarketCartProductsState}
-                          ></CardProductCart>
+                          <CardProductCart array={this.MarketCartProductsState}></CardProductCart>
                         </div>
                       </div>
                     </div>
@@ -195,6 +235,14 @@ export class SCntMarketBasket implements ComponentInterface {
     } else {
       return weight + " г";
     }
+  }
+
+  /**
+   * Клик на время самовывоза
+   * */
+  public clickOnCaptionPickupHandler() {
+    this.isShowInfoPickup = !this.isShowInfoPickup;
+    console.log(this.isShowInfoPickup);
   }
 }
 
