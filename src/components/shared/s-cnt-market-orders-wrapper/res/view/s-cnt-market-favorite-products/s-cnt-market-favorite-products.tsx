@@ -53,7 +53,11 @@ export class SCntMarketFavoriteProducts implements ComponentInterface {
           <div class="col-12 col-md-9">
             <div class="content-wrapper">
               <div class="user-account-wrapper">
-
+                <div class="empty-favorites">
+                  <div class="empty-favorites-icon"><i class="far fa-heart" ></i></div>
+                  <div class="empty-favorites-title">Ваш список пуст</div>
+                  <div class="empty-favorites-text">Добавить продукты в список можно, зайдя в карточку товара и нажав на сердечко :-)</div>
+                </div>
               </div>
             </div>
           </div>
