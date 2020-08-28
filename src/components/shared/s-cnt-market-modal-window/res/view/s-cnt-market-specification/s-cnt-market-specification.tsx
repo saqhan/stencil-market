@@ -18,11 +18,13 @@ export class SCntMarketSpecification implements ComponentInterface {
    */
   @Prop() getSpecification: MarketGetSpecificationInterface;
 
+  hideInfo: HTMLElement;
+
   render() {
     return (
       <div class="specification">
         <div class="container">
-          <div class="row row-desc">
+          <div class="row row-desc" ref={(el) => this.hideInfo = el}>
             <div class="col-sm-6">
               <div class="op">
                 <b>
@@ -80,22 +82,24 @@ export class SCntMarketSpecification implements ComponentInterface {
               </div>
             </div>
           </div>
-          <div class="row row-radius">
-            <div class="col-12">
-              <div class="hideInformation">
-                <u>
-                  {this.specificationBlock.hideInformation}
-                </u>
-              </div>
-            </div>
-            <div class="col-12 recommendations">
-              <div class="space"></div>
+          <div class="hide-show-info-wrap">
+            <div class="hide-information-container" onClick={() => this.clickHideInfo()}>
+              {this.specificationBlock.hideInformation}
             </div>
           </div>
         </div>
       </div>
     );
   }
+
+  public clickHideInfo() {
+    if (this.hideInfo.style.height !== '340px') {
+      this.hideInfo.style.height = '340px'
+    } else {
+      this.hideInfo.style.height = 'auto'
+    }
+  }
+
 }
 
 /*
@@ -131,7 +135,7 @@ const GeneralInformation = (props) => {
             </strong>
           </div>
           <div class="info-value">
-              {item.info}
+            {item.info}
           </div>
         </div>
       </div>

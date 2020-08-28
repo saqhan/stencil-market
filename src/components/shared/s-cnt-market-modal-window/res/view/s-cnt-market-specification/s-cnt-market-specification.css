@@ -2,13 +2,17 @@
   max-width: 100%;
   padding: 0;
   color: #333;
+  box-sizing: border-box;
 }
 
 .row-desc {
+  overflow: hidden;
+  transition: height .3s cubic-bezier(.19,1,.22,1);
   background-color: #f7f7f7;
   border-radius: 4px;
   padding-bottom: 25px;
   padding-top: 25px;
+  box-sizing: border-box;
 }
 
 .row-radius {
@@ -251,23 +255,36 @@
   font-size: 0.9em;
 }
 
-.hideInformation {
-  cursor: pointer;
-  margin: 40px 0 0 0;
-  text-align: center;
+.hide-show-info-wrap{
+  width: 100%;
+  position: relative;
+}
+
+.hide-information-container {
+  box-sizing: border-box;
+  background-color: #f7f7f7;
+  border: none;
+  box-shadow: none;
   color: #21a038;
-  font-size: 0.9rem;
+  padding: 15px 0 20px;
+  position: relative;
+  text-decoration: underline;
+  text-align: center;
+  cursor: pointer;
 }
 
-.space {
-  height: 40px;
-  margin: 22px 0 40px;
-  background-color: white;
+.hide-information-container::before{
+  background-image: linear-gradient(180deg,hsla(0,0%,96.9%,0) 0,#f7f7f7);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00F7F7F7",endColorstr="#FFF7F7F7",GradientType=0);
+  content: "";
+  height: 30px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -30px;
 }
 
-.recommendations {
-  padding: 0;
-}
 
 @media only screen and (max-width: 400px) {
   .block-composition {

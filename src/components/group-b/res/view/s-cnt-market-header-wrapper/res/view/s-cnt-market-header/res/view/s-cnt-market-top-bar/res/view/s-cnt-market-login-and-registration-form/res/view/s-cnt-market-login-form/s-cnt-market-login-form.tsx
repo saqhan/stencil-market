@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop, State} from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop, State} from '@stencil/core';
 import {MarketLoginInterface, MarketUsersArrInterface} from "../../../../../../../../../../../../../../../../../index";
 
 @Component({
@@ -22,6 +22,11 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
    * State для переключения типа пароля
    * */
   @State() passwordView: boolean;
+
+  /**
+   *
+   */
+  @Event() callRemind: EventEmitter;
 
   /**
    * ref для закрытия модального окна
@@ -122,9 +127,9 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         <button class="login-btn" ref={(el) => this.logInBtn = el}>
           {this.login.logIn}
         </button>
-        <button class="remind-password">
+        <div class="remind-password" onClick={() => this.callRemind.emit()}>
           {this.login.remindPass}
-        </button>
+        </div>
         <div class="login-through-wrapper">
           <button class="login-through-bankId">
             <span innerHTML={this.login.bankIcon}>

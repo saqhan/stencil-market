@@ -5,7 +5,7 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { footerContactColumnInterface, footerCopyrightRowInterface, footerDataInterface, footerItemsInterface, footerLinksPoliticsInterface, footerMenuInterface, MarketAppInterface, MarketChoiceInterface, MarketCitiesInterface, MarketCourierInterface, MarketDeliveryInterface, MarketFeaturedProductInterface, MarketGetProductInterface, MarketGetRecommendedInterface, MarketGetSpecificationInterface, MarketLeftMenuCatalogInterface as MarketLeftMenuCatalogInterface1, MarketLoginAndRegistrationInterface, MarketLoginInterface, MarketOfferInterface, MarketProductBlockInterface, MarketProductDataInterface, MarketProductListCardInterface, MarketProductListInterface, MarketProductModalInterface, MarketProductsSliderCardsInterface, MarketPromoSliderInterface, MarketRecentlyWatchedProductsInterface, MarketRecommendedBlockInterface, MarketRegistrationInterface, MarketSelectionInterface, MarketSelectShopsInterface as MarketSelectShopsInterface1, MarketSpecialistInterface, MarketSpecificationBlockInterface, MarketStatisticsInterface, MarketTopBarInterface, MarketTopBarModalDeliveryInterface, MarketTopBarModalInterface, MarketTopBarModalPickUpInterface, MarketUsersArrInterface, } from "./index";
+import { footerContactColumnInterface, footerCopyrightRowInterface, footerDataInterface, footerItemsInterface, footerLinksPoliticsInterface, footerMenuInterface, MarketAppInterface, MarketChoiceInterface, MarketCitiesInterface, MarketCourierInterface, MarketDeliveryInterface, MarketFeaturedProductInterface, MarketGetProductInterface, MarketGetRecommendedInterface, MarketGetSpecificationInterface, MarketLeftMenuCatalogInterface as MarketLeftMenuCatalogInterface1, MarketLoginAndRegistrationInterface, MarketLoginInterface, MarketOfferInterface, MarketProductBlockInterface, MarketProductDataInterface, MarketProductListCardInterface, MarketProductListInterface, MarketProductModalInterface, MarketProductPageInterface, MarketProductsPageFilterInterface, MarketProductsSliderCardsInterface, MarketPromoSliderInterface, MarketRecentlyWatchedProductsInterface, MarketRecommendedBlockInterface, MarketRegistrationInterface, MarketRemindPasswordInterface, MarketSelectionInterface, MarketSelectShopsInterface as MarketSelectShopsInterface1, MarketSpecialistInterface, MarketSpecificationBlockInterface, MarketStatisticsInterface, MarketTopBarInterface, MarketTopBarModalDeliveryInterface, MarketTopBarModalInterface, MarketTopBarModalPickUpInterface, MarketUsersArrInterface, } from "./index";
 import { NavMenuItemInterface, } from "./components/group-b/res/view/s-cnt-market-header-wrapper/res/view/s-cnt-market-header/res/view/s-cnt-market-header-body/res/interface/common.interface";
 import { MarketLeftMenuCatalogInterface, MarketNavBarInterface, MarketSelectShopsInterface, } from ".";
 export namespace Components {
@@ -223,6 +223,9 @@ export namespace Components {
         "openedLeftMenu": boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
+        /**
+          * значения для присвоения ширины блока
+         */
         "blockWidth": string;
         /**
           * boolean значение для вывода/закрытия блока входа и присвоения класса
@@ -279,6 +282,42 @@ export namespace Components {
           * Данные для Product
          */
         "productBlock": MarketProductBlockInterface;
+    }
+    interface SCntMarketProductFilterSaidBar {
+        /**
+          * Данные для вывода брендов
+         */
+        "brands": MarketProductListInterface;
+        /**
+          * checked для смены класса и показа товаров со скидкой
+         */
+        "checkedDesc": boolean;
+        /**
+          * Данные объекта для заполнения компонента
+         */
+        "productFilter": MarketProductsPageFilterInterface;
+    }
+    interface SCntMarketProductPage {
+        /**
+          * Данные для списка товаров
+         */
+        "productsList": MarketProductListInterface[];
+        /**
+          * Данные объекта для заполнения компонента
+         */
+        "productsPage": MarketProductPageInterface;
+        /**
+          * Данные карточек слайдера популярных продуктов
+         */
+        "productsSliderCards": MarketProductsSliderCardsInterface[];
+        /**
+          * Заголовк слайдера
+         */
+        "productsSliderTitle": string;
+        /**
+          * Принимает id выбранной категории для вывода ее товаров
+         */
+        "selectedCategoryId": number;
     }
     interface SCntMarketProductsList {
         /**
@@ -357,6 +396,20 @@ export namespace Components {
           * объект данных для компонента регистрации
          */
         "reg": MarketRegistrationInterface;
+        /**
+          * массив с данными пользователей
+         */
+        "users": MarketUsersArrInterface[];
+    }
+    interface SCntMarketRemindPassword {
+        /**
+          * boolean значение
+         */
+        "backBtn": boolean;
+        /**
+          * объект данных для компонента входа
+         */
+        "remindPass": MarketRemindPasswordInterface;
         /**
           * массив с данными пользователей
          */
@@ -668,6 +721,18 @@ declare global {
         prototype: HTMLSCntMarketProductElement;
         new (): HTMLSCntMarketProductElement;
     };
+    interface HTMLSCntMarketProductFilterSaidBarElement extends Components.SCntMarketProductFilterSaidBar, HTMLStencilElement {
+    }
+    var HTMLSCntMarketProductFilterSaidBarElement: {
+        prototype: HTMLSCntMarketProductFilterSaidBarElement;
+        new (): HTMLSCntMarketProductFilterSaidBarElement;
+    };
+    interface HTMLSCntMarketProductPageElement extends Components.SCntMarketProductPage, HTMLStencilElement {
+    }
+    var HTMLSCntMarketProductPageElement: {
+        prototype: HTMLSCntMarketProductPageElement;
+        new (): HTMLSCntMarketProductPageElement;
+    };
     interface HTMLSCntMarketProductsListElement extends Components.SCntMarketProductsList, HTMLStencilElement {
     }
     var HTMLSCntMarketProductsListElement: {
@@ -733,6 +798,12 @@ declare global {
     var HTMLSCntMarketRegistrationFormElement: {
         prototype: HTMLSCntMarketRegistrationFormElement;
         new (): HTMLSCntMarketRegistrationFormElement;
+    };
+    interface HTMLSCntMarketRemindPasswordElement extends Components.SCntMarketRemindPassword, HTMLStencilElement {
+    }
+    var HTMLSCntMarketRemindPasswordElement: {
+        prototype: HTMLSCntMarketRemindPasswordElement;
+        new (): HTMLSCntMarketRemindPasswordElement;
     };
     interface HTMLSCntMarketSelectionElement extends Components.SCntMarketSelection, HTMLStencilElement {
     }
@@ -828,6 +899,8 @@ declare global {
         "s-cnt-market-offer": HTMLSCntMarketOfferElement;
         "s-cnt-market-pickup-in-modal": HTMLSCntMarketPickupInModalElement;
         "s-cnt-market-product": HTMLSCntMarketProductElement;
+        "s-cnt-market-product-filter-said-bar": HTMLSCntMarketProductFilterSaidBarElement;
+        "s-cnt-market-product-page": HTMLSCntMarketProductPageElement;
         "s-cnt-market-products-list": HTMLSCntMarketProductsListElement;
         "s-cnt-market-products-list-card": HTMLSCntMarketProductsListCardElement;
         "s-cnt-market-products-list-item": HTMLSCntMarketProductsListItemElement;
@@ -839,6 +912,7 @@ declare global {
         "s-cnt-market-recently-watched-card": HTMLSCntMarketRecentlyWatchedCardElement;
         "s-cnt-market-recommended": HTMLSCntMarketRecommendedElement;
         "s-cnt-market-registration-form": HTMLSCntMarketRegistrationFormElement;
+        "s-cnt-market-remind-password": HTMLSCntMarketRemindPasswordElement;
         "s-cnt-market-selection": HTMLSCntMarketSelectionElement;
         "s-cnt-market-shop": HTMLSCntMarketShopElement;
         "s-cnt-market-specialist": HTMLSCntMarketSpecialistElement;
@@ -1102,6 +1176,9 @@ declare namespace LocalJSX {
         "openedLeftMenu"?: boolean;
     }
     interface SCntMarketLoginAndRegistrationForm {
+        /**
+          * значения для присвоения ширины блока
+         */
         "blockWidth"?: string;
         /**
           * boolean значение для вывода/закрытия блока входа и присвоения класса
@@ -1133,6 +1210,7 @@ declare namespace LocalJSX {
           * объект данных для компонента входа
          */
         "login"?: MarketLoginInterface;
+        "onCallRemind"?: (event: CustomEvent<any>) => void;
         /**
           * массив с данными пользователей
          */
@@ -1183,7 +1261,59 @@ declare namespace LocalJSX {
          */
         "productBlock"?: MarketProductBlockInterface;
     }
+    interface SCntMarketProductFilterSaidBar {
+        /**
+          * Данные для вывода брендов
+         */
+        "brands"?: MarketProductListInterface;
+        /**
+          * checked для смены класса и показа товаров со скидкой
+         */
+        "checkedDesc"?: boolean;
+        /**
+          * Клик для смены значения булен при выборе товаров со скидкой и без
+         */
+        "onCheckDesc"?: (event: CustomEvent<any>) => void;
+        /**
+          * Клик по карточке для показа модального окна
+         */
+        "onClickBrandSelect"?: (event: CustomEvent<void>) => void;
+        /**
+          * Данные объекта для заполнения компонента
+         */
+        "productFilter"?: MarketProductsPageFilterInterface;
+    }
+    interface SCntMarketProductPage {
+        /**
+          * Клик по карточке для показа модального окна
+         */
+        "onShowModal"?: (event: CustomEvent<any>) => void;
+        /**
+          * Данные для списка товаров
+         */
+        "productsList"?: MarketProductListInterface[];
+        /**
+          * Данные объекта для заполнения компонента
+         */
+        "productsPage"?: MarketProductPageInterface;
+        /**
+          * Данные карточек слайдера популярных продуктов
+         */
+        "productsSliderCards"?: MarketProductsSliderCardsInterface[];
+        /**
+          * Заголовк слайдера
+         */
+        "productsSliderTitle"?: string;
+        /**
+          * Принимает id выбранной категории для вывода ее товаров
+         */
+        "selectedCategoryId"?: number;
+    }
     interface SCntMarketProductsList {
+        /**
+          * Клик
+         */
+        "onSelectedId"?: (event: CustomEvent<any>) => void;
         /**
           * Клик по карточке для показа модального окна
          */
@@ -1194,6 +1324,10 @@ declare namespace LocalJSX {
         "productsList"?: MarketProductListInterface[];
     }
     interface SCntMarketProductsListCard {
+        /**
+          * Клик
+         */
+        "onSelectedId"?: (event: CustomEvent<any>) => void;
         /**
           * Клик по карточке для показа модального окна
          */
@@ -1288,6 +1422,25 @@ declare namespace LocalJSX {
           * объект данных для компонента регистрации
          */
         "reg"?: MarketRegistrationInterface;
+        /**
+          * массив с данными пользователей
+         */
+        "users"?: MarketUsersArrInterface[];
+    }
+    interface SCntMarketRemindPassword {
+        /**
+          * boolean значение
+         */
+        "backBtn"?: boolean;
+        "onClickSendMail"?: (event: CustomEvent<any>) => void;
+        /**
+          * Закрытие модального модального окна формы входа/регистрации
+         */
+        "onCloseLogin"?: (event: CustomEvent<any>) => void;
+        /**
+          * объект данных для компонента входа
+         */
+        "remindPass"?: MarketRemindPasswordInterface;
         /**
           * массив с данными пользователей
          */
@@ -1407,6 +1560,8 @@ declare namespace LocalJSX {
         "s-cnt-market-offer": SCntMarketOffer;
         "s-cnt-market-pickup-in-modal": SCntMarketPickupInModal;
         "s-cnt-market-product": SCntMarketProduct;
+        "s-cnt-market-product-filter-said-bar": SCntMarketProductFilterSaidBar;
+        "s-cnt-market-product-page": SCntMarketProductPage;
         "s-cnt-market-products-list": SCntMarketProductsList;
         "s-cnt-market-products-list-card": SCntMarketProductsListCard;
         "s-cnt-market-products-list-item": SCntMarketProductsListItem;
@@ -1418,6 +1573,7 @@ declare namespace LocalJSX {
         "s-cnt-market-recently-watched-card": SCntMarketRecentlyWatchedCard;
         "s-cnt-market-recommended": SCntMarketRecommended;
         "s-cnt-market-registration-form": SCntMarketRegistrationForm;
+        "s-cnt-market-remind-password": SCntMarketRemindPassword;
         "s-cnt-market-selection": SCntMarketSelection;
         "s-cnt-market-shop": SCntMarketShop;
         "s-cnt-market-specialist": SCntMarketSpecialist;
@@ -1472,6 +1628,8 @@ declare module "@stencil/core" {
             "s-cnt-market-offer": LocalJSX.SCntMarketOffer & JSXBase.HTMLAttributes<HTMLSCntMarketOfferElement>;
             "s-cnt-market-pickup-in-modal": LocalJSX.SCntMarketPickupInModal & JSXBase.HTMLAttributes<HTMLSCntMarketPickupInModalElement>;
             "s-cnt-market-product": LocalJSX.SCntMarketProduct & JSXBase.HTMLAttributes<HTMLSCntMarketProductElement>;
+            "s-cnt-market-product-filter-said-bar": LocalJSX.SCntMarketProductFilterSaidBar & JSXBase.HTMLAttributes<HTMLSCntMarketProductFilterSaidBarElement>;
+            "s-cnt-market-product-page": LocalJSX.SCntMarketProductPage & JSXBase.HTMLAttributes<HTMLSCntMarketProductPageElement>;
             "s-cnt-market-products-list": LocalJSX.SCntMarketProductsList & JSXBase.HTMLAttributes<HTMLSCntMarketProductsListElement>;
             "s-cnt-market-products-list-card": LocalJSX.SCntMarketProductsListCard & JSXBase.HTMLAttributes<HTMLSCntMarketProductsListCardElement>;
             "s-cnt-market-products-list-item": LocalJSX.SCntMarketProductsListItem & JSXBase.HTMLAttributes<HTMLSCntMarketProductsListItemElement>;
@@ -1483,6 +1641,7 @@ declare module "@stencil/core" {
             "s-cnt-market-recently-watched-card": LocalJSX.SCntMarketRecentlyWatchedCard & JSXBase.HTMLAttributes<HTMLSCntMarketRecentlyWatchedCardElement>;
             "s-cnt-market-recommended": LocalJSX.SCntMarketRecommended & JSXBase.HTMLAttributes<HTMLSCntMarketRecommendedElement>;
             "s-cnt-market-registration-form": LocalJSX.SCntMarketRegistrationForm & JSXBase.HTMLAttributes<HTMLSCntMarketRegistrationFormElement>;
+            "s-cnt-market-remind-password": LocalJSX.SCntMarketRemindPassword & JSXBase.HTMLAttributes<HTMLSCntMarketRemindPasswordElement>;
             "s-cnt-market-selection": LocalJSX.SCntMarketSelection & JSXBase.HTMLAttributes<HTMLSCntMarketSelectionElement>;
             "s-cnt-market-shop": LocalJSX.SCntMarketShop & JSXBase.HTMLAttributes<HTMLSCntMarketShopElement>;
             "s-cnt-market-specialist": LocalJSX.SCntMarketSpecialist & JSXBase.HTMLAttributes<HTMLSCntMarketSpecialistElement>;

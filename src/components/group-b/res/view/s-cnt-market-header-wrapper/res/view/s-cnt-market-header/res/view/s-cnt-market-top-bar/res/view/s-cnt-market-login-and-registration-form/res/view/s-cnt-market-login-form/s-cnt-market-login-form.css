@@ -17,7 +17,6 @@
   width: 100%;
   line-height: normal;
   font-weight: 400;
-
 }
 
 .input-container {
@@ -173,6 +172,7 @@
   border: none;
   background: transparent;
   color: #21b056;
+  text-align: center;
 }
 
 .remind-password:hover {
@@ -275,5 +275,4 @@
   .login-btn, .remind-password, .login-through-bankId, .login-through-social p {
     font-size: 12px;
   }
-
 }
