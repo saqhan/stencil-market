@@ -1,5 +1,5 @@
 import { Component, ComponentInterface, h, Prop } from "@stencil/core";
-import { NavMenuItemInterface } from "./res/interface/common.interface";
+import {NavMenuItemInterface} from "../../../../../../../../../../../index";
 
 @Component({
   tag: "s-cnt-market-header-body",

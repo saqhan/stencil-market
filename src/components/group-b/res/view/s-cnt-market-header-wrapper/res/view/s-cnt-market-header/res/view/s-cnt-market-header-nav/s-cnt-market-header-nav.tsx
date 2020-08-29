@@ -4,6 +4,8 @@ import {
   MarketNavBarInterface,
   MarketSelectShopsInterface,
 } from "../../../../../../../../../../..";
+import {MarketCartProducts} from "../../../../../../../../../../../utils/mock-s";
+
 
 @Component({
   tag: "s-cnt-market-header-nav",
@@ -168,9 +170,11 @@ export class SCntMarketHeaderNav implements ComponentInterface {
                   <i class="fas fa-shopping-cart"></i>
                   <span>{this.navBar.titleCart}</span>
                 </a>
+                <span class="count-cart" >{MarketCartProducts.length}</span>
                 <s-cnt-market-basket
                   openedBasket={this.openedBasketState}
                   onCloseBasket={() => this.closeBasket()}
+                  marketCartProducts={MarketCartProducts}
                 ></s-cnt-market-basket>
               </div>
             </div>
@@ -222,13 +226,7 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public onClickBasketHandler(): void  {
     this.openedBasketState = true;
-  }
-
-  /**
-   *
-   * */
-  public closeLeftMenu(): void  {
-    this.openedLeftMenuState = false;
+    document.querySelector('body').style.overflow = 'hidden';
   }
 
   /**
@@ -236,6 +234,15 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public closeBasket(): void  {
     this.openedBasketState = false;
+    document.querySelector('body').style.overflow = 'visible';
+
+  }
+
+  /**
+   *
+   * */
+  public closeLeftMenu(): void  {
+    this.openedLeftMenuState = false;
   }
 
   /**
