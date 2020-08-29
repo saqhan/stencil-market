@@ -1,0 +1,13 @@
+.ordering-container {
+  margin: 56px auto auto;
+  padding: 20px 32px 32px;
+  max-width: 940px;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: content-box;
+  color: #393939;
+}
+
+.ordering-new {
+  background-color: #f7f7f7;
+}

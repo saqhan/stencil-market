@@ -272,6 +272,99 @@ export namespace Components {
          */
         "offerTitleText": string;
     }
+    interface SCntMarketOrdering {
+    }
+    interface SCntMarketOrderingColumn {
+        /**
+          * Данные для панелей
+         */
+        "ordering": any;
+    }
+    interface SCntMarketOrderingContacts {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState": boolean;
+        /**
+          * Данные для панели контакты
+         */
+        "contacts": any;
+    }
+    interface SCntMarketOrderingHeader {
+        "logo": string;
+    }
+    interface SCntMarketOrderingMethod {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState": boolean;
+        /**
+          * Данные для панели метод получения
+         */
+        "method": any;
+    }
+    interface SCntMarketOrderingPayment {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState": boolean;
+        /**
+          * Данные для панели метод получения
+         */
+        "payment": any;
+    }
+    interface SCntMarketOrderingPaymentOnline {
+        /**
+          * Данные для раздела онлайн оплата
+         */
+        "online": any;
+    }
+    interface SCntMarketOrderingPaymentTransfer {
+        /**
+          * данные для блока оплата переводом
+         */
+        "transfer": any;
+    }
+    interface SCntMarketOrderingReplacementPolicy {
+        /**
+          * Данные для панелей политика доставки
+         */
+        "panels": any;
+    }
+    interface SCntMarketOrderingReplacements {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState": boolean;
+        /**
+          * Данные для панели метод получения
+         */
+        "replacements": any;
+    }
+    interface SCntMarketOrderingSidebar {
+    }
+    interface SCntMarketOrderingTimeOfReceipt {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState": boolean;
+        /**
+          * Данные для панели метод получения
+         */
+        "timetable": any;
+    }
+    interface SCntMarketOrderingTimePanelItem {
+        /**
+          * Время заказа
+         */
+        "time": any;
+    }
+    interface SCntMarketOrderingTimePanelTab {
+        /**
+          * Дата и день недели
+         */
+        "date": any;
+    }
     interface SCntMarketOrdersWrapper {
     }
     interface SCntMarketPickupInModal {
@@ -730,6 +823,90 @@ declare global {
         prototype: HTMLSCntMarketOfferElement;
         new (): HTMLSCntMarketOfferElement;
     };
+    interface HTMLSCntMarketOrderingElement extends Components.SCntMarketOrdering, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingElement: {
+        prototype: HTMLSCntMarketOrderingElement;
+        new (): HTMLSCntMarketOrderingElement;
+    };
+    interface HTMLSCntMarketOrderingColumnElement extends Components.SCntMarketOrderingColumn, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingColumnElement: {
+        prototype: HTMLSCntMarketOrderingColumnElement;
+        new (): HTMLSCntMarketOrderingColumnElement;
+    };
+    interface HTMLSCntMarketOrderingContactsElement extends Components.SCntMarketOrderingContacts, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingContactsElement: {
+        prototype: HTMLSCntMarketOrderingContactsElement;
+        new (): HTMLSCntMarketOrderingContactsElement;
+    };
+    interface HTMLSCntMarketOrderingHeaderElement extends Components.SCntMarketOrderingHeader, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingHeaderElement: {
+        prototype: HTMLSCntMarketOrderingHeaderElement;
+        new (): HTMLSCntMarketOrderingHeaderElement;
+    };
+    interface HTMLSCntMarketOrderingMethodElement extends Components.SCntMarketOrderingMethod, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingMethodElement: {
+        prototype: HTMLSCntMarketOrderingMethodElement;
+        new (): HTMLSCntMarketOrderingMethodElement;
+    };
+    interface HTMLSCntMarketOrderingPaymentElement extends Components.SCntMarketOrderingPayment, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingPaymentElement: {
+        prototype: HTMLSCntMarketOrderingPaymentElement;
+        new (): HTMLSCntMarketOrderingPaymentElement;
+    };
+    interface HTMLSCntMarketOrderingPaymentOnlineElement extends Components.SCntMarketOrderingPaymentOnline, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingPaymentOnlineElement: {
+        prototype: HTMLSCntMarketOrderingPaymentOnlineElement;
+        new (): HTMLSCntMarketOrderingPaymentOnlineElement;
+    };
+    interface HTMLSCntMarketOrderingPaymentTransferElement extends Components.SCntMarketOrderingPaymentTransfer, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingPaymentTransferElement: {
+        prototype: HTMLSCntMarketOrderingPaymentTransferElement;
+        new (): HTMLSCntMarketOrderingPaymentTransferElement;
+    };
+    interface HTMLSCntMarketOrderingReplacementPolicyElement extends Components.SCntMarketOrderingReplacementPolicy, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingReplacementPolicyElement: {
+        prototype: HTMLSCntMarketOrderingReplacementPolicyElement;
+        new (): HTMLSCntMarketOrderingReplacementPolicyElement;
+    };
+    interface HTMLSCntMarketOrderingReplacementsElement extends Components.SCntMarketOrderingReplacements, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingReplacementsElement: {
+        prototype: HTMLSCntMarketOrderingReplacementsElement;
+        new (): HTMLSCntMarketOrderingReplacementsElement;
+    };
+    interface HTMLSCntMarketOrderingSidebarElement extends Components.SCntMarketOrderingSidebar, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingSidebarElement: {
+        prototype: HTMLSCntMarketOrderingSidebarElement;
+        new (): HTMLSCntMarketOrderingSidebarElement;
+    };
+    interface HTMLSCntMarketOrderingTimeOfReceiptElement extends Components.SCntMarketOrderingTimeOfReceipt, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingTimeOfReceiptElement: {
+        prototype: HTMLSCntMarketOrderingTimeOfReceiptElement;
+        new (): HTMLSCntMarketOrderingTimeOfReceiptElement;
+    };
+    interface HTMLSCntMarketOrderingTimePanelItemElement extends Components.SCntMarketOrderingTimePanelItem, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingTimePanelItemElement: {
+        prototype: HTMLSCntMarketOrderingTimePanelItemElement;
+        new (): HTMLSCntMarketOrderingTimePanelItemElement;
+    };
+    interface HTMLSCntMarketOrderingTimePanelTabElement extends Components.SCntMarketOrderingTimePanelTab, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingTimePanelTabElement: {
+        prototype: HTMLSCntMarketOrderingTimePanelTabElement;
+        new (): HTMLSCntMarketOrderingTimePanelTabElement;
+    };
     interface HTMLSCntMarketOrdersWrapperElement extends Components.SCntMarketOrdersWrapper, HTMLStencilElement {
     }
     var HTMLSCntMarketOrdersWrapperElement: {
@@ -937,6 +1114,20 @@ declare global {
         "s-cnt-market-login-form": HTMLSCntMarketLoginFormElement;
         "s-cnt-market-modal-window": HTMLSCntMarketModalWindowElement;
         "s-cnt-market-offer": HTMLSCntMarketOfferElement;
+        "s-cnt-market-ordering": HTMLSCntMarketOrderingElement;
+        "s-cnt-market-ordering-column": HTMLSCntMarketOrderingColumnElement;
+        "s-cnt-market-ordering-contacts": HTMLSCntMarketOrderingContactsElement;
+        "s-cnt-market-ordering-header": HTMLSCntMarketOrderingHeaderElement;
+        "s-cnt-market-ordering-method": HTMLSCntMarketOrderingMethodElement;
+        "s-cnt-market-ordering-payment": HTMLSCntMarketOrderingPaymentElement;
+        "s-cnt-market-ordering-payment-online": HTMLSCntMarketOrderingPaymentOnlineElement;
+        "s-cnt-market-ordering-payment-transfer": HTMLSCntMarketOrderingPaymentTransferElement;
+        "s-cnt-market-ordering-replacement-policy": HTMLSCntMarketOrderingReplacementPolicyElement;
+        "s-cnt-market-ordering-replacements": HTMLSCntMarketOrderingReplacementsElement;
+        "s-cnt-market-ordering-sidebar": HTMLSCntMarketOrderingSidebarElement;
+        "s-cnt-market-ordering-time-of-receipt": HTMLSCntMarketOrderingTimeOfReceiptElement;
+        "s-cnt-market-ordering-time-panel-item": HTMLSCntMarketOrderingTimePanelItemElement;
+        "s-cnt-market-ordering-time-panel-tab": HTMLSCntMarketOrderingTimePanelTabElement;
         "s-cnt-market-orders-wrapper": HTMLSCntMarketOrdersWrapperElement;
         "s-cnt-market-pickup-in-modal": HTMLSCntMarketPickupInModalElement;
         "s-cnt-market-product": HTMLSCntMarketProductElement;
@@ -1286,6 +1477,139 @@ declare namespace LocalJSX {
          */
         "offerTitleText"?: string;
     }
+    interface SCntMarketOrdering {
+    }
+    interface SCntMarketOrderingColumn {
+        /**
+          * Данные для панелей
+         */
+        "ordering"?: any;
+    }
+    interface SCntMarketOrderingContacts {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState"?: boolean;
+        /**
+          * Данные для панели контакты
+         */
+        "contacts"?: any;
+        /**
+          * Добавление класса active
+         */
+        "onAddClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Удаление класса active
+         */
+        "onRemoveClassActive"?: (event: CustomEvent<any>) => void;
+    }
+    interface SCntMarketOrderingHeader {
+        "logo"?: string;
+    }
+    interface SCntMarketOrderingMethod {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState"?: boolean;
+        /**
+          * Данные для панели метод получения
+         */
+        "method"?: any;
+        /**
+          * Добавление класса active
+         */
+        "onAddClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Удаление класса active
+         */
+        "onRemoveClassActive"?: (event: CustomEvent<any>) => void;
+    }
+    interface SCntMarketOrderingPayment {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState"?: boolean;
+        /**
+          * Добавление класса active
+         */
+        "onAddClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Удаление класса active
+         */
+        "onRemoveClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Данные для панели метод получения
+         */
+        "payment"?: any;
+    }
+    interface SCntMarketOrderingPaymentOnline {
+        /**
+          * Данные для раздела онлайн оплата
+         */
+        "online"?: any;
+    }
+    interface SCntMarketOrderingPaymentTransfer {
+        /**
+          * данные для блока оплата переводом
+         */
+        "transfer"?: any;
+    }
+    interface SCntMarketOrderingReplacementPolicy {
+        /**
+          * Данные для панелей политика доставки
+         */
+        "panels"?: any;
+    }
+    interface SCntMarketOrderingReplacements {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState"?: boolean;
+        /**
+          * Добавление класса active
+         */
+        "onAddClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Удаление класса active
+         */
+        "onRemoveClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Данные для панели метод получения
+         */
+        "replacements"?: any;
+    }
+    interface SCntMarketOrderingSidebar {
+    }
+    interface SCntMarketOrderingTimeOfReceipt {
+        /**
+          * Стейт для переключения класса active
+         */
+        "addOrRemoveClassState"?: boolean;
+        /**
+          * Добавление класса active
+         */
+        "onAddClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Удаление класса active
+         */
+        "onRemoveClassActive"?: (event: CustomEvent<any>) => void;
+        /**
+          * Данные для панели метод получения
+         */
+        "timetable"?: any;
+    }
+    interface SCntMarketOrderingTimePanelItem {
+        /**
+          * Время заказа
+         */
+        "time"?: any;
+    }
+    interface SCntMarketOrderingTimePanelTab {
+        /**
+          * Дата и день недели
+         */
+        "date"?: any;
+    }
     interface SCntMarketOrdersWrapper {
     }
     interface SCntMarketPickupInModal {
@@ -1618,6 +1942,20 @@ declare namespace LocalJSX {
         "s-cnt-market-login-form": SCntMarketLoginForm;
         "s-cnt-market-modal-window": SCntMarketModalWindow;
         "s-cnt-market-offer": SCntMarketOffer;
+        "s-cnt-market-ordering": SCntMarketOrdering;
+        "s-cnt-market-ordering-column": SCntMarketOrderingColumn;
+        "s-cnt-market-ordering-contacts": SCntMarketOrderingContacts;
+        "s-cnt-market-ordering-header": SCntMarketOrderingHeader;
+        "s-cnt-market-ordering-method": SCntMarketOrderingMethod;
+        "s-cnt-market-ordering-payment": SCntMarketOrderingPayment;
+        "s-cnt-market-ordering-payment-online": SCntMarketOrderingPaymentOnline;
+        "s-cnt-market-ordering-payment-transfer": SCntMarketOrderingPaymentTransfer;
+        "s-cnt-market-ordering-replacement-policy": SCntMarketOrderingReplacementPolicy;
+        "s-cnt-market-ordering-replacements": SCntMarketOrderingReplacements;
+        "s-cnt-market-ordering-sidebar": SCntMarketOrderingSidebar;
+        "s-cnt-market-ordering-time-of-receipt": SCntMarketOrderingTimeOfReceipt;
+        "s-cnt-market-ordering-time-panel-item": SCntMarketOrderingTimePanelItem;
+        "s-cnt-market-ordering-time-panel-tab": SCntMarketOrderingTimePanelTab;
         "s-cnt-market-orders-wrapper": SCntMarketOrdersWrapper;
         "s-cnt-market-pickup-in-modal": SCntMarketPickupInModal;
         "s-cnt-market-product": SCntMarketProduct;
@@ -1690,6 +2028,20 @@ declare module "@stencil/core" {
             "s-cnt-market-login-form": LocalJSX.SCntMarketLoginForm & JSXBase.HTMLAttributes<HTMLSCntMarketLoginFormElement>;
             "s-cnt-market-modal-window": LocalJSX.SCntMarketModalWindow & JSXBase.HTMLAttributes<HTMLSCntMarketModalWindowElement>;
             "s-cnt-market-offer": LocalJSX.SCntMarketOffer & JSXBase.HTMLAttributes<HTMLSCntMarketOfferElement>;
+            "s-cnt-market-ordering": LocalJSX.SCntMarketOrdering & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingElement>;
+            "s-cnt-market-ordering-column": LocalJSX.SCntMarketOrderingColumn & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingColumnElement>;
+            "s-cnt-market-ordering-contacts": LocalJSX.SCntMarketOrderingContacts & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingContactsElement>;
+            "s-cnt-market-ordering-header": LocalJSX.SCntMarketOrderingHeader & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingHeaderElement>;
+            "s-cnt-market-ordering-method": LocalJSX.SCntMarketOrderingMethod & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingMethodElement>;
+            "s-cnt-market-ordering-payment": LocalJSX.SCntMarketOrderingPayment & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingPaymentElement>;
+            "s-cnt-market-ordering-payment-online": LocalJSX.SCntMarketOrderingPaymentOnline & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingPaymentOnlineElement>;
+            "s-cnt-market-ordering-payment-transfer": LocalJSX.SCntMarketOrderingPaymentTransfer & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingPaymentTransferElement>;
+            "s-cnt-market-ordering-replacement-policy": LocalJSX.SCntMarketOrderingReplacementPolicy & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingReplacementPolicyElement>;
+            "s-cnt-market-ordering-replacements": LocalJSX.SCntMarketOrderingReplacements & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingReplacementsElement>;
+            "s-cnt-market-ordering-sidebar": LocalJSX.SCntMarketOrderingSidebar & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingSidebarElement>;
+            "s-cnt-market-ordering-time-of-receipt": LocalJSX.SCntMarketOrderingTimeOfReceipt & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingTimeOfReceiptElement>;
+            "s-cnt-market-ordering-time-panel-item": LocalJSX.SCntMarketOrderingTimePanelItem & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingTimePanelItemElement>;
+            "s-cnt-market-ordering-time-panel-tab": LocalJSX.SCntMarketOrderingTimePanelTab & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingTimePanelTabElement>;
             "s-cnt-market-orders-wrapper": LocalJSX.SCntMarketOrdersWrapper & JSXBase.HTMLAttributes<HTMLSCntMarketOrdersWrapperElement>;
             "s-cnt-market-pickup-in-modal": LocalJSX.SCntMarketPickupInModal & JSXBase.HTMLAttributes<HTMLSCntMarketPickupInModalElement>;
             "s-cnt-market-product": LocalJSX.SCntMarketProduct & JSXBase.HTMLAttributes<HTMLSCntMarketProductElement>;
