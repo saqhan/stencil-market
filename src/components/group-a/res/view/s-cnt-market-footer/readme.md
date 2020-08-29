@@ -18,6 +18,7 @@
 
  - [group-a](../../..)
  - [group-b](../../../../group-b)
+ - [s-cnt-market-orders-wrapper](../../../../shared/s-cnt-market-orders-wrapper)
 
 ### Depends on
 
@@ -38,6 +39,7 @@ graph TD;
   s-cnt-market-up-footer --> s-cnt-market-footer-items
   group-a --> s-cnt-market-footer
   group-b --> s-cnt-market-footer
+  s-cnt-market-orders-wrapper --> s-cnt-market-footer
   style s-cnt-market-footer fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -474,6 +474,11 @@
   color: #ff3366;
 }
 
+.retail-rocket-block {
+  padding: 0 30px;
+  margin-top: -20px;
+}
+
 @media (max-width: 414px) {
   .new-cart {
     width: 414px;

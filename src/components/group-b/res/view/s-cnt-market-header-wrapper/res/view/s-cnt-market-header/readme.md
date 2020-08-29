@@ -25,6 +25,7 @@
 ### Used by
 
  - [s-cnt-market-header-wrapper](../../..)
+ - [s-cnt-market-orders-wrapper](../../../../../../../shared/s-cnt-market-orders-wrapper)
 
 ### Depends on
 
@@ -49,6 +50,7 @@ graph TD;
   s-cnt-market-header-nav --> s-cnt-market-account-menu
   s-cnt-market-header-nav --> s-cnt-market-basket
   s-cnt-market-header-wrapper --> s-cnt-market-header
+  s-cnt-market-orders-wrapper --> s-cnt-market-header
   style s-cnt-market-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

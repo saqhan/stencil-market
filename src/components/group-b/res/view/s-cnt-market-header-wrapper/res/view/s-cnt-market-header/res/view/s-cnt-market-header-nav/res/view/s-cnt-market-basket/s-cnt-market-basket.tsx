@@ -8,6 +8,8 @@ import {
   State,
 } from "@stencil/core";
 import { MarketCartProductsInterface } from "../../../../../../../../../../../../../../index";
+import {productsSliderCards} from "../../../../../../../../../../../../../../utils/mock-a";
+import { productsSliderCartTitle} from "../../../../../../../../../../../../../../utils/mock-s";
 
 @Component({
   tag: "s-cnt-market-basket",
@@ -111,9 +113,20 @@ export class SCntMarketBasket implements ComponentInterface {
                         </div>
                       </div>
                     </div>
-                    <div class={this.isShowInfoPickup ? "retailer-deliveries opened-retailer" : "retailer-deliveries"}>
-                      <div class={this.isShowInfoPickup ? "retailer-deliveries-caption opened-caption" : "retailer-deliveries-caption"}
-                        onClick={()=> this.clickOnCaptionPickupHandler()}
+                    <div
+                      class={
+                        this.isShowInfoPickup
+                          ? "retailer-deliveries opened-retailer"
+                          : "retailer-deliveries"
+                      }
+                    >
+                      <div
+                        class={
+                          this.isShowInfoPickup
+                            ? "retailer-deliveries-caption opened-caption"
+                            : "retailer-deliveries-caption"
+                        }
+                        onClick={() => this.clickOnCaptionPickupHandler()}
                       >
                         <div class="retailer-delivery">
                           <div class="cart-retailer-subheader">
@@ -122,7 +135,7 @@ export class SCntMarketBasket implements ComponentInterface {
                                 <span class="retailer-delivery-text">
                                   Ближайший самовывоз:
                                 </span>
-                                <span>сегодня, 19:00-20:00</span>
+                                <span>сегодня, 14:00-16:00</span>
                               </div>
                               <div class="cart-box">
                                 <div class="cart-info">
@@ -133,14 +146,19 @@ export class SCntMarketBasket implements ComponentInterface {
                           </div>
                         </div>
                       </div>
-                      <div class={this.isShowInfoPickup ? "retailer-deliveries-list opened-list" : "retailer-deliveries-list"}
-                        onClick={()=> this.clickOnCaptionPickupHandler()}
+                      <div
+                        class={
+                          this.isShowInfoPickup
+                            ? "retailer-deliveries-list opened-list"
+                            : "retailer-deliveries-list"
+                        }
+                        onClick={() => this.clickOnCaptionPickupHandler()}
                       >
                         <div class="retailer-delivery">
                           <div class="cart-retailer-subheader">
                             <div class="cart-box">
                               <div class="retailer-delivery-summary">
-                                <span>Сегодня, 19:00-20:00</span>
+                                <span>Сегодня, 14:00-16:00</span>
                               </div>
                             </div>
                           </div>
@@ -149,7 +167,7 @@ export class SCntMarketBasket implements ComponentInterface {
                           <div class="cart-retailer-subheader">
                             <div class="cart-box">
                               <div class="retailer-delivery-summary">
-                                <span>Сегодня, 19:00-20:00</span>
+                                <span>Сегодня, 16:00-18:00</span>
                               </div>
                             </div>
                           </div>
@@ -158,7 +176,7 @@ export class SCntMarketBasket implements ComponentInterface {
                           <div class="cart-retailer-subheader">
                             <div class="cart-box">
                               <div class="retailer-delivery-summary">
-                                <span>Сегодня, 19:00-20:00</span>
+                                <span>Сегодня, 17:00-19:00</span>
                               </div>
                             </div>
                           </div>
@@ -170,11 +188,20 @@ export class SCntMarketBasket implements ComponentInterface {
                     <div class="cart-line-items-i">
                       <div class="cart-line-item-wrapper">
                         <div class="swipable">
-                          <CardProductCart array={this.MarketCartProductsState}></CardProductCart>
+                          <CardProductCart
+                            array={this.MarketCartProductsState}
+                          ></CardProductCart>
                         </div>
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="retail-rocket-block">
+                  <s-cnt-market-products-slider
+                    theme={'cart'}
+                    productsSliderCards={productsSliderCards}
+                    productsSliderTitle={productsSliderCartTitle}
+                  ></s-cnt-market-products-slider>
                 </div>
               </div>
               <div class="message-box">
@@ -228,7 +255,8 @@ export class SCntMarketBasket implements ComponentInterface {
    * Получение общего веса продуктов
    * */
   public getTotalWeightProducts(array) {
-    const reducer = (accumulator, currentValue) => accumulator + currentValue.weight;
+    const reducer = (accumulator, currentValue) =>
+      accumulator + currentValue.weight;
     const weight = array.reduce(reducer, 0);
     if (weight > 999) {
       return weight / 1000 + " кг";

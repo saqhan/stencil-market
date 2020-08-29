@@ -10,6 +10,13 @@ declare const Flickity: any;
   scoped: true,
 })
 export class SCntMarketProductsSlider implements ComponentInterface {
+
+  /**
+   * обертка для слайдера товара
+   * */
+  @Prop() theme:  'main-container' | 'cart' = 'main-container';
+
+
   /**
    * Данные карточек слайдера популярных продуктов
    */
@@ -46,7 +53,7 @@ export class SCntMarketProductsSlider implements ComponentInterface {
   render() {
     return (
       <div class="products">
-        <div class="main-container">
+        <div class={this.getClassForHost()}>
           <div class="products-carousel-title">{this.productsSliderTitle}</div>
           <div class="products-carousel" ref={(el) => (this.carouselTag = el)}>
             <ProductsSliderCardFunctionalComponent
@@ -56,6 +63,14 @@ export class SCntMarketProductsSlider implements ComponentInterface {
         </div>
       </div>
     );
+  }
+  /**
+   * Метод выобра
+   * */
+  public getClassForHost() {
+    return {
+      [this.theme]: true,
+    };
   }
 }
 
