@@ -1,5 +1,17 @@
 export * from './components';
 
+
+export interface MarketCartProductsInterface {
+  id: number,
+  name: string,
+  weight: number,
+  weightValue: string,
+  img: string,
+  price: number,
+  sales: number,
+  count: number,
+}
+
 export interface MarketAppInterface {
   id: number;
   image: string;
@@ -7,6 +19,21 @@ export interface MarketAppInterface {
   googlePlayButton: string;
   appStoreButton: string;
 }
+
+/*
+ * Интерфейс для массива меню и лого
+ * */
+
+export interface navMenuItemInterface {
+  id: string;
+  name: string;
+}
+
+export interface NavMenuItemInterface {
+  logo: string;
+  navMenuItem: navMenuItemInterface[];
+}
+
 
 /**
  * Элементы компонента s-cnt-market-app

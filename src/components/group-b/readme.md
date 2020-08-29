@@ -7,6 +7,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [my-component](../my-component)
+
 ### Depends on
 
 - [s-cnt-market-header-wrapper](./res/view/s-cnt-market-header-wrapper)
@@ -62,6 +66,7 @@ graph TD;
   s-cnt-market-up-footer-form --> s-cnt-market-footer-modal-form
   s-cnt-market-footer-info --> s-cnt-market-footer-info-item
   s-cnt-market-up-footer --> s-cnt-market-footer-items
+  my-component --> group-b
   style group-b fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

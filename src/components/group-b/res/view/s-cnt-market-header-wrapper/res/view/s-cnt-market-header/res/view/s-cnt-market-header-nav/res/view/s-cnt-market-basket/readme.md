@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property       | Attribute       | Description                                | Type      | Default     |
-| -------------- | --------------- | ------------------------------------------ | --------- | ----------- |
-| `openedBasket` | `opened-basket` | Стейт на состояние корзины открыто/закрыто | `boolean` | `undefined` |
+| Property             | Attribute       | Description                                | Type                            | Default     |
+| -------------------- | --------------- | ------------------------------------------ | ------------------------------- | ----------- |
+| `marketCartProducts` | --              | Продукты из корзины                        | `MarketCartProductsInterface[]` | `[]`        |
+| `openedBasket`       | `opened-basket` | Стейт на состояние корзины открыто/закрыто | `boolean`                       | `undefined` |
 
 
 ## Events

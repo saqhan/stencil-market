@@ -26,12 +26,12 @@ export class GroupB implements ComponentInterface {
   /**
    * выводими в зависимости от авторизации начальную шапку
    * */
-  @State() loginState: boolean = false;
+  @State() loginState: boolean = true;
 
   /**
    * Первоначальная страница
    * */
-  @State() firstPageState: boolean = true;
+  @State() firstPageState: boolean = false;
 
   /**
    * boolean значение для вывода/закрытия модального окна входа/регистрация
@@ -57,7 +57,6 @@ export class GroupB implements ComponentInterface {
           firstPage={this.firstPageState}
           onOpenLoginModal={() => this.openLoginModal()}
         >
-          {" "}
         </s-cnt-market-header-wrapper>
         {
           this.loginRegistrationCompleted ? (
