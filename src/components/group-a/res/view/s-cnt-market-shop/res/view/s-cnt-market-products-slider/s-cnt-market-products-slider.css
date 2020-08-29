@@ -21,6 +21,23 @@
   margin: auto;
 }
 
+
+.cart {
+  width: auto;
+}
+
+.cart .carousel-cell {
+  padding-left: 20px;
+}
+
+.cart .products {
+  margin-top: 10px;
+}
+
+.cart .products-carousel-title {
+  font-size: 18px;
+}
+
 @media only screen and (min-width: 641px) {
   .main-container {
     width: 621px;

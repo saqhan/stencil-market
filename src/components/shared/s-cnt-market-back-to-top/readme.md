@@ -11,6 +11,7 @@
 
  - [group-a](../../group-a)
  - [group-b](../../group-b)
+ - [s-cnt-market-orders-wrapper](../s-cnt-market-orders-wrapper)
  - [s-cnt-market-shop](../../group-a/res/view/s-cnt-market-shop)
 
 ### Graph
@@ -18,6 +19,7 @@
 graph TD;
   group-a --> s-cnt-market-back-to-top
   group-b --> s-cnt-market-back-to-top
+  s-cnt-market-orders-wrapper --> s-cnt-market-back-to-top
   s-cnt-market-shop --> s-cnt-market-back-to-top
   style s-cnt-market-back-to-top fill:#f9f,stroke:#333,stroke-width:4px
 ```

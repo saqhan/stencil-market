@@ -1,5 +1,7 @@
 
 
+export const productsSliderCartTitle = "Не забудтье также купить";
+
 export const MarketCartProducts = [
   {
     id: 1,

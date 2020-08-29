@@ -314,6 +314,10 @@ export namespace Components {
           * Заголовк слайдера
          */
         "productsSliderTitle": string;
+        /**
+          * обертка для слайдера товара
+         */
+        "theme": "main-container" | "cart";
     }
     interface SCntMarketProductsSliderCard {
         /**
@@ -1273,6 +1277,10 @@ declare namespace LocalJSX {
           * Заголовк слайдера
          */
         "productsSliderTitle"?: string;
+        /**
+          * обертка для слайдера товара
+         */
+        "theme"?: "main-container" | "cart";
     }
     interface SCntMarketProductsSliderCard {
         /**
