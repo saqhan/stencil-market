@@ -189,6 +189,8 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public onClickSelectStoreHandler(): void  {
     this.openedStoreSelectState = true;
+    document.querySelector('body').style.overflow = 'hidden';
+
   }
 
   /**
@@ -203,6 +205,8 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public closeAccountMenuHandler(): void  {
     this.isShowUserAccountState = false;
+    document.querySelector('body').style.overflow = 'visible';
+
   }
 
   /**
@@ -219,6 +223,8 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public onClickCatalogHandler(): void  {
     this.openedLeftMenuState = true;
+    document.querySelector('body').style.overflow = 'hidden';
+
   }
 
   /**
@@ -243,6 +249,8 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public closeLeftMenu(): void  {
     this.openedLeftMenuState = false;
+    document.querySelector('body').style.overflow = 'visible';
+
   }
 
   /**
@@ -250,6 +258,8 @@ export class SCntMarketHeaderNav implements ComponentInterface {
    * */
   public closeStoreSelect(): void  {
     this.openedStoreSelectState = false;
+    document.querySelector('body').style.overflow = 'visible';
+
   }
 
   /**

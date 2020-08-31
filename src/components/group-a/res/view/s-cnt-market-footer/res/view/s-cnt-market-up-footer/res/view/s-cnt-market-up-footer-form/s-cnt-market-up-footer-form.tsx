@@ -42,6 +42,7 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
    * */
   public clickOnShowFormFooterHandler(): void {
     this.isShowFormState = true;
+    document.querySelector('body').style.overflow = 'hidden';
     // console.log('при первом клике в подвале', this.isShowFormState)
   }
 
@@ -49,7 +50,8 @@ export class SCntMarketUpFooterForm implements ComponentInterface {
    *
    * */
   public clickOnCloseModalForm(): void {
-    this.isShowFormState = false
+    this.isShowFormState = false;
+    document.querySelector('body').style.overflow = 'visible';
     // console.log('состоняие у родителя', this.isShowFormState)
   }
 
