@@ -1222,7 +1222,7 @@ declare namespace LocalJSX {
         "footerItems"?: footerItemsInterface;
     }
     interface SCntMarketFooterModalForm {
-        "onClickOnCloseModalForm"?: (event: CustomEvent<any>) => void;
+        "onClickOnCloseModalForm"?: (event: CustomEvent<void>) => void;
         /**
           * show modal form
          */
