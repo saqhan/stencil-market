@@ -11,3 +11,12 @@
 .ordering-new {
   background-color: #f7f7f7;
 }
+
+@media (max-width: 1004px) {
+  .ordering-container {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px 0 0;
+    box-sizing: border-box;
+  }
+}

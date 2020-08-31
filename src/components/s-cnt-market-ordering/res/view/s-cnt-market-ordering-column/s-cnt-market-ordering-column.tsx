@@ -52,6 +52,7 @@ export class SCntMarketOrderingColumn implements ComponentInterface {
             addOrRemoveClassState={this.addOrRemoveClassState}
           ></s-cnt-market-ordering-time-of-receipt>
         </div>
+        <s-cnt-market-ordering-final final={this.ordering.final}></s-cnt-market-ordering-final>
       </div>
     );
   }

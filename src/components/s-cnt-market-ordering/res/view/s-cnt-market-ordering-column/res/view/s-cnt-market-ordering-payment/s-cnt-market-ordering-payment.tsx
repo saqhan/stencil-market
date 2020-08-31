@@ -65,12 +65,12 @@ export class SCntMarketOrderingPayment implements ComponentInterface {
                     <div class="payment-method-name">Переводом</div>
                   </div>
                 </div>
-                <s-cnt-market-ordering-payment-online
-                  online={this.payment.online}
-                ></s-cnt-market-ordering-payment-online>
-                {/*<s-cnt-market-ordering-payment-transfer*/}
-                {/*  transfer={this.payment.transfer}*/}
-                {/*></s-cnt-market-ordering-payment-transfer>*/}
+                {/*<s-cnt-market-ordering-payment-online*/}
+                {/*  online={this.payment.online}*/}
+                {/*></s-cnt-market-ordering-payment-online>*/}
+                <s-cnt-market-ordering-payment-transfer
+                  transfer={this.payment.transfer}
+                ></s-cnt-market-ordering-payment-transfer>
                 <div class="button-block">
                   <button
                     onClick={() => this.removeClassActiveHandler({ step: 3 })}

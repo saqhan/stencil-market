@@ -44,7 +44,11 @@ export class SCntMarketOrderingTimeOfReceipt implements ComponentInterface {
           >
             <div class="panel-header-desc">
               <div class="panel-header-indicator">{this.timetable.id}</div>
-              <div class="panel-header-text">{this.timetable.title}</div>
+              {this.addOrRemoveClassState ? (
+                <div class="panel-header-text">{this.timetable.text}</div>
+              ) : (
+                <div class="panel-header-text">{this.timetable.title}</div>
+              )}
             </div>
             <div class="panel-header-details">
               <div class="panel-header-detail">{this.timetable.info}</div>
@@ -63,7 +67,8 @@ export class SCntMarketOrderingTimeOfReceipt implements ComponentInterface {
                     style={{ backgroundImage: `url(${this.timetable.content.img})` }}
                   ></div>
                   <div class="windows-selector-title-text-wrap">
-                    <span class="windows-selector-title-retailer">METRO</span>
+                    <span class="windows-selector-title-retailer">{this.timetable.content.shop}</span>
+                    <span class="windows-selector-title-delivery">Чт c 11:00 до 13:00</span>
                   </div>
                 </div>
                 <div class="windows-selector-content">
@@ -75,7 +80,7 @@ export class SCntMarketOrderingTimeOfReceipt implements ComponentInterface {
                     </div>
                     <div class="panel-items">
                       <PanelItemFunctionalComponent
-                        array={this.timetable .date}
+                        array={this.timetable.time}
                       ></PanelItemFunctionalComponent>
                     </div>
                   </div>
@@ -118,7 +123,7 @@ const PanelTabFunctionalComponent = (props) => {
 const PanelItemFunctionalComponent = (props) => {
   return props.array.map((item) => {
     return (
-      <div class="panel-item panel-item-active">
+      <div class="windows-selector-item-wrapper">
         <s-cnt-market-ordering-time-panel-item
           time={item}
         ></s-cnt-market-ordering-time-panel-item>

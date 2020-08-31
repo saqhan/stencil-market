@@ -44,7 +44,11 @@ export class SCntMarketOrderingReplacements implements ComponentInterface {
           >
             <div class="panel-header-desc">
               <div class="panel-header-indicator">{this.replacements.id}</div>
-              <div class="panel-header-text">{this.replacements.title}</div>
+              {this.addOrRemoveClassState ? (
+                <div class="panel-header-text">{this.replacements.text}</div>
+              ) : (
+                <div class="panel-header-text">{this.replacements.title}</div>
+              )}
             </div>
             <div class="panel-header-details">
               <div class="panel-header-detail">{this.replacements.info}</div>

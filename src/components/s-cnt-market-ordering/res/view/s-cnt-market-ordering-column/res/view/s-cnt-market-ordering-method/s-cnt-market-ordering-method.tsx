@@ -7,6 +7,8 @@ import {
   Prop,
 } from "@stencil/core";
 
+import { markdown } from "markdown";
+
 @Component({
   tag: "s-cnt-market-ordering-method",
   styleUrl: "s-cnt-market-ordering-method.css",
@@ -48,9 +50,7 @@ export class SCntMarketOrderingMethod implements ComponentInterface {
             </div>
             <div class="panel-header-details">
               <div class="panel-header-detail">{this.method.info}</div>
-              <div class="panel-header-detail">
-                {this.method.address}
-              </div>
+              <div class="panel-header-detail">{this.method.address}</div>
             </div>
             <div class="panel-header-link">
               <a>{this.method.link}</a>
@@ -69,7 +69,9 @@ export class SCntMarketOrderingMethod implements ComponentInterface {
                       }}
                     ></div>
                     <div class="store-panel-text">
-                      <div class="store-panel-name">{this.method.content.shop}</div>
+                      <div class="store-panel-name">
+                        {this.method.content.shop}
+                      </div>
                       <div class="store-panel-address">
                         {this.method.address}
                       </div>
@@ -81,9 +83,10 @@ export class SCntMarketOrderingMethod implements ComponentInterface {
                     <div class="message-icon">
                       <i class="fas fa-shopping-cart"></i>
                     </div>
-                    <div class="message-text">
-                      {this.method.content.desc}
-                    </div>
+                    <div
+                      class="message-text"
+                      innerHTML={markdown.toHTML(this.method.content.desc)}
+                    ></div>
                   </div>
                 </div>
                 <button

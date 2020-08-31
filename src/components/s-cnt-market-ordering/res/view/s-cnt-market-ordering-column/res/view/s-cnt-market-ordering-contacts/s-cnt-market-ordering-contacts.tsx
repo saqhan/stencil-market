@@ -34,6 +34,46 @@ export class SCntMarketOrderingContacts implements ComponentInterface {
    */
   @Event() removeClassActive: EventEmitter;
 
+  /**
+   *
+   */
+  public inputNameTag: HTMLInputElement;
+
+  /**
+   *
+   * */
+  public inputNameParentTag: HTMLElement;
+
+  /**
+   *
+   */
+  public inputLastNameTag: HTMLInputElement;
+
+  /**
+   *
+   * */
+  public inputLastNameParentTag: HTMLElement;
+
+  /**
+   *
+   * */
+  public inputPhoneTag: HTMLInputElement;
+
+  /**
+   *
+   * */
+  public inputPhoneParentTag: HTMLElement;
+
+  /**
+   *
+   * */
+  public inputEmailParentTag: HTMLElement;
+
+  /**
+   *
+   * */
+  public inputEmailTag: HTMLInputElement;
+
   render() {
     return (
       <div class={this.addOrRemoveClassState ? "active" : ""}>
@@ -44,7 +84,11 @@ export class SCntMarketOrderingContacts implements ComponentInterface {
           >
             <div class="panel-header-desc">
               <div class="panel-header-indicator">{this.contacts.id}</div>
-              <div class="panel-header-text">{this.contacts.title}</div>
+              {this.addOrRemoveClassState ? (
+                <div class="panel-header-text">{this.contacts.text}</div>
+              ) : (
+                <div class="panel-header-text">{this.contacts.title}</div>
+              )}
             </div>
             <div class="panel-header-details">
               <div class="panel-header-detail">{this.contacts.email}</div>
@@ -61,21 +105,47 @@ export class SCntMarketOrderingContacts implements ComponentInterface {
                   <div class="contact-inputs">
                     <div class="contact-inputs-inline">
                       <div class="contact-input">
-                        <div>
+                        <div ref={(el) => (this.inputNameParentTag = el)}>
                           <input
                             type="text"
                             placeholder="Имя"
-                            class="ordering-input ordering-input-error"
+                            class="ordering-input"
+                            ref={(el) => (this.inputNameTag = el)}
+                            onBlur={() =>
+                              this.checkInputHandler(
+                                this.inputNameParentTag,
+                                this.inputNameTag
+                              )
+                            }
+                            onInput={() =>
+                              this.checkInputFocusHandler(
+                                this.inputNameParentTag,
+                                this.inputNameTag
+                              )
+                            }
                           />
                           <div class="input-desc-error">Укажите имя</div>
                         </div>
                       </div>
                       <div class="contact-input">
-                        <div>
+                        <div ref={(el) => (this.inputLastNameParentTag = el)}>
                           <input
                             type="text"
                             placeholder="Фамилия"
-                            class="ordering-input ordering-input-error"
+                            class="ordering-input"
+                            ref={(el) => (this.inputLastNameTag = el)}
+                            onBlur={() =>
+                              this.checkInputHandler(
+                                this.inputLastNameParentTag,
+                                this.inputLastNameTag
+                              )
+                            }
+                            onInput={() =>
+                              this.checkInputFocusHandler(
+                                this.inputLastNameParentTag,
+                                this.inputLastNameTag
+                              )
+                            }
                           />
                           <div class="input-desc-error">Укажите фамилию</div>
                         </div>
@@ -84,11 +154,24 @@ export class SCntMarketOrderingContacts implements ComponentInterface {
                   </div>
                   <div class="contact-inputs">
                     <div class="contact-input">
-                      <div>
+                      <div ref={(el) => (this.inputEmailParentTag = el)}>
                         <input
                           type="text"
                           placeholder="Email"
-                          class="ordering-input ordering-input-error"
+                          class="ordering-input"
+                          ref={(el) => (this.inputEmailTag = el)}
+                          onBlur={() =>
+                            this.checkInputHandler(
+                              this.inputEmailParentTag,
+                              this.inputEmailTag
+                            )
+                          }
+                          onInput={() =>
+                            this.checkInputFocusHandler(
+                              this.inputEmailParentTag,
+                              this.inputEmailTag
+                            )
+                          }
                         />
                         <div class="input-desc-error">Укажите email</div>
                       </div>
@@ -102,10 +185,26 @@ export class SCntMarketOrderingContacts implements ComponentInterface {
                   <div class="ordering-form ordering-form-block">
                     <div class="inline-items">
                       <div class="phone-input">
-                        <div class="ordering-form-input">
+                        <div
+                          class="ordering-form-input"
+                          ref={(el) => (this.inputPhoneParentTag = el)}
+                        >
                           <input
                             class="ordering-input ordering-input-phone"
-                            value="+7 ___ ___-__-__"
+                            placeholder="+7 ___ ___-__-__"
+                            ref={(el) => (this.inputPhoneTag = el)}
+                            onBlur={() =>
+                              this.checkInputHandler(
+                                this.inputPhoneParentTag,
+                                this.inputPhoneTag
+                              )
+                            }
+                            onInput={() =>
+                              this.checkInputFocusHandler(
+                                this.inputPhoneParentTag,
+                                this.inputPhoneTag
+                              )
+                            }
                           />
                           <div class="input-desc-error">
                             Некорректный номер телефона
@@ -154,5 +253,23 @@ export class SCntMarketOrderingContacts implements ComponentInterface {
    */
   public removeClassActiveHandler(step) {
     this.removeClassActive.emit(step);
+  }
+
+  /**
+   * проверяем на заполненность
+   * */
+  public checkInputHandler(parent, input) {
+    !input.value
+      ? parent.classList.add("error")
+      : parent.classList.remove("error");
+  }
+
+  /**
+   * проверяем конкретно имя
+   * */
+  public checkInputFocusHandler(parent, input) {
+    if (input.value.length > 2) {
+      parent.classList.remove("error");
+    }
   }
 }

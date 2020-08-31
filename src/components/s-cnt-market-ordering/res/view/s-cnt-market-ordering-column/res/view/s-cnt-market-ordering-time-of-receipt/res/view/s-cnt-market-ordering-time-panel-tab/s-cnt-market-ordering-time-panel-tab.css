@@ -14,3 +14,8 @@ span {
   font-weight: 500;
 }
 
+@media (max-width: 660px) {
+  .panel-tab-day-name {
+    display: none;
+  }
+}
