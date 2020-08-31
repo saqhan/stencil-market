@@ -22,3 +22,9 @@
   margin-top: -75px;
   transition: 0.3s ease;
 }
+
+@media (max-width: 414px) {
+  .sticky {
+    margin-top: -90px;
+  }
+}
