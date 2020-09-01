@@ -1,0 +1,18 @@
+.ordering-column {
+  width: 620px;
+}
+
+.ordering-panels {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1004px) {
+  .ordering-column {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .ordering-panels {
+    margin-bottom: 0;
+  }
+}
+

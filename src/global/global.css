@@ -101,3 +101,15 @@ p {
   width: 23px;
   margin-right: 5px;
 }
+
+.ordering-panel a {
+  text-decoration: none;
+  border: none;
+  color: #21a038;
+}
+
+.ordering-panel a:hover {
+  text-decoration: none;
+  border: none;
+  color: #666;
+}

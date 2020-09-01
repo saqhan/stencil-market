@@ -95,14 +95,18 @@ export class SCntMarketDeliveryModal implements ComponentInterface {
                   </div>
                 </div>
                 {
-                  this.delivery ?
-                    <s-cnt-market-delivery-in-modal deliveryData={this.modalData.Delivery}/> :
+                  this.delivery ? (
+                    <s-cnt-market-delivery-in-modal deliveryData={this.modalData.Delivery}/>
+                  ) : (
                     ''
+                  )
                 }
                 {
-                  this.pickUp ?
-                    <s-cnt-market-pickup-in-modal pickUpData={this.modalData.PickUp}/> :
+                  this.pickUp ? (
+                    <s-cnt-market-pickup-in-modal pickUpData={this.modalData.PickUp}/>
+                  ) : (
                     ''
+                  )
                 }
               </div>
             </div>

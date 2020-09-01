@@ -23,7 +23,7 @@ export class SCntMarketFooterModalForm implements ComponentInterface {
   /**
    *
    * */
-  @Event() clickOnCloseModalForm: EventEmitter;
+  @Event() clickOnCloseModalForm: EventEmitter<void>;
 
   /**
    *

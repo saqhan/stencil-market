@@ -13,6 +13,13 @@
 | `users`  | --        | массив с данными пользователей     | `MarketUsersArrInterface[]` | `undefined` |
 
 
+## Events
+
+| Event        | Description | Type               |
+| ------------ | ----------- | ------------------ |
+| `callRemind` |             | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

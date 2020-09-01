@@ -9,17 +9,17 @@
   overflow: auto;
   background-color: rgba(0,0,0,.4);
   z-index: 2001;
-  animation: fadeIn .5s 35ms ease-in;
+  /*animation: fadeIn .3s 35ms;*/
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
+/*@keyframes fadeIn {*/
+/*  0% {*/
+/*    opacity: 0;*/
+/*  }*/
+/*  100% {*/
+/*    opacity: 1;*/
+/*  }*/
+/*}*/
 
 
 .container {

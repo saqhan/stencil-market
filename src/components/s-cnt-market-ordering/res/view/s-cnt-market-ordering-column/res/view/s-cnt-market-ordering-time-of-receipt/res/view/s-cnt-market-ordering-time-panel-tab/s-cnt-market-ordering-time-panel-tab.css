@@ -1,0 +1,21 @@
+span {
+  display: block;
+  text-align: center;
+}
+
+.panel-tab-day-name {
+  font-weight: 700;
+}
+
+.panel-tab-date {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+@media (max-width: 660px) {
+  .panel-tab-day-name {
+    display: none;
+  }
+}

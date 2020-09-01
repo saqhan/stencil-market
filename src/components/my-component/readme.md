@@ -9,16 +9,21 @@
 
 ### Depends on
 
-- [group-a](../group-a)
+- [group-b](../group-b)
 
 ### Graph
 ```mermaid
 graph TD;
-  my-component --> group-a
-  group-a --> s-cnt-market-header-wrapper
-  group-a --> s-cnt-market-shop
-  group-a --> s-cnt-market-footer
-  group-a --> s-cnt-market-back-to-top
+  my-component --> group-b
+  group-b --> s-cnt-market-header-wrapper
+  group-b --> s-cnt-market-login-and-registration-form
+  group-b --> s-cnt-market-promo-slider
+  group-b --> s-cnt-market-products-slider
+  group-b --> s-cnt-market-products-list
+  group-b --> s-cnt-market-recently-watched
+  group-b --> s-cnt-market-modal-window
+  group-b --> s-cnt-market-footer
+  group-b --> s-cnt-market-back-to-top
   s-cnt-market-header-wrapper --> s-cnt-market-header-base
   s-cnt-market-header-wrapper --> s-cnt-market-header
   s-cnt-market-header --> s-cnt-market-top-bar
@@ -26,6 +31,7 @@ graph TD;
   s-cnt-market-header --> s-cnt-market-header-nav
   s-cnt-market-top-bar --> s-cnt-market-login-and-registration-form
   s-cnt-market-top-bar --> s-cnt-market-delivery-modal
+  s-cnt-market-login-and-registration-form --> s-cnt-market-remind-password
   s-cnt-market-login-and-registration-form --> s-cnt-market-login-form
   s-cnt-market-login-and-registration-form --> s-cnt-market-registration-form
   s-cnt-market-delivery-modal --> s-cnt-market-delivery-in-modal
@@ -34,14 +40,9 @@ graph TD;
   s-cnt-market-header-nav --> s-cnt-market-store-select-top
   s-cnt-market-header-nav --> s-cnt-market-account-menu
   s-cnt-market-header-nav --> s-cnt-market-basket
-  s-cnt-market-shop --> s-cnt-market-promo-slider
-  s-cnt-market-shop --> s-cnt-market-products-slider
-  s-cnt-market-shop --> s-cnt-market-products-list
-  s-cnt-market-shop --> s-cnt-market-recently-watched
-  s-cnt-market-shop --> s-cnt-market-modal-window
-  s-cnt-market-shop --> s-cnt-market-back-to-top
-  s-cnt-market-promo-slider --> s-cnt-market-promo-slider-card
+  s-cnt-market-basket --> s-cnt-market-products-slider
   s-cnt-market-products-slider --> s-cnt-market-products-slider-card
+  s-cnt-market-promo-slider --> s-cnt-market-promo-slider-card
   s-cnt-market-products-list --> s-cnt-market-products-list-card
   s-cnt-market-products-list-card --> s-cnt-market-products-list-item
   s-cnt-market-recently-watched --> s-cnt-market-recently-watched-card

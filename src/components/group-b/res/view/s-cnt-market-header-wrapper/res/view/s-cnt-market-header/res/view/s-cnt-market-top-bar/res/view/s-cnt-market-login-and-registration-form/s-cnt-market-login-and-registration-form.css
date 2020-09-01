@@ -76,6 +76,10 @@
   color: #333536;
 }
 
+.back-btn{
+  margin-left: unset;
+}
+
 .login-or-registration-form-container {
   padding: 0 32px 34px;
 }

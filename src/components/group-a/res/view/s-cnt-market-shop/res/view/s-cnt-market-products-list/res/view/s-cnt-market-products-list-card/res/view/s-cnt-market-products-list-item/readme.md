@@ -23,11 +23,13 @@
 
 ### Used by
 
+ - [s-cnt-market-product-page](../../../../../../../s-cnt-market-product-page)
  - [s-cnt-market-products-list-card](../../..)
 
 ### Graph
 ```mermaid
 graph TD;
+  s-cnt-market-product-page --> s-cnt-market-products-list-item
   s-cnt-market-products-list-card --> s-cnt-market-products-list-item
   style s-cnt-market-products-list-item fill:#f9f,stroke:#333,stroke-width:4px
 ```

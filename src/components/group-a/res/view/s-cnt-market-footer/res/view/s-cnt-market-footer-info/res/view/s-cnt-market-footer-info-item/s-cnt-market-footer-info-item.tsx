@@ -12,7 +12,7 @@ export class SCntMarketFooterInfoItem implements ComponentInterface {
   /**
    * Данные для политики безопасности
    * */
-  @Prop() footerLinksPolitics: footerLinksPoliticsInterface
+  @Prop() footerLinksPolitics: footerLinksPoliticsInterface;
 
   render() {
     return (

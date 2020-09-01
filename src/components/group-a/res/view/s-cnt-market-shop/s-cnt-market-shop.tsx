@@ -1,7 +1,7 @@
-import { Component, ComponentInterface, h, State } from "@stencil/core";
+import {Component, ComponentInterface, h, State} from "@stencil/core";
 import {
-  productModal,
-  productsList,
+  productModal, productsFilterSliderTitle,
+  productsList, productsPage,
   productsSliderCards,
   productsSliderTitle,
   promoSliderCards,
@@ -27,21 +27,47 @@ export class SCntMarketShop implements ComponentInterface {
    */
   @State() productData: MarketProductDataInterface;
 
+  /**
+   *
+   */
+  @State() productListPage: boolean;
+
+  /**
+   *
+   */
+  @State() selectedCategoryId: number;
+
   render() {
     return (
       <main>
-        <s-cnt-market-promo-slider
-          promoSliderCards={promoSliderCards}
-        ></s-cnt-market-promo-slider>
-        <s-cnt-market-products-slider
-          productsSliderCards={productsSliderCards}
-          productsSliderTitle={productsSliderTitle}
-          onShowModal={(x) => this.showOrCloseModal(x)}
-        ></s-cnt-market-products-slider>
-        <s-cnt-market-products-list
-          onShowModal={(x) => this.showOrCloseModal(x)}
-          productsList={productsList}
-        ></s-cnt-market-products-list>
+        {
+          this.productListPage ? (
+            <s-cnt-market-product-page
+              onShowModal={(x) => this.showOrCloseModal(x)}
+              productsSliderCards={productsSliderCards}
+              productsSliderTitle={productsFilterSliderTitle}
+              productsList={productsList}
+              selectedCategoryId={this.selectedCategoryId}
+              productsPage={productsPage}
+            />
+          ) : (
+            <div>
+              <s-cnt-market-products-list
+                onShowModal={(x) => this.showOrCloseModal(x)}
+                onSelectedId={(id) => this.selectedId(id)}
+                productsList={productsList}
+              ></s-cnt-market-products-list>
+              <s-cnt-market-promo-slider
+                promoSliderCards={promoSliderCards}
+              ></s-cnt-market-promo-slider>
+              <s-cnt-market-products-slider
+                productsSliderCards={productsSliderCards}
+                productsSliderTitle={productsSliderTitle}
+                onShowModal={(x) => this.showOrCloseModal(x)}
+              ></s-cnt-market-products-slider>
+            </div>
+          )
+        }
         <s-cnt-market-recently-watched
           onShowModal={(x) => this.showOrCloseModal(x)}
           recentlyWatchedProducts={recentlyWatchedProducts}
@@ -70,6 +96,14 @@ export class SCntMarketShop implements ComponentInterface {
     this.productData = {
       ...detail
     }
+  }
+
+  /**
+   * Открытие и закрытие модального окна
+   */
+  public selectedId({detail}) {
+    this.productListPage = true;
+    this.selectedCategoryId = detail;
   }
 
   /**

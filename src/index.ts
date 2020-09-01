@@ -1,5 +1,17 @@
 export * from './components';
 
+
+export interface MarketCartProductsInterface {
+  id: number,
+  name: string,
+  weight: number,
+  weightValue: string,
+  img: string,
+  price: number,
+  sales: number,
+  count: number,
+}
+
 export interface MarketAppInterface {
   id: number;
   image: string;
@@ -7,6 +19,21 @@ export interface MarketAppInterface {
   googlePlayButton: string;
   appStoreButton: string;
 }
+
+/*
+ * Интерфейс для массива меню и лого
+ * */
+
+export interface navMenuItemInterface {
+  id: string;
+  name: string;
+}
+
+export interface NavMenuItemInterface {
+  logo: string;
+  navMenuItem: navMenuItemInterface[];
+}
+
 
 /**
  * Элементы компонента s-cnt-market-app
@@ -37,13 +64,13 @@ export interface MarketCitiesInterface {
   name: string;
 }
 
-export interface MarketOfferInterface{
+export interface MarketOfferInterface {
   id: number;
   icon: string;
   text: string;
 }
 
-export interface MarketSelectionInterface{
+export interface MarketSelectionInterface {
   id: number;
   image: string;
   text?: string;
@@ -57,7 +84,7 @@ export interface MarketSpecialistInterface {
   text: string;
 }
 
-export interface MarketStatisticsInterface{
+export interface MarketStatisticsInterface {
   id: number;
   text: string;
 }
@@ -113,8 +140,9 @@ export interface footerDataInterface {
 }
 
 export interface MarketProductListInterface {
-  header: any;
-  card: any;
+  id: number;
+  header: MarketProductListHeaderInterface;
+  card: MarketProductListCardInterface[];
 }
 
 export interface MarketProductListCardInterface {
@@ -228,6 +256,25 @@ export interface MarketProductImgInterface {
   img: string,
 }
 
+export interface MarketProductPageInterface {
+  id: number;
+  categoryName: string;
+  slogan: string;
+  allBrandBtn: string;
+  productsPageFilter: MarketProductsPageFilterInterface;
+}
+
+export interface MarketProductsPageFilterInterface {
+  id: number;
+  sortTitle: string;
+  sortFirstBtn: string;
+  sortSecondBtn: string;
+  sortDescIcon: string;
+  sortDescText: string;
+  brandTitle: string;
+  brandAllBtn: string;
+}
+
 export interface MarketGetRecommendedInterface {
   featuredProduct: MarketFeaturedProductInterface[],
 }
@@ -289,7 +336,9 @@ export interface MarketSubcategoriesInterface {
   id: string;
   title: string;
   img: string;
-}[]
+}
+
+[]
 
 /**
  * данные для магазинов из левого каталога
@@ -319,7 +368,9 @@ export interface MarketSubcategoriesInterface {
   id: string;
   title: string;
   img: string;
-}[]
+}
+
+[]
 
 /**
  * данные для магазинов из левого каталога
@@ -459,11 +510,23 @@ export interface MarketAddressCityOfPickUpInterface {
 export interface MarketLoginAndRegistrationInterface {
   id: number;
   closeIcon: string;
+  backIcon: string;
   loginBtnText: string;
   regBtnText: string;
   users: MarketUsersArrInterface[];
   login: MarketLoginInterface;
+  remindPass: any;
   reg: MarketRegistrationInterface;
+}
+
+export interface MarketRemindPasswordInterface {
+  id: number;
+  remindTitle: string;
+  remindText: string;
+  logIn: string;
+  afterRemindTitle: string;
+  afterRemindText: string;
+  afterLogIn: string;
 }
 
 export interface MarketUsersArrInterface {

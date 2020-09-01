@@ -14,9 +14,10 @@
 
 ## Events
 
-| Event       | Description                                 | Type                |
-| ----------- | ------------------------------------------- | ------------------- |
-| `showModal` | Клик по карточке для показа модального окна | `CustomEvent<void>` |
+| Event        | Description                                 | Type                |
+| ------------ | ------------------------------------------- | ------------------- |
+| `selectedId` | Клик                                        | `CustomEvent<any>`  |
+| `showModal`  | Клик по карточке для показа модального окна | `CustomEvent<void>` |
 
 
 ## Dependencies

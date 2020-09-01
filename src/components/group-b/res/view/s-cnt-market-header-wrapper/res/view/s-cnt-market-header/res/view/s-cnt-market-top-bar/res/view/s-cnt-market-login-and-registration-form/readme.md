@@ -9,7 +9,7 @@
 
 | Property               | Attribute      | Description                                                                | Type                                  | Default     |
 | ---------------------- | -------------- | -------------------------------------------------------------------------- | ------------------------------------- | ----------- |
-| `blockWidth`           | `block-width`  |                                                                            | `string`                              | `undefined` |
+| `blockWidth`           | `block-width`  | значения для присвоения ширины блока                                       | `string`                              | `undefined` |
 | `login`                | `login`        | boolean значение для вывода/закрытия блока входа и присвоения класса       | `boolean`                             | `undefined` |
 | `loginAndRegistration` | --             | объект данных для компонента LoginAndRegistrationForm и его подкомпонентов | `MarketLoginAndRegistrationInterface` | `undefined` |
 | `registration`         | `registration` | boolean значение для вывода/закрытия блока регистрации и присвоения класса | `boolean`                             | `undefined` |
@@ -33,12 +33,14 @@
 
 ### Depends on
 
+- [s-cnt-market-remind-password](./res/view/s-cnt-market-login-form/res/view/s-cnt-market-remind-password)
 - [s-cnt-market-login-form](./res/view/s-cnt-market-login-form)
 - [s-cnt-market-registration-form](./res/view/s-cnt-market-registration-form)
 
 ### Graph
 ```mermaid
 graph TD;
+  s-cnt-market-login-and-registration-form --> s-cnt-market-remind-password
   s-cnt-market-login-and-registration-form --> s-cnt-market-login-form
   s-cnt-market-login-and-registration-form --> s-cnt-market-registration-form
   group-b --> s-cnt-market-login-and-registration-form

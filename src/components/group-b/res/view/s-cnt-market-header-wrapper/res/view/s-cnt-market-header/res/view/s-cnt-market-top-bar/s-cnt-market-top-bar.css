@@ -47,14 +47,14 @@ button {
   background-color: #e7e9eb;
 }
 
-#selected-dilivery .selection-by-pickUp{
+#selected-delivery .selection-by-pickUp{
   background-color: #fff!important;
   color: #333536!important;
   margin-left: 4px!important;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, .1)!important;
 }
 
-#selected-dilivery .selection-by-delivery{
+#selected-delivery .selection-by-delivery{
   background-color: transparent!important;
   color: #96959b!important;
   margin-right: 0;
