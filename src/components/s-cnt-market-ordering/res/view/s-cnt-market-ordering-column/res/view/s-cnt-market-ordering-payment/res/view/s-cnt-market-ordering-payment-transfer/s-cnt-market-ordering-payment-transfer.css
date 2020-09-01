@@ -46,9 +46,14 @@ i {
   line-height: 1;
   font-size: 12px;
   position: absolute;
+  display: none;
 }
 
-input.ordering-input-error, input.ordering-input-error:focus {
+.error .input-error-desc {
+  display: block;
+}
+
+.error .ordering-input, .error .ordering-input:focus {
   border-color: #ff2f2f;
 }
 

@@ -50,8 +50,7 @@ export class SCntMarketOrderingReplacementPolicy implements ComponentInterface {
 
   /**
    * */
-  public clickOnPanel(panel)
-  {
+  public clickOnPanel(panel) {
     this.lastClickedPanel = panel;
   }
 }
