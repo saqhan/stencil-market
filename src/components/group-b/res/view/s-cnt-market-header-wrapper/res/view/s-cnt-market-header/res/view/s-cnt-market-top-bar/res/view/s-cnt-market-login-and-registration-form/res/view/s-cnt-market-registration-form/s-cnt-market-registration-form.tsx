@@ -225,6 +225,25 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     );
   }
 
+  /**
+   * вызывается предупреждение когда некоректно заполнен инпут
+   * */
+  public errorCall(errorBlock, errorText, input) {
+    errorBlock.innerHTML = errorText;
+    input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
+    input.style.backgroundColor = '#f7f7f7';
+    this.btnReg.setAttribute("disabled", "disabled");
+  }
+
+  /**
+   * убирает предупреждение заполнения инпута
+   * */
+  public cancelCallError(errorBlock, input) {
+    errorBlock.innerHTML = '';
+    input.style.boxShadow = 'none';
+    this.btnReg.removeAttribute("disabled");
+    input.style.backgroundColor = '#e8f0fe';
+  }
 
   /**
    * функция для проверкипустые строки или нет
@@ -232,13 +251,9 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   public emptyInput(value, Error, ErrorText) {
     const input = value
     if (input.value === '' || input.value === ' ') {
-      Error.innerHTML = ErrorText;
-      input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled");
+      this.errorCall(Error, ErrorText, input)
     } else {
-      Error.innerHTML = '';
-      input.style.boxShadow = 'none';
-      this.btnReg.removeAttribute("disabled");
+      this.cancelCallError(Error, input);
     }
   }
 
@@ -253,9 +268,8 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.regLogin.style.backgroundColor = '#f7f7f7';
       this.resetName.classList.add('hide');
 
-      this.nameError.innerHTML = 'Введите e-mail';
-      this.regLogin.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled");
+      let errorText = 'Введите e-mail'
+      this.cancelCallError(this.nameError, errorText);
     }
     this.emptyInput(this.regLogin, this.nameError, 'Укажите имя и фамилию');
   }
@@ -281,9 +295,7 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     let mail = this.regMail.value
     if (reg.test(mail) == false) {
-      this.mailError.innerHTML = 'Введите корректный e-mail';
-      this.regMail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled");
+      this.errorCall(this.mailError, 'Введите корректный e-mail', this.regMail);
 
       if (mail !== '') {
         this.regMail.style.backgroundColor = 'white';
@@ -292,14 +304,10 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         this.regMail.style.backgroundColor = '#f7f7f7';
         this.resetMail.classList.add('hide');
 
-        this.mailError.innerHTML = 'Введите e-mail';
-        this.regMail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-        this.btnReg.setAttribute("disabled", "disabled");
+        this.errorCall(this.mailError, 'Введите e-mail', this.regMail);
       }
     } else {
-      this.mailError.innerHTML = '';
-      this.regMail.style.boxShadow = 'none';
-      this.btnReg.removeAttribute("disabled");
+      this.cancelCallError(this.mailError, this.regMail);
     }
   }
 
@@ -317,10 +325,9 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     let reg = /(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}/;
     let password = this.regPassword.value
     if (reg.test(password) == false) {
-      this.passwordError.innerHTML = 'Введите корректный пароль(дожны быть латинские ' +
+      let errorCallVal = 'Введите корректный пароль(дожны быть латинские ' +
         'буквы "a-z" хотя бы одна заглавная буква "A-Z" и цифра "0-9" и не менее 6 символов)';
-      this.regPassword.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled");
+      this.errorCall(this.passwordError, errorCallVal, this.regPassword);
 
       if (password !== '') {
         this.regPassword.style.backgroundColor = 'white';
@@ -330,14 +337,11 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
         this.regPassword.style.backgroundColor = '#f7f7f7';
         this.resetPass.classList.add('hide');
 
-        this.passwordError.innerHTML = 'Введите пароль';
-        this.regPassword.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-        this.btnReg.setAttribute("disabled", "disabled");
+        let errorCallNulllVal = 'Введите пароль';
+        this.errorCall(this.passwordError, errorCallNulllVal, this.regPassword);
       }
     } else {
-      this.passwordError.innerHTML = '';
-      this.regPassword.style.boxShadow = 'none';
-      this.btnReg.removeAttribute("disabled");
+      this.cancelCallError(this.passwordError, this.regPassword)
     }
   }
 
@@ -359,9 +363,8 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     let password = this.regPassword.value
     let passwordCompareValue = this.regVerificationPass.value
     if (password != passwordCompareValue) {
-      this.verificationPassError.innerHTML = 'Введенные пароли должны совпадать';
-      this.regVerificationPass.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled");
+      let errorCallVal = 'Введенные пароли должны совпадать';
+      this.errorCall(this.verificationPassError, errorCallVal, this.regVerificationPass);
 
       this.regVerificationPass.style.backgroundColor = 'white';
       this.resetConfPass.classList.remove('hide');
@@ -372,13 +375,13 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
       this.resetConfPass.classList.add('hide');
       this.passConfViewRef.style.right = '13px';
 
-      this.verificationPassError.innerHTML = 'Подтвердите пароль';
-      this.regVerificationPass.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.btnReg.setAttribute("disabled", "disabled");
+      let errorCallVerVal = 'Подтвердите пароль';
+      this.errorCall(this.verificationPassError, errorCallVerVal, this.regVerificationPass);
     } else {
       this.verificationPassError.innerHTML = '';
       this.regVerificationPass.style.boxShadow = 'none';
       this.btnReg.removeAttribute("disabled")
+      this.cancelCallError(this.verificationPassError, this.regVerificationPass)
     }
   }
 

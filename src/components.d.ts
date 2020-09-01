@@ -369,7 +369,7 @@ export namespace Components {
     }
     interface SCntMarketPickupInModal {
         /**
-          * Данные из объекта данных мок
+          * Данные из объекта мок
          */
         "pickUpData": MarketTopBarModalPickUpInterface;
     }
@@ -1618,7 +1618,7 @@ declare namespace LocalJSX {
          */
         "onIdSelectionAddress"?: (event: CustomEvent<any>) => void;
         /**
-          * Данные из объекта данных мок
+          * Данные из объекта мок
          */
         "pickUpData"?: MarketTopBarModalPickUpInterface;
     }

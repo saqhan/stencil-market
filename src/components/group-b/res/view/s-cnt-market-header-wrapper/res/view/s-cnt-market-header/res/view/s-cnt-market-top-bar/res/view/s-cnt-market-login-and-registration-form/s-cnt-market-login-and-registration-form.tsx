@@ -120,6 +120,9 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
                     </button>
                   </div>
                   <div>
+                    {/**
+                     * переключение компонентов посредством стейта, между кнопками логин/пароль
+                     */}
                     {
                       this.login ? (
                         <s-cnt-market-login-form
@@ -175,13 +178,13 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   }
 
   /**
-   * 
+   *
    */
   public clickOnBack() {
-    if (this.remindPass === true){
-      if (this.backBtn === true){
+    if (this.remindPass === true) {
+      if (this.backBtn === true) {
         this.backBtn = false;
-      }else {
+      } else {
         this.remindPass = false;
       }
     }

@@ -151,44 +151,91 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
   }
 
   /**
+   * вызывается предупреждение когда некоректно заполнен инпут
+   * */
+  public errorCall(errorBlock, errorText, input) {
+    errorBlock.innerHTML = errorText;
+    input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
+    input.style.backgroundColor = '#f7f7f7';
+    this.logInBtn.setAttribute("disabled", "disabled");
+  }
+
+  /**
+   * убирает предупреждение заполнения инпута
+   * */
+  public cancelCallError(errorBlock, input) {
+    errorBlock.innerHTML = '';
+    input.style.boxShadow = 'none';
+    this.logInBtn.removeAttribute("disabled");
+  }
+
+  /**
+   *
+   * */
+  public onInputValue(input, reset, error, errorVal, view?) {
+    let inp = input.value;
+    if (inp !== '') {
+      input.style.backgroundColor = 'white';
+      reset.classList.remove('hide');
+
+      view ? view.style.right = '40px' : '';
+    } else {
+      input.style.backgroundColor = '#f7f7f7';
+      reset.classList.add('hide');
+
+      view ? view.style.right = '13px' : '';
+      this.errorCall(error, errorVal, input);
+    }
+  }
+
+  /**
    * функция для проверки валидации написания mail
    * */
   public validateMail() {
     let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
     let mail = this.mail.value;
     if (reg.test(mail) == false) {
-      this.mailError.innerHTML = 'Введите корректный e-mail';
-      this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.logInBtn.setAttribute("disabled", "disabled");
-
+      //вызывается предупреждение некоректного заполнения инпута
+      this.errorCall(this.mailError, 'Введите корректный e-mail', this.mail);
+      //вызывается предупреждение незаполнения инпута и смена backgroundColor инпута при заполнении и т.д.
       let errorVal = 'Введите mail';
-      mailValue(this.mail, this.resetMail, this.mailError, errorVal, this.logInBtn);
+      this.onInputValue(this.mail, this.resetMail, this.mailError, errorVal, this.logInBtn);
 
       return false;
     } else {
-      this.mailError.innerHTML = '';
-      this.mail.style.boxShadow = 'none';
-      this.logInBtn.removeAttribute("disabled");
+      //убирает предупреждение некоректного заполнения инпута
+      this.cancelCallError(this.mailError, this.mail);
+      //скрывает кнопку очистки значения инпута так как он пустой
       this.resetMail.classList.add('hide');
+      //функция для проверки есть ли пользователь с таким майл
       this.correctMail();
     }
+  };
 
+  /**
+   * переменная для присвоения выбранного пользователя
+   * */
+  public selectedUser;
+
+  /**
+   * функция для проверки есть ли пользователь с таким майл
+   * */
+  public correctMail() {
+    let mailVal = this.mail.value;
     /**
-     *
+     * сравнение майл пользователя и присвоение переменной из массива если есть такой
      * */
-    function mailValue(input, reset, error, errorVal, btn) {
-      let inp = input.value;
-      if (inp !== '') {
-        input.style.backgroundColor = 'white';
-        reset.classList.remove('hide');
-      } else {
-        input.style.backgroundColor = '#f7f7f7';
-        reset.classList.add('hide');
+    this.selectedUser = this.users.filter((item) => mailVal === item.mail);
+    if (this.selectedUser.length === 0) {
+      //вызывается предупреждение некоректного заполнения инпута
+      this.errorCall(this.mailError, 'Пользователя с таким e-mail нет', this.mail);
 
-        error.innerHTML = errorVal;
-        input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-        btn.setAttribute("disabled", "disabled");
-      }
+      return false;
+    } else {
+      //убирает предупреждение некоректного заполнения инпута
+      this.cancelCallError(this.mailError, this.mail);
+      this.mail.style.backgroundColor = '#e8f0fe';
+      return true;
     }
   };
 
@@ -199,44 +246,38 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     let reg = /(?=.{6,})/;
     let password = this.password.value;
     if (reg.test(password) == false) {
-      this.passwordError.innerHTML = 'Пароль должен быть не менее 6 символов';
-      this.password.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.logInBtn.setAttribute("disabled", "disabled");
+      let errorCallVal = 'Пароль должен быть не менее 6 символов';
+      this.errorCall(this.passwordError, errorCallVal, this.password);
 
       let errorVal = 'Пароль не введен';
-      passlValue(this.password, this.resetPass, this.passwordError, errorVal, this.logInBtn, this.passViewRef);
-
+      this.onInputValue(this.password, this.resetPass, this.passwordError, errorVal, this.passViewRef);
     } else {
-      this.passwordError.innerHTML = '';
-      this.password.style.boxShadow = 'none';
-      this.logInBtn.removeAttribute("disabled");
+      this.cancelCallError(this.passwordError, this.password);
 
       this.resetPass.classList.add('hide');
-
       this.correctPassword();
     }
-
-    /**
-     *
-     * */
-    function passlValue(input, reset, error, errorVal, btn, view) {
-      let inp = input.value;
-      if (inp !== '') {
-        input.style.backgroundColor = 'white';
-        reset.classList.remove('hide');
-
-        view.style.right = '40px';
-      } else {
-        input.style.backgroundColor = '#f7f7f7';
-        reset.classList.add('hide');
-        view.style.right = '13px';
-
-        error.innerHTML = errorVal;
-        input.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-        btn.setAttribute("disabled", "disabled");
-      }
-    }
   };
+
+  /**
+   * функция для проверки есть ли пользователь с таким майл
+   * */
+  public correctPassword() {
+    let passValue = this.password.value;
+    if (this.correctMail() === true) {
+      let pass = this.selectedUser.map(item => item.password);
+      if (passValue === pass[0]) {
+        this.cancelCallError(this.passwordError, this.password);
+        this.password.style.backgroundColor = '#e8f0fe';
+      } else {
+        let errorCallVal = 'Пользователя с таким password нет';
+        this.errorCall(this.passwordError, errorCallVal, this.password);
+      }
+    } else {
+      let errorCallVal = 'Пользователя с таким password нет';
+      this.errorCall(this.passwordError, errorCallVal, this.password);
+    }
+  }
 
   /**
    * функция для сброса введенных данных
@@ -252,55 +293,6 @@ export class SCntMarketLoginAndRegistrationForm implements ComponentInterface {
     this.passwordView = !this.passwordView;
   }
 
-  /**
-   * переменная для присвоения выбранного пользователя
-   * */
-  public selectedUser;
-
-  /**
-   * функция для проверки есть ли пользователь с таким майл
-   * */
-  public correctMail() {
-    let mailVal = this.mail.value;
-    /**
-     * сравнение майл пользователя и присвоение переменной из массива если есть такой
-     * */
-    this.selectedUser = this.users.filter((item) => {
-      return mailVal === item.mail;
-    })
-    if (this.selectedUser.length === 0) {
-      this.mailError.innerHTML = 'Пользователя с таким e-mail нет';
-      this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.logInBtn.setAttribute("disabled", "disabled");
-
-      return false;
-    } else {
-      this.mailError.innerHTML = '';
-      this.mail.style.boxShadow = 'none';
-      this.logInBtn.removeAttribute("disabled");
-
-      return true;
-    }
-  };
-
-  /**
-   * функция для проверки есть ли пользователь с таким майл
-   * */
-  public correctPassword() {
-    let passValue = this.password.value;
-    if (this.correctMail() === true) {
-      let pass = this.selectedUser.map(item => item.password)
-      if (passValue === pass) {
-        this.mailError.innerHTML = '';
-        this.mail.style.boxShadow = 'none';
-        this.logInBtn.removeAttribute("disabled");
-      }
-    } else {
-      this.mailError.innerHTML = 'Пользователя с таким e-mail нет';
-      this.mail.style.boxShadow = 'inset 0 -2px 0 0 #f36';
-      this.logInBtn.setAttribute("disabled", "disabled");
-    }
-  }
 }
 
 /*
