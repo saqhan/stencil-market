@@ -5,17 +5,13 @@
   background-color: #fff;
 }
 
-.ordering-panel.active {
+.active .ordering-panel {
   border-radius: 4px;
-  margin: 20px 0;
+  margin-bottom: 20px;
   border: 1px solid #e5edec;
 }
 
-.ordering-panel.active:first-child {
-  margin-top: 0;
-}
-
-.ordering-panel:first-child {
+.ordering-panel {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -171,7 +167,7 @@
 }
 
 .store-panel-logo {
-  width: 48px;
+  min-width: 48px;
   height: 48px;
   background-size: cover;
   background-position: center;
@@ -262,4 +258,23 @@ button:hover {
 button:focus {
   outline: none;
   box-shadow: 0 0 0 4px rgba(33,176,86,.3);
+}
+
+
+
+@media (max-width: 544px) {
+  .panel-header-link {
+    display: none;
+  }
+  .panel-header-details {
+    width: 100%;
+    text-align: right;
+    margin-left: 10px;
+  }
+  .panel-header-desc {
+    flex-basis: 90px;
+  }
+  .panel-content {
+    padding: 0 15px 15px;
+  }
 }

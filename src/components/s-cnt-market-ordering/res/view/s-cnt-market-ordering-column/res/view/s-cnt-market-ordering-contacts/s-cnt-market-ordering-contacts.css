@@ -5,15 +5,10 @@
   background-color: #fff;
 }
 
-.active {
+.active .ordering-panel {
   border-radius: 4px;
   margin: 20px 0;
   border: 1px solid #e5edec;
-}
-
-.ordering-panel:first-child {
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
 }
 
 .panel-header {
@@ -210,7 +205,7 @@ button:focus {
   flex: 1;
 }
 
-.ordering-input-error {
+.error .ordering-input {
   border-color: #ff2f2f;
 }
 
@@ -220,6 +215,11 @@ button:focus {
   line-height: 1;
   font-size: 12px;
   position: absolute;
+  display: none;
+}
+
+.error .input-desc-error {
+  display: block;
 }
 
 .ordering-phones {
@@ -298,3 +298,46 @@ button:focus {
     margin-bottom: 0;
   }
 }
+
+@media (max-width: 544px) {
+  .panel-header-link {
+    display: none;
+  }
+  .panel-header-details {
+    width: 100%;
+    text-align: right;
+    margin-left: 10px;
+  }
+  .panel-header-desc {
+    flex-basis: 90px;
+  }
+  .contact-inputs-wrapper {
+    margin-bottom: 20px;
+  }
+  .contact-inputs-inline {
+    flex-direction: column;
+  }
+  .contact-input {
+    width: 100%;
+  }
+  .contact-inputs-inline>div:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .panel-content {
+    padding: 0 15px 15px;
+  }
+  .inline-items {
+    flex-direction: column;
+  }
+  .ordering-form {
+    max-width: 100%;
+    padding-bottom: 7px;
+  }
+}
+
+@media (max-width: 375px) {
+  .button-block {
+    width: auto;
+  }
+}
+

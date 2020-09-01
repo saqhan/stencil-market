@@ -12,12 +12,13 @@ export const ordering = {
       img: "https://via.placeholder.com/50x50?img=Img",
       shop: "METRO",
       desc:
-        "Чтобы изменить магазин, выберите его на главной странице и проверьте наличие всех товаров в корзине",
+        "Чтобы изменить магазин, [выберите его]() на главной странице и проверьте наличие всех товаров в корзине",
     },
   },
   contacts: {
     id: 2,
     title: "Контакты",
+    text: "Добавьте свои контакты",
     email: "jamwox@bk.ru",
     phone: "8 (800) 200 06 00",
     link: "Изменить",
@@ -26,6 +27,7 @@ export const ordering = {
   replacements: {
     id: 3,
     title: "Замены",
+    text: "Выберите способ осуществления замен",
     info: "Не согласовывать",
     link: "Изменить",
     btn: "Продолжить",
@@ -72,6 +74,7 @@ export const ordering = {
   timetable: {
     id: 5,
     title: "Время",
+    text: "Выберите время получения",
     info: "METRO ",
     link: "Изменить",
     btn: "Продолжить",
@@ -108,6 +111,72 @@ export const ordering = {
         weekDay: "Ср",
         monthDay: "2 сентября",
       },
-    ]
+    ],
+    time: [
+      {
+        hours: "9:00-11:00",
+        status: "бесплатно",
+        selected: true
+      },
+      {
+        hours: "10:00-12:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "11:00-13:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "12:00-14:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "13:00-15:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "14:00-16:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "15:00-17:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "16:00-18:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "17:00-19:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "18:00-20:00",
+        status: "бесплатно",
+        selected: false
+      },
+      {
+        hours: "19:00-21:00",
+        status: "бесплатно",
+        selected: true
+      },
+      {
+        hours: "20:00-22:00",
+        status: "бесплатно",
+        selected: false
+      },
+    ],
   },
+  final: {
+    text: "Готовы сделать заказ?",
+    btn: "Оформить заказ",
+  }
 };

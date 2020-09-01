@@ -15,7 +15,7 @@
   margin-bottom: 10px;
 }
 
-.replacement-policy-selected {
+.selected .replacement-policy {
   border: 1px solid #21a038;
   background-color: #f7f7f7;
   color: #21a038;
@@ -95,4 +95,10 @@ input.hidden-inp {
 
 .replacement-policy-ico-wrap:hover .popover-wrapper {
   display: block;
+}
+
+@media (max-width: 660px) {
+  .replacement-policy-ico-wrap {
+    display: none;
+  }
 }

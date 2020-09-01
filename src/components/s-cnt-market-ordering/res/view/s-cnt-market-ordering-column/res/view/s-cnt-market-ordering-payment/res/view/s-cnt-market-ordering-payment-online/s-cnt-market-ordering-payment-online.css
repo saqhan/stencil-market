@@ -59,9 +59,14 @@ input.ordering-input {
   line-height: 1;
   font-size: 12px;
   position: absolute;
+  display: none;
 }
 
-input.ordering-input-error, input.ordering-input-error:focus {
+.error .input-desc-error {
+  display: block;
+}
+
+.error input.ordering-input, .error input.ordering-input:focus {
   border-color: #ff2f2f;
 }
 
@@ -150,4 +155,21 @@ input.ordering-input:focus {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 500;
+}
+
+@media (max-width: 544px) {
+  .input-desc-error {
+    margin-top: 3px;
+  }
+  .business-customer-documents {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 20px 15px 0;
+  }
+}
+
+@media (max-width: 375px) {
+  .input-desc-error {
+    font-size: 11px;
+  }
 }

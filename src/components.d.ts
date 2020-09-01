@@ -287,6 +287,12 @@ export namespace Components {
          */
         "contacts": any;
     }
+    interface SCntMarketOrderingFinal {
+        /**
+          * Текст для блока "оформить заказ"
+         */
+        "final": any;
+    }
     interface SCntMarketOrderingHeader {
         "logo": string;
     }
@@ -788,6 +794,12 @@ declare global {
         prototype: HTMLSCntMarketOrderingContactsElement;
         new (): HTMLSCntMarketOrderingContactsElement;
     };
+    interface HTMLSCntMarketOrderingFinalElement extends Components.SCntMarketOrderingFinal, HTMLStencilElement {
+    }
+    var HTMLSCntMarketOrderingFinalElement: {
+        prototype: HTMLSCntMarketOrderingFinalElement;
+        new (): HTMLSCntMarketOrderingFinalElement;
+    };
     interface HTMLSCntMarketOrderingHeaderElement extends Components.SCntMarketOrderingHeader, HTMLStencilElement {
     }
     var HTMLSCntMarketOrderingHeaderElement: {
@@ -1046,6 +1058,7 @@ declare global {
         "s-cnt-market-ordering": HTMLSCntMarketOrderingElement;
         "s-cnt-market-ordering-column": HTMLSCntMarketOrderingColumnElement;
         "s-cnt-market-ordering-contacts": HTMLSCntMarketOrderingContactsElement;
+        "s-cnt-market-ordering-final": HTMLSCntMarketOrderingFinalElement;
         "s-cnt-market-ordering-header": HTMLSCntMarketOrderingHeaderElement;
         "s-cnt-market-ordering-method": HTMLSCntMarketOrderingMethodElement;
         "s-cnt-market-ordering-payment": HTMLSCntMarketOrderingPaymentElement;
@@ -1425,6 +1438,12 @@ declare namespace LocalJSX {
          */
         "onRemoveClassActive"?: (event: CustomEvent<any>) => void;
     }
+    interface SCntMarketOrderingFinal {
+        /**
+          * Текст для блока "оформить заказ"
+         */
+        "final"?: any;
+    }
     interface SCntMarketOrderingHeader {
         "logo"?: string;
     }
@@ -1792,6 +1811,7 @@ declare namespace LocalJSX {
         "s-cnt-market-ordering": SCntMarketOrdering;
         "s-cnt-market-ordering-column": SCntMarketOrderingColumn;
         "s-cnt-market-ordering-contacts": SCntMarketOrderingContacts;
+        "s-cnt-market-ordering-final": SCntMarketOrderingFinal;
         "s-cnt-market-ordering-header": SCntMarketOrderingHeader;
         "s-cnt-market-ordering-method": SCntMarketOrderingMethod;
         "s-cnt-market-ordering-payment": SCntMarketOrderingPayment;
@@ -1875,6 +1895,7 @@ declare module "@stencil/core" {
             "s-cnt-market-ordering": LocalJSX.SCntMarketOrdering & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingElement>;
             "s-cnt-market-ordering-column": LocalJSX.SCntMarketOrderingColumn & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingColumnElement>;
             "s-cnt-market-ordering-contacts": LocalJSX.SCntMarketOrderingContacts & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingContactsElement>;
+            "s-cnt-market-ordering-final": LocalJSX.SCntMarketOrderingFinal & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingFinalElement>;
             "s-cnt-market-ordering-header": LocalJSX.SCntMarketOrderingHeader & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingHeaderElement>;
             "s-cnt-market-ordering-method": LocalJSX.SCntMarketOrderingMethod & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingMethodElement>;
             "s-cnt-market-ordering-payment": LocalJSX.SCntMarketOrderingPayment & JSXBase.HTMLAttributes<HTMLSCntMarketOrderingPaymentElement>;
