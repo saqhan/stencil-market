@@ -29,6 +29,11 @@ export class SCntMarketProductsListCard implements ComponentInterface {
   @Event() showModal: EventEmitter<void>;
 
   /**
+   * Клик
+   */
+  @Event() selectedId: EventEmitter;
+
+  /**
    * Передача данных для списка товаров в стейт
    */
   @State() productListState = this.productsList.card;
@@ -49,7 +54,7 @@ export class SCntMarketProductsListCard implements ComponentInterface {
           <div class="products-list-title">
             {this.productsList.header.title}
           </div>
-          <div class="show-all">
+          <div class="show-all" onClick={()=> this.selectedId.emit(this.productsList.id)}>
             <span>{this.productsList.header.allProducts}</span>
             <i class="fas fa-angle-right"></i>
           </div>

@@ -2135,6 +2135,8 @@ export const productsSliderCards = [
 
 export const productsSliderTitle = "Популярные товары";
 
+export const productsFilterSliderTitle = "Популярные товары";
+
 export const footerMenu = [
   {
     title: "СберМаркет",
@@ -2254,8 +2256,9 @@ export const recentlyWatchedTitle = "Вы недавно смотрели";
 
 export const productsList = [
   {
+    id: 1,
     header: {
-      title: "L'Oreal Paris с заботой о красоте",
+      title: "L'Oreal Paris",
       allProducts: "Показать 97 товаров ",
     },
     card: [
@@ -3692,6 +3695,7 @@ export const productsList = [
     ],
   },
   {
+    id: 2,
     header: {
       title: "Дачный сезон",
       allProducts: "Показать 2345 товаров ",
@@ -3792,7 +3796,7 @@ export const productsList = [
               'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
             nutritionalValue: [],
             BrandNameTitle: 'Бренд',
-            BrandName: 'L\'Oreal Paris',
+            BrandName: 'Pepsi',
             generalInformation: [
               {
                 id: 1,
@@ -3862,14 +3866,14 @@ export const productsList = [
         id: 11,
         img: "https://via.placeholder.com/200x200?img=Img",
         price: "505,00",
-        desc: "Шашлык из перепелов Qegg Классический охлажденный ~1 кг",
-        weight: "1 кг",
+        desc: "Шашлык куриный Петелинка с чесноком охлажденный ~1,6 кг",
+        weight: "1,6 кг",
         currency: "₽",
         productData: {
           getProduct: {
-            brand: "Товары для офиса",
-            products: "Подарки для сотрудников",
-            category: "Средства для бритья",
+            brand: "Мясо и птица",
+            products: "Полуфабрикаты из птицы",
+            category: "В маринаде",
             defaultImgId: 1,
             image: [
               {
@@ -3885,9 +3889,9 @@ export const productsList = [
                 img: 'https://via.placeholder.com/252x250?img=Img',
               },
             ],
-            name: "Пена для бритья L’Oreal Paris Men Expert для чувствительной кожи гипоаллергенная 200 мл",
-            weight: "200 мл",
-            price: "347,56",
+            name: "Шашлык куриный Петелинка с чесноком охлажденный ~1,6 кг",
+            weight: "1,6 кг",
+            price: "382,40",
             currency: "₽",
             presence: 22,
           },
@@ -3940,21 +3944,33 @@ export const productsList = [
           },
 
           getSpecification: {
-            description: 'Покраснения, стянутость, раздражение… Ежедневное бритье - настоящее испытание для чувствительной кожи. ' +
-              'Дайте отпор лезвию бритвы с пеной для бритья для чувствительной кожи! Гипоаллергенная формула пены специально разработана для ' +
-              'чувствительной кожи: она обогащена экстрактом Алоэ Вера, успокаивающим кожу и уменьшающим раздражение от бритья, защищает от жжения во ' +
-              'время бритья. Не содержит спирта. Протестировано под дерматологическим контролем.',
-            composition: 'Aqua/water, Stearic Acid, Triethanolamine, Palmitic Acid, Glicerin, Isobutane, Polysorbate 20, Cocamide Mea, Sodium Chloride,' +
-              ' Trideceth-9 PG-Amodimethicone, Trideceth-12, Dimethiconol Stearate, Orofane, Aloe Barbadensis/Aloe Barbadensis Leaf Juice, Parfum/Fragrance, ' +
-              'Myristic Acid, Butane, Cetyl Hydroxyethylcellulose, Lauril Betaine',
-            nutritionalValue: [],
+            description: 'Благодаря быстрому и отлаженному процессу производства, на вашем столе всегда вкусные и полезные ' +
+              'блюда из свежей курочки «Петелинка». Приятного аппетита!',
+            composition: '',
+            nutritionalValue: [
+              {
+                id: 1,
+                infoTitle: 'Белки',
+                info: '19 г'
+              },
+              {
+                id: 2,
+                infoTitle: 'Жиры',
+                info: '12 г'
+              },
+              {
+                id: 3,
+                infoTitle: 'Калорийность',
+                info: '180 ккал'
+              },
+            ],
             BrandNameTitle: 'Бренд',
-            BrandName: 'L\'Oreal Paris',
+            BrandName: 'Петелинка',
             generalInformation: [
               {
                 id: 1,
                 infoTitle: 'Производитель',
-                info: 'ЗАО Лореаль'
+                info: 'Черкизово ТД ООО'
               },
               {
                 id: 2,
@@ -3963,23 +3979,23 @@ export const productsList = [
               },
               {
                 id: 3,
-                infoTitle: 'Количество в упаковке',
-                info: '200 мл'
+                infoTitle: 'Вид мяса птицы',
+                info: 'Курятина'
               },
               {
                 id: 4,
-                infoTitle: 'Условия хранения',
-                info: 'Хранить вдали от солнечных лучей и не подвергать нагреванию свыше +50°С.'
+                infoTitle: 'Обработка',
+                info: 'В маринаде'
               },
               {
                 id: 5,
-                infoTitle: 'Срок хранения',
-                info: '3 г'
+                infoTitle: 'В маринаде',
+                info: 'Шашлык'
               },
               {
                 id: 6,
-                infoTitle: 'Вид средства для бритья',
-                info: 'Пена'
+                infoTitle: 'Режим хранения',
+                info: 'Охлажденное'
               },
               {
                 id: 7,
@@ -3988,28 +4004,34 @@ export const productsList = [
               },
               {
                 id: 8,
-                infoTitle: 'Свойства',
-                info: 'Смягчающие'
+                infoTitle: 'Вид упаковки',
+                info: 'Вакуумная упаковка'
               },
               {
                 id: 9,
-                infoTitle: 'Тип кожи',
-                info: 'Чувствительная'
+                infoTitle: 'Состав',
+                info: 'Бедро с хребтом и гузкой, крыло, голень, грудка цыплят - бройлеров, майонез Оливковый (подсолнечное и оливковое масла, вода, ' +
+                  'сахар, яичный желток, соль, лимонный сок, уксус, горчичное масло), чеснок, лук порей, черный перец.'
               },
               {
                 id: 10,
-                infoTitle: 'Экстракт алоэ',
-                info: 'Добавки'
+                infoTitle: 'Условия хранения',
+                info: 'При температуре от -2°С до +2°С'
               },
               {
                 id: 11,
-                infoTitle: 'Особенность',
-                info: 'Гладкое скольжение'
+                infoTitle: 'Срок хранения',
+                info: '10 сут'
               },
               {
                 id: 12,
-                infoTitle: 'Упаковка',
-                info: 'Аэрозоль'
+                infoTitle: 'Вес',
+                info: '1,6 кг'
+              },
+              {
+                id: 13,
+                infoTitle: 'Отклонение веса',
+                info: '10 %'
               },
             ],
           },
@@ -5123,6 +5145,7 @@ export const productsList = [
     ],
   },
   {
+    id: 3,
     header: {
       title: "Дешевле, чем на полке",
       allProducts: "Показать 71 товар",
@@ -6555,6 +6578,7 @@ export const productsList = [
     ],
   },
   {
+    id: 4,
     header: {
       title: "Бренды METRO",
       allProducts: "Показать 1986 товар",
@@ -7991,6 +8015,7 @@ export const productsList = [
     ],
   },
   {
+    id: 5,
     header: {
       title: "Сыры",
       allProducts: "Показать 624 товаров",
@@ -9413,6 +9438,7 @@ export const productsList = [
     ],
   },
   {
+    id: 6,
     header: {
       title: "Овощи и фрукты",
       allProducts: "Показать 393 товаров",
@@ -10833,6 +10859,7 @@ export const productsList = [
     ],
   },
   {
+    id: 7,
     header: {
       title: "Вода, соки, напитки",
       allProducts: "Показать 1417 товаров ",
@@ -12288,6 +12315,7 @@ export const productsList = [
     ],
   },
   {
+    id: 8,
     header: {
       title: "Молочные продукты",
       allProducts: "Показать 1667 товаров",
@@ -13716,6 +13744,7 @@ export const productsList = [
     ],
   },
   {
+    id: 9,
     header: {
       title: "Бакалея",
       allProducts: "Показать 1227 товаров",
@@ -15140,6 +15169,7 @@ export const productsList = [
     ],
   },
   {
+    id: 10,
     header: {
       title: "Сладости",
       allProducts: "Показать 1956 товаров",
@@ -16565,6 +16595,23 @@ export const productsList = [
     ],
   },
 ];
+
+export const productsPage = {
+  id: 1,
+  categoryName: 'Дачный сезон',
+  slogan: 'Футбол вкуснее с Lay’s и Pepsi',
+  allBrandBtn: 'Все',
+  productsPageFilter: {
+    id: 1,
+    sortTitle: 'Сортировать по',
+    sortFirstBtn: 'популярность',
+    sortSecondBtn: 'цена',
+    sortDescIcon: 'fas fa-check',
+    sortDescText: 'Товары со скидкой',
+    brandTitle: 'Бренд',
+    brandAllBtn: 'Все',
+  }
+};
 
 export const recentlyWatchedProducts = [
   {

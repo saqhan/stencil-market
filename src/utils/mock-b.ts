@@ -13,6 +13,7 @@ export const header = {
     loginAndRegistration: {
       id: 1,
       closeIcon: "fas fa-times",
+      backIcon: 'fas fa-chevron-left',
       loginBtnText: "Вход",
       regBtnText: "Регистрация",
       users: [
@@ -105,6 +106,15 @@ export const header = {
                       </svg>`,
           },
         ],
+      },
+      remindPass: {
+        id: 1,
+        remindTitle: 'Восстановление пароля',
+        remindText: 'Мы отправим ссылку для восстановления пароля на ваш e-mail',
+        logIn: "Восстановить",
+        afterRemindTitle: 'Восстановление пароля',
+        afterRemindText: 'На указанный вами E-mail высланы инструкции по восстановлению пароля',
+        afterLogIn: "Хорошо",
       },
       reg: {
         id: 1,

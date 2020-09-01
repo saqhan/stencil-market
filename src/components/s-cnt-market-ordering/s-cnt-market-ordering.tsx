@@ -15,6 +15,7 @@ export class SCntMarketOrdering implements ComponentInterface {
         <s-cnt-market-ordering-header logo={logo}></s-cnt-market-ordering-header>
         <div class="ordering-container">
           <s-cnt-market-ordering-column ordering={ordering}></s-cnt-market-ordering-column>
+          <s-cnt-market-ordering-sidebar></s-cnt-market-ordering-sidebar>
         </div>
       </div>
 
