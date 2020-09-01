@@ -26,6 +26,11 @@ export class SCntMarketProductsList implements ComponentInterface {
    */
   @Event() showModal: EventEmitter<void>;
 
+  /**
+   * Клик
+   */
+  @Event() selectedId: EventEmitter;
+
   render() {
     return (
       <div class="products-list">

@@ -32,7 +32,7 @@ export class SCntMarketModalWindow implements ComponentInterface {
   render() {
     return (
       <div class="window" ref={(el) => this.modalTag = el} onClick={(event) => this.closeModal(event)}>
-        <div class="container">
+        <div class="container ">
           <s-cnt-market-product
             productBlock={this.productModal.productBlock}
             getProduct={this.productData.productData.getProduct}

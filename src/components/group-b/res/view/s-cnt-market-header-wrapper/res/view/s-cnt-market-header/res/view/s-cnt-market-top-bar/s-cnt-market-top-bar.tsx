@@ -72,38 +72,22 @@ export class SCntMarketTopBar implements ComponentInterface {
         <div class="container top-bar-content-outer-block">
           <div class="top-bar-content-inner-block">
             <div class="top-bar-delivery-and-adress">
-              <div
-                class="top-bar-delivery-option-block"
-                id={this.pickUpCompleted ? "selected-dilivery" : ""}
-              >
-                <button
-                  class="selection-by-delivery"
-                  onClick={() => {
-                    this.openDeliveryHandler();
-                  }}
-                >
+              <div class="top-bar-delivery-option-block" id={this.pickUpCompleted ? "selected-delivery" : ""}>
+                <button class="selection-by-delivery" onClick={() => this.openDeliveryHandler()}>
                   {this.topBar.choiceDelivery}
                 </button>
-                <button
-                  class="selection-by-pickUp"
-                  onClick={() => {
-                    this.openPickUpHandler();
-                  }}
-                >
+                <button class="selection-by-pickUp" onClick={() => this.openPickUpHandler()}>
                   {this.topBar.choicePickUp}
                 </button>
               </div>
-              <div
-                class="option-adress-text-block"
-                onClick={() => {
-                  this.openDeliveryHandler();
-                }}
-              >
+              <div class="option-adress-text-block" onClick={() => this.openDeliveryHandler()}>
                 <span>
                   <span class={this.idAddress ? "selected-address" : ""}>
-                    {this.idAddress
-                      ? this.idAddress
-                      : this.topBar.choiceAddress}
+                    {
+                      this.idAddress
+                        ? this.idAddress
+                        : this.topBar.choiceAddress
+                    }
                   </span>
                   <button class="delivery-adress-btn">
                     <i class={this.topBar.choiceAddressIcon}></i>
@@ -115,10 +99,7 @@ export class SCntMarketTopBar implements ComponentInterface {
                 <span>{this.topBar.timeOfDelivery}</span>
               </p>
               <div class="top-bar-number-wrapper">
-                <a
-                  href={"tel:" + this.topBar.phoneNumber}
-                  class="phone-number-link"
-                >
+                <a href={"tel:" + this.topBar.phoneNumber} class="phone-number-link">
                   <span class="phone_number">{this.topBar.phoneNumber}</span>
                   <span class="phone-work">
                     <span>{this.topBar.workingHours}</span>
