@@ -42,6 +42,8 @@ graph TD;
   s-cnt-market-header-nav --> s-cnt-market-store-select-top
   s-cnt-market-header-nav --> s-cnt-market-account-menu
   s-cnt-market-header-nav --> s-cnt-market-basket
+  s-cnt-market-basket --> s-cnt-market-products-slider
+  s-cnt-market-products-slider --> s-cnt-market-products-slider-card
   s-cnt-market-header --> s-cnt-market-header-nav
   style s-cnt-market-header-nav fill:#f9f,stroke:#333,stroke-width:4px
 ```

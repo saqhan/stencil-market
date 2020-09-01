@@ -26,6 +26,7 @@ graph TD;
   s-cnt-market-header --> s-cnt-market-header-nav
   s-cnt-market-top-bar --> s-cnt-market-login-and-registration-form
   s-cnt-market-top-bar --> s-cnt-market-delivery-modal
+  s-cnt-market-login-and-registration-form --> s-cnt-market-remind-password
   s-cnt-market-login-and-registration-form --> s-cnt-market-login-form
   s-cnt-market-login-and-registration-form --> s-cnt-market-registration-form
   s-cnt-market-delivery-modal --> s-cnt-market-delivery-in-modal
@@ -34,6 +35,8 @@ graph TD;
   s-cnt-market-header-nav --> s-cnt-market-store-select-top
   s-cnt-market-header-nav --> s-cnt-market-account-menu
   s-cnt-market-header-nav --> s-cnt-market-basket
+  s-cnt-market-basket --> s-cnt-market-products-slider
+  s-cnt-market-products-slider --> s-cnt-market-products-slider-card
   s-cnt-market-footer --> s-cnt-market-up-footer-form
   s-cnt-market-footer --> s-cnt-market-down-footer
   s-cnt-market-footer --> s-cnt-market-footer-info

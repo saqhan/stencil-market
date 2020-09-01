@@ -28,6 +28,7 @@ graph TD;
   s-cnt-market-header --> s-cnt-market-header-nav
   s-cnt-market-top-bar --> s-cnt-market-login-and-registration-form
   s-cnt-market-top-bar --> s-cnt-market-delivery-modal
+  s-cnt-market-login-and-registration-form --> s-cnt-market-remind-password
   s-cnt-market-login-and-registration-form --> s-cnt-market-login-form
   s-cnt-market-login-and-registration-form --> s-cnt-market-registration-form
   s-cnt-market-delivery-modal --> s-cnt-market-delivery-in-modal
@@ -36,16 +37,21 @@ graph TD;
   s-cnt-market-header-nav --> s-cnt-market-store-select-top
   s-cnt-market-header-nav --> s-cnt-market-account-menu
   s-cnt-market-header-nav --> s-cnt-market-basket
+  s-cnt-market-basket --> s-cnt-market-products-slider
+  s-cnt-market-products-slider --> s-cnt-market-products-slider-card
+  s-cnt-market-shop --> s-cnt-market-product-page
+  s-cnt-market-shop --> s-cnt-market-products-list
   s-cnt-market-shop --> s-cnt-market-promo-slider
   s-cnt-market-shop --> s-cnt-market-products-slider
-  s-cnt-market-shop --> s-cnt-market-products-list
   s-cnt-market-shop --> s-cnt-market-recently-watched
   s-cnt-market-shop --> s-cnt-market-modal-window
   s-cnt-market-shop --> s-cnt-market-back-to-top
-  s-cnt-market-promo-slider --> s-cnt-market-promo-slider-card
-  s-cnt-market-products-slider --> s-cnt-market-products-slider-card
+  s-cnt-market-product-page --> s-cnt-market-product-filter-said-bar
+  s-cnt-market-product-page --> s-cnt-market-products-slider-card
+  s-cnt-market-product-page --> s-cnt-market-products-list-item
   s-cnt-market-products-list --> s-cnt-market-products-list-card
   s-cnt-market-products-list-card --> s-cnt-market-products-list-item
+  s-cnt-market-promo-slider --> s-cnt-market-promo-slider-card
   s-cnt-market-recently-watched --> s-cnt-market-recently-watched-card
   s-cnt-market-modal-window --> s-cnt-market-product
   s-cnt-market-modal-window --> s-cnt-market-recommended

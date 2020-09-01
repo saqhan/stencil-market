@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event                   | Description | Type               |
-| ----------------------- | ----------- | ------------------ |
-| `clickOnCloseModalForm` |             | `CustomEvent<any>` |
+| Event                   | Description | Type                |
+| ----------------------- | ----------- | ------------------- |
+| `clickOnCloseModalForm` |             | `CustomEvent<void>` |
 
 
 ## Dependencies

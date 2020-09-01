@@ -28,6 +28,7 @@
 graph TD;
   s-cnt-market-top-bar --> s-cnt-market-login-and-registration-form
   s-cnt-market-top-bar --> s-cnt-market-delivery-modal
+  s-cnt-market-login-and-registration-form --> s-cnt-market-remind-password
   s-cnt-market-login-and-registration-form --> s-cnt-market-login-form
   s-cnt-market-login-and-registration-form --> s-cnt-market-registration-form
   s-cnt-market-delivery-modal --> s-cnt-market-delivery-in-modal
