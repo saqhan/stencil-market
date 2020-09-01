@@ -30,6 +30,7 @@
   right: 0;
   transform: translateY(-5%);
   transition: all 0.2s;
+  overflow: scroll;
 }
 
 .drawer-footer-modal.opened {
@@ -317,4 +318,26 @@ header .subtitle {
   text-decoration: underline;
   color: #21a038;
   transition: color 0.2s ease;
+}
+
+@media (max-width: 414px) {
+  .input-wrapper {
+    flex-direction: column;
+  }
+  .left,
+  .right {
+    width: 100%;
+  }
+  .right {
+    margin-left: 0px;
+  }
+  .modal-content {
+    padding: 15px 0px;
+  }
+  .left {
+    text-align: left;
+  }
+  .politics-title {
+    font-size: 12px;
+  }
 }

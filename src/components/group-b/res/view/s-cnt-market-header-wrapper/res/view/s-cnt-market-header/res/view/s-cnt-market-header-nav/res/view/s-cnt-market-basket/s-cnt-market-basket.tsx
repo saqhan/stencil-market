@@ -268,9 +268,8 @@ export class SCntMarketBasket implements ComponentInterface {
   /**
    * Клик на время самовывоза
    * */
-  public clickOnCaptionPickupHandler() {
+  public clickOnCaptionPickupHandler():void {
     this.isShowInfoPickup = !this.isShowInfoPickup;
-    console.log(this.isShowInfoPickup);
   }
 }
 
