@@ -60,19 +60,22 @@ export class SCntMarketOrderingColumn implements ComponentInterface {
   /**
    * Добавляет класс active
    */
-  public addClassActive(step) {
-    if (step.step === 1) {
+  public addClassActive(id) {
+    if (id.step === 1) {
       this.addOrRemoveClassState = true;
-      console.log(step);
-    } else if (step.step === 2) {
+      console.log(id);
+    } else if (id.step === 2) {
       this.addOrRemoveClassState = true;
-      console.log(step);
-    } else if (step.step === 3) {
+      console.log(id);
+    } else if (id.step === 3) {
       this.addOrRemoveClassState = true;
-      console.log(step);
-    } else if (step.step === 4) {
+      console.log(id);
+    } else if (id.step === 4) {
       this.addOrRemoveClassState = true;
-      console.log(step);
+      console.log(id);
+    }
+    else {
+      this.addOrRemoveClassState = false;
     }
   }
 

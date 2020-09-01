@@ -12,12 +12,17 @@ export class SCntMarketOrderingTimePanelTab implements ComponentInterface {
    */
   @Prop() date: any;
 
+
+
   render() {
     return (
-      <div>
+      <div
+        >
         <span class="panel-tab-day-name">{this.date.weekDay}</span>
         <span class="panel-tab-date">{this.date.monthDay}</span>
       </div>
     );
   }
+
+
 }
